@@ -1,0 +1,152 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "mios://schema/metabolic-snapshot/1.0.0",
+  "title": "MIOS Metabolic Snapshot v1.0",
+  "type": "object",
+  "required": [
+    "id",
+    "type",
+    "schema_version",
+    "status",
+    "subject_ref",
+    "snapshot_at"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^SNAP-[A-Za-z0-9._-]+$"
+    },
+    "type": {
+      "const": "MetabolicSnapshot"
+    },
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "status": {
+      "enum": [
+        "draft",
+        "validated",
+        "approved",
+        "deprecated",
+        "archived"
+      ]
+    },
+    "subject_ref": {
+      "type": "string",
+      "minLength": 1
+    },
+    "snapshot_at": {
+      "type": "string",
+      "minLength": 1
+    },
+    "domains": {
+      "type": "object",
+      "properties": {
+        "nutrition": {
+          "type": "object",
+          "properties": {
+            "observation_refs": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          "additionalProperties": true
+        },
+        "gut_status": {
+          "type": "object",
+          "properties": {
+            "observation_refs": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          "additionalProperties": true
+        },
+        "hormone_state": {
+          "type": "object",
+          "properties": {
+            "observation_refs": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          "additionalProperties": true
+        },
+        "microbiome": {
+          "type": "object",
+          "properties": {
+            "observation_refs": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          "additionalProperties": true
+        },
+        "musculo_fascial": {
+          "type": "object",
+          "properties": {
+            "observation_refs": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          "additionalProperties": true
+        },
+        "symptoms": {
+          "type": "object",
+          "properties": {
+            "observation_refs": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          "additionalProperties": true
+        }
+      },
+      "additionalProperties": true
+    },
+    "laboratory": {
+      "type": "object"
+    },
+    "vitals": {
+      "type": "object"
+    },
+    "lifestyle": {
+      "type": "object"
+    },
+    "mbt55": {
+      "type": "object"
+    },
+    "wearables": {
+      "type": "object"
+    },
+    "phenotype_refs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "prior_snapshot_refs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "provenance": {
+      "type": "array"
+    }
+  },
+  "additionalProperties": false
+}

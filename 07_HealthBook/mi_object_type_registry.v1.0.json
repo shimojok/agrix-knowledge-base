@@ -1,0 +1,66 @@
+{
+  "registry": "MIOS MI Object Type Registry",
+  "version": "1.0.0",
+  "object_types": [
+    {
+      "code": "Observation",
+      "role": "observed data"
+    },
+    {
+      "code": "MetabolicSnapshot",
+      "role": "canonical state input"
+    },
+    {
+      "code": "Phenotype",
+      "role": "phenotypic pattern"
+    },
+    {
+      "code": "MetabolicState",
+      "role": "integrated metabolic state"
+    },
+    {
+      "code": "MetabolicDeviation",
+      "role": "state deviation"
+    },
+    {
+      "code": "MIScore",
+      "role": "MI axis score"
+    },
+    {
+      "code": "PathwayHypothesis",
+      "role": "pathway reasoning object"
+    },
+    {
+      "code": "DiseaseMIMapping",
+      "role": "disease-to-MI mapping"
+    },
+    {
+      "code": "KnowledgeAsset",
+      "role": "knowledge reference"
+    },
+    {
+      "code": "InterventionCandidate",
+      "role": "candidate intervention"
+    },
+    {
+      "code": "SimulationResult",
+      "role": "simulation output"
+    },
+    {
+      "code": "Recommendation",
+      "role": "decision-support output"
+    },
+    {
+      "code": "Evidence",
+      "role": "evidence object"
+    },
+    {
+      "code": "WorkflowEvent",
+      "role": "execution event"
+    },
+    {
+      "code": "DigitalTwinState",
+      "role": "longitudinal state"
+    }
+  ]
+}

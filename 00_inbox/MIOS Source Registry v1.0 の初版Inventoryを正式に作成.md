@@ -1,0 +1,249 @@
+はい、進めてください。
+
+---
+
+## 結論
+
+Phase 0-A **MIOS Source Registry v1.0 の初版Inventoryを正式に作成しました。**
+
+今回の登録対象は、`healthbook-mios.zip` のGit管理対象外ソース **442ファイル**です。
+元のディレクトリ構造・ファイルパスは変更していません。
+
+### Phase 0-A Inventory結果
+
+| 項目                       |                                         結果 |
+| ------------------------ | -----------------------------------------: |
+| Source Files             |                                    **442** |
+| Markdown                 |                                        404 |
+| JSON                     |                                         23 |
+| Python                   |                                         13 |
+| CSV                      |                                          2 |
+| Historical Source Folder |                                      **6** |
+| Exact Duplicate Group    |                                      **6** |
+| Exact Duplicate Files    |                                     **12** |
+| Git Branch               |                                     `main` |
+| Git HEAD                 | `44f631b552fd4888438fe6491da810fdcf28e6c7` |
+| Latest Git timestamp     |                                 2026-08-29 |
+| Canonical Decision       |                                    **未実施** |
+
+特に重要なのは、今回のRegistryでは**「最新だからCanonical」「v1.0だからCanonical」という判断をしていない**ことです。
+
+つまり、
+
+> **Inventory ≠ Canonicalization**
+
+として分離しています。
+
+---
+
+## 1. 作成したArtifact
+
+### MIOS Source Registry v1.0
+
+442ファイルについて、少なくとも以下を機械的に登録しています。
+
+* `source_id`
+* `original_path`
+* `file_name`
+* `folder`
+* `note_number`
+* `title`
+* `folder_date`
+* `version`
+* `file_type`
+* `preliminary_role`
+* `canonical_status`
+* `provenance`
+* `notes`
+
+### Repository Registry
+
+Repository/Git provenanceについて別Registry化しています。
+
+### Phase 0-A Summary
+
+---
+
+## 2. 今回特に確認できたこと
+
+### A. これは単なる「最新リポジトリ」ではない
+
+442ソースは、少なくとも以下の6つの歴史的開発系列を含んでいます。
+
+```text
+2026-04-24  MBT Probiotics
+        ↓
+2026-05-18  HealthBook-MI
+        ↓
+2026-06-07  MI追加構築
+        ↓
+2026-07-03  MI-Probiome
+        ↓
+2026-07-28  MIOS
+        ↓
+2026-08-10  HealthBook_MIOS
+```
+
+したがって、Phase 0-Bでは単純なファイル一覧ではなく、
+
+**「どのArchitectureが、どのArchitectureへ進化したか」**
+
+を追跡する必要があります。
+
+---
+
+### B. Exact Duplicateが存在する
+
+内容SHA-256による機械的比較で、**6つの完全一致Duplicate Group / 12ファイル**を確認しました。
+
+代表例：
+
+```text
+2026-07-28_MIOS/
+  mios_canonical_object_envelope.schema.json
+
+root/
+  mios_canonical_object_envelope.schema.json
+```
+
+同様に、
+
+* `mios_metabolic_snapshot.schema.json`
+* `mios_mi_object.schema.json`
+* `mi_object_type_registry.v1.0.json`
+
+などにも重複があります。
+
+ただし、
+
+> Duplicate = 不要
+
+とは判断していません。
+
+これは次の **Architecture Genealogy / Canonical Source Decision** で処理すべきです。
+
+---
+
+## 3. ZIPについての重要なProvenance
+
+`healthbook-mios.zip` はGit情報も含むため、単なるバックアップではなく、**MIOS開発履歴を保持したSource Corpus**として扱うのが適切です。
+
+確認されたGit provenance：
+
+```text
+Repository:
+https://github.com/shimojok/healthbook_mios.git
+
+Branch:
+main
+
+HEAD:
+44f631b552fd4888438fe6491da810fdcf28e6c7
+
+Latest observed commit:
+2026-08-29 22:38:34 +09:00
+```
+
+なお、OSのfilename-length制約によりZIPを完全展開する方式は使わず、**ZIP Central Directory + streaming read**で442ファイルをInventoryしました。
+
+したがって、今回のRegistryは「442ファイルを確認した」という点では完全ですが、**全ファイル本文を意味論的に精査したRegistryではありません。**
+
+ここは明確に分離します。
+
+---
+
+# Phase 0-Aの完了判定
+
+現時点では、
+
+### **Phase 0-A: Source Corpus Inventory**
+
+**PRELIMINARY COMPLETE**
+
+とします。
+
+ただし、次の意味での「完全なCanonical Registry」ではありません。
+
+```text
+[Completed]
+Source existence
+      ↓
+File inventory
+      ↓
+Path preservation
+      ↓
+File type
+      ↓
+Note / title extraction
+      ↓
+Version/date preliminary extraction
+      ↓
+Git provenance
+      ↓
+Exact duplicate detection
+
+[Next]
+Semantic role verification
+      ↓
+Architecture genealogy
+      ↓
+Supersession analysis
+      ↓
+Decision lineage
+      ↓
+Cross-source reconciliation
+      ↓
+Canonical decision
+```
+
+この順序を崩さないことが重要です。
+
+---
+
+# 次のAction：Phase 0-B
+
+次は予定どおり、
+
+## **「MIOS Architecture Genealogy v1.0」**
+
+へ進むのが適切です。
+
+ここでは442ファイルを全部同じ重みで扱うのではなく、
+
+```text
+Source
+  ↓
+Note Number
+  ↓
+Date
+  ↓
+Architecture / Design Decision
+  ↓
+Change
+  ↓
+Supersession
+  ↓
+Current Status
+  ↓
+Canonical Candidate
+```
+
+という**Architecture lineage**を構築します。
+
+特に、
+
+**HealthBook → HealthBook-MI → MI-Probiome → MIOS**
+
+という名称変更だけでなく、
+
+**Architecture v1 → v2 → MI Architecture → MIOS Reference Architecture → Canonical Data Model → MI Object / KG / Evidence Architecture**
+
+という設計思想の変化を追跡します。
+
+その結果として初めて、Phase 0-Cの
+
+> **Cross-Source Reconciliation Queue**
+
+に進めます。
+
+**このままPhase 0-B「MIOS Architecture Genealogy v1.0」の構築へ進めますか？**

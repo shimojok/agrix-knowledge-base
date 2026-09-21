@@ -1,0 +1,436 @@
+{
+  "package": {
+    "id": "HB-MIOS-MIGRATION-PACKAGE-001",
+    "version": "1.0.0",
+    "purpose": "HealthBook_PMOSからHealthBook MIOSへ移管するための機械可読な設計・仕様・既決事項パッケージ",
+    "status": "migration_source_of_truth"
+  },
+  "strategic_position": {
+    "HealthBook": "human metabolic intelligence reference application",
+    "MIOS": "Metabolic Intelligence Operating System",
+    "AGRIX": "agricultural metabolic intelligence domain",
+    "PBPE": "planetary impact/value/cost intelligence layer",
+    "PMOS": "Planetary Metabolic Operating System"
+  },
+  "architecture_priority": {
+    "primary": "HealthBook MIOSの実システム・アーキテクチャ構築",
+    "secondary": "旧HealthBook-PMOS Master Planを設計資産として再利用",
+    "rule": "ドキュメント作成を目的化せず、仕様→schema→repository→implementationを優先"
+  },
+  "healthbook_mi": {
+    "philosophy": [
+      "人間の代謝をOSとして扱う",
+      "病名ではなく代謝パターン・代謝偏位を推論対象とする",
+      "代謝の因果構造を推論する",
+      "代謝フラックスの方向性とbottleneckを推定する",
+      "改善可能性と進行方向を評価する",
+      "漢方・MBT55・栄養・生活習慣を代謝モデルに統合する"
+    ],
+    "pattern_layers": [
+      "Metabolic Pattern",
+      "Neural Pattern",
+      "Endocrine Pattern",
+      "Inflammatory Pattern",
+      "Microbiome-MBT55 Pattern"
+    ],
+    "five_layer_architecture": [
+      "Data Integration Layer",
+      "Metabolic Inference Layer",
+      "MI Core Engines",
+      "MI Dashboard",
+      "Intervention Layer"
+    ]
+  },
+  "data_inputs": [
+    "200-question questionnaire",
+    "vitals",
+    "laboratory data",
+    "imaging",
+    "lifestyle",
+    "nutrition",
+    "microbiome",
+    "MBT55 profile",
+    "phenotype",
+    "endocrine state",
+    "hormone state",
+    "wearable data",
+    "traditional medicine observations"
+  ],
+  "canonical_objects": [
+    "Observation",
+    "Metabolic Snapshot",
+    "Phenotype",
+    "Metabolic State",
+    "Metabolic Deviation",
+    "MI Score",
+    "Pathway Hypothesis",
+    "Intervention Candidate",
+    "Simulation Result",
+    "Recommendation",
+    "Evidence Trail",
+    "Digital Twin"
+  ],
+  "mi_engines": {
+    "core": [
+      "MI-Metabolic",
+      "MI-Neuro-Endocrine",
+      "MI-Inflammation",
+      "MI-MBT55",
+      "MI-Oriental-Medicine"
+    ],
+    "expanded": [
+      "MI-AcetylCoA",
+      "MI-Estrobolome",
+      "MI-Mitochondria"
+    ],
+    "recorded_design_change": "NHB053でAcetylCoAとEstrobolomeを一次MI軸として追加"
+  },
+  "pathways": {
+    "MBT55_core_modules": [
+      "SCFA",
+      "Bile Acid",
+      "Aromatic Amino Acid"
+    ],
+    "canonical_reference_pathways": [
+      "Equol",
+      "Urolithin A",
+      "SCFA"
+    ],
+    "additional_axes": [
+      "AcetylCoA",
+      "Mitochondria",
+      "Inflammation",
+      "Neuro-Endocrine",
+      "Estrobolome"
+    ]
+  },
+  "endocrine_estrogen": {
+    "status": "HealthBook MIOSで深化すべき主要領域",
+    "chain": [
+      "gut microbiome",
+      "microbial function",
+      "estrogen metabolism / recirculation",
+      "host endocrine state",
+      "phenotype"
+    ],
+    "required_future_assets": [
+      "Endocrine State Schema",
+      "Hormone State Schema",
+      "Estrogen Pathway Ontology",
+      "Estrobolome Functional Capacity Schema",
+      "Evidence Registry"
+    ]
+  },
+  "microbiome_mbt55": {
+    "role": "microbiome functional/metabolic layer",
+    "principle": "個別菌株だけでなく、代謝機能・変換能力・代謝産物生成能力を扱う",
+    "future_capabilities": [
+      "Equol production capacity",
+      "Urolithin A production capacity",
+      "SCFA production capacity",
+      "microbial transformation functions",
+      "functional capacity acquisition",
+      "colonization",
+      "maintenance",
+      "functional expression"
+    ]
+  },
+  "disease_mi_matrix_v2": {
+    "status": "schema specified",
+    "entry_id": "Dxxx",
+    "fields": [
+      "disease_id",
+      "name",
+      "name_en",
+      "category",
+      "description",
+      "core_pathways",
+      "deviation_codes",
+      "snapshot_markers",
+      "related_mi_engines",
+      "intervention_focus"
+    ],
+    "core_pathways": [
+      "acetylcoa",
+      "estrobolome",
+      "mitochondria",
+      "mbt55",
+      "inflammation"
+    ],
+    "snapshot_marker_domains": [
+      "nutrition",
+      "gut_status",
+      "hormone_state",
+      "microbiome",
+      "musculo_fascial",
+      "symptoms"
+    ],
+    "scoring_flow": [
+      "snapshot marker matching",
+      "Dxxx contribution weighting",
+      "MI axis aggregation",
+      "normalization to 0-1"
+    ],
+    "migration_plan": [
+      "freeze v2.0",
+      "consistency-check core_pathways and related_mi_engines",
+      "update MI engine aggregation",
+      "backtest",
+      "release validated next version"
+    ]
+  },
+  "knowledge_assets": {
+    "canonical_repository": "healthbook-json-library",
+    "collections": [
+      "questionnaire",
+      "disease_matrix",
+      "phenotype",
+      "metabolic_pathways",
+      "laboratory",
+      "nutrition",
+      "microbiome",
+      "hormone",
+      "atp",
+      "mbt_kampo",
+      "animal_materia_medica",
+      "ontology",
+      "registry",
+      "simulation",
+      "evidence"
+    ],
+    "governance_metadata": [
+      "version",
+      "provenance",
+      "validation",
+      "review_history",
+      "approval",
+      "dependency"
+    ]
+  },
+  "knowledge_graph": {
+    "node_classes": [
+      "Person",
+      "Observation",
+      "Phenotype",
+      "Biomarker",
+      "Metabolic Pathway",
+      "Metabolite",
+      "Microbial Function",
+      "Microbe",
+      "Hormone",
+      "Disease",
+      "Symptom",
+      "Food",
+      "Phytochemical",
+      "Kampo Formula",
+      "Animal Materia Medica",
+      "Intervention",
+      "Evidence",
+      "AI Agent",
+      "MI Engine",
+      "Digital Twin"
+    ],
+    "edge_classes": [
+      "observed_in",
+      "associated_with",
+      "causes_or_contributes_to",
+      "transforms_to",
+      "produces",
+      "signals",
+      "modulates",
+      "belongs_to_pathway",
+      "supports",
+      "recommended_for",
+      "evidenced_by",
+      "generated_by"
+    ],
+    "reference_pathway_model": "Food/Phytochemical -> Microbiome Functional Layer -> Microbial Transformation -> Metabolite -> Host Signaling -> Phenotype -> Evidence"
+  },
+  "ai_agents": {
+    "agents": [
+      "Intake Agent",
+      "Questionnaire Agent",
+      "Laboratory Agent",
+      "Phenotype Agent",
+      "Nutrition Agent",
+      "Metabolic Pathway Agent",
+      "Disease Risk Agent",
+      "Microbiome Agent",
+      "Hormone Agent",
+      "ATP Agent",
+      "MBT55 Agent",
+      "Kampo Agent",
+      "Animal Materia Medica Agent",
+      "Simulation Agent",
+      "Recommendation Agent",
+      "Governance Agent"
+    ],
+    "communication": [
+      "MI Object",
+      "MI Code",
+      "Workflow Event",
+      "Task Object",
+      "Evidence Object",
+      "Knowledge Reference",
+      "Simulation Request",
+      "Recommendation Candidate"
+    ],
+    "orchestrator": "MIOS Workflow / Management Agent",
+    "trace_fields": [
+      "task_id",
+      "agent_id",
+      "input_object_id",
+      "output_object_id",
+      "knowledge_asset_id",
+      "version"
+    ]
+  },
+  "code_generation": {
+    "concept": "AI agents can generate analysis programs, JSON objects, workflow definitions, simulation requests and recommendation candidates under governed schemas.",
+    "pipeline": [
+      "input data",
+      "task classification",
+      "analysis-code generation",
+      "schema validation",
+      "sandbox/test",
+      "execution",
+      "structured result",
+      "metabolic/pathway reasoning",
+      "solution screening",
+      "recommendation"
+    ]
+  },
+  "mi_code": {
+    "status": "conceptual; formal standard still required",
+    "purpose": "AIエージェント間で解析状態・タスク・知識参照・推論状態を構造化識別子として受け渡し、管理エージェントが調整する",
+    "inspiration": "PBPE 7-digit classification / asset taxonomy",
+    "remaining_spec": [
+      "digit hierarchy",
+      "namespace",
+      "state transitions",
+      "registry schema",
+      "collision rules"
+    ],
+    "next_standard": "MI Code Standard v1.0"
+  },
+  "workflow": {
+    "canonical_flow": [
+      "Data Intake",
+      "Observation Object",
+      "Phenotyping",
+      "Laboratory Analysis",
+      "Nutrition Analysis",
+      "Microbiome Analysis",
+      "Endocrine/Hormone Analysis",
+      "Metabolic Pathway Analysis",
+      "Disease-MI Mapping",
+      "Causal Hypothesis",
+      "Solution Screening",
+      "Simulation",
+      "Recommendation",
+      "Digital Twin Update",
+      "Evidence Trail"
+    ]
+  },
+  "digital_twin": {
+    "role": "individual longitudinal metabolic-state representation",
+    "inputs": [
+      "questionnaire history",
+      "laboratory history",
+      "phenotype history",
+      "nutrition",
+      "microbiome",
+      "hormone state",
+      "interventions",
+      "simulation results",
+      "recommendation history"
+    ]
+  },
+  "repositories": [
+    "healthbook-platform",
+    "healthbook-json-library",
+    "mios-core",
+    "mios-ai-agents",
+    "mios-workflow-engine",
+    "mios-knowledge-graph",
+    "mios-digital-twin",
+    "mios-sdk",
+    "mios-api",
+    "mios-governance",
+    "mios-documentation",
+    "mios-constitution",
+    "mios-standards",
+    "mios-specifications",
+    "mios-reference"
+  ],
+  "master_plan_volumes": {
+    "I": "Vision / Philosophy / Foundation",
+    "II": "Overall Architecture",
+    "III": "Knowledge Architecture",
+    "IV": "Metabolic Intelligence Engine",
+    "V": "AI Agent Architecture",
+    "VI": "Programming Model",
+    "VII": "Knowledge Graph",
+    "VIII": "MI Object Model",
+    "IX": "Knowledge Assets / Libraries",
+    "X": "Workflow Engine",
+    "XI": "Digital Twin",
+    "XII": "SDK / API / FHIR",
+    "XIII": "Integration / Interoperability",
+    "XIV": "Security / Governance / Compliance",
+    "XV": "Cloud Native / Azure / GitHub",
+    "XVI": "Ecosystem / Future Roadmap",
+    "XVII": "Reference Implementation",
+    "XVIII": "MIOS Constitution / Global Standard"
+  },
+  "source_files": [
+    "NHB001. HealthBook‑MI：設計思想（Philosophy）.md",
+    "NHB019. STEP 1：137疾患統合 JSON（v2仕様）— 最終フォーマットの確定.md",
+    "NHB053. モデル設計変更（MIレイヤ）.md",
+    "■HB5. HealthBook Platform 統合アーキテクチャ（詳細説明付き）.md",
+    "■2. HealthBook推論エンジンを実装.md",
+    "■MKS13. 動物由来ライブラリー構築の3つの戦略的意義.md",
+    "■MKS14. 動物性生薬特化型 JSON構造案（スキーマ）.md",
+    "■MKS15. 鹿茸・地龍JSONライブラリー.md"
+  ],
+  "known_gaps_to_build": [
+    "MI Code Standard v1.0",
+    "MI Object JSON Schema v1.0",
+    "Metabolic Snapshot Schema v1.0",
+    "MIOS Knowledge Graph JSON Schema",
+    "Agent Registry",
+    "Agent-to-Agent Protocol",
+    "Workflow DSL",
+    "Code-generation sandbox specification",
+    "Evidence provenance schema",
+    "FHIR resource mapping",
+    "Endocrine/Hormone/Estrogen ontology",
+    "Estrobolome functional-capacity ontology",
+    "Equol pathway formalization",
+    "MBT55 functional ontology",
+    "Solution Screening schema",
+    "Digital Twin state-transition schema"
+  ],
+  "build_order": [
+    "MIOS canonical data model",
+    "Metabolic Snapshot Schema",
+    "MI Object Schema",
+    "MI Code Standard",
+    "Agent Registry and Agent-to-Agent Protocol",
+    "Knowledge Graph schema",
+    "Workflow DSL",
+    "Disease-MI Matrix v2 validation",
+    "Endocrine/Estrobolome/Equol pathway models",
+    "MBT55 functional ontology",
+    "Solution Screening Engine",
+    "Digital Twin state model",
+    "FHIR mapping",
+    "GitHub implementation"
+  ],
+  "governance": {
+    "canonical_thread": "HealthBook MIOS",
+    "legacy_thread": "HealthBook_PMOS",
+    "rule": "旧スレッドの内容は移管資産。HealthBook MIOSでの新規実装判断はSchema/ADR/Specificationをcanonical sourceとする。",
+    "anti_loop_rule": "新しい総合計画書の巻を増やすことを作業成果としない。実装仕様とGitHub資産の構築を優先する。"
+  }
+}

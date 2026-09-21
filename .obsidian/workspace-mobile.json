@@ -1,0 +1,226 @@
+{
+  "main": {
+    "id": "de6e0a0e1682bd40",
+    "type": "split",
+    "children": [
+      {
+        "id": "a1c56eb23bd9dad6",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "194d37c8a753be5d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "dailynote/2026-09-18.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "2026-09-18"
+            }
+          },
+          {
+            "id": "45483410065da2ce",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Ds005. Gemini提案と本提案の比較・優位性整理.md",
+                "mode": "preview",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Ds005. Gemini提案と本提案の比較・優位性整理"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "b09e3ac93fd9358a",
+    "type": "mobile-drawer",
+    "children": [
+      {
+        "id": "323ffbe8cd57174d",
+        "type": "leaf",
+        "state": {
+          "type": "file-explorer",
+          "state": {
+            "sortOrder": "alphabetical",
+            "autoReveal": false,
+            "showSearch": false,
+            "searchQuery": ""
+          },
+          "icon": "lucide-folder-closed",
+          "title": "ファイルエクスプローラ"
+        }
+      },
+      {
+        "id": "b2d2d4dbde63fc8d",
+        "type": "leaf",
+        "state": {
+          "type": "search",
+          "state": {
+            "query": "tag:#ここまでが現在の構造agrix-knowledge-baseの構造",
+            "matchingCase": false,
+            "explainSearch": false,
+            "collapseAll": false,
+            "extraContext": false,
+            "sortOrder": "alphabetical"
+          },
+          "icon": "lucide-search",
+          "title": "検索"
+        }
+      },
+      {
+        "id": "000648644d9de519",
+        "type": "leaf",
+        "state": {
+          "type": "tag",
+          "state": {
+            "sortOrder": "frequency",
+            "useHierarchy": false,
+            "showSearch": false,
+            "searchQuery": ""
+          },
+          "icon": "lucide-tags",
+          "title": "タグ"
+        }
+      }
+    ],
+    "currentTab": 1
+  },
+  "right": {
+    "id": "71ef1af848195938",
+    "type": "mobile-drawer",
+    "children": [
+      {
+        "id": "d054290932ec1f65",
+        "type": "leaf",
+        "state": {
+          "type": "backlink",
+          "state": {
+            "file": "dailynote/2026-08-16.md",
+            "collapseAll": false,
+            "extraContext": false,
+            "sortOrder": "alphabetical",
+            "showSearch": false,
+            "searchQuery": "",
+            "backlinkCollapsed": false,
+            "unlinkedCollapsed": true
+          },
+          "icon": "links-coming-in",
+          "title": "バックリンク"
+        }
+      },
+      {
+        "id": "eeb71a20a1bf2b7a",
+        "type": "leaf",
+        "state": {
+          "type": "outgoing-link",
+          "state": {
+            "linksCollapsed": false,
+            "unlinkedCollapsed": true
+          },
+          "icon": "links-going-out",
+          "title": "アウトゴーイングリンク"
+        }
+      },
+      {
+        "id": "3fbfa113c014bdd2",
+        "type": "leaf",
+        "state": {
+          "type": "outline",
+          "state": {
+            "followCursor": false,
+            "showSearch": false,
+            "searchQuery": ""
+          },
+          "icon": "lucide-list",
+          "title": "アウトライン"
+        }
+      },
+      {
+        "id": "2626a22c1245b064",
+        "type": "leaf",
+        "state": {
+          "type": "calendar",
+          "state": {},
+          "icon": "calendar-with-checkmark",
+          "title": "Calendar"
+        }
+      }
+    ],
+    "currentTab": 3
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "daily-notes:今日のデイリーノートを開く": false,
+      "bases:新規ベースを作成": false,
+      "templater-obsidian:Templater": false
+    }
+  },
+  "active": "194d37c8a753be5d",
+  "lastOpenFiles": [
+    "Ds012. 情報提供_DeepSeek_0919.md",
+    "dailynote/2026-09-18.md",
+    "04_AGRIX/AKG005. AGRIX Knowledge Base System (BioNexus Engine).md",
+    "Ds005. Gemini提案と本提案の比較・優位性整理.md",
+    "2026-09-18.md",
+    "Ds007. 送っていただきたい内容（優先順）.md",
+    "MCP（Model Context Protocol）.md",
+    "Ds001. ローカルVaultへのアクセス基盤.md",
+    "Ds006. 何が起きていたのか（ハルシネーションの正体）.md",
+    "Ds004. 過去の失敗の本質的原因（あなたの診断は正しい）.md",
+    "Ds003. 基本方針：3プラットフォーム×1知識基盤.md",
+    "W013_a7. 実環境に合わせた正しい統合フォルダ構造.md",
+    "貴方が示したフォルダ構造の矛盾.md",
+    "2026-09-16.md",
+    "W014_c8. フォルダ構造の変更.md",
+    "W009_ab6. 推奨ディレクトリ構造.md",
+    "Ds002. AGRIX Project の全体像（Vault記述からの抽出）.md",
+    "00_inbox/DS004..md",
+    "Ds003..md",
+    "dailynote/2026-09-08.md",
+    "AKG024. 浜田プロトコル.md",
+    "AKG023. 全体進行順序の確認と位置づけ（漏れチェック）.md",
+    "AKG022. 「腸内細菌_MBT55 代謝」が明かすパラダイムシフト（新規性）.md",
+    "AKG021. 科学的・構造的メカニズム：HealthBook 2.0 (MBT Probiotics).md",
+    "AKG020. 3つのプラットフォームに対する基本方針.md",
+    "AKG019. 統合型対話＆メタボリック・シミュレーション Web システム◎.md",
+    "slides/PH-API_s.pdf",
+    "slides/Coffee_Carbon_Currency_s.pdf",
+    "slides/AquaGrid_National_Resilience_OS_compressed.pdf",
+    "slides/AquaGrid_Lagos_Urban_OS_en_compressed.pdf",
+    "slides/AquaGrid_Lagos_Urban_OS_compressed.pdf",
+    "03_MBT55/MBT55(原名NB菌) 菌数.pdf",
+    "Templates/AGRIX",
+    "Templates",
+    "00_inbox/07_HealthBook",
+    "dailynote/2026-07-02.md.0.tmp"
+  ]
+}

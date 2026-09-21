@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Project Phoenix Multi-Agent Migration Manifest",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "project",
+    "canonical_architecture",
+    "repositories",
+    "documents",
+    "architecture_decisions",
+    "agents",
+    "interfaces"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string"
+    },
+    "project": {
+      "type": "object"
+    },
+    "canonical_architecture": {
+      "type": "object"
+    },
+    "repositories": {
+      "type": "array"
+    },
+    "documents": {
+      "type": "array"
+    },
+    "architecture_decisions": {
+      "type": "array"
+    },
+    "agents": {
+      "type": "array"
+    },
+    "interfaces": {
+      "type": "array"
+    },
+    "dashboards": {
+      "type": "array"
+    },
+    "demonstrations": {
+      "type": "array"
+    },
+    "kpis": {
+      "type": "array"
+    }
+  }
+}

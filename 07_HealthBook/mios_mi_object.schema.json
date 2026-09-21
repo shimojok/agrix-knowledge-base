@@ -1,0 +1,148 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "mios://schema/mi-object/1.0.0",
+  "title": "MIOS MI Object Schema v1.0",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "mi_object_id",
+    "object_type",
+    "schema_version",
+    "status",
+    "task_id",
+    "producer_agent",
+    "input_refs",
+    "payload"
+  ],
+  "properties": {
+    "mi_object_id": {
+      "type": "string",
+      "pattern": "^MIO-[A-Za-z0-9._-]+$"
+    },
+    "object_type": {
+      "type": "string",
+      "enum": [
+        "Observation",
+        "MetabolicSnapshot",
+        "Phenotype",
+        "MetabolicState",
+        "MetabolicDeviation",
+        "MIScore",
+        "PathwayHypothesis",
+        "DiseaseMIMapping",
+        "KnowledgeAsset",
+        "InterventionCandidate",
+        "SimulationResult",
+        "Recommendation",
+        "Evidence",
+        "WorkflowEvent",
+        "DigitalTwinState"
+      ]
+    },
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "status": {
+      "enum": [
+        "draft",
+        "validated",
+        "approved",
+        "deprecated",
+        "archived"
+      ]
+    },
+    "task_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "producer_agent": {
+      "type": "string",
+      "minLength": 1
+    },
+    "consumer_agents": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "input_refs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "payload": {
+      "type": "object"
+    },
+    "confidence": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "value": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "scale": {
+          "type": "object",
+          "required": [
+            "min",
+            "max"
+          ],
+          "properties": {
+            "min": {
+              "const": 0
+            },
+            "max": {
+              "const": 1
+            }
+          },
+          "additionalProperties": false
+        },
+        "method_ref": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "value",
+        "scale"
+      ],
+      "additionalProperties": false
+    },
+    "evidence_refs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "dependency_refs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "provenance": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "parent_object_ref": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "child_object_refs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

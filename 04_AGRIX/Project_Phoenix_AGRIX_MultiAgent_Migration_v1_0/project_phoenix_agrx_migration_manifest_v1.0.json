@@ -1,0 +1,585 @@
+{
+  "schema_version": "project-phoenix-migration/v1.0",
+  "generated_at": "2026-08-22T15:56:22.693203+00:00",
+  "project": {
+    "id": "project-phoenix",
+    "name": "Project Phoenix — AGRIX Platform Architecture",
+    "phase": "Implementation Office",
+    "language": "ja",
+    "objective": "MBT55を基盤としてAGRIX/HealthBook Platformを構築し、食料生産、GHG削減、グローバルヘルス、農業金融への世界規模の波及を可能にするAI-native architectureを提示する。",
+    "primary_platforms": [
+      "AGRIX Platform",
+      "HealthBook Platform"
+    ],
+    "outcome_model": "PMOS"
+  },
+  "canonical_architecture": {
+    "agrx_core": [
+      "MBT55",
+      "MSC",
+      "AgriWare™",
+      "SafetyChain™",
+      "PBPE",
+      "PBPE Marketplace"
+    ],
+    "flow": "MBT55 + fermentation machine -> MSC -> AgriWare™ / SafetyChain™ -> PBPE -> PBPE Marketplace",
+    "health_flow": "MBT55 -> microbiome -> metabolism -> phenotype -> HealthBook -> MBT Probiotics -> health outcome -> health economic impact",
+    "knowledge_stack": [
+      "GitHub",
+      "Knowledge Assets",
+      "Knowledge Graph",
+      "Pinecone Vector Index",
+      "AI Agents",
+      "Executive Demonstration"
+    ]
+  },
+  "repositories": [
+    {
+      "name": "Azure-PMOS",
+      "domain": "infrastructure",
+      "role": "PMOS/Azure integration",
+      "github": "https://github.com/shimojok/Azure-PMOS"
+    },
+    {
+      "name": "HealthBook-MI-Probiome-OS",
+      "domain": "healthbook",
+      "role": "MI/Probiome platform",
+      "github": "https://github.com/shimojok/HealthBook-MI-Probiome-OS"
+    },
+    {
+      "name": "PBPE-Marketplace",
+      "domain": "pbpe",
+      "role": "PBPE marketplace",
+      "github": "https://github.com/shimojok/PBPE-Marketplace"
+    },
+    {
+      "name": "MBT-Biosecurity-Engine",
+      "domain": "mbt55",
+      "role": "MBT biosecurity engine",
+      "github": "https://github.com/shimojok/MBT-Biosecurity-Engine"
+    },
+    {
+      "name": "PBPE-Finance",
+      "domain": "pbpe",
+      "role": "PBPE finance",
+      "github": "https://github.com/shimojok/PBPE-Finance"
+    },
+    {
+      "name": "PBPE-Dashboard",
+      "domain": "pbpe",
+      "role": "PBPE dashboard",
+      "github": "https://github.com/shimojok/PBPE-Dashboard"
+    },
+    {
+      "name": "HealthBook-AI",
+      "domain": "healthbook",
+      "role": "HealthBook AI",
+      "github": "https://github.com/shimojok/HealthBook-AI"
+    },
+    {
+      "name": "HealthBook-MBT55-Unified",
+      "domain": "healthbook",
+      "role": "HealthBook + MBT55",
+      "github": "https://github.com/shimojok/HealthBook-MBT55-Unified"
+    },
+    {
+      "name": "M3-BioSynergy",
+      "domain": "mbt55",
+      "role": "M3 BioSynergy",
+      "github": "https://github.com/shimojok/M3-BioSynergy"
+    },
+    {
+      "name": "PBPE-Coffee",
+      "domain": "pbpe",
+      "role": "PBPE demonstration/domain",
+      "github": "https://github.com/shimojok/PBPE-Coffee"
+    },
+    {
+      "name": "mbt55-climate-overview",
+      "domain": "mbt55",
+      "role": "MBT55 climate overview",
+      "github": "https://github.com/shimojok/mbt55-climate-overview"
+    },
+    {
+      "name": "HealthBook-Integrated",
+      "domain": "healthbook",
+      "role": "HealthBook integration",
+      "github": "https://github.com/shimojok/HealthBook-Integrated"
+    },
+    {
+      "name": "pbpe-mbt55-investment-engine",
+      "domain": "pbpe",
+      "role": "PBPE/MBT55 investment engine",
+      "github": "https://github.com/shimojok/pbpe-mbt55-investment-engine"
+    },
+    {
+      "name": "M3-Core-Engine",
+      "domain": "mbt55",
+      "role": "M3 core engine",
+      "github": "https://github.com/shimojok/M3-Core-Engine"
+    },
+    {
+      "name": "M3-BioSynergy-Core",
+      "domain": "mbt55",
+      "role": "MBT55/M3 core biological intelligence",
+      "github": "https://github.com/shimojok/M3-BioSynergy-Core"
+    },
+    {
+      "name": "BioNexus-Enterprise",
+      "domain": "enterprise",
+      "role": "enterprise integration",
+      "github": "https://github.com/shimojok/BioNexus-Enterprise"
+    },
+    {
+      "name": "BioNexus-Core",
+      "domain": "knowledge",
+      "role": "curated knowledge repository / Vault-derived canonical knowledge",
+      "github": "https://github.com/shimojok/BioNexus-Core"
+    }
+  ],
+  "documents": [
+    {
+      "id": "PMOS-Manifesto",
+      "domain": "governance",
+      "status": "frozen",
+      "description": "PMOS mission and principles"
+    },
+    {
+      "id": "PMOS-Constitution",
+      "domain": "governance",
+      "status": "frozen",
+      "description": "PMOS governance"
+    },
+    {
+      "id": "PMOS-Canon",
+      "domain": "governance",
+      "status": "frozen",
+      "description": "canonical definitions"
+    },
+    {
+      "id": "PMOS-Architecture-Book",
+      "domain": "architecture",
+      "status": "active",
+      "description": "architecture reference set"
+    },
+    {
+      "id": "Repository-Atlas",
+      "domain": "architecture",
+      "status": "frozen",
+      "description": "repository topology"
+    },
+    {
+      "id": "Knowledge-Graph",
+      "domain": "knowledge",
+      "status": "frozen",
+      "description": "knowledge graph architecture"
+    },
+    {
+      "id": "Knowledge-Registry",
+      "domain": "knowledge",
+      "status": "frozen",
+      "description": "knowledge registry"
+    },
+    {
+      "id": "Project-Phoenix-Master-Blueprint",
+      "domain": "architecture",
+      "status": "frozen",
+      "description": "master blueprint"
+    },
+    {
+      "id": "AGRIX_Theory_MBT55_ja.md",
+      "domain": "source",
+      "status": "canonical",
+      "description": "MBT55/MSC foundational source"
+    },
+    {
+      "id": "13-PMOS-Executive-Intelligence-Architecture.md",
+      "domain": "architecture",
+      "status": "active",
+      "description": "executive intelligence layer"
+    },
+    {
+      "id": "14-AGRIX-Platform-Reference-Architecture.md",
+      "domain": "architecture",
+      "status": "active",
+      "description": "AGRIX core reference architecture"
+    },
+    {
+      "id": "15-AGRIX-Biological-Intelligence-Architecture.md",
+      "domain": "architecture",
+      "status": "active",
+      "description": "MBT55 biological intelligence"
+    },
+    {
+      "id": "16-AgriWare-Intelligence-Architecture.md",
+      "domain": "architecture",
+      "status": "active",
+      "description": "AgriWare production intelligence"
+    },
+    {
+      "id": "17-SafetyChain-Intelligence-Architecture.md",
+      "domain": "architecture",
+      "status": "active",
+      "description": "SafetyChain evidence/traceability"
+    },
+    {
+      "id": "18-PBPE-Impact-Value-Architecture.md",
+      "domain": "architecture",
+      "status": "active",
+      "description": "Impact/Value architecture"
+    },
+    {
+      "id": "19-PBPE-Marketplace-Financial-Architecture.md",
+      "domain": "architecture",
+      "status": "active",
+      "description": "financial marketplace"
+    },
+    {
+      "id": "20-AGRIX-HealthBook-Integration-Architecture.md",
+      "domain": "architecture",
+      "status": "active",
+      "description": "cross-platform integration"
+    },
+    {
+      "id": "21-PMOS-Multi-Agent-Architecture.md",
+      "domain": "ai",
+      "status": "active",
+      "description": "multi-agent architecture"
+    },
+    {
+      "id": "22-PMOS-Knowledge-Graph-Architecture.md",
+      "domain": "knowledge",
+      "status": "active",
+      "description": "KG architecture"
+    },
+    {
+      "id": "23-PMOS-Knowledge-Registry-and-Vector-Architecture.md",
+      "domain": "knowledge",
+      "status": "active",
+      "description": "registry/vector architecture"
+    },
+    {
+      "id": "24-PMOS-Executive-Dashboard-Architecture.md",
+      "domain": "dashboard",
+      "status": "active",
+      "description": "executive dashboard"
+    },
+    {
+      "id": "25-PMOS-Demonstration-Architecture.md",
+      "domain": "demo",
+      "status": "active",
+      "description": "demonstration architecture"
+    },
+    {
+      "id": "26-PMOS-Global-Deployment-Architecture.md",
+      "domain": "architecture",
+      "status": "active",
+      "description": "global deployment"
+    },
+    {
+      "id": "27-PMOS-Implementation-Reference.md",
+      "domain": "implementation",
+      "status": "active",
+      "description": "implementation reference"
+    },
+    {
+      "id": "28-PMOS-Governance-and-Evidence-Architecture.md",
+      "domain": "governance",
+      "status": "active",
+      "description": "evidence governance"
+    },
+    {
+      "id": "29-PMOS-Strategic-Partner-Reference-Architecture.md",
+      "domain": "strategy",
+      "status": "active",
+      "description": "strategic partner framing"
+    },
+    {
+      "id": "30-PMOS-Reference-Architecture-Conclusion.md",
+      "domain": "architecture",
+      "status": "active",
+      "description": "reference architecture conclusion"
+    }
+  ],
+  "architecture_decisions": [
+    {
+      "id": "DEC-001",
+      "domain": "architecture",
+      "topic": "AGRIX core chain",
+      "decision": "MBT55/MSC -> AgriWare™ / SafetyChain™ -> PBPE Marketplace",
+      "status": "frozen"
+    },
+    {
+      "id": "DEC-002",
+      "domain": "architecture",
+      "topic": "MSC definition",
+      "decision": "MSC = MBT55 microbial consortium + fermentation machine",
+      "status": "frozen"
+    },
+    {
+      "id": "DEC-003",
+      "domain": "architecture",
+      "topic": "PMOS role",
+      "decision": "PMOS is an outcome/integration model for AGRIX and HealthBook, not the primary product",
+      "status": "frozen"
+    },
+    {
+      "id": "DEC-004",
+      "domain": "finance",
+      "topic": "PBPE role",
+      "decision": "PBPE is not currently a currency; architecture must preserve future financial/monetary evolution potential",
+      "status": "frozen"
+    },
+    {
+      "id": "DEC-005",
+      "domain": "governance",
+      "topic": "canonical stack",
+      "decision": "GitHub=official publication; Obsidian=research workspace; Knowledge Graph=semantic layer; Pinecone=semantic retrieval; Agents=reasoning; Dashboard=human interpretation",
+      "status": "frozen"
+    },
+    {
+      "id": "DEC-006",
+      "domain": "implementation",
+      "topic": "execution rule",
+      "decision": "Every implementation turn must produce a tangible artifact; declarations alone do not count",
+      "status": "frozen"
+    },
+    {
+      "id": "DEC-007",
+      "domain": "implementation",
+      "topic": "scope control",
+      "decision": "No opportunistic scope expansion during active artifact production; additions go to backlog",
+      "status": "frozen"
+    },
+    {
+      "id": "DEC-008",
+      "domain": "implementation",
+      "topic": "unit of work",
+      "decision": "Use 600–900 word sections as the smallest documentation unit; large documents split mechanically",
+      "status": "frozen"
+    },
+    {
+      "id": "DEC-009",
+      "domain": "architecture",
+      "topic": "AGRIX purpose",
+      "decision": "Demonstrate how MBT55 functionality can improve food production, GHG reduction and agricultural economics at global scale",
+      "status": "frozen"
+    },
+    {
+      "id": "DEC-010",
+      "domain": "architecture",
+      "topic": "HealthBook purpose",
+      "decision": "Integrate microbiome, metabolism, phenotyping, screening and health-economic intelligence on the MBT55 foundation",
+      "status": "frozen"
+    }
+  ],
+  "agents": [
+    {
+      "id": "executive_coordinator",
+      "domain": "Executive Intelligence",
+      "responsibility": "Coordinates strategic questions across AGRIX, HealthBook and PBPE; produces executive synthesis."
+    },
+    {
+      "id": "mbt55_biological_agent",
+      "domain": "MBT55 Biological Intelligence",
+      "responsibility": "Interprets MBT55/MSC biological states, functions, hypercycle, nutrient cascade, biosecurity and biocontrol concepts."
+    },
+    {
+      "id": "soil_intelligence_agent",
+      "domain": "Soil Intelligence",
+      "responsibility": "Reasons over soil state, nutrient/resource constraints and regenerative actions."
+    },
+    {
+      "id": "agri_production_agent",
+      "domain": "Agricultural Production Intelligence",
+      "responsibility": "Optimizes production decisions using crop, resource, climate and soil context."
+    },
+    {
+      "id": "safetychain_agent",
+      "domain": "SafetyChain Intelligence",
+      "responsibility": "Maintains product quality, functionality, freshness, safety and traceability evidence."
+    },
+    {
+      "id": "climate_impact_agent",
+      "domain": "Climate Intelligence",
+      "responsibility": "Maps agricultural actions to GHG/carbon-impact records and evidence."
+    },
+    {
+      "id": "pbpe_value_agent",
+      "domain": "PBPE Value Intelligence",
+      "responsibility": "Transforms verified impact into value/asset representations."
+    },
+    {
+      "id": "pbpe_finance_agent",
+      "domain": "PBPE Finance Intelligence",
+      "responsibility": "Evaluates finance structures and capital deployment pathways."
+    },
+    {
+      "id": "knowledge_graph_agent",
+      "domain": "Knowledge Graph Agent",
+      "responsibility": "Maintains semantic relationships and retrieves structured context."
+    },
+    {
+      "id": "evidence_governance_agent",
+      "domain": "Evidence & Governance Agent",
+      "responsibility": "Tracks source, version, provenance, decision and evidence lineage."
+    },
+    {
+      "id": "healthbook_metabolic_agent",
+      "domain": "HealthBook Metabolic Intelligence",
+      "responsibility": "Reasons over microbiome, metabolites, phenotypes and health pathways."
+    },
+    {
+      "id": "demo_orchestrator_agent",
+      "domain": "Demonstration Orchestrator",
+      "responsibility": "Runs deterministic executive demonstration scenarios."
+    }
+  ],
+  "dashboards": [
+    {
+      "id": "AGRIX Executive",
+      "domain": "Agriculture",
+      "scope": "production, soil, resource, GHG, cost, productivity"
+    },
+    {
+      "id": "MBT Biosecurity",
+      "domain": "Biosecurity",
+      "scope": "biosecurity and biocontrol intelligence"
+    },
+    {
+      "id": "Hypercycle",
+      "domain": "Biology",
+      "scope": "MBT55/M3 hypercycle representation"
+    },
+    {
+      "id": "PBPE Marketplace",
+      "domain": "Finance",
+      "scope": "impact, value, asset, finance and marketplace KPIs"
+    },
+    {
+      "id": "PMOS Executive",
+      "domain": "Executive",
+      "scope": "cross-platform agriculture, health, climate, finance, circularity"
+    }
+  ],
+  "demonstrations": [
+    {
+      "id": "AGRIX-01",
+      "name": "Organic Waste to Agricultural Value",
+      "flow": "Organic resource -> MBT55 + fermentation machine -> MSC -> AgriWare -> SafetyChain -> PBPE -> finance"
+    },
+    {
+      "id": "AGRIX-02",
+      "name": "Regenerative Soil",
+      "flow": "Soil constraint -> MBT55/MSC intervention -> AgriWare decision -> measured production/climate impact"
+    },
+    {
+      "id": "AGRIX-03",
+      "name": "Verified Produce",
+      "flow": "Production -> quality/functionality/freshness -> SafetyChain evidence -> PBPE value"
+    },
+    {
+      "id": "PBPE-01",
+      "name": "Agricultural Finance",
+      "flow": "Verified impact -> value -> asset -> investment structure -> marketplace -> capital deployment"
+    },
+    {
+      "id": "HEALTH-01",
+      "name": "Food to Health",
+      "flow": "Food -> microbiome -> metabolism -> phenotype -> HealthBook -> intervention -> health-economic impact"
+    },
+    {
+      "id": "EXEC-01",
+      "name": "Executive Platform Demonstration",
+      "flow": "AGRIX + HealthBook + PBPE integrated narrative for strategic partners"
+    }
+  ],
+  "interfaces": [
+    {
+      "from": "MBT55/MSC",
+      "to": "AgriWare™",
+      "contract": "biological_state + resource_transformation"
+    },
+    {
+      "from": "AgriWare™",
+      "to": "SafetyChain™",
+      "contract": "production_event + product_state"
+    },
+    {
+      "from": "SafetyChain™",
+      "to": "PBPE",
+      "contract": "verified_evidence + impact_record"
+    },
+    {
+      "from": "AgriWare™",
+      "to": "PBPE",
+      "contract": "production_impact + cost/GHG metrics"
+    },
+    {
+      "from": "PBPE",
+      "to": "PBPE Marketplace",
+      "contract": "value_record + asset_record + finance_record"
+    },
+    {
+      "from": "AGRIX",
+      "to": "HealthBook",
+      "contract": "food/nutrition/biological-context linkage"
+    },
+    {
+      "from": "Knowledge Graph",
+      "to": "AI Agents",
+      "contract": "semantic_context + provenance"
+    },
+    {
+      "from": "AI Agents",
+      "to": "Executive Dashboard",
+      "contract": "decision_summary + KPI + evidence_refs"
+    }
+  ],
+  "kpis": [
+    {
+      "id": "KPI-AGRIX-01",
+      "name": "GHG reduction",
+      "target": "Project target; canonical program target to be resolved from PBPE/PMOS registry"
+    },
+    {
+      "id": "KPI-AGRIX-02",
+      "name": "Agricultural productivity",
+      "target": "Measured improvement vs baseline"
+    },
+    {
+      "id": "KPI-AGRIX-03",
+      "name": "Food production cost",
+      "target": "Measured reduction vs baseline"
+    },
+    {
+      "id": "KPI-AGRIX-04",
+      "name": "Soil restoration",
+      "target": "Measured soil-state improvement"
+    },
+    {
+      "id": "KPI-AGRIX-05",
+      "name": "Verified impact coverage",
+      "target": "100% of marketplace-impact records linked to evidence"
+    },
+    {
+      "id": "KPI-PBPE-01",
+      "name": "Impact-to-finance conversion",
+      "target": "100% of finance candidates linked to verified impact records"
+    }
+  ],
+  "source_basis": {
+    "canonical_source": "AGRIX_Theory_MBT55_ja.md",
+    "note": "数値・科学的主張は原典由来として保持し、AI推論時は evidence/provenance を必須化する。"
+  },
+  "migration_rules": [
+    "既存Architectureを勝手に再設計しない。",
+    "frozen decisionsは変更禁止。変更はADRで行う。",
+    "Source/Canonical/Derived/Generatedを区別する。",
+    "Agent output must carry provenance and evidence references.",
+    "Dashboard is presentation layer, not source of truth.",
+    "Vector index is retrieval layer, not canonical knowledge store.",
+    "Every implementation unit must create a tangible artifact.",
+    "Scope additions are backlog items until formally adopted."
+  ]
+}

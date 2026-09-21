@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PBPE · BioNexus Holdings</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap');
+:root {
+  --bg:#0D1117; --bg2:#161B22; --bg3:#21262D; --bg4:#2D333B;
+  --border:#30363D; --border2:#3D444D;
+  --green:#39D353; --green-dim:#196127; --green-glow:#39D35340;
+  --amber:#F0A500; --amber-dim:#7D4E00;
+  --blue:#58A6FF; --blue-dim:#1F4A8C;
+  --soil:#C9A84C; --red:#F85149; --purple:#BC8CFF; --teal:#3DCFCF;
+  --orange:#FF9F43;
+  --text:#E6EDF3; --text2:#8B949E; --text3:#6E7681;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;font-size:13px;line-height:1.5;min-height:100vh}
+
+/* TOPBAR */
+.topbar{background:var(--bg2);border-bottom:1px solid var(--border);padding:0 20px;height:48px;display:flex;align-items:center;gap:16px;position:sticky;top:0;z-index:200}
+.tl{font-family:'JetBrains Mono',monospace;font-weight:700;font-size:13px;color:var(--green);display:flex;align-items:center;gap:8px;white-space:nowrap}
+.tl .dot{width:8px;height:8px;background:var(--green);border-radius:50%;animation:pdot 2s infinite}
+@keyframes pdot{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(1.4)}}
+.topbar-tabs{display:flex;gap:2px;margin-left:auto}
+.tab{padding:5px 12px;border-radius:6px;color:var(--text2);cursor:pointer;font-size:12px;font-weight:500;border:1px solid transparent;transition:all .15s;white-space:nowrap}
+.tab:hover{background:var(--bg3);color:var(--text)}
+.tab.active{background:var(--bg3);color:var(--text);border-color:var(--border)}
+.tbadge{background:var(--green);color:#000;font-size:10px;font-weight:700;padding:2px 7px;border-radius:10px;font-family:'JetBrains Mono',monospace}
+
+/* EXPORT BTN */
+.export-btn{display:flex;align-items:center;gap:6px;padding:5px 12px;border-radius:6px;background:var(--bg3);border:1px solid var(--border2);color:var(--text2);cursor:pointer;font-size:11px;font-weight:600;font-family:'JetBrains Mono',monospace;transition:all .15s;white-space:nowrap}
+.export-btn:hover{background:var(--bg4);color:var(--text);border-color:var(--amber)}
+.export-dropdown{position:relative}
+.export-menu{display:none;position:absolute;top:calc(100% + 4px);right:0;background:var(--bg2);border:1px solid var(--border2);border-radius:8px;padding:6px;z-index:300;min-width:180px;box-shadow:0 8px 24px #00000060}
+.export-menu.open{display:block}
+.em-item{padding:8px 10px;border-radius:6px;color:var(--text2);cursor:pointer;font-size:12px;display:flex;align-items:center;gap:8px;transition:all .15s}
+.em-item:hover{background:var(--bg3);color:var(--text)}
+.em-item .ei{font-size:14px}
+
+/* LAYOUT */
+.layout{display:grid;grid-template-columns:200px 1fr 260px;min-height:calc(100vh - 48px)}
+
+/* SIDEBAR */
+.sidebar{border-right:1px solid var(--border);padding:16px 0;background:var(--bg2);overflow:auto}
+.sb-section{padding:0 12px;margin-bottom:20px}
+.sb-label{font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:700;color:var(--text3);letter-spacing:.1em;text-transform:uppercase;margin-bottom:6px;padding:0 4px}
+.sb-item{display:flex;align-items:center;gap:7px;padding:5px 7px;border-radius:6px;cursor:pointer;color:var(--text2);font-size:11px;font-weight:500;transition:all .15s;margin-bottom:1px}
+.sb-item:hover{background:var(--bg3);color:var(--text)}
+.sb-item.active{background:var(--bg3);color:var(--text)}
+.sb-icon{width:15px;height:15px;border-radius:3px;display:flex;align-items:center;justify-content:center;font-size:9px;flex-shrink:0}
+.sb-cnt{margin-left:auto;background:var(--bg);border:1px solid var(--border);color:var(--text3);font-size:9px;font-family:'JetBrains Mono',monospace;padding:1px 4px;border-radius:8px}
+.sb-div{height:1px;background:var(--border);margin:6px 12px}
+
+/* MAIN */
+.main{padding:20px;overflow:auto}
+.page-view{display:none}
+.page-view.active{display:block}
+
+/* HEADERS */
+.ph{margin-bottom:20px}
+.ph h1{font-size:18px;font-weight:600;display:flex;align-items:center;gap:10px;margin-bottom:4px;flex-wrap:wrap}
+.ph p{color:var(--text2);font-size:12px;max-width:640px}
+.spill{display:inline-flex;align-items:center;gap:5px;background:#1C2A1C;border:1px solid var(--green-dim);color:var(--green);font-size:10px;font-weight:600;padding:2px 9px;border-radius:20px;font-family:'JetBrains Mono',monospace}
+.spill::before{content:'';width:5px;height:5px;background:var(--green);border-radius:50%;animation:pdot 1.5s infinite}
+
+.sh{display:flex;align-items:center;gap:8px;margin-bottom:10px}
+.st{font-size:12px;font-weight:600;font-family:'JetBrains Mono',monospace}
+.sbadge{font-size:10px;padding:2px 6px;border-radius:8px;font-weight:600;font-family:'JetBrains Mono',monospace}
+
+/* GATEWAY BANNER */
+.gw-banner{background:linear-gradient(135deg,#0F1F0F,#1A1200,#0A1525);border:1px solid var(--border);border-radius:10px;padding:18px 20px;margin-bottom:18px;position:relative;overflow:hidden}
+.gw-banner::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--green),var(--amber),var(--blue),var(--green));background-size:200%;animation:shimmer 3s linear infinite}
+@keyframes shimmer{0%{background-position:0%}100%{background-position:200%}}
+.gw-eq{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.eq-b{background:var(--bg3);border:1px solid var(--border2);border-radius:7px;padding:10px 14px;text-align:center}
+.eq-b .ebl{font-size:9px;color:var(--text3);font-family:'JetBrains Mono',monospace;text-transform:uppercase;letter-spacing:.07em;margin-bottom:3px}
+.eq-b .ebv{font-size:13px;font-weight:700;font-family:'JetBrains Mono',monospace}
+.eq-b.gw .ebv{color:var(--green)}
+.eq-b.eng .ebv{color:var(--amber)}
+.eq-sym{font-size:20px;font-weight:700;color:var(--text3);font-family:'JetBrains Mono',monospace}
+.gw-sub{margin-top:10px;font-size:11px;color:var(--text2)}
+.gw-sub span{color:var(--text);font-weight:500}
+
+/* IMPACT CARDS */
+.ic-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:18px}
+.ic{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:12px;position:relative;overflow:hidden}
+.ic::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;opacity:.7}
+.ic.food::after{background:var(--green)}.ic.health::after{background:var(--blue)}.ic.ghg::after{background:var(--teal)}.ic.fin::after{background:var(--amber)}
+.ic .icl{font-size:9px;color:var(--text3);font-family:'JetBrains Mono',monospace;text-transform:uppercase;letter-spacing:.07em;margin-bottom:5px}
+.ic .icv{font-size:20px;font-weight:700;font-family:'JetBrains Mono',monospace;line-height:1;margin-bottom:2px}
+.ic.food .icv{color:var(--green)}.ic.health .icv{color:var(--blue)}.ic.ghg .icv{color:var(--teal)}.ic.fin .icv{color:var(--amber)}
+.ic .ics{font-size:10px;color:var(--text2)}
+.ic .icd{position:absolute;top:10px;right:10px;font-size:9px;font-weight:600;font-family:'JetBrains Mono',monospace;color:var(--green)}
+
+/* CANVAS */
+.cw{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:6px;margin-bottom:18px}
+canvas{display:block;width:100%}
+
+/* MSC FLOW */
+.msc-flow{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:16px 18px;margin-bottom:18px}
+.msc-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:0;align-items:center;margin-top:12px}
+.mn{background:var(--bg3);border:1px solid var(--border2);border-radius:7px;padding:10px 8px;text-align:center}
+.mn .mni{font-size:18px;margin-bottom:3px}
+.mn .mnt{font-size:10px;font-weight:600;color:var(--text);margin-bottom:2px}
+.mn .mns{font-size:9px;color:var(--text3);font-family:'JetBrains Mono',monospace}
+.ma{text-align:center;color:var(--text3);font-size:16px;padding:0 2px}
+.mn.center{background:linear-gradient(135deg,#1A2A0A,#2A1A00);border-color:var(--amber);box-shadow:0 0 14px #F0A50020}
+.mn.center .mnt{color:var(--amber);font-size:11px}
+
+/* TABLE */
+.tw{background:var(--bg2);border:1px solid var(--border);border-radius:10px;overflow:hidden;margin-bottom:18px}
+table{width:100%;border-collapse:collapse}
+thead tr{background:var(--bg3)}
+th{padding:8px 12px;text-align:left;font-size:10px;font-weight:600;color:var(--text2);font-family:'JetBrains Mono',monospace;text-transform:uppercase;letter-spacing:.06em;border-bottom:1px solid var(--border)}
+td{padding:9px 12px;font-size:11px;color:var(--text);border-bottom:1px solid var(--border)}
+tr:last-child td{border-bottom:none}
+tr:hover td{background:#FFFFFF05}
+.ta{font-weight:600;font-family:'JetBrains Mono',monospace;font-size:10px}
+.ti{color:var(--text2);font-size:10px}
+.td-s{display:flex;flex-wrap:wrap;gap:3px}
+.sp{font-size:9px;font-weight:600;padding:2px 6px;border-radius:8px;font-family:'JetBrains Mono',monospace;border:1px solid}
+.sp-food{color:var(--green);border-color:var(--green-dim);background:#39D35310}
+.sp-ghg{color:var(--teal);border-color:#1A4040;background:#3DCFCF10}
+.sp-health{color:var(--blue);border-color:var(--blue-dim);background:#58A6FF10}
+.sp-waste{color:var(--soil);border-color:#5A3A00;background:#C9A84C10}
+.sp-fin{color:var(--amber);border-color:var(--amber-dim);background:#F0A50010}
+.sp-bio{color:var(--purple);border-color:#4A2A7A;background:#BC8CFF10}
+
+/* ── MSC ENGINE TAB ── */
+.engine-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:18px}
+.eng-card{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:16px}
+.eng-card h3{font-size:12px;font-weight:600;font-family:'JetBrains Mono',monospace;margin-bottom:10px;display:flex;align-items:center;gap:7px}
+.eng-card .ec-icon{font-size:16px}
+.flow-step{display:flex;align-items:flex-start;gap:10px;margin-bottom:10px;padding:8px;background:var(--bg3);border-radius:7px;border:1px solid var(--border)}
+.fs-num{width:20px;height:20px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:700;font-family:'JetBrains Mono',monospace;flex-shrink:0;margin-top:1px}
+.fs-text{font-size:11px;color:var(--text2);line-height:1.4}
+.fs-text strong{color:var(--text);display:block;margin-bottom:1px}
+.bio-table{width:100%;border-collapse:collapse}
+.bio-table td{padding:5px 8px;font-size:10px;border-bottom:1px solid var(--border)}
+.bio-table td:first-child{color:var(--text2);width:45%}
+.bio-table td:last-child{font-weight:600;font-family:'JetBrains Mono',monospace}
+.bio-table tr:last-child td{border-bottom:none}
+.soil-bar-row{display:flex;align-items:center;gap:8px;margin-bottom:7px}
+.soil-bar-label{font-size:10px;color:var(--text2);width:80px;flex-shrink:0}
+.soil-bar-track{flex:1;height:5px;background:var(--bg3);border-radius:3px;overflow:hidden}
+.soil-bar-fill{height:100%;border-radius:3px}
+.soil-bar-val{font-size:9px;color:var(--text3);font-family:'JetBrains Mono',monospace;width:36px;text-align:right}
+.cycle-diagram{background:var(--bg3);border-radius:8px;padding:14px;font-size:10px;font-family:'JetBrains Mono',monospace;color:var(--text2);line-height:1.9;border:1px solid var(--border)}
+.cycle-diagram .hi{color:var(--amber);font-weight:700}
+.cycle-diagram .hi2{color:var(--green);font-weight:700}
+.cycle-diagram .hi3{color:var(--teal);font-weight:700}
+
+/* ── FINANCE TAB ── */
+.fin-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:18px}
+.fin-card{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:16px}
+.fin-card h3{font-size:12px;font-weight:600;font-family:'JetBrains Mono',monospace;margin-bottom:12px;display:flex;align-items:center;gap:7px}
+.product-item{background:var(--bg3);border:1px solid var(--border);border-radius:7px;padding:10px 12px;margin-bottom:8px}
+.pi-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:5px}
+.pi-name{font-size:11px;font-weight:600;color:var(--text)}
+.pi-yield{font-size:11px;font-weight:700;font-family:'JetBrains Mono',monospace;color:var(--green)}
+.pi-desc{font-size:10px;color:var(--text2);line-height:1.4}
+.pi-tags{display:flex;gap:4px;margin-top:6px;flex-wrap:wrap}
+.pi-tag{font-size:9px;padding:1px 6px;border-radius:6px;font-family:'JetBrains Mono',monospace;font-weight:600}
+.revenue-stream{display:flex;align-items:center;gap:10px;padding:8px;background:var(--bg3);border-radius:7px;border:1px solid var(--border);margin-bottom:7px}
+.rs-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0}
+.rs-body{flex:1}
+.rs-title{font-size:11px;font-weight:600;color:var(--text);margin-bottom:1px}
+.rs-from{font-size:10px;color:var(--text2)}
+.rs-amount{font-size:12px;font-weight:700;font-family:'JetBrains Mono',monospace;flex-shrink:0}
+.price-crisis{background:linear-gradient(135deg,#1A0A0A,#1A0F00);border:1px solid #5A1A1A;border-radius:8px;padding:14px;margin-bottom:10px}
+.pc-label{font-size:9px;color:var(--red);font-family:'JetBrains Mono',monospace;font-weight:700;text-transform:uppercase;letter-spacing:.07em;margin-bottom:5px}
+.pc-val{font-size:22px;font-weight:700;font-family:'JetBrains Mono',monospace}
+.pc-sub{font-size:10px;color:var(--text2);margin-top:3px}
+.pc-pbpe{font-size:11px;color:var(--green);margin-top:8px;font-weight:500}
+.pc-pbpe::before{content:'→ '}
+.contrib-grid{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-bottom:10px}
+.contrib-item{background:var(--bg3);border:1px solid var(--border);border-radius:6px;padding:9px;text-align:center}
+.ci-val{font-size:15px;font-weight:700;font-family:'JetBrains Mono',monospace}
+.ci-label{font-size:9px;color:var(--text2);margin-top:1px}
+
+/* ── IMPACT TAB ── */
+.impact-full-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:18px}
+.impact-big-card{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:16px}
+.ibc-header{display:flex;align-items:center;gap:10px;margin-bottom:12px;padding-bottom:10px;border-bottom:1px solid var(--border)}
+.ibc-icon{font-size:22px}
+.ibc-title{font-size:13px;font-weight:600}
+.ibc-sub{font-size:10px;color:var(--text2);margin-top:1px}
+.ibc-kpi{font-size:24px;font-weight:700;font-family:'JetBrains Mono',monospace;margin-bottom:2px}
+.impact-row{display:flex;align-items:flex-start;gap:8px;margin-bottom:8px;padding:7px;background:var(--bg3);border-radius:6px}
+.ir-bullet{width:6px;height:6px;border-radius:50%;margin-top:5px;flex-shrink:0}
+.ir-text{font-size:11px;color:var(--text2);line-height:1.4}
+.ir-text strong{color:var(--text)}
+.sdg-chips{display:flex;flex-wrap:wrap;gap:4px;margin-top:10px}
+.sdg-chip{font-size:9px;font-weight:700;padding:2px 7px;border-radius:5px;font-family:'JetBrains Mono',monospace;border:1px solid}
+
+/* RIGHT PANEL */
+.rp{border-left:1px solid var(--border);background:var(--bg2);padding:16px 14px;overflow:auto}
+.rp-section{margin-bottom:22px}
+.rp-title{font-size:10px;font-weight:600;color:var(--text3);font-family:'JetBrains Mono',monospace;text-transform:uppercase;letter-spacing:.09em;margin-bottom:8px;padding-bottom:5px;border-bottom:1px solid var(--border)}
+.mb-row{display:flex;align-items:center;gap:7px;margin-bottom:7px}
+.mb-label{font-size:10px;color:var(--text2);width:84px;flex-shrink:0}
+.mb-track{flex:1;height:5px;background:var(--bg3);border-radius:3px;overflow:hidden}
+.mb-fill{height:100%;border-radius:3px}
+.mb-val{font-size:9px;color:var(--text3);font-family:'JetBrains Mono',monospace;width:30px;text-align:right}
+.commit-list{display:flex;flex-direction:column;gap:5px}
+.commit-item{display:flex;gap:7px;align-items:flex-start;padding:7px;border-radius:6px;border:1px solid var(--border);background:var(--bg3)}
+.commit-dot{width:7px;height:7px;border-radius:50%;margin-top:3px;flex-shrink:0}
+.ct{font-size:10px;color:var(--text);line-height:1.4}
+.cm{font-size:9px;color:var(--text3);margin-top:1px;font-family:'JetBrains Mono',monospace}
+
+/* EXPORT MODAL */
+.modal-overlay{display:none;position:fixed;inset:0;background:#00000080;z-index:500;align-items:center;justify-content:center}
+.modal-overlay.open{display:flex}
+.modal{background:var(--bg2);border:1px solid var(--border2);border-radius:12px;padding:24px;width:480px;max-width:90vw;box-shadow:0 20px 60px #00000080}
+.modal h2{font-size:16px;font-weight:600;margin-bottom:6px;display:flex;align-items:center;gap:8px}
+.modal p{font-size:12px;color:var(--text2);margin-bottom:20px}
+.export-options{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:16px}
+.exp-opt{background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:14px;cursor:pointer;transition:all .2s}
+.exp-opt:hover{border-color:var(--border2);background:var(--bg4)}
+.exp-opt.selected{border-color:var(--amber);background:#2A1A00}
+.exp-opt .eo-icon{font-size:20px;margin-bottom:6px}
+.exp-opt .eo-title{font-size:12px;font-weight:600;color:var(--text);margin-bottom:2px}
+.exp-opt .eo-desc{font-size:10px;color:var(--text2)}
+.modal-footer{display:flex;gap:8px;justify-content:flex-end}
+.btn{padding:8px 16px;border-radius:7px;font-size:12px;font-weight:600;cursor:pointer;border:none;transition:all .15s;font-family:'Inter',sans-serif}
+.btn-ghost{background:var(--bg3);border:1px solid var(--border);color:var(--text2)}
+.btn-ghost:hover{color:var(--text)}
+.btn-primary{background:var(--amber);color:#000}
+.btn-primary:hover{background:#FFB800}
+.progress-bar{height:3px;background:var(--bg3);border-radius:2px;overflow:hidden;margin-top:12px;display:none}
+.pb-fill{height:100%;background:var(--amber);border-radius:2px;width:0%;transition:width .3s}
+
+/* PITCH SLIDE PREVIEW */
+.slide-preview{background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:16px;margin-bottom:16px}
+.slide-num{font-size:9px;font-family:'JetBrains Mono',monospace;color:var(--text3);margin-bottom:4px;text-transform:uppercase;letter-spacing:.08em}
+.slide-title{font-size:14px;font-weight:700;color:var(--text);margin-bottom:8px}
+.slide-body{font-size:11px;color:var(--text2);line-height:1.6}
+.slide-kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:10px}
+.sk{background:var(--bg2);border-radius:6px;padding:8px;text-align:center;border:1px solid var(--border)}
+.sk-val{font-size:16px;font-weight:700;font-family:'JetBrains Mono',monospace}
+.sk-label{font-size:9px;color:var(--text2);margin-top:1px}
+
+/* PRINT TARGET */
+#print-target{position:fixed;left:-9999px;top:0;width:1200px;background:#0D1117;padding:40px;font-family:'Inter',sans-serif}
+.pt-page{page-break-after:always;padding-bottom:40px;border-bottom:1px solid #30363D;margin-bottom:40px}
+
+/* Scrollbar */
+::-webkit-scrollbar{width:6px;height:6px}
+::-webkit-scrollbar-track{background:var(--bg2)}
+::-webkit-scrollbar-thumb{background:var(--border2);border-radius:3px}
+</style>
+</head>
+<body>
+
+<!-- TOPBAR -->
+<div class="topbar">
+  <div class="tl"><div class="dot"></div>BioNexus / PBPE</div>
+  <div class="topbar-tabs">
+    <div class="tab active" onclick="switchTab('overview',this)">Overview</div>
+    <div class="tab" onclick="switchTab('msc',this)">MSC Engine</div>
+    <div class="tab" onclick="switchTab('finance',this)">Finance</div>
+    <div class="tab" onclick="switchTab('impact',this)">Impact</div>
+  </div>
+  <div class="tbadge">LIVE MODEL</div>
+  <div class="export-dropdown" style="margin-left:8px">
+    <div class="export-btn" onclick="toggleExportMenu()">⬇ Export <span style="font-size:10px;opacity:.6">▾</span></div>
+    <div class="export-menu" id="exportMenu">
+      <div class="em-item" onclick="openExportModal('pdf')"><span class="ei">📄</span>PDF Pitch Deck</div>
+      <div class="em-item" onclick="openExportModal('png')"><span class="ei">🖼</span>PNG Snapshot</div>
+      <div class="em-item" onclick="openExportModal('slides')"><span class="ei">📊</span>Slide Preview</div>
+      <div class="em-item" onclick="openExportModal('wp')"><span class="ei">📝</span>White Paper Data</div>
+    </div>
+  </div>
+</div>
+
+<div class="layout">
+
+<!-- SIDEBAR -->
+<div class="sidebar">
+  <div class="sb-section">
+    <div class="sb-label">Gateway</div>
+    <div class="sb-item active"><div class="sb-icon" style="background:#196127">🌿</div>農産物取引≡排出権<span class="sb-cnt">v2</span></div>
+  </div>
+  <div class="sb-div"></div>
+  <div class="sb-section">
+    <div class="sb-label">MSC Engine</div>
+    <div class="sb-item" onclick="switchTab('msc',null)"><div class="sb-icon" style="background:#2A1A00">🔬</div>MBT55 Fermentation</div>
+    <div class="sb-item" onclick="switchTab('msc',null)"><div class="sb-icon" style="background:#0A1A2A">🛡</div>BioSecurity</div>
+    <div class="sb-item" onclick="switchTab('msc',null)"><div class="sb-icon" style="background:#1A1A2A">🌱</div>Soil Carbon</div>
+    <div class="sb-item" onclick="switchTab('msc',null)"><div class="sb-icon" style="background:#1A1A00">🌾</div>Food Loss Reduction</div>
+  </div>
+  <div class="sb-div"></div>
+  <div class="sb-section">
+    <div class="sb-label">Finance</div>
+    <div class="sb-item" onclick="switchTab('finance',null)"><div class="sb-icon" style="background:#1A0A1A">🏭</div>Food Enterprises<span class="sb-cnt">8</span></div>
+    <div class="sb-item" onclick="switchTab('finance',null)"><div class="sb-icon" style="background:#0A1A1A">💹</div>Investors<span class="sb-cnt">5</span></div>
+    <div class="sb-item" onclick="switchTab('finance',null)"><div class="sb-icon" style="background:#1A1A00">🏛</div>Governments<span class="sb-cnt">3</span></div>
+    <div class="sb-item" onclick="switchTab('finance',null)"><div class="sb-icon" style="background:#0A1A0A">🌍</div>Producers<span class="sb-cnt">∞</span></div>
+  </div>
+  <div class="sb-div"></div>
+  <div class="sb-section">
+    <div class="sb-label">Repositories</div>
+    <div class="sb-item"><div class="sb-icon" style="background:#1A1A2A">📦</div>PBPE-Marketplace</div>
+    <div class="sb-item"><div class="sb-icon" style="background:#0A1A0A">📦</div>AGRIX Platform</div>
+    <div class="sb-item"><div class="sb-icon" style="background:#1A0A1A">📦</div>HealthBook-MBT55</div>
+  </div>
+</div>
+
+<!-- MAIN -->
+<div class="main" id="mainContent">
+
+  <!-- ══════════ OVERVIEW ══════════ -->
+  <div class="page-view active" id="view-overview">
+    <div class="ph">
+      <h1>PBPE Model · Hypercycle Overview <div class="spill">MSC ACTIVE</div></h1>
+      <p>農産物取引≡排出権取引をゲートウェイに、MBT Sustainable Cycleが食料・栄養・医療・GHG・金融の7課題を同時解決するハイパーサイクル構造</p>
+    </div>
+    <div class="gw-banner">
+      <div class="gw-eq">
+        <div class="eq-b gw"><div class="ebl">Gateway</div><div class="ebv">農産物取引</div></div>
+        <div class="eq-sym">≡</div>
+        <div class="eq-b gw"><div class="ebl">同値</div><div class="ebv">排出権取引</div></div>
+        <div class="eq-sym">⟶</div>
+        <div class="eq-b eng"><div class="ebl">Engine</div><div class="ebv">MBT Sustainable Cycle</div></div>
+        <div class="eq-sym">⟶</div>
+        <div class="eq-b"><div class="ebl">Output</div><div class="ebv" style="color:var(--text)">7課題の同時解決</div></div>
+      </div>
+      <div class="gw-sub">食品企業・投資家・消費者が<span>「普通の購買行動」</span>でPBPEに接続 → MSCエンジンが稼働 → <span>誰も社会貢献を意識せずに社会問題が解決される</span>、自走する経済システム</div>
+    </div>
+    <div class="ic-grid">
+      <div class="ic food"><div class="icd">▲ ACTIVE</div><div class="icl">Food Security</div><div class="icv">+30%</div><div class="ics">収量安定・病害ゼロ・ロス削減</div></div>
+      <div class="ic health"><div class="icd">▲ ACTIVE</div><div class="icl">Health Economy</div><div class="icv">-$2.3T</div><div class="ics">医療費削減ポテンシャル（世界）</div></div>
+      <div class="ic ghg"><div class="icd">▲ ACTIVE</div><div class="icl">GHG Reduction</div><div class="icv">-22%</div><div class="ics">農業・廃棄物・食品ロス複合削減</div></div>
+      <div class="ic fin"><div class="icd">▲ ACTIVE</div><div class="icl">Climate Finance</div><div class="icv">$850B</div><div class="ics">解放可能な気候ファイナンス市場</div></div>
+    </div>
+    <div class="sh"><div class="st">// HYPERCYCLE_GRAPH</div><div class="sbadge" style="background:#1C2A1C;color:var(--green);border:1px solid var(--green-dim)">LIVE</div><div style="font-size:10px;color:var(--text3);margin-left:4px">— MSCエンジンから7ドメインへのエネルギーフロー</div></div>
+    <div class="cw"><canvas id="hypercycle" height="400"></canvas></div>
+    <div class="msc-flow">
+      <div class="sh" style="margin-bottom:0"><div class="st">// MSC_MANUFACTURING_FLOW</div><div class="sbadge" style="background:#2A1A00;color:var(--amber);border:1px solid var(--amber-dim)">GREEN MFG</div></div>
+      <div class="msc-grid">
+        <div class="mn"><div class="mni">🗑️</div><div class="mnt">有機廃棄物</div><div class="mns">食品残渣・糞尿・農業廃棄物</div></div>
+        <div class="ma">→</div>
+        <div class="mn center"><div class="mni">⚗️</div><div class="mnt">MBT55発酵（24h）</div><div class="mns">MBT Sustainable Cycle</div></div>
+        <div class="ma">→</div>
+        <div class="mn"><div class="mni">🌿</div><div class="mnt">発酵肥料・飼料</div><div class="mns">炭素固定済・病害抑制菌内包</div></div>
+      </div>
+    </div>
+    <div class="sh"><div class="st">// STAKEHOLDER_MATRIX</div><div class="sbadge" style="background:#1A1A2A;color:var(--blue);border:1px solid var(--blue-dim)">7 ACTORS</div></div>
+    <div class="tw">
+      <table>
+        <thead><tr><th>Actor</th><th>Self-Interest（自己利益）</th><th>Problems Solved</th></tr></thead>
+        <tbody>
+          <tr><td><span class="ta" style="color:var(--green)">食品企業</span><br><span class="ti">Nestlé / DANONE / etc.</span></td><td class="ti">原材料品質安定・Scope3達成・調達コスト予測可能化</td><td><div class="td-s"><span class="sp sp-food">食料</span><span class="sp sp-ghg">GHG</span><span class="sp sp-bio">BioSec</span></div></td></tr>
+          <tr><td><span class="ta" style="color:var(--amber)">投資家</span><br><span class="ti">年金基金・ESGファンド</span></td><td class="ti">MSC設備投資リターン・炭素クレジット収益・農産物価値上昇</td><td><div class="td-s"><span class="sp sp-ghg">GHG</span><span class="sp sp-waste">廃棄物</span><span class="sp sp-fin">Finance</span></div></td></tr>
+          <tr><td><span class="ta" style="color:var(--blue)">保険会社</span><br><span class="ti">生命保険・農業保険</span></td><td class="ti">病害・感染症リスク消滅→引受リスク低下・損害率改善</td><td><div class="td-s"><span class="sp sp-health">医療費</span><span class="sp sp-bio">BioSec</span><span class="sp sp-food">食料</span></div></td></tr>
+          <tr><td><span class="ta" style="color:var(--soil)">国・自治体</span><br><span class="ti">廃棄物処理予算</span></td><td class="ti">廃棄物処理コスト民間委託化・GHG削減目標達成</td><td><div class="td-s"><span class="sp sp-waste">廃棄物</span><span class="sp sp-ghg">GHG</span><span class="sp sp-fin">財政</span></div></td></tr>
+          <tr><td><span class="ta" style="color:var(--teal)">生産者</span><br><span class="ti">農家・コーヒー・畜産・養殖</span></td><td class="ti">収益多層化・損失消滅（殺処分・病害ゼロ）・MSC設備収益</td><td><div class="td-s"><span class="sp sp-food">食料</span><span class="sp sp-health">栄養</span><span class="sp sp-waste">廃棄物</span></div></td></tr>
+          <tr><td><span class="ta" style="color:var(--purple)">消費者</span><br><span class="ti">個人・家庭</span></td><td class="ti">高品質食品・健康改善・保険料割引</td><td><div class="td-s"><span class="sp sp-health">健康</span><span class="sp sp-food">栄養</span><span class="sp sp-ghg">GHG</span></div></td></tr>
+          <tr><td><span class="ta" style="color:var(--red)">気候ファイナンス</span><br><span class="ti">炭素市場・グリーン債</span></td><td class="ti">実物資産担保の炭素クレジット・新資産クラス・市場流動化</td><td><div class="td-s"><span class="sp sp-fin">Finance</span><span class="sp sp-ghg">GHG</span><span class="sp sp-food">食料</span></div></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- ══════════ MSC ENGINE ══════════ -->
+  <div class="page-view" id="view-msc">
+    <div class="ph">
+      <h1>MSC Engine · Green Manufacturing <div class="spill">CORE ENGINE</div></h1>
+      <p>MBT Sustainable Cycle — 有機廃棄物をインプットに、発酵肥料・飼料・バイオセキュリティ・炭素隔離を同時アウトプットするグリーンマニュファクチャリングモデル</p>
+    </div>
+    <div class="engine-grid">
+      <!-- 発酵フロー -->
+      <div class="eng-card">
+        <h3><span class="ec-icon">⚗️</span><span style="color:var(--amber)">MBT55発酵サイクル</span> — 24時間変換</h3>
+        <div class="flow-step"><div class="fs-num" style="background:#2A1A00;color:var(--amber)">1</div><div class="fs-text"><strong>有機廃棄物インプット</strong>食品残渣・農業廃棄物・畜産糞尿・水産加工残渣・コーヒーかす・オリーブ搾りかす</div></div>
+        <div class="flow-step"><div class="fs-num" style="background:#1A2A0A;color:var(--green)">2</div><div class="fs-text"><strong>MBT55微生物群の活性化</strong>好熱性・嫌気性・好気性複合菌叢が連鎖発酵。温度管理で24時間完結</div></div>
+        <div class="flow-step"><div class="fs-num" style="background:#0A1A2A;color:var(--blue)">3</div><div class="fs-text"><strong>発酵肥料・飼料の生成</strong>腐植質リッチ・病害抑制菌内包・炭素固定済。化学肥料の完全代替</div></div>
+        <div class="flow-step"><div class="fs-num" style="background:#1A1A2A;color:var(--purple)">4</div><div class="fs-text"><strong>根圏マイクロバイオームへの定着</strong>MBT55が土壌に定着 → ハイパーサイクル自律継続。生産者の維持コストゼロ化</div></div>
+      </div>
+      <!-- バイオセキュリティ -->
+      <div class="eng-card">
+        <h3><span class="ec-icon">🛡</span><span style="color:var(--teal)">BioSecurity Matrix</span> — 病害・感染症防止</h3>
+        <table class="bio-table">
+          <tr><td>コーヒーさび病</td><td style="color:var(--green)">抑制率 &gt;90%</td></tr>
+          <tr><td>柑橘グリーニング病</td><td style="color:var(--green)">感染拡大抑制</td></tr>
+          <tr><td>鳥インフルエンザ</td><td style="color:var(--green)">腸内バリア強化</td></tr>
+          <tr><td>豚熱（CSF/ASF）</td><td style="color:var(--green)">発症リスク低減</td></tr>
+          <tr><td>養殖魚病原菌</td><td style="color:var(--green)">水質改善で抑制</td></tr>
+          <tr><td>作物根腐れ病</td><td style="color:var(--green)">土壌菌叢改善</td></tr>
+          <tr><td>オリーブ炭疽病</td><td style="color:var(--green)">フェノール含量向上</td></tr>
+          <tr><td>茶の炭疽病</td><td style="color:var(--green)">抗菌活性増強</td></tr>
+        </table>
+        <div style="margin-top:10px;padding:8px;background:var(--bg3);border-radius:6px;border:1px solid var(--border)">
+          <div style="font-size:9px;color:var(--text3);font-family:'JetBrains Mono',monospace;margin-bottom:4px">ECONOMIC IMPACT</div>
+          <div style="font-size:11px;color:var(--text2)">世界の農業病害損失 <span style="color:var(--red);font-weight:600">$220B/年</span> → MBT55導入で <span style="color:var(--green);font-weight:600">損失の構造的消滅</span></div>
+        </div>
+      </div>
+      <!-- 土壌炭素 -->
+      <div class="eng-card">
+        <h3><span class="ec-icon">🌱</span><span style="color:var(--green)">Soil Carbon Sequestration</span></h3>
+        <div class="soil-bar-row"><div class="soil-bar-label">腐植質増加率</div><div class="soil-bar-track"><div class="soil-bar-fill" style="width:78%;background:var(--green)"></div></div><div class="soil-bar-val">+78%</div></div>
+        <div class="soil-bar-row"><div class="soil-bar-label">団粒構造安定</div><div class="soil-bar-track"><div class="soil-bar-fill" style="width:65%;background:var(--teal)"></div></div><div class="soil-bar-val">+65%</div></div>
+        <div class="soil-bar-row"><div class="soil-bar-label">炭素固定速度</div><div class="soil-bar-track"><div class="soil-bar-fill" style="width:52%;background:var(--amber)"></div></div><div class="soil-bar-val">×3.2</div></div>
+        <div class="soil-bar-row"><div class="soil-bar-label">微生物多様性</div><div class="soil-bar-track"><div class="soil-bar-fill" style="width:88%;background:var(--blue)"></div></div><div class="soil-bar-val">+88%</div></div>
+        <div class="soil-bar-row"><div class="soil-bar-label">保水力向上</div><div class="soil-bar-track"><div class="soil-bar-fill" style="width:70%;background:var(--purple)"></div></div><div class="soil-bar-val">+70%</div></div>
+        <div style="margin-top:10px;padding:8px;background:var(--bg3);border-radius:6px;border:1px solid var(--border)">
+          <div style="font-size:9px;color:var(--text3);font-family:'JetBrains Mono',monospace;margin-bottom:3px">AGRIX MEASUREMENT</div>
+          <div style="font-size:10px;color:var(--text2)">AGRIXがリアルタイム計測 → PoR（Proof of Regeneration）自動発行 → 炭素クレジット即時生成</div>
+        </div>
+      </div>
+      <!-- ハイパーサイクル図 -->
+      <div class="eng-card">
+        <h3><span class="ec-icon">🔄</span><span style="color:var(--orange)">MSC Hypercycle — 自走構造</span></h3>
+        <div class="cycle-diagram">
+<span class="hi">MBT農産物の品質向上</span>
+  │
+  ├─→ <span class="hi2">食品ロス削減</span> ──→ GHG削減
+  │        └──→ 炭素クレジット収益
+  │
+  ├─→ <span class="hi2">栄養価向上</span> ───→ 医療費削減
+  │        └──→ 保険リスク低下
+  │
+  ├─→ <span class="hi2">収量安定</span> ────→ 調達価格安定
+  │        └──→ 食品企業長期契約
+  │
+  └─→ <span class="hi3">廃棄物→肥料</span> ──→ 土壌炭素隔離
+           └──→ <span class="hi">MSC設備拡張</span>
+                └──→ (ループ加速)
+        </div>
+        <div style="margin-top:10px;padding:8px;background:#2A1A00;border-radius:6px;border:1px solid var(--amber-dim)">
+          <div style="font-size:10px;color:var(--amber);font-weight:600">KEY INSIGHT</div>
+          <div style="font-size:10px;color:var(--text2);margin-top:3px">廃棄物処理国家予算がMSC設備収益に転換される。生産者が社会インフラの担い手になる。</div>
+        </div>
+      </div>
+    </div>
+    <!-- 受益産業マップ -->
+    <div class="sh"><div class="st">// INDUSTRY_BENEFICIARY_MAP</div><div class="sbadge" style="background:#1A1A2A;color:var(--blue);border:1px solid var(--blue-dim)">FULL ECOSYSTEM</div></div>
+    <div class="tw">
+      <table>
+        <thead><tr><th>Industry</th><th>MBT55による直接効果</th><th>MSC収益機会</th><th>主要企業例</th></tr></thead>
+        <tbody>
+          <tr><td><span class="ta" style="color:var(--green)">☕ コーヒー</span></td><td class="ti">さび病ゼロ・収量+30%・品質プレミアム</td><td class="ti">発酵廃棄物→肥料販売</td><td class="ti">Nestlé Nespresso, Starbucks</td></tr>
+          <tr><td><span class="ta" style="color:var(--teal)">🍊 柑橘・果実</span></td><td class="ti">グリーニング病抑制・鮮度保持延長</td><td class="ti">搾りかす→飼料・肥料</td><td class="ti">Sunkist, Dole</td></tr>
+          <tr><td><span class="ta" style="color:var(--amber)">🫒 オリーブ・ワイン</span></td><td class="ti">ポリフェノール含量向上・収量安定</td><td class="ti">オリーブかす→バイオ燃料/肥料</td><td class="ti">Bertolli, Antinori</td></tr>
+          <tr><td><span class="ta" style="color:var(--blue)">🥛 乳製品・畜産</span></td><td class="ti">感染症リスク低下・発酵飼料で生産性向上</td><td class="ti">糞尿→MBT発酵肥料・メタン削減</td><td class="ti">DANONE, Fonterra</td></tr>
+          <tr><td><span class="ta" style="color:var(--purple)">🐟 養殖業</span></td><td class="ti">水中病原菌抑制・水質改善</td><td class="ti">残渣→飼料添加物</td><td class="ti">Mowi, Nireus</td></tr>
+          <tr><td><span class="ta" style="color:var(--orange)">🍵 茶・ハーブ</span></td><td class="ti">抗菌活性増強・香気成分向上</td><td class="ti">茶かす→発酵有機肥料</td><td class="ti">Unilever Lipton</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- ══════════ FINANCE ══════════ -->
+  <div class="page-view" id="view-finance">
+    <div class="ph">
+      <h1>Finance · Multi-Layer Value Stack <div class="spill">4 LAYERS</div></h1>
+      <p>農産物取引≡排出権取引ゲートウェイが開く、4層の金融回路。各ステークホルダーの自己利益追求が自動的に農業資金を創出する</p>
+    </div>
+    <div class="fin-grid">
+      <!-- 金融商品 -->
+      <div class="fin-card">
+        <h3><span style="color:var(--amber)">💹 新金融商品ポートフォリオ</span></h3>
+        <div class="product-item">
+          <div class="pi-header"><div class="pi-name">ACIB — 農地炭素担保型インフラ債</div><div class="pi-yield" style="color:var(--green)">4-6% p.a.</div></div>
+          <div class="pi-desc">農地炭素シンクを担保資産として機関投資家向けに発行。年金基金・SWFが購入可能な投資適格債格付を取得。生産者は炭素株として継続配当を受領。</div>
+          <div class="pi-tags"><span class="pi-tag" style="background:#1C2A1C;color:var(--green);border:1px solid var(--green-dim)">ESG Bond</span><span class="pi-tag" style="background:#1A1A2A;color:var(--blue);border:1px solid var(--blue-dim)">IG Rated</span><span class="pi-tag" style="background:#2A1A00;color:var(--amber);border:1px solid var(--amber-dim)">Carbon Backed</span></div>
+        </div>
+        <div class="product-item">
+          <div class="pi-header"><div class="pi-name">ARS — 農業収益スワップ</div><div class="pi-yield" style="color:var(--teal)">直接配分</div></div>
+          <div class="pi-desc">企業が農産物を購入した瞬間、炭素・健康・土壌の3種クレジットを自動発行。スマートコントラクトで仲介ゼロの生産者直接配分。</div>
+          <div class="pi-tags"><span class="pi-tag" style="background:#1A3A3A;color:var(--teal);border:1px solid #1A4040">Smart Contract</span><span class="pi-tag" style="background:#2A1A2A;color:var(--purple);border:1px solid #4A2A7A">Triple Credit</span></div>
+        </div>
+        <div class="product-item">
+          <div class="pi-header"><div class="pi-name">SAM — 土壌資産担保モーゲージ</div><div class="pi-yield" style="color:var(--soil)">低利融資</div></div>
+          <div class="pi-desc">AGRIXの土壌健全性スコア（SHS）が上昇するほど農地評価額が増加。土壌価値担保に低利融資・土壌年金（Soil Annuity）として長期受取可能。</div>
+          <div class="pi-tags"><span class="pi-tag" style="background:#1A1A00;color:var(--soil);border:1px solid #5A3A00">Soil Score</span><span class="pi-tag" style="background:#0A1A2A;color:var(--blue);border:1px solid var(--blue-dim)">Dev Bank</span></div>
+        </div>
+        <div class="product-item">
+          <div class="pi-header"><div class="pi-name">HALI — 農業健康連動保険</div><div class="pi-yield" style="color:var(--blue)">リスク低減</div></div>
+          <div class="pi-desc">HealthBookがMBT農産物摂取者の疾病リスク低下を定量化。保険会社の引受利益差益の一部をPBPEファンドへ拠出。生産者に予防報酬として還元。</div>
+          <div class="pi-tags"><span class="pi-tag" style="background:#0A1A2A;color:var(--blue);border:1px solid var(--blue-dim)">HealthBook</span><span class="pi-tag" style="background:#1C2A1C;color:var(--green);border:1px solid var(--green-dim)">Actuarial</span></div>
+        </div>
+      </div>
+      <!-- 収益フロー -->
+      <div class="fin-card">
+        <h3><span style="color:var(--green)">💰 生産者収益ストリーム（5層）</span></h3>
+        <div class="revenue-stream"><div class="rs-dot" style="background:var(--green)"></div><div class="rs-body"><div class="rs-title">① 農産物販売収益（基本）</div><div class="rs-from">食品企業・小売・輸出 → 高品質プレミアム価格</div></div><div class="rs-amount" style="color:var(--green)">BASE</div></div>
+        <div class="revenue-stream"><div class="rs-dot" style="background:var(--amber)"></div><div class="rs-body"><div class="rs-title">② 廃棄物処理委託収益</div><div class="rs-from">国・自治体の廃棄物処理予算 → MSC設備に直接流入</div></div><div class="rs-amount" style="color:var(--amber)">+安定</div></div>
+        <div class="revenue-stream"><div class="rs-dot" style="background:var(--teal)"></div><div class="rs-body"><div class="rs-title">③ 発酵肥料・飼料販売</div><div class="rs-from">近隣農家・畜産・養殖業者への販売</div></div><div class="rs-amount" style="color:var(--teal)">+拡張</div></div>
+        <div class="revenue-stream"><div class="rs-dot" style="background:var(--blue)"></div><div class="rs-body"><div class="rs-title">④ 炭素クレジット（PoR）</div><div class="rs-from">AGRIXが土壌炭素隔離を計測 → 自動発行</div></div><div class="rs-amount" style="color:var(--blue)">+成長</div></div>
+        <div class="revenue-stream"><div class="rs-dot" style="background:var(--purple)"></div><div class="rs-body"><div class="rs-title">⑤ バイオセキュリティ提供料</div><div class="rs-from">周辺農家・養殖場へのMBT55菌液供給</div></div><div class="rs-amount" style="color:var(--purple)">+展開</div></div>
+        <div style="margin-top:14px;padding:12px;background:linear-gradient(135deg,#1A2A0A,#0A1A2A);border-radius:8px;border:1px solid var(--border2)">
+          <div style="font-size:9px;color:var(--text3);font-family:'JetBrains Mono',monospace;margin-bottom:6px">SELF-INTEREST ALIGNMENT</div>
+          <div style="font-size:11px;color:var(--text2);line-height:1.6">各ステークホルダーが<span style="color:var(--text);font-weight:600">自己利益を追求するだけ</span>で農業資金が流入する。補助金・規制に依存しない<span style="color:var(--green);font-weight:600">自走する資金循環</span>が成立する。</div>
+        </div>
+      </div>
+    </div>
+    <!-- 食料価格高騰との接続 -->
+    <div class="sh"><div class="st">// FOOD_PRICE_CRISIS_RESPONSE</div><div class="sbadge" style="background:#2A0A0A;color:var(--red);border:1px solid #5A1A1A">CRITICAL</div></div>
+    <div class="tw">
+      <table>
+        <thead><tr><th>高騰原因</th><th>現状の損失</th><th>PBPEによる解決経路</th><th>価格安定化効果</th></tr></thead>
+        <tbody>
+          <tr><td class="ti">農業病害による廃棄</td><td style="color:var(--red);font-family:'JetBrains Mono',monospace;font-size:10px">$220B/年</td><td class="ti">MBT55バイオセキュリティで病害ゼロ化</td><td style="color:var(--green);font-family:'JetBrains Mono',monospace;font-size:10px">-40% 廃棄</td></tr>
+          <tr><td class="ti">食品ロス（流通・消費）</td><td style="color:var(--red);font-family:'JetBrains Mono',monospace;font-size:10px">生産量の30%</td><td class="ti">鮮度保持力向上で物流ロス削減</td><td style="color:var(--green);font-family:'JetBrains Mono',monospace;font-size:10px">-30% ロス</td></tr>
+          <tr><td class="ti">化学肥料価格高騰</td><td style="color:var(--red);font-family:'JetBrains Mono',monospace;font-size:10px">+127% 2022年</td><td class="ti">MBT発酵肥料が化学肥料を完全代替</td><td style="color:var(--green);font-family:'JetBrains Mono',monospace;font-size:10px">肥料コスト↓</td></tr>
+          <tr><td class="ti">家畜感染症による殺処分</td><td style="color:var(--red);font-family:'JetBrains Mono',monospace;font-size:10px">数兆円/回</td><td class="ti">MSCバイオセキュリティで感染症防止</td><td style="color:var(--green);font-family:'JetBrains Mono',monospace;font-size:10px">-60% 殺処分</td></tr>
+          <tr><td class="ti">気候変動による不作</td><td style="color:var(--red);font-family:'JetBrains Mono',monospace;font-size:10px">収量-20%/年</td><td class="ti">根圏微生物最適化でストレス耐性強化</td><td style="color:var(--green);font-family:'JetBrains Mono',monospace;font-size:10px">+25% 収量安定</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- ══════════ IMPACT ══════════ -->
+  <div class="page-view" id="view-impact">
+    <div class="ph">
+      <h1>Impact · 7 Problems, 1 Gateway <div class="spill">VERIFIED</div></h1>
+      <p>PBPEが同時解決する7つの社会課題。一つのゲートウェイ（農産物取引≡排出権取引）が起動するハイパーサイクルの社会的インパクト全体像</p>
+    </div>
+    <div class="impact-full-grid">
+      <div class="impact-big-card">
+        <div class="ibc-header"><div class="ibc-icon">🌾</div><div><div class="ibc-title" style="color:var(--green)">食料問題</div><div class="ibc-sub">Food Security & Price Stability</div></div><div class="ibc-kpi" style="color:var(--green);margin-left:auto">+30%</div></div>
+        <div class="impact-row"><div class="ir-bullet" style="background:var(--green)"></div><div class="ir-text"><strong>収量の安定化</strong>MBT55根圏最適化→干ばつ・塩害・高温ストレス耐性向上。気候変動下でも安定生産</div></div>
+        <div class="impact-row"><div class="ir-bullet" style="background:var(--green)"></div><div class="ir-text"><strong>食品ロス30%削減</strong>鮮度保持力向上で世界食品ロス（世界GHGの8%）を構造的に削減。食料価格高騰の抑制</div></div>
+        <div class="impact-row"><div class="ir-bullet" style="background:var(--green)"></div><div class="ir-text"><strong>病害による廃棄ゼロ</strong>バイオセキュリティで$220B/年の農業損失を消滅。供給量の構造的安定化</div></div>
+        <div class="sdg-chips"><span class="sdg-chip" style="color:var(--green);border-color:var(--green-dim)">SDG 2: Zero Hunger</span><span class="sdg-chip" style="color:var(--teal);border-color:#1A4040">SDG 13: Climate</span></div>
+      </div>
+      <div class="impact-big-card">
+        <div class="ibc-header"><div class="ibc-icon">💊</div><div><div class="ibc-title" style="color:var(--blue)">栄養・医療費問題</div><div class="ibc-sub">Nutrition & Healthcare Cost</div></div><div class="ibc-kpi" style="color:var(--blue);margin-left:auto">-$2.3T</div></div>
+        <div class="impact-row"><div class="ir-bullet" style="background:var(--blue)"></div><div class="ir-text"><strong>Hidden Hunger解消</strong>MBT農産物のポリフェノール・ミネラル高含有が栄養欠乏問題を直接解決</div></div>
+        <div class="impact-row"><div class="ir-bullet" style="background:var(--blue)"></div><div class="ir-text"><strong>生活習慣病の予防</strong>HealthBook連携で摂取→疾病リスク低下を定量化。国家医療費の構造的削減</div></div>
+        <div class="impact-row"><div class="ir-bullet" style="background:var(--blue)"></div><div class="ir-text"><strong>保険×農業の接続</strong>HALIモデルで保険会社の引受利益差益が農業投資資金に転換</div></div>
+        <div class="sdg-chips"><span class="sdg-chip" style="color:var(--blue);border-color:var(--blue-dim)">SDG 3: Good Health</span><span class="sdg-chip" style="color:var(--green);border-color:var(--green-dim)">SDG 2: Nutrition</span></div>
+      </div>
+      <div class="impact-big-card">
+        <div class="ibc-header"><div class="ibc-icon">🌍</div><div><div class="ibc-title" style="color:var(--teal)">温室効果ガス削減</div><div class="ibc-sub">GHG Reduction — Multi-pathway</div></div><div class="ibc-kpi" style="color:var(--teal);margin-left:auto">-22%</div></div>
+        <div class="impact-row"><div class="ir-bullet" style="background:var(--teal)"></div><div class="ir-text"><strong>土壌炭素隔離</strong>MBT55が腐植質生成→農地を巨大炭素シンクに変換。AGRIXがリアルタイム計測</div></div>
+        <div class="impact-row"><div class="ir-bullet" style="background:var(--teal)"></div><div class="ir-text"><strong>廃棄物メタン削減</strong>有機廃棄物を24時間で発酵肥料化→メタン発生を根本的に抑制</div></div>
+        <div class="impact-row"><div class="ir-bullet" style="background:var(--teal)"></div><div class="ir-text"><strong>食品ロスGHG削減</strong>世界GHGの8%を占める食品ロスを鮮度保持力向上で構造的削減</div></div>
+        <div class="sdg-chips"><span class="sdg-chip" style="color:var(--teal);border-color:#1A4040">SDG 13: Climate Action</span><span class="sdg-chip" style="color:var(--green);border-color:var(--green-dim)">SDG 15: Life on Land</span></div>
+      </div>
+      <div class="impact-big-card">
+        <div class="ibc-header"><div class="ibc-icon">💹</div><div><div class="ibc-title" style="color:var(--amber)">気候ファイナンス流動化</div><div class="ibc-sub">Climate Finance — New Asset Class</div></div><div class="ibc-kpi" style="color:var(--amber);margin-left:auto">$850B</div></div>
+        <div class="impact-row"><div class="ir-bullet" style="background:var(--amber)"></div><div class="ir-text"><strong>実物資産担保の炭素クレジット</strong>抽象的クレジットから農産物という実物資産担保へ。検証容易・消費者接点あり</div></div>
+        <div class="impact-row"><div class="ir-bullet" style="background:var(--amber)"></div><div class="ir-text"><strong>新資産クラスの誕生</strong>ACIB債・MBT Value Index・農地炭素ETFが機関投資家資金を農業に直接接続</div></div>
+        <div class="impact-row"><div class="ir-bullet" style="background:var(--amber)"></div><div class="ir-text"><strong>調達＝投資のパラダイム転換</strong>企業の食材購買がそのままESG投資になる。Scope3削減が購買行動と同値</div></div>
+        <div class="sdg-chips"><span class="sdg-chip" style="color:var(--amber);border-color:var(--amber-dim)">SDG 17: Partnerships</span><span class="sdg-chip" style="color:var(--blue);border-color:var(--blue-dim)">SDG 8: Decent Work</span></div>
+      </div>
+    </div>
+    <!-- ピッチデック用スライドプレビュー -->
+    <div class="sh"><div class="st">// PITCH_DECK_PREVIEW</div><div class="sbadge" style="background:#2A1A00;color:var(--amber);border:1px solid var(--amber-dim)">INVESTOR READY</div></div>
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px">
+      <div class="slide-preview">
+        <div class="slide-num">Slide 01 — Problem</div>
+        <div class="slide-title">World at Breaking Point</div>
+        <div class="slide-body">食料・栄養・医療・GHG・金融の5システムが分断されたサイロで機能不全に陥っている。単一問題への単一解決策は限界に達した。</div>
+        <div class="slide-kpis">
+          <div class="sk"><div class="sk-val" style="color:var(--red)">8%</div><div class="sk-label">食品ロスのGHG比率</div></div>
+          <div class="sk"><div class="sk-val" style="color:var(--red)">30%</div><div class="sk-label">農産物が廃棄</div></div>
+          <div class="sk"><div class="sk-val" style="color:var(--red)">$220B</div><div class="sk-label">病害損失/年</div></div>
+        </div>
+      </div>
+      <div class="slide-preview">
+        <div class="slide-num">Slide 02 — Solution</div>
+        <div class="slide-title">One Gateway, Seven Solutions</div>
+        <div class="slide-body">農産物取引≡排出権取引という単一のゲートウェイがMBT Sustainable Cycleを起動。7つの社会課題を同時解決する自走する経済システム。</div>
+        <div class="slide-kpis">
+          <div class="sk"><div class="sk-val" style="color:var(--green)">7</div><div class="sk-label">同時解決する課題</div></div>
+          <div class="sk"><div class="sk-val" style="color:var(--green)">24h</div><div class="sk-label">廃棄物→肥料変換</div></div>
+          <div class="sk"><div class="sk-val" style="color:var(--green)">∞</div><div class="sk-label">ハイパーサイクル</div></div>
+        </div>
+      </div>
+      <div class="slide-preview">
+        <div class="slide-num">Slide 03 — Market</div>
+        <div class="slide-title">$850B Climate Finance Unlocked</div>
+        <div class="slide-body">実物農産物を担保とした新資産クラスが、機関投資家・保険会社・食品企業・政府の資金を農業セクターに直接接続する。</div>
+        <div class="slide-kpis">
+          <div class="sk"><div class="sk-val" style="color:var(--amber)">$850B</div><div class="sk-label">解放市場規模</div></div>
+          <div class="sk"><div class="sk-val" style="color:var(--amber)">4-6%</div><div class="sk-label">ACIB債利回り</div></div>
+          <div class="sk"><div class="sk-val" style="color:var(--amber)">5×</div><div class="sk-label">生産者収益倍率</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div><!-- end main -->
+
+<!-- RIGHT PANEL -->
+<div class="rp">
+  <div class="rp-section">
+    <div class="rp-title">// FOOD_PRICE_CRISIS</div>
+    <div class="price-crisis">
+      <div class="pc-label">⚠ Global Food Price Index 2024</div>
+      <div class="pc-val">+127% <span style="font-size:12px;color:var(--text2)">vs 2000</span></div>
+      <div class="pc-sub">穀物・食用油・乳製品・肉類の複合高騰</div>
+      <div class="pc-pbpe">MBT農産物が供給安定化→高騰を構造的に抑制</div>
+    </div>
+    <div class="contrib-grid">
+      <div class="contrib-item"><div class="ci-val" style="color:var(--green)">−30%</div><div class="ci-label">食品ロス削減</div></div>
+      <div class="contrib-item"><div class="ci-val" style="color:var(--blue)">−40%</div><div class="ci-label">病害による廃棄</div></div>
+      <div class="contrib-item"><div class="ci-val" style="color:var(--amber)">+25%</div><div class="ci-label">収量安定化</div></div>
+      <div class="contrib-item"><div class="ci-val" style="color:var(--teal)">−60%</div><div class="ci-label">殺処分ロス</div></div>
+    </div>
+  </div>
+  <div class="rp-section">
+    <div class="rp-title">// GHG_REDUCTION_SOURCES</div>
+    <div class="mb-row"><div class="mb-label">食品ロス削減</div><div class="mb-track"><div class="mb-fill" style="width:82%;background:var(--green)"></div></div><div class="mb-val">8.0%</div></div>
+    <div class="mb-row"><div class="mb-label">土壌炭素隔離</div><div class="mb-track"><div class="mb-fill" style="width:65%;background:var(--teal)"></div></div><div class="mb-val">6.5%</div></div>
+    <div class="mb-row"><div class="mb-label">廃棄物発酵化</div><div class="mb-track"><div class="mb-fill" style="width:48%;background:var(--amber)"></div></div><div class="mb-val">4.8%</div></div>
+    <div class="mb-row"><div class="mb-label">畜産メタン削減</div><div class="mb-track"><div class="mb-fill" style="width:35%;background:var(--blue)"></div></div><div class="mb-val">3.2%</div></div>
+    <div class="mb-row"><div class="mb-label">化学肥料代替</div><div class="mb-track"><div class="mb-fill" style="width:28%;background:var(--purple)"></div></div><div class="mb-val">2.1%</div></div>
+  </div>
+  <div class="rp-section">
+    <div class="rp-title">// VALUE_CHAIN_LOG</div>
+    <div class="commit-list">
+      <div class="commit-item"><div class="commit-dot" style="background:var(--green)"></div><div><div class="ct">MBT農産物購入 → 排出権自動発行</div><div class="cm">AGRIX計測 · PoR verified</div></div></div>
+      <div class="commit-item"><div class="commit-dot" style="background:var(--amber)"></div><div><div class="ct">有機廃棄物 → 発酵肥料（24h）</div><div class="cm">MBT55 fermentation · MSC Engine</div></div></div>
+      <div class="commit-item"><div class="commit-dot" style="background:var(--blue)"></div><div><div class="ct">HealthBook: 栄養摂取 → 保険料割引</div><div class="cm">Health Actuarial Model · linked</div></div></div>
+      <div class="commit-item"><div class="commit-dot" style="background:var(--teal)"></div><div><div class="ct">BioSecurity: コーヒーさび病ゼロ</div><div class="cm">MBT55 fungal suppression · active</div></div></div>
+      <div class="commit-item"><div class="commit-dot" style="background:var(--purple)"></div><div><div class="ct">廃棄物処理予算 → MSC設備収益</div><div class="cm">Gov. contract · budget absorption</div></div></div>
+      <div class="commit-item"><div class="commit-dot" style="background:var(--red)"></div><div><div class="ct">ACIB債発行 → 農地炭素担保化</div><div class="cm">Climate finance · new asset class</div></div></div>
+    </div>
+  </div>
+</div>
+
+</div><!-- end layout -->
+
+<!-- EXPORT MODAL -->
+<div class="modal-overlay" id="exportModal">
+  <div class="modal" id="modalContent">
+    <h2 id="modalTitle">📄 Export</h2>
+    <p id="modalDesc">エクスポート形式を選択してください</p>
+    <div class="export-options" id="exportOptions">
+      <div class="exp-opt selected" onclick="selectExport(this,'current')">
+        <div class="eo-icon">🖥</div>
+        <div class="eo-title">現在のタブ</div>
+        <div class="eo-desc">表示中の画面をキャプチャ</div>
+      </div>
+      <div class="exp-opt" onclick="selectExport(this,'full')">
+        <div class="eo-icon">📋</div>
+        <div class="eo-title">全タブ</div>
+        <div class="eo-desc">Overview + MSC + Finance + Impact</div>
+      </div>
+    </div>
+    <div class="progress-bar" id="exportProgress"><div class="pb-fill" id="pbFill"></div></div>
+    <div class="modal-footer">
+      <button class="btn btn-ghost" onclick="closeModal()">Cancel</button>
+      <button class="btn btn-primary" onclick="executeExport()" id="exportExecBtn">Export</button>
+    </div>
+  </div>
+</div>
+
+<script>
+// ── TAB SWITCHING ──
+function switchTab(name, el) {
+  document.querySelectorAll('.page-view').forEach(v => v.classList.remove('active'));
+  document.getElementById('view-' + name).classList.add('active');
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  if (el) el.classList.add('active');
+  else {
+    const tabs = document.querySelectorAll('.tab');
+    const map = {overview:0,msc:1,finance:2,impact:3};
+    if (map[name]!==undefined) tabs[map[name]].classList.add('active');
+  }
+  if (name === 'overview') initCanvas();
+}
+
+// ── EXPORT MENU ──
+function toggleExportMenu() {
+  document.getElementById('exportMenu').classList.toggle('open');
+}
+document.addEventListener('click', e => {
+  if (!e.target.closest('.export-dropdown')) {
+    document.getElementById('exportMenu').classList.remove('open');
+  }
+});
+
+let currentExportType = 'pdf';
+let currentExportScope = 'current';
+function openExportModal(type) {
+  currentExportType = type;
+  document.getElementById('exportMenu').classList.remove('open');
+  const titles = {pdf:'📄 PDF Pitch Deck', png:'🖼 PNG Snapshot', slides:'📊 Slide Preview', wp:'📝 White Paper Data'};
+  const descs = {
+    pdf:'投資家・国際機関向けPBPEモデルのPDFピッチデックを生成します。',
+    png:'現在の画面のPNGスナップショットをダウンロードします。',
+    slides:'スライド構成プレビューを表示します（Impactタブ）。',
+    wp:'PBPEモデルのWhite Paper用データをJSON形式でエクスポートします。'
+  };
+  document.getElementById('modalTitle').textContent = titles[type];
+  document.getElementById('modalDesc').textContent = descs[type];
+  document.getElementById('exportModal').classList.add('open');
+}
+function closeModal() {
+  document.getElementById('exportModal').classList.remove('open');
+  document.getElementById('exportProgress').style.display = 'none';
+  document.getElementById('pbFill').style.width = '0%';
+}
+function selectExport(el, scope) {
+  document.querySelectorAll('.exp-opt').forEach(o => o.classList.remove('selected'));
+  el.classList.add('selected');
+  currentExportScope = scope;
+}
+function executeExport() {
+  const btn = document.getElementById('exportExecBtn');
+  btn.textContent = 'Processing...';
+  btn.disabled = true;
+  const pb = document.getElementById('exportProgress');
+  const fill = document.getElementById('pbFill');
+  pb.style.display = 'block';
+
+  if (currentExportType === 'png') {
+    fill.style.width = '30%';
+    setTimeout(() => {
+      const target = document.querySelector('.main');
+      html2canvas(target, {
+        backgroundColor: '#0D1117',
+        scale: 1.5,
+        useCORS: true,
+        allowTaint: true
+      }).then(canvas => {
+        fill.style.width = '90%';
+        const link = document.createElement('a');
+        link.download = 'PBPE-Dashboard-' + new Date().toISOString().slice(0,10) + '.png';
+        link.href = canvas.toDataURL('image/png');
+        link.click();
+        fill.style.width = '100%';
+        setTimeout(() => { closeModal(); btn.textContent='Export'; btn.disabled=false; }, 600);
+      });
+    }, 200);
+  } else if (currentExportType === 'wp') {
+    fill.style.width = '50%';
+    const data = {
+      model: "PBPE — Plant-Based Planet Economy",
+      version: "2.0",
+      gateway: "農産物取引 ≡ 排出権取引",
+      engine: "MBT Sustainable Cycle (MSC)",
+      problems_solved: ["食料問題","栄養問題","医療費問題","温室効果ガス削減","食品企業収益向上","投資家収益向上","保険・気候ファイナンス流動化"],
+      financial_products: ["ACIB (農地炭素担保型インフラ債)","ARS (農業収益スワップ)","SAM (土壌資産担保モーゲージ)","HALI (農業健康連動保険)"],
+      kpis: {food_loss_reduction:"-30%", ghg_reduction:"-22%", healthcare_savings:"-$2.3T", climate_finance_unlocked:"$850B", yield_stability:"+25%"},
+      biosecurity_coverage: ["コーヒーさび病","柑橘グリーニング病","鳥インフルエンザ","豚熱(CSF/ASF)","養殖魚病原菌"],
+      revenue_streams: ["農産物販売収益","廃棄物処理委託収益","発酵肥料・飼料販売","炭素クレジット(PoR)","バイオセキュリティ提供料"],
+      sdgs: ["SDG 2: Zero Hunger","SDG 3: Good Health","SDG 13: Climate Action","SDG 15: Life on Land","SDG 17: Partnerships"],
+      generated: new Date().toISOString()
+    };
+    fill.style.width = '90%';
+    const blob = new Blob([JSON.stringify(data, null, 2)], {type:'application/json'});
+    const link = document.createElement('a');
+    link.download = 'PBPE-WhitePaper-Data-' + new Date().toISOString().slice(0,10) + '.json';
+    link.href = URL.createObjectURL(blob);
+    link.click();
+    fill.style.width = '100%';
+    setTimeout(() => { closeModal(); btn.textContent='Export'; btn.disabled=false; }, 600);
+  } else if (currentExportType === 'slides' || currentExportType === 'pdf') {
+    fill.style.width = '40%';
+    switchTab('impact', null);
+    setTimeout(() => {
+      fill.style.width = '70%';
+      html2canvas(document.getElementById('mainContent'), {
+        backgroundColor: '#0D1117', scale: 1.5, useCORS: true, allowTaint: true
+      }).then(canvas => {
+        fill.style.width = '95%';
+        const link = document.createElement('a');
+        const ext = currentExportType === 'pdf' ? 'png' : 'png';
+        link.download = 'PBPE-PitchDeck-' + new Date().toISOString().slice(0,10) + '.' + ext;
+        link.href = canvas.toDataURL('image/png');
+        link.click();
+        fill.style.width = '100%';
+        setTimeout(() => { closeModal(); btn.textContent='Export'; btn.disabled=false; }, 600);
+      });
+    }, 400);
+  }
+}
+
+// ── HYPERCYCLE CANVAS ──
+let animId = null;
+function initCanvas() {
+  if (animId) { cancelAnimationFrame(animId); animId = null; }
+  const canvas = document.getElementById('hypercycle');
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+  function resize() {
+    const rect = canvas.parentElement.getBoundingClientRect();
+    canvas.width = (rect.width - 12) * window.devicePixelRatio;
+    canvas.height = 400 * window.devicePixelRatio;
+    canvas.style.height = '400px';
+    ctx.scale(window.devicePixelRatio, window.devicePixelRatio);
+  }
+  resize();
+  const W = () => canvas.width / window.devicePixelRatio;
+  const H = () => canvas.height / window.devicePixelRatio;
+
+  const nodes = [
+    {id:'msc',label:'MBT Sustainable\nCycle',sub:'ENGINE',x:.5,y:.5,r:50,color:'#F0A500',glow:'#F0A50040',isMSC:true},
+    {id:'food',label:'食料問題',sub:'FOOD SECURITY',x:.5,y:.08,r:34,color:'#39D353',glow:'#39D35330'},
+    {id:'nutri',label:'栄養問題',sub:'NUTRITION',x:.82,y:.2,r:34,color:'#58A6FF',glow:'#58A6FF30'},
+    {id:'medical',label:'医療費問題',sub:'HEALTHCARE',x:.93,y:.55,r:34,color:'#BC8CFF',glow:'#BC8CFF30'},
+    {id:'ghg',label:'GHG削減',sub:'CLIMATE',x:.72,y:.89,r:34,color:'#3DCFCF',glow:'#3DCFCF30'},
+    {id:'food_ent',label:'食品企業\n収益',sub:'FOOD BIZ',x:.28,y:.89,r:34,color:'#C9A84C',glow:'#C9A84C30'},
+    {id:'invest',label:'投資家\n収益',sub:'INVESTORS',x:.07,y:.55,r:34,color:'#F85149',glow:'#F8514930'},
+    {id:'insure',label:'保険・\n気候Finance',sub:'RISK+FINANCE',x:.18,y:.2,r:34,color:'#FF9F43',glow:'#FF9F4330'},
+  ];
+  const edges = nodes.slice(1).map((n,i) => ({to:n.id, color:n.color, phase:(i/7)*Math.PI*2}));
+
+  function gp(n) { return {x:n.x*W(), y:n.y*H()}; }
+
+  function drawGlow(x,y,r,color) {
+    const g = ctx.createRadialGradient(x,y,r*.2,x,y,r*2.4);
+    g.addColorStop(0,color); g.addColorStop(1,'transparent');
+    ctx.beginPath(); ctx.arc(x,y,r*2.4,0,Math.PI*2); ctx.fillStyle=g; ctx.fill();
+  }
+
+  function drawPulse(from,to,color,phase,t) {
+    ctx.beginPath(); ctx.moveTo(from.x,from.y); ctx.lineTo(to.x,to.y);
+    ctx.strokeStyle=color+'22'; ctx.lineWidth=1.5; ctx.stroke();
+    const p = ((t*.00065+phase)%1+1)%1;
+    const px=from.x+(to.x-from.x)*p, py=from.y+(to.y-from.y)*p;
+    const bg=ctx.createRadialGradient(px,py,0,px,py,9);
+    bg.addColorStop(0,color+'FF'); bg.addColorStop(.5,color+'60'); bg.addColorStop(1,'transparent');
+    ctx.beginPath(); ctx.arc(px,py,9,0,Math.PI*2); ctx.fillStyle=bg; ctx.fill();
+    ctx.beginPath(); ctx.arc(px,py,2.5,0,Math.PI*2); ctx.fillStyle=color; ctx.fill();
+  }
+
+  function drawNode(n,p,t) {
+    drawGlow(p.x,p.y,n.r,n.glow);
+    if (n.isMSC) {
+      const pulse=1+Math.sin(t*.002)*.07;
+      [12,22].forEach((d,i) => {
+        ctx.beginPath(); ctx.arc(p.x,p.y,n.r*pulse+d,0,Math.PI*2);
+        ctx.strokeStyle=n.color+(i?'14':'35'); ctx.lineWidth=1.5+i*.5; ctx.stroke();
+      });
+    }
+    const grd=ctx.createRadialGradient(p.x-n.r*.2,p.y-n.r*.2,n.r*.1,p.x,p.y,n.r);
+    if (n.isMSC) { grd.addColorStop(0,'#3A2A00'); grd.addColorStop(1,'#1A1000'); }
+    else { grd.addColorStop(0,'#21262D'); grd.addColorStop(1,'#161B22'); }
+    ctx.beginPath(); ctx.arc(p.x,p.y,n.r,0,Math.PI*2);
+    ctx.fillStyle=grd; ctx.fill();
+    ctx.strokeStyle=n.color+(n.isMSC?'CC':'70'); ctx.lineWidth=n.isMSC?2:1.5; ctx.stroke();
+    ctx.textAlign='center'; ctx.textBaseline='middle';
+    const lines=n.label.split('\n');
+    if (n.isMSC) {
+      ctx.font='700 11px "JetBrains Mono",monospace'; ctx.fillStyle=n.color;
+      lines.forEach((l,i) => ctx.fillText(l,p.x,p.y+(i-(lines.length-1)/2)*14));
+      ctx.font='500 8px "JetBrains Mono",monospace'; ctx.fillStyle=n.color+'70';
+      ctx.fillText(n.sub,p.x,p.y+24);
+    } else {
+      ctx.font='600 10px Inter,sans-serif'; ctx.fillStyle='#E6EDF3';
+      lines.forEach((l,i) => ctx.fillText(l,p.x,p.y+(i-(lines.length-1)/2)*13-4));
+      ctx.font='400 8px "JetBrains Mono",monospace'; ctx.fillStyle=n.color+'AA';
+      ctx.fillText(n.sub,p.x,p.y+lines.length*7+2);
+    }
+  }
+
+  function draw(ts) {
+    ctx.clearRect(0,0,W(),H());
+    ctx.fillStyle='#30363D15';
+    for (let gx=20;gx<W();gx+=36) for (let gy=20;gy<H();gy+=36) {
+      ctx.beginPath(); ctx.arc(gx,gy,1,0,Math.PI*2); ctx.fill();
+    }
+    const pos={};
+    nodes.forEach(n => pos[n.id]=gp(n));
+    edges.forEach(e => drawPulse(pos['msc'],pos[e.to],e.color,e.phase,ts));
+    nodes.forEach(n => drawNode(n,pos[n.id],ts));
+    animId = requestAnimationFrame(draw);
+  }
+  animId = requestAnimationFrame(draw);
+}
+
+// init on load
+window.addEventListener('load', initCanvas);
+window.addEventListener('resize', () => { if(document.getElementById('view-overview').classList.contains('active')) initCanvas(); });
+</script>
+</body>
+</html>

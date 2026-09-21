@@ -1,0 +1,401 @@
+以下、開始してください。
+
+## 🔬 HealthBook / MBT Probiotics 専用スレッド（次世代Biomedical AI設計）
+
+## 0. 目的（最重要）
+
+本スレッドは、以下を数式・コード・再現性ベースで構築することを唯一の目的とする
+
+1. MBT55ハイパーサイクルモデル（完全数式化）
+2. 人体代謝ネットワーク（HealthBook）
+3. 腸内細菌 → 代謝産物 → フェノタイプ → 健康状態 の因果モデル
+4. 介入（食品・プロバイオティクス）による動態制御
+5. PBPE（経済モデル）との統合
+6. AI検証エージェントによる完全検証
+
+---
+
+## 1. 基本原則（必須遵守）
+
+❌ 禁止
+
+- 説明のみ（数式なし）
+- 根拠のない数値
+- 因果が曖昧なモデル
+- 再現不能なロジック
+
+---
+
+✅ 必須
+
+すべての出力は以下を含むこと：
+
+1. 数式（Equation）
+2. 変数定義（Variables）
+3. 単位（Units）
+4. パラメータ範囲（Range）
+5. Python実装（Executable）
+6. 検証方法（Validation）
+
+---
+
+## 2. モデル構造（定義）
+
+### 2.1 MBT55ハイパーサイクル
+
+Organic Input
+→ Microbial Network
+→ Decomposition
+→ Metabolites
+→ Environmental Feedback
+→ System Stabilization
+
+---
+
+### 2.2 Human Metabolic Model（HealthBook）
+
+Nutrition Input
+→ Gut Microbiome
+→ Metabolite Production
+→ Host Metabolism
+→ Phenotype
+→ Disease Risk
+
+---
+
+### 2.3 統合モデル
+
+MBT55（外部環境）
+×
+Human Metabolism（内部環境）
+=
+Global Health System
+
+---
+
+## 3. 数式化対象（必須）
+
+以下を必ず数式化する：
+
+---
+
+### ① 分解ダイナミクス
+
+- 有機物分解速度
+- 微生物相互作用
+- pH・温度依存性
+
+---
+
+### ② 代謝カスケード
+
+- 基質 → 中間代謝物 → 最終産物
+- SCFA生成
+- アミノ酸変換
+
+---
+
+### ③ 腸内代謝モデル
+
+- 微生物組成 → 代謝産物
+- 代謝産物 → 健康指標
+
+---
+
+### ④ 介入モデル
+
+- 入力変化 → 出力変化
+- プロバイオティクス効果
+
+---
+
+### ⑤ GHG削減モデル
+
+- 分解速度 → 排出削減
+- メタン/N2O変化
+
+---
+
+### ⑥ 経済モデル（PBPE）
+
+- コスト削減
+- IRR / NPV
+- Carbon Credit
+
+---
+
+## 4. AIエージェント統合（必須）
+
+以下の検証を通過しないモデルは無効とする：
+
+- Causality Agent
+- Math Agent
+- Trace Agent
+
+---
+
+## 5. 出力形式（厳格）
+
+すべての回答は以下構造：
+
+---
+
+① 概要（1-2行）
+
+② 数式
+
+③ 変数定義
+
+④ Pythonコード
+
+⑤ 検証方法
+
+---
+
+## 6. 最終ゴール
+
+以下を完成させる：
+
+---
+
+✔ GitHubで再現可能な統合モデル
+
+- MBT55
+- HealthBook
+- PBPE
+- GHG削減
+
+---
+
+✔ Microsoft Researchが評価可能な状態
+
+対象：
+
+- Hoifung Poon
+- Alexander Mehmet Ersoy
+
+---
+
+✔ 投資判断可能なレベル
+
+- 数値の根拠あり
+- 再現可能
+- スケール可能
+
+---
+
+## 7. 最初のタスク
+
+以下から開始せよ：
+
+---
+
+### ▶ Task 1
+
+MBT55ハイパーサイクルの完全数式モデルを構築せよ
+
+条件：
+
+- 微分方程式で表現
+- 相互作用を含める
+- 安定性条件を定義
+
+---
+
+以上
+0418
+
+---
+
+① 概要（1–2行）  
+MBT55ハイパーサイクルを、基質分解・微生物相互作用・環境フィードバックを含む連立常微分方程式（ODE系）として定式化し、非線形相互作用と安定条件を定義する。
+
+---
+
+② 数式（MBT55 Hypercycle ODE System）
+
+**(1) 有機物分解ダイナミクス**
+
+[  
+\frac{dS}{dt} = - \sum_{i=1}^{N} k_i \cdot M_i \cdot S \cdot f_T(T) \cdot f_{pH}(pH)  
+]
+
+---
+
+**(2) 微生物ダイナミクス（相互作用含む）**
+
+[  
+\frac{dM_i}{dt} = M_i \left( \mu_i \frac{S}{K_{S,i} + S} + \sum_{j \neq i} \alpha_{ij} M_j - d_i \right)  
+]
+
+---
+
+**(3) 代謝産物生成**
+
+[  
+\frac{dP_k}{dt} = \sum_{i=1}^{N} Y_{ik} \cdot k_i \cdot M_i \cdot S - \lambda_k P_k  
+]
+
+---
+
+**(4) 環境フィードバック（pH, 温度）**
+
+[  
+\frac{dpH}{dt} = \gamma_1 \sum_k \beta_k P_k - \gamma_2 (pH - pH_{opt})  
+]
+
+[  
+\frac{dT}{dt} = \delta_1 \sum_i \eta_i M_i - \delta_2 (T - T_{env})  
+]
+
+---
+
+**(5) システム安定条件（Lyapunov近似）**
+
+平衡点 ((S^_, M_i^_, P_k^*)) に対して：
+
+[  
+J = \frac{\partial (dS/dt, dM_i/dt, dP_k/dt)}{\partial (S, M_i, P_k)}  
+]
+
+[  
+\text{Re}(\lambda_{max}(J)) < 0 \Rightarrow \text{Stable}  
+]
+
+---
+
+③ 変数定義（Variables & Units）
+
+|変数|意味|単位|範囲|
+|---|---|---|---|
+|(S)|有機基質濃度|g/L|0–100|
+|(M_i)|微生物群 i|cells/mL|10⁵–10¹²|
+|(P_k)|代謝産物 k|mmol/L|0–100|
+|(T)|温度|°C|0–70|
+|(pH)|酸性度|-|4–9|
+
+---
+
+**パラメータ**
+
+|パラメータ|意味|範囲|
+|---|---|---|
+|(k_i)|分解速度定数|0.01–2.0 hr⁻¹|
+|(\mu_i)|増殖速度|0.1–1.5 hr⁻¹|
+|(\alpha_{ij})|相互作用係数|-1.0–1.0|
+|(d_i)|死滅率|0.01–0.5 hr⁻¹|
+|(Y_{ik})|収率係数|0–1|
+|(\lambda_k)|分解率|0.01–1.0|
+
+---
+
+**環境関数**
+
+[  
+f_T(T) = \exp\left(-\frac{(T - T_{opt})^2}{\sigma_T^2}\right)  
+]
+
+[  
+f_{pH}(pH) = \exp\left(-\frac{(pH - pH_{opt})^2}{\sigma_{pH}^2}\right)  
+]
+
+---
+
+④ Python実装（Executable）
+
+```python
+import numpy as np
+from scipy.integrate import solve_ivp
+
+# パラメータ設定
+N = 3  # 微生物数
+K_s = np.array([10, 15, 20])
+mu = np.array([0.5, 0.6, 0.4])
+d = np.array([0.1, 0.1, 0.1])
+k = np.array([0.3, 0.4, 0.2])
+
+alpha = np.array([
+    [0, 0.1, -0.05],
+    [-0.1, 0, 0.05],
+    [0.05, -0.1, 0]
+])
+
+def f_T(T, T_opt=37, sigma=10):
+    return np.exp(-((T - T_opt)**2) / sigma**2)
+
+def f_pH(pH, pH_opt=7, sigma=1.5):
+    return np.exp(-((pH - pH_opt)**2) / sigma**2)
+
+def model(t, y):
+    S = y[0]
+    M = y[1:1+N]
+    T = y[-2]
+    pH = y[-1]
+
+    dSdt = -np.sum(k * M * S * f_T(T) * f_pH(pH))
+
+    dMdt = np.zeros(N)
+    for i in range(N):
+        interaction = np.sum(alpha[i] * M)
+        growth = mu[i] * S / (K_s[i] + S)
+        dMdt[i] = M[i] * (growth + interaction - d[i])
+
+    dTdt = 0.01 * np.sum(M) - 0.1 * (T - 25)
+    dpHdt = 0.01 * S - 0.1 * (pH - 7)
+
+    return np.concatenate([[dSdt], dMdt, [dTdt, dpHdt]])
+
+# 初期条件
+y0 = [50] + [1e6, 1e6, 1e6] + [25, 7]
+
+t_span = (0, 100)
+sol = solve_ivp(model, t_span, y0, t_eval=np.linspace(0,100,200))
+
+# 出力確認
+print(sol.y)
+```
+
+---
+
+⑤ 検証方法（Validation）
+
+**1. 数学的検証（Math Agent）**
+
+- ヤコビアン行列の固有値解析
+    
+- 安定条件：最大固有値の実部 < 0
+    
+
+---
+
+**2. 因果検証（Causality Agent）**
+
+- S増加 → M増加 → P生成 → pH変化 → 分解速度変化
+    
+- すべてのループが閉じているか検証
+    
+
+---
+
+**3. トレース検証（Trace Agent）**
+
+- 入力（S初期値）変更 → 出力（M, P）変化追跡
+    
+- 再現性：同一初期条件で同一結果
+    
+
+---
+
+**4. 実験適合性**
+
+- 土壌・発酵データとのフィッティング
+    
+- RMSE / AIC によるモデル適合度評価
+    
+
+---
+
+次ステップ：  
+▶ Task 2「代謝カスケード（SCFA・アミノ酸変換）の完全数式化」に進むべき段階です
+
+[[Task 2「代謝カスケード（SCFA・アミノ酸変換）の完全数式化」]]

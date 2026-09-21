@@ -1,0 +1,1838 @@
+{
+  "document": "MBT漢方代謝ライブラリー完全Inventory v1.0",
+  "status": "Discovery Inventory — not yet canonicalized",
+  "source_zip": "09_MBT_漢方代謝ライブラリー.zip",
+  "file_count_excluding_directories": 160,
+  "zip_entry_count": 169,
+  "total_uncompressed_bytes": 197449,
+  "category_counts": {
+    "0_体系図": 18,
+    "1_生薬": 40,
+    "2_方剤": 19,
+    "3_代謝物": 14,
+    "4_MBT55代謝経路": 7,
+    "5_証（漢方）": 7,
+    "6-4. 生薬辞書 Version 1.0（全38生薬）Block 2.md": 1,
+    "6_症状・社会的適応": 19,
+    "6層ネットワークの全体構造.md": 1,
+    "7_図式化（Mermaid）": 19,
+    "8. MBT漢方代謝シミュレーション・レポート.md": 1,
+    "9. MBT漢方代謝ライブラリー：広域リサーチ戦略（感染症・栄養不全特化）.md": 1,
+    "MBT漢方代謝ライブラリー.xlsx": 1,
+    "最終的な構造イメージ（あなたの体系に最適化）.md": 1,
+    "最適なObsidian構造（推奨）コード.md": 1,
+    "漢方代謝ライブラリー１.xlsx": 1,
+    "目次ページ.md": 1,
+    "目的の再確認.md": 1,
+    "紅麹と紅麹菌.md": 1,
+    "途中経過_1.md": 1,
+    "途中経過_2.md": 1,
+    "途中経過_3.md": 1,
+    "途中経過_4.md": 1,
+    "途中経過_5.md": 1,
+    "麻黄湯.md": 1
+  },
+  "extension_counts": {
+    ".md": 158,
+    ".xlsx": 2
+  },
+  "entity_inventory": {
+    "herbs_dedicated_files": 39,
+    "formulas_dedicated_files": 19,
+    "metabolite_cluster_files": 14,
+    "mbt55_pathway_files": 7,
+    "sho_files": 7,
+    "symptom_files": 19,
+    "mermaid_network_files": 19
+  },
+  "entities": {
+    "herbs": [
+      {
+        "name": "乾姜",
+        "source_file": "09_MBT_漢方代謝ライブラリー/1_生薬/乾姜.md",
+        "mbt55_pathways": [],
+        "metabolites": [],
+        "formulas": [
+          "小建中湯",
+          "四逆湯",
+          "半夏瀉心湯"
+        ]
+      },
+      {
+        "name": "五味子",
+        "source_file": "09_MBT_漢方代謝ライブラリー/1_生薬/五味子.md",
+        "mbt55_pathways": [],
+        "metabolites": [],
+        "formulas": [
+          "小青竜湯"
+        ]
+      },
+      {
+        "name": "人参",
+        "source_file": "09_MBT_漢方代謝ライブラリー/1_生薬/人参.md",
+        "mbt55_pathways": [],
+        "metabolites": [],
+        "formulas": [
+          "四君子湯",
+          "人参湯"
+        ]
+      },
+      {
+        "name": "半夏",
+        "source_file": "09_MBT_漢方代謝ライブラリー/1_生薬/半夏.md",
+        "mbt55_pathways": [],
+        "metabolites": [],
+        "formulas": [
+          "小青竜湯",
+          "半夏瀉心湯"
+        ]
+      },
+      {
+        "name": "大棗",
+        "source_file": "09_MBT_漢方代謝ライブラリー/1_生薬/大棗.md",
+        "mbt55_pathways": [],
+        "metabolites": [],
+        "formulas": [
+          "葛根湯",
+          "小青竜湯"
+        ]
+      },
+      {
+        "name": "大黄",
+        "source_file": "09_MBT_漢方代謝ライブラリー/1_生薬/大黄.md",
+        "mbt55_pathways": [],
+        "metabolites": [],
+        "formulas": [
+          "大黄甘草湯",
+          "桃核承気湯"
+        ]
+      },
+      {
+        "name": "山梔子",
+        "source_file": "09_MBT_漢方代謝ライブラリー/1_生薬/山梔子.md",
+        "mbt55_pathways": [],
+        "metabolites": [],
+        "formulas": [
+          "黄連解毒湯"
+        ]
+      },
+      {
+        "name": "川芎",
+        "source_file": "09_MBT_漢方代謝ライブラリー/1_生薬/川芎.md",
+        "mbt55_pathways": [],
+        "metabolites": [],
+        "formulas": [
+          "桂枝茯苓丸"
+        ]
+      },
+      {
+        "name": "当帰",
+        "source_file": "09_MBT_漢方代謝ライブラリー/1_生薬/当帰.md",
+        "mbt55_pathways": [],
+        "metabolites": [],
+        "formulas": [
+          "当帰芍薬散",
+          "桂枝茯苓丸"
+        ]
+      },
+      {
+        "name": "杏仁",
+        "source_file": "09_MBT_漢方代謝ライブラリー/1_生薬/杏仁.md",
+        "mbt55_pathways": [],
+        "metabolites": [],
+        "formulas": [
+          "麻黄湯"
+        ]
+      },
+      {
+        "name": "柴胡",
+        "source_file": "09_MBT_漢方代謝ライブラリー/1_生薬/柴胡.md",
+        "mbt55_pathways": [],
+        "metabolites": [],
+        "formulas": [
+          "小柴胡湯"
+        ]
+      },
+      {
+        "name": "桂枝",
+        "source_file": "09_MBT_漢方代謝ライブラリー/1_生薬/桂枝.md",
+        "mbt55_pathways": [],
+        "metabolites": [],
+        "formulas": [
+          "麻黄湯",
+          "葛根湯",
+          "小青竜湯",
+          "桂枝茯苓丸"
+        ]
+      },
+      {
+        "name": "桂皮",
+        "source_file": "09_MBT_漢方代謝ライブラリー/1_生薬/桂皮.md",
+        "mbt55_pathways": [],
+        "metabolites": [],
+        "formulas": [
+          "桂枝茯苓丸",
+          "当帰芍薬散"
+        ]
+      },
+      {
+        "name": "桃仁",
+        "source_file": "09_MBT_漢方代謝ライブラリー/1_生薬/桃仁.md",
+        "mbt55_pathways": [],
+        "metabolites": [],
+        "formulas": [
+          "桂枝茯苓丸"
+        ]
+      },
+      {
+        "name": "沢瀉",
+        "source_file": "09_MBT_漢方代謝ライブラリー/1_生薬/沢瀉.md",
+        "mbt55_pathways": [],
+        "metabolites": [],
+        "formulas": [
+          "当帰芍薬散"
+        ]
+      },
+      {
+        "name": "牡丹皮",
+        "source_file": "09_MBT_漢方代謝ライブラリー/1_生薬/牡丹皮.md",
+        "mbt55_pathways": [],
+        "metabolites": [],
+        "formulas": [
+          "桂枝茯苓丸"
+        ]
+      },
+      {
+        "name": "牡蛎",
+        "source_file": "09_MBT_漢方代謝ライブラリー/1_生薬/牡蛎.md",
+        "mbt55_pathways": [],
+        "metabolites": [],
+        "formulas": [
+          "桂枝加竜骨牡蛎湯"
+        ]
+      },
+      {
+        "name": "猪苓",
+        "source_file": "09_MBT_漢方代謝ライブラリー/1_生薬/猪苓.md",
+        "mbt55_pathways": [],
+        "metabolites": [],
+        "formulas": [
+          "当帰芍薬散"
+        ]
+      },
+      {
+        "name": "甘草",
+        "source_file": "09_MBT_漢方代謝ライブラリー/1_生薬/甘草.md",
+        "mbt55_pathways": [],
+        "metabolites": [],
+        "formulas": [
+          "麻黄湯",
+          "葛根湯",
+          "小青竜湯",
+          "四君子湯",
+          "当帰芍薬散"
+        ]
+      },
+      {
+        "name": "生姜",
+        "source_file": "09_MBT_漢方代謝ライブラリー/1_生薬/生姜.md",
+        "mbt55_pathways": [],
+        "metabolites": [],
+        "formulas": [
+          "葛根湯",
+          "小青竜湯"
+        ]
+      },
+      {
+        "name": "白朮",
+        "source_file": "09_MBT_漢方代謝ライブラリー/1_生薬/白朮.md",
+        "mbt55_pathways": [],
+        "metabolites": [],
+        "formulas": [
+          "四君子湯",
+          "当帰芍薬散"
+        ]
+      },
+      {
+        "name": "白芍",
+        "source_file": "09_MBT_漢方代謝ライブラリー/1_生薬/白芍.md",
+        "mbt55_pathways": [],
+        "metabolites": [],
+        "formulas": [
+          "当帰芍薬散",
+          "桂枝茯苓丸"
+        ]
+      },
+      {
+        "name": "石膏",
+        "source_file": "09_MBT_漢方代謝ライブラリー/1_生薬/石膏.md",
+        "mbt55_pathways": [],
+        "metabolites": [],
+        "formulas": [
+          "白虎湯"
+        ]
+      },
+      {
+        "name": "竜骨",
+        "source_file": "09_MBT_漢方代謝ライブラリー/1_生薬/竜骨.md",
+        "mbt55_pathways": [],
+        "metabolites": [],
+        "formulas": [
+          "桂枝加竜骨牡蛎湯"
+        ]
+      },
+      {
+        "name": "紅花",
+        "source_file": "09_MBT_漢方代謝ライブラリー/1_生薬/紅花.md",
+        "mbt55_pathways": [],
+        "metabolites": [],
+        "formulas": [
+          "桂枝茯苓丸"
+        ]
+      },
+      {
+        "name": "細辛",
+        "source_file": "09_MBT_漢方代謝ライブラリー/1_生薬/細辛.md",
+        "mbt55_pathways": [],
+        "metabolites": [],
+        "formulas": [
+          "小青竜湯"
+        ]
+      },
+      {
+        "name": "芍薬",
+        "source_file": "09_MBT_漢方代謝ライブラリー/1_生薬/芍薬.md",
+        "mbt55_pathways": [],
+        "metabolites": [],
+        "formulas": [
+          "葛根湯",
+          "当帰芍薬散"
+        ]
+      },
+      {
+        "name": "芒硝",
+        "source_file": "09_MBT_漢方代謝ライブラリー/1_生薬/芒硝.md",
+        "mbt55_pathways": [],
+        "metabolites": [],
+        "formulas": [
+          "大承気湯"
+        ]
+      },
+      {
+        "name": "茯苓",
+        "source_file": "09_MBT_漢方代謝ライブラリー/1_生薬/茯苓.md",
+        "mbt55_pathways": [],
+        "metabolites": [],
+        "formulas": [
+          "四君子湯",
+          "当帰芍薬散"
+        ]
+      },
+      {
+        "name": "荊芥",
+        "source_file": "09_MBT_漢方代謝ライブラリー/1_生薬/荊芥.md",
+        "mbt55_pathways": [],
+        "metabolites": [],
+        "formulas": [
+          "荊芥連翹湯"
+        ]
+      },
+      {
+        "name": "葛根",
+        "source_file": "09_MBT_漢方代謝ライブラリー/1_生薬/葛根.md",
+        "mbt55_pathways": [],
+        "metabolites": [
+          "代謝促進代謝物",
+          "温陽関連代謝物",
+          "SCFA"
+        ],
+        "formulas": [
+          "葛根湯"
+        ]
+      },
+      {
+        "name": "連翹",
+        "source_file": "09_MBT_漢方代謝ライブラリー/1_生薬/連翹.md",
+        "mbt55_pathways": [],
+        "metabolites": [],
+        "formulas": [
+          "荊芥連翹湯"
+        ]
+      },
+      {
+        "name": "防風",
+        "source_file": "09_MBT_漢方代謝ライブラリー/1_生薬/防風.md",
+        "mbt55_pathways": [],
+        "metabolites": [],
+        "formulas": [
+          "荊芥連翹湯"
+        ]
+      },
+      {
+        "name": "陳皮",
+        "source_file": "09_MBT_漢方代謝ライブラリー/1_生薬/陳皮.md",
+        "mbt55_pathways": [],
+        "metabolites": [],
+        "formulas": [
+          "六君子湯"
+        ]
+      },
+      {
+        "name": "麦門冬",
+        "source_file": "09_MBT_漢方代謝ライブラリー/1_生薬/麦門冬.md",
+        "mbt55_pathways": [],
+        "metabolites": [],
+        "formulas": [
+          "麦門冬湯"
+        ]
+      },
+      {
+        "name": "麻黄",
+        "source_file": "09_MBT_漢方代謝ライブラリー/1_生薬/麻黄.md",
+        "mbt55_pathways": [],
+        "metabolites": [],
+        "formulas": [
+          "麻黄湯",
+          "葛根湯",
+          "小青竜湯"
+        ]
+      },
+      {
+        "name": "黄耆",
+        "source_file": "09_MBT_漢方代謝ライブラリー/1_生薬/黄耆.md",
+        "mbt55_pathways": [],
+        "metabolites": [],
+        "formulas": [
+          "補中益気湯"
+        ]
+      },
+      {
+        "name": "黄芩",
+        "source_file": "09_MBT_漢方代謝ライブラリー/1_生薬/黄芩.md",
+        "mbt55_pathways": [],
+        "metabolites": [],
+        "formulas": [
+          "小柴胡湯",
+          "黄連解毒湯"
+        ]
+      },
+      {
+        "name": "黄連",
+        "source_file": "09_MBT_漢方代謝ライブラリー/1_生薬/黄連.md",
+        "mbt55_pathways": [],
+        "metabolites": [],
+        "formulas": [
+          "黄連解毒湯",
+          "半夏瀉心湯"
+        ]
+      }
+    ],
+    "formulas": [
+      {
+        "name": "人参湯",
+        "source_file": "09_MBT_漢方代謝ライブラリー/2_方剤/人参湯.md",
+        "content_type": "formula-to-herb-to-metabolite-to_sho-to-symptom text mapping"
+      },
+      {
+        "name": "六君子湯",
+        "source_file": "09_MBT_漢方代謝ライブラリー/2_方剤/六君子湯.md",
+        "content_type": "formula-to-herb-to-metabolite-to_sho-to-symptom text mapping"
+      },
+      {
+        "name": "半夏瀉心湯",
+        "source_file": "09_MBT_漢方代謝ライブラリー/2_方剤/半夏瀉心湯.md",
+        "content_type": "formula-to-herb-to-metabolite-to_sho-to-symptom text mapping"
+      },
+      {
+        "name": "四君子湯",
+        "source_file": "09_MBT_漢方代謝ライブラリー/2_方剤/四君子湯.md",
+        "content_type": "formula-to-herb-to-metabolite-to_sho-to-symptom text mapping"
+      },
+      {
+        "name": "大黄甘草湯",
+        "source_file": "09_MBT_漢方代謝ライブラリー/2_方剤/大黄甘草湯.md",
+        "content_type": "formula-to-herb-to-metabolite-to_sho-to-symptom text mapping"
+      },
+      {
+        "name": "小建中湯",
+        "source_file": "09_MBT_漢方代謝ライブラリー/2_方剤/小建中湯.md",
+        "content_type": "formula-to-herb-to-metabolite-to_sho-to-symptom text mapping"
+      },
+      {
+        "name": "小柴胡湯",
+        "source_file": "09_MBT_漢方代謝ライブラリー/2_方剤/小柴胡湯.md",
+        "content_type": "formula-to-herb-to-metabolite-to_sho-to-symptom text mapping"
+      },
+      {
+        "name": "小青竜湯",
+        "source_file": "09_MBT_漢方代謝ライブラリー/2_方剤/小青竜湯.md",
+        "content_type": "formula-to-herb-to-metabolite-to_sho-to-symptom text mapping"
+      },
+      {
+        "name": "当帰芍薬散",
+        "source_file": "09_MBT_漢方代謝ライブラリー/2_方剤/当帰芍薬散.md",
+        "content_type": "formula-to-herb-to-metabolite-to_sho-to-symptom text mapping"
+      },
+      {
+        "name": "桂枝加竜骨牡蛎湯",
+        "source_file": "09_MBT_漢方代謝ライブラリー/2_方剤/桂枝加竜骨牡蛎湯.md",
+        "content_type": "formula-to-herb-to-metabolite-to_sho-to-symptom text mapping"
+      },
+      {
+        "name": "桂枝湯",
+        "source_file": "09_MBT_漢方代謝ライブラリー/2_方剤/桂枝湯.md",
+        "content_type": "formula-to-herb-to-metabolite-to_sho-to-symptom text mapping"
+      },
+      {
+        "name": "桂枝茯苓丸",
+        "source_file": "09_MBT_漢方代謝ライブラリー/2_方剤/桂枝茯苓丸.md",
+        "content_type": "formula-to-herb-to-metabolite-to_sho-to-symptom text mapping"
+      },
+      {
+        "name": "桃核承気湯",
+        "source_file": "09_MBT_漢方代謝ライブラリー/2_方剤/桃核承気湯.md",
+        "content_type": "formula-to-herb-to-metabolite-to_sho-to-symptom text mapping"
+      },
+      {
+        "name": "白虎加人参湯",
+        "source_file": "09_MBT_漢方代謝ライブラリー/2_方剤/白虎加人参湯.md",
+        "content_type": "formula-to-herb-to-metabolite-to_sho-to-symptom text mapping"
+      },
+      {
+        "name": "白虎湯",
+        "source_file": "09_MBT_漢方代謝ライブラリー/2_方剤/白虎湯.md",
+        "content_type": "formula-to-herb-to-metabolite-to_sho-to-symptom text mapping"
+      },
+      {
+        "name": "葛根湯",
+        "source_file": "09_MBT_漢方代謝ライブラリー/2_方剤/葛根湯.md",
+        "content_type": "formula-to-herb-to-metabolite-to_sho-to-symptom text mapping"
+      },
+      {
+        "name": "補中益気湯",
+        "source_file": "09_MBT_漢方代謝ライブラリー/2_方剤/補中益気湯.md",
+        "content_type": "formula-to-herb-to-metabolite-to_sho-to-symptom text mapping"
+      },
+      {
+        "name": "麦門冬湯",
+        "source_file": "09_MBT_漢方代謝ライブラリー/2_方剤/麦門冬湯.md",
+        "content_type": "formula-to-herb-to-metabolite-to_sho-to-symptom text mapping"
+      },
+      {
+        "name": "麻黄湯",
+        "source_file": "09_MBT_漢方代謝ライブラリー/2_方剤/麻黄湯.md",
+        "content_type": "formula-to-herb-to-metabolite-to_sho-to-symptom text mapping"
+      }
+    ],
+    "metabolites": [
+      {
+        "name": "SCFA（短鎖脂肪酸）",
+        "source_file": "09_MBT_漢方代謝ライブラリー/3_代謝物/SCFA.md",
+        "mbt55_pathways": [],
+        "source_herbs": [
+          "人参",
+          "白朮",
+          "茯苓",
+          "大棗",
+          "麦門冬",
+          "半夏"
+        ],
+        "formulas": [
+          "四君子湯",
+          "六君子湯",
+          "補中益気湯",
+          "人参湯"
+        ],
+        "sho": [
+          "補気"
+        ],
+        "symptoms": [
+          "疲労",
+          "胃腸障害",
+          "母子健康",
+          "生活習慣病"
+        ]
+      },
+      {
+        "name": "ミネラル調整代謝物",
+        "source_file": "09_MBT_漢方代謝ライブラリー/3_代謝物/ミネラル調整代謝物.md",
+        "mbt55_pathways": [],
+        "source_herbs": [
+          "竜骨",
+          "牡蛎"
+        ],
+        "formulas": [],
+        "sho": [
+          "温陽",
+          "和解"
+        ],
+        "symptoms": [
+          "自律神経不安定",
+          "不眠"
+        ]
+      },
+      {
+        "name": "上皮保護代謝物",
+        "source_file": "09_MBT_漢方代謝ライブラリー/3_代謝物/上皮保護代謝物.md",
+        "mbt55_pathways": [],
+        "source_herbs": [
+          "麦門冬",
+          "甘草"
+        ],
+        "formulas": [],
+        "sho": [
+          "和解"
+        ],
+        "symptoms": [
+          "咽頭痛",
+          "胃腸障害"
+        ]
+      },
+      {
+        "name": "代謝促進代謝物",
+        "source_file": "09_MBT_漢方代謝ライブラリー/3_代謝物/代謝促進代謝物.md",
+        "mbt55_pathways": [],
+        "source_herbs": [
+          "葛根",
+          "生姜",
+          "乾姜"
+        ],
+        "formulas": [],
+        "sho": [
+          "補気",
+          "温陽"
+        ],
+        "symptoms": [
+          "疲労",
+          "冷え"
+        ]
+      },
+      {
+        "name": "利水関連代謝物",
+        "source_file": "09_MBT_漢方代謝ライブラリー/3_代謝物/利水関連代謝物.md",
+        "mbt55_pathways": [],
+        "source_herbs": [
+          "沢瀉",
+          "猪苓",
+          "茯苓"
+        ],
+        "formulas": [],
+        "sho": [
+          "利水"
+        ],
+        "symptoms": [
+          "むくみ",
+          "腎・泌尿器"
+        ]
+      },
+      {
+        "name": "抗アレルギー代謝物",
+        "source_file": "09_MBT_漢方代謝ライブラリー/3_代謝物/抗アレルギー代謝物.md",
+        "mbt55_pathways": [],
+        "source_herbs": [
+          "五味子",
+          "麻黄",
+          "連翹"
+        ],
+        "formulas": [],
+        "sho": [
+          "清熱"
+        ],
+        "symptoms": [
+          "アレルギー",
+          "喘息",
+          "花粉症"
+        ]
+      },
+      {
+        "name": "抗ウイルス代謝物",
+        "source_file": "09_MBT_漢方代謝ライブラリー/3_代謝物/抗ウイルス代謝物.md",
+        "mbt55_pathways": [],
+        "source_herbs": [
+          "黄芩",
+          "黄連",
+          "連翹"
+        ],
+        "formulas": [],
+        "sho": [
+          "清熱"
+        ],
+        "symptoms": [
+          "感染症"
+        ]
+      },
+      {
+        "name": "抗炎症フラボノイド",
+        "source_file": "09_MBT_漢方代謝ライブラリー/3_代謝物/抗炎症フラボノイド.md",
+        "mbt55_pathways": [],
+        "source_herbs": [
+          "麻黄",
+          "黄芩",
+          "黄連",
+          "連翹",
+          "牡丹皮",
+          "柴胡"
+        ],
+        "formulas": [
+          "麻黄湯",
+          "小柴胡湯",
+          "半夏瀉心湯",
+          "白虎湯"
+        ],
+        "sho": [
+          "清熱"
+        ],
+        "symptoms": [
+          "感染症",
+          "アレルギー",
+          "生活習慣病",
+          "咽頭痛"
+        ]
+      },
+      {
+        "name": "抗痙攣代謝物",
+        "source_file": "09_MBT_漢方代謝ライブラリー/3_代謝物/抗痙攣代謝物.md",
+        "mbt55_pathways": [],
+        "source_herbs": [
+          "芍薬",
+          "白芍"
+        ],
+        "formulas": [],
+        "sho": [
+          "活血",
+          "補血"
+        ],
+        "symptoms": [
+          "月経痛",
+          "筋緊張"
+        ]
+      },
+      {
+        "name": "抗血栓代謝物",
+        "source_file": "09_MBT_漢方代謝ライブラリー/3_代謝物/抗血栓代謝物.md",
+        "mbt55_pathways": [],
+        "source_herbs": [
+          "桃仁",
+          "紅花"
+        ],
+        "formulas": [],
+        "sho": [
+          "活血"
+        ],
+        "symptoms": [
+          "月経痛",
+          "生活習慣病"
+        ]
+      },
+      {
+        "name": "温陽関連代謝物",
+        "source_file": "09_MBT_漢方代謝ライブラリー/3_代謝物/温陽関連代謝物.md",
+        "mbt55_pathways": [],
+        "source_herbs": [
+          "乾姜",
+          "桂皮",
+          "麻黄"
+        ],
+        "formulas": [],
+        "sho": [
+          "温陽"
+        ],
+        "symptoms": [
+          "冷え",
+          "自律神経不安定"
+        ]
+      },
+      {
+        "name": "粘膜修復代謝物",
+        "source_file": "09_MBT_漢方代謝ライブラリー/3_代謝物/粘膜修復代謝物.md",
+        "mbt55_pathways": [],
+        "source_herbs": [
+          "麦門冬",
+          "半夏",
+          "甘草"
+        ],
+        "formulas": [],
+        "sho": [
+          "和解"
+        ],
+        "symptoms": [
+          "咳",
+          "胃腸障害",
+          "咽頭痛"
+        ]
+      },
+      {
+        "name": "血管拡張代謝物",
+        "source_file": "09_MBT_漢方代謝ライブラリー/3_代謝物/血管拡張代謝物.md",
+        "mbt55_pathways": [],
+        "source_herbs": [
+          "桂枝",
+          "桂皮",
+          "川芎",
+          "桃仁",
+          "紅花",
+          "当帰"
+        ],
+        "formulas": [
+          "桂枝茯苓丸",
+          "当帰芍薬散",
+          "桃核承気湯"
+        ],
+        "sho": [
+          "活血"
+        ],
+        "symptoms": [
+          "冷え",
+          "月経痛",
+          "頭痛",
+          "生活習慣病"
+        ]
+      },
+      {
+        "name": "鎮静関連代謝物",
+        "source_file": "09_MBT_漢方代謝ライブラリー/3_代謝物/鎮静関連代謝物.md",
+        "mbt55_pathways": [],
+        "source_herbs": [
+          "竜骨",
+          "牡蛎"
+        ],
+        "formulas": [],
+        "sho": [
+          "和解"
+        ],
+        "symptoms": [
+          "不安",
+          "不眠"
+        ]
+      }
+    ],
+    "mbt55_pathways": [
+      {
+        "name": "ミネラル代謝菌",
+        "source_file": "09_MBT_漢方代謝ライブラリー/4_MBT55代謝経路/ミネラル代謝菌.md",
+        "metabolites": [
+          "ミネラル調整代謝物",
+          "鎮静関連代謝物"
+        ],
+        "herbs": [
+          "竜骨",
+          "牡蛎"
+        ],
+        "formulas": [
+          "桂枝加竜骨牡蛎湯"
+        ],
+        "sho": [
+          "和解",
+          "⑥温陽"
+        ],
+        "symptoms": [
+          "不安",
+          "不眠",
+          "自律神経不安定"
+        ]
+      },
+      {
+        "name": "乳酸菌群",
+        "source_file": "09_MBT_漢方代謝ライブラリー/4_MBT55代謝経路/乳酸菌群.md",
+        "metabolites": [
+          "SCFA",
+          "粘膜修復代謝物",
+          "抗アレルギー代謝物"
+        ],
+        "herbs": [
+          "甘草",
+          "杏仁",
+          "麦門冬",
+          "半夏",
+          "大棗"
+        ],
+        "formulas": [
+          "麻黄湯",
+          "小青竜湯",
+          "麦門冬湯",
+          "六君子湯"
+        ],
+        "sho": [
+          "補気",
+          "和解"
+        ],
+        "symptoms": [
+          "咳",
+          "胃腸障害",
+          "アレルギー"
+        ]
+      },
+      {
+        "name": "多糖分解菌",
+        "source_file": "09_MBT_漢方代謝ライブラリー/4_MBT55代謝経路/多糖分解菌.md",
+        "metabolites": [
+          "SCFA",
+          "粘膜修復代謝物",
+          "利水関連代謝物"
+        ],
+        "herbs": [
+          "人参",
+          "白朮",
+          "茯苓",
+          "大棗",
+          "麦門冬",
+          "半夏",
+          "沢瀉",
+          "猪苓"
+        ],
+        "formulas": [
+          "四君子湯",
+          "六君子湯",
+          "補中益気湯",
+          "麦門冬湯"
+        ],
+        "sho": [
+          "補気",
+          "利水",
+          "和解"
+        ],
+        "symptoms": [
+          "疲労",
+          "胃腸障害",
+          "むくみ"
+        ]
+      },
+      {
+        "name": "放線菌",
+        "source_file": "09_MBT_漢方代謝ライブラリー/4_MBT55代謝経路/放線菌.md",
+        "metabolites": [
+          "抗炎症フラボノイド",
+          "抗ウイルス代謝物"
+        ],
+        "herbs": [
+          "黄芩",
+          "黄連",
+          "連翹",
+          "甘草"
+        ],
+        "formulas": [
+          "半夏瀉心湯",
+          "小柴胡湯",
+          "白虎湯"
+        ],
+        "sho": [
+          "清熱"
+        ],
+        "symptoms": [
+          "感染症",
+          "炎症",
+          "咽頭痛"
+        ]
+      },
+      {
+        "name": "硫黄代謝菌",
+        "source_file": "09_MBT_漢方代謝ライブラリー/4_MBT55代謝経路/硫黄代謝菌.md",
+        "metabolites": [
+          "抗炎症フラボノイド",
+          "温陽関連代謝物"
+        ],
+        "herbs": [
+          "麻黄",
+          "乾姜",
+          "桂皮"
+        ],
+        "formulas": [
+          "麻黄湯",
+          "人参湯"
+        ],
+        "sho": [
+          "清熱",
+          "⑥温陽"
+        ],
+        "symptoms": [
+          "冷え",
+          "感染症"
+        ]
+      },
+      {
+        "name": "糸状菌",
+        "source_file": "09_MBT_漢方代謝ライブラリー/4_MBT55代謝経路/糸状菌.md",
+        "metabolites": [
+          "血管拡張代謝物",
+          "温陽関連代謝物"
+        ],
+        "herbs": [
+          "桂枝",
+          "桂皮",
+          "川芎",
+          "生姜",
+          "乾姜"
+        ],
+        "formulas": [
+          "桂枝湯",
+          "桂枝茯苓丸",
+          "小建中湯"
+        ],
+        "sho": [
+          "活血",
+          "⑥温陽"
+        ],
+        "symptoms": [
+          "冷え",
+          "頭痛",
+          "月経痛"
+        ]
+      },
+      {
+        "name": "芳香族分解菌",
+        "source_file": "09_MBT_漢方代謝ライブラリー/4_MBT55代謝経路/芳香族分解菌.md",
+        "metabolites": [
+          "抗炎症フラボノイド",
+          "血管拡張代謝物",
+          "抗アレルギー代謝物",
+          "抗ウイルス代謝物"
+        ],
+        "herbs": [
+          "麻黄",
+          "桂枝",
+          "桂皮",
+          "柴胡",
+          "黄芩",
+          "黄連",
+          "連翹",
+          "牡丹皮",
+          "川芎",
+          "桃仁",
+          "紅花"
+        ],
+        "formulas": [
+          "麻黄湯",
+          "葛根湯",
+          "小柴胡湯",
+          "桂枝茯苓丸",
+          "桃核承気湯"
+        ],
+        "sho": [
+          "清熱",
+          "活血"
+        ],
+        "symptoms": [
+          "感染症",
+          "アレルギー",
+          "冷え",
+          "月経痛"
+        ]
+      }
+    ],
+    "sho": [
+      {
+        "name": "利水",
+        "source_file": "09_MBT_漢方代謝ライブラリー/5_証（漢方）/利水.md",
+        "metabolites": [
+          "利水関連代謝物",
+          "ミネラル調整代謝物"
+        ],
+        "pathways": [
+          "多糖分解菌",
+          "ミネラル代謝菌"
+        ],
+        "herbs": [
+          "沢瀉",
+          "猪苓",
+          "茯苓"
+        ],
+        "formulas": [
+          "当帰芍薬散",
+          "桂枝茯苓丸"
+        ],
+        "symptoms": [
+          "むくみ",
+          "腎・泌尿器",
+          "生活習慣病"
+        ]
+      },
+      {
+        "name": "和解",
+        "source_file": "09_MBT_漢方代謝ライブラリー/5_証（漢方）/和解.md",
+        "metabolites": [
+          "粘膜修復代謝物",
+          "上皮保護代謝物",
+          "SCFA"
+        ],
+        "pathways": [],
+        "herbs": [],
+        "formulas": [
+          "六君子湯",
+          "半夏瀉心湯",
+          "麦門冬湯"
+        ],
+        "symptoms": [
+          "胃腸障害",
+          "咽頭痛",
+          "咳",
+          "不安",
+          "不眠"
+        ]
+      },
+      {
+        "name": "活血",
+        "source_file": "09_MBT_漢方代謝ライブラリー/5_証（漢方）/活血.md",
+        "metabolites": [
+          "血管拡張代謝物",
+          "抗血栓代謝物",
+          "抗痙攣代謝物"
+        ],
+        "pathways": [
+          "芳香族分解菌",
+          "糸状菌"
+        ],
+        "herbs": [
+          "桂枝",
+          "桂皮",
+          "川芎",
+          "桃仁",
+          "紅花",
+          "当帰"
+        ],
+        "formulas": [
+          "桂枝茯苓丸",
+          "当帰芍薬散",
+          "桃核承気湯"
+        ],
+        "symptoms": [
+          "冷え",
+          "月経痛",
+          "頭痛",
+          "生活習慣病"
+        ]
+      },
+      {
+        "name": "清熱",
+        "source_file": "09_MBT_漢方代謝ライブラリー/5_証（漢方）/清熱.md",
+        "metabolites": [
+          "抗炎症フラボノイド",
+          "抗ウイルス代謝物",
+          "抗アレルギー代謝物"
+        ],
+        "pathways": [
+          "芳香族分解菌",
+          "放線菌"
+        ],
+        "herbs": [
+          "麻黄",
+          "黄芩",
+          "黄連",
+          "連翹",
+          "牡丹皮"
+        ],
+        "formulas": [
+          "麻黄湯",
+          "小柴胡湯",
+          "半夏瀉心湯",
+          "白虎湯"
+        ],
+        "symptoms": [
+          "感染症",
+          "アレルギー",
+          "咽頭痛",
+          "生活習慣病"
+        ]
+      },
+      {
+        "name": "温陽",
+        "source_file": "09_MBT_漢方代謝ライブラリー/5_証（漢方）/温陽.md",
+        "metabolites": [
+          "温陽関連代謝物",
+          "血管拡張代謝物"
+        ],
+        "pathways": [
+          "芳香族分解菌",
+          "硫黄代謝菌"
+        ],
+        "herbs": [
+          "乾姜",
+          "桂皮",
+          "麻黄"
+        ],
+        "formulas": [
+          "人参湯",
+          "小建中湯",
+          "桂枝湯"
+        ],
+        "symptoms": [
+          "冷え",
+          "自律神経不安定",
+          "疲労"
+        ]
+      },
+      {
+        "name": "補気",
+        "source_file": "09_MBT_漢方代謝ライブラリー/5_証（漢方）/補気.md",
+        "metabolites": [
+          "SCFA",
+          "代謝促進代謝物"
+        ],
+        "pathways": [
+          "多糖分解菌",
+          "乳酸菌群"
+        ],
+        "herbs": [
+          "人参",
+          "白朮",
+          "茯苓",
+          "大棗",
+          "甘草"
+        ],
+        "formulas": [
+          "四君子湯",
+          "六君子湯",
+          "補中益気湯",
+          "人参湯"
+        ],
+        "symptoms": [
+          "疲労",
+          "胃腸障害",
+          "母子健康",
+          "生活習慣病"
+        ]
+      },
+      {
+        "name": "補血",
+        "source_file": "09_MBT_漢方代謝ライブラリー/5_証（漢方）/補血.md",
+        "metabolites": [
+          "抗痙攣代謝物",
+          "血管拡張代謝物"
+        ],
+        "pathways": [
+          "芳香族分解菌",
+          "乳酸菌群"
+        ],
+        "herbs": [
+          "当帰",
+          "芍薬",
+          "白芍",
+          "川芎"
+        ],
+        "formulas": [
+          "当帰芍薬散",
+          "桂枝茯苓丸"
+        ],
+        "symptoms": [
+          "月経痛",
+          "貧血",
+          "冷え"
+        ]
+      }
+    ],
+    "symptoms": [
+      {
+        "name": "むくみ",
+        "source_file": "09_MBT_漢方代謝ライブラリー/6_症状・社会的適応/むくみ.md",
+        "sho": [
+          "利水"
+        ],
+        "metabolites": [
+          "利水関連代謝物",
+          "ミネラル調整代謝物"
+        ],
+        "pathways": [
+          "多糖分解菌",
+          "ミネラル代謝菌"
+        ],
+        "herbs": [
+          "沢瀉",
+          "猪苓",
+          "茯苓"
+        ],
+        "formulas": [
+          "当帰芍薬散"
+        ]
+      },
+      {
+        "name": "アレルギー",
+        "source_file": "09_MBT_漢方代謝ライブラリー/6_症状・社会的適応/アレルギー.md",
+        "sho": [
+          "清熱"
+        ],
+        "metabolites": [
+          "抗アレルギー代謝物",
+          "抗炎症フラボノイド"
+        ],
+        "pathways": [
+          "芳香族分解菌",
+          "乳酸菌群"
+        ],
+        "herbs": [
+          "五味子",
+          "麻黄",
+          "連翹"
+        ],
+        "formulas": [
+          "小青竜湯",
+          "麻黄湯"
+        ]
+      },
+      {
+        "name": "不安",
+        "source_file": "09_MBT_漢方代謝ライブラリー/6_症状・社会的適応/不安.md",
+        "sho": [
+          "和解",
+          "温陽"
+        ],
+        "metabolites": [],
+        "pathways": [
+          "ミネラル代謝菌"
+        ],
+        "herbs": [],
+        "formulas": []
+      },
+      {
+        "name": "不眠",
+        "source_file": "09_MBT_漢方代謝ライブラリー/6_症状・社会的適応/不眠.md",
+        "sho": [
+          "和解",
+          "温陽"
+        ],
+        "metabolites": [
+          "ミネラル調整代謝物",
+          "温陽関連代謝物"
+        ],
+        "pathways": [
+          "ミネラル代謝菌",
+          "硫黄代謝菌"
+        ],
+        "herbs": [],
+        "formulas": [
+          "桂枝加竜骨牡蛎湯",
+          "小建中湯"
+        ]
+      },
+      {
+        "name": "冷え",
+        "source_file": "09_MBT_漢方代謝ライブラリー/6_症状・社会的適応/冷え.md",
+        "sho": [
+          "⑥温陽",
+          "活血"
+        ],
+        "metabolites": [
+          "温陽関連代謝物",
+          "血管拡張代謝物"
+        ],
+        "pathways": [
+          "芳香族分解菌",
+          "硫黄代謝菌",
+          "糸状菌"
+        ],
+        "herbs": [
+          "乾姜",
+          "桂皮",
+          "桂枝",
+          "麻黄"
+        ],
+        "formulas": [
+          "桂枝湯",
+          "小建中湯",
+          "人参湯",
+          "桂枝茯苓丸"
+        ]
+      },
+      {
+        "name": "咳",
+        "source_file": "09_MBT_漢方代謝ライブラリー/6_症状・社会的適応/咳.md",
+        "sho": [
+          "清熱",
+          "和解"
+        ],
+        "metabolites": [
+          "粘膜修復代謝物",
+          "抗炎症フラボノイド"
+        ],
+        "pathways": [
+          "乳酸菌群",
+          "芳香族分解菌"
+        ],
+        "herbs": [],
+        "formulas": [
+          "麻黄湯",
+          "小青竜湯",
+          "麦門冬湯"
+        ]
+      },
+      {
+        "name": "咳",
+        "source_file": "09_MBT_漢方代謝ライブラリー/6_症状・社会的適応/咳.md.md",
+        "sho": [
+          "清熱",
+          "和解"
+        ],
+        "metabolites": [
+          "粘膜修復代謝物",
+          "抗炎症フラボノイド"
+        ],
+        "pathways": [
+          "乳酸菌群",
+          "芳香族分解菌"
+        ],
+        "herbs": [
+          "麻黄",
+          "杏仁",
+          "麦門冬",
+          "半夏"
+        ],
+        "formulas": [
+          "麻黄湯",
+          "小青竜湯",
+          "麦門冬湯"
+        ]
+      },
+      {
+        "name": "咽頭痛",
+        "source_file": "09_MBT_漢方代謝ライブラリー/6_症状・社会的適応/咽頭痛.md",
+        "sho": [
+          "清熱",
+          "和解"
+        ],
+        "metabolites": [
+          "抗炎症フラボノイド",
+          "粘膜修復代謝物"
+        ],
+        "pathways": [
+          "芳香族分解菌",
+          "乳酸菌群"
+        ],
+        "herbs": [],
+        "formulas": [
+          "麻黄湯",
+          "小青竜湯",
+          "麦門冬湯"
+        ]
+      },
+      {
+        "name": "喘息",
+        "source_file": "09_MBT_漢方代謝ライブラリー/6_症状・社会的適応/喘息.md",
+        "sho": [
+          "清熱"
+        ],
+        "metabolites": [
+          "抗アレルギー代謝物",
+          "抗炎症フラボノイド"
+        ],
+        "pathways": [
+          "芳香族分解菌",
+          "乳酸菌群"
+        ],
+        "herbs": [
+          "麻黄",
+          "杏仁",
+          "五味子"
+        ],
+        "formulas": [
+          "麻黄湯",
+          "小青竜湯"
+        ]
+      },
+      {
+        "name": "感染症",
+        "source_file": "09_MBT_漢方代謝ライブラリー/6_症状・社会的適応/感染症.md",
+        "sho": [
+          "清熱"
+        ],
+        "metabolites": [
+          "抗炎症フラボノイド",
+          "抗ウイルス代謝物"
+        ],
+        "pathways": [
+          "芳香族分解菌",
+          "放線菌"
+        ],
+        "herbs": [
+          "麻黄",
+          "黄芩",
+          "黄連",
+          "連翹",
+          "石膏"
+        ],
+        "formulas": [
+          "麻黄湯",
+          "小柴胡湯",
+          "半夏瀉心湯",
+          "白虎湯"
+        ]
+      },
+      {
+        "name": "月経痛",
+        "source_file": "09_MBT_漢方代謝ライブラリー/6_症状・社会的適応/月経痛.md",
+        "sho": [
+          "活血",
+          "補血"
+        ],
+        "metabolites": [
+          "血管拡張代謝物",
+          "抗痙攣代謝物"
+        ],
+        "pathways": [
+          "芳香族分解菌",
+          "乳酸菌群"
+        ],
+        "herbs": [
+          "芍薬",
+          "白芍",
+          "川芎",
+          "桃仁",
+          "紅花"
+        ],
+        "formulas": [
+          "桂枝茯苓丸",
+          "当帰芍薬散",
+          "桃核承気湯"
+        ]
+      },
+      {
+        "name": "母子健康",
+        "source_file": "09_MBT_漢方代謝ライブラリー/6_症状・社会的適応/母子健康.md",
+        "sho": [
+          "補気"
+        ],
+        "metabolites": [
+          "SCFA"
+        ],
+        "pathways": [
+          "多糖分解菌",
+          "乳酸菌群"
+        ],
+        "herbs": [
+          "人参",
+          "白朮",
+          "大棗"
+        ],
+        "formulas": [
+          "四君子湯",
+          "補中益気湯"
+        ]
+      },
+      {
+        "name": "生活習慣病",
+        "source_file": "09_MBT_漢方代謝ライブラリー/6_症状・社会的適応/生活習慣病.md",
+        "sho": [
+          "補気",
+          "活血",
+          "清熱",
+          "利水"
+        ],
+        "metabolites": [
+          "SCFA",
+          "抗炎症フラボノイド",
+          "血管拡張代謝物",
+          "利水関連代謝物"
+        ],
+        "pathways": [
+          "多糖分解菌",
+          "芳香族分解菌",
+          "放線菌"
+        ],
+        "herbs": [
+          "人参",
+          "桂皮",
+          "黄芩",
+          "沢瀉"
+        ],
+        "formulas": [
+          "補中益気湯",
+          "桂枝茯苓丸",
+          "小柴胡湯"
+        ]
+      },
+      {
+        "name": "疲労",
+        "source_file": "09_MBT_漢方代謝ライブラリー/6_症状・社会的適応/疲労.md",
+        "sho": [
+          "補気",
+          "⑥温陽"
+        ],
+        "metabolites": [
+          "SCFA",
+          "代謝促進代謝物"
+        ],
+        "pathways": [
+          "多糖分解菌",
+          "乳酸菌群"
+        ],
+        "herbs": [
+          "人参",
+          "白朮",
+          "茯苓",
+          "大棗",
+          "甘草"
+        ],
+        "formulas": [
+          "四君子湯",
+          "六君子湯",
+          "補中益気湯",
+          "人参湯"
+        ]
+      },
+      {
+        "name": "胃腸障害",
+        "source_file": "09_MBT_漢方代謝ライブラリー/6_症状・社会的適応/胃腸障害.md",
+        "sho": [
+          "和解",
+          "補気"
+        ],
+        "metabolites": [
+          "粘膜修復代謝物",
+          "SCFA"
+        ],
+        "pathways": [
+          "多糖分解菌",
+          "乳酸菌群"
+        ],
+        "herbs": [
+          "半夏",
+          "甘草",
+          "麦門冬",
+          "人参"
+        ],
+        "formulas": [
+          "六君子湯",
+          "半夏瀉心湯",
+          "麦門冬湯"
+        ]
+      },
+      {
+        "name": "腎・泌尿器の不調",
+        "source_file": "09_MBT_漢方代謝ライブラリー/6_症状・社会的適応/腎・泌尿器.md",
+        "sho": [
+          "利水"
+        ],
+        "metabolites": [
+          "利水関連代謝物"
+        ],
+        "pathways": [
+          "多糖分解菌"
+        ],
+        "herbs": [
+          "沢瀉",
+          "猪苓",
+          "茯苓"
+        ],
+        "formulas": [
+          "当帰芍薬散"
+        ]
+      },
+      {
+        "name": "自律神経不安定",
+        "source_file": "09_MBT_漢方代謝ライブラリー/6_症状・社会的適応/自律神経不安定.md",
+        "sho": [
+          "⑥温陽",
+          "和解"
+        ],
+        "metabolites": [
+          "温陽関連代謝物",
+          "ミネラル調整代謝物"
+        ],
+        "pathways": [
+          "硫黄代謝菌",
+          "ミネラル代謝菌"
+        ],
+        "herbs": [
+          "竜骨",
+          "牡蛎",
+          "乾姜"
+        ],
+        "formulas": [
+          "桂枝加竜骨牡蛎湯",
+          "小建中湯"
+        ]
+      },
+      {
+        "name": "花粉症",
+        "source_file": "09_MBT_漢方代謝ライブラリー/6_症状・社会的適応/花粉症.md",
+        "sho": [
+          "清熱"
+        ],
+        "metabolites": [
+          "抗アレルギー代謝物"
+        ],
+        "pathways": [
+          "芳香族分解菌",
+          "乳酸菌群"
+        ],
+        "herbs": [],
+        "formulas": [
+          "小青竜湯",
+          "麻黄湯"
+        ]
+      },
+      {
+        "name": "頭痛",
+        "source_file": "09_MBT_漢方代謝ライブラリー/6_症状・社会的適応/頭痛.md",
+        "sho": [
+          "活血",
+          "温陽"
+        ],
+        "metabolites": [
+          "血管拡張代謝物",
+          "温陽関連代謝物"
+        ],
+        "pathways": [
+          "芳香族分解菌",
+          "糸状菌"
+        ],
+        "herbs": [],
+        "formulas": [
+          "葛根湯",
+          "桂枝湯",
+          "桂枝茯苓丸"
+        ]
+      }
+    ]
+  },
+  "excel_sources": [
+    {
+      "path": "09_MBT_漢方代謝ライブラリー/MBT漢方代謝ライブラリー.xlsx",
+      "sheets": [
+        {
+          "sheet": "Sheet1",
+          "rows": 16,
+          "columns": 3,
+          "sample_rows": [
+            [
+              "方剤ID,方剤名,主要生薬,MBT55優先菌群,期待される生成代謝物,ターゲット疾患"
+            ],
+            [
+              "F001,葛根湯,葛根・麻黄,乳酸菌群・放線菌,活性型プエラリン/エフェドリン誘導体,感冒初期・筋肉痛"
+            ],
+            [
+              "F012,十全大補湯,地黄・人参,鉄還元菌・放線菌,コンパウンドK/キレート鉄,貧血・重度栄養不全"
+            ]
+          ]
+        },
+        {
+          "sheet": "Sheet2",
+          "rows": 11,
+          "columns": 1,
+          "sample_rows": [
+            [
+              "方剤ID,方剤名,主要生薬,MBT55優先菌群,期待される生成代謝物,ターゲット疾患"
+            ],
+            [
+              "F001,葛根湯,葛根・麻黄,乳酸菌群・放線菌,活性型プエラリン/エフェドリン誘導体,感冒初期・筋肉痛"
+            ],
+            [
+              "F012,十全大補湯,地黄・人参,鉄還元菌・放線菌,コンパウンドK/キレート鉄,貧血・重度栄養不全"
+            ]
+          ]
+        },
+        {
+          "sheet": "1-80",
+          "rows": 81,
+          "columns": 1,
+          "sample_rows": [
+            [
+              "ID,方剤名,主要生薬構成,MBT55優先変換パスウェイ,主要生成メタボライト,期待される臨床的メリット,AGRIX連携重要因子"
+            ],
+            [
+              "F001,安中散,桂皮/茴香/延胡索,芳香族分解菌・放線菌,活性型精油/プロトピン,胃粘膜保護・鎮痛,Mn/Zn"
+            ],
+            [
+              "F002,胃苓湯,蒼朮/厚朴/沢瀉,セルロース分解菌・マンガン還元菌,短鎖脂肪酸/バイオミネラル,急性下痢・吸水促進,Mn/Mg"
+            ]
+          ]
+        },
+        {
+          "sheet": "81-130",
+          "rows": 51,
+          "columns": 1,
+          "sample_rows": [
+            [
+              "ID,方剤名,主要生薬構成,MBT55優先変換パスウェイ,主要生成メタボライト,期待される臨床的メリット,AGRIX連携重要因子"
+            ],
+            [
+              "F081,大黄甘草湯,大黄/甘草,脂質分解菌・乳酸菌,活性型アントラキノン,即効性のある便秘解消,Mg/Ca"
+            ],
+            [
+              "F082,大黄牡丹皮湯,大黄/牡丹皮/桃仁,脂質分解菌・放線菌,微小循環改善成分,下腹部炎症・月経困難,Mg/Cu"
+            ]
+          ]
+        },
+        {
+          "sheet": "131-151",
+          "rows": 23,
+          "columns": 1,
+          "sample_rows": [
+            [
+              "ID,方剤名,主要生薬構成,MBT55優先変換パスウェイ,主要生成メタボライト,期待される臨床的メリット,AGRIX連携重要因子"
+            ],
+            [
+              "F131,麻黄湯,麻黄/杏仁/桂枝,放線菌・芳香族分解菌,高活性エフェドリン/桂皮酸,高熱・インフルエンザ初期,Mn/K"
+            ],
+            [
+              "F132,麻黄附子細辛湯,麻黄/附子/細辛,放線菌・酵母,末梢温熱活性アコニチン,高齢者の感冒・極度の冷え,Mn/Fe"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "path": "09_MBT_漢方代謝ライブラリー/漢方代謝ライブラリー１.xlsx",
+      "sheets": [
+        {
+          "sheet": "Sheet1",
+          "rows": 16,
+          "columns": 3,
+          "sample_rows": [
+            [
+              "方剤ID,方剤名,主要生薬,MBT55優先菌群,期待される生成代謝物,ターゲット疾患"
+            ],
+            [
+              "F001,葛根湯,葛根・麻黄,乳酸菌群・放線菌,活性型プエラリン/エフェドリン誘導体,感冒初期・筋肉痛"
+            ],
+            [
+              "F012,十全大補湯,地黄・人参,鉄還元菌・放線菌,コンパウンドK/キレート鉄,貧血・重度栄養不全"
+            ]
+          ]
+        },
+        {
+          "sheet": "Sheet2",
+          "rows": 11,
+          "columns": 1,
+          "sample_rows": [
+            [
+              "方剤ID,方剤名,主要生薬,MBT55優先菌群,期待される生成代謝物,ターゲット疾患"
+            ],
+            [
+              "F001,葛根湯,葛根・麻黄,乳酸菌群・放線菌,活性型プエラリン/エフェドリン誘導体,感冒初期・筋肉痛"
+            ],
+            [
+              "F012,十全大補湯,地黄・人参,鉄還元菌・放線菌,コンパウンドK/キレート鉄,貧血・重度栄養不全"
+            ]
+          ]
+        },
+        {
+          "sheet": "Sheet3",
+          "rows": 1,
+          "columns": 1,
+          "sample_rows": []
+        }
+      ]
+    }
+  ],
+  "structural_findings": [
+    "Dedicated herb folder contains 40 markdown files: 38 herb entries + 1 template + 1 additional file-level artifact to be classified.",
+    "Dedicated formula folder contains 19 markdown formula files, while top-page documentation describes 20 formulas; this is a reconciliation target, not a resolved count.",
+    "Dedicated symptom folder contains 19 markdown files including both 咳.md and 咳.md.md; duplicate/alias status is unresolved.",
+    "Top-level documentation describes a 6-layer model: 生薬38 → MBT55代謝経路7 → 代謝物14 → 薬理作用 → 証6分類 → 症状・社会的適応12.",
+    "The actual Sho folder contains 7 entries because 和解 is present in addition to the six categories stated in some overview text.",
+    "Excel source contains a 151-formula ID range split into 1-80, 81-130, and 131-151; this is a distinct and materially larger asset than the 19-file Markdown formula set.",
+    "Two Excel files are present and appear to contain duplicated/overlapping initial datasets; reconciliation is pending.",
+    "The library contains explicit HealthBook UI, MBT Probiotics connection, PBPE integration, simulation, research strategy, and Mermaid network artifacts."
+  ],
+  "governance_rule": "Do not merge, delete, correct, or promote any source to canonical status during this inventory phase.",
+  "next_reconciliation_targets": [
+    "MBT漢方代謝ライブラリー.xlsx ↔ 漢方代謝ライブラリー１.xlsx",
+    "Markdown 19-formula set ↔ Excel 151-formula dataset",
+    "Overview claims 20 formulas ↔ actual formula assets",
+    "Overview claims 12 symptoms ↔ actual symptom assets",
+    "6 Sho categories ↔ actual 7 Sho assets",
+    "咳.md ↔ 咳.md.md duplicate/alias",
+    "38-herb mapping ↔ formula composition and network diagrams",
+    "MBT55 pathway claims ↔ MIOS Essential Microbial Functions and Evidence Registry",
+    "Library metabolite clusters ↔ MIOS canonical metabolite model",
+    "All MBT Kampo claims ↔ evidence/provenance registry"
+  ]
+}

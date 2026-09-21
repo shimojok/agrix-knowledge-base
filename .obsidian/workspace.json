@@ -1,0 +1,339 @@
+{
+  "main": {
+    "id": "cfe276bd30742d15",
+    "type": "split",
+    "children": [
+      {
+        "id": "de607950dc81e85e",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "bc60661f8568e155",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "dailynote/2026-09-18.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "2026-09-18"
+            }
+          },
+          {
+            "id": "7b59c2ad19aaad7b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "dailynote/2026-09-08.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "2026-09-08"
+            }
+          },
+          {
+            "id": "aafd5b7e146727e7",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "04_AGRIX/kb005. BioNexus Python Hypercycle Scheme の設計思想.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "kb005. BioNexus Python Hypercycle Scheme の設計思想"
+            }
+          },
+          {
+            "id": "6efbff6c19247d4e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "2026-09-21.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "2026-09-21"
+            }
+          },
+          {
+            "id": "ecca89226e6f0af8",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "GitHubプッシュ方法.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "GitHubプッシュ方法"
+            }
+          }
+        ],
+        "currentTab": 4
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "93a872d67de40c4d",
+    "type": "split",
+    "children": [
+      {
+        "id": "05ae2f640005dbdb",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "3587d2b28c6182b8",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-folder-closed",
+              "title": "ファイルエクスプローラ"
+            }
+          },
+          {
+            "id": "4931f3ef972ce874",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "検索"
+            }
+          },
+          {
+            "id": "5777a9af03dab834",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-ghost",
+              "title": "bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 336.16668701171875
+  },
+  "right": {
+    "id": "72176eba34ca887b",
+    "type": "split",
+    "children": [
+      {
+        "id": "edb3b8e51b5245b1",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "95fb9898a5b309e4",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "無題のファイル.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "バックリンク"
+            }
+          },
+          {
+            "id": "09e6b0552af0aa50",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "無題のファイル.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "アウトゴーイングリンク"
+            }
+          },
+          {
+            "id": "109fa52dbc2e6383",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "タグ"
+            }
+          },
+          {
+            "id": "8dd5834d93c9c163",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "2026-09-08.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "アウトライン"
+            }
+          },
+          {
+            "id": "2ed274fbd450ea91",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {},
+              "icon": "calendar-with-checkmark",
+              "title": "Calendar"
+            }
+          }
+        ],
+        "currentTab": 4
+      }
+    ],
+    "direction": "horizontal",
+    "width": 302.83331298828125
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "templater-obsidian:Templater": false,
+      "daily-notes:今日のデイリーノートを開く": false,
+      "bases:新規ベースを作成": false
+    }
+  },
+  "active": "ecca89226e6f0af8",
+  "lastOpenFiles": [
+    "GitHubプッシュ方法.md",
+    "2026-09-21.md",
+    "dailynote/2026-09-18.md",
+    "02_Biological_Systems/00. MBT-Biosecurity_Copilot Prompt.md",
+    "02_Biological_Systems/① MBT-Biosecurity-Engine ↔ PBPE-Marketplace 移行表（完全版）.md",
+    "dailynote/2024-07-09.md",
+    "dailynote/2024-07-08.md",
+    "dailynote/2024-07-03.md",
+    "dailynote/2024-07-02.md",
+    "dailynote/2024-07-01.md",
+    "dailynote/2024-05-08.md",
+    "dailynote/2024-05-07.md",
+    "dailynote/2024-04-29.md",
+    "dailynote/2024-04-28.md",
+    "dailynote/2024-04-26.md",
+    "dailynote/2024-04-24.md",
+    "dailynote/2024-04-23.md",
+    "dailynote/2024-04-21.md",
+    "01_Planetary_Problems/AGRIXプロジェクトのナイロビにおける経済効果シミュレーション 計算式修正版.md",
+    "dailynote/2024-04-17.md",
+    "dailynote/2024-04-10.md",
+    "dailynote/2024-04-09.md",
+    "dailynote/2024-04-07.md",
+    "dailynote/2024-04-03.md",
+    "dailynote/2024-03-30.md",
+    "dailynote/2024-03-20.md",
+    "03_MBT55/mbt 24h.png",
+    "agrix-knowledge-base-tree.txt",
+    "07_HealthBook/healthbook_results.json",
+    "04_AGRIX/agrix-knowledge-base-tree.txt",
+    "data/agrix_knowledge_base.json",
+    "data/phytochemicals_diet.json",
+    "data/hamada_137_risk_matrix.json",
+    "data",
+    "22_Claude/repository_architecture_map.png",
+    "22_Claude/mbt55_simulation_output.png",
+    "bionexus-engine-tree.txt",
+    "新しいフォルダー",
+    "slides/MBT55 From Microorganisms to Civilliation's OS.pdf",
+    "TVS/TVS作業中ホルダー/江陰プロジェクト/0105訪中/航空券/澤辺/MyBookingVoucherDirectAction.do_files/19650map_e (1).gif",
+    "ATCM/J-SUP/J-SUP保管フォルダ/IT関連/J-SUP画面/日本初のサプリメント･ギャラリー「グリーン･ボトル」.files/back_1.gif",
+    "ATCM/J-SUP/J-SUP保管フォルダ/IT関連/J-SUP画面/日本初のサプリメント･ギャラリー「グリーン･ボトル」.files/top_1.gif",
+    "ATCM/J-SUP/J-SUP保管フォルダ/IT関連/J-SUP画面/日本初のサプリメント･ギャラリー「グリーン･ボトル」.files/dot_green.gif",
+    "BioNexus Holdings/agrix-knowledge-base/00_inbox/whatsapp-qrcode.jpeg",
+    "ATCM/J-SUP/J-SUP保管フォルダ/IT関連/J-SUP画面/日本初のサプリメント･ギャラリー「グリーン･ボトル」.files/btn_3.gif",
+    "TVS/TVS作業中ホルダー/江陰プロジェクト/0105訪中/航空券/南村/MyBookingVoucherDirectAction.do_files/china1_1.gif"
+  ]
+}

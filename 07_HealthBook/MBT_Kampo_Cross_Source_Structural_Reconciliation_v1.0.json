@@ -1,0 +1,140 @@
+{
+  "document": "MBT Kampo Cross-Source Structural Reconciliation v1.0",
+  "phase": "Phase 2-E.2-A.6-C",
+  "status": "PRELIMINARY / EXACT kampo_metabolic_library.json COMPARISON BLOCKED",
+  "reason": "The exact kampo_metabolic_library.json file is not present in the currently accessible active file set. Prior source material contains its schema/examples, but not the complete canonical JSON dataset.",
+  "source_A": "MBT_Kampo_Full_Inventory_v1.0.json",
+  "source_B": "HealthBook_MIOS_Migration_Package_v1.0(1).json and prior MBT JSON schema material",
+  "reconciliation_rows": [
+    {
+      "id": "REC-H01",
+      "domain": "Herb",
+      "source_A": "MBT Kampo ZIP Inventory",
+      "source_B": "kampo_metabolic_library.json",
+      "status": "BLOCKED_EXACT_JSON",
+      "finding": "Inventory contains 39 dedicated herb candidates; overview claims 38. Exact B-side entity count/content is not currently available in the active file set.",
+      "decision": "Do not canonicalize count; resolve herb identity/alias first."
+    },
+    {
+      "id": "REC-H02",
+      "domain": "Herb identity",
+      "source_A": "MBT Kampo ZIP Inventory",
+      "source_B": "prior MBT JSON schema/example",
+      "status": "CONFLICT_CANDIDATE",
+      "finding": "芍薬 and 白芍 appear as distinct source assets; prior JSON example also treats herb_byakujutsu etc. as distinct IDs but does not establish canonical identity rules.",
+      "decision": "Create Herb Identity Resolution rule before merge."
+    },
+    {
+      "id": "REC-F01",
+      "domain": "Formula",
+      "source_A": "MBT Kampo ZIP Inventory",
+      "source_B": "kampo_metabolic_library.json",
+      "status": "BLOCKED_EXACT_JSON",
+      "finding": "19 individual Markdown formula assets; overview states 20; Excel contains F001-F151 range.",
+      "decision": "Treat Markdown, stated count, and Excel as separate source populations until exact JSON is supplied."
+    },
+    {
+      "id": "REC-F02",
+      "domain": "Formula dataset",
+      "source_A": "MBT漢方代謝ライブラリー.xlsx",
+      "source_B": "漢方代謝ライブラリー１.xlsx",
+      "status": "RECONCILIATION_REQUIRED",
+      "finding": "Two Excel assets overlap in F001/F012 examples but have materially different scope: one contains 151-ID sheets, the other is a small overlapping dataset.",
+      "decision": "Excel lineage/version comparison required before canonical formula registry."
+    },
+    {
+      "id": "REC-S01",
+      "domain": "Sho",
+      "source_A": "MBT Kampo ZIP Inventory",
+      "source_B": "prior MBT JSON schema/example",
+      "status": "STRUCTURAL_CONFLICT",
+      "finding": "ZIP contains 7 Sho assets including 和解; prior JSON example lists six primary Sho values in its HealthBook UI and comments, while some data includes 和解.",
+      "decision": "Canonical Sho vocabulary must explicitly decide whether 和解 is a first-class class."
+    },
+    {
+      "id": "REC-Y01",
+      "domain": "Symptom",
+      "source_A": "MBT Kampo ZIP Inventory",
+      "source_B": "prior MBT JSON schema/example",
+      "status": "STRUCTURAL_CONFLICT",
+      "finding": "ZIP has 19 symptom files; prior JSON example lists a larger conceptual symptom set than the overview's 12-category claim.",
+      "decision": "Use actual source entities, then distinguish category taxonomy from individual symptoms."
+    },
+    {
+      "id": "REC-D01",
+      "domain": "Duplicate",
+      "source_A": "MBT Kampo ZIP Inventory",
+      "source_B": "prior MBT JSON schema/example",
+      "status": "DUPLICATE_CANDIDATE",
+      "finding": "咳.md and 咳.md.md coexist.",
+      "decision": "Preserve both provenance records; resolve identity after content comparison."
+    },
+    {
+      "id": "REC-M01",
+      "domain": "Metabolite",
+      "source_A": "14 metabolite-cluster files",
+      "source_B": "prior MBT JSON schema/example",
+      "status": "STRUCTURALLY_ALIGNED",
+      "finding": "Both use MetaboliteCluster as a first-class object; exact member lists and semantics require content-level reconciliation.",
+      "decision": "Retain cluster as source concept; map later to MIOS canonical Metabolite/FunctionalCluster ontology."
+    },
+    {
+      "id": "REC-P01",
+      "domain": "MBT55 pathway",
+      "source_A": "7 pathway files",
+      "source_B": "prior MBT JSON schema/example",
+      "status": "STRUCTURALLY_ALIGNED",
+      "finding": "Both model MBT55 paths and their relations to metabolites, herbs, Sho and symptoms.",
+      "decision": "Reconcile terminology to MIOS Essential Microbial Functions; do not equate pathway labels with validated microbial taxa."
+    },
+    {
+      "id": "REC-N01",
+      "domain": "NetworkMap",
+      "source_A": "19 Mermaid/network assets",
+      "source_B": "prior MBT JSON schema/example",
+      "status": "STRUCTURALLY_ALIGNED",
+      "finding": "Prior JSON explicitly defines network_maps with Mermaid content and formula linkage.",
+      "decision": "Treat diagrams as derived knowledge/provenance assets, not independent canonical facts."
+    },
+    {
+      "id": "REC-E01",
+      "domain": "Evidence",
+      "source_A": "MBT Kampo ZIP content",
+      "source_B": "MIOS Evidence Governance",
+      "status": "GOVERNANCE_REQUIRED",
+      "finding": "Source library contains mechanistic/clinical language, but the inventory phase does not establish external validation.",
+      "decision": "Every claim must enter Evidence Registry with provenance and evidence status before clinical use."
+    },
+    {
+      "id": "REC-KG01",
+      "domain": "MIOS KG",
+      "source_A": "MBT Kampo source model",
+      "source_B": "MIOS migration architecture",
+      "status": "COMPATIBLE_WITH_MIGRATION",
+      "finding": "Kampo Formula, Metabolite, Microbial Function, Symptom, Food/Phytochemical and Evidence are explicit MIOS KG node classes; edge model supports transforms/produces/signals/evidence.",
+      "decision": "Kampo asset can become a governed MIOS Knowledge Asset after reconciliation."
+    }
+  ],
+  "status_counts": {
+    "BLOCKED_EXACT_JSON": 2,
+    "CONFLICT_CANDIDATE": 1,
+    "RECONCILIATION_REQUIRED": 1,
+    "STRUCTURAL_CONFLICT": 2,
+    "DUPLICATE_CANDIDATE": 1,
+    "STRUCTURALLY_ALIGNED": 3,
+    "GOVERNANCE_REQUIRED": 1,
+    "COMPATIBLE_WITH_MIGRATION": 1
+  },
+  "critical_findings": [
+    "39 herb candidates vs stated 38.",
+    "19 Markdown formula assets vs stated 20 vs Excel F001-F151 population.",
+    "7 Sho assets vs documentation/UI examples centered on 6.",
+    "19 symptom assets vs smaller overview category claims.",
+    "咳.md / 咳.md.md duplicate candidate.",
+    "芍薬 / 白芍 identity-resolution candidate.",
+    "Two Excel datasets have overlapping examples but different scope.",
+    "MBT55 pathway labels are structurally compatible with MIOS Microbial Function modeling, but are not themselves evidence of validated microbial taxa or causal efficacy.",
+    "Exact 293/294 issue cannot be resolved from this source set because the complete kampo_metabolic_library.json dataset is unavailable."
+  ],
+  "next_required_input": "Upload or expose the complete kampo_metabolic_library.json to execute entity-level bidirectional reconciliation."
+}

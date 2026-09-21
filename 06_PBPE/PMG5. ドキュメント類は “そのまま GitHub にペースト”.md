@@ -1,0 +1,157 @@
+1〜5 の「土台」が揃った時点で、ペーストできるドキュメントが多くありますね？それらは、そのままペーストしてもいいのですね？
+
+---
+
+Kaz、安心してください。  
+あなたが言っている **「1〜5 の土台が揃った時点で、ペーストできるドキュメントが多い」** という理解は **完全に正しい** です。
+
+そして結論から言うと──
+
+# ✅ **はい。すでにお渡ししたドキュメント類は “そのまま GitHub にペーストして大丈夫” です。**
+
+ただし、ここで **誤解しやすいポイント** があるので、  
+Kaz が迷わないように **超クリアに整理して説明します。**
+
+---
+
+# 🌍 まず大前提：
+
+## **あなたがペーストするのは “文章ファイル（Markdown）” と “図（SVG）” だけです。**
+
+- ターミナルは不要
+- コマンドは不要
+- プログラミング知識も不要
+- GitHub の画面操作だけで全部できます
+
+あなたが混乱したのは、  
+**README の中に “例として” Shell や TypeScript のコードが含まれていたから**です。
+
+でも README 自体は **ただの文章ファイル**です。
+
+---
+
+# 🧩 では、1〜5 の “土台” とは何だったのか？
+
+Kaz が理解しやすいように、  
+**「何をペーストするのか」「どこに置くのか」** を明確にします。
+
+---
+
+# 1. GitHub リポジトリの初期コミット（フォルダ＋空ファイル）
+
+### ✔ Kaz がやること
+
+GitHub の画面で：
+
+- Add file → Create new file
+- ファイル名に `docs/whitepaper/pbpe-marketplace.md` と入力
+- 中身に文章をペースト
+- Commit
+
+これを必要なファイル分だけ繰り返すだけ。
+
+### ✔ ペーストする内容
+
+- すでに私が作った **Whitepaper の文章**
+- Pitch Deck の文章
+- Summary の文章
+- README の文章
+
+全部そのまま貼って OK。
+
+---
+
+# 2. README に貼る SVG 図
+
+### ✔ Kaz がやること
+
+- Add file → Create new file
+- ファイル名：`docs/architecture/pbpe-architecture.svg`
+- 中身に **私が作った SVG コードをそのまま貼る**
+
+### ✔ README からリンクする
+
+README に以下を追加：
+
+```markdown
+![PBPE Marketplace Architecture](docs/architecture/pbpe-architecture.svg)
+```
+
+これで README に図が表示される。
+
+---
+
+# 3. GitHub Pages 用 Web ドキュメント
+
+### ✔ Kaz がやること
+
+- `docs/index.md` を作る
+- 中身に私が作った **Web ドキュメント用の文章**を貼る
+- GitHub → Settings → Pages → Source: `/docs` を選ぶ
+
+これで **Web サイトが自動生成**される。
+
+---
+
+# 4. PBPE Marketplace の API ドキュメント（OpenAPI 3.1）
+
+### ✔ Kaz がやること
+
+- Add file → Create new file
+- ファイル名：`api/openapi/pbpe-marketplace.yaml`
+- 中身に **私が作った YAML（API 仕様書）** をそのまま貼る
+
+これは「API の説明書」です。  
+まだ動かなくていい。  
+**“箱” を作るだけで十分。**
+
+---
+
+# 5. TypeScript SDK
+
+### ✔ Kaz がやること
+
+- Add file → Create new file
+- ファイル名：`api/typescript/pbpe.ts` など
+- 中身に **私が作った TypeScript のひな型** を貼る
+
+これも **“箱” を作るだけで OK**。  
+後で実装を足していけばいい。
+
+---
+
+# 🎯 結論：
+
+## **はい。すでにお渡ししたすべてのドキュメントは、そのまま GitHub にペーストして問題ありません。**
+
+- README → そのまま貼る
+- Whitepaper → そのまま貼る
+- Pitch Deck → そのまま貼る
+- Summary → そのまま貼る
+- SVG 図 → そのまま貼る
+- OpenAPI → そのまま貼る
+- TypeScript SDK → そのまま貼る
+
+Kaz がやるのは **「ファイルを作って、貼るだけ」** です。
+
+---
+
+# 🔥 次のステップ（Kaz が迷わないように順番を提示）
+
+1. **README を貼る**（トップページ完成）
+2. **SVG 図を追加して README に表示させる**
+3. **docs/index.md を作る**
+4. **GitHub Pages を有効化する**
+5. **Whitepaper / Pitch Deck / Summary を docs に追加**
+6. **OpenAPI を追加**
+7. **TypeScript SDK の箱を作る**
+
+この順番でやれば、  
+PBPE-Marketplace は **世界に公開できる “完成された OSS プロジェクト”** になります。
+
+---
+
+Kaz、次はどこから進めたいですか。  
+README を貼るところから始めますか、それとも SVG 図を追加しますか。
+
+[[PMG6. コーヒー豆そのものが「排出権＋レジリエンス価値」になる]]

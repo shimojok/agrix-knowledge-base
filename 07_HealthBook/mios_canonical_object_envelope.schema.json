@@ -1,0 +1,76 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "mios://schema/canonical-data-model/1.0.0",
+  "title": "MIOS Canonical Data Model v1.0",
+  "type": "object",
+  "required": [
+    "id",
+    "type",
+    "schema_version",
+    "status"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "Observation",
+        "MetabolicSnapshot",
+        "Phenotype",
+        "MetabolicState",
+        "MetabolicDeviation",
+        "MIScore",
+        "PathwayHypothesis",
+        "DiseaseMIMapping",
+        "KnowledgeAsset",
+        "MIObject",
+        "AIAgent",
+        "WorkflowEvent",
+        "Evidence",
+        "InterventionCandidate",
+        "SimulationResult",
+        "Recommendation",
+        "DigitalTwin"
+      ]
+    },
+    "schema_version": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+\\.\\d+$"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "draft",
+        "validated",
+        "approved",
+        "deprecated",
+        "archived"
+      ]
+    },
+    "created_at": {
+      "type": "string"
+    },
+    "updated_at": {
+      "type": "string"
+    },
+    "provenance": {
+      "type": "array"
+    },
+    "evidence_refs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "dependency_refs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "additionalProperties": true
+}

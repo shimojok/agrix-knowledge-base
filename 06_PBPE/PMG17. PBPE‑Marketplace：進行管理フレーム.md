@@ -1,0 +1,146 @@
+区切りの良いタイミングで、進行状況を詳細に知らせてください。また、先日アップロードした、PBPE-Marketplaceのプレゼン資料（PDF)をどこかに挿入したいので、リマインドしてください。今でなくて結構です。
+
+---
+
+Kaz、了解しました。  
+ここからは **ローカル Git を完全に排除し、GitHub Web だけで PBPE‑Marketplace を構築する“安定モード”** に切り替えます。  
+あなたは **GitHub Web でフォルダを開いてペーストするだけ**。  
+私は **全ファイルを、貼るだけで動く完成形で順次提供**します。
+
+そして、あなたが求めた 2 点：
+
+1. **区切りの良いタイミングで、進行状況を詳細に報告する**
+2. **先日アップロードした PBPE-Marketplace プレゼン資料（PDF）を、適切な場所に挿入するリマインド**
+
+これらを **プロジェクト全体の進行管理として組み込みます**。
+
+---
+
+# 🧭 **PBPE‑Marketplace：進行管理フレーム（Kaz 専用）**
+
+あなたのプロジェクトは、以下の 6 つの大項目で構成されます。
+
+```
+1. README（国際標準 OSS 仕様）
+2. docs/architecture（PNG 画像）
+3. docs/whitepaper（英語版）
+4. docs/pitch-deck（英語版）
+5. api（OpenAPI / SDK）
+6. engine / ledger / ui（実装仕様）
+```
+
+これらを **GitHub Web で貼るだけで完成する形**で順次提供します。
+
+---
+
+# 📌 **現在の進行状況（2026/05/06 02:16 JST 時点）**
+
+### ✔ 完了
+
+- SVG → PNG への変換（あなたが実施）
+- docs/architecture/pbpe-architecture.png のアップロード（あなたが実施）
+- README の基本構造の方向性決定
+- ローカル Git を完全に停止 → GitHub Web モードへ移行
+
+### ⏳ 次に行う作業（あなたが GitHub Web で行う）
+
+- README.md を **最新版（私が提供した英語版）に更新**
+
+### 🔜 次に私が提供するもの
+
+- **docs/whitepaper/whitepaper.md（英語版）**  
+    → GitHub Web にそのまま貼れる完成形
+
+---
+
+# 🔔 **プレゼン資料（PDF）についてのリマインド**
+
+あなたが先日アップロードした **PBPE-Marketplace プレゼン資料（PDF）** は、  
+以下のどちらかに配置するのが最適です：
+
+### **A. docs/pitch-deck/**（最も自然）
+
+```
+docs/pitch-deck/PBPE-Marketplace-Presentation.pdf
+```
+
+### **B. docs/presentation/**（複数資料を管理する場合）
+
+```
+docs/presentation/JP/
+docs/presentation/EN/
+```
+
+README には以下のようにリンクを追加します：
+
+```
+## Pitch Deck
+- [PBPE Marketplace Presentation (PDF)](docs/pitch-deck/PBPE-Marketplace-Presentation.pdf)
+```
+
+**この挿入は README が整った後に行います。  
+タイミングが来たら私が必ずリマインドします。**
+
+---
+
+# 🎯 **Kaz が今すぐ行うべきこと（1つだけ）**
+
+GitHub Web で **README.md を以下の最新版に更新**してください。
+
+---
+
+## 📄 **README.md（最新版・英語版・そのまま貼れる）**
+
+```
+# PBPE Marketplace
+
+The PBPE Marketplace is an open, verifiable, and interoperable platform for
+Positive Bio-Physical Externalities (PBPE). It enables the measurement,
+tokenization, settlement, and financialization of regenerative ecological
+activities.
+
+## Architecture
+
+The PBPE Marketplace architecture integrates impact measurement, PBPE
+generation, ledger-based settlement, and financial product issuance.
+
+![PBPE Marketplace Architecture](docs/architecture/pbpe-architecture.png)
+
+## Repository Structure
+
+PBPE-Marketplace/ ├── docs/ │ ├── architecture/ │ ├── whitepaper/ │ └── pitch-deck/ ├── api/ │ ├── openapi/ │ ├── typescript/ │ └── python/ ├── engine/ │ ├── pbpe-impact-engine/ │ ├── rating-engine/ │ └── settlement-engine/ ├── ledger/ │ ├── schema/ │ └── prisma/ └── ui/
+
+## Documentation
+
+- Whitepaper: `docs/whitepaper/`
+- Architecture: `docs/architecture/`
+- Pitch Deck: `docs/pitch-deck/`
+
+## Contact
+
+BioNexus Holdings  
+Kaz Shimojo  
+```
+
+---
+
+# 🧭 **README 更新が完了したら、次のステップへ進みます**
+
+次は：
+
+### **docs/whitepaper/whitepaper.md（英語版）**
+
+→ 完成形をそのまま貼れる形で提供します。
+
+---
+
+Kaz、  
+あなたはもう Git のエラーに悩む必要はありません。  
+私は **GitHub Web で貼るだけで完成する全ファイルを順次生成し、  
+進行状況を区切りごとに詳細に報告し、  
+プレゼン資料の挿入タイミングも管理**します。
+
+README 更新が完了したら教えてください。  
+すぐに次のドキュメントを作成します。
+
+[[PMG18. 新しいスレッドに移行するための “専用プロンプト”]]

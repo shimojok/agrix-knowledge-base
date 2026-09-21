@@ -1,0 +1,167 @@
+ローカルからのPushはやめにします。また同じミスや修正ばかりで数日を無駄にするからです。リポジトリ構造に基づいて、また、必要に応じて追加し、全てのドキュメントやコードの作成を、順次、進めて下さい。リポジトリ構造を確認しながら、GitHub Webから私がペーストします。
+
+---
+
+Kaz──了解しました。  
+ここからは **ローカル Push を完全にやめて、GitHub Web だけで PBPE‑Marketplace を構築するモード** に切り替えます。  
+あなたの判断は正しいです。Git の細かい衝突や CRLF/LF 問題で時間を浪費する必要はありません。
+
+あなたは **GitHub Web でフォルダを開き → 新規ファイルを作成 → 私が作る内容をペーストするだけ**。  
+これが最速で、最も安定し、ミスがゼロになる方法です。
+
+---
+
+# 🎯 **今からの進め方（Kaz 専用の最短ルート）**
+
+1. **あなたは GitHub Web でフォルダを開くだけ**
+2. **私は必要なファイル内容を “そのまま貼れる形” で提供する**
+3. **あなたはコピペして保存するだけ**
+4. **必要に応じて追加ファイルを順次生成していく**
+
+SVG は GitHub の制限が多すぎるため、  
+**PNG/JPG で統一**して進めます（あなたの判断は完全に正しい）。
+
+---
+
+# 🧭 **まず、現在のリポジトリ構造を確認します**
+
+あなたのローカルではなく、  
+**GitHub Web 上の PBPE-Marketplace の構造**を基準に進めます。
+
+Kaz、あなたのリポジトリは現在：
+
+```
+PBPE-Marketplace/
+├── README.md
+├── docs/
+│   └── architecture/
+│       └── pbpe-architecture.png（あなたがアップロードした画像）
+```
+
+この状態で問題ありません。  
+ここから **必要なフォルダとファイルを Web から順次追加**していきます。
+
+---
+
+# 🚀 **次に作るべきフォルダとファイル（最短で完成させるための順序）**
+
+あなたの PBPE Marketplace は、以下の 5 つの柱で構成されます：
+
+1. **docs/**（ホワイトペーパー、アーキテクチャ、ピッチデッキ）
+2. **api/**（OpenAPI、TypeScript SDK、Python SDK）
+3. **engine/**（PBPE Impact Engine、Rating Engine、Settlement Engine）
+4. **ledger/**（Schema、Prisma、データモデル）
+5. **ui/**（フロントエンド）
+
+これを **GitHub Web から順番に作っていきます。**
+
+---
+
+# 🎯 **STEP 1：README を “国際標準 OSS 仕様” に整える**
+
+あなたの README はまだ途中なので、  
+まずは **最小構成の README（英語版）** を完成させます。
+
+Kaz、以下を **README.md にそのまま貼ってください**：
+
+---
+
+## **📄 README.md（最新版・英語版・そのまま貼れる）**
+
+```
+# PBPE Marketplace
+
+The PBPE Marketplace is an open, verifiable, and interoperable platform for
+Positive Bio-Physical Externalities (PBPE). It enables the measurement,
+tokenization, settlement, and financialization of regenerative ecological
+activities.
+
+## Architecture
+
+The PBPE Marketplace architecture integrates impact measurement, PBPE
+generation, ledger-based settlement, and financial product issuance.
+
+![PBPE Marketplace Architecture](docs/architecture/pbpe-architecture.png)
+
+## Repository Structure
+
+PBPE-Marketplace/ ├── docs/ │ ├── architecture/ │ ├── whitepaper/ │ └── pitch-deck/ ├── api/ │ ├── openapi/ │ ├── typescript/ │ └── python/ ├── engine/ │ ├── pbpe-impact-engine/ │ ├── rating-engine/ │ └── settlement-engine/ ├── ledger/ │ ├── schema/ │ └── prisma/ └── ui/
+
+## Documentation
+
+- Whitepaper: `docs/whitepaper/`
+- Architecture: `docs/architecture/`
+- Pitch Deck: `docs/pitch-deck/`
+
+## Contact
+
+BioNexus Holdings  
+Kaz Shimojo  
+```
+
+---
+
+# 🎯 **STEP 2：次に作るべきフォルダ（GitHub Web で作成）**
+
+Kaz、GitHub Web で以下のフォルダを作ってください：
+
+```
+docs/whitepaper/
+docs/pitch-deck/
+api/openapi/
+api/typescript/
+api/python/
+engine/pbpe-impact-engine/
+engine/rating-engine/
+engine/settlement-engine/
+ledger/schema/
+ledger/prisma/
+ui/
+```
+
+GitHub Web → Add file → Create new file  
+ファイル名に：
+
+```
+docs/whitepaper/.keep
+```
+
+のように `.keep` を入れると空フォルダが作れます。
+
+---
+
+# 🎯 **STEP 3：必要なドキュメントを順次生成していく**
+
+Kaz がフォルダを作ったら、  
+次に以下を順番に作成していきます：
+
+1. **docs/whitepaper/whitepaper.md（英語版）**
+2. **docs/pitch-deck/pitch-deck.md**
+3. **api/openapi/openapi.yaml（OpenAPI 3.1）**
+4. **engine/pbpe-impact-engine/README.md**
+5. **ledger/schema/pbpe-ledger-schema.md**
+6. **ui/README.md（UI 構成）**
+
+すべて **Kaz が GitHub Web に貼れる形で提供**します。
+
+---
+
+# 🔥 Kaz へ：次に進むための確認
+
+あなたが今すべきことは **1つだけ**です：
+
+### ✔ GitHub Web で README.md を上記の内容に更新する
+
+更新が完了したら、  
+次に **docs/whitepaper/whitepaper.md** を生成します。
+
+---
+
+Kaz、  
+あなたはもうローカル Git の問題に悩む必要はありません。  
+私は **GitHub Web で貼るだけで完成する全ファイルを順次生成**します。
+
+README の更新が終わったら教えてください。  
+すぐに次のファイルを作成します。
+
+[[PMG17. PBPE‑Marketplace：進行管理フレーム]]

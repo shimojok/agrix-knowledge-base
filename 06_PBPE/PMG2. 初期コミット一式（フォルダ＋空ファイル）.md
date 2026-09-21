@@ -1,0 +1,306 @@
+１～５までを順次進めて下さい。全て必要になりますから。
+
+---
+
+いいですね、全部やり切る前提で設計していきましょう。  
+ここでは **1〜5 を順番に、すぐ GitHub に流し込める形**で出します。
+
+---
+「PBPE-Marketplace の初期コミット一式をターミナルで一括作成したい」
+## 1. 初期コミット一式（フォルダ＋空ファイル）
+
+```bash
+mkdir -p pbpe-marketplace/{docs/{whitepaper,architecture,pitch-deck,diagrams},api/{openapi,typescript,python},engine/{pbpe-impact-engine,rating-engine,settlement-engine},ledger/{schema,prisma},ui,examples/{impact-intent-7lines,pbpe-product-examples,settlement-simulation}}
+
+cd pbpe-marketplace
+
+touch README.md
+
+# docs
+touch docs/whitepaper/{pbpe-marketplace.md,planetary-health-os.md,mbt55-cycle.md}
+touch docs/architecture/{pbpe-architecture.svg,pbpe-flow-intent-to-settlement.svg,pbpe-marketplace-api.svg}
+touch docs/pitch-deck/{pbpe-marketplace-15slides.md,pbpe-summary-1page.md}
+touch docs/diagrams/{erd.svg,mbt55-cycle.svg,agrix-healthbook-pbpe.svg}
+
+# api
+touch api/openapi/pbpe-marketplace.yaml
+touch api/typescript/{index.ts,pbpe.ts,products.ts,settlements.ts,rating-engine.ts}
+touch api/python/{pbpe.py,products.py,settlements.py,rating_engine.py}
+
+# engine
+touch engine/pbpe-impact-engine/{valuation.py,forecasting.py,volatility.py}
+touch engine/rating-engine/{irs.py,dqs.py,rrs.py,pvi.py,pdp.py}
+touch engine/settlement-engine/{distribution.py,connect.py}
+
+# ledger
+touch ledger/schema/{intents.sql,pbpe_values.sql,products.sql,orders.sql,settlements.sql,distributions.sql}
+touch ledger/prisma/schema.prisma
+
+# ui
+touch ui/.gitkeep
+
+# examples
+touch examples/impact-intent-7lines/{python.py,typescript.ts}
+touch examples/pbpe-product-examples/.gitkeep
+touch examples/settlement-simulation/.gitkeep
+```
+
+`README.md` には、前ターンで作った英語版 README をそのまま貼れば OK です。
+
+---
+
+## 2. README に貼る PBPE Marketplace 図（SVG）
+
+PowerPoint 最適化版を `docs/architecture/pbpe-architecture.svg` に保存し、  
+README からこうリンクします。
+
+```markdown
+## PBPE Marketplace Architecture
+
+![PBPE Marketplace Architecture](docs/architecture/pbpe-architecture.svg)
+```
+
+SVG コードは前ターンの **PowerPoint Optimized SVG** をそのまま使えば十分です。
+
+---
+
+## 3. GitHub Pages 用 Web ドキュメント構成
+
+最小構成として `docs/` を GitHub Pages ルートにします（Settings → Pages → `/docs`）。
+
+`docs/index.md`:
+
+```markdown
+# PBPE Marketplace
+
+PBPE Marketplace is the financial layer of Planetary Health OS, turning real-world climate, agriculture, and health impact into investable value.
+
+- [Whitepaper](whitepaper/pbpe-marketplace.md)
+- [Architecture](architecture/index.md)
+- [Pitch Deck](pitch-deck/pbpe-marketplace-15slides.md)
+- [MBT55 & PBPE Model](whitepaper/mbt55-cycle.md)
+```
+
+`docs/architecture/index.md`:
+
+```markdown
+# PBPE Marketplace Architecture
+
+![PBPE Marketplace Architecture](pbpe-architecture.svg)
+
+- [Intent → PBPE → Settlement Flow](pbpe-flow-intent-to-settlement.svg)
+- [PBPE Marketplace API Surface](pbpe-marketplace-api.svg)
+```
+
+`docs/pitch-deck/pbpe-marketplace-15slides.md` には、先に作った 15 スライド構成をそのまま Markdown 化。
+
+---
+
+## 4. PBPE Marketplace API ドキュメント（OpenAPI 3.1 スケルトン）
+
+`api/openapi/pbpe-marketplace.yaml`:
+
+```yaml
+openapi: 3.1.0
+info:
+  title: PBPE Marketplace API
+  version: 0.1.0
+  description: >
+    API for accessing PBPE financial products, orders, settlements, and registry.
+servers:
+  - url: https://api.pbpe.market
+paths:
+  /products:
+    get:
+      summary: List PBPE financial products
+      responses:
+        '200':
+          description: A list of products
+  /orders:
+    post:
+      summary: Create an order for a PBPE product
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CreateOrderRequest'
+      responses:
+        '201':
+          description: Order created
+  /settlements/{product_id}:
+    get:
+      summary: Get settlements for a product
+      parameters:
+        - name: product_id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Settlement list
+  /registry/{pbpe_id}:
+    get:
+      summary: Get PBPE registry entry
+      parameters:
+        - name: pbpe_id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: PBPE registry record
+components:
+  schemas:
+    CreateOrderRequest:
+      type: object
+      properties:
+        investor_id:
+          type: string
+        product_id:
+          type: string
+        amount:
+          type: number
+      required:
+        - investor_id
+        - product_id
+        - amount
+```
+
+ここから後で `components/schemas` を増やしていけばよいです。
+
+---
+
+## 5. PBPE Marketplace TypeScript SDK スケルトン
+
+`api/typescript/index.ts`:
+
+```ts
+export * from "./pbpe";
+export * from "./products";
+export * from "./settlements";
+export * from "./rating-engine";
+```
+
+`api/typescript/pbpe.ts`:
+
+```ts
+export interface PBPEValue {
+  id: string;
+  intentId: string;
+  amount: number;
+  unit: string; // e.g. "PBPE"
+}
+
+export interface PBPERegistryEntry extends PBPEValue {
+  source: "AGRIX" | "HealthBook" | "MBT55" | "Other";
+  createdAt: string;
+}
+
+export interface PBPEClientConfig {
+  baseUrl: string;
+  apiKey?: string;
+}
+
+export class PBPEClient {
+  constructor(private config: PBPEClientConfig) {}
+
+  async getRegistryEntry(pbpeId: string): Promise<PBPERegistryEntry> {
+    const res = await fetch(`${this.config.baseUrl}/registry/${pbpeId}`, {
+      headers: this.config.apiKey
+        ? { Authorization: `Bearer ${this.config.apiKey}` }
+        : {},
+    });
+    if (!res.ok) throw new Error(`Failed to fetch PBPE registry: ${res.status}`);
+    return res.json();
+  }
+}
+```
+
+`api/typescript/products.ts`:
+
+```ts
+export interface Product {
+  id: string;
+  type: "BOND" | "CREDIT" | "INSURANCE" | "PROTECTION";
+  name: string;
+  description?: string;
+  currency: string;
+}
+
+export class ProductsClient {
+  constructor(private baseUrl: string) {}
+
+  async listProducts(): Promise<Product[]> {
+    const res = await fetch(`${this.baseUrl}/products`);
+    if (!res.ok) throw new Error(`Failed to list products: ${res.status}`);
+    return res.json();
+  }
+}
+```
+
+`api/typescript/settlements.ts`:
+
+```ts
+export interface Settlement {
+  id: string;
+  productId: string;
+  pbpeId: string;
+  amount: number;
+  currency: string;
+  settledAt: string;
+}
+
+export class SettlementsClient {
+  constructor(private baseUrl: string) {}
+
+  async listByProduct(productId: string): Promise<Settlement[]> {
+    const res = await fetch(`${this.baseUrl}/settlements/${productId}`);
+    if (!res.ok) throw new Error(`Failed to list settlements: ${res.status}`);
+    return res.json();
+  }
+}
+```
+
+`api/typescript/rating-engine.ts`:
+
+```ts
+export type PBPERating = "PBPE-A" | "PBPE-B" | "PBPE-C" | "PBPE-D";
+
+export interface Rating {
+  productId: string;
+  rating: PBPERating;
+  irs: number;
+  dqs: number;
+  rrs: number;
+  pvi: number;
+  pdp: number;
+}
+
+export class RatingClient {
+  constructor(private baseUrl: string) {}
+
+  async getRating(productId: string): Promise<Rating> {
+    const res = await fetch(`${this.baseUrl}/products/${productId}/rating`);
+    if (!res.ok) throw new Error(`Failed to fetch rating: ${res.status}`);
+    return res.json();
+  }
+}
+```
+
+---
+
+これで **1〜5 の「土台」はすべて揃いました**。  
+あとは、あなたのペースで中身を肉付けしていけば、そのまま **Planetary Health OS / PBPE Marketplace の公式 GitHub** として機能します。
+
+次にやるなら：
+
+- `ledger/schema/*.sql` に ER 図ベースの DDL を入れる
+- `examples/impact-intent-7lines/python.py` に PH-API 風の 7 行サンプルを書く
+
+このあたりを一緒に詰めてもいいし、  
+「まずここを厚くしたい」というレイヤーがあれば、そこから深掘りもできます。
+
+[[PMG3. 実装の進め方]]

@@ -1,0 +1,1 @@
+Microsoft にAGRIX/HealthBook/PBPE-MARKETPLACE の事業企画譲渡を目指していますが、Microsoft は、Azure の新規事業分野に関してどのように考えていますか？

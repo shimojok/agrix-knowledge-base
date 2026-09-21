@@ -1,0 +1,286 @@
+### ☛Prompt
+
+次に、 **GitHub全体の“開発統治（PMO）”と“構造設計”** を目的にする、スレッド①  PMOでは、下記のドキュメントを必要としています。
+Vaultをバックアップしてある下記のGitHub URLの関連ホルダーにドキュメントを読み込み、漏れがなく、重複しない、出来る限り詳細な内容にまとめてください。
+
+[GitHub - shimojok/planetary-metabolism-os-workspace · GitHub](https://github.com/shimojok/planetary-metabolism-os-workspace/tree/main)
+[planetary-metabolism-os-workspace/00\_inbox at main · shimojok/planetary-metabolism-os-workspace · GitHub](https://github.com/shimojok/planetary-metabolism-os-workspace/tree/main/00_inbox)
+[planetary-metabolism-os-workspace/00\_inbox/02\_Biological\_Systems at main · shimojok/planetary-metabolism-os-workspace · GitHub](https://github.com/shimojok/planetary-metabolism-os-workspace/tree/main/00_inbox/02_Biological_Systems)
+[planetary-metabolism-os-workspace/00\_inbox/03\_MBT55 at main · shimojok/planetary-metabolism-os-workspace · GitHub](https://github.com/shimojok/planetary-metabolism-os-workspace/tree/main/00_inbox/03_MBT55)
+[planetary-metabolism-os-workspace/00\_inbox/04\_AGRIX at main · shimojok/planetary-metabolism-os-workspace · GitHub](https://github.com/shimojok/planetary-metabolism-os-workspace/tree/main/00_inbox/04_AGRIX)
+
+
+---
+
+☛以下は、必要なドキュメント説明
+
+結論から言います。  
+**このスレッド（PMO／統治・構造設計）では「科学データ」は不要です。**  
+必要なのは逆で、
+
+> **“意思決定と構造を固定するためのドキュメント”**
+
+です。
+
+ここを間違えると、全スレッドが再びバラバラになります。
+
+---
+
+# ① このスレッドで必要なドキュメントの本質
+
+このスレッドの役割は：
+
+> **プロジェクトを「再現可能なシステム」にすること**
+
+---
+
+そのために必要なのは以下の4系統です。
+
+# ② 必須ドキュメント（優先度A）
+
+## 1. 🧭 全体アーキテクチャ定義書（最重要）
+
+### 内容
+
+```text
+・MBT55（環境代謝）
+・AGRIX（生産）
+・HealthBook（人体）
+・PBPE（経済）
+・Azure（統合）
+```
+
+それぞれの：
+
+- 入力（Input）
+    
+- 出力（Output）
+    
+- 接続関係
+    
+
+### 目的
+
+👉 **スレッド間の“ズレ”を完全排除**
+
+---
+
+## 2. 📐 モデル階層定義書
+
+### 内容
+
+```text
+Level 1：微生物（MBT55）
+Level 2：土壌/農業（AGRIX）
+Level 3：人体（HealthBook）
+Level 4：経済（PBPE）
+Level 5：クラウド（Azure）
+```
+
+### 目的
+
+👉 **どこで何をやるか固定する**
+
+---
+
+## 3. 🔗 データフロー定義
+
+### 内容
+
+```text
+MBT55 → AGRIX → HealthBook → PBPE
+```
+
+各段階で：
+
+- 渡すデータ
+    
+- 単位
+    
+- 形式
+    
+### 目的
+
+👉 **GitHub統合時の破綻防止**
+
+---
+
+## 4. 📊 KPI定義書（極めて重要）
+
+### 内容
+
+必ず数値で：
+
+- GHG削減（例：5.1億トン）
+    
+- 分解時間（24時間）
+    
+- コスト削減（例：84%）
+    
+- 医療費削減
+    
+- 収量向上
+    
+### 目的
+
+👉 **全モデルの“評価軸”を統一**
+
+
+---
+
+# ③ 重要ドキュメント（優先度B）
+
+## 5. 🧪 仮説一覧（Hypothesis Map）
+
+あなたの思想を整理：
+
+- ハイパーサイクル
+    
+- 栄養カスケード
+    
+- バイオコントロール
+    
+- バイオセキュリティ
+    
+
+👉 重要：
+
+> **すべて“検証対象”として記述する**
+
+---
+
+## 6. ⚙️ GitHubリポジトリ設計書
+
+### 内容
+
+```bash
+mbt55-hypercycle
+agrix-platform
+healthbook
+pbpe-finance
+azure-integration
+```
+
+各リポジトリの：
+
+- 目的
+    
+- 入出力
+    
+- 依存関係
+    
+
+---
+
+## 7. 🤖 AIエージェント仕様書
+
+### 内容
+
+- Causality Agent
+    
+- Math Agent
+    
+- Trace Agent
+    
+
+👉 各スレッド共通ルール
+
+---
+
+# ④ あれば強い（優先度C）
+
+## 8. 💼 投資・戦略シナリオ
+
+- Microsoft統合
+    
+- Yara連携
+    
+- 世界銀行との比較
+    
+
+👉 PMOとしての意思決定材料
+
+---
+
+# ⑤ このスレッドで不要なもの
+
+ここが重要です
+
+## ❌ 実験データ
+
+→ MBT55 Coreへ
+
+## ❌ 数式詳細
+
+→ 各専門スレッドへ
+
+## ❌ コード
+
+→ 各GitHubへ
+
+
+---
+
+# ⑥ 推奨フォーマット
+
+## シンプルでOK
+
+---
+
+### ① Markdown
+
+```md
+# Architecture
+MBT55 → AGRIX → HealthBook → PBPE
+```
+
+---
+
+### ② 図（可能なら）
+
+- システム図
+    
+- フロー図
+    
+
+---
+
+# ⑦ 最小セット（これだけで十分）
+
+時間がなければ：
+
+---
+
+① 全体アーキテクチャ（1枚）  
+② KPI定義（数値一覧）  
+③ スレッド構成一覧
+
+
+---
+
+# ⑧ このスレッドの役割（再確認）
+
+---
+
+## ❌ 研究しない
+
+## ❌ モデル作らない
+
+---
+
+## ✅ 決める
+
+## ✅ 整理する
+
+## ✅ 統制する
+
+---
+
+# ⑨ 結論
+
+このスレッドで必要なドキュメントは：
+
+---
+
+> **「何をどこで、どの基準で作るかを固定するもの」**
+

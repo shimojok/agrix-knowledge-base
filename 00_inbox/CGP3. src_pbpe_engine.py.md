@@ -1,0 +1,281 @@
+[[DA31. CGP1評価]]
+👇
+CGP1のプロトタイプを以下のファイルとしてGitHubにプッシュできる形で出力してください。
+
+## 出力ファイル
+1. src/pbpe_engine.py — PBPEEngineクラス（Gold/Green/Blue計算 + NPV/IRR）
+2. case_studies/coffee/coffee_model.py — コーヒー5年財務モデル
+3. case_studies/coffee/README.md — 前提条件・参照データの説明
+4. dashboard/app.py — Streamlitダッシュボード（Ha・炭素価格スライダー → IRR表示）
+5. requirements.txt — streamlit, pandas, numpy, plotly
+
+## 注意
+- コードはそのままGitHubにコピーできる形で出力
+- 過度な最適化より、まず動作することを優先
+
+---
+
+以下は **そのままGitHubにPush可能なCGP1プロトタイプ一式**です。  
+（最小構成・確実動作優先）
+
+---
+
+# 📁 1. `src/pbpe_engine.py`✔
+
+```python
+import numpy as np
+import numpy_financial as npf
+
+
+class PBPEEngine:
+    def __init__(self, inputs: dict):
+        self.inputs = inputs
+
+    # ----------------------------
+    # GOLD: 生産性
+    # ----------------------------
+    def compute_gold(self):
+        yield_base = self.inputs["yield_base"]
+        yield_increase = self.inputs["yield_increase_pct"]
+        price = self.inputs["price_per_ton"]
+        ha = self.inputs["ha"]
+        fert_savings = self.inputs["fertilizer_cost_savings"]
+
+        production_base = yield_base * ha
+        production_new = yield_base * (1 + yield_increase) * ha
+
+        revenue_base = production_base * price
+        revenue_new = production_new * price
+
+        return (revenue_new - revenue_base) + fert_savings * ha
+
+    # ----------------------------
+    # GREEN: 炭素
+    # ----------------------------
+    def compute_green(self):
+        production = self.inputs["yield_base"] * (1 + self.inputs["yield_increase_pct"]) * self.inputs["ha"]
+        co2_per_ton = self.inputs["co2_reduction_per_ton"]
+        carbon_price = self.inputs["carbon_price"]
+
+        return production * co2_per_ton * carbon_price
+
+    # ----------------------------
+    # BLUE: 健康
+    # ----------------------------
+    def compute_blue(self, year):
+        production = self.inputs["yield_base"] * (1 + self.inputs["yield_increase_pct"]) * self.inputs["ha"]
+        health_value = self.inputs["healthcare_cost_avoidance"]
+        discount = self.inputs["health_discount_rate"]
+
+        return (production * health_value) / ((1 + discount) ** year)
+
+    # ----------------------------
+    # CASHFLOW
+    # ----------------------------
+    def compute_cashflows(self):
+        years = self.inputs["years"]
+        cashflows = []
+
+        for t in range(1, years + 1):
+            gold = self.compute_gold()
+            green = self.compute_green()
+            blue = self.compute_blue(t)
+
+            cashflows.append(gold + green + blue)
+
+        return cashflows
+
+    # ----------------------------
+    # NPV / IRR
+    # ----------------------------
+    def compute_npv_irr(self):
+        discount_rate = self.inputs["discount_rate"]
+        initial_investment = self.inputs["initial_investment"]
+
+        cashflows = self.compute_cashflows()
+
+        npv = sum([cf / ((1 + discount_rate) ** (i + 1)) for i, cf in enumerate(cashflows)])
+        irr = npf.irr([-initial_investment] + cashflows)
+
+        return npv, irr
+```
+
+---
+
+# 📁 2. `case_studies/coffee/coffee_model.py`✔
+
+```python
+import pandas as pd
+from src.pbpe_engine import PBPEEngine
+
+inputs = {
+    "years": 5,
+    "discount_rate": 0.08,
+    "initial_investment": 500000,
+
+    # AGRIX
+    "ha": 100,
+    "yield_base": 1.5,
+    "yield_increase_pct": 0.2,
+    "fertilizer_cost_savings": 200,
+
+    # Market
+    "price_per_ton": 3000,
+
+    # M3-Core
+    "co2_reduction_per_ton": 1.0,
+    "carbon_price": 80,
+
+    # HealthBook
+    "healthcare_cost_avoidance": 50,
+    "health_discount_rate": 0.03
+}
+
+engine = PBPEEngine(inputs)
+
+cashflows = engine.compute_cashflows()
+npv, irr = engine.compute_npv_irr()
+
+df = pd.DataFrame({
+    "Year": range(1, 6),
+    "Cashflow": cashflows
+})
+
+summary = pd.DataFrame({
+    "Metric": ["NPV", "IRR"],
+    "Value": [npv, irr]
+})
+
+print(df)
+print(summary)
+
+df.to_csv("coffee_cashflows.csv", index=False)
+summary.to_csv("coffee_summary.csv", index=False)
+```
+
+---
+
+# 📁 3. `case_studies/coffee/README.md`✔
+
+```markdown
+# PBPE Coffee Model
+
+## Overview
+This model estimates the financial performance of PBPE-driven regenerative coffee production.
+
+It integrates three value layers:
+- GOLD: Yield increase + cost savings (AGRIX)
+- GREEN: Carbon revenue (M3-Core)
+- BLUE: Healthcare cost avoidance (HealthBook)
+
+## Assumptions
+
+### AGRIX
+- Yield increase: +20%
+- Fertilizer cost savings: $200/ha
+- Area: 100 ha
+
+### Market
+- Coffee price: $3000/ton
+
+### Carbon (EU ETS proxy)
+- CO2 reduction: 1 tCO2/ton
+- Carbon price: $80/tCO2
+
+### Health
+- Healthcare avoidance: $50/ton
+- Discount rate: 3%
+
+## Output
+- 5-year cashflow
+- NPV
+- IRR
+
+## Notes
+This is a simplified prototype (CGP1).
+Future upgrades:
+- Monte Carlo simulation
+- Token layer integration
+- SafelyChain dynamic pricing
+```
+
+---
+
+# 📁 4. `dashboard/app.py`✔
+
+```python
+import streamlit as st
+from src.pbpe_engine import PBPEEngine
+
+st.title("PBPE Coffee Investment Dashboard")
+
+ha = st.slider("Hectares (ha)", 10, 1000, 100)
+carbon_price = st.slider("Carbon Price ($/tCO2)", 10, 200, 80)
+yield_increase = st.slider("Yield Increase (%)", 0.0, 0.5, 0.2)
+
+inputs = {
+    "years": 5,
+    "discount_rate": 0.08,
+    "initial_investment": 500000,
+
+    "ha": ha,
+    "yield_base": 1.5,
+    "yield_increase_pct": yield_increase,
+    "fertilizer_cost_savings": 200,
+
+    "price_per_ton": 3000,
+
+    "co2_reduction_per_ton": 1.0,
+    "carbon_price": carbon_price,
+
+    "healthcare_cost_avoidance": 50,
+    "health_discount_rate": 0.03
+}
+
+engine = PBPEEngine(inputs)
+
+npv, irr = engine.compute_npv_irr()
+
+st.metric("NPV (USD)", f"{npv:,.0f}")
+st.metric("IRR", f"{irr:.2%}")
+```
+
+---
+
+# 📁 5. `requirements.txt`✔
+
+```
+streamlit
+pandas
+numpy
+numpy-financial
+plotly
+```
+
+---
+
+# ✅ 次のステップ（重要）
+
+このCGP1は**あえてシンプル**にしてあります。  
+次で一気に進化させるべきポイント：
+
+### ① Monte Carlo（必須）
+
+- 価格・炭素・収量の分布化
+    
+
+### ② SafelyChain価格統合
+
+- 農産物価格 = 市場 + インパクト価値
+    
+
+### ③ Token Layer
+
+- PBPEトークン → IRR押し上げ要因
+    
+
+---
+
+必要なら、次は：
+
+👉 **CGP2（投資家提出レベル：MonteCarlo + Token + Carbon Asset）を一気に構築する**

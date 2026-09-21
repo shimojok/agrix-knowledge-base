@@ -1,0 +1,273 @@
+はい、進めてください。
+
+---
+
+# Architecture｜HealthBook MIOS Project Establishment
+
+正式にこの方針で進めます。
+
+## Canonical Project
+
+**Project:** `HealthBook MIOS`
+**目的:** `Canonical Architecture & Implementation`
+
+```text
+HealthBook_PMOS
+      │
+      ├── Legacy Architecture
+      ├── Research / Notes
+      └── Historical Decisions
+              │
+              ▼
+       SOURCE CORPUS
+              ▲
+              │
+      ┌───────┼────────┐
+      │       │        │
+ HealthBook  MBT    BioNexus-Core
+  Repos     Kampo       │
+      │       │         │
+      └───────┼─────────┘
+              ▼
+       Reconciliation
+              │
+              ▼
+      CANONICAL MIOS
+              │
+      ┌───────┼────────────┐
+      ▼       ▼            ▼
+     KG    MI Engine    Evidence
+      │       │            │
+      └───────┼────────────┘
+              ▼
+        HealthBook MIOS
+              │
+      ┌───────┼─────────────┐
+      ▼       ▼             ▼
+      UI    AI Agents    FHIR/Azure
+```
+
+---
+
+# Repository Structure
+
+```text
+HealthBook-MIOS/
+│
+├── 00_governance/
+│
+├── 01_source_registry/
+│
+├── 02_reconciliation/
+│
+├── 03_canonical/
+│   ├── data_model/
+│   ├── ontology/
+│   ├── knowledge_graph/
+│   ├── pathways/
+│   ├── microbiome/
+│   ├── metabolite/
+│   ├── endocrine/
+│   ├── hormone/
+│   ├── atp/
+│   ├── phenotype/
+│   ├── disease/
+│   ├── kampo/
+│   └── evidence/
+│
+├── 04_healthbook/
+│   ├── questionnaire_200/
+│   ├── disease_matrix_137/
+│   └── legacy/
+│
+├── 05_mbt55/
+├── 06_ai_agents/
+├── 07_clinical_workflow/
+├── 08_ui/
+├── 09_fhir_azure/
+├── 10_simulation/
+├── 11_validation/
+└── 12_implementation/
+```
+
+---
+
+# Data Flow｜最重要な変更
+
+今後は「記憶から再構成する」のではなく、**Source Corpusを一次情報源**にします。
+
+```text
+Raw Sources
+    ↓
+Source Registry
+    ↓
+Inventory
+    ↓
+Reconciliation
+    ↓
+Evidence / Provenance Validation
+    ↓
+Canonical Decision
+    ↓
+Canonical Data Model
+    ↓
+MIOS Knowledge Graph
+    ↓
+MI Engine
+    ↓
+HealthBook Application
+```
+
+これにより、過去の
+
+* 200問問診
+* 137疾病リスク
+* MBT漢方代謝ライブラリー
+* `kampo_metabolic_library.json`
+* MBT55
+* MBT Probiotics
+* HealthBook Legacy
+* HealthBook_PMOS
+* 新MIOS Architecture
+* Essential Microbial Functions
+* Equol
+* Urolithin A
+* SCFA
+* Endocrine / Hormone
+* Estrogen
+* ATP / Mitochondria
+
+を**同じCanonical Governance下に置けます。**
+
+---
+
+# Governance Rule｜ここからの原則
+
+### Rule 1
+
+**Source ≠ Canonical**
+
+### Rule 2
+
+**Memory ≠ Source of Truth**
+
+### Rule 3
+
+**旧設計を自動的に新設計へ昇格させない**
+
+### Rule 4
+
+**EvidenceとHypothesisを分離する**
+
+### Rule 5
+
+**Microbiomeは栄養素ではなく、宿主代謝能力を拡張するFunctional Layerとして扱う**
+
+### Rule 6
+
+基本代謝経路を、
+
+```text
+Food
+ ↓
+Microbiome
+ ↓
+Metabolite
+ ↓
+Host Response
+```
+
+および
+
+```text
+Phytochemical
+ ↓
+Microbiome
+ ↓
+Metabolite
+ ↓
+Host Signaling
+```
+
+として保持する。
+
+### Rule 7
+
+さらに、
+
+```text
+Metabolite
+ ↓
+Endocrine / Hormone
+ ↓
+Mitochondria / ATP
+ ↓
+Cellular Response
+ ↓
+Phenotype
+```
+
+をMIOSのHost Response側へ統合する。
+
+---
+
+# KPI｜Project完成基準
+
+まず技術KPIを以下に固定します。
+
+| KPI                             |   Target |
+| ------------------------------- | -------: |
+| Source Inventory coverage       | **100%** |
+| Canonical entity reconciliation | **100%** |
+| 200Q MIOS mapping               | **100%** |
+| 137 Disease mapping             | **100%** |
+| Kampo reconciliation            | **100%** |
+| Evidence provenance coverage    | **100%** |
+| KG schema validation            | **100%** |
+| Orphan canonical entities       |   **0件** |
+| Unresolved P0 conflicts         |   **0件** |
+| FHIR compatibility              | **100%** |
+
+※これは**開発KPI**であり、臨床効果を保証する数値ではありません。
+
+---
+
+# 次工程
+
+新Projectでは、いきなりコードを書き始めません。
+
+まず、
+
+**Phase 0｜HealthBook MIOS Source Corpus Assembly & Source Registry**
+
+を実施します。
+
+その入力順序を、
+
+```text
+① HealthBook_PMOS 全ノート
+          ↓
+② HealthBook関連4 Repository
+          ↓
+③ BioNexus-Core HealthBook関連部分
+          ↓
+④ MBT漢方代謝ライブラリー
+          ↓
+⑤ 200Q / 137 Disease / 各JSON
+          ↓
+⑥ MIOS Migration Documents
+          ↓
+⑦ 現在までのMIOS Canonical Decisions
+```
+
+とし、**Source Registry v1.0 → Master Inventory → Reconciliation Queue**を作成します。
+
+その後、
+
+**Canonical Architecture v1.0 → Implementation Architecture → 実装**
+
+へ進みます。
+
+この構造なら、これまでの成果を捨てずに、むしろ**「HealthBook_PMOSからHealthBook MIOSへの正式なArchitecture Migration」**として統合できます。
+
+**次工程は `Phase 0｜HealthBook MIOS Source Corpus Assembly & Source Registry v1.0` として開始します。**

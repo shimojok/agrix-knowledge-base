@@ -1,0 +1,105 @@
+以下の説明は、下記のスレッドで必要とするドキュメントやコード類、数式などです。
+アップロードしてある下記GitHub URLのそれぞれの関連ホルダーを読み取り、以下の説明に沿って、必要なドキュメントを集積し、漏れがなく、重複しない、出来る限り詳細な内容にまとめてください。複数のドキュメントに別れても構いません。
+
+[planetary-metabolism-os-workspace/00\_inbox/07\_HealthBook at main · shimojok/planetary-metabolism-os-workspace · GitHub](https://github.com/shimojok/planetary-metabolism-os-workspace/tree/main/00_inbox/07_HealthBook)
+[planetary-metabolism-os-workspace/00\_inbox/10\_MBT\_Probiotics at main · shimojok/planetary-metabolism-os-workspace · GitHub](https://github.com/shimojok/planetary-metabolism-os-workspace/tree/main/00_inbox/10_MBT_Probiotics)
+
+
+スレッド② HealthBook / MBT Probiotics
+> **人体代謝の完全モデル化＋介入可能なAIシステム構築**
+
+### ① 現在の保持状況（事実）
+
+私は以下レベルでしか保持していません：
+
+- 概念構造（MBT55＝分解系＋微生物群＋好気/嫌気比率など）
+- HealthBookの枠組み（問診×疾病マトリクス、腸内環境重視）
+- プロジェクト統合方向（AGRIX / MBT / HealthBook）
+    
+👉 つまり  
+**「構造理解レベル」であり、「数値・実験・係数レベル」は未保持**
+
+### ② 不足している致命的要素
+
+今回の要件（再現性・投資判断レベル）では、以下が必須：
+
+#### MBT55
+- 微生物群の具体種 or 機能分類（55内訳）
+- 分解対象ごとの実測速度（デンプン・タンパク・脂質・セルロース）
+- 好気/嫌気のダイナミクスデータ
+- 温度・pH応答カーブ（実測 or 仮定）
+    
+#### HealthBook
+- 137疾病マトリクス（定量ロジック）
+- 200問診 → パラメータ変換式
+- 腸内細菌と疾病の重み係数
+- SCFA・代謝物と疾患リスクの関数形
+    
+#### MBT Probiotics
+- 菌株ごとの機能（SCFA生成、抗炎症など）
+- 投与量 → 効果の用量反応曲線
+    
+### ③ なぜ必要か（重要）
+
+現在のモデルは：
+
+- ✔ 数理構造 → 完成
+- ❌ パラメータ → 仮定値（研究レベル）
+- ❌ 実データフィット → 未実施
+    
+このままでは：
+
+- 投資判断 ❌
+- Microsoft Research評価 ❌
+- IRR算出精度 ❌
+    
+### ④ 推奨アップロード戦略（最適）
+
+すべて一度に出す必要はありません。以下優先順位：
+
+#### Tier 1（最優先）
+
+1. MBT55 微生物構成・機能分類
+2. 分解実験データ（あれば最強）
+    
+#### Tier 2
+
+3. HealthBook 疾病ロジック
+4. 腸内細菌との対応表
+    
+#### Tier 3
+
+5. プロバイオティクス仕様
+6. 臨床 or 観察データ
+    
+### ⑤ モデル統合への影響
+
+アップロード後に可能になること：
+
+- パラメータ推定（Bayesian / MLE）
+- 個別最適化（Precision HealthBook）
+- PBPEとの直接接続（実数値IRR）
+- GHG削減の実測リンク
+    
+---
+
+なお、以下は、既に準備してあるため不要です。
+
+HealthBookの特徴と推論エンジンなど☛重要
+[[■2. HealthBook推論エンジンを実装]]
+[[HB5. HealthBook Platform 統合アーキテクチャ（詳細説明付き）]]
+
+200項目問診JSONファイル☛healthBook by Claudeでシミュレーション作成済み
+[[questionnaire_200_jp.new.json]]
+[[questionnaire_200_en.new.json]]
+
+MBT漢方代謝ライブラリーJSONファイル☛重要
+[[kampo_metabolic_library.json]]
+
+137疾病マトリックスJSONファイル☛重要
+[[00_inbox/07_HealthBook/disease_matrix_137.json]]
+
+
+[[00_inbox/03_MBT55/MBT55による炭素排出ゼロ肥料のグリーン・プレミアム考察|■MBT55による炭素排出ゼロ肥料のグリーン・プレミアム考察]]
+[[HB6. HealthBook Platform 実装工程計画書]]
+[[HB7. Pydroidでも動作するシンプルなデモシステム_MS折衝用]]
