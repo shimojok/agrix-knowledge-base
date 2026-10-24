@@ -2,7 +2,7 @@
 ### Azure BioNexus 買収戦略 GitHub設計 Gem13
 ## Dashboardあり
 
-[[50. LinkedIn Newsletter 起草案]]☛
+[[PMOS50. LinkedIn Newsletter 起草案]]☛
 [GitHub - shimojok/Azure-PMOS: The Operating System for a Sustainable Future. Synchronizing planetary health with human metabolism via Microsoft Azure. From 2011 Iwanuma evidence to global Bio-Security. · GitHub](https://github.com/shimojok/Azure-PMOS)
 [curly-space-succotash-69xj46v6rpvg3567q.github.dev/pf-signin?id=jolly-ocean-1df95c6&cluster=jpe1&name=curly-space-succotash-69xj46v6rpvg3567q&port=8501&pb=https%3A%2F%2Fcurly-space-succotash-69xj46v6rpvg3567q-8501.app.github.dev%2Fauth%2Fpostback%2Ftunnel%3Ftunnel%3D1&cid=46f0adcd-6259-47cb-a7fa-019e02fc50bd](https://curly-space-succotash-69xj46v6rpvg3567q-8501.app.github.dev/)
 

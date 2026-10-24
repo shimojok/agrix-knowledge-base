@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "a1c56eb23bd9dad6",
+        "id": "23f7cc90657c62aa",
         "type": "tabs",
         "children": [
           {
-            "id": "194d37c8a753be5d",
+            "id": "737e717b103febd5",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "dailynote/2026-09-18.md",
+                "file": "2026-10-17.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,16 +28,136 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "2026-09-18"
+              "title": "2026-10-17"
             }
           },
           {
-            "id": "45483410065da2ce",
+            "id": "be83a767383e9b73",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Ds005. Gemini提案と本提案の比較・優位性整理.md",
+                "file": "11_AI Development/Semantic Notes Vault MCP は 利便性があるか？.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Semantic Notes Vault MCP は 利便性があるか？"
+            }
+          },
+          {
+            "id": "df88d7bc5604d299",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "2026-10-17.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "2026-10-17"
+            }
+          },
+          {
+            "id": "f069f1028eb740d8",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "2026-10-17.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "2026-10-17"
+            }
+          },
+          {
+            "id": "3f4ca2974728f305",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "2026-10-17.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "2026-10-17"
+            }
+          },
+          {
+            "id": "cca74d0932a80d58",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "2026-10-17.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "2026-10-17"
+            }
+          },
+          {
+            "id": "13528dc5540cf654",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "2026-10-21.md",
                 "mode": "preview",
                 "source": false,
                 "backlinks": true,
@@ -52,10 +172,117 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Ds005. Gemini提案と本提案の比較・優位性整理"
+              "title": "2026-10-21"
+            }
+          },
+          {
+            "id": "fb3e1578e9f97caf",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "2026-10-21.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "2026-10-21"
+            }
+          },
+          {
+            "id": "95bd0584f644b288",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "2026-10-21.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "2026-10-21"
+            }
+          },
+          {
+            "id": "53735276c24dfb42",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "2026-10-21.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "2026-10-21"
+            }
+          },
+          {
+            "id": "fa47fe468a0507b9",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "AIR012..md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "AIR012."
+            }
+          },
+          {
+            "id": "0a2ce7c3945645f5",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "新規タブ"
             }
           }
-        ]
+        ],
+        "currentTab": 10
       }
     ],
     "direction": "vertical"
@@ -85,7 +312,7 @@
         "state": {
           "type": "search",
           "state": {
-            "query": "tag:#ここまでが現在の構造agrix-knowledge-baseの構造",
+            "query": "Ollama ",
             "matchingCase": false,
             "explainSearch": false,
             "collapseAll": false,
@@ -109,6 +336,33 @@
           },
           "icon": "lucide-tags",
           "title": "タグ"
+        }
+      },
+      {
+        "id": "12cd2b0dac50b8a9",
+        "type": "leaf",
+        "state": {
+          "type": "all-properties",
+          "state": {
+            "sortOrder": "frequency",
+            "showSearch": false,
+            "searchQuery": ""
+          },
+          "icon": "lucide-archive",
+          "title": "すべてのプロパティ"
+        }
+      },
+      {
+        "id": "8d08c9da776b49e3",
+        "type": "leaf",
+        "state": {
+          "type": "bookmarks",
+          "state": {
+            "showSearch": false,
+            "searchQuery": ""
+          },
+          "icon": "lucide-bookmark",
+          "title": "ブックマーク"
         }
       }
     ],
@@ -179,48 +433,50 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "command-palette:コマンドパレットを開く": false,
       "daily-notes:今日のデイリーノートを開く": false,
       "bases:新規ベースを作成": false,
+      "templates:テンプレートを挿入": false,
       "templater-obsidian:Templater": false
     }
   },
-  "active": "194d37c8a753be5d",
+  "active": "fa47fe468a0507b9",
   "lastOpenFiles": [
-    "Ds012. 情報提供_DeepSeek_0919.md",
-    "dailynote/2026-09-18.md",
-    "04_AGRIX/AKG005. AGRIX Knowledge Base System (BioNexus Engine).md",
-    "Ds005. Gemini提案と本提案の比較・優位性整理.md",
-    "2026-09-18.md",
-    "Ds007. 送っていただきたい内容（優先順）.md",
-    "MCP（Model Context Protocol）.md",
-    "Ds001. ローカルVaultへのアクセス基盤.md",
-    "Ds006. 何が起きていたのか（ハルシネーションの正体）.md",
-    "Ds004. 過去の失敗の本質的原因（あなたの診断は正しい）.md",
-    "Ds003. 基本方針：3プラットフォーム×1知識基盤.md",
-    "W013_a7. 実環境に合わせた正しい統合フォルダ構造.md",
-    "貴方が示したフォルダ構造の矛盾.md",
-    "2026-09-16.md",
-    "W014_c8. フォルダ構造の変更.md",
-    "W009_ab6. 推奨ディレクトリ構造.md",
-    "Ds002. AGRIX Project の全体像（Vault記述からの抽出）.md",
-    "00_inbox/DS004..md",
-    "Ds003..md",
-    "dailynote/2026-09-08.md",
-    "AKG024. 浜田プロトコル.md",
-    "AKG023. 全体進行順序の確認と位置づけ（漏れチェック）.md",
-    "AKG022. 「腸内細菌_MBT55 代謝」が明かすパラダイムシフト（新規性）.md",
-    "AKG021. 科学的・構造的メカニズム：HealthBook 2.0 (MBT Probiotics).md",
-    "AKG020. 3つのプラットフォームに対する基本方針.md",
-    "AKG019. 統合型対話＆メタボリック・シミュレーション Web システム◎.md",
-    "slides/PH-API_s.pdf",
-    "slides/Coffee_Carbon_Currency_s.pdf",
-    "slides/AquaGrid_National_Resilience_OS_compressed.pdf",
-    "slides/AquaGrid_Lagos_Urban_OS_en_compressed.pdf",
-    "slides/AquaGrid_Lagos_Urban_OS_compressed.pdf",
-    "03_MBT55/MBT55(原名NB菌) 菌数.pdf",
-    "Templates/AGRIX",
-    "Templates",
-    "00_inbox/07_HealthBook",
-    "dailynote/2026-07-02.md.0.tmp"
+    "2026-10-17.md",
+    "AIR012..md",
+    "AIR011. なぜローカルRAGが必須なのか（因果構造）.md",
+    "2026-10-15.md",
+    "PPI002. Planetary Bioeconomic Finance Data Science.md",
+    "PPI001. BioNexus Knowledge Base 統合構築計画 v1.0.md",
+    "dailynote/2026-10-14.md",
+    "2026-10-12.md",
+    "BKB005. BioNexus-Knowledge-Base — 統合構想の正式確定.md",
+    "BKB001. データサイエンス総合フレームワーク.md",
+    "dailynote/2026-10-09.md",
+    "dailynote/2026-10-05.md",
+    "dailynote/2026-10-03.md",
+    "AIR010. 検索エージェント → 選別エージェント → 文書作成エージェント → GitHub への自動格納というパイプライン.md",
+    "AIR009. 実装方法.md",
+    "2026-10-21.md",
+    "AIR007. STEP 4｜Planetary Knowledge Pipeline v1.0（完全自動化パイプライン）.md",
+    "AIR008. Planetary Knowledge Pipeline v1.0（Python実装）.md",
+    "main.py.md",
+    "github_sync.py.md",
+    "composer.py.md",
+    "scorer.py.md",
+    "normalize.py.md",
+    "threads.py.md",
+    "gatesnotes.py.md",
+    "linkedin.py.md",
+    "slides/MBT55 From Microorganisms to Civilliation's OS.pdf",
+    "slides/MBT Sustainable Cycle_en.pdf",
+    "slides/MBT55_Carbon_Intelligence_compressed.pdf",
+    "slides/Metabolic_Regeneration_Bio-Positive_Future_s.pdf",
+    "slides/岩沼地区塩害除去_東日本大震災直後.pdf",
+    "slides/The_Planetary_Health_Unified_API_s.pdf",
+    "00_inbox/04_AGRIX",
+    "PBPE.base",
+    "無題のファイル.base",
+    "00_inbox/06_PBPE"
   ]
 }

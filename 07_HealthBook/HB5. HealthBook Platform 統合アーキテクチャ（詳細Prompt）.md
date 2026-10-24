@@ -1553,5 +1553,5 @@ class HealthBookGenomics:
 
 すぐに始められるシンプルなバージョンから、段階的に機能を追加していくことをお勧めします。まずはコアエンジン部分を実装し、実際の問診データでテストしながら改良していくのが良いでしょう。
 
-[[HB6. HealthBook Platform 実装工程計画書]]
+[[HB006. HealthBook Platform 実装工程計画書]]
 

@@ -1,0 +1,2318 @@
+This file is a merged representation of the entire codebase, combined into a single document by Repomix.
+
+<file_summary>
+This section contains a summary of this file.
+
+<purpose>
+This file contains a packed representation of the entire repository's contents.
+It is designed to be easily consumable by AI systems for analysis, code review,
+or other automated processes.
+</purpose>
+
+<file_format>
+The content is organized as follows:
+1. This summary section
+2. Repository information
+3. Directory structure
+4. Repository files (if enabled)
+5. Multiple file entries, each consisting of:
+  - File path as an attribute
+  - Full contents of the file
+</file_format>
+
+<usage_guidelines>
+- This file should be treated as read-only. Any changes should be made to the
+  original repository files, not this packed version.
+- When processing this file, use the file path to distinguish
+  between different files in the repository.
+- Be aware that this file may contain sensitive information. Handle it with
+  the same level of security as you would the original repository.
+</usage_guidelines>
+
+<notes>
+- Some files may have been excluded based on .gitignore rules and Repomix's configuration
+- Binary files are not included in this packed representation. Please refer to the Repository Structure section for a complete list of file paths, including binary files
+- Files matching patterns in .gitignore are excluded
+- Files matching default ignore patterns are excluded
+- Files are sorted by Git change count (files with more changes are at the bottom)
+</notes>
+
+</file_summary>
+
+<directory_structure>
+ai_agents/explainability/explainability_engine.py
+ai_agents/insurance_underwriting/underwriting_agent.py
+ai_agents/medical_assistant/clinical_agent.py
+ai_agents/risk_explainer/explainer_agent.py
+ai_agents/triage_agent/triage_agent.py
+data/disease/disease_mi_matrix_v2.json
+engines/acetylcoa_atp/acetylcoa_engine.py
+engines/disease_matrix/disease_engine_v2.py
+engines/disease_matrix/disease_engine.py
+engines/endocrine_axis/hpa_axis.py
+engines/estrobolome/estrobolome_engine.py
+engines/inflammation_immune/inflammation_engine.py
+engines/oriental_medicine/kampo_engine_v2.py
+engines/oriental_medicine/kampo_engine.py
+engines/phenotyping/questionnaire_engine.py
+engines/probiotics_screening/mks_engine.py
+interfaces/api_docs/api_docs_generator.py
+interfaces/insurance/api/insurance_api.py
+interfaces/marketplace/healthbook_kpis.py
+interfaces/marketplace/healthbook_registry.py
+interfaces/medical/api/medical_api.py
+interfaces/probiotics/api/probiotics_api.py
+platform/orchestrator/causal_map.py
+platform/orchestrator/engine_orchestrator.py
+platform/orchestrator/snapshot_builder.py
+platform/pipelines/insurance_pipeline.py
+platform/pipelines/medical_pipeline.py
+platform/pipelines/probiotics_pipeline.py
+README.md
+tests/e2e/test_medical_api.py
+tests/integration/test_medical_pipeline.py
+tests/unit/test_acetylcoa_engine.py
+tests/unit/test_estrobolome_engine.py
+tests/unit/test_phenotyping_engine.py
+ui/dashboard/components/CausalMapView.tsx
+ui/dashboard/components/DiseaseRiskMap.tsx
+ui/dashboard/components/EngineSummary.tsx
+ui/dashboard/components/KampoPanel.tsx
+ui/dashboard/components/ProbioticsPanel.tsx
+ui/dashboard/components/SnapshotCard.tsx
+ui/dashboard/page.tsx
+ui/lib/api/dashboard.ts
+ui/lib/api/medical.ts
+ui/lib/api/probiotics.ts
+ui/lib/api/user.ts
+ui/lib/types.ts
+ui/medical/components/ClinicalEngineView.tsx
+ui/medical/components/ClinicalReport.tsx
+ui/medical/components/KampoClinicalPanel.tsx
+ui/medical/components/QuestionnaireForm.tsx
+ui/medical/page.tsx
+ui/pbpe/healthbook/components/CausalPanel.tsx
+ui/pbpe/healthbook/components/DiseasePanel.tsx
+ui/pbpe/healthbook/components/EnginePanel.tsx
+ui/pbpe/healthbook/components/KampoPanel.tsx
+ui/pbpe/healthbook/components/KPIPanel.tsx
+ui/pbpe/healthbook/components/ProbioticsPanel.tsx
+ui/pbpe/healthbook/components/SnapshotPanel.tsx
+ui/pbpe/healthbook/page.tsx
+ui/probiotics/components/DiseaseTargetView.tsx
+ui/probiotics/components/MBT55Recommendation.tsx
+ui/probiotics/components/PathwayCascadeView.tsx
+ui/probiotics/components/SubstrateSelector.tsx
+ui/probiotics/page.tsx
+</directory_structure>
+
+<files>
+This section contains the contents of the repository's files.
+
+<file path="ai_agents/explainability/explainability_engine.py">
+# ai_agents/explainability/explainability_engine.py
+
+class ExplainabilityEngine:
+    """
+    HealthBook-MI-Probiome-OS
+    Explainability Engine (v1.0)
+    -----------------------------------------
+    - エンジン結果を因果的に説明
+    - 医療機関・保険会社向けの説明責任モード
+    - Causal Map と連携して「理由」を生成
+    """
+
+    def __init__(self, causal_map):
+        self.causal_map = causal_map
+
+    # ---------------------------------------------------------
+    # 1. 因果連鎖の説明（MBT55 → Estrobolome → ATP → Inflammation）
+    # ---------------------------------------------------------
+    def explain_causal_chain(self, causal_results):
+        return {
+            "mbt55_effect": self._explain_mbt55(causal_results),
+            "estrobolome_effect": self._explain_estrobolome(causal_results),
+            "acetylcoa_effect": self._explain_acetylcoa(causal_results),
+            "atp_effect": self._explain_atp(causal_results),
+            "inflammation_effect": self._explain_inflammation(causal_results),
+            "disease_risk_reason": self._explain_disease_risk(causal_results)
+        }
+
+    def _explain_mbt55(self, c):
+        if c["estrobolome_score_causal"] < 40:
+            return "MBT55 activity is low, reducing SCFA and bile acid modulation."
+        return "MBT55 activity supports SCFA and bile acid balance."
+
+    def _explain_estrobolome(self, c):
+        if c["estrobolome_score_causal"] < 30:
+            return "Estrobolome instability detected, affecting hormone metabolism."
+        return "Estrobolome activity is stable."
+
+    def _explain_acetylcoa(self, c):
+        if c["acetylcoa_index_causal"] < 40:
+            return "Low Acetyl-CoA production reduces mitochondrial energy flux."
+        return "Acetyl-CoA production is adequate."
+
+    def _explain_atp(self, c):
+        if c["atp_causal"] < 40:
+            return "ATP production is insufficient, increasing inflammatory susceptibility."
+        return "ATP production is stable."
+
+    def _explain_inflammation(self, c):
+        if c["inflammation_causal"] > 70:
+            return "High inflammation load detected due to low ATP or high oxidative stress."
+        return "Inflammation load is within normal range."
+
+    def _explain_disease_risk(self, c):
+        if c["disease_risk_causal"] > 70:
+            return "Disease risk is elevated due to combined metabolic and inflammatory factors."
+        return "Disease risk remains moderate."
+
+    # ---------------------------------------------------------
+    # 2. 医療機関向け説明（Clinical Accountability）
+    # ---------------------------------------------------------
+    def clinical_explanation(self, snapshot, engine_results, causal_results):
+        return {
+            "summary": "Clinical explanation of metabolic, hormonal, and inflammatory status.",
+            "causal_chain": self.explain_causal_chain(causal_results),
+            "clinical_implications": self._clinical_implications(engine_results)
+        }
+
+    def _clinical_implications(self, engine_results):
+        phenotype = engine_results["phenotype"]["phenotype"]
+        inflammation = engine_results["inflammation"]["inflammation_load"]
+
+        if phenotype == "Severe metabolic deviation":
+            return "Severe metabolic deviation requires clinical follow-up."
+        if inflammation > 70:
+            return "High inflammation load suggests systemic inflammatory risk."
+        return "Metabolic status is stable."
+
+    # ---------------------------------------------------------
+    # 3. 保険会社向け説明（Underwriting Accountability）
+    # ---------------------------------------------------------
+    def underwriting_explanation(self, decision, causal_results):
+        reason = decision["reason"]
+        causal_chain = self.explain_causal_chain(causal_results)
+
+        return {
+            "decision": decision["decision"],
+            "reason": reason,
+            "causal_factors": causal_chain
+        }
+</file>
+
+<file path="ai_agents/insurance_underwriting/underwriting_agent.py">
+# ai_agents/insurance_underwriting/underwriting_agent.py
+
+class UnderwritingAgent:
+    """
+    HealthBook-MI-Probiome-OS
+    AI Underwriting Agent
+    -----------------------------------------
+    - InsurancePipeline を利用
+    - 引受判断を自然言語で説明
+    """
+
+    def __init__(self, insurance_pipeline):
+        self.pipeline = insurance_pipeline
+
+    def run(self, responses, nutrition, mbt_data, estro_data, mito_data, lifestyle):
+        results = self.pipeline.run(
+            responses, nutrition, mbt_data, estro_data, mito_data, lifestyle
+        )
+
+        decision = results["underwriting_decision"]
+        explanation = self._explain(decision)
+
+        return {
+            "decision": decision,
+            "explanation": explanation,
+            "risk_profile": results["risk_profile"]
+        }
+
+    def _explain(self, decision):
+        if decision["decision"] == "Decline":
+            return "Risk level is too high for underwriting."
+        if decision["decision"] == "Postpone":
+            return "Temporary metabolic instability detected."
+        return "Risk acceptable for underwriting."
+</file>
+
+<file path="ai_agents/medical_assistant/clinical_agent.py">
+# ai_agents/medical_assistant/clinical_agent.py
+
+class ClinicalAgent:
+    """
+    HealthBook-MI-Probiome-OS
+    AI Clinical Assistant Agent
+    -----------------------------------------
+    - MedicalPipeline を利用
+    - 医療機関向け診療補助レポート生成
+    """
+
+    def __init__(self, medical_pipeline, explainer_agent):
+        self.pipeline = medical_pipeline
+        self.explainer = explainer_agent
+
+    def run(self, responses, nutrition, mbt_data, estro_data, mito_data, lifestyle):
+        results = self.pipeline.run(
+            responses, nutrition, mbt_data, estro_data, mito_data, lifestyle
+        )
+
+        explanation = self.explainer.explain(results)
+
+        return {
+            "clinical_report": {
+                "snapshot": results["snapshot"],
+                "engine_results": results,
+                "explanation": explanation
+            }
+        }
+</file>
+
+<file path="ai_agents/risk_explainer/explainer_agent.py">
+# ai_agents/risk_explainer/explainer_agent.py
+
+class RiskExplainerAgent:
+    """
+    HealthBook-MI-Probiome-OS
+    AI Risk Explainer Agent
+    -----------------------------------------
+    - エンジン結果を自然言語で説明
+    - 医療機関・保険会社・ユーザー向け
+    """
+
+    def explain(self, engine_results):
+        phenotype = engine_results["phenotype"]["phenotype"]
+        estro = engine_results["estrobolome"]["estrobolome_score"]
+        acetyl = engine_results["acetylcoa"]["mi_acetylcoa_index"]
+        inflammation = engine_results["inflammation"]["inflammation_load"]
+
+        return {
+            "summary": self._summary(phenotype, estro, acetyl, inflammation),
+            "details": {
+                "phenotype": self._explain_phenotype(phenotype),
+                "estrobolome": self._explain_estrobolome(estro),
+                "acetylcoa": self._explain_acetylcoa(acetyl),
+                "inflammation": self._explain_inflammation(inflammation)
+            }
+        }
+
+    def _summary(self, phenotype, estro, acetyl, inflammation):
+        return (
+            f"Metabolic phenotype: {phenotype}. "
+            f"Estrobolome score: {estro}. "
+            f"Acetyl-CoA index: {acetyl}. "
+            f"Inflammation load: {inflammation}."
+        )
+
+    def _explain_phenotype(self, phenotype):
+        if phenotype == "Severe metabolic deviation":
+            return "Your metabolic pattern shows significant deviation."
+        if phenotype == "Moderate deviation":
+            return "Moderate metabolic imbalance detected."
+        return "Metabolic pattern is relatively stable."
+
+    def _explain_estrobolome(self, score):
+        if score < 30:
+            return "Estrobolome activity is low, suggesting hormonal instability."
+        if score < 60:
+            return "Estrobolome activity is moderate."
+        return "Estrobolome activity is stable."
+
+    def _explain_acetylcoa(self, index):
+        if index < 40:
+            return "Acetyl-CoA production is low, suggesting energy deficiency."
+        if index < 70:
+            return "Acetyl-CoA production is moderate."
+        return "Acetyl-CoA production is stable."
+
+    def _explain_inflammation(self, load):
+        if load > 70:
+            return "High inflammation load detected."
+        if load > 40:
+            return "Moderate inflammation load."
+        return "Inflammation load is low."
+</file>
+
+<file path="ai_agents/triage_agent/triage_agent.py">
+# ai_agents/triage_agent/triage_agent.py
+
+class TriageAgent:
+    """
+    HealthBook-MI-Probiome-OS
+    AI Triage Agent
+    -----------------------------------------
+    - SnapshotBuilder → MedicalPipeline
+    - 症状・問診・代謝指標から初期トリアージを生成
+    """
+
+    def __init__(self, medical_pipeline):
+        self.pipeline = medical_pipeline
+
+    def run(self, responses, nutrition, mbt_data, estro_data, mito_data, lifestyle):
+        results = self.pipeline.run(
+            responses, nutrition, mbt_data, estro_data, mito_data, lifestyle
+        )
+
+        phenotype = results["phenotype"]["phenotype"]
+        inflammation = results["inflammation"]["inflammation_load"]
+        hormone = results["estrobolome"]["hormone_balance_pattern"]
+
+        triage = self._triage_logic(phenotype, inflammation, hormone)
+
+        return {
+            "triage": triage,
+            "engine_results": results
+        }
+
+    def _triage_logic(self, phenotype, inflammation, hormone):
+        if phenotype == "Severe metabolic deviation":
+            return "High priority: metabolic instability"
+        if inflammation > 70:
+            return "Medium priority: inflammation risk"
+        if hormone == "low_estrogen":
+            return "Hormonal imbalance: follow-up recommended"
+        return "Low priority: stable"
+</file>
+
+<file path="data/disease/disease_mi_matrix_v2.json">
+{
+  "version": "2.0",
+  "diseases": [
+    {
+      "id": "D001",
+      "name": "Type 2 Diabetes",
+      "system": "endocrine",
+      "description": "Insulin resistance and impaired glucose metabolism.",
+      "metabolic_dependence": {
+        "acetylcoa": 0.8,
+        "estrobolome": 0.4,
+        "mbt55": 0.6,
+        "inflammation": 0.7
+      },
+      "pathways": ["PATH_01", "PATH_03"],
+      "risk_thresholds": {
+        "phenotype_score": 80,
+        "inflammation_load": 60,
+        "disease_risk_causal": 70
+      },
+      "recommended_kampo": ["K001", "K015"],
+      "contraindicated_kampo": ["K099"]
+    }
+  ]
+}
+</file>
+
+<file path="engines/acetylcoa_atp/acetylcoa_engine.py">
+# engines/acetylcoa_atp/acetylcoa_engine.py
+
+class AcetylCoAEngine:
+    def __init__(self):
+        pass
+
+    def substrate_flux(self, carb, fat, protein, scfa):
+        return {
+            "glucose_pathway": carb * 0.8,
+            "fatty_acid_pathway": fat * 0.7,
+            "amino_acid_pathway": protein * 0.6,
+            "scfa_pathway": scfa * 1.0
+        }
+
+    def compute_index(self, flux):
+        base = (
+            flux["glucose_pathway"] * 0.25 +
+            flux["fatty_acid_pathway"] * 0.25 +
+            flux["amino_acid_pathway"] * 0.20 +
+            flux["scfa_pathway"] * 0.30
+        )
+        return min(base, 100)
+
+    def run(self, carb, fat, protein, scfa):
+        flux = self.substrate_flux(carb, fat, protein, scfa)
+        index = self.compute_index(flux)
+        return {"flux": flux, "mi_acetylcoa_index": index}
+</file>
+
+<file path="engines/disease_matrix/disease_engine_v2.py">
+class DiseaseMatrixEngineV2:
+    def __init__(self, disease_matrix):
+        self.matrix = disease_matrix["diseases"]
+
+    def match(self, causal_risk, phenotype_score):
+        results = []
+        for d in self.matrix:
+            threshold = d["risk_thresholds"]["disease_risk_causal"]
+            if causal_risk >= threshold or phenotype_score >= d["risk_thresholds"]["phenotype_score"]:
+                results.append({
+                    "disease_id": d["id"],
+                    "name": d["name"],
+                    "system": d["system"],
+                    "recommended_kampo": d["recommended_kampo"],
+                    "contraindicated_kampo": d["contraindicated_kampo"]
+                })
+        return results
+</file>
+
+<file path="engines/disease_matrix/disease_engine.py">
+# engines/disease_matrix/disease_engine.py
+
+class DiseaseMatrixEngine:
+    def __init__(self, disease_matrix):
+        self.matrix = disease_matrix
+
+    def match(self, phenotype, estro_score, acetylcoa_index):
+        results = []
+        for d in self.matrix:
+            if phenotype == "Severe metabolic deviation":
+                results.append(d["disease_id"])
+        return results
+</file>
+
+<file path="engines/endocrine_axis/hpa_axis.py">
+# engines/endocrine_axis/hpa_axis.py
+
+class HPAAxisEngine:
+    def __init__(self):
+        pass
+
+    def compute(self, stress, sleep_quality):
+        score = (100 - stress) * 0.6 + sleep_quality * 0.4
+        return max(0, min(score, 100))
+</file>
+
+<file path="engines/estrobolome/estrobolome_engine.py">
+# engines/estrobolome/estrobolome_engine.py
+
+class EstrobolomeEngine:
+    def __init__(self):
+        pass
+
+    def compute_score(self, scfa, bile_acid, beta_glucuronidase_risk):
+        base = (scfa * 0.4) + (bile_acid * 0.3)
+        penalty = (beta_glucuronidase_risk * 0.5)
+        score = max(0, base - penalty)
+        return min(score, 100)
+
+    def hormone_pattern(self, score):
+        if score < 30:
+            return "low_estrogen"
+        elif score < 60:
+            return "unstable"
+        else:
+            return "balanced"
+
+    def run(self, scfa, bile_acid, beta_glucuronidase_risk):
+        score = self.compute_score(scfa, bile_acid, beta_glucuronidase_risk)
+        return {
+            "estrobolome_score": score,
+            "hormone_balance_pattern": self.hormone_pattern(score)
+        }
+</file>
+
+<file path="engines/inflammation_immune/inflammation_engine.py">
+# engines/inflammation_immune/inflammation_engine.py
+
+class InflammationEngine:
+    def __init__(self):
+        pass
+
+    def compute(self, scfa, bile_acid, oxidative_stress):
+        anti = scfa * 0.5 + bile_acid * 0.3
+        pro = oxidative_stress * 0.8
+        load = max(0, min(100, pro - anti))
+        return {"inflammation_load": load}
+</file>
+
+<file path="engines/oriental_medicine/kampo_engine_v2.py">
+import json
+from pathlib import Path
+
+class KampoEngineV2:
+    def __init__(self, formulas_dir, herbs_dir):
+        self.formulas_dir = Path(formulas_dir)
+        self.herbs_dir = Path(herbs_dir)
+
+    def load_formula(self, formula_id):
+        file = self.formulas_dir / f"{formula_id}.json"
+        return json.load(open(file))
+
+    def load_herb(self, herb_id):
+        file = self.herbs_dir / f"{herb_id}.json"
+        return json.load(open(file))
+
+    def recommend_for_disease(self, disease_entry):
+        formulas = disease_entry["recommended_kampo"]
+        results = []
+        for fid in formulas:
+            formula = self.load_formula(fid)
+            herbs = [self.load_herb(hid) for hid in formula["herbs"]]
+            results.append({
+                "formula": formula,
+                "herbs": herbs
+            })
+        return results
+</file>
+
+<file path="engines/oriental_medicine/kampo_engine.py">
+# engines/oriental_medicine/kampo_engine.py
+
+import json
+
+class KampoEngine:
+    def __init__(self, disease_matrix_file):
+        self.matrix = json.load(open(disease_matrix_file))["disease_matrix"]
+
+    def recommend(self, disease_id):
+        for d in self.matrix:
+            if d["disease_id"] == disease_id:
+                return {
+                    "recommended": d["recommended_kampo"],
+                    "contra": d["contraindicated_kampo"]
+                }
+        return None
+</file>
+
+<file path="engines/phenotyping/questionnaire_engine.py">
+# engines/phenotyping/questionnaire_engine.py
+
+import json
+
+class PhenotypingEngine:
+    def __init__(self, questionnaire_file):
+        self.questions = json.load(open(questionnaire_file))["questions"]
+
+    def score_responses(self, responses):
+        """
+        responses = { "1": 1, "2": 0, ... }
+        """
+        total = 0
+        details = []
+        for qid, ans in responses.items():
+            q = self.questions[qid]
+            score = ans * q["weight"]
+            total += score
+            details.append({
+                "id": qid,
+                "question": q["question"],
+                "score": score,
+                "impact": q["metabolic_impact"],
+                "related_diseases": q["related_diseases"]
+            })
+        return {"total_score": total, "details": details}
+
+    def classify_phenotype(self, total_score):
+        if total_score > 120:
+            return "Severe metabolic deviation"
+        elif total_score > 80:
+            return "Moderate deviation"
+        else:
+            return "Mild deviation"
+
+    def run(self, responses):
+        scored = self.score_responses(responses)
+        phenotype = self.classify_phenotype(scored["total_score"])
+        return {**scored, "phenotype": phenotype}
+</file>
+
+<file path="engines/probiotics_screening/mks_engine.py">
+# engines/probiotics_screening/mks_engine.py
+
+import json
+from pathlib import Path
+
+class ProbioticsScreeningEngine:
+    def __init__(self, pathways_file, probiotic_matrix_file, animal_library_file):
+        self.pathways = json.load(open(pathways_file))
+        self.matrix = json.load(open(probiotic_matrix_file))
+        self.animals = json.load(open(animal_library_file))
+
+    def predict_metabolites(self, substrate_name):
+        """Return predicted metabolites from master_pathways.json"""
+        results = []
+        for pw in self.pathways["pathways"]:
+            if substrate_name in pw["substrate"]:
+                results.append({
+                    "substrate": pw["substrate"],
+                    "stage1": pw["cascade_stage_1"]["intermediate"],
+                    "stage2": pw["cascade_stage_2"]["intermediate"],
+                    "final": pw["cascade_stage_3"]["final_metabolite"],
+                    "disease_targets": pw["disease_targets"]
+                })
+        return results
+
+    def recommend_mbt_meta_strain(self, path_score_dict):
+        """Recommend MBT_META strain based on PATH_01〜05 deficiency"""
+        rules = self.matrix["screening_logic"]["rules"]
+        recommendations = []
+        for rule in rules:
+            path = rule["if_path_low"]
+            if path_score_dict.get(path, 100) < 50:
+                recommendations.append({
+                    "path": path,
+                    "recommend": rule["recommend"],
+                    "reason": rule["reason"]
+                })
+        return recommendations
+
+    def run(self, substrate_name, path_scores):
+        return {
+            "metabolites": self.predict_metabolites(substrate_name),
+            "mbt_meta_recommendations": self.recommend_mbt_meta_strain(path_scores)
+        }
+</file>
+
+<file path="interfaces/api_docs/api_docs_generator.py">
+# interfaces/api_docs/api_docs_generator.py
+
+from fastapi import FastAPI
+
+class APIDocsGenerator:
+    """
+    HealthBook-MI-Probiome-OS
+    API Documentation Generator
+    -----------------------------------------
+    - FastAPI の OpenAPI を拡張
+    - 医療機関・保険会社向けの説明責任モード
+    """
+
+    def __init__(self, app: FastAPI):
+        self.app = app
+
+    def generate_summary(self):
+        return {
+            "title": self.app.title,
+            "version": self.app.version if hasattr(self.app, "version") else "1.0",
+            "routes": [
+                {
+                    "path": route.path,
+                    "name": route.name,
+                    "methods": list(route.methods)
+                }
+                for route in self.app.routes
+            ]
+        }
+
+    def generate_medical_doc(self):
+        return {
+            "purpose": "Medical Evaluation API",
+            "input": {
+                "responses": "200問診の回答",
+                "nutrition": "栄養データ（carb, fat, protein）",
+                "mbt_data": "MBT55代謝データ（SCFA, Bile Acid）",
+                "estro_data": "エストロボローム関連データ",
+                "mito_data": "ミトコンドリア関連データ",
+                "lifestyle": "生活習慣データ"
+            },
+            "output": {
+                "phenotype": "代謝偏位（Phenotype）",
+                "estrobolome": "ホルモン代謝指標",
+                "acetylcoa": "エネルギー代謝指標",
+                "inflammation": "炎症負荷",
+                "explanation": "AIエージェントによる説明"
+            }
+        }
+
+    def generate_insurance_doc(self):
+        return {
+            "purpose": "Insurance Underwriting API",
+            "output": {
+                "decision": "引受判断（Accept / Postpone / Decline）",
+                "explanation": "AIエージェントによる説明",
+                "risk_profile": "代謝・炎症・ホルモンの総合リスク"
+            }
+        }
+
+    def generate_probiotics_doc(self):
+        return {
+            "purpose": "MBT55 Probiotics Screening API",
+            "output": {
+                "metabolites": "生成される代謝産物",
+                "mbt_meta_recommendations": "推奨MBT_META菌株",
+                "engine_results": "代謝OSの結果"
+            }
+        }
+</file>
+
+<file path="interfaces/insurance/api/insurance_api.py">
+# interfaces/insurance/api/insurance_api.py
+
+from fastapi import FastAPI
+from pydantic import BaseModel
+
+class InsuranceInput(BaseModel):
+    responses: dict
+    nutrition: dict
+    mbt_data: dict
+    estro_data: dict
+    mito_data: dict
+    lifestyle: dict
+
+def create_insurance_api(insurance_pipeline, underwriting_agent):
+    app = FastAPI(title="HealthBook-MI Insurance API")
+
+    @app.post("/insurance/underwrite")
+    def underwrite(input: InsuranceInput):
+        results = underwriting_agent.run(
+            input.responses,
+            input.nutrition,
+            input.mbt_data,
+            input.estro_data,
+            input.mito_data,
+            input.lifestyle
+        )
+        return results
+
+    return app
+</file>
+
+<file path="interfaces/marketplace/healthbook_kpis.py">
+# interfaces/marketplace/healthbook_kpis.py
+
+import json
+
+class HealthBookKPIs:
+    """
+    PBPE-Marketplace Integration
+    HealthBook-MI KPI Module
+    -----------------------------------------
+    - Phenotype Score
+    - Estrobolome Score
+    - AcetylCoA / ATP Index
+    - Inflammation Load
+    - Disease Risk (Causal)
+    """
+
+    def __init__(self, storage_path="pbpe_kpis.json"):
+        self.storage_path = storage_path
+        self._init_storage()
+
+    def _init_storage(self):
+        try:
+            json.load(open(self.storage_path))
+        except:
+            json.dump({"kpis": {}}, open(self.storage_path, "w"))
+
+    def update_kpis(self, user_id, causal_map_results):
+        kpis = {
+            "phenotype_score": causal_map_results.get("phenotype_score", None),
+            "estrobolome_score": causal_map_results["estrobolome_score_causal"],
+            "acetylcoa_index": causal_map_results["acetylcoa_index_causal"],
+            "atp": causal_map_results["atp_causal"],
+            "inflammation": causal_map_results["inflammation_causal"],
+            "disease_risk": causal_map_results["disease_risk_causal"]
+        }
+
+        db = json.load(open(self.storage_path))
+        db["kpis"][user_id] = kpis
+        json.dump(db, open(self.storage_path, "w"), indent=2)
+
+        return kpis
+</file>
+
+<file path="interfaces/marketplace/healthbook_registry.py">
+# interfaces/marketplace/healthbook_registry.py
+
+import json
+from datetime import datetime
+
+class HealthBookRegistry:
+    """
+    PBPE-Marketplace Integration
+    HealthBook-MI Registry Module
+    -----------------------------------------
+    - Snapshot v2 を PBPE registry に登録
+    - Engine Results を保存
+    - Disease Risk / Probiotics Recommendation を保存
+    """
+
+    def __init__(self, storage_path="pbpe_registry.json"):
+        self.storage_path = storage_path
+        self._init_storage()
+
+    def _init_storage(self):
+        try:
+            json.load(open(self.storage_path))
+        except:
+            json.dump({"records": []}, open(self.storage_path, "w"))
+
+    def register_snapshot(self, user_id, snapshot):
+        entry = {
+            "type": "snapshot",
+            "user_id": user_id,
+            "timestamp": datetime.utcnow().isoformat(),
+            "data": snapshot
+        }
+        self._save(entry)
+
+    def register_engine_results(self, user_id, engine_results):
+        entry = {
+            "type": "engine_results",
+            "user_id": user_id,
+            "timestamp": datetime.utcnow().isoformat(),
+            "data": engine_results
+        }
+        self._save(entry)
+
+    def register_disease_risk(self, user_id, disease_risk):
+        entry = {
+            "type": "disease_risk",
+            "user_id": user_id,
+            "timestamp": datetime.utcnow().isoformat(),
+            "data": disease_risk
+        }
+        self._save(entry)
+
+    def register_probiotics(self, user_id, probiotics):
+        entry = {
+            "type": "probiotics_recommendation",
+            "user_id": user_id,
+            "timestamp": datetime.utcnow().isoformat(),
+            "data": probiotics
+        }
+        self._save(entry)
+
+    def _save(self, entry):
+        db = json.load(open(self.storage_path))
+        db["records"].append(entry)
+        json.dump(db, open(self.storage_path, "w"), indent=2)
+</file>
+
+<file path="interfaces/medical/api/medical_api.py">
+# interfaces/medical/api/medical_api.py
+
+from fastapi import FastAPI
+from pydantic import BaseModel
+
+class MedicalInput(BaseModel):
+    responses: dict
+    nutrition: dict
+    mbt_data: dict
+    estro_data: dict
+    mito_data: dict
+    lifestyle: dict
+
+def create_medical_api(medical_pipeline, explainer_agent):
+    app = FastAPI(title="HealthBook-MI Medical API")
+
+    @app.post("/medical/evaluate")
+    def evaluate(input: MedicalInput):
+        results = medical_pipeline.run(
+            input.responses,
+            input.nutrition,
+            input.mbt_data,
+            input.estro_data,
+            input.mito_data,
+            input.lifestyle
+        )
+        explanation = explainer_agent.explain(results)
+        return {
+            "snapshot": results["snapshot"],
+            "engine_results": results,
+            "explanation": explanation
+        }
+
+    return app
+</file>
+
+<file path="interfaces/probiotics/api/probiotics_api.py">
+# interfaces/probiotics/api/probiotics_api.py
+
+from fastapi import FastAPI
+from pydantic import BaseModel
+
+class ProbioticsInput(BaseModel):
+    responses: dict
+    nutrition: dict
+    mbt_data: dict
+    estro_data: dict
+    mito_data: dict
+    lifestyle: dict
+    substrate: str
+
+def create_probiotics_api(probiotics_pipeline):
+    app = FastAPI(title="HealthBook-MI Probiotics API")
+
+    @app.post("/probiotics/screen")
+    def screen(input: ProbioticsInput):
+        results = probiotics_pipeline.run(
+            input.responses,
+            input.nutrition,
+            input.mbt_data,
+            input.estro_data,
+            input.mito_data,
+            input.lifestyle,
+            input.substrate
+        )
+        return results
+
+    return app
+</file>
+
+<file path="platform/orchestrator/causal_map.py">
+# platform/orchestrator/causal_map.py
+
+class CausalMap:
+    """
+    HealthBook-MI-Probiome-OS
+    Metabolic Causal Graph (v1.0)
+    -----------------------------------------
+    代謝 → ホルモン → エネルギー → 炎症 → 疾病リスク
+    MBT55 → Estrobolome → AcetylCoA → ATP → Inflammation → Disease
+    """
+
+    def __init__(self):
+        pass
+
+    # ---------------------------------------------------------
+    # 1. MBT55 → Estrobolome
+    # ---------------------------------------------------------
+    def mbt55_to_estrobolome(self, scfa, bile_acid, beta_glucuronidase):
+        """
+        MBT55 の SCFA と胆汁酸はエストロボロームを強化し、
+        β-グルクロニダーゼはホルモン不安定化を引き起こす。
+        """
+        score = (scfa * 0.4) + (bile_acid * 0.3) - (beta_glucuronidase * 0.5)
+        return max(0, min(score, 100))
+
+    # ---------------------------------------------------------
+    # 2. Estrobolome → AcetylCoA
+    # ---------------------------------------------------------
+    def estrobolome_to_acetylcoa(self, estro_score, carb, fat, protein, scfa):
+        """
+        ホルモンバランスが整うとミトコンドリア代謝が安定し、
+        Acetyl-CoA 生成効率が向上する。
+        """
+        base_flux = (
+            carb * 0.25 +
+            fat * 0.25 +
+            protein * 0.20 +
+            scfa * 0.30
+        )
+        modifier = (estro_score / 100) * 0.2  # ホルモン安定性による増幅
+        return min(base_flux * (1 + modifier), 100)
+
+    # ---------------------------------------------------------
+    # 3. AcetylCoA → ATP
+    # ---------------------------------------------------------
+    def acetylcoa_to_atp(self, acetylcoa_index):
+        """
+        Acetyl-CoA が高いほど ATP 生成効率が高まる。
+        """
+        return min(acetylcoa_index * 0.9, 100)
+
+    # ---------------------------------------------------------
+    # 4. ATP → Inflammation
+    # ---------------------------------------------------------
+    def atp_to_inflammation(self, atp, oxidative_stress):
+        """
+        ATP が低いと炎症負荷が上昇し、
+        酸化ストレスが高いと炎症が増幅される。
+        """
+        anti = atp * 0.5
+        pro = oxidative_stress * 0.8
+        load = max(0, min(100, pro - anti))
+        return load
+
+    # ---------------------------------------------------------
+    # 5. Inflammation → Disease Risk
+    # ---------------------------------------------------------
+    def inflammation_to_disease_risk(self, inflammation, phenotype_score):
+        """
+        炎症負荷と代謝偏位（Phenotype）が疾病リスクを決定する。
+        """
+        risk = (inflammation * 0.6) + (phenotype_score * 0.4)
+        return min(risk, 100)
+
+    # ---------------------------------------------------------
+    # 6. 全体因果連鎖の実行
+    # ---------------------------------------------------------
+    def run(self, snapshot, engine_results):
+        """
+        Snapshot と Engine 結果を統合し、
+        因果連鎖モデルを通して最終疾病リスクを算出する。
+        """
+
+        # 1. MBT55 → Estrobolome
+        estro_score = self.mbt55_to_estrobolome(
+            snapshot["mbt55"]["scfa"],
+            snapshot["mbt55"]["bile_acid"],
+            snapshot["estrobolome"]["beta_glucuronidase"]
+        )
+
+        # 2. Estrobolome → AcetylCoA
+        acetylcoa_index = self.estrobolome_to_acetylcoa(
+            estro_score,
+            snapshot["nutrition"]["carb"],
+            snapshot["nutrition"]["fat"],
+            snapshot["nutrition"]["protein"],
+            snapshot["mbt55"]["scfa"]
+        )
+
+        # 3. AcetylCoA → ATP
+        atp = self.acetylcoa_to_atp(acetylcoa_index)
+
+        # 4. ATP → Inflammation
+        inflammation = self.atp_to_inflammation(
+            atp,
+            snapshot["mitochondria"]["oxidative_stress"]
+        )
+
+        # 5. Inflammation → Disease Risk
+        phenotype_score = engine_results["phenotype"]["total_score"]
+        disease_risk = self.inflammation_to_disease_risk(inflammation, phenotype_score)
+
+        return {
+            "estrobolome_score_causal": estro_score,
+            "acetylcoa_index_causal": acetylcoa_index,
+            "atp_causal": atp,
+            "inflammation_causal": inflammation,
+            "disease_risk_causal": disease_risk
+        }
+</file>
+
+<file path="platform/orchestrator/engine_orchestrator.py">
+# platform/orchestrator/engine_orchestrator.py
+
+class EngineOrchestrator:
+    def __init__(self, engines):
+        self.engines = engines
+
+    def run_all(self, snapshot):
+        return {
+            "phenotype": self.engines["phenotyping"].run(snapshot["responses"]),
+            "estrobolome": self.engines["estrobolome"].run(
+                snapshot["scfa"], snapshot["bile_acid"], snapshot["beta_glucuronidase"]
+            ),
+            "acetylcoa": self.engines["acetylcoa"].run(
+                snapshot["carb"], snapshot["fat"], snapshot["protein"], snapshot["scfa"]
+            ),
+            "inflammation": self.engines["inflammation"].compute(
+                snapshot["scfa"], snapshot["bile_acid"], snapshot["oxidative_stress"]
+            )
+        }
+</file>
+
+<file path="platform/orchestrator/snapshot_builder.py">
+# platform/orchestrator/snapshot_builder.py
+
+import json
+from pathlib import Path
+
+class SnapshotBuilder:
+    """
+    HealthBook-MI-Probiome-OS
+    Metabolic Snapshot v2 Builder
+    -----------------------------------------
+    統合入力データを1つのSnapshot構造にまとめる。
+    - 問診（200問）
+    - MBT55関連データ
+    - 代謝指標（SCFA, Bile Acid, Oxidative Stress）
+    - 栄養データ
+    - 生活習慣データ
+    - 内分泌・ホルモン関連
+    """
+
+    def __init__(self,
+                 questionnaire_file,
+                 mbt55_profile_file=None,
+                 disease_matrix_file=None):
+        self.questionnaire = json.load(open(questionnaire_file))["questions"]
+        self.mbt55_profile = json.load(open(mbt55_profile_file)) if mbt55_profile_file else {}
+        self.disease_matrix = json.load(open(disease_matrix_file)) if disease_matrix_file else {}
+
+    # ---------------------------------------------------------
+    # 1. 問診データの統合
+    # ---------------------------------------------------------
+    def build_questionnaire_block(self, responses: dict):
+        """
+        responses = { "1": 1, "2": 0, ... }
+        """
+        scored = {}
+        for qid, ans in responses.items():
+            q = self.questionnaire[qid]
+            scored[qid] = {
+                "answer": ans,
+                "weight": q["weight"],
+                "impact": q["metabolic_impact"],
+                "related_diseases": q["related_diseases"]
+            }
+        return scored
+
+    # ---------------------------------------------------------
+    # 2. 栄養データの統合
+    # ---------------------------------------------------------
+    def build_nutrition_block(self, nutrition):
+        """
+        nutrition = {
+            "carb": 70,
+            "fat": 55,
+            "protein": 60,
+            "micronutrients": {
+                "magnesium": 40,
+                "b_vitamins": 50,
+                "carnitine": 30
+            }
+        }
+        """
+        return nutrition
+
+    # ---------------------------------------------------------
+    # 3. MBT55関連データの統合
+    # ---------------------------------------------------------
+    def build_mbt55_block(self, mbt_data):
+        """
+        mbt_data = {
+            "scfa": 65,
+            "bile_acid": 40,
+            "aromatic_aa": 55,
+            "mbt55_activity": 70
+        }
+        """
+        return mbt_data
+
+    # ---------------------------------------------------------
+    # 4. エストロボローム関連データ
+    # ---------------------------------------------------------
+    def build_estrobolome_block(self, estro_data):
+        """
+        estro_data = {
+            "beta_glucuronidase": 30,
+            "estrobolome_score": None  # エンジンで計算
+        }
+        """
+        return estro_data
+
+    # ---------------------------------------------------------
+    # 5. ミトコンドリア・ATP関連データ
+    # ---------------------------------------------------------
+    def build_mitochondria_block(self, mito_data):
+        """
+        mito_data = {
+            "oxidative_stress": 45,
+            "baseline_atp": None
+        }
+        """
+        return mito_data
+
+    # ---------------------------------------------------------
+    # 6. 生活習慣データ
+    # ---------------------------------------------------------
+    def build_lifestyle_block(self, lifestyle):
+        """
+        lifestyle = {
+            "sleep_quality": 60,
+            "stress": 70,
+            "physical_activity": 40,
+            "cold_exposure": 55
+        }
+        """
+        return lifestyle
+
+    # ---------------------------------------------------------
+    # 7. Snapshot 全体の統合
+    # ---------------------------------------------------------
+    def build_snapshot(self,
+                       responses,
+                       nutrition,
+                       mbt_data,
+                       estro_data,
+                       mito_data,
+                       lifestyle):
+        """
+        Snapshot v2 の正式構造を返す
+        """
+        return {
+            "id": "snapshot_v2",
+            "responses": self.build_questionnaire_block(responses),
+            "nutrition": self.build_nutrition_block(nutrition),
+            "mbt55": self.build_mbt55_block(mbt_data),
+            "estrobolome": self.build_estrobolome_block(estro_data),
+            "mitochondria": self.build_mitochondria_block(mito_data),
+            "lifestyle": self.build_lifestyle_block(lifestyle)
+        }
+</file>
+
+<file path="platform/pipelines/insurance_pipeline.py">
+# platform/pipelines/insurance_pipeline.py
+
+class InsurancePipeline:
+    """
+    生命保険会社向け統合パイプライン
+    SnapshotBuilder → EngineOrchestrator → 引受判断モデル
+    """
+
+    def __init__(self, snapshot_builder, orchestrator, underwriting_rules):
+        self.snapshot_builder = snapshot_builder
+        self.orchestrator = orchestrator
+        self.rules = underwriting_rules
+
+    def run(self, responses, nutrition, mbt_data, estro_data, mito_data, lifestyle):
+        snapshot = self.snapshot_builder.build_snapshot(
+            responses, nutrition, mbt_data, estro_data, mito_data, lifestyle
+        )
+
+        results = self.orchestrator.run_all(snapshot)
+
+        underwriting = self._underwriting_decision(results)
+
+        return {
+            "snapshot": snapshot,
+            "risk_profile": results,
+            "underwriting_decision": underwriting
+        }
+
+    def _underwriting_decision(self, results):
+        score = results["phenotype"]["total_score"]
+        inflammation = results["inflammation"]["inflammation_load"]
+        hormone = results["estrobolome"]["estrobolome_score"]
+
+        if score > 120 or inflammation > 70:
+            return {"decision": "Decline", "reason": "High metabolic risk"}
+        elif hormone < 30:
+            return {"decision": "Postpone", "reason": "Hormonal instability"}
+        else:
+            return {"decision": "Accept", "reason": "Risk acceptable"}
+</file>
+
+<file path="platform/pipelines/medical_pipeline.py">
+# platform/pipelines/medical_pipeline.py
+
+class MedicalPipeline:
+    """
+    医療機関向け統合パイプライン
+    SnapshotBuilder → EngineOrchestrator → 医療レポート
+    """
+
+    def __init__(self, snapshot_builder, orchestrator):
+        self.snapshot_builder = snapshot_builder
+        self.orchestrator = orchestrator
+
+    def run(self, responses, nutrition, mbt_data, estro_data, mito_data, lifestyle):
+        # Snapshot v2 を構築
+        snapshot = self.snapshot_builder.build_snapshot(
+            responses, nutrition, mbt_data, estro_data, mito_data, lifestyle
+        )
+
+        # 全エンジンを実行
+        results = self.orchestrator.run_all(snapshot)
+
+        # 医療機関向けレポート形式に整形
+        return {
+            "snapshot": snapshot,
+            "phenotype": results["phenotype"],
+            "estrobolome": results["estrobolome"],
+            "acetylcoa": results["acetylcoa"],
+            "inflammation": results["inflammation"],
+            "clinical_summary": self._clinical_summary(results)
+        }
+
+    def _clinical_summary(self, results):
+        return {
+            "metabolic_risk": results["phenotype"]["phenotype"],
+            "hormone_status": results["estrobolome"]["hormone_balance_pattern"],
+            "energy_status": results["acetylcoa"]["mi_acetylcoa_index"],
+            "inflammation_load": results["inflammation"]["inflammation_load"]
+        }
+</file>
+
+<file path="platform/pipelines/probiotics_pipeline.py">
+# platform/pipelines/probiotics_pipeline.py
+
+class ProbioticsPipeline:
+    """
+    MBT55 × 生薬 × 代謝経路 × 疾病パスウェイ
+    Probiotics Screening Engine を中心にした統合パイプライン
+    """
+
+    def __init__(self, snapshot_builder, orchestrator, probiotics_engine):
+        self.snapshot_builder = snapshot_builder
+        self.orchestrator = orchestrator
+        self.probiotics_engine = probiotics_engine
+
+    def run(self, responses, nutrition, mbt_data, estro_data, mito_data, lifestyle, substrate):
+        snapshot = self.snapshot_builder.build_snapshot(
+            responses, nutrition, mbt_data, estro_data, mito_data, lifestyle
+        )
+
+        results = self.orchestrator.run_all(snapshot)
+
+        # PATHスコアを生成（簡易版）
+        path_scores = {
+            "PATH_01": nutrition["carb"],
+            "PATH_02": mbt_data["bile_acid"],
+            "PATH_03": results["acetylcoa"]["mi_acetylcoa_index"],
+            "PATH_04": mito_data["oxidative_stress"],
+            "PATH_05": results["estrobolome"]["estrobolome_score"]
+        }
+
+        probiotics = self.probiotics_engine.run(substrate, path_scores)
+
+        return {
+            "snapshot": snapshot,
+            "engine_results": results,
+            "probiotics_recommendation": probiotics
+        }
+</file>
+
+<file path="README.md">
+# 📘 **HealthBook‑MI‑Probiome‑OS**
+
+**Metabolic Intelligence × Estrobolome × MBT Probiotics × AI Agents**
+
+## 🧬 **概要（Overview）**
+
+**HealthBook‑MI‑Probiome‑OS** は、 人間の **代謝・内分泌・腸内環境・免疫・炎症・漢方・疾病リスク** を 統合的に解析する **次世代ヘルスケア OS（Metabolic OS）** です。
+
+このプラットフォームは以下の 4 つの中核技術で構成されています：
+
+- **MI（Metabolic Intelligence）**
+    
+- **Estrobolome（腸内ホルモン代謝）**
+    
+- **MBT Probiotics（MBT55 × 生薬 × 代謝産物）**
+    
+- **AI Agents（医療・保険・診療支援）**
+    
+
+Planetary Metabolism OS の思想を継承し、 医療機関・生命保険会社・研究機関・PBPE‑Marketplace と連携可能な **統合型ヘルスケアプラットフォーム**です。
+
+## 🏛 **リポジトリ構造（Repository Structure）**
+
+コード
+
+```
+healthbook-mi-probiome-os/
+│
+├── docs/
+│   ├── architecture/
+│   ├── api/
+│   └── engines/
+│
+├── engines/
+│   ├── probiotics_screening/
+│   ├── phenotyping/
+│   ├── estrobolome/
+│   ├── endocrine_axis/
+│   ├── acetylcoa_atp/
+│   ├── inflammation_immune/
+│   └── oriental_medicine/
+│
+├── ai_agents/
+│   ├── triage_agent/
+│   ├── risk_explainer/
+│   ├── insurance_underwriting/
+│   └── medical_assistant/
+│
+├── data/
+│   ├── pathways/
+│   ├── mbt/
+│   ├── questionnaire/
+│   ├── disease/
+│   └── kampo/
+│
+├── schemas/
+│
+├── interfaces/
+│   ├── medical/
+│   ├── insurance/
+│   └── probiotics/
+│
+├── platform/
+│   ├── orchestrator/
+│   └── pipelines/
+│
+└── tests/
+```
+
+## 🧠 **MI Core Engines（代謝OSの中核エンジン）**
+
+### 1. **MI‑Probiotics Screening Engine**
+
+MBT55 × 生薬 × 代謝産物 × 疾病パスウェイ → 世界初の「微生物 × 生薬 × 疾病」探索エンジン **Probiotics Engine**
+
+### 2. **MI‑Phenotyping Engine**
+
+200問診 → 代謝偏位 → 疾病リスク **Phenotyping Engine**
+
+### 3. **MI‑Estrobolome Engine**
+
+腸内ホルモン代謝（β-グルクロニダーゼ・エストロゲン再活性化） **Estrobolome Engine**
+
+### 4. **MI‑Endocrine Axis Engine**
+
+HPA / HPG / HPT 軸の統合 **Endocrine Axis**
+
+### 5. **MI‑AcetylCoA‑ATP Engine**
+
+糖・脂質・タンパク質・SCFA → アセチルCoA → ATP **AcetylCoA Engine**
+
+### 6. **MI‑Inflammation‑Immune Engine**
+
+SCFA・胆汁酸・インドール類 → 免疫・炎症 **Inflammation Engine**
+
+### 7. **MI‑Oriental Medicine Engine**
+
+漢方・経絡・証 × 代謝OS **Oriental Medicine Engine**
+
+### 8. **MI‑Disease Matrix Engine**
+
+137疾病 × 代謝OS **Disease Matrix**
+
+## 🔗 **Snapshot Builder（入力統合モジュール）**
+
+全エンジンが共通で利用する **Metabolic Snapshot v2** を生成。
+
+- 問診（200問）
+    
+- 栄養
+    
+- MBT55
+    
+- エストロボローム
+    
+- ミトコンドリア
+    
+- 生活習慣
+    
+
+**Snapshot Builder**
+
+## 🔧 **Engine Orchestrator（エンジン統合）**
+
+Snapshot v2 を受け取り、 全エンジンを一括実行する「代謝OSの心臓部」。
+
+**Engine Orchestrator**
+
+## 🚀 **Pipelines（医療・保険・MBT55統合パイプライン）**
+
+### 1. **Medical Pipeline**
+
+医療機関向け：代謝・ホルモン・炎症・エネルギーの総合評価 **Medical Pipeline**
+
+### 2. **Insurance Pipeline**
+
+生命保険会社向け：引受判断モデル **Insurance Pipeline**
+
+### 3. **Probiotics Pipeline**
+
+MBT55 × 生薬 × 代謝経路 × 疾病パスウェイ **Probiotics Pipeline**
+
+## 🤖 **AI Agents（医療・保険・診療支援）**
+
+### 1. **Triage Agent**
+
+初期トリアージ **Triage Agent**
+
+### 2. **Risk Explainer Agent**
+
+代謝OSの結果を自然言語で説明 **Risk Explainer**
+
+### 3. **Underwriting Agent**
+
+生命保険引受判断 AI **Underwriting Agent**
+
+### 4. **Clinical Assistant Agent**
+
+医療機関向け診療補助レポート **Clinical Agent**
+
+## 🌐 **API 層（FastAPI）**
+
+### Medical API
+
+`POST /medical/evaluate` **Medical API**
+
+### Insurance API
+
+`POST /insurance/underwrite` **Insurance API**
+
+### Probiotics API
+
+`POST /probiotics/screen` **Probiotics API**
+
+## ⚙️ **セットアップ（Setup）**
+
+コード
+
+```
+git clone https://github.com/your-org/healthbook-mi-probiome-os.git
+cd healthbook-mi-probiome-os
+pip install -r requirements.txt
+```
+
+## 🧪 **使用例（Usage Example）**
+
+python
+
+```
+from platform.orchestrator.snapshot_builder import SnapshotBuilder
+from platform.orchestrator.engine_orchestrator import EngineOrchestrator
+from platform.pipelines.medical_pipeline import MedicalPipeline
+
+snapshot_builder = SnapshotBuilder(
+    "data/questionnaire/questionnaire_200_jp.json"
+)
+
+orchestrator = EngineOrchestrator({
+    "phenotyping": PhenotypingEngine("data/questionnaire/questionnaire_200_jp.json"),
+    "estrobolome": EstrobolomeEngine(),
+    "acetylcoa": AcetylCoAEngine(),
+    "inflammation": InflammationEngine()
+})
+
+pipeline = MedicalPipeline(snapshot_builder, orchestrator)
+
+result = pipeline.run(
+    responses={ "1": 1, "2": 0, ... },
+    nutrition={ "carb": 70, "fat": 55, "protein": 60 },
+    mbt_data={ "scfa": 65, "bile_acid": 40 },
+    estro_data={ "beta_glucuronidase": 30 },
+    mito_data={ "oxidative_stress": 45 },
+    lifestyle={ "sleep_quality": 60, "stress": 70 }
+)
+```
+
+## 🧬 **ライセンス（License）**
+
+MIT / Apache 2.0（選択可能）
+</file>
+
+<file path="tests/e2e/test_medical_api.py">
+# tests/e2e/test_medical_api.py
+
+from fastapi.testclient import TestClient
+from interfaces.medical.api.medical_api import create_medical_api
+
+def test_medical_api():
+    app = create_medical_api(None, None)  # モックを後で挿入
+    client = TestClient(app)
+
+    response = client.post("/medical/evaluate", json={
+        "responses": {"1": 1},
+        "nutrition": {"carb": 50, "fat": 40, "protein": 30},
+        "mbt_data": {"scfa": 60, "bile_acid": 40},
+        "estro_data": {"beta_glucuronidase": 20},
+        "mito_data": {"oxidative_stress": 30},
+        "lifestyle": {"sleep_quality": 70, "stress": 40}
+    })
+
+    assert response.status_code == 200
+</file>
+
+<file path="tests/integration/test_medical_pipeline.py">
+# tests/integration/test_medical_pipeline.py
+
+from platform.orchestrator.snapshot_builder import SnapshotBuilder
+from platform.orchestrator.engine_orchestrator import EngineOrchestrator
+from platform.pipelines.medical_pipeline import MedicalPipeline
+
+from engines.phenotyping.questionnaire_engine import PhenotypingEngine
+from engines.estrobolome.estrobolome_engine import EstrobolomeEngine
+from engines.acetylcoa_atp.acetylcoa_engine import AcetylCoAEngine
+from engines.inflammation_immune.inflammation_engine import InflammationEngine
+
+def test_medical_pipeline():
+    snapshot_builder = SnapshotBuilder("data/questionnaire/questionnaire_200_jp.json")
+
+    orchestrator = EngineOrchestrator({
+        "phenotyping": PhenotypingEngine("data/questionnaire/questionnaire_200_jp.json"),
+        "estrobolome": EstrobolomeEngine(),
+        "acetylcoa": AcetylCoAEngine(),
+        "inflammation": InflammationEngine()
+    })
+
+    pipeline = MedicalPipeline(snapshot_builder, orchestrator)
+
+    responses = {"1": 1, "2": 0}
+    nutrition = {"carb": 50, "fat": 40, "protein": 30}
+    mbt_data = {"scfa": 60, "bile_acid": 40}
+    estro_data = {"beta_glucuronidase": 20}
+    mito_data = {"oxidative_stress": 30}
+    lifestyle = {"sleep_quality": 70, "stress": 40}
+
+    result = pipeline.run(responses, nutrition, mbt_data, estro_data, mito_data, lifestyle)
+
+    assert "phenotype" in result
+    assert "estrobolome" in result
+    assert "acetylcoa" in result
+    assert "inflammation" in result
+</file>
+
+<file path="tests/unit/test_acetylcoa_engine.py">
+# tests/unit/test_acetylcoa_engine.py
+
+from engines.acetylcoa_atp.acetylcoa_engine import AcetylCoAEngine
+
+def test_acetylcoa_index():
+    engine = AcetylCoAEngine()
+    result = engine.run(carb=50, fat=40, protein=30, scfa=60)
+
+    assert "mi_acetylcoa_index" in result
+    assert result["mi_acetylcoa_index"] > 0
+    assert result["mi_acetylcoa_index"] <= 100
+</file>
+
+<file path="tests/unit/test_estrobolome_engine.py">
+# tests/unit/test_estrobolome_engine.py
+
+from engines.estrobolome.estrobolome_engine import EstrobolomeEngine
+
+def test_estrobolome_score():
+    engine = EstrobolomeEngine()
+    result = engine.run(scfa=60, bile_acid=40, beta_glucuronidase_risk=20)
+
+    assert result["estrobolome_score"] >= 0
+    assert result["estrobolome_score"] <= 100
+</file>
+
+<file path="tests/unit/test_phenotyping_engine.py">
+# tests/unit/test_phenotyping_engine.py
+
+from engines.phenotyping.questionnaire_engine import PhenotypingEngine
+
+def test_phenotyping():
+    engine = PhenotypingEngine("data/questionnaire/questionnaire_200_jp.json")
+    responses = {"1": 1, "2": 0, "3": 1}
+
+    result = engine.run(responses)
+
+    assert "total_score" in result
+    assert "phenotype" in result
+</file>
+
+<file path="ui/dashboard/components/CausalMapView.tsx">
+export default function CausalMapView() {
+  return (
+    <div className="border rounded-lg p-4 shadow-sm">
+      <h2 className="text-xl font-semibold mb-2">Causal Map</h2>
+      <p className="text-gray-600">
+        MBT55 → Estrobolome → AcetylCoA → ATP → Inflammation → Disease Risk
+      </p>
+    </div>
+  );
+}
+</file>
+
+<file path="ui/dashboard/components/DiseaseRiskMap.tsx">
+export default function DiseaseRiskMap() {
+  return (
+    <div className="border rounded-lg p-4 shadow-sm">
+      <h2 className="text-xl font-semibold mb-2">Disease Risk Map</h2>
+      <p className="text-gray-600">
+        137-disease risk heatmap will be displayed here.
+      </p>
+    </div>
+  );
+}
+</file>
+
+<file path="ui/dashboard/components/EngineSummary.tsx">
+export default function EngineSummary() {
+  return (
+    <div className="border rounded-lg p-4 shadow-sm">
+      <h2 className="text-xl font-semibold mb-2">Engine Summary</h2>
+      <ul className="list-disc ml-6 text-gray-700">
+        <li>Phenotype</li>
+        <li>Estrobolome Score</li>
+        <li>Acetyl-CoA / ATP</li>
+        <li>Inflammation Load</li>
+      </ul>
+    </div>
+  );
+}
+</file>
+
+<file path="ui/dashboard/components/KampoPanel.tsx">
+export default function KampoPanel() {
+  return (
+    <div className="border rounded-lg p-4 shadow-sm">
+      <h2 className="text-xl font-semibold mb-2">Kampo Recommendation</h2>
+      <p className="text-gray-600">
+        Recommended formulas and herbs based on metabolic profile.
+      </p>
+    </div>
+  );
+}
+</file>
+
+<file path="ui/dashboard/components/ProbioticsPanel.tsx">
+export default function ProbioticsPanel() {
+  return (
+    <div className="border rounded-lg p-4 shadow-sm">
+      <h2 className="text-xl font-semibold mb-2">Probiotics Recommendation</h2>
+      <p className="text-gray-600">
+        MBT55 × Herbal substrate × Pathway cascade results.
+      </p>
+    </div>
+  );
+}
+</file>
+
+<file path="ui/dashboard/components/SnapshotCard.tsx">
+export default function SnapshotCard() {
+  return (
+    <div className="border rounded-lg p-4 shadow-sm">
+      <h2 className="text-xl font-semibold mb-2">Metabolic Snapshot</h2>
+      <p className="text-gray-600">
+        Snapshot v2 summary will be displayed here.
+      </p>
+    </div>
+  );
+}
+</file>
+
+<file path="ui/dashboard/page.tsx">
+"use client";
+
+import SnapshotCard from "./components/SnapshotCard";
+import EngineSummary from "./components/EngineSummary";
+import CausalMapView from "./components/CausalMapView";
+import DiseaseRiskMap from "./components/DiseaseRiskMap";
+import ProbioticsPanel from "./components/ProbioticsPanel";
+import KampoPanel from "./components/KampoPanel";
+
+export default function DashboardPage() {
+  return (
+    <div className="p-6 space-y-6">
+      <h1 className="text-3xl font-bold">HealthBook MI Dashboard</h1>
+
+      <SnapshotCard />
+      <EngineSummary />
+      <CausalMapView />
+      <DiseaseRiskMap />
+      <ProbioticsPanel />
+      <KampoPanel />
+    </div>
+  );
+}
+</file>
+
+<file path="ui/lib/api/dashboard.ts">
+import { Snapshot, EngineResults, CausalMap, DiseaseRisk } from "../types";
+
+export async function fetchSnapshot(userId: string): Promise<Snapshot> {
+  const res = await fetch(`http://localhost:8000/snapshot/${userId}`);
+  return res.json();
+}
+
+export async function fetchEngineResults(userId: string): Promise<EngineResults> {
+  const res = await fetch(`http://localhost:8000/engine/results/${userId}`);
+  return res.json();
+}
+
+export async function fetchCausalMap(userId: string): Promise<CausalMap> {
+  const res = await fetch(`http://localhost:8000/causal/${userId}`);
+  return res.json();
+}
+
+export async function fetchDiseaseRisk(userId: string): Promise<DiseaseRisk> {
+  const res = await fetch(`http://localhost:8000/disease/risk/${userId}`);
+  return res.json();
+}
+</file>
+
+<file path="ui/lib/api/medical.ts">
+// ui/lib/api/medical.ts
+
+export async function fetchMedicalEvaluation(payload: any) {
+  const res = await fetch("http://localhost:8000/medical/evaluate", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(payload)
+  });
+
+  if (!res.ok) {
+    throw new Error("Failed to fetch medical evaluation");
+  }
+
+  return res.json();
+}
+</file>
+
+<file path="ui/lib/api/probiotics.ts">
+// ui/lib/api/probiotics.ts
+
+export async function fetchProbioticsScreening(payload: any) {
+  const res = await fetch("http://localhost:8000/probiotics/screen", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(payload)
+  });
+
+  if (!res.ok) {
+    throw new Error("Failed to fetch probiotics screening");
+  }
+
+  return res.json();
+}
+</file>
+
+<file path="ui/lib/api/user.ts">
+// ui/lib/api/user.ts
+
+export async function fetchUserSnapshot(userId: string) {
+  const res = await fetch(`http://localhost:8000/user/snapshot/${userId}`);
+  if (!res.ok) throw new Error("Failed to fetch user snapshot");
+  return res.json();
+}
+
+export async function fetchUserRecommendations(userId: string) {
+  const res = await fetch(`http://localhost:8000/user/recommendations/${userId}`);
+  if (!res.ok) throw new Error("Failed to fetch user recommendations");
+  return res.json();
+}
+</file>
+
+<file path="ui/lib/types.ts">
+// Snapshot v2
+export type Snapshot = {
+  responses: Record<string, number>;
+  nutrition: {
+    carb: number;
+    fat: number;
+    protein: number;
+  };
+  mbt55: {
+    scfa: number;
+    bile_acid: number;
+  };
+  estrobolome: {
+    beta_glucuronidase: number;
+  };
+  mitochondria: {
+    oxidative_stress: number;
+  };
+  lifestyle: {
+    sleep_quality: number;
+    stress: number;
+  };
+};
+
+// Engine Results
+export type EngineResults = {
+  phenotype: {
+    total_score: number;
+    phenotype: string;
+  };
+  estrobolome: {
+    estrobolome_score: number;
+  };
+  acetylcoa: {
+    mi_acetylcoa_index: number;
+  };
+  inflammation: {
+    inflammation_load: number;
+  };
+};
+
+// Causal Map
+export type CausalMap = {
+  estrobolome_score_causal: number;
+  acetylcoa_index_causal: number;
+  atp_causal: number;
+  inflammation_causal: number;
+  disease_risk_causal: number;
+};
+
+// Disease Risk
+export type DiseaseRisk = {
+  diseases: Array<{
+    disease_id: string;
+    name: string;
+    system: string;
+    recommended_kampo: string[];
+    contraindicated_kampo: string[];
+  }>;
+};
+
+// Probiotics Screening
+export type ProbioticsResult = {
+  recommended_strains: string[];
+  pathway_stage: string[];
+  metabolites: string[];
+};
+
+// Kampo Recommendation
+export type KampoRecommendation = {
+  formula: any;
+  herbs: any[];
+};
+
+// PBPE KPIs
+export type PBPEKPI = {
+  phenotype_score: number;
+  estrobolome_score: number;
+  acetylcoa_index: number;
+  atp: number;
+  inflammation: number;
+  disease_risk: number;
+};
+</file>
+
+<file path="ui/medical/components/ClinicalEngineView.tsx">
+export default function ClinicalEngineView() {
+  return (
+    <div className="border rounded-lg p-4 shadow-sm">
+      <h2 className="text-xl font-semibold mb-2">Clinical Engine Results</h2>
+      <ul className="list-disc ml-6 text-gray-700">
+        <li>Phenotype</li>
+        <li>Estrobolome Score</li>
+        <li>Acetyl-CoA / ATP</li>
+        <li>Inflammation Load</li>
+      </ul>
+    </div>
+  );
+}
+</file>
+
+<file path="ui/medical/components/ClinicalReport.tsx">
+export default function ClinicalReport() {
+  return (
+    <div className="border rounded-lg p-4 shadow-sm">
+      <h2 className="text-xl font-semibold mb-2">Clinical Report (AI Agent)</h2>
+      <p className="text-gray-600">
+        AI Clinical Agent will generate a detailed clinical explanation here.
+      </p>
+    </div>
+  );
+}
+</file>
+
+<file path="ui/medical/components/KampoClinicalPanel.tsx">
+export default function KampoClinicalPanel() {
+  return (
+    <div className="border rounded-lg p-4 shadow-sm">
+      <h2 className="text-xl font-semibold mb-2">Kampo Clinical Panel</h2>
+      <p className="text-gray-600">
+        Recommended Kampo formulas and herbs based on clinical profile.
+      </p>
+    </div>
+  );
+}
+</file>
+
+<file path="ui/medical/components/QuestionnaireForm.tsx">
+export default function QuestionnaireForm() {
+  return (
+    <div className="border rounded-lg p-4 shadow-sm">
+      <h2 className="text-xl font-semibold mb-2">Questionnaire (200 items)</h2>
+      <p className="text-gray-600">
+        A dynamic questionnaire form will be implemented here.
+      </p>
+    </div>
+  );
+}
+</file>
+
+<file path="ui/medical/page.tsx">
+"use client";
+
+import QuestionnaireForm from "./components/QuestionnaireForm";
+import ClinicalEngineView from "./components/ClinicalEngineView";
+import ClinicalReport from "./components/ClinicalReport";
+import KampoClinicalPanel from "./components/KampoClinicalPanel";
+
+export default function MedicalPage() {
+  return (
+    <div className="p-6 space-y-6">
+      <h1 className="text-3xl font-bold">Medical Evaluation</h1>
+
+      <QuestionnaireForm />
+      <ClinicalEngineView />
+      <ClinicalReport />
+      <KampoClinicalPanel />
+    </div>
+  );
+}
+</file>
+
+<file path="ui/pbpe/healthbook/components/CausalPanel.tsx">
+"use client";
+
+import { useEffect, useState } from "react";
+import { fetchCausalMap } from "../../../lib/api/dashboard";
+
+export default function CausalPanel() {
+  const [causal, setCausal] = useState<any>(null);
+
+  useEffect(() => {
+    fetchCausalMap("user001").then(setCausal);
+  }, []);
+
+  return (
+    <div className="border rounded-lg p-4 shadow-sm">
+      <h2 className="text-xl font-semibold mb-2">Causal Map</h2>
+      {!causal && <p>Loading...</p>}
+      {causal && (
+        <pre className="text-sm text-gray-700">
+          {JSON.stringify(causal, null, 2)}
+        </pre>
+      )}
+    </div>
+  );
+}
+</file>
+
+<file path="ui/pbpe/healthbook/components/DiseasePanel.tsx">
+"use client";
+
+import { useEffect, useState } from "react";
+import { fetchDiseaseRisk } from "../../../lib/api/dashboard";
+
+export default function DiseasePanel() {
+  const [risk, setRisk] = useState<any>(null);
+
+  useEffect(() => {
+    fetchDiseaseRisk("user001").then(setRisk);
+  }, []);
+
+  return (
+    <div className="border rounded-lg p-4 shadow-sm">
+      <h2 className="text-xl font-semibold mb-2">Disease Risk</h2>
+      {!risk && <p>Loading...</p>}
+      {risk && (
+        <pre className="text-sm text-gray-700">
+          {JSON.stringify(risk, null, 2)}
+        </pre>
+      )}
+    </div>
+  );
+}
+</file>
+
+<file path="ui/pbpe/healthbook/components/EnginePanel.tsx">
+"use client";
+
+import { useEffect, useState } from "react";
+import { fetchEngineResults } from "../../../lib/api/dashboard";
+
+export default function EnginePanel() {
+  const [engine, setEngine] = useState<any>(null);
+
+  useEffect(() => {
+    fetchEngineResults("user001").then(setEngine);
+  }, []);
+
+  return (
+    <div className="border rounded-lg p-4 shadow-sm">
+      <h2 className="text-xl font-semibold mb-2">Engine Results</h2>
+      {!engine && <p>Loading...</p>}
+      {engine && (
+        <pre className="text-sm text-gray-700">
+          {JSON.stringify(engine, null, 2)}
+        </pre>
+      )}
+    </div>
+  );
+}
+</file>
+
+<file path="ui/pbpe/healthbook/components/KampoPanel.tsx">
+"use client";
+
+export default function KampoPanel() {
+  return (
+    <div className="border rounded-lg p-4 shadow-sm">
+      <h2 className="text-xl font-semibold mb-2">Kampo Recommendation</h2>
+      <p className="text-gray-600">
+        KampoEngineV2 results will be displayed here.
+      </p>
+    </div>
+  );
+}
+</file>
+
+<file path="ui/pbpe/healthbook/components/KPIPanel.tsx">
+"use client";
+
+import { useEffect, useState } from "react";
+
+export default function KPIPanel() {
+  const [kpis, setKpis] = useState<any>(null);
+
+  useEffect(() => {
+    fetch("http://localhost:8000/pbpe/kpis/user001")
+      .then((res) => res.json())
+      .then(setKpis);
+  }, []);
+
+  return (
+    <div className="border rounded-lg p-4 shadow-sm">
+      <h2 className="text-xl font-semibold mb-2">PBPE KPIs</h2>
+      {!kpis && <p>Loading...</p>}
+      {kpis && (
+        <pre className="text-sm text-gray-700">
+          {JSON.stringify(kpis, null, 2)}
+        </pre>
+      )}
+    </div>
+  );
+}
+</file>
+
+<file path="ui/pbpe/healthbook/components/ProbioticsPanel.tsx">
+"use client";
+
+import { useEffect, useState } from "react";
+import { fetchProbioticsScreening } from "../../../lib/api/probiotics";
+
+export default function ProbioticsPanel() {
+  const [probiotics, setProbiotics] = useState<any>(null);
+
+  useEffect(() => {
+    const payload = {
+      substrate: "H001",
+      target_pathway: "PATH_01"
+    };
+    fetchProbioticsScreening(payload).then(setProbiotics);
+  }, []);
+
+  return (
+    <div className="border rounded-lg p-4 shadow-sm">
+      <h2 className="text-xl font-semibold mb-2">Probiotics Recommendation</h2>
+      {!probiotics && <p>Loading...</p>}
+      {probiotics && (
+        <pre className="text-sm text-gray-700">
+          {JSON.stringify(probiotics, null, 2)}
+        </pre>
+      )}
+    </div>
+  );
+}
+</file>
+
+<file path="ui/pbpe/healthbook/components/SnapshotPanel.tsx">
+"use client";
+
+import { useEffect, useState } from "react";
+import { fetchSnapshot } from "../../../lib/api/dashboard";
+
+export default function SnapshotPanel() {
+  const [snapshot, setSnapshot] = useState<any>(null);
+
+  useEffect(() => {
+    fetchSnapshot("user001").then(setSnapshot);
+  }, []);
+
+  return (
+    <div className="border rounded-lg p-4 shadow-sm">
+      <h2 className="text-xl font-semibold mb-2">Snapshot</h2>
+      {!snapshot && <p>Loading...</p>}
+      {snapshot && (
+        <pre className="text-sm text-gray-700">
+          {JSON.stringify(snapshot, null, 2)}
+        </pre>
+      )}
+    </div>
+  );
+}
+</file>
+
+<file path="ui/pbpe/healthbook/page.tsx">
+"use client";
+
+import SnapshotPanel from "./components/SnapshotPanel";
+import EnginePanel from "./components/EnginePanel";
+import CausalPanel from "./components/CausalPanel";
+import DiseasePanel from "./components/DiseasePanel";
+import ProbioticsPanel from "./components/ProbioticsPanel";
+import KampoPanel from "./components/KampoPanel";
+import KPIPanel from "./components/KPIPanel";
+
+export default function HealthBookMIPage() {
+  return (
+    <div className="p-6 space-y-6">
+      <h1 className="text-3xl font-bold">HealthBook MI (Metabolic OS)</h1>
+
+      <SnapshotPanel />
+      <EnginePanel />
+      <CausalPanel />
+      <DiseasePanel />
+      <ProbioticsPanel />
+      <KampoPanel />
+      <KPIPanel />
+    </div>
+  );
+}
+</file>
+
+<file path="ui/probiotics/components/DiseaseTargetView.tsx">
+export default function DiseaseTargetView() {
+  return (
+    <div className="border rounded-lg p-4 shadow-sm">
+      <h2 className="text-xl font-semibold mb-2">Disease Targets</h2>
+      <p className="text-gray-600">
+        Target diseases from Disease MI Matrix v2 will be shown here.
+      </p>
+    </div>
+  );
+}
+</file>
+
+<file path="ui/probiotics/components/MBT55Recommendation.tsx">
+export default function MBT55Recommendation() {
+  return (
+    <div className="border rounded-lg p-4 shadow-sm">
+      <h2 className="text-xl font-semibold mb-2">MBT55 Recommendation</h2>
+      <p className="text-gray-600">
+        Recommended MBT_META strains based on pathway and substrate selection.
+      </p>
+    </div>
+  );
+}
+</file>
+
+<file path="ui/probiotics/components/PathwayCascadeView.tsx">
+export default function PathwayCascadeView() {
+  return (
+    <div className="border rounded-lg p-4 shadow-sm">
+      <h2 className="text-xl font-semibold mb-2">Pathway Cascade</h2>
+      <p className="text-gray-600">
+        Stage1 → Stage2 → Stage3 metabolic pathway cascade visualization.
+      </p>
+    </div>
+  );
+}
+</file>
+
+<file path="ui/probiotics/components/SubstrateSelector.tsx">
+export default function SubstrateSelector() {
+  return (
+    <div className="border rounded-lg p-4 shadow-sm">
+      <h2 className="text-xl font-semibold mb-2">Substrate Selector</h2>
+      <p className="text-gray-600">
+        Select herbal substrates and metabolic targets here.
+      </p>
+    </div>
+  );
+}
+</file>
+
+<file path="ui/probiotics/page.tsx">
+"use client";
+
+import SubstrateSelector from "./components/SubstrateSelector";
+import PathwayCascadeView from "./components/PathwayCascadeView";
+import MBT55Recommendation from "./components/MBT55Recommendation";
+import DiseaseTargetView from "./components/DiseaseTargetView";
+
+export default function ProbioticsPage() {
+  return (
+    <div className="p-6 space-y-6">
+      <h1 className="text-3xl font-bold">Probiotics Screening</h1>
+
+      <SubstrateSelector />
+      <PathwayCascadeView />
+      <MBT55Recommendation />
+      <DiseaseTargetView />
+    </div>
+  );
+}
+</file>
+
+</files>

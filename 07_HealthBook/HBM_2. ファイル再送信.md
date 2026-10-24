@@ -17,7 +17,7 @@
 
 残りの2ファイル（HB_13, HB_14）と、追加で下記のファイルをアップロードします。
 
-[[HealthBook 疾病リスク分析プログラミングとシステム構成説明書]]
+[[HLB013. HealthBook 疾病リスク分析プログラミングとシステム構成説明書]]
 [[HealthBook_Technical_Specification_JA]]
 Healthbook_ja_1.1.pdf
 問診表.pdf

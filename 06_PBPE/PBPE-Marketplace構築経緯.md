@@ -1,118 +1,118 @@
 ## 🗃️PBPE Marketplace_Copilot ①
 - [ ] active   <!-- 進行中 -->
 
-[[PM1. Stripe社の主な特徴（API・開発者視点）]]
-[[PM2. なぜ Stripe は「多様な支払いに対応できるのにコードが少ない」のか]]
-[[PA003. Planetary Health Unified API（PH-API）構想]]
-[[PM4. Planetary Health API：利害関係者ごとのメリット構造]]
+[[PB10_001. Stripe社の主な特徴（API・開発者視点）]]
+[[PB10_002. なぜ Stripe は「多様な支払いに対応できるのにコードが少ない」のか]]
+[[PB10_003. Planetary Health Unified API（PH-API）構想]]
+[[PB10_004. Planetary Health API：利害関係者ごとのメリット構造]]
 *Planetary Health APIのメリットと本質*
-[[PA005. 農業インパクト API（AgriImpact API）— MVP 設計図]]
+[[PB10_005. 農業インパクト API（AgriImpact API）— MVP 設計図]]
 *農業インパクト API（AgriImpact API）— MVP 設計図*
-[[PA006. AgriImpactIntent の JSON スキーマ（MVP）]]
+[[PB10_006. AgriImpactIntent の JSON スキーマ（MVP）]]
 *AgriImpactIntent の JSON スキーマ（MVP）*
-[[PA007. AGRIX データ標準（MVP）]]
-[[PA008. AgriImpactWebhook（農業インパクトの MRV 自動化）]]
-[[PA009. AgriImpactConnect（価値分配モデル）]]
-[[PA010. AgriImpactCheckout（可視化 UI）]]
-[[PA011. Planetary Health API（Agriculture Module）v1.0 — 完全統合設計]]
-[[PA012. Planetary Health API — Climate Module v1.0]]
-[[PA013. HealthImpactIntent（健康インパクトの中核）]]
-[[PM14. なぜこの API 群が BioNexus Platform の “コア” になるのか]]
-[[PA015. Planetary Health OS 全体マップ（コア API レイヤー）]]
-[[PA016. AgriImpactIntent v1 — REST API 仕様（MVP）]]
-[[PA017. ClimateImpactIntent v1 — REST API 仕様（MVP）]]
-[[PA018. HealthImpactIntent v1 — REST API 仕様（MVP）]]
-[[PA019. Planetary Health OS v1 — 全体アーキテクチャ（統合図）]]
-[[PA020. Planetary Health OS v1 — API カタログ（完全版）]]
+[[PB10_007. AGRIX データ標準（MVP）]]
+[[PB10_008. AgriImpactWebhook（農業インパクトの MRV 自動化）]]
+[[PB10_009. AgriImpactConnect（価値分配モデル）]]
+[[PB10_010. AgriImpactCheckout（可視化 UI）]]
+[[PB10_011. Planetary Health API（Agriculture Module）v1.0 — 完全統合設計]]
+[[PB10_012. Planetary Health API — Climate Module v1.0]]
+[[PB10_013. HealthImpactIntent（健康インパクトの中核）]]
+[[PB10_014. なぜこの API 群が BioNexus Platform の “コア” になるのか]]
+[[PB10_015. Planetary Health OS 全体マップ（コア API レイヤー）]]
+[[PB10_016. AgriImpactIntent v1 — REST API 仕様（MVP）]]
+[[PB10_017. ClimateImpactIntent v1 — REST API 仕様（MVP）]]
+[[PB10_018. HealthImpactIntent v1 — REST API 仕様（MVP）]]
+[[PB10_019. Planetary Health OS v1 — 全体アーキテクチャ（統合図）]]
+[[PB10_020. Planetary Health OS v1 — API カタログ（完全版）]]
 *Planetary Health OS v1 の API 一覧*
-[[PA021. Planetary Health OS v1 — README.md（完成版）]]
-[[PM22. Planetary Health OS v1 — Architecture Diagram（Mermaid版）]]
-[[PM23. Planetary Health OS v1 — Whitepaper1]]
-[[PM24. Planetary Health OS v1 — Whitepaper2（日本語版）]]
-[[PM25. Planetary Health OS v1 — Whitepaper3（日本語版）]]
-[[PM26. Planetary Health OS v1 — Whitepaper4（日本語版）]]
-[[PM27. PBPE モデルは「金融商品の設計図」]]👉️
-[[PM28. Planetary Health OS v1 — Whitepaper 1 (Full English Edition)]]
+[[PB10_021. Planetary Health OS v1 — README.md（完成版）]]
+[[PB10_022. Planetary Health OS v1 — Architecture Diagram（Mermaid版）]]
+[[PB10_023. Planetary Health OS v1 — Whitepaper1]]
+[[PB10_024. Planetary Health OS v1 — Whitepaper2（日本語版）]]
+[[PB10_025. Planetary Health OS v1 — Whitepaper3（日本語版）]]
+[[PB10_026. Planetary Health OS v1 — Whitepaper4（日本語版）]]
+[[PB10_027. PBPE モデルは「金融商品の設計図」]]👉️
+[[PB10_028. Planetary Health OS v1 — Whitepaper 1 (Full English Edition)]]
 *Planetary Health OS v1 — Whitepaper (Full English Edition)*
-[[PM29. Planetary Health OS v1 — Whitepaper 2 (English Edition)]]
-[[PM30. Planetary Health OS v1 — Whitepaper 3 (English Edition)]]
-[[PM31. Planetary Health OS v1 — Whitepaper 4 (Full English Edition)]]
-[[PA032. PBPE Marketplace Architecture — Complete Specification]]
-[[PA033. 🅐PBPE Marketplace API — OpenAPI 3.1 Specification（完全版）]]
-[[PA034. 全体構成]]
-[[PA035. 🅑PBPE Financial Product Templates — JSON Schema（PBPE-FIN-001 完全版）]]✔
-[[PA036. 🅒 PBPE Marketplace — UI_UX Mockups（完全版）]]
-[[PA037. 🅓 PBPE Ledger — Data Model（完全版）]]
-[[PA038. 🅔 PBPE Rating Engine — Full Specification（完全版）]]
-[[PM39. PBPE Marketplace アーキテクチャ図（ASCII & SVG）]]
-[[PM40. PBPE Marketplace Architecture（ASCII 図）]]
-[[PM41. PBPE Marketplace ER 図（概念レベル）]]
-[[PM42. PBPE Marketplace ER 図（完全に理解できるバージョン）]]
-[[PM43. 全体の流れ（Intent → PBPE → Product → Order → Settlement → 40_40_20）]]
-[[PM44. PDF → スライド構成（最適化版）]]
-[[PM45. Planetary Health Unified API (PH‑API)]]
-[[PM46. PBPE Marketplace — 15‑Slide Pitch Deck (English Edition)]]
+[[PB10_029. Planetary Health OS v1 — Whitepaper 2 (English Edition)]]
+[[PB10_030. Planetary Health OS v1 — Whitepaper 3 (English Edition)]]
+[[PB10_031. Planetary Health OS v1 — Whitepaper 4 (Full English Edition)]]
+[[PB10_032. PBPE Marketplace Architecture — Complete Specification]]
+[[PB10_033. 🅐PBPE Marketplace API — OpenAPI 3.1 Specification（完全版）]]
+[[PB10_034. 全体構成]]
+[[PB10_035. 🅑PBPE Financial Product Templates — JSON Schema（PBPE-FIN-001 完全版）]]✔
+[[PB10_036. 🅒 PBPE Marketplace — UI_UX Mockups（完全版）]]
+[[PB10_037. 🅓 PBPE Ledger — Data Model（完全版）]]
+[[PB10_038. 🅔 PBPE Rating Engine — Full Specification（完全版）]]
+[[PB10_039. PBPE Marketplace アーキテクチャ図（ASCII & SVG）]]
+[[PB10_040. PBPE Marketplace Architecture（ASCII 図）]]
+[[PB10_041. PBPE Marketplace ER 図（概念レベル）]]
+[[PB10_042. PBPE Marketplace ER 図（完全に理解できるバージョン）]]
+[[PB10_043. 全体の流れ（Intent → PBPE → Product → Order → Settlement → 40_40_20）]]
+[[PB10_044. PDF → スライド構成（最適化版）]]
+[[PB10_045. Planetary Health Unified API (PH‑API)]]
+[[PB10_046. PBPE Marketplace — 15‑Slide Pitch Deck (English Edition)]]
 👇️重複-47を使用、SVG❌️
-[[PM47. PBPE Marketplace — 15‑Slide Pitch Deck（英語版）]]
-[[PM48. PBPE Marketplace — PowerPoint Optimized SVG（英語版）]]
+[[PB10_047. PBPE Marketplace — 15‑Slide Pitch Deck（英語版）]]
+[[PB10_048. PBPE Marketplace — PowerPoint Optimized SVG（英語版）]]
 以下の SVG は **PowerPoint の 16:9 スライドに完全フィット**
-[[PA049. 「農産物購入＝排出権取引」はPBPE Marketplaceの基本的概念のスタート]]
+[[PB10_049. 「農産物購入＝排出権取引」はPBPE Marketplaceの基本的概念のスタート]]
 
-[[PBPE Marketplace — 1‑Page Architecture Diagram_1.svg]]
-[[PBPE Marketplace — 1‑Page Architecture Diagram_2.svg]]
-[[HitHub Profile]]
+[[PB10_050. PBPE Marketplace — 1‑Page Architecture Diagram_1.svg]]
+[[PB10_051. PBPE Marketplace — 1‑Page Architecture Diagram_2.svg]]
+[[PB10_052. HitHub Profile]]
 
 ## 🗃️PBPE Marketplace GitHub Repository②
 
-[[PMG1. PBPE Marketplace — GitHub Repository Architecture（完全版）]]
+[[PB11_001. PBPE Marketplace — GitHub Repository Architecture（完全版）]]
 README.md（英語版・完成形）✔
-[[PMG2. 初期コミット一式（フォルダ＋空ファイル）]]
-[[PMG3. 実装の進め方]]
-[[PMG4. README完了]]
-[[PMG5. ドキュメント類は “そのまま GitHub にペースト”]]
-[[PMG6. コーヒー豆そのものが「排出権＋レジリエンス価値」になる]]
-[[PAG007. PBPE = 生産性価値 + 気候価値 + 健康価値 + 循環価値]]
-[[PAG008. 収量 × 品質 × 生産費削減 → 収益が構造的に向上する]]
-[[PMG9. PBPE‑Marketplace リポジトリ構成と、現時点の完成度一覧]]　リポジトリ構築状況まとめ
-[[PAG010. PBPE‑Marketplace の市場規模（コーヒー領域）～BlackRock]]👉️
-[[PMG11. 「投資家向けスライド」と「White Paper 章」]]
+[[PB11_002. 初期コミット一式（フォルダ＋空ファイル）]]
+[[PB11_003. 実装の進め方]]
+[[PB11_004. README完了]]
+[[PB11_005. ドキュメント類は “そのまま GitHub にペースト”]]
+[[PB11_006. コーヒー豆そのものが「排出権＋レジリエンス価値」になる]]
+[[PB11_007. PBPE = 生産性価値 + 気候価値 + 健康価値 + 循環価値]]
+[[PB11_008. 収量 × 品質 × 生産費削減 → 収益が構造的に向上する]]
+[[PB11_009. PBPE‑Marketplace リポジトリ構成と、現時点の完成度一覧]]　リポジトリ構築状況まとめ
+[[PB11_010. PBPE‑Marketplace の市場規模（コーヒー領域）～BlackRock]]👉️
+[[PB11_011. 「投資家向けスライド」と「White Paper 章」]]
 `docs/whitepaper/pbpe-coffee-impact.md
-[[PAG012. PBPE‑Marketplace × Coffee Industry — Investor Slide Deck (English Version)]] ☛このスライド内容を使うか？
-[[PAG013. ① Coffee PBPE Mathematical Model（完全版）]]
-[[PAG014. 算定式（完全版） とBlackRock への提言書]]
-[[PMG15. PBPE‑Marketplace リポジトリの構築を “最短ルート” で完了させる]]
-[[PMG16. 今からの進め方（Kaz 専用の最短ルート）]]
-[[PMG17. PBPE‑Marketplace：進行管理フレーム]]
+[[PB11_012. PBPE‑Marketplace × Coffee Industry — Investor Slide Deck (English Version)]] ☛このスライド内容を使うか？
+[[PB11_013. ① Coffee PBPE Mathematical Model（完全版）]]
+[[PB11_014. 算定式（完全版） とBlackRock への提言書]]
+[[PB11_015. PBPE‑Marketplace リポジトリの構築を “最短ルート” で完了させる]]
+[[PB11_016. 今からの進め方（Kaz 専用の最短ルート）]]
+[[PB11_017. PBPE‑Marketplace：進行管理フレーム]]
 - [PBPE Marketplace Presentation (PDF)](docs/pitch-deck/PBPE-Marketplace-Presentation.pdf)
-[[PMG18. 新しいスレッドに移行するための “専用プロンプト”]]
+[[PB11_018. 新しいスレッドに移行するための “専用プロンプト”]]
 👉️ここから
-[[PMG19. 進行状況（いまの立ち位置）]]
-[[PMG20. STEP 3：Pitch Deck セクションを作成する]]
-[[PAG021. STEP 4：API（OpenAPI 3.1）の骨格を作成する]]☑
-[[PAG022. STEP 5：Engine セクションの構築]]☑
-[[PAG023. STEP 6：Ledger セクションの構築]]☑
-[[PAG024. STEP 7：UI セクションの構築]]☑
-[[PAG025. Dashboard]]
-[[PMG26. PBPE‑Marketplace：全体進捗サマリー]]
-[[27. プロジェクトの位置づけ（全体像）]]
-[[28. 保険会社から見た「PBPE Marketplace」の位置づけ]]
+[[PB11_019. 進行状況（いまの立ち位置）]]
+[[PB11_020. STEP 3：Pitch Deck セクションを作成する]]
+[[PB11_021. STEP 4：API（OpenAPI 3.1）の骨格を作成する]]☑
+[[PB11_022. STEP 5：Engine セクションの構築]]☑
+[[PB11_023. STEP 6：Ledger セクションの構築]]☑
+[[PB11_024. STEP 7：UI セクションの構築]]☑
+[[PB11_025. Dashboard]]
+[[PB11_026. PBPE‑Marketplace：全体進捗サマリー]]
+[[PB11_027. プロジェクトの位置づけ（全体像）]]
+[[PB11_028. 保険会社から見た「PBPE Marketplace」の位置づけ]]
 0506 ☛ここまで
-[[29. スライド資料について]]
-[[30. 世界の主要 MRV プロバイダ：Pachama _Watershed _Sylvera]]
-[[31. PDFスライドの改善すべきポイント]]
-[[32. PBPE Marketplace スライド改善のための追加内容プロンプト（完全版）]]
-[[33. PBPE Marketplace 改善版 Pitch Deck（テキスト完全版）]]
+[[PB11_029. スライド資料について]]
+[[PB11_030. 世界の主要 MRV プロバイダ：Pachama _Watershed _Sylvera]]
+[[PB11_031. PDFスライドの改善すべきポイント]]
+[[PB11_032. PBPE Marketplace スライド改善のための追加内容プロンプト（完全版）]]
+[[PB11_033. PBPE Marketplace 改善版 Pitch Deck（テキスト完全版）]]
 
-[[34. PBPE‑Marketplace リポジトリ：次に進むべき作業一覧]]
-[[35. README（完成版）— 深掘り構築]]
-[[36. PBPE Marketplace スライドに追加すべき “インスピレーション強化要素]]
+[[PB11_034. PBPE‑Marketplace リポジトリ：次に進むべき作業一覧]]
+[[PB11_035. README（完成版）— 深掘り構築]]
+[[PB11_036. PBPE Marketplace スライドに追加すべき “インスピレーション強化要素]]
 [[37. PBPE Marketplace を見た世界の ESG・金融・財団トップが投げる質問（想定）]]
 [[38. ESG・インパクト投資家が受け取るインパクト]]
-[[PAG039. 食料価格高騰に対して PBPE はどう機能するのか？]]
+[[PB11_039. 食料価格高騰に対して PBPE はどう機能するのか？]]
 [[40. 食料価格高騰へのソリューションとしての PBPE（彼らの脳内で起きること）]]
-[[PAG041. MBT55 による 5.1億トン削減]]
-[[PAG042. PBPE Marketplace：Green Premium（グリーンプレミアム）完全モデル]]
-[[PAG043. PBPE Marketplace が生み出すサステナブル循環モデル]]
+[[PB11_041. MBT55 による 5.1億トン削減]]
+[[PB11_042. PBPE Marketplace：Green Premium（グリーンプレミアム）完全モデル]]
+[[PB11_043. PBPE Marketplace が生み出すサステナブル循環モデル]]
 [[44. MBT55による農産物価格とグリーンプレミアム]]
 [[45. 温室効果ガス削減量算出比較]]
 [[46. PBPE Marketplace：  5.1億トン削減 × ネガティブ・グリーンプレミアム]]
@@ -125,55 +125,55 @@ PBPE-Marketplaceは継続
 
 ## 🗃️PBPE Marketplace GitHub 再開③
 ③
-[[PM01. PBPE‑Marketplace の構築フェーズ]]
-[[PM02. 次のステップ：PBPE‑Marketplace（Layer 4）の構築へ]]
-[[PM03. PBPE‑Marketplace 開発スレッド — 公式指示書（Kaz 専用）]]
-[[PM04. PBPE‑Marketplace 開発スレッド — 改訂版 公式指示書（既存リポジトリ対応）]]
+[[PB11_046. PBPE‑Marketplace の構築フェーズ]]
+[[PB11_047. 次のステップ：PBPE‑Marketplace（Layer 4）の構築へ]]
+[[PB11_048. PBPE‑Marketplace 開発スレッド — 公式指示書（Kaz 専用）]]
+[[PB11_049. PBPE‑Marketplace 開発スレッド — 改訂版 公式指示書（既存リポジトリ対応）]]
 
 ### ここから実装作業開始 05/21 3:11
 
-[[PM005. ① PBPE‑Marketplace _ MBT‑BioSecurity‑Engine の進捗状況（完全版）]]
-[[APM006. PBPE‑Marketplace ダッシュボード（最終版）]]重要
-[[APM007. ダッシュボードに対応するAPI I_O設計]]
-[[APM008. PBPE‑Marketplace Dashboard API — FastAPI ルーター雛形（完全版）]]✔
-[[PM009. なぜ今 `dashboard.py` を配置してよいのか（技術的・構造的理由）]]
-[[APM010. PBPE‑Marketplace Dashboard の UI ワイヤーフレーム]]
-[[APM011. PBPE_Credits_Specification.md（Markdown 完全版）]]日本語が混在
-[[APM012. PBPE_Credits_Specification.md（English Version）]]
-[[PM013. スレッド_PBPE‑Marketplace_進捗状況]]
+[[PB11_050. ① PBPE‑Marketplace _ MBT‑BioSecurity‑Engine の進捗状況（完全版）]]
+[[PB11_051. PBPE‑Marketplace ダッシュボード（最終版）]]重要
+[[PB11_052. ダッシュボードに対応するAPI I_O設計]]
+[[PB11_053. PBPE‑Marketplace Dashboard API — FastAPI ルーター雛形（完全版）]]✔
+[[PB11_054. なぜ今 `dashboard.py` を配置してよいのか（技術的・構造的理由）]]
+[[PB11_055. PBPE‑Marketplace Dashboard の UI ワイヤーフレーム]]
+[[PB11_056. PBPE_Credits_Specification.md（Markdown 完全版）]]日本語が混在
+[[PB11_057. PBPE_Credits_Specification.md（English Version）]]
+[[PB11_058. スレッド_PBPE‑Marketplace_進捗状況]]
 
-[[PBPE‑Marketplace構築のための双方へのPrompt]]
+[[PB11_059. PBPE‑Marketplace構築のための双方へのPrompt]]
 👇
-[[PM014. PBPE‑Marketplace Repository — Integrated Progress Report（0523 時点）]]
-[[PM015. PBPE‑Marketplace — PMO Master Plan（0523版）]]
-[[PM016. PBPE‑Marketplace API（OpenAPI 3.1 完全版）— PMO主導で開始します]]
-[[PM017. PBPE_Credits_Specification.md どれを正とするか]]
-[[PM018. PBPE_Credits_Specification.md の扱い（結論）]]
+[[PB11_060. PBPE‑Marketplace Repository — Integrated Progress Report（0523 時点）]]
+[[PB11_061. PBPE‑Marketplace — PMO Master Plan（0523版）]]
+[[PB11_062. PBPE‑Marketplace API（OpenAPI 3.1 完全版）— PMO主導で開始します]]
+[[PB11_063. PBPE_Credits_Specification.md どれを正とするか]]
+[[PB11_064. PBPE_Credits_Specification.md の扱い（結論）]]
 
 ## PMO計画の Phase 2（PBPE‑backed Bond モデル）④
 
-[[APM019. PMO計画の Phase 2（PBPE‑backed Bond モデル）]]済
-[[GitHubでの数式表示について]]済
+[[PB11_065. PMO計画の Phase 2（PBPE‑backed Bond モデル）]]済
+[[PB11_066. GitHubでの数式表示について]]済
 Phase 2 の「仕様＋モデル＋API」は一通り揃いました
-[[PM020. PBPE Dashboard v3（統合ビュー）の UI Mockup と IO 最終版]]済
-[[PM021. PBPE‑Marketplace：現時点の進捗状況（公式まとめ）]]
-[[PM022. PBPE‑Marketplace：現時点の進捗状況 & 今後の作業内容（PMO公式まとめ）]]重複
-[[PM023. ① PBPE‑Dashboard v3 — Frontend ディレクトリ構成案（PMO公式）]]frontend
-[[PM024. PBPE‑Marketplace API（OpenAPI 3.1 v1.0）正式版]]済
+[[PB11_067. PBPE Dashboard v3（統合ビュー）の UI Mockup と IO 最終版]]済
+[[PB11_068. PBPE‑Marketplace：現時点の進捗状況（公式まとめ）]]
+[[PB11_069. PBPE‑Marketplace：現時点の進捗状況 & 今後の作業内容（PMO公式まとめ）]]重複
+[[PB11_069. ① PBPE‑Dashboard v3 — Frontend ディレクトリ構成案（PMO公式）]]frontend
+[[PB11_070. PBPE‑Marketplace API（OpenAPI 3.1 v1.0）正式版]]済
 [[PM025. 上書き確認]]
-[[PM026. PBPE‑Marketplace README（英語版）更新案（API 仕様リンク付き）]]済
-[[PM027. 統合版 README（英語）— 完全版（そのまま上書き可能）]]済
-[[PM028. PBPE‑Finance 拡張]]済
-[[PM029. 設置先は PBPE‑Marketplace リポジトリです]]
-[[PM030. PBPE Insurance API、Dashboard v3 UI 実装、PBPE Credit Market モデル]]済
-[[PM031. 今のフェーズを一気に締めて、残りの「予定タスク」も一覧]]済
-[[PM032. credits.py` の価格形成ロジック更新]]済
+[[PB11_071. PBPE‑Marketplace README（英語版）更新案（API 仕様リンク付き）]]済
+[[PB11_072. 統合版 README（英語）— 完全版（そのまま上書き可能）]]済
+[[PB11_073. PBPE‑Finance 拡張]]済
+[[PB11_074. 設置先は PBPE‑Marketplace リポジトリです]]
+[[PB11_075. PBPE Insurance API、Dashboard v3 UI 実装、PBPE Credit Market モデル]]済
+[[PB11_076. 今のフェーズを一気に締めて、残りの「予定タスク」も一覧]]済
+[[PB11_077. credits.py` の価格形成ロジック更新]]済
 [[PM033. 上書き]]済
-[[PM034. Dashboard v3 の残り実装フェーズ]]済
-[[PM035. PBPE Insurance UI 接続（B）]]済
-[[PM036. Dashboard v3 — UI 完成（残りのスタイル & チャート実装）]]
-[[PM036_2. KPI カード（完成デザイン）]]☛作業漏れ ✔ 済
-[[index.tsx]]済
+[[PB11_078. Dashboard v3 の残り実装フェーズ]]済
+[[PB11_079. PBPE Insurance UI 接続（B）]]済
+[[PB11_080. Dashboard v3 — UI 完成（残りのスタイル & チャート実装）]]
+[[PB11_081_2. KPI カード（完成デザイン）]]☛作業漏れ ✔ 済
+[[PB11_081. Dashboard ページ統合 index.tsx]]済
 🧩 あなたがやるべきこと（簡単） 
 - このコードを そのまま index.tsx に置き換える
 - Dashboard.css に必要なスタイルを追加（必要なら私が作る）
@@ -181,44 +181,44 @@ Phase 2 の「仕様＋モデル＋API」は一通り揃いました
 - KPI / チャートが動くか確認　✔
 [[確認事項]]
 
-[[PM037. PBPE Insurance UI — 完全実装]]済
-[[PM038. 動的価格モデル対応]]済
-[[PM039. 7 桁コードは  PBPE Marketplace の中核に進化]]✔重要
+[[PB11_082. PBPE Insurance UI — 完全実装]]済
+[[PB11_083. 動的価格モデル対応]]済
+[[PB11_084. 7 桁コードは  PBPE Marketplace の中核に進化]]✔重要
 ここまで 05/24 23:56☛下記の確認から再開　#next 
-[[PM040. Step 4：PBPE Bond Pricing UI + Simulation]]　PM040_2へ
-[[PM041. PBPE Marketplace — 残りタスク（最新版）]]
-[[PM038_2. 結論（最初にまとめ）]]
-[[PM038_3. 追記内容確認]]済
+[[PB11_085. Step 4：PBPE Bond Pricing UI + Simulation]]　PM040_2へ
+[[PB11_086. PBPE Marketplace — 残りタスク（最新版）]]
+[[PB11_087. 修正（差分反映）]]
+[[PB11_088. 追記内容確認]]済
 
-[[Step 5：Scope 3 Integration — 全体像]]☛漏れー要作業 #next 
-[[PM040_2. どこに追記するのか？]]components.schemas ✔済
+[[PB11_085. Step 5：Scope 3 Integration — 全体像]]☛漏れー要作業 #next 
+[[PB11_086. どこに追記するのか？]]components.schemas ✔済
 
-[[PM042. Step 6：認証（Auth）— 全体像]]
-[[Step 6 不明点]]済
-[[APM043. Step 7：PBPE Marketplace — Enterprise Integration]]　☛ダッシュボード表示内容確認
-[[PM044. Step 8：PBPE Marketplace Pitch Deck v2]]
-[[PM045. PBPE Marketplace Dashboard は「8〜9割完成」レベル]]
+[[PB11_087. Step 6：認証（Auth）— 全体像]]
+[[PB11_088. Step 6 不明点]]済
+[[PB11_089. Step 7：PBPE Marketplace — Enterprise Integration]]　☛ダッシュボード表示内容確認
+[[PB11_090. Step 8：PBPE Marketplace Pitch Deck v2]]
+[[PB11_091. PBPE Marketplace Dashboard は「8〜9割完成」レベル]]
 
 ## 🗃️ PBPE-Marketplace 実装作業続き
 
-[[APM046. PBPE Marketplace Dashboard v3 – 完成形 UI]]☛イメージ　☑️最重要
-[[PM047. Dashboard v3 は “完全に日英切り替え対応” にできます]]✔☛ここから
-[[PM048. 日英切り替えの土台（最小実装）]]✔済
-[[useT を import]]済
+[[PB14_001. PBPE Marketplace Dashboard v3 – 完成形 UI]]☛イメージ　☑️最重要
+[[PB14_002. Dashboard v3 は “完全に日英切り替え対応” にできます]]✔☛ここから
+[[PB14_003. 日英切り替えの土台（最小実装）]]✔済
+[[PB14_004. useT を import]]済
 [[PM049.]]
-[[PM050. Step 9（続き）：レイアウトとバランスの最終調整]]済
-[[PM051. Step 10：PBPE Marketplace Dashboard v3 — デザイン統一]]設計
-[[PM052. Step 11：PBPE Marketplace Dashboard v3 ― 最終統合]]済
-[[Step 11 パス確認]]済
-[[PM054. Step 12：PBPE Marketplace Dashboard v3 – Final Review（最終レビュー）]]
-[[APM053. Step 13：PBPE Marketplace – Final Integration & QA（最終統合 & 品質保証）]]
-[[PM055.]]
-[[PM056. Step 14：PBPE Marketplace v1.0 — 正式リリース宣言]]
-[[PM057. どのドキュメントをリポジトリに置くべきか？]]
-[[PM058. Step 15：PBPE Marketplace v1.0 — デプロイ & 公開準備]]
-[[PM059. 結論：あなたが知らなくても、3つの方法は “簡単にできる”]]
-[[PM060. 結論：ツールは多いけれど、あなたが使う必要があるのは “たった1〜2種類だけ”。]]
-[[PM061. 結論：3つは「役割がまったく違う」けれど、あなたのプロジェクトでは “完璧に補完し合う”]]
+[[PB14_005. Step 9（続き）：レイアウトとバランスの最終調整]]済
+[[PB14_006. Step 10：PBPE Marketplace Dashboard v3 — デザイン統一]]設計
+[[PB14_007. Step 11：PBPE Marketplace Dashboard v3 ― 最終統合]]済
+[[PB14_008. Step 11 パス確認]]済
+[[PB14_009. Step 12：PBPE Marketplace Dashboard v3 – Final Review（最終レビュー）]]
+[[PB14_010. Step 13：PBPE Marketplace – Final Integration & QA（最終統合 & 品質保証）]]
+[[PB14_011. Step13]]
+[[PB14_012. Step 14：PBPE Marketplace v1.0 — 正式リリース宣言]]
+[[PB14_013. どのドキュメントをリポジトリに置くべきか？]]
+[[PB14_014. Step 15：PBPE Marketplace v1.0 — デプロイ & 公開準備]]
+[[PB14_015. 結論：あなたが知らなくても、3つの方法は “簡単にできる”]]
+[[PB14_016. 結論：ツールは多いけれど、あなたが使う必要があるのは “たった1〜2種類だけ”。]]
+[[PB14_017. 結論：3つは「役割がまったく違う」けれど、あなたのプロジェクトでは “完璧に補完し合う”]]
 
 [[PM062. エラー対応]]ここまで05/31☛06/01 ここから
 [[PM063. エラー対応２]]
@@ -242,33 +242,33 @@ Phase 2 の「仕様＋モデル＋API」は一通り揃いました
 
 ---
 
-[[PM062. Step 16：PBPE Marketplace v1.0 — 実デプロイ（あなた専用の最短ルート）]]
-[[PM063. Step 17：PBPE Marketplace v1.0 — 実デプロイ（具体的手順）]]
-[[PM064. Step 18：PBPE Marketplace v1.0 — 公開後の最終 QA]]
-[[PM065. Step 19：PBPE Marketplace v1.0 — 正式公開（Go‑Live）]]
-[[PM066. Step 20：PBPE Marketplace v1.0 — Post‑Launch 運用フェーズ]]
-[[PM067. Step 21：PBPE Marketplace — 運用ダッシュボード（Operations Dashboard）設計]]
-[[PM068. Step 22：PBPE Marketplace の自動化（Automation）設計]]
-[[PM069. Step 23：PBPE Marketplace ― 外部パートナー連携設計]]
-[[PM070. 大きな欠陥はない。]]
-[[PM071.]]
-[[PM072. PBPE-Marketplace を“中心ハブ”にして、他のリポジトリを]]
-[[PM073. 結論：Finance と Dashboard は PBPE-Marketplace に完全統合する]]
+[[PB14_018. Step 16：PBPE Marketplace v1.0 — 実デプロイ（あなた専用の最短ルート）]]
+[[PB14_019. Step 17：PBPE Marketplace v1.0 — 実デプロイ（具体的手順）]]
+[[PB14_020. Step 18：PBPE Marketplace v1.0 — 公開後の最終 QA]]
+[[PB14_021. Step 19：PBPE Marketplace v1.0 — 正式公開（Go‑Live）]]
+[[PB14_022. Step 20：PBPE Marketplace v1.0 — Post‑Launch 運用フェーズ]]
+[[PB14_023. Step 21：PBPE Marketplace — 運用ダッシュボード（Operations Dashboard）設計]]
+[[PB14_024. Step 22：PBPE Marketplace の自動化（Automation）設計]]
+[[PB14_025. Step 23：PBPE Marketplace ― 外部パートナー連携設計]]
+[[PB14_026. 大きな欠陥はない。]]
+[[PB14_027. まず「PBPE-Marketplace 完成」の定義をはっきりさせる]]
+[[PB14_028. PBPE-Marketplace を“中心ハブ”にして、他のリポジトリを]]
+[[PB14_029. 結論：Finance と Dashboard は PBPE-Marketplace に完全統合する]]
 
-[[PM074. 「MBT‑Biosecurity‑Engine（投資家向けモデル）を PBPE‑Marketplace に統合するための完全ロードマップ」]]
-[[PM075. PBPE‑Marketplace の本番環境は Vercel（フロント）＋Railway（バック）]]
-[[PM076. バックエンド統合（Streamlit → TypeScript _ Express API 化）]]
-[[PM077. Sidebar _ Header が正しく表示されるか確認する方法]]済
+[[PB14_030. 「MBT‑Biosecurity‑Engine（投資家向けモデル）を PBPE‑Marketplace に統合するための完全ロードマップ」]]
+[[PB14_031. PBPE‑Marketplace の本番環境は Vercel（フロント）＋Railway（バック）]]
+[[PB14_032. バックエンド統合（Streamlit → TypeScript _ Express API 化）]]
+[[PB14_033. Sidebar _ Header が正しく表示されるか確認する方法]]済
 
-[[PM78. “確実に動く完全修正版 index.ts”]]
-[[PM79. interceptor の config を “完全に any にする”]]
-[[PM80. 今のエラーの意味]]
-[[PM81. なぜ react-router-dom が使えないのか？]]
-[[PM82. 即時の解決策]]
-[[Sidebar.tsx は既に正しい]]
-[[PM83. 残すべき Login ページは 1つだけ]]
-[[PM84. バックエンドのレスポンス形式]]
-[[PM85. 最終版 Sidebar.tsx]]
+[[PB14_034. “確実に動く完全修正版 index.ts”]]
+[[PB14_035. interceptor の config を “完全に any にする”]]
+[[PB14_035. 今のエラーの意味]]
+[[PB14_036. なぜ react-router-dom が使えないのか？]]
+[[PB14_037. 即時の解決策]]
+[[PB14_038. Sidebar.tsx は既に正しい]]
+[[PB14_039. 残すべき Login ページは 1つだけ]]
+[[PB14_040. バックエンドのレスポンス形式]]
+[[PB14_041. 最終版 Sidebar.tsx]]
 [[重複ファイル]]
 
 ---
@@ -321,20 +321,20 @@ pages/login.tsx（完全版・全ファイル差し替え）☑
 [[DP37. Backend は “部分修正” より “最初から再構築” の方が正しい]]
 [[DP38. Backend だけ “最初から作り直す” のが最適解]]
 [[DP39. このドキュメントを基準に Backend を再構築すれば]]
-[[DP40. 7 桁コードはどこに存在しているのか（5 つのレイヤー）]]
-[[ADP041. 7 桁コード生成モジュール（PBPE Identifier Engine）]]☑️ Blockchain 済
-[[ADP42. PBPE Marketplace は、農業・気候ファイナンス・ESG の「世界標準 OS」になり得る。]]☑️
-[[DP43. PBPE Marketplace はブロックチェーンによって二重計上（Double Counting）を“本質的に防止できる構造”]]☑️
-[[ADP44. PBPE Marketplace のブロックチェーンはGitHub（コード）にも、Dashboard（UI）にも “自然に統合できる”]]☑️
-[[DP45. なぜ「アーキテクトとしての真骨頂」なのか]]
-[[ADP46. PBPE Registry（Layer 5）の完全設計]]
-[[ADP47. PBPE Planetary OS — 完全統合アーキテクチャ]]
-[[DP48. ４本まとめて、一気に「貼り替え可能な完全ファイル」]]パス確認　設置済
-[[DP49. 全体実装を進めるための“最低限かつ正確な”ステップ]]
-[[DP50. Registry を「必ず通る背骨」にする（バックエンド側）]]
-[[DP51. credits.py（完全ファイル差し替え版）]]
+[[PB14_042. 7 桁コードはどこに存在しているのか（5 つのレイヤー）]]
+[[PB14_043. 7 桁コード生成モジュール（PBPE Identifier Engine）]]☑️ Blockchain 済
+[[PB14_044. PBPE Marketplace は、農業・気候ファイナンス・ESG の「世界標準 OS」になり得る。]]☑️
+[[PB14_045. PBPE Marketplace はブロックチェーンによって二重計上（Double Counting）を“本質的に防止できる構造”]]☑️
+[[PB14_046. PBPE Marketplace のブロックチェーンはGitHub（コード）にも、Dashboard（UI）にも “自然に統合できる”]]☑️
+[[PB14_047. なぜ「アーキテクトとしての真骨頂」なのか]]
+[[PB14_048. PBPE Registry（Layer 5）の完全設計]]
+[[PB14_049. PBPE Planetary OS — 完全統合アーキテクチャ]]
+[[PB14_050. ４本まとめて、一気に「貼り替え可能な完全ファイル」]]パス確認　設置済
+[[PB14_051. 全体実装を進めるための“最低限かつ正確な”ステップ]]
+[[PB14_052. Registry を「必ず通る背骨」にする（バックエンド側）]]
+[[PB14_053. credits.py（完全ファイル差し替え版）]]
 📁 backend/routers/credits.py（完全ファイル差し替え版）再確認　済　ここで中断　0609 17:22
-[[DP52. 最優先すべきは「Trace ボタン（Dashboard → Registry）」の実装です]]
+[[PB14_054. 最優先すべきは「Trace ボタン（Dashboard → Registry）」の実装です]]
 
 [[DP53. あなたが帰宅後に最初にやること]]Backend を起動はまだ
 [[DP54. 今のあなたがやるべき順番（最短で動く OS を作る）]]済
@@ -420,6 +420,6 @@ pages/login.tsx（完全版・全ファイル差し替え）☑
 [[2026-04-02#🗃️PBPE-Coffee_Copilot進捗状況]]
 👇
 [[リポジトリ（PBPE-Coffee Repository）]]
-[[PBPE-Coffee_Dashboard 構築案]]
+[[PB7_038. PBPE-Coffee_Dashboard 構築案]]
 👇
 [[2026-05-12#MBT-Biosecurity_Copilot]]へ

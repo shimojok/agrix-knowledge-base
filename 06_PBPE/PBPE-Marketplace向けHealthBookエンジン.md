@@ -1,6 +1,6 @@
 ## HealthBook送信ファイル
 
-[[HB2. 推論エンジン設計（３ファイルPrompt）]]
+[[HB002. 推論エンジン設計（３ファイルPrompt）]]
 [[00_inbox/07_HealthBook/HB5. HealthBook Platform 統合アーキテクチャ（詳細説明付き）]]
 
 

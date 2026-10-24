@@ -8,17 +8,17 @@ AGRIX Nexus EcoSystem（ANE）と
 AGRIX Climate-Agri Investment Nexus (ACAIN)　の概念を加えたものとなりました。
 
 添付ドキュメント：
-[[AgriWare™：フェノタイピング駆動型 土壌-作物-微生物 ハイパーサイクル制御システム]]
-[[AgriWare™： フェノタイピング駆動型 土壌生態系オペレーティングシステム]]
-[[AGRIX Platform： 統合的自然資本価値循環エコシステム]]
-[[MBT農産物バックド・バリューサイクル（MABC MBT Agri-Backed Cycle）]]
+[[PB0_005. AgriWare™：フェノタイピング駆動型 土壌-作物-微生物 ハイパーサイクル制御システム]]
+[[PB0_006. AgriWare™： フェノタイピング駆動型 土壌生態系オペレーティングシステム]]
+[[PB0_012. AGRIX Platform： 統合的自然資本価値循環エコシステム]]
+[[PB0_010. MBT農産物バックド・バリューサイクル（MABC MBT Agri-Backed Cycle）]]
 [[ANE, ACAINのフレームワークとサービスの考察]]
 [[AGRIX Climate-Agri Investment Nexus (ACAIN)]]
-[[ACAIN 金融商品化のマトリックス]]
+[[PB0_008. ACAIN 金融商品化のマトリックス]]
 
 その後、Planetary Bio_Phenome Engine(PBPE) の枠組みを開発することにより、下記の定義を行ない、その後、PBPE Marketplace、PBPE通貨モデル、PBPE金融モデルの構築へと進んできました。
 
-[[PBPE6. Planetary Bio_Phenome Engine(PBPE)モデル定義文]]
+[[PB1_006. Planetary Bio_Phenome Engine(PBPE)モデル定義文]]
 
 そして、貴方とは、PBPE金融工学論、為替安定化に寄与するメカニズムまで考案しました。
 

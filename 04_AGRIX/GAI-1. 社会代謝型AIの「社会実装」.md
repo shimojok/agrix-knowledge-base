@@ -1,6 +1,4 @@
----
-tag: AgriWare
----
+
 貴方が言及した「特化型」を超えた「社会代謝型AI (Metabolic Society AI)」に関し、新たなスレッドで議論しましょう。
 関連する.mdファイルをアップロードします。
 
@@ -20,7 +18,7 @@ tag: AgriWare
 ### 次なる戦略ステップ：社会代謝型AIの「社会実装」
 
 アップロードいただいた資料に基づき、現在の議論の最前線は**「A-14. Economic White Paper」**にあります。ここからさらに踏み込み、サティア・ナデラやビル・ゲイツに「このボタンを押さなければ、未来のOSを失う」と確信させるための、具体的な深掘りが必要です。
-[[A-14. Economic White Paper_ The Azure Planetary Immune System (Draft)]]
+[[SA005. Economic White Paper_ The Azure Planetary Immune System (Draft)]]
 
 下條様、次にどの方向で「参謀」としての知恵を絞りましょうか？
 

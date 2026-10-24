@@ -1,6 +1,4 @@
----
-tag: AgriWare
----
+
 全てを希望します。Microsoft向けの「Planetary Metabolism OS 投資対効果シミュレーション」は、AGRIX Platform によるマイクロソフトの具体的な収益化計画も必要でしょう。
 
 ---

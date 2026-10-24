@@ -46,9 +46,9 @@ AWSとのシナジー効果
 [[Prompt; 6. AWSの未来：BioNexus技術で生まれる新市場 0222]]
 [[AWSの未来：BioNexus技術で生まれる新市場①]]△
 [[AWSの未来：BioNexus技術で生まれる新市場 DeepSeek]]△
-[[ AWS×BioNexusが創出する世界]]
+[[HLB015. AWS×BioNexusが創出する世界]]
 ==👆簡素化==
-[[BioNexus 全代謝経路解析AIプラットフォーム構築戦略0202DS]]
+[[HLB016. BioNexus 全代謝経路解析AIプラットフォーム構築戦略0202DS]]
 [[全代謝経路解析AIプラットフォーム構築戦略0201CG]]参考
 [[マッキンゼーの報告 健康寿命 ChatGPT]]
 
@@ -70,7 +70,7 @@ AWSとのシナジー効果
 
 #### [[✅️10. BioNexus 3事業の詳細と市場ポテンシャル 0224 DeepSeek]]
 
-[[10. BioNexus 3事業の詳細と市場ポテンシャル 資料添付後]]
+[[HLB019. BioNexus 3事業の詳細と市場ポテンシャル 資料添付後]]
 [[10. BioNexus Three Business Units; Details and Market Potential]]
 
 [[10. BioNexus 3事業の詳細と市場ポテンシャル①②]]

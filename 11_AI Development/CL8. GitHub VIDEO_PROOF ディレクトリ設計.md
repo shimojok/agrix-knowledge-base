@@ -256,5 +256,5 @@ Data template.JSON
 [[01-tsunami-sludge-example]]
 [[IMPLEMENTATION_GUIDE]]
 
-[[CL9. MBT55映像資料の全体分析]]
+[[PMOC007. MBT55映像資料の全体分析]]
 

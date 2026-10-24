@@ -1,6 +1,4 @@
----
-tag: AgriWare
----
+
 #deepseek 
 
 はい、承知いたしました。

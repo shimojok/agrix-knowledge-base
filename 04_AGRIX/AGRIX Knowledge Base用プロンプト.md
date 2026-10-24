@@ -2,11 +2,11 @@
 
 これら５つのドキュメントが、先程お送りした、AGRIX Knowledge Baseへの道筋を作りました。
 
-[[000. 総合評価のお願い_ChatGPT, DeepSeek, Claude]]
-[[001. 全体の論点整理_Copilot]]
-[[002. Canonical数値テーブルの設計方針]]
-[[003. Canonical数値テーブル（v1案）_Copilot]]
-[[004. MT04_Contract-First 型定義（Python _ TypeScript）]]
+[[ASA001. 総合評価のお願い_ChatGPT, DeepSeek, Claude]]
+[[ASC001. 全体の論点整理_Copilot]]
+[[ASC002. Canonical数値テーブルの設計方針]]
+[[ASC003. Canonical数値テーブル（v1案）_Copilot]]
+[[ASC004. MT04_Contract-First 型定義（Python _ TypeScript）]]
 
 ---
 

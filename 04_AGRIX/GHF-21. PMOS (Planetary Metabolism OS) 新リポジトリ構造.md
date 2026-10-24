@@ -3,7 +3,7 @@ tag: AgriWare
 ---
 添付のPrompt について進めてください。
 [[Prompt 02032026]]
-[[AGRIX Quantum Layered Architecture（AQLA）0203]]
+[[AQLA001. AGRIX Quantum Layered Architecture（AQLA）0203]]
 
 ---
 

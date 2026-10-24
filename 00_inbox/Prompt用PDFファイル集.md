@@ -7,7 +7,7 @@
 
 [[00_inbox/04_AGRIX/AGRIX Platform： フェノタイピング駆動型 土壌生態系オペレーティングシステム]]
 
-[[MBT農産物バックド・バリューサイクル（MABC MBT Agri-Backed Cycle）]]
+[[PB0_010. MBT農産物バックド・バリューサイクル（MABC MBT Agri-Backed Cycle）]]
 
 [[③MBT農産物バックド・バリューサイクル（MABC MBT Agri-Backed Cycle）.pdf]]
 

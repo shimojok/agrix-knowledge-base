@@ -401,5 +401,5 @@ but **primary sources of economic value**.
 
 Kaz、次はどれを進めますか。
 
-[[PMG2. 初期コミット一式（フォルダ＋空ファイル）]]
+[[PB11_002. 初期コミット一式（フォルダ＋空ファイル）]]
 

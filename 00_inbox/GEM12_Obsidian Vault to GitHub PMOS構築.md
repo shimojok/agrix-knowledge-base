@@ -1,6 +1,6 @@
 
 [[AGRIX_Theory_MBT55_ja]]
-[[HB5. HealthBook Platform 統合アーキテクチャ（詳細説明付き）]]
+[[HB005. HealthBook Platform 統合アーキテクチャ（詳細説明付き）]]
 [[mbt_kampo_library_final_array.json]]
 [[■questionnaire_full.jp.json 統合前]]
 [[00_inbox/22_Claude/GAME3_IMPLEMENTATION_PLAN|GAME3_IMPLEMENTATION_PLAN]]

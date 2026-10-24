@@ -119,6 +119,6 @@ PMOS-Architecture
 [[DA51. BioNexus_Enterprise Evidence Vault 構築企画案]]
 
 [[2026-04-27#📲GitHub構築評価と改善提案_DeepSeek/アプローチ法]]
-[[7. 現状分析]]
+[[DA107. 現状分析]]
 
 ---

@@ -306,5 +306,5 @@ B（Methodology 完成）
 
 どれに進みますか。
 
-[[36. PBPE Marketplace スライドに追加すべき “インスピレーション強化要素]]
+[[PB11_036. PBPE Marketplace スライドに追加すべき “インスピレーション強化要素]]
 

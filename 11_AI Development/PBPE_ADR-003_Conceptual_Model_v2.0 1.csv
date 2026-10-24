@@ -1,0 +1,14 @@
+﻿adr_id,layer,object,definition,governance_note
+ADR-003,concept,core_flow,MSC/MBT55 → Agricultural Transformation → Agricultural Value Gateway → Verification → Verified Value/Impact Profile → Finance,Canonical conceptual flow
+ADR-003,concept,productivity,Production Quantity × Survival/Harvest Rate × Biomass × Production Cycle,Yield is decomposed; do not use a single yield KPI as the canonical representation
+ADR-003,concept,quality,Nutritional/functional quality + freshness/storage + biological quality,"Quality is a value dimension, not only a price-premium variable"
+ADR-003,concept,circularity,Crop → Food/Feed → Residue → MSC/Fermentation → Functional Input → Soil/Livestock,Agricultural transformation includes resource circulation
+ADR-003,investment,deployment_asset,MSC/local agricultural-input manufacturing capacity,Development investment target and enabling infrastructure
+ADR-003,impact_layer_1,transformation_outputs,Production; Quality; Biomass; Resource; Soil; Biosecurity; Food Loss; Climate; Farm Economics; Circularity,Direct transformation outputs
+ADR-003,impact_layer_2,economic_social_effects,Farmer Income; Food Supply; Food Price; Insurance Risk; Agricultural Asset Value; Public Expenditure; Regional Economy; Health-system burden,Downstream economic/social effects
+ADR-003,impact_layer_3,finance_policy_effects,Agricultural Investment; Climate Finance; Insurance/Reinsurance; International Development Finance; Trade; Sovereign Finance; Corporate Scope 3; Food-system Finance; Infrastructure Finance,Downstream finance/policy domains
+ADR-003,value_gateway,value_profile,Agricultural Value; Soil Value; Resource Value; Biosecurity Value; Food Loss Value; Health Value; Climate Value; Economic Value; Financial Value,Candidate value profile; each component requires evidence/status
+ADR-003,verification,evidence_status,Verified quantitative evidence; Experimental observation; Field case; Practitioner observation; Anecdotal/historical case,Evidence status must be explicit
+ADR-003,finance,outputs,NPV; IRR; Payback; capital requirement; risk profile; scenario/Monte Carlo outputs,Finance layer consumes verified upstream outputs
+ADR-003,governance,legacy_exclusion,PBPE Token/Coin/Currency/Exchange/Market Cap/Supply/Price/Wallet/Mint/Burn are excluded,Legacy GS documents may contain these terms; they are not inherited into current canonical ADR
+ADR-003,downstream,dependency_order,Agricultural Transformation → Value Gateway → Verification → Finance/Insurance/Food Price/GHG models,Downstream models should not define upstream agricultural value

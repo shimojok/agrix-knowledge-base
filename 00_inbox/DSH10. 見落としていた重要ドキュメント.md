@@ -9,7 +9,7 @@
 7. MBT55バイオセキュリティ機能による問題解決.md
 8. MBTハイパーサイクルの理論的優位性と体系化.md
 9. 根粒の増大と窒素固定能の相関.md
-[[5. 「M3_BioSynergy System」実装のためのパラメータ値]]
+[[AXLM007. M3_BioSynergy System実装のためのパラメータ値]]
 10. 「MBT55版・炭素収支棒グラフ」の構図設計.md
 11. 代謝加速の公式（The Hyper-Cycle Equation）.md
 D3. AI統合AgriWareシステム：生態ハイパーサイクル制御OSの構築.md

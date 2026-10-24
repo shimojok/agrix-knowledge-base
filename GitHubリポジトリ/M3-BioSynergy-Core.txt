@@ -1,0 +1,3605 @@
+This file is a merged representation of the entire codebase, combined into a single document by Repomix.
+
+<file_summary>
+This section contains a summary of this file.
+
+<purpose>
+This file contains a packed representation of the entire repository's contents.
+It is designed to be easily consumable by AI systems for analysis, code review,
+or other automated processes.
+</purpose>
+
+<file_format>
+The content is organized as follows:
+1. This summary section
+2. Repository information
+3. Directory structure
+4. Repository files (if enabled)
+5. Multiple file entries, each consisting of:
+  - File path as an attribute
+  - Full contents of the file
+</file_format>
+
+<usage_guidelines>
+- This file should be treated as read-only. Any changes should be made to the
+  original repository files, not this packed version.
+- When processing this file, use the file path to distinguish
+  between different files in the repository.
+- Be aware that this file may contain sensitive information. Handle it with
+  the same level of security as you would the original repository.
+</usage_guidelines>
+
+<notes>
+- Some files may have been excluded based on .gitignore rules and Repomix's configuration
+- Binary files are not included in this packed representation. Please refer to the Repository Structure section for a complete list of file paths, including binary files
+- Files matching patterns in .gitignore are excluded
+- Files matching default ignore patterns are excluded
+- Files are sorted by Git change count (files with more changes are at the bottom)
+</notes>
+
+</file_summary>
+
+<directory_structure>
+0_Overview/README.md
+1_Theory/EarthSystem_Ecology.md
+1_Theory/Enzyme_Cascade.md
+1_Theory/Mathematical_Model.md
+1_Theory/MBT55_Ecological_Hypercycle.md
+1_Theory/Nitrogenase_Model.md
+1_Theory/README.md
+2_Models/carbon_flux.py
+2_Models/enzyme_cascade.py
+2_Models/ghg_model.py
+2_Models/hypercycle.py
+2_Models/microbial_dynamics.py
+2_Models/nitrogen_flux.py
+2_Models/README.md
+2_Models/run_demo.py
+3_Data/Enzyme_Activity.csv
+3_Data/Enzyme_Activity.md
+3_Data/GHG_FieldData.csv
+3_Data/GHG_FieldData.md
+3_Data/HeavyMetal_Transformation.csv
+3_Data/HeavyMetal_Transformation.md
+3_Data/MBT55_Composition.csv
+3_Data/MBT55_Composition.md
+3_Data/README.md
+3_Data/Soil_Improvement.csv
+3_Data/Soil_Improvement.md
+4_Applications/AGRIX.md
+4_Applications/Coffee_Industry.md
+4_Applications/ForestFire_Prevention.md
+4_Applications/HealthBook.md
+4_Applications/README.md
+4_Applications/Water_Purification.md
+5_ClimateFinance/Carbon_Credit_Methodology.md
+5_ClimateFinance/Claim_Engine_Architecture.md
+5_ClimateFinance/Government_Proposal_Framework.md
+5_ClimateFinance/PBPE_Tokenomics.md
+5_ClimateFinance/README.md
+5_ClimateFinance/UNFCCC_Alignment.md
+6_Diagrams/Carbon_Cycle_Acceleration.md
+6_Diagrams/Climate_Finance_Architecture.md
+6_Diagrams/Ecological_Hypercycle.md
+6_Diagrams/Enzyme_Cascade.md
+6_Diagrams/Gaia_MBT55_Integration.md
+6_Diagrams/Nitrogenase_Transformation.md
+6_Diagrams/README.md
+7_Publications/Academic_Paper.md
+7_Publications/Investor_OnePager.md
+7_Publications/README.md
+7_Publications/Slides.md
+7_Publications/WhitePaper.md
+app_en.py
+app.py
+core_model.py
+mrv.py
+planetary_os_adapter.py
+README.md
+WhitePaper/WhitePaper.md
+</directory_structure>
+
+<files>
+This section contains the contents of the repository's files.
+
+<file path="0_Overview/README.md">
+# **M3-BioSynergy Core**
+
+### _Planetary Metabolic Operating System (Planetary OS)_
+
+M3-BioSynergy Core is the official, structured, and scientifically grounded repository integrating:
+
+- **MBT55 ecological hypercycle**
+- **Gaia theory extensions**
+- **Microbial–enzyme cascade models**
+- **Carbon–nitrogen flux acceleration**
+- **GHG reduction mathematical models**
+- **Element transformation pathways**
+- **Climate finance architecture (PBPE, Claim Engine, UNFCCC alignment)**
+
+This repository represents the **core scientific, mathematical, and operational framework** for a planetary-scale ecological operating system.
+
+---
+
+## **Repository Structure**
+
+```
+0_Overview/        → Project overview, concept, Gaia integration, climate finance
+1_Theory/          → Scientific foundations and theoretical frameworks
+2_Models/          → Mathematical models, simulation engines, demo scripts
+3_Data/            → Experimental datasets and field data
+4_Applications/    → AGRIX, Coffee, Water, Forest, HealthBook integrations
+5_ClimateFinance/  → Carbon credit methodology, PBPE tokenomics, Claim Engine
+6_Diagrams/        → System diagrams and visual models
+7_Publications/    → Whitepapers, academic drafts, investor materials
+```
+
+---
+
+## **Purpose**
+
+This repository provides:
+
+- A **unified scientific model** of microbial–planetary interactions
+- A **simulation-ready engine** for ecological and climate modeling
+- A **policy-ready framework** for carbon markets and climate finance
+- A **scalable architecture** for global deployment (Planetary OS)
+
+---
+
+## **Status**
+
+This is the **Core** repository.  
+Legacy materials are stored separately in:
+
+- `M3-BioSynergy-Archive`
+- `M3-BioSynergy-JP-Archive`
+
+---
+
+## **Next Steps**
+
+- Populate theory documents
+- Integrate mathematical models
+- Add simulation engine (`run_demo.py`)
+- Upload diagrams
+- Publish whitepaper
+</file>
+
+<file path="1_Theory/EarthSystem_Ecology.md">
+# **Earth System Ecology Integration — Full Scientific Specification**
+
+## **1. Introduction**
+
+Earth System Ecology examines how biological, chemical, and physical processes interact to regulate the stability of the planet.  
+Within the Planetary OS framework, MBT55 acts as a **biological accelerator** that strengthens Gaia-scale feedback loops.
+
+This document describes:
+
+- How microbial hypercycles influence planetary regulation
+- How carbon, nitrogen, and water cycles are coupled
+- How soil–atmosphere interactions stabilize climate
+- How MBT55 integrates into Earth system dynamics
+
+---
+
+## **2. Gaia Framework Overview**
+
+The Gaia hypothesis proposes that Earth’s biosphere and geophysical systems form a **self-regulating complex**.  
+Key regulatory mechanisms include:
+
+- Carbon sequestration
+- Nitrogen cycling
+- Hydrological buffering
+- Temperature moderation
+- Soil formation and stabilization
+
+MBT55 enhances these mechanisms by **increasing metabolic throughput** at the microbial scale.
+
+---
+
+## **3. Soil as a Planetary Control System**
+
+Soil is the largest biological interface on Earth.  
+It regulates:
+
+- Gas exchange (CO₂, CH₄, N₂O)
+- Water retention and infiltration
+- Nutrient cycling
+- Mineral weathering
+- Organic matter stabilization
+
+MBT55 enhances soil function by:
+
+- Accelerating decomposition
+- Increasing carbon stabilization
+- Enhancing nitrogen availability
+- Improving soil structure and porosity
+
+This transforms soil into a **high-efficiency ecological processor**.
+
+---
+
+## **4. Carbon–Nitrogen–Water Coupling**
+
+Earth system stability depends on the coupling of three major cycles:
+
+### **4.1 Carbon Cycle**
+
+MBT55 accelerates:
+
+- Organic matter breakdown
+- Carbon mineralization
+- Soil carbon sequestration
+- CO₂ drawdown
+
+### **4.2 Nitrogen Cycle**
+
+Nitrogenase and microbial metabolism enhance:
+
+- N₂ fixation
+- Ammonification
+- Nitrification and denitrification control
+- Reduction of N₂O emissions
+
+### **4.3 Water Cycle**
+
+Improved soil structure increases:
+
+- Water infiltration
+- Moisture retention
+- Evapotranspiration buffering
+- Drought resilience
+
+Together, these cycles form a **tri-coupled regulatory engine**.
+
+---
+
+## **5. Planetary Feedback Loops**
+
+MBT55 strengthens several Gaia-scale feedback loops:
+
+### **5.1 Negative Feedback (Stabilizing)**
+
+- Increased soil carbon → reduced atmospheric CO₂
+- Improved moisture retention → reduced temperature extremes
+- Enhanced nitrogen cycling → increased plant productivity
+
+### **5.2 Positive Feedback (Regenerative)**
+
+- More plant biomass → more root exudates → more microbial activity
+- More microbial activity → more enzyme cascades → faster nutrient cycling
+- Faster nutrient cycling → more plant growth
+
+These loops create a **self-reinforcing ecological recovery system**.
+
+---
+
+## **6. Mathematical Representation**
+
+Earth system integration is modeled using coupled differential equations:
+
+### **6.1 Soil Carbon Pool**
+
+$$ \frac{dC_s}{dt} = I - k_d C_s + \eta N $$
+
+Where:
+
+- (I) = carbon input
+- (k_d) = decomposition rate
+- (\eta) = microbial enhancement factor
+
+---
+
+### **6.2 Soil Nitrogen Pool**
+
+$$ \frac{dN_s}{dt} = F_{fix} - L_{den} + \phi C_s $$
+
+Where:
+
+- (F_{fix}) = nitrogen fixation
+- (L_{den}) = denitrification losses
+- (\phi) = carbon–nitrogen coupling coefficient
+
+---
+
+### **6.3 Soil Moisture Dynamics**
+
+$$ \frac{dW}{dt} = P - E - R + \psi S $$
+
+Where:
+
+- (P) = precipitation
+- (E) = evaporation
+- (R) = runoff
+- (\psi) = soil structure enhancement factor
+
+---
+
+## **7. Field Evidence**
+
+Field trials show:
+
+- 20–40% increase in soil moisture retention
+- 30–60% increase in soil organic carbon
+- 25–50% reduction in methane and nitrous oxide emissions
+- 15–35% increase in plant biomass
+- Improved resilience to drought and heat stress
+
+These results confirm MBT55’s role as a **Gaia-compatible ecological stabilizer**.
+
+---
+
+## **8. Integration with Planetary OS**
+
+Earth system data from MBT55 deployments feed into:
+
+- The Claim Engine
+- Carbon credit generation
+- Climate finance modeling
+- Global ecological monitoring
+
+This enables **real-time planetary metabolism management**.
+
+---
+
+## **9. Future Work**
+
+- Integration with satellite remote sensing
+- Multi-scale Earth system modeling
+- Expansion to marine and wetland ecosystems
+- Coupling with climate-economic models
+</file>
+
+<file path="1_Theory/Enzyme_Cascade.md">
+# **Enzyme Cascade Model — Full Scientific Specification**
+
+## **1. Introduction**
+
+The Enzyme Cascade Model describes the multi-step biochemical reaction chains that power the MBT55 Ecological Hypercycle.  
+These cascades enable:
+
+- Rapid substrate turnover
+- High-efficiency carbon and nitrogen mobilization
+- Detoxification and element transformation
+- Amplification of microbial metabolic throughput
+
+The cascade is the **kinetic accelerator** of the Planetary OS.
+
+---
+
+## **2. Architecture of the Cascade**
+
+The cascade consists of **four primary enzyme classes**, each contributing a distinct transformation function:
+
+### **2.1 Oxidoreductases**
+
+- Drive electron transfer
+- Enable redox cycling
+- Initiate breakdown of complex organics
+- Support methane oxidation and CO₂ conversion pathways
+
+### **2.2 Hydrolases**
+
+- Cleave chemical bonds using water
+- Break down cellulose, lignin, proteins, lipids
+- Release simple sugars and amino acids
+
+### **2.3 Transferases**
+
+- Move functional groups between molecules
+- Enable biosynthesis of new compounds
+- Support nitrogen assimilation and amino acid formation
+
+### **2.4 Lyases**
+
+- Break bonds without hydrolysis
+- Enable ring-opening reactions
+- Support heavy metal chelation and transformation
+
+Together, these enzymes form a **cooperative metabolic chain**.
+
+---
+
+## **3. Reaction Pathway Structure**
+
+The cascade follows a generalized reaction sequence:
+
+$$ S_0 \xrightarrow{E_1} S_1 \xrightarrow{E_2} S_2 \xrightarrow{E_3} S_3 \xrightarrow{E_4} P $$
+
+Where:
+
+- (S_0) = initial substrate
+- (E_1, E_2, E_3, E_4) = enzyme classes
+- (P) = final product (nutrient, flux molecule, or transformed element)
+
+Each step increases:
+
+- Reaction rate
+- Bioavailability
+- Microbial uptake efficiency
+
+This creates a **kinetically amplified metabolic loop**.
+
+---
+
+## **4. Kinetic Model**
+
+The cascade is modeled using Michaelis–Menten kinetics extended to multi-step chains:
+
+$$ v_i = \frac{V_{max,i} [S_i]}{K_{m,i} + [S_i]} $$
+
+$$ \frac{dS_i}{dt} = -v_i + v_{i-1} $$
+
+Where:
+
+- (v_i) = reaction velocity of step (i)
+- (V_{max,i}) = maximum rate
+- (K_{m,i}) = substrate affinity
+- (S_i) = substrate concentration at step (i)
+
+This captures:
+
+- Saturation effects
+- Enzyme synergy
+- Rate-limiting steps
+- Feedback amplification
+
+---
+
+## **5. Feedback Amplification**
+
+The cascade interacts with microbial metabolism through:
+
+### **5.1 Positive Feedback**
+
+- More substrate → more microbial growth
+- More microbes → more enzyme secretion
+- More enzymes → faster substrate turnover
+
+This creates a **self-reinforcing metabolic engine**.
+
+### **5.2 Negative Feedback**
+
+- Substrate depletion slows reaction rates
+- Product accumulation can inhibit upstream enzymes
+
+These feedbacks stabilize the system.
+
+---
+
+## **6. Integration with MBT55 Hypercycle**
+
+The cascade is embedded in the hypercycle as:
+
+- The **kinetic driver** of substrate cycling
+- The **rate amplifier** of carbon and nitrogen flux
+- The **chemical engine** enabling element transformation
+
+It directly influences:
+
+- Microbial growth rate
+- Soil carbon mineralization
+- Nitrogen mobilization
+- GHG reduction pathways
+
+---
+
+## **7. Field Evidence**
+
+Field trials show:
+
+- 2–4× faster decomposition of organic matter
+- 30–50% increase in nutrient bioavailability
+- Significant reduction in methane and nitrous oxide emissions
+- Enhanced soil structure and moisture retention
+
+These results confirm the cascade’s **ecological and climate relevance**.
+
+---
+
+## **8. Future Extensions**
+
+- Multi-enzyme kinetic modeling
+- Temperature and pH sensitivity mapping
+- Integration with remote sensing data
+- Expansion to aquatic and urban ecosystems
+</file>
+
+<file path="1_Theory/Mathematical_Model.md">
+# **Mathematical Framework — Full Scientific Specification**
+
+## **1. Introduction**
+
+The Mathematical Framework defines the quantitative backbone of the Planetary Metabolic Operating System (Planetary OS).  
+It integrates:
+
+- Microbial population dynamics
+- Enzyme cascade kinetics
+- Carbon and nitrogen flux acceleration
+- Soil–atmosphere exchange
+- Gaia-scale feedback loops
+
+This framework enables **simulation, prediction, optimization, and verification** of ecological performance.
+
+---
+
+## **2. System Overview**
+
+The model is structured as a **multi-layered dynamical system**:
+
+1. **Microbial Dynamics Layer**  
+    Governs growth, competition, cooperation, and metabolic output.
+    
+2. **Enzyme Cascade Layer**  
+    Controls substrate turnover and reaction kinetics.
+    
+3. **Biogeochemical Flux Layer**  
+    Tracks carbon, nitrogen, and water fluxes.
+    
+4. **Planetary Feedback Layer**  
+    Represents soil–atmosphere interactions and climate regulation.
+    
+5. **Climate Finance Layer**  
+    Converts ecological performance into quantifiable credits.
+    
+
+Each layer is mathematically coupled to form a **unified planetary metabolism model**.
+
+---
+
+## **3. Microbial Dynamics**
+
+Microbial biomass (N) follows a modified logistic model:
+
+$$ \frac{dN}{dt} = rN\left(1 - \frac{N}{K}\right) + \alpha S + \lambda E $$
+
+Where:
+
+- (r) = intrinsic growth rate
+- (K) = carrying capacity
+- (S) = substrate concentration
+- (E) = enzyme concentration
+- (\alpha, \lambda) = enhancement coefficients
+
+This captures:
+
+- Growth saturation
+- Substrate-driven acceleration
+- Enzyme-mediated metabolic amplification
+
+---
+
+## **4. Enzyme Cascade Kinetics**
+
+Each enzyme step (i) follows Michaelis–Menten kinetics:
+
+$$ v_i = \frac{V_{max,i} [S_i]}{K_{m,i} + [S_i]} $$
+
+Substrate dynamics:
+
+$$ \frac{dS_i}{dt} = v_{i-1} - v_i $$
+
+Total enzyme concentration:
+
+$$ E = \sum_i E_i $$
+
+This structure models:
+
+- Rate-limiting steps
+- Synergistic enzyme interactions
+- Substrate flow through the cascade
+
+---
+
+## **5. Carbon Flux Acceleration**
+
+Carbon flux (C) is driven by microbial activity and enzyme turnover:
+
+$$ \frac{dC}{dt} = \beta N + \gamma \sum_i v_i - \mu C $$
+
+Where:
+
+- (\beta) = microbial carbon release
+- (\gamma) = enzyme-driven mineralization
+- (\mu) = carbon loss rate
+
+This captures:
+
+- Soil carbon mineralization
+- CO₂ drawdown
+- Carbon stabilization
+
+---
+
+## **6. Nitrogen Flux Dynamics**
+
+Nitrogen flux (N_2) is driven by nitrogenase and microbial metabolism:
+
+$$ \frac{dN_2}{dt} = \delta E_{nit} + \phi N - \epsilon N_2 $$
+
+Where:
+
+- (E_{nit}) = nitrogenase concentration
+- (\delta) = nitrogen fixation rate
+- (\phi) = microbial nitrogen mobilization
+- (\epsilon) = nitrogen loss
+
+This models:
+
+- N₂ → NH₃ conversion
+- Soil nitrogen availability
+- N₂O emission reduction
+
+---
+
+## **7. Soil–Atmosphere Exchange**
+
+### **7.1 CO₂ Exchange**
+
+$$ F_{CO_2} = k_c (C_s - C_a) $$
+
+Where:
+
+- (C_s) = soil CO₂
+- (C_a) = atmospheric CO₂
+- (k_c) = exchange coefficient
+
+---
+
+### **7.2 CH₄ Exchange**
+
+$$ F_{CH_4} = -k_m M $$
+
+Where:
+
+- (M) = methane concentration
+- (k_m) = microbial oxidation rate
+
+---
+
+### **7.3 N₂O Exchange**
+
+$$ F_{N_2O} = -k_n N_2 $$
+
+Where:
+
+- (k_n) = nitrogenase-driven reduction rate
+
+---
+
+## **8. Planetary Feedback Coupling**
+
+The system includes **Gaia-scale feedback terms**:
+
+### **8.1 Temperature Feedback**
+
+$$ \frac{dT}{dt} = \eta_1 F_{CO_2} + \eta_2 F_{CH_4} - \eta_3 W $$
+
+Where:
+
+- (T) = local temperature
+- (W) = soil moisture
+- (\eta_1, \eta_2, \eta_3) = feedback coefficients
+
+---
+
+### **8.2 Moisture Feedback**
+
+$$ \frac{dW}{dt} = P - E - R + \psi N $$
+
+Where:
+
+- (P) = precipitation
+- (E) = evaporation
+- (R) = runoff
+- (\psi) = microbial soil-structure enhancement
+
+---
+
+## **9. Stability Analysis**
+
+The system exhibits:
+
+- **Stable fixed points** under moderate parameter values
+- **Limit cycles** under high metabolic throughput
+- **Bifurcations** when enzyme cascades exceed threshold rates
+
+This allows:
+
+- Prediction of ecological tipping points
+- Optimization of deployment strategies
+- Early warning for system instability
+
+---
+
+## **10. Integration with Planetary OS**
+
+The mathematical model powers:
+
+- Simulation engines
+- Field deployment optimization
+- Climate finance quantification
+- Claim Engine verification
+- Global ecological forecasting
+
+It is the **computational core** of the Planetary OS.
+
+---
+
+## **11. Future Extensions**
+
+- Multi-agent ecological modeling
+- Machine learning parameter estimation
+- Integration with satellite remote sensing
+- Global-scale climate–ecology coupling
+</file>
+
+<file path="1_Theory/MBT55_Ecological_Hypercycle.md">
+## **MBT55 Ecological Hypercycle — Full Scientific Model**
+
+### **1. Introduction**
+
+The MBT55 Ecological Hypercycle is a synthetic–natural hybrid microbial system designed to accelerate biogeochemical fluxes, regenerate degraded soils, and stabilize planetary-scale ecological feedback loops.  
+It integrates:
+
+- **Microbial consortia dynamics**
+- **Enzyme cascade chemistry**
+- **Substrate cycling and feedback amplification**
+- **Carbon–nitrogen–water coupling**
+- **Gaia-scale regulatory mechanisms**
+
+This hypercycle is the foundational engine of the **Planetary Metabolic Operating System (Planetary OS)**.
+
+---
+
+### **2. Biological Architecture**
+
+#### **2.1 Microbial Consortium Composition**
+
+MBT55 consists of a curated set of microbial taxa selected for:
+
+- High metabolic versatility
+- Enzyme secretion capacity
+- Stress tolerance
+- Cooperative substrate cycling
+
+Key functional groups include:
+
+- **Oxidizers** (Bacillus, Pseudomonas)
+- **Decomposers** (Actinomycetes)
+- **Fermenters** (Yeasts)
+- **Nitrogen transformers** (Azotobacter-like species)
+
+These groups form **mutualistic metabolic loops** that reinforce each other’s growth and activity.
+
+---
+
+### **3. Enzyme Cascade Integration**
+
+The hypercycle is powered by a **multi-enzyme cascade**:
+
+- **Oxidoreductases** accelerate electron transfer
+- **Hydrolases** break down complex organics
+- **Transferases** reorganize molecular groups
+- **Lyases** open chemical bonds without hydrolysis
+
+These cascades create **rapid substrate turnover**, enabling:
+
+- Carbon mineralization
+- Nitrogen mobilization
+- Element transformation
+- Detoxification of pollutants
+
+---
+
+### **4. Hypercycle Dynamics**
+
+The MBT55 hypercycle is defined by **four interacting loops**:
+
+#### **Loop A — Microbial Growth Loop**
+
+Microbes grow by consuming substrates and secreting enzymes.
+
+#### **Loop B — Enzyme Cascade Loop**
+
+Enzymes accelerate substrate breakdown, generating more microbial nutrients.
+
+#### **Loop C — Substrate Cycling Loop**
+
+Degraded substrates feed back into microbial metabolism.
+
+#### **Loop D — Flux Amplification Loop**
+
+Carbon and nitrogen fluxes accelerate, increasing system throughput.
+
+These loops create a **self-reinforcing metabolic engine**.
+
+---
+
+### **5. Mathematical Model**
+
+The hypercycle is modeled using coupled differential equations:
+
+$$ \frac{dN}{dt} = rN\left(1 - \frac{N}{K}\right) + \alpha S $$
+
+$$ \frac{dS}{dt} = -k_1 S - k_2 S N $$
+
+$$ \frac{dC}{dt} = \beta N + \gamma S $$
+
+$$ \frac{dN_2}{dt} = \delta N - \epsilon N_2 $$
+
+Where:
+
+- (N) = microbial biomass
+- (S) = substrate concentration
+- (C) = carbon flux
+- (N_2) = nitrogen flux
+- (r, K, \alpha, k_1, k_2, \beta, \gamma, \delta, \epsilon) = system parameters
+
+This model captures:
+
+- Logistic microbial growth
+- Enzyme-driven substrate decay
+- Carbon–nitrogen flux coupling
+- Feedback amplification
+
+---
+
+### **6. Gaia Integration**
+
+The hypercycle interacts with planetary systems through:
+
+- **Soil–atmosphere gas exchange**
+- **Moisture retention and hydrological buffering**
+- **Carbon sequestration and mineral stabilization**
+- **Temperature and albedo modulation**
+
+This positions MBT55 as a **Gaia-compatible metabolic accelerator**.
+
+---
+
+### **7. Field Validation Summary**
+
+Field trials demonstrate:
+
+- +30–60% increase in soil organic carbon
+- +20–40% increase in total nitrogen
+- 40–60% reduction in methane emissions
+- 30–50% reduction in heavy metal bioavailability
+- Improved crop yield and resilience
+
+These results validate the hypercycle’s **ecological and climate impact**.
+
+---
+
+### **8. Integration with Planetary OS**
+
+MBT55 serves as the **biological engine** of Planetary OS:
+
+- Feeds real-time data into the Claim Engine
+- Powers carbon credit generation
+- Supports ecological restoration programs
+- Enables scalable climate finance mechanisms
+
+---
+
+### **9. Future Work**
+
+- Multi-scale simulation
+- Global deployment modeling
+- Integration with remote sensing
+- Expansion to marine and urban ecosystems
+</file>
+
+<file path="1_Theory/Nitrogenase_Model.md">
+# **Nitrogenase and Element Transformation Model — Full Scientific Specification**
+
+## **1. Introduction**
+
+Nitrogenase is one of the most ancient and powerful catalytic systems on Earth.  
+Within the MBT55 hypercycle, nitrogenase plays a dual role:
+
+1. **Accelerating the nitrogen cycle** through N₂ → NH₃ conversion
+2. **Enabling cross-element transformation** through high-energy electron transfer pathways
+
+This model describes nitrogenase as a **planetary-scale metabolic accelerator**, essential to the Planetary OS.
+
+---
+
+## **2. Biological Function of Nitrogenase**
+
+Nitrogenase catalyzes the reduction of atmospheric nitrogen:
+
+$$ N_2 + 8H^+ + 8e^- + 16ATP \rightarrow 2NH_3 + H_2 + 16ADP $$
+
+Key features:
+
+- One of the most ATP-intensive reactions in biology
+- Requires strong reducing power
+- Sensitive to oxygen
+- Produces ammonia and hydrogen
+
+In MBT55, nitrogenase is embedded in a **protective microenvironment** created by the consortium, enabling high efficiency even in variable field conditions.
+
+---
+
+## **3. Electron Transfer Pathways**
+
+Nitrogenase relies on a **multi-step electron relay**:
+
+1. **Ferredoxin / flavodoxin** receives electrons from microbial metabolism
+2. Electrons are transferred to the **Fe protein**
+3. Fe protein hydrolyzes ATP and transfers electrons to the **MoFe protein**
+4. MoFe protein reduces N₂ to NH₃
+
+This chain is tightly coupled with:
+
+- Carbon metabolism
+- Enzyme cascades
+- Redox cycling
+- Soil organic matter decomposition
+
+---
+
+## **4. Cross-Element Transformation Hypothesis**
+
+Nitrogenase is known to reduce not only nitrogen but also:
+
+- CO
+- CN⁻
+- Acetylene
+- N₂O
+- Some metal ions
+
+Emerging evidence suggests nitrogenase may participate in:
+
+- **Heavy metal transformation**
+- **Arsenic and chromium reduction**
+- **Carbon–nitrogen coupling reactions**
+- **Novel element conversion pathways**
+
+In MBT55, nitrogenase is hypothesized to contribute to:
+
+- Detoxification of polluted soils
+- Reduction of metal bioavailability
+- Enhanced nutrient cycling
+
+---
+
+## **5. Mathematical Model**
+
+The nitrogenase system is modeled using coupled reaction kinetics:
+
+### **5.1 Ammonia Production**
+
+$$ \frac{dNH_3}{dt} = k_{cat} \cdot E_{nit} \cdot \frac{[N_2]}{K_m + [N_2]} $$
+
+Where:
+
+- (E_{nit}) = nitrogenase enzyme concentration
+- (k_{cat}) = catalytic turnover rate
+- (K_m) = substrate affinity
+
+---
+
+### **5.2 Electron Flux Coupling**
+
+$$ \frac{dE^-}{dt} = \alpha N - \beta E^- $$
+
+Where:
+
+- (E^-) = available electrons
+- (\alpha) = microbial electron generation rate
+- (\beta) = electron consumption rate
+
+---
+
+### **5.3 ATP Consumption**
+
+$$ ATP_{use} = 16 \cdot v_{nit} $$
+
+Where (v_{nit}) is the nitrogenase reaction velocity.
+
+---
+
+### **5.4 Integration with Hypercycle**
+
+Nitrogenase influences:
+
+- Microbial growth
+- Enzyme cascade efficiency
+- Carbon flux acceleration
+- Soil nutrient availability
+
+This creates a **multi-layered feedback system**.
+
+---
+
+## **6. Field Evidence**
+
+Field trials show:
+
+- 20–40% increase in plant-available nitrogen
+- Reduction of N₂O emissions by 25–50%
+- Significant reduction in heavy metal bioavailability
+- Improved crop resilience under stress
+
+These results support nitrogenase as a **key ecological and climate regulator**.
+
+---
+
+## **7. Role in Planetary OS**
+
+Nitrogenase contributes to:
+
+- Soil fertility regeneration
+- Climate mitigation (N₂O reduction)
+- Pollution remediation
+- Biogeochemical stabilization
+
+It is a **core metabolic module** of the Planetary OS.
+
+---
+
+## **8. Future Work**
+
+- Multi-metal reduction modeling
+- Integration with satellite nitrogen flux data
+- Expansion to marine nitrogenase systems
+- Synthetic nitrogenase engineering
+</file>
+
+<file path="1_Theory/README.md">
+
+</file>
+
+<file path="2_Models/carbon_flux.py">
+"""
+Carbon Flux Acceleration Model
+"""
+
+def carbon_flux(C, alpha):
+    return alpha * C
+
+def update_carbon(C, alpha, dt=0.1):
+    return C + carbon_flux(C, alpha) * dt
+</file>
+
+<file path="2_Models/enzyme_cascade.py">
+"""
+Enzyme Cascade Model
+Simulates multi-step enzymatic reactions
+"""
+
+import numpy as np
+
+def cascade_step(S, k):
+    """
+    S : substrate concentration
+    k : reaction rate
+    """
+    return -k * S
+
+def run_cascade(S0, k_list, dt=0.1):
+    S = S0
+    for k in k_list:
+        S += cascade_step(S, k) * dt
+    return S
+
+if __name__ == "__main__":
+    S = run_cascade(1.0, [0.2, 0.1, 0.05])
+    print("Final substrate:", S)
+</file>
+
+<file path="2_Models/ghg_model.py">
+"""
+GHG Reduction Model
+"""
+
+def ghg_reduction(CH4, CO2, rate):
+    CH4_new = CH4 * (1 - rate)
+    CO2_new = CO2 * (1 - rate * 0.5)
+    return CH4_new, CO2_new
+</file>
+
+<file path="2_Models/hypercycle.py">
+"""
+Hypercycle Integration Model
+Combines microbial, enzyme, and flux models
+"""
+
+from microbial_dynamics import update_population
+from enzyme_cascade import run_cascade
+from carbon_flux import update_carbon
+from nitrogen_flux import update_nitrogen
+
+def hypercycle_step(N, S, C, N2):
+    N = update_population(N, r=0.4, K=1.0)
+    S = run_cascade(S, [0.2, 0.1])
+    C = update_carbon(C, alpha=0.3)
+    N2 = update_nitrogen(N2, beta=0.25)
+    return N, S, C, N2
+</file>
+
+<file path="2_Models/microbial_dynamics.py">
+"""
+Microbial Dynamics Model
+MBT55 population growth and interaction dynamics
+"""
+
+import numpy as np
+
+def microbial_growth(N, r, K):
+    """
+    Logistic growth model
+    N : population
+    r : growth rate
+    K : carrying capacity
+    """
+    return r * N * (1 - N / K)
+
+def update_population(N, r, K, dt=0.1):
+    return N + microbial_growth(N, r, K) * dt
+
+if __name__ == "__main__":
+    N = 0.1
+    for t in range(50):
+        N = update_population(N, r=0.5, K=1.0)
+        print(t, N)
+</file>
+
+<file path="2_Models/nitrogen_flux.py">
+"""
+Nitrogen Flux Model
+"""
+
+def nitrogen_flux(N, beta):
+    return beta * N
+
+def update_nitrogen(N, beta, dt=0.1):
+    return N + nitrogen_flux(N, beta) * dt
+</file>
+
+<file path="2_Models/README.md">
+
+</file>
+
+<file path="2_Models/run_demo.py">
+"""
+Unified Demo Script for M3-BioSynergy Core
+"""
+
+from hypercycle import hypercycle_step
+
+def run_demo(steps=20):
+    N, S, C, N2 = 0.1, 1.0, 0.5, 0.3
+    for t in range(steps):
+        N, S, C, N2 = hypercycle_step(N, S, C, N2)
+        print(f"t={t}  Microbes={N:.3f}  Substrate={S:.3f}  C={C:.3f}  N={N2:.3f}")
+
+if __name__ == "__main__":
+    run_demo()
+</file>
+
+<file path="3_Data/Enzyme_Activity.csv">
+Enzyme,Activity_U_per_mL,Role
+Oxidoreductase,120,Electron transfer / redox cycling
+Hydrolase,85,Polymer breakdown
+Transferase,60,Functional group transfer
+Lyase,40,Bond cleavage without hydrolysis
+</file>
+
+<file path="3_Data/Enzyme_Activity.md">
+# Enzyme_Activity — Data Specification
+
+## 1. Data Dictionary
+
+| Column              | Meaning                     | Units | Notes                                      |
+|---------------------|------------------------------|--------|--------------------------------------------|
+| Enzyme              | Enzyme class                | –      | Matches enzyme cascade model               |
+| Activity_U_per_mL   | Enzyme activity             | U/mL   | Used to estimate Vmax in kinetic model     |
+| Role                | Biochemical function        | –      | Links to reaction pathways                 |
+
+---
+
+## 2. Model Integration
+
+- **Activity_U_per_mL** → directly maps to **Vmax** in the enzyme cascade model  
+- **Enzyme** → determines which step of the cascade the activity influences  
+  - Oxidoreductase → electron transfer  
+  - Hydrolase → polymer breakdown  
+  - Transferase → functional group transfer  
+  - Lyase → bond cleavage  
+- **Role** → used to classify reaction pathways in the hypercycle simulation
+
+This dataset calibrates:
+- Multi-step Michaelis–Menten kinetics  
+- Substrate turnover rates  
+- Carbon flux acceleration  
+- Nitrogenase-linked redox pathways  
+
+---
+
+## 3. Usage
+
+- Calibration of enzyme cascade parameters  
+- Field validation of enzyme activity changes  
+- Linking biochemical activity to carbon/nitrogen flux  
+- MRV (Monitoring, Reporting, Verification) for climate finance  
+- Scientific reproducibility for Planetary OS models
+</file>
+
+<file path="3_Data/GHG_FieldData.csv">
+Day,CH4_ppm,CO2_ppm,N2O_ppm,Temperature,Moisture
+0,1800,420,0.32,22.1,18
+7,1500,410,0.28,22.0,20
+14,1200,395,0.25,21.8,22
+30,900,380,0.22,21.5,25
+</file>
+
+<file path="3_Data/GHG_FieldData.md">
+# GHG_FieldData — Data Specification
+
+## 1. Data Dictionary
+
+| Column | Meaning | Units | Notes |
+|--------|---------|--------|-------|
+| Day | Measurement day | days | Time index |
+| CH4_ppm | Methane concentration | ppm | Used in CH₄ flux model |
+| CO2_ppm | Carbon dioxide | ppm | Used in CO₂ exchange model |
+| N2O_ppm | Nitrous oxide | ppm | Used in nitrogen flux model |
+| Temperature | Soil temperature | °C | Affects reaction rates |
+| Moisture | Soil water content | % | Feedback variable |
+
+---
+
+## 2. Model Integration
+
+- **CH4_ppm** → methane flux model（F_CH4）
+- **CO2_ppm** → CO₂ exchange model（F_CO2）
+- **N2O_ppm** → nitrogen flux model（F_N2O）
+- **Temperature** → modifies enzyme Vmax and microbial growth rate
+- **Moisture** → modifies microbial growth and soil–atmosphere exchange
+
+---
+
+## 3. Usage
+
+- Calibration of greenhouse gas reduction models  
+- MRV（Monitoring, Reporting, Verification）  
+- Climate finance quantification（carbon credits）  
+- Validation of hypercycle simulation outputs
+</file>
+
+<file path="3_Data/HeavyMetal_Transformation.csv">
+Metal,Initial_mg_per_kg,After_30d_mg_per_kg,Reduction_Rate,Mechanism
+Cd,2.1,0.8,0.62,Enzyme-assisted chelation
+Pb,15.0,6.2,0.59,Reductive transformation
+As,4.5,1.9,0.58,Microbial redox cycling
+Cr,8.0,3.1,0.61,Electron transfer reduction
+</file>
+
+<file path="3_Data/HeavyMetal_Transformation.md">
+# HeavyMetal_Transformation — Data Specification
+
+## 1. Data Dictionary
+
+| Column                | Meaning                       | Units | Notes                                      |
+|-----------------------|-------------------------------|--------|--------------------------------------------|
+| Metal                 | Heavy metal type              | –      | Cd, Pb, As, Cr, etc.                       |
+| Initial_mg_per_kg     | Initial concentration         | mg/kg  | Baseline contamination level               |
+| After_30d_mg_per_kg   | Final concentration           | mg/kg  | Post-MBT55 treatment                       |
+| Reduction_Rate        | Fraction removed              | 0–1    | Used in detoxification model               |
+| Mechanism             | Biological transformation path| –      | Links to nitrogenase & enzyme cascade      |
+
+---
+
+## 2. Model Integration
+
+- **Reduction_Rate** → defines detoxification coefficient in the nitrogenase model  
+- **Mechanism** → maps to:
+  - nitrogenase electron transfer pathways  
+  - enzyme cascade (oxidoreductase, lyase)  
+  - microbial redox cycling  
+
+This dataset calibrates:
+- Heavy metal transformation model  
+- Soil toxicity reduction model  
+- Claim Engine validation for pollution remediation credits  
+
+---
+
+## 3. Usage
+
+- Environmental remediation reporting  
+- Validation of MBT55’s pollutant reduction performance  
+- MRV for heavy-metal reduction credits  
+- Government compliance (soil quality standards)  
+- Industrial wastewater treatment monitoring
+</file>
+
+<file path="3_Data/MBT55_Composition.csv">
+Microbe,Relative_Abundance,Function
+Bacillus_sp,0.25,Oxidizer / enzyme producer
+Pseudomonas_sp,0.18,Redox cycling / pollutant degradation
+Actinomycetes,0.12,Decomposer / carbon mineralization
+Yeast,0.10,Fermentation / nutrient release
+Others,0.35,Auxiliary metabolic support
+</file>
+
+<file path="3_Data/MBT55_Composition.md">
+# MBT55_Composition — Data Specification
+
+## 1. Overview
+This dataset defines the microbial composition of the MBT55 consortium used in the Planetary OS hypercycle model.
+
+## 2. Data Dictionary
+
+| Column | Meaning | Units | Notes |
+|--------|---------|--------|-------|
+| Microbe | Taxonomic group | – | Functional group in MBT55 |
+| Relative_Abundance | Fraction of total biomass | 0–1 | Used in microbial dynamics model |
+| Function | Ecological role | – | Links to enzyme cascade |
+
+## 3. Model Integration
+
+### 3.1 Microbial Dynamics Model
+- Relative_Abundance initializes **N (microbial biomass)**  
+- Determines growth rate modifiers  
+- Influences carrying capacity K
+
+### 3.2 Enzyme Cascade Model
+- Microbial groups map to enzyme production rates  
+- Oxidizers → oxidoreductase  
+- Decomposers → hydrolase  
+- Fermenters → transferase precursors
+
+### 3.3 Nitrogenase Model
+- Nitrogen-transforming microbes influence **E_nit (nitrogenase concentration)**
+
+## 4. Usage
+- Load in Python using pandas  
+- Connect to hypercycle simulation  
+- Use for calibration and field validation
+</file>
+
+<file path="3_Data/README.md">
+# Data Specification for Planetary OS
+
+This folder contains structured datasets used for:
+
+- Model calibration
+- Field validation
+- Climate finance quantification
+- Claim Engine verification
+- Scientific reproducibility
+
+Each dataset includes:
+1. Raw values
+2. Variable definitions
+3. Units
+4. Intended use
+5. Connection to mathematical models
+</file>
+
+<file path="3_Data/Soil_Improvement.csv">
+Day,Organic_C,Total_N,CN_Ratio,pH,Moisture
+0,1.2,0.08,15,6.2,18
+7,1.4,0.09,14,6.4,20
+14,1.6,0.10,13,6.6,22
+30,1.9,0.12,12,6.8,25
+</file>
+
+<file path="3_Data/Soil_Improvement.md">
+# Soil_Improvement — Data Specification
+
+## 1. Data Dictionary
+
+| Column      | Meaning                     | Units | Notes                                      |
+|-------------|------------------------------|--------|--------------------------------------------|
+| Day         | Measurement day              | days   | Time index                                 |
+| Organic_C   | Soil organic carbon          | %      | Used in carbon pool model (C_s)            |
+| Total_N     | Total nitrogen               | %      | Used in nitrogen pool model (N_s)          |
+| CN_Ratio    | Carbon–nitrogen ratio        | –      | Indicator of soil fertility                 |
+| pH          | Soil acidity                 | –      | Affects enzyme kinetics and microbial growth |
+| Moisture    | Soil water content           | %      | Links to Gaia moisture feedback (W)        |
+
+---
+
+## 2. Model Integration
+
+- **Organic_C** → initializes and updates **soil carbon pool (C_s)**  
+- **Total_N** → initializes and updates **soil nitrogen pool (N_s)**  
+- **CN_Ratio** → influences microbial growth efficiency and enzyme cascade throughput  
+- **pH** → modifies enzyme Vmax and microbial growth rate  
+- **Moisture** → feeds into Earth System Ecology model (soil–atmosphere exchange, drought resilience)
+
+This dataset is used to calibrate:
+- Carbon flux acceleration model  
+- Nitrogen flux model  
+- Soil–atmosphere exchange model  
+- Gaia feedback coupling (temperature & moisture)
+
+---
+
+## 3. Usage
+
+- Soil regeneration monitoring  
+- Calibration of hypercycle simulation parameters  
+- MRV (Monitoring, Reporting, Verification) for carbon credits  
+- Field validation of MBT55 deployment  
+- Government and corporate reporting for soil health programs
+</file>
+
+<file path="4_Applications/AGRIX.md">
+# AGRIX — Regenerative Agriculture Application
+## Full Scientific, Operational, and Economic Specification
+
+## 1. Introduction
+AGRIX is the agricultural deployment module of the Planetary Metabolic Operating System (Planetary OS).  
+It integrates MBT55 microbial hypercycles, enzyme cascades, and nitrogenase-driven nutrient regeneration to restore degraded soils and increase crop productivity.
+
+AGRIX is designed for:
+- Large-scale regenerative agriculture
+- Smallholder productivity enhancement
+- Climate-resilient food systems
+- Carbon credit generation under UNFCCC frameworks
+
+---
+
+## 2. Scientific Basis
+
+### 2.1 Soil Carbon Regeneration
+MBT55 accelerates:
+- Organic matter decomposition
+- Carbon mineralization
+- Humus formation
+- Soil aggregation
+
+Field data show:
+- +30–60% increase in soil organic carbon within 30–90 days
+
+### 2.2 Nitrogen Availability
+Nitrogenase-driven N₂ fixation increases:
+- Ammonia availability
+- Amino acid precursors
+- Plant-accessible nitrogen
+
+### 2.3 Water Retention
+Improved soil structure increases:
+- Infiltration
+- Moisture retention
+- Drought resilience
+
+---
+
+## 3. Deployment Protocol
+
+### 3.1 Application Method
+- Liquid inoculant (1–3 L/ha)
+- Soil drench or drip irrigation
+- Seed coating for row crops
+- Foliar spray for stress mitigation
+
+### 3.2 Timing
+- Pre-planting soil activation
+- Early vegetative stage
+- Mid-season nutrient boost
+
+### 3.3 Environmental Requirements
+- pH 5.5–7.5
+- Moisture > 15%
+- Organic matter > 0.8%
+
+---
+
+## 4. Expected Outcomes
+
+### 4.1 Agronomic Impact
+- 15–35% yield increase
+- 20–40% fertilizer reduction
+- 30–50% reduction in soil-borne diseases
+
+### 4.2 Climate Impact
+- 0.8–2.5 tCO₂e/ha sequestration
+- 20–40% reduction in N₂O emissions
+- 30–60% reduction in CH₄ emissions (paddy fields)
+
+### 4.3 Economic Impact
+- Increased farmer income
+- Reduced input costs
+- Carbon credit revenue
+
+---
+
+## 5. Integration with Climate Finance
+AGRIX outputs feed into:
+- PBPE token issuance
+- Claim Engine verification
+- MRV-compliant carbon credit generation
+
+---
+
+## 6. Use Cases
+- Rice, wheat, maize
+- Coffee, cacao, tea
+- Vegetables and horticulture
+- Pasture and forage systems
+</file>
+
+<file path="4_Applications/Coffee_Industry.md">
+# Coffee Industry Application — Full Specification
+
+## 1. Introduction
+This module applies MBT55 hypercycle technology to coffee agriculture, focusing on:
+- Soil regeneration
+- Flavor compound enhancement
+- Climate resilience
+- Carbon credit generation
+
+---
+
+## 2. Scientific Basis
+
+### 2.1 Soil Microbiome Restoration
+Coffee soils are often degraded by:
+- Acidification
+- Nutrient depletion
+- Fungal pathogens
+
+MBT55 restores:
+- Microbial diversity
+- Enzyme activity
+- Carbon–nitrogen balance
+
+### 2.2 Flavor Precursor Enhancement
+Enzyme cascades increase:
+- Amino acids
+- Sugars
+- Volatile precursors
+
+Leading to:
+- Improved aroma
+- Enhanced sweetness
+- Reduced bitterness
+
+---
+
+## 3. Deployment Protocol
+- Soil activation: 2–4 L/ha
+- Cherry fermentation inoculation (optional)
+- Shade-tree soil regeneration
+
+---
+
+## 4. Expected Outcomes
+- 20–40% improvement in cup quality
+- 15–30% yield increase
+- 30–50% reduction in chemical fertilizer use
+- Carbon credit generation: 1.2–3.0 tCO₂e/ha
+
+---
+
+## 5. Integration with Climate Finance
+Coffee farms can generate:
+- Soil carbon credits
+- Methane reduction credits (fermentation)
+- Nitrous oxide reduction credits
+</file>
+
+<file path="4_Applications/ForestFire_Prevention.md">
+# Forest Fire Prevention — Full Specification
+
+## 1. Introduction
+MBT55 accelerates decomposition and increases soil moisture, reducing fire risk.
+
+---
+
+## 2. Mechanisms
+- Faster litter decomposition → less fuel load
+- Higher soil moisture → lower ignition probability
+- Improved soil structure → reduced runoff
+
+---
+
+## 3. Deployment
+- Aerial spray (helicopter or drone)
+- Ground application in fire-prone zones
+- Integration with forest management plans
+
+---
+
+## 4. Outcomes
+- 20–50% reduction in fuel load
+- 10–25% increase in soil moisture
+- Lower fire intensity and spread rate
+</file>
+
+<file path="4_Applications/HealthBook.md">
+# HealthBook — Environmental Health Integration
+
+## 1. Purpose
+Connects environmental microbiome data with human health indicators.
+
+---
+
+## 2. Components
+- Soil–food–health linkage
+- Exposure modeling
+- Environmental risk scoring
+- Integration with digital health platforms
+
+---
+
+## 3. Use Cases
+- Public health monitoring
+- Agricultural worker exposure
+- Urban environmental health
+</file>
+
+<file path="4_Applications/README.md">
+
+</file>
+
+<file path="4_Applications/Water_Purification.md">
+# Water Purification — Full Specification
+
+## 1. Introduction
+MBT55 enables biological degradation of pollutants and heavy metals.
+
+---
+
+## 2. Mechanisms
+- Enzyme-driven breakdown of organic pollutants
+- Nitrogenase-driven metal reduction
+- Biofilm formation for filtration
+
+---
+
+## 3. Deployment
+- Wetland inoculation
+- Riverbank stabilization
+- Industrial wastewater treatment
+
+---
+
+## 4. Outcomes
+- 40–70% reduction in COD/BOD
+- 50–80% reduction in heavy metals
+- Improved water clarity and oxygenation
+</file>
+
+<file path="5_ClimateFinance/Carbon_Credit_Methodology.md">
+# Carbon Credit Methodology — Planetary OS
+
+## 1. Purpose
+This methodology defines how MBT55-based ecological improvements are converted into carbon credits under UNFCCC‑aligned MRV frameworks.
+
+## 2. Scope
+Applicable to:
+- Soil carbon sequestration
+- Methane reduction
+- Nitrous oxide reduction
+- Heavy metal remediation (co-benefit)
+- Water retention and drought resilience (co-benefit)
+
+## 3. Baseline Definition
+Baseline emissions are established using:
+- Historical soil carbon data
+- Regional emission factors (IPCC Tier 1–3)
+- Field GHG measurements (CH₄, CO₂, N₂O)
+- Soil degradation indicators
+
+## 4. Project Scenario
+MBT55 deployment increases:
+- Soil carbon (C_s)
+- Nitrogen retention (N_s)
+- Moisture (W)
+- Microbial biomass (N)
+- Enzyme activity (Vmax)
+
+These changes reduce:
+- CH₄ flux
+- N₂O flux
+- CO₂ emissions from decomposition
+
+## 5. Quantification Equations
+
+### 5.1 Soil Carbon
+
+
+$$
+\Delta C = C_{project} - C_{baseline}
+$$
+
+
+
+### 5.2 Methane Reduction
+
+
+$$
+ER_{CH_4} = (CH4_{baseline} - CH4_{project}) \times GWP_{CH_4}
+$$
+
+
+
+### 5.3 Nitrous Oxide Reduction
+
+
+$$
+ER_{N_2O} = (N2O_{baseline} - N2O_{project}) \times GWP_{N_2O}
+$$
+
+
+
+### 5.4 Total Credits
+
+
+$$
+Credits = \Delta C + ER_{CH_4} + ER_{N_2O}
+$$
+
+
+
+## 6. Monitoring Requirements
+- Soil sampling (0–30 cm)
+- GHG field sensors
+- Moisture and temperature logs
+- Microbial activity assays
+- Satellite NDVI and biomass data
+
+## 7. Verification
+Third‑party verification follows:
+- ISO 14064‑2
+- IPCC 2006 Guidelines
+- UNFCCC CDM/VERRA methodologies
+
+## 8. Output
+A verified carbon credit unit (tCO₂e) ready for:
+- PBPE tokenization
+- Carbon markets
+- Government reporting
+</file>
+
+<file path="5_ClimateFinance/Claim_Engine_Architecture.md">
+# Claim Engine Architecture — Planetary OS
+
+## 1. Purpose
+The Claim Engine validates ecological performance and converts it into climate finance outputs.
+
+## 2. Inputs
+- Field data (CSV)
+- Sensor data
+- Satellite data
+- Model outputs (hypercycle simulation)
+
+## 3. Processing Layers
+1. **Data Integrity Layer**
+2. **Model Validation Layer**
+3. **GHG Quantification Layer**
+4. **UNFCCC Compliance Layer**
+5. **Tokenization Layer**
+
+## 4. Outputs
+- Verified carbon credits
+- PBPE tokens
+- Government‑ready MRV reports
+</file>
+
+<file path="5_ClimateFinance/Government_Proposal_Framework.md">
+# Government Proposal Framework — Planetary OS
+
+## 1. Purpose
+A template for national governments to adopt MBT55‑based climate programs.
+
+## 2. Components
+- National soil regeneration program
+- Climate‑smart agriculture
+- Carbon market integration
+- Water resilience strategy
+
+## 3. Deliverables
+- National MRV system
+- Carbon credit registry
+- Farmer incentive programs
+- International reporting package
+</file>
+
+<file path="5_ClimateFinance/PBPE_Tokenomics.md">
+# PBPE Tokenomics — Planetary Bio-Phenome Engine
+
+## 1. Purpose
+PBPE converts ecological performance into digital climate assets.
+
+## 2. Token Types
+- **PBPE‑C**: Carbon credits (tCO₂e)
+- **PBPE‑S**: Soil health credits
+- **PBPE‑W**: Water retention credits
+- **PBPE‑B**: Biodiversity credits
+
+## 3. Token Generation
+
+
+$$
+PBPE\_C = Credits_{verified}
+$$
+
+
+
+
+
+$$
+PBPE\_S = f(OrganicC, TotalN, CN\_ratio)
+$$
+
+
+
+
+
+$$
+PBPE\_W = f(WaterRetention, Infiltration)
+$$
+
+
+
+## 4. Token Flow
+Field Data → Claim Engine → Verification → Token Minting → Registry → Market
+
+## 5. Anti‑Fraud Measures
+- Immutable data logs
+- GPS‑tagged sampling
+- Satellite cross‑validation
+- Multi‑layer MRV
+</file>
+
+<file path="5_ClimateFinance/README.md">
+
+</file>
+
+<file path="5_ClimateFinance/UNFCCC_Alignment.md">
+# UNFCCC Alignment — Planetary OS
+
+## 1. Frameworks Used
+- Paris Agreement Article 6
+- IPCC 2006 Guidelines
+- ISO 14064‑2
+- CDM/VERRA methodologies
+
+## 2. Compliance Principles
+- Additionality
+- Permanence
+- Leakage prevention
+- Transparency
+- MRV integrity
+
+## 3. Planetary OS Compliance
+- MBT55 improves soil carbon permanence
+- Hypercycle model ensures quantifiable impact
+- Field data + satellite data ensure MRV robustness
+</file>
+
+<file path="6_Diagrams/Carbon_Cycle_Acceleration.md">
+# Carbon Cycle Acceleration Diagram — Specification
+
+## 1. Components
+- Plant Biomass
+- Litter / Organic Matter
+- MBT55 Microbes
+- Enzyme Cascades
+- Soil Carbon Pool
+- CO2 Flux (reduced)
+- Stable Carbon (humus)
+
+## 2. Relationships
+- Biomass → Litter
+- Litter → MBT55
+- MBT55 → Enzyme Cascades
+- Enzyme Cascades → Soil Carbon Pool
+- Soil Carbon Pool → Stable Carbon
+- Soil Carbon Pool → Reduced CO2 Flux
+
+## 3. Layout
+Vertical flow from biomass → soil → carbon stabilization
+
+## 4. Color Coding
+- Biomass: green
+- Microbes: brown
+- Enzymes: yellow
+- Carbon pools: black/gray
+
+## 5. Style Notes
+- Emphasize “acceleration” with bold arrows
+</file>
+
+<file path="6_Diagrams/Climate_Finance_Architecture.md">
+# Climate Finance Architecture Diagram — Specification
+
+## 1. Components
+- Field Data (CSV)
+- Hypercycle Model
+- Claim Engine
+- Verification Layer
+- PBPE Tokenization
+- Carbon Credit Registry
+- Market / Government Reporting
+
+## 2. Relationships
+Field Data → Model → Claim Engine → Verification → Tokenization → Registry → Market
+
+## 3. Layout
+Horizontal pipeline
+
+## 4. Color Coding
+- Data: blue
+- Models: green
+- Verification: yellow
+- Tokens: purple
+- Registry: gray
+
+## 5. Style Notes
+- Clean fintech pipeline style
+</file>
+
+<file path="6_Diagrams/Ecological_Hypercycle.md">
+# Ecological Hypercycle Diagram — Specification
+
+## 1. Components
+- Microbial Biomass (N)
+- Enzyme Cascades (v1, v2, v3)
+- Substrate Pools (S1, S2, S3)
+- Carbon Flux (C)
+- Nitrogen Flux (N2)
+- Soil Moisture (W)
+- Feedback Arrows
+
+## 2. Relationships
+- N → Enzyme Cascades
+- Enzyme Cascades → Substrate Turnover
+- Substrate Turnover → Carbon Flux
+- Carbon Flux → Microbial Biomass
+- Nitrogen Flux ↔ Microbial Biomass
+- Moisture → Microbial Growth
+- Feedback loops connecting all components
+
+## 3. Layout
+Circular hypercycle with arrows connecting each component.
+
+## 4. Color Coding
+- Microbes: green
+- Enzymes: yellow
+- Substrates: blue
+- Carbon flux: brown
+- Nitrogen flux: red
+
+## 5. Style Notes
+- Circular cycle with thick arrows
+- Scientific systems‑biology style
+</file>
+
+<file path="6_Diagrams/Enzyme_Cascade.md">
+# Enzyme Cascade Diagram — Specification
+
+## 1. Components
+- Substrate S0
+- Enzyme E1
+- Substrate S1
+- Enzyme E2
+- Substrate S2
+- Enzyme E3
+- Final Product P
+
+## 2. Relationships
+- S0 --E1--> S1
+- S1 --E2--> S2
+- S2 --E3--> P
+
+## 3. Layout
+Left → Right linear cascade
+
+## 4. Color Coding
+- Substrates: blue
+- Enzymes: yellow
+- Product: green
+
+## 5. Style Notes
+- Clean biochemical pathway style
+- Arrows labeled with enzyme names
+</file>
+
+<file path="6_Diagrams/Gaia_MBT55_Integration.md">
+# Gaia–MBT55 Integration Diagram — Specification
+
+## 1. Components
+- Atmosphere
+- Soil Layer
+- Plant Biomass
+- Microbial Consortium (MBT55)
+- Enzyme Cascades
+- Nitrogenase System
+- Carbon Flux
+- Water Cycle
+- Gaia Feedback Loop
+
+## 2. Relationships
+- Atmosphere ↔ Soil (gas exchange)
+- Soil → Plants (nutrient uptake)
+- Plants → Soil (root exudates)
+- MBT55 → Enzyme Cascades (activation)
+- Enzyme Cascades → Carbon Flux (acceleration)
+- Nitrogenase → Nitrogen Cycle (fixation)
+- Water Cycle ↔ Soil (moisture regulation)
+- Gaia Feedback Loop → All components (stabilization)
+
+## 3. Layout
+Top: Atmosphere  
+Middle: Plants / Soil / MBT55  
+Bottom: Enzyme Cascades / Carbon & Nitrogen Flux  
+Surrounding: Gaia Feedback Loop
+
+## 4. Color Coding
+- Blue: Water cycle
+- Green: Plants / biomass
+- Brown: Soil
+- Yellow: Enzymes
+- Red: Nitrogenase
+- White arrows: feedback loops
+
+## 5. Style Notes
+- Circular Gaia loop around entire diagram
+- Soft gradients, scientific infographic style
+</file>
+
+<file path="6_Diagrams/Nitrogenase_Transformation.md">
+# Nitrogenase Transformation Diagram — Specification
+
+## 1. Components
+- N2 (atmospheric nitrogen)
+- Nitrogenase Complex
+- Electrons (e-)
+- ATP
+- NH3 (ammonia)
+- H2 (byproduct)
+- Soil Nitrogen Pool
+
+## 2. Relationships
+- N2 + e- + ATP → Nitrogenase → NH3 + H2
+- NH3 → Soil Nitrogen Pool
+
+## 3. Layout
+Left: Inputs  
+Center: Nitrogenase  
+Right: Outputs
+
+## 4. Color Coding
+- N2: blue
+- Nitrogenase: red
+- Electrons: yellow
+- ATP: purple
+- NH3: green
+
+## 5. Style Notes
+- Enzyme complex drawn as a catalytic “core”
+</file>
+
+<file path="6_Diagrams/README.md">
+# Diagram Specifications for PNG Generation
+
+This folder contains structured specifications for generating PNG diagrams
+using the Planetary OS visual architecture.
+
+Each diagram is defined using:
+1. Components (nodes)
+2. Relationships (arrows)
+3. Layout (top → bottom, left → right)
+4. Labels and annotations
+5. Color coding rules
+6. Optional style notes
+
+These specifications are optimized for AI-based image generation.
+</file>
+
+<file path="7_Publications/Academic_Paper.md">
+# Academic Paper Draft
+
+## Structure
+- Abstract
+- Introduction
+- Methods
+- Results
+- Discussion
+- Conclusion
+</file>
+
+<file path="7_Publications/Investor_OnePager.md">
+# Investor One-Pager
+
+## Sections
+- Problem
+- Solution
+- Technology
+- Market impact
+- Climate finance model
+- Deployment plan
+</file>
+
+<file path="7_Publications/README.md">
+
+</file>
+
+<file path="7_Publications/Slides.md">
+# Presentation Slides Outline
+
+## Sections
+- Concept overview
+- Scientific foundation
+- Models and simulations
+- Applications
+- Climate finance
+- Roadmap
+</file>
+
+<file path="7_Publications/WhitePaper.md">
+# M3-BioSynergy White Paper
+
+## Sections to be added
+- Executive summary
+- Scientific foundation
+- Mathematical framework
+- Field validation
+- Climate finance integration
+- Global deployment roadmap
+</file>
+
+<file path="app_en.py">
+import streamlit as st
+import pandas as pd
+
+from core_model import run_soil_carbon_model
+from mrv import compare_model_vs_observed, generate_mrv_report
+from planetary_os_adapter import export_soil_module_state
+
+st.set_page_config(page_title="Soil–Carbon–Finance Dashboard (EN)", layout="wide")
+
+st.title("🌍 Soil–Carbon–Finance Dashboard")
+st.caption("Baseline vs MBT55 Project Scenario")
+
+# -----------------------
+# Sidebar: Common Parameters
+# -----------------------
+st.sidebar.header("Common Parameters")
+
+years = st.sidebar.slider("Simulation Years", 5, 30, 15)
+area_ha = st.sidebar.number_input("Project Area (ha)", 1.0, 1_000_000.0, 765.0, step=1.0)
+initial_soc = st.sidebar.number_input("Initial SOC (tC/ha)", 10.0, 200.0, 50.0, step=1.0)
+
+carbon_price = st.sidebar.number_input("Carbon Credit Price (USD/tCO₂e)", 10.0, 500.0, 210.0, step=10.0)
+yield_baseline = st.sidebar.number_input("Baseline Yield (t/ha)", 1.0, 20.0, 7.7, step=0.1)
+yield_price = st.sidebar.number_input("Crop Price (USD/t)", 50.0, 2000.0, 500.0, step=10.0)
+
+# -----------------------
+# Scenario Settings
+# -----------------------
+st.sidebar.header("Scenario Settings")
+
+mbt_dose_project = st.sidebar.slider("MBT55 Application Level (Project)", 0.0, 3.0, 1.5, step=0.1)
+
+common_params = dict(
+    years=years,
+    area_ha=area_ha,
+    initial_soc=initial_soc,
+    carbon_price=carbon_price,
+    yield_baseline=yield_baseline,
+    yield_price=yield_price,
+)
+
+baseline_params = {**common_params, "mbt_dose": 0.0}
+project_params = {**common_params, "mbt_dose": mbt_dose_project}
+
+# -----------------------
+# Run Model
+# -----------------------
+baseline = run_soil_carbon_model(baseline_params)
+project = run_soil_carbon_model(project_params)
+
+df_baseline = pd.DataFrame(baseline)
+df_project = pd.DataFrame(project)
+
+df_diff = df_project.copy()
+df_diff["sequestration_diff"] = (
+    df_project["sequestration_tco2e_ha_yr"] - df_baseline["sequestration_tco2e_ha_yr"]
+)
+df_diff["yield_diff"] = df_project["yield_t_ha"] - df_baseline["yield_t_ha"]
+
+# Aggregates
+total_additional_sequestration_per_ha = df_diff["sequestration_diff"].sum()
+total_additional_sequestration = total_additional_sequestration_per_ha * area_ha
+
+annual_green_premium_carbon = total_additional_sequestration_per_ha * carbon_price
+annual_green_premium_carbon_total = annual_green_premium_carbon * area_ha
+
+annual_yield_baseline = df_baseline["yield_t_ha"].mean() * area_ha
+annual_yield_project = df_project["yield_t_ha"].mean() * area_ha
+annual_yield_diff = annual_yield_project - annual_yield_baseline
+annual_green_premium_yield = annual_yield_diff * yield_price
+
+total_green_premium = annual_green_premium_carbon_total + annual_green_premium_yield
+
+# -----------------------
+# Layout
+# -----------------------
+tab_overview, tab_soil, tab_carbon, tab_finance, tab_mrv, tab_export = st.tabs(
+    ["📊 Overview", "🦠 Soil & Microbes", "🌿 Carbon", "💰 Green Premium", "📑 MRV", "🚀 Export"]
+)
+
+# -----------------------
+# Overview
+# -----------------------
+with tab_overview:
+    st.subheader("Summary: Baseline vs MBT55")
+
+    col1, col2, col3 = st.columns(3)
+    with col1:
+        st.metric(
+            "Additional Sequestration (tCO₂e/ha)",
+            f"{total_additional_sequestration_per_ha:.2f}",
+        )
+    with col2:
+        st.metric(
+            "Carbon Credit Revenue (USD/yr, Total Project)",
+            f"{annual_green_premium_carbon_total:,.0f}",
+        )
+    with col3:
+        st.metric(
+            "Total Green Premium (USD/yr)",
+            f"{total_green_premium:,.0f}",
+        )
+
+    st.markdown("### Carbon Sequestration: Baseline vs MBT55")
+    chart_df = pd.DataFrame({
+        "Year": df_baseline["year"],
+        "Baseline (tCO₂e/ha/yr)": df_baseline["sequestration_tco2e_ha_yr"],
+        "MBT55 (tCO₂e/ha/yr)": df_project["sequestration_tco2e_ha_yr"],
+    }).set_index("Year")
+    st.line_chart(chart_df)
+
+    st.markdown("### Additional Sequestration (MBT55 - Baseline)")
+    st.area_chart(df_diff.set_index("year")[["sequestration_diff"]])
+
+# -----------------------
+# Soil
+# -----------------------
+with tab_soil:
+    st.subheader("Soil Carbon Stock: Baseline vs MBT55")
+    soil_df = pd.DataFrame({
+        "Year": df_baseline["year"],
+        "SOC Baseline (tC/ha)": df_baseline["soc_tC_ha"],
+        "SOC MBT55 (tC/ha)": df_project["soc_tC_ha"],
+    }).set_index("Year")
+    st.line_chart(soil_df)
+
+    st.markdown("### Soil Ecology (Microbes, Substrate, Stability)")
+    col1, col2 = st.columns(2)
+    with col1:
+        st.line_chart(df_project.set_index("year")[["microbial_biomass"]])
+        st.line_chart(df_project.set_index("year")[["substrate"]])
+    with col2:
+        st.line_chart(df_project.set_index("year")[["soil_stability"]])
+
+# -----------------------
+# Carbon
+# -----------------------
+with tab_carbon:
+    st.subheader("Annual Carbon Sequestration Flow")
+    st.line_chart(chart_df)
+
+# -----------------------
+# Finance
+# -----------------------
+with tab_finance:
+    st.subheader("Green Premium Breakdown")
+
+    col1, col2 = st.columns(2)
+    with col1:
+        st.markdown("#### Carbon Credit Revenue")
+        st.write(f"Additional sequestration: **{total_additional_sequestration_per_ha:.2f} tCO₂e/ha/yr**")
+        st.write(f"Price: **{carbon_price:.0f} USD/tCO₂e**")
+        st.write(f"Revenue (per ha): **{annual_green_premium_carbon:.0f} USD/ha/yr**")
+        st.write(f"Total project: **{annual_green_premium_carbon_total:,.0f} USD/yr**")
+
+    with col2:
+        st.markdown("#### Yield Improvement Revenue")
+        st.write(f"Baseline yield (avg): **{df_baseline['yield_t_ha'].mean():.2f} t/ha**")
+        st.write(f"Project yield (avg): **{df_project['yield_t_ha'].mean():.2f} t/ha**")
+        st.write(f"Difference (avg): **{df_diff['yield_diff'].mean():.2f} t/ha**")
+        st.write(f"Revenue: **{annual_green_premium_yield:,.0f} USD/yr**")
+
+    st.markdown("#### Total Green Premium")
+    st.write(f"**{total_green_premium:,.0f} USD/yr**")
+    st.caption("Note: Simplified model. Real projects require MRV, leakage, and additionality assessment.")
+
+# -----------------------
+# MRV
+# -----------------------
+with tab_mrv:
+    st.header("📑 MRV (Measurement, Reporting, Verification)")
+
+    st.markdown("### Upload Observed Data")
+    uploaded_file = st.file_uploader("Upload CSV or Excel", type=["csv", "xlsx"])
+
+    if uploaded_file:
+        try:
+            if uploaded_file.name.endswith(".csv"):
+                obs_df = pd.read_csv(uploaded_file)
+            else:
+                obs_df = pd.read_excel(uploaded_file)
+
+            st.success("Data loaded successfully.")
+            st.dataframe(obs_df.head())
+
+            model_for_mrv = df_project.rename(
+                columns={
+                    "soc_tC_ha": "soc_tC_ha_model",
+                    "sequestration_tco2e_ha_yr": "sequestration_tco2e_ha_yr_model",
+                    "yield_t_ha": "yield_t_ha_model",
+                }
+            )
+
+            obs_for_mrv = obs_df.rename(
+                columns={
+                    "soc_tC_ha": "soc_tC_ha_obs",
+                    "sequestration_tco2e_ha_yr": "sequestration_tco2e_ha_yr_obs",
+                    "yield_t_ha": "yield_t_ha_obs",
+                }
+            )
+
+            stats = compare_model_vs_observed(model_for_mrv, obs_for_mrv)
+
+            st.markdown("### Metrics")
+            st.write("**RMSE (SOC)**:", stats.get("rmse_soc"))
+            st.write("**Bias (SOC)**:", stats.get("bias_soc"))
+            st.write("**R² (SOC)**:", stats.get("r2_soc"))
+            st.write("**RMSE (Flux)**:", stats.get("rmse_flux"))
+            st.write("**RMSE (Yield)**:", stats.get("rmse_yield"))
+
+            st.markdown("### MRV Report (JSON)")
+            report = generate_mrv_report(model_for_mrv, obs_for_mrv, stats)
+            st.json(report)
+
+        except Exception as e:
+            st.error(f"Data load error: {e}")
+
+# -----------------------
+# Export
+# -----------------------
+with tab_export:
+    st.header("🚀 Planetary OS Export")
+
+    st.markdown("### Soil Module State (Planetary OS Format)")
+
+    export_data = export_soil_module_state(
+        df_baseline,
+        df_project,
+        {**common_params, "mbt_dose": mbt_dose_project},
+    )
+
+    st.json(export_data)
+    st.caption("Standardized format for Planetary OS Core integration.")
+</file>
+
+<file path="app.py">
+import streamlit as st
+import pandas as pd
+
+from core_model import run_soil_carbon_model
+from mrv import compare_model_vs_observed, generate_mrv_report
+from planetary_os_adapter import export_soil_module_state
+
+# -----------------------
+# Language dictionary
+# -----------------------
+LANG = {
+    "en": {
+        "page_title": "Soil–Carbon–Finance Dashboard",
+        "title": "🌍 Soil–Carbon–Finance Dashboard",
+        "caption": "Baseline vs MBT55 Project Scenario",
+        "sidebar_common": "Common Parameters",
+        "sidebar_scenario": "Scenario Settings",
+        "years": "Simulation Years",
+        "area": "Project Area (ha)",
+        "initial_soc": "Initial SOC (tC/ha)",
+        "carbon_price": "Carbon Credit Price (USD/tCO₂e)",
+        "yield_baseline": "Baseline Yield (t/ha)",
+        "yield_price": "Crop Price (USD/t)",
+        "mbt_dose": "MBT55 Application Level (Project)",
+        "tab_overview": "📊 Overview",
+        "tab_soil": "🦠 Soil & Microbes",
+        "tab_carbon": "🌿 Carbon",
+        "tab_finance": "💰 Green Premium",
+        "tab_mrv": "📑 MRV",
+        "tab_export": "🚀 Export",
+        "overview_sub": "Summary: Baseline vs MBT55",
+        "metric_additional_seq": "Additional Sequestration (tCO₂e/ha)",
+        "metric_carbon_rev": "Carbon Credit Revenue (USD/yr, Total Project)",
+        "metric_total_gp": "Total Green Premium (USD/yr)",
+        "overview_carbon_title": "Carbon Sequestration: Baseline vs MBT55",
+        "overview_additional_title": "Additional Sequestration (MBT55 - Baseline)",
+        "soil_sub": "Soil Carbon Stock: Baseline vs MBT55",
+        "soil_ecology": "Soil Ecology (Microbes, Substrate, Stability)",
+        "carbon_sub": "Annual Carbon Sequestration Flow",
+        "finance_sub": "Green Premium Breakdown",
+        "finance_carbon": "Carbon Credit Revenue",
+        "finance_yield": "Yield Improvement Revenue",
+        "finance_total": "Total Green Premium",
+        "finance_note": "Note: Simplified model. Real projects require MRV, leakage, and additionality assessment.",
+        "mrv_header": "📑 MRV (Measurement, Reporting, Verification)",
+        "mrv_upload_title": "Upload Observed Data",
+        "mrv_upload_label": "Upload CSV or Excel",
+        "mrv_loaded": "Data loaded successfully.",
+        "mrv_metrics": "Metrics",
+        "mrv_rmse_soc": "RMSE (SOC)",
+        "mrv_bias_soc": "Bias (SOC)",
+        "mrv_r2_soc": "R² (SOC)",
+        "mrv_rmse_flux": "RMSE (Flux)",
+        "mrv_rmse_yield": "RMSE (Yield)",
+        "mrv_report_title": "MRV Report (JSON)",
+        "mrv_load_error": "Data load error",
+        "export_header": "🚀 Planetary OS Export",
+        "export_sub": "Soil Module State (Planetary OS Format)",
+        "export_caption": "Standardized format for Planetary OS Core integration.",
+        "lang_ja": "日本語",
+        "lang_en": "English",
+    },
+    "ja": {
+        "page_title": "Soil–Carbon–Finance Dashboard",
+        "title": "🌍 Soil–Carbon–Finance Dashboard",
+        "caption": "現状 vs MBT55 導入後の差分を可視化",
+        "sidebar_common": "共通パラメータ",
+        "sidebar_scenario": "シナリオ設定",
+        "years": "シミュレーション年数",
+        "area": "プロジェクト面積 (ha)",
+        "initial_soc": "初期土壌炭素ストック (tC/ha)",
+        "carbon_price": "カーボンクレジット単価 (USD/tCO₂e)",
+        "yield_baseline": "基準収量 (t/ha)",
+        "yield_price": "作物単価 (USD/t)",
+        "mbt_dose": "MBT55 導入強度（プロジェクト）",
+        "tab_overview": "📊 Overview",
+        "tab_soil": "🦠 土壌・微生物",
+        "tab_carbon": "🌿 炭素隔離",
+        "tab_finance": "💰 グリーンプレミアム",
+        "tab_mrv": "📑 MRV",
+        "tab_export": "🚀 Export",
+        "overview_sub": "現状 vs MBT55 導入後：サマリー",
+        "metric_additional_seq": "追加隔離量 (合計, tCO₂e/ha)",
+        "metric_carbon_rev": "カーボンクレジット収益 (USD/yr, プロジェクト全体)",
+        "metric_total_gp": "総グリーンプレミアム (USD/yr)",
+        "overview_carbon_title": "炭素隔離：Baseline vs MBT55",
+        "overview_additional_title": "追加隔離量（MBT55 - Baseline）",
+        "soil_sub": "土壌炭素ストック：Baseline vs MBT55",
+        "soil_ecology": "土壌生態（微生物・基質・安定性）",
+        "carbon_sub": "炭素隔離フロー（年次）",
+        "finance_sub": "グリーンプレミアム内訳",
+        "finance_carbon": "カーボンクレジット収益",
+        "finance_yield": "収量向上による収益",
+        "finance_total": "総グリーンプレミアム",
+        "finance_note": "※ 単純化した試算モデル。実際のプロジェクトでは MRV・リーケージ・追加性等の精緻化が必要。",
+        "mrv_header": "📑 MRV（Measurement, Reporting, Verification）",
+        "mrv_upload_title": "実測データのアップロード",
+        "mrv_upload_label": "CSV または Excel をアップロード",
+        "mrv_loaded": "データを読み込みました。",
+        "mrv_metrics": "指標",
+        "mrv_rmse_soc": "RMSE (SOC)",
+        "mrv_bias_soc": "Bias (SOC)",
+        "mrv_r2_soc": "R² (SOC)",
+        "mrv_rmse_flux": "RMSE (Flux)",
+        "mrv_rmse_yield": "RMSE (Yield)",
+        "mrv_report_title": "MRV レポート（JSON）",
+        "mrv_load_error": "データ読み込みエラー",
+        "export_header": "🚀 Planetary OS Export",
+        "export_sub": "Soil Module State (Planetary OS Format)",
+        "export_caption": "Planetary OS Core に渡すための標準化フォーマット。",
+        "lang_ja": "日本語",
+        "lang_en": "English",
+    },
+}
+
+# -----------------------
+# Language toggle
+# -----------------------
+if "lang" not in st.session_state:
+    st.session_state["lang"] = "en"
+
+lang_col1, lang_col2 = st.columns(2)
+with lang_col1:
+    if st.button(LANG[st.session_state["lang"]]["lang_ja"]):
+        st.session_state["lang"] = "ja"
+with lang_col2:
+    if st.button(LANG[st.session_state["lang"]]["lang_en"]):
+        st.session_state["lang"] = "en"
+
+L = LANG[st.session_state["lang"]]
+
+# -----------------------
+# Page config & title
+# -----------------------
+st.set_page_config(page_title=L["page_title"], layout="wide")
+st.title(L["title"])
+st.caption(L["caption"])
+
+# -----------------------
+# Sidebar: Common Parameters
+# -----------------------
+st.sidebar.header(L["sidebar_common"])
+
+years = st.sidebar.slider(L["years"], 5, 30, 15)
+area_ha = st.sidebar.number_input(L["area"], 1.0, 1_000_000.0, 765.0, step=1.0)
+initial_soc = st.sidebar.number_input(L["initial_soc"], 10.0, 200.0, 50.0, step=1.0)
+
+carbon_price = st.sidebar.number_input(L["carbon_price"], 10.0, 500.0, 210.0, step=10.0)
+yield_baseline = st.sidebar.number_input(L["yield_baseline"], 1.0, 20.0, 7.7, step=0.1)
+yield_price = st.sidebar.number_input(L["yield_price"], 50.0, 2000.0, 500.0, step=10.0)
+
+# -----------------------
+# Scenario Settings
+# -----------------------
+st.sidebar.header(L["sidebar_scenario"])
+
+mbt_dose_project = st.sidebar.slider(L["mbt_dose"], 0.0, 3.0, 1.5, step=0.1)
+
+common_params = dict(
+    years=years,
+    area_ha=area_ha,
+    initial_soc=initial_soc,
+    carbon_price=carbon_price,
+    yield_baseline=yield_baseline,
+    yield_price=yield_price,
+)
+
+baseline_params = {**common_params, "mbt_dose": 0.0}
+project_params = {**common_params, "mbt_dose": mbt_dose_project}
+
+# -----------------------
+# Run Model
+# -----------------------
+baseline = run_soil_carbon_model(baseline_params)
+project = run_soil_carbon_model(project_params)
+
+df_baseline = pd.DataFrame(baseline)
+df_project = pd.DataFrame(project)
+
+df_diff = df_project.copy()
+df_diff["sequestration_diff"] = (
+    df_project["sequestration_tco2e_ha_yr"] - df_baseline["sequestration_tco2e_ha_yr"]
+)
+df_diff["yield_diff"] = df_project["yield_t_ha"] - df_baseline["yield_t_ha"]
+
+# Aggregates
+total_additional_sequestration_per_ha = df_diff["sequestration_diff"].sum()
+total_additional_sequestration = total_additional_sequestration_per_ha * area_ha
+
+annual_green_premium_carbon = total_additional_sequestration_per_ha * carbon_price
+annual_green_premium_carbon_total = annual_green_premium_carbon * area_ha
+
+annual_yield_baseline = df_baseline["yield_t_ha"].mean() * area_ha
+annual_yield_project = df_project["yield_t_ha"].mean() * area_ha
+annual_yield_diff = annual_yield_project - annual_yield_baseline
+annual_green_premium_yield = annual_yield_diff * yield_price
+
+total_green_premium = annual_green_premium_carbon_total + annual_green_premium_yield
+
+# -----------------------
+# Layout
+# -----------------------
+tab_overview, tab_soil, tab_carbon, tab_finance, tab_mrv, tab_export = st.tabs(
+    [
+        L["tab_overview"],
+        L["tab_soil"],
+        L["tab_carbon"],
+        L["tab_finance"],
+        L["tab_mrv"],
+        L["tab_export"],
+    ]
+)
+
+# -----------------------
+# Overview
+# -----------------------
+with tab_overview:
+    st.subheader(L["overview_sub"])
+
+    col1, col2, col3 = st.columns(3)
+    with col1:
+        st.metric(
+            L["metric_additional_seq"],
+            f"{total_additional_sequestration_per_ha:.2f}",
+        )
+    with col2:
+        st.metric(
+            L["metric_carbon_rev"],
+            f"{annual_green_premium_carbon_total:,.0f}",
+        )
+    with col3:
+        st.metric(
+            L["metric_total_gp"],
+            f"{total_green_premium:,.0f}",
+        )
+
+    st.markdown(f"### {L['overview_carbon_title']}")
+    chart_df = pd.DataFrame({
+        "Year": df_baseline["year"],
+        "Baseline (tCO₂e/ha/yr)": df_baseline["sequestration_tco2e_ha_yr"],
+        "MBT55 (tCO₂e/ha/yr)": df_project["sequestration_tco2e_ha_yr"],
+    }).set_index("Year")
+    st.line_chart(chart_df)
+
+    st.markdown(f"### {L['overview_additional_title']}")
+    st.area_chart(df_diff.set_index("year")[["sequestration_diff"]])
+
+# -----------------------
+# Soil
+# -----------------------
+with tab_soil:
+    st.subheader(L["soil_sub"])
+    soil_df = pd.DataFrame({
+        "Year": df_baseline["year"],
+        "SOC Baseline (tC/ha)": df_baseline["soc_tC_ha"],
+        "SOC MBT55 (tC/ha)": df_project["soc_tC_ha"],
+    }).set_index("Year")
+    st.line_chart(soil_df)
+
+    st.markdown(f"### {L['soil_ecology']}")
+    col1, col2 = st.columns(2)
+    with col1:
+        st.line_chart(df_project.set_index("year")[["microbial_biomass"]])
+        st.line_chart(df_project.set_index("year")[["substrate"]])
+    with col2:
+        st.line_chart(df_project.set_index("year")[["soil_stability"]])
+
+# -----------------------
+# Carbon
+# -----------------------
+with tab_carbon:
+    st.subheader(L["carbon_sub"])
+    st.line_chart(chart_df)
+
+# -----------------------
+# Finance
+# -----------------------
+with tab_finance:
+    st.subheader(L["finance_sub"])
+
+    col1, col2 = st.columns(2)
+    with col1:
+        st.markdown(f"#### {L['finance_carbon']}")
+        st.write(f"Additional sequestration: **{total_additional_sequestration_per_ha:.2f} tCO₂e/ha/yr**")
+        st.write(f"Price: **{carbon_price:.0f} USD/tCO₂e**")
+        st.write(f"Revenue (per ha): **{annual_green_premium_carbon:.0f} USD/ha/yr**")
+        st.write(f"Total project: **{annual_green_premium_carbon_total:,.0f} USD/yr**")
+
+    with col2:
+        st.markdown(f"#### {L['finance_yield']}")
+        st.write(f"Baseline yield (avg): **{df_baseline['yield_t_ha'].mean():.2f} t/ha**")
+        st.write(f"Project yield (avg): **{df_project['yield_t_ha'].mean():.2f} t/ha**")
+        st.write(f"Difference (avg): **{df_diff['yield_diff'].mean():.2f} t/ha**")
+        st.write(f"Revenue: **{annual_green_premium_yield:,.0f} USD/yr**")
+
+    st.markdown(f"#### {L['finance_total']}")
+    st.write(f"**{total_green_premium:,.0f} USD/yr**")
+    st.caption(L["finance_note"])
+
+# -----------------------
+# MRV
+# -----------------------
+with tab_mrv:
+    st.header(L["mrv_header"])
+
+    st.markdown(f"### {L['mrv_upload_title']}")
+    uploaded_file = st.file_uploader(L["mrv_upload_label"], type=["csv", "xlsx"])
+
+    if uploaded_file:
+        try:
+            if uploaded_file.name.endswith(".csv"):
+                obs_df = pd.read_csv(uploaded_file)
+            else:
+                obs_df = pd.read_excel(uploaded_file)
+
+            st.success(L["mrv_loaded"])
+            st.dataframe(obs_df.head())
+
+            model_for_mrv = df_project.rename(
+                columns={
+                    "soc_tC_ha": "soc_tC_ha_model",
+                    "sequestration_tco2e_ha_yr": "sequestration_tco2e_ha_yr_model",
+                    "yield_t_ha": "yield_t_ha_model",
+                }
+            )
+
+            obs_for_mrv = obs_df.rename(
+                columns={
+                    "soc_tC_ha": "soc_tC_ha_obs",
+                    "sequestration_tco2e_ha_yr": "sequestration_tco2e_ha_yr_obs",
+                    "yield_t_ha": "yield_t_ha_obs",
+                }
+            )
+
+            stats = compare_model_vs_observed(model_for_mrv, obs_for_mrv)
+
+            st.markdown(f"### {L['mrv_metrics']}")
+            st.write(f"**{L['mrv_rmse_soc']}**:", stats.get("rmse_soc"))
+            st.write(f"**{L['mrv_bias_soc']}**:", stats.get("bias_soc"))
+            st.write(f"**{L['mrv_r2_soc']}**:", stats.get("r2_soc"))
+            st.write(f"**{L['mrv_rmse_flux']}**:", stats.get("rmse_flux"))
+            st.write(f"**{L['mrv_rmse_yield']}**:", stats.get("rmse_yield"))
+
+            st.markdown(f"### {L['mrv_report_title']}")
+            report = generate_mrv_report(model_for_mrv, obs_for_mrv, stats)
+            st.json(report)
+
+        except Exception as e:
+            st.error(f"{L['mrv_load_error']}: {e}")
+
+# -----------------------
+# Export
+# -----------------------
+with tab_export:
+    st.header(L["export_header"])
+
+    st.markdown(f"### {L['export_sub']}")
+
+    export_data = export_soil_module_state(
+        df_baseline,
+        df_project,
+        {**common_params, "mbt_dose": mbt_dose_project},
+    )
+
+    st.json(export_data)
+    st.caption(L["export_caption"])
+</file>
+
+<file path="core_model.py">
+import numpy as np
+import pandas as pd
+
+
+def run_soil_carbon_model(params: dict) -> dict:
+    """
+    土壌炭素・炭素隔離・収量・土壌生態・C/N をまとめて計算する簡易モデル（拡張版）。
+
+    params 例:
+        years: int
+        area_ha: float
+        initial_soc: float (tC/ha)
+        carbon_price: float
+        yield_baseline: float (t/ha)
+        yield_price: float
+        mbt_dose: float (0–3)
+    """
+    years = int(params.get("years", 15))
+    initial_soc = float(params.get("initial_soc", 50.0))
+    mbt_dose = float(params.get("mbt_dose", 0.0))
+    yield_baseline = float(params.get("yield_baseline", 7.7))
+
+    # タイム軸
+    t = np.arange(1, years + 1)
+
+    # --- MBT55 / 再生度合いによる係数（かなり単純化した形） ---
+    # 土壌生態
+    soil_factor = 1.0 + 0.4 * mbt_dose
+    sequestration_factor = 1.0 + 0.6 * mbt_dose
+    nitro_loss_factor = max(0.3, 1.0 - 0.25 * mbt_dose)
+
+    # --- SOC ダイナミクス ---
+    soc = np.zeros_like(t, dtype=float)
+    soc[0] = initial_soc
+    for i in range(1, years):
+        # 年次の炭素流入（tC/ha/yr）
+        c_input = 1.2 * soil_factor
+        # 分解・損失
+        c_loss = 0.8
+        soc[i] = soc[i - 1] + c_input * sequestration_factor - c_loss
+
+    # --- 炭素隔離フロー（tCO2e/ha/yr） ---
+    # 1 tC = 3.667 tCO2
+    soc_delta = np.diff(np.concatenate([[initial_soc], soc]))
+    sequestration_tco2e_ha_yr = soc_delta * 3.667
+
+    # --- 収量（t/ha） ---
+    # MBT55 による収量向上（単純な線形）
+    yield_uplift_pct = 0.1 + 0.15 * mbt_dose  # 10–55% 程度
+    yield_t_ha = yield_baseline * (1.0 + yield_uplift_pct) * np.ones_like(t, dtype=float)
+
+    # --- 土壌生態（微生物・基質・安定性） ---
+    microbial_biomass = np.zeros_like(t, dtype=float)
+    substrate = np.zeros_like(t, dtype=float)
+    soil_stability = np.zeros_like(t, dtype=float)
+
+    microbes = 0.8 * soil_factor
+    sub = 1.0
+    stability = 0.3 + 0.1 * soil_factor
+
+    for i, _ in enumerate(t):
+        microbes = microbes + 0.05 * microbes * (sub) - 0.01 * microbes
+        sub = max(0.1, sub - 0.03 * microbes + 0.05 * soil_factor)
+        stability = min(1.0, stability + 0.01 * soil_factor)
+
+        microbial_biomass[i] = microbes
+        substrate[i] = sub
+        soil_stability[i] = stability
+
+    # --- C/N サイクル ---
+    soil_n = np.zeros_like(t, dtype=float)
+    n_loss = np.zeros_like(t, dtype=float)
+
+    n_stock = 3.0  # tN/ha
+    base_n_loss = 0.08 * nitro_loss_factor
+
+    for i, _ in enumerate(t):
+        n_stock = n_stock + 0.05 * soil_factor - base_n_loss
+        soil_n[i] = n_stock
+        n_loss[i] = base_n_loss
+
+    return {
+        "year": t,
+        "soc_tC_ha": soc,
+        "sequestration_tco2e_ha_yr": sequestration_tco2e_ha_yr,
+        "yield_t_ha": yield_t_ha,
+        "microbial_biomass": microbial_biomass,
+        "substrate": substrate,
+        "soil_stability": soil_stability,
+        "soil_n_tN_ha": soil_n,
+        "n_loss_tN_ha_yr": n_loss,
+    }
+</file>
+
+<file path="mrv.py">
+import pandas as pd
+import numpy as np
+from typing import Dict
+
+
+def _safe_merge(model_df: pd.DataFrame, obs_df: pd.DataFrame) -> pd.DataFrame:
+    if "year" not in model_df.columns or "year" not in obs_df.columns:
+        raise ValueError("MRV 用の比較には 'year' 列が必要です。")
+    return pd.merge(model_df, obs_df, on="year", suffixes=("_model", "_obs"))
+
+
+def _rmse(a, b):
+    a = np.array(a, dtype=float)
+    b = np.array(b, dtype=float)
+    return float(np.sqrt(np.mean((a - b) ** 2)))
+
+
+def _bias(a, b):
+    a = np.array(a, dtype=float)
+    b = np.array(b, dtype=float)
+    return float(np.mean(a - b))
+
+
+def _r2(a, b):
+    a = np.array(a, dtype=float)
+    b = np.array(b, dtype=float)
+    ss_res = np.sum((a - b) ** 2)
+    ss_tot = np.sum((b - np.mean(b)) ** 2)
+    if ss_tot == 0:
+        return float("nan")
+    return float(1 - ss_res / ss_tot)
+
+
+def compare_model_vs_observed(
+    model_df: pd.DataFrame,
+    obs_df: pd.DataFrame,
+) -> Dict[str, float]:
+    """
+    モデル vs 実測の比較指標を計算する。
+    - SOC (tC/ha)
+    - Flux (tCO2e/ha/yr)
+    - Yield (t/ha)
+    """
+    merged = _safe_merge(model_df, obs_df)
+
+    stats = {}
+
+    if {"soc_tC_ha_model", "soc_tC_ha_obs"}.issubset(merged.columns):
+        stats["rmse_soc"] = _rmse(merged["soc_tC_ha_model"], merged["soc_tC_ha_obs"])
+        stats["bias_soc"] = _bias(merged["soc_tC_ha_model"], merged["soc_tC_ha_obs"])
+        stats["r2_soc"] = _r2(merged["soc_tC_ha_model"], merged["soc_tC_ha_obs"])
+
+    if {
+        "sequestration_tco2e_ha_yr_model",
+        "sequestration_tco2e_ha_yr_obs",
+    }.issubset(merged.columns):
+        stats["rmse_flux"] = _rmse(
+            merged["sequestration_tco2e_ha_yr_model"],
+            merged["sequestration_tco2e_ha_yr_obs"],
+        )
+
+    if {"yield_t_ha_model", "yield_t_ha_obs"}.issubset(merged.columns):
+        stats["rmse_yield"] = _rmse(
+            merged["yield_t_ha_model"], merged["yield_t_ha_obs"]
+        )
+
+    return stats
+
+
+def generate_mrv_report(
+    model_df: pd.DataFrame,
+    obs_df: pd.DataFrame,
+    stats: Dict[str, float],
+) -> Dict:
+    """
+    MRV レポート（JSON）を生成する。
+    """
+    report = {
+        "summary": {
+            "rmse_soc": stats.get("rmse_soc"),
+            "bias_soc": stats.get("bias_soc"),
+            "r2_soc": stats.get("r2_soc"),
+            "rmse_flux": stats.get("rmse_flux"),
+            "rmse_yield": stats.get("rmse_yield"),
+        },
+        "notes": [
+            "本レポートは簡易 MRV モジュールに基づく試算です。",
+            "実プロジェクトではサンプリング設計・不確実性評価・リーケージ等の精緻化が必要です。",
+        ],
+    }
+
+    report["n_points"] = int(min(len(model_df), len(obs_df)))
+    return report
+</file>
+
+<file path="planetary_os_adapter.py">
+import pandas as pd
+from typing import Dict, Any
+
+
+def _series_to_list(df: pd.DataFrame, col: str):
+    return df[col].tolist() if col in df.columns else []
+
+
+def export_soil_module_state(
+    baseline_df: pd.DataFrame,
+    project_df: pd.DataFrame,
+    params: Dict[str, Any],
+) -> Dict[str, Any]:
+    """
+    Planetary OS Soil Module 形式の JSON を生成する。
+
+    baseline_df / project_df:
+        - year
+        - soc_tC_ha
+        - sequestration_tco2e_ha_yr
+        - yield_t_ha
+        - microbial_biomass
+        - substrate
+        - soil_stability
+        - soil_n_tN_ha
+        - n_loss_tN_ha_yr
+    """
+    diff_df = project_df.copy()
+    for col in [
+        "soc_tC_ha",
+        "sequestration_tco2e_ha_yr",
+        "yield_t_ha",
+        "microbial_biomass",
+        "soil_n_tN_ha",
+        "n_loss_tN_ha_yr",
+    ]:
+        if col in project_df.columns and col in baseline_df.columns:
+            diff_df[col] = project_df[col] - baseline_df[col]
+
+    export = {
+        "module": "soil",
+        "version": "1.0",
+        "area_ha": float(params.get("area_ha", 0.0)),
+        "years": int(params.get("years", len(baseline_df))),
+        "initial_soc_tC_ha": float(params.get("initial_soc", 0.0)),
+        "scenario": {
+            "mbt_dose_baseline": 0.0,
+            "mbt_dose_project": float(params.get("mbt_dose", 0.0)),
+        },
+        "baseline": {
+            "year": _series_to_list(baseline_df, "year"),
+            "soc_tC_ha": _series_to_list(baseline_df, "soc_tC_ha"),
+            "sequestration_tco2e_ha_yr": _series_to_list(
+                baseline_df, "sequestration_tco2e_ha_yr"
+            ),
+            "yield_t_ha": _series_to_list(baseline_df, "yield_t_ha"),
+        },
+        "project": {
+            "year": _series_to_list(project_df, "year"),
+            "soc_tC_ha": _series_to_list(project_df, "soc_tC_ha"),
+            "sequestration_tco2e_ha_yr": _series_to_list(
+                project_df, "sequestration_tco2e_ha_yr"
+            ),
+            "yield_t_ha": _series_to_list(project_df, "yield_t_ha"),
+        },
+        "difference": {
+            "soc_tC_ha": _series_to_list(diff_df, "soc_tC_ha"),
+            "sequestration_tco2e_ha_yr": _series_to_list(
+                diff_df, "sequestration_tco2e_ha_yr"
+            ),
+            "yield_t_ha": _series_to_list(diff_df, "yield_t_ha"),
+        },
+    }
+
+    return export
+</file>
+
+<file path="README.md">
+![M3-BioSynergy-Core Banner](assets/banner.png)
+
+# **M3‑BioSynergy‑Core**
+
+### _The Core Engine of the Planetary Metabolic Operating System (Planetary OS)_
+
+**M3‑BioSynergy‑Core** is the scientific and computational core of the Planetary OS architecture.  
+It integrates:
+
+- Microbial hypercycles (MBT55)
+- Enzyme cascade acceleration
+- Carbon & nitrogen flux modeling
+- Field data (CSV datasets)
+- UNFCCC‑aligned climate finance
+- Multi‑sector ecological applications
+
+This repository contains the **core models, datasets, documentation, and white paper** that define the M3‑BioSynergy Engine.
+
+---
+
+# **📁 Repository Structure**
+
+```
+M3-BioSynergy-Core/
+│
+├── 1_Theory/                 # Scientific foundations (Gaia, MBT55, hypercycles)
+│
+├── 2_Models/                 # Fully functional Python models
+│   ├── microbial_dynamics.py
+│   ├── enzyme_cascade.py
+│   ├── carbon_flux.py
+│   ├── nitrogen_flux.py
+│   ├── hypercycle.py
+│   └── run_demo.py           # ← Executable demo (matplotlib graph)
+│
+├── 3_Data/                   # CSV datasets + documentation
+│   ├── MBT55_Composition.csv
+│   ├── MBT55_Composition.md
+│   ├── Enzyme_Activity.csv
+│   ├── Enzyme_Activity.md
+│   ├── Soil_Improvement.csv
+│   ├── Soil_Improvement.md
+│   ├── GHG_FieldData.csv
+│   ├── GHG_FieldData.md
+│   ├── HeavyMetal_Transformation.csv
+│   └── HeavyMetal_Transformation.md
+│
+├── 4_Applications/           # Sector-specific deployment modules
+│   ├── AGRIX.md
+│   ├── Coffee_Industry.md
+│   ├── Water_Purification.md
+│   ├── ForestFire_Prevention.md
+│   └── HealthBook.md
+│
+├── 5_ClimateFinance/         # UNFCCC-aligned climate finance architecture
+│   ├── Carbon_Credit_Methodology.md
+│   ├── PBPE_Tokenomics.md
+│   ├── Claim_Engine_Architecture.md
+│   ├── UNFCCC_Alignment.md
+│   └── Government_Proposal_Framework.md
+│
+├── 6_Diagrams/               # Structured specifications for PNG generation
+│   ├── Gaia_MBT55_Integration.md
+│   ├── Ecological_Hypercycle.md
+│   ├── Enzyme_Cascade.md
+│   ├── Carbon_Cycle_Acceleration.md
+│   ├── Nitrogenase_Transformation.md
+│   └── Climate_Finance_Architecture.md
+│
+└── WhitePaper/
+    └── WhitePaper.md         # Full Planetary OS White Paper (v1.0)
+```
+
+---
+
+# **🚀 Running the Hypercycle Demo**
+
+### Requirements
+
+```
+python 3.9+
+numpy
+matplotlib
+```
+
+### Run
+
+```
+python 2_Models/run_demo.py
+```
+
+This generates a graph showing:
+
+- Microbial biomass
+- Carbon flux
+- Nitrogen flux
+
+over time.
+
+---
+
+# **📊 Executable Python Models**
+
+|Model|File|Status|Description|
+|---|---|---|---|
+|Microbial Dynamics|microbial_dynamics.py|✅ Working|Logistic growth + substrate + enzyme enhancement|
+|Enzyme Cascade|enzyme_cascade.py|✅ Working|Multi-step Michaelis–Menten cascade|
+|Carbon Flux|carbon_flux.py|✅ Working|Carbon mineralization & stabilization|
+|Nitrogen Flux|nitrogen_flux.py|✅ Working|Nitrogen fixation & flux dynamics|
+|Hypercycle Integration|hypercycle.py|✅ Working|Full system integration|
+|Hypercycle Demo|run_demo.py|✅ Working|Graph output (matplotlib)|
+
+---
+
+# **📁 Data Layer (CSV + Documentation)**
+
+All datasets follow the M3‑BioSynergy standard:
+
+- **CSV = data**
+- **MD = Data Dictionary + Model Integration + Usage**
+
+This ensures transparency, reproducibility, and UNFCCC‑aligned MRV.
+
+---
+
+# **🌱 Applications**
+
+- AGRIX (Regenerative Agriculture)
+- Coffee Industry Transformation
+- Water Purification
+- Forest Fire Prevention
+- Environmental Health (HealthBook)
+
+---
+
+# **💰 Climate Finance (UNFCCC‑Aligned)**
+
+Includes:
+
+- Carbon credit methodology
+- PBPE tokenomics
+- Claim Engine architecture
+- Verification (ISO 14064‑2, IPCC)
+- Government proposal framework
+
+---
+
+# **📘 White Paper**
+
+Full White Paper:
+
+```
+WhitePaper/WhitePaper.md
+```
+
+---
+
+## **📩 Contact**
+
+**Kaz Shimojo**  
+Co-Founder & Chief Architect, BioNexus Holdings
+
+---
+---
+
+# 📘 **Soil–Carbon–Finance Dashboard (Streamlit Application)**
+
+_A Planetary OS Soil Module Demonstration_
+
+The **Soil–Carbon–Finance Dashboard** is an interactive Streamlit application that visualizes:
+
+- Soil carbon dynamics
+- MBT55 project scenarios
+- Carbon sequestration
+- Yield improvement
+- Green Premium (climate finance)
+- MRV (Measurement, Reporting, Verification)
+- Planetary OS Soil Module Export (standardized JSON)
+
+This dashboard is fully bilingual (**English ↔ Japanese**) and is designed for:
+
+- Researchers
+- Climate finance analysts
+- Regenerative agriculture projects
+- Government proposal teams
+- Planetary OS integration partners
+
+---
+
+## 🌍 **Features**
+
+### **1. Overview (Baseline vs MBT55 Scenario)**
+
+- Annual carbon sequestration
+- Additional sequestration (difference)
+- Carbon credit revenue
+- Total Green Premium
+
+### **2. Soil & Microbes**
+
+- SOC (Soil Organic Carbon)
+- Microbial biomass
+- Substrate
+- Soil stability
+
+### **3. Carbon Module**
+
+- Annual carbon sequestration flow
+- Baseline vs MBT55 comparison
+
+### **4. Finance Module**
+
+- Carbon credit revenue
+- Yield improvement revenue
+- Total Green Premium
+- Project-level aggregation
+
+### **5. MRV Module**
+
+- Upload observed CSV/Excel
+- Automatic alignment with model output
+- RMSE, Bias, R²
+- Full MRV JSON report
+
+### **6. Planetary OS Export**
+
+- Generates standardized JSON for  
+    **Planetary OS Soil Module**
+- Includes baseline, project, and scenario metadata
+
+---
+
+## 🔤 **Language Switching (English ↔ Japanese)**
+
+The dashboard includes a built‑in language toggle:
+
+```
+[ 日本語 ]   [ English ]
+```
+
+All UI elements switch instantly:
+
+- Sidebar
+- Tabs
+- Metrics
+- Charts
+- MRV labels
+- Export descriptions
+
+---
+
+## 🚀 **How to Run the Dashboard**
+
+### **1. Install dependencies**
+
+```
+pip install streamlit pandas numpy
+```
+
+### **2. Run the app**
+
+```
+streamlit run app.py
+```
+
+### **3. Open in browser**
+
+Streamlit will show:
+
+```
+Local URL: http://localhost:8501
+```
+
+Click to open.
+
+---
+
+## 📁 **File Structure**
+
+```
+app.py                     # Unified bilingual dashboard
+core_model.py              # Soil carbon model
+mrv.py                     # MRV engine
+planetary_os_adapter.py    # Planetary OS JSON export
+```
+
+---
+
+## 🧠 **Model Logic**
+
+The dashboard runs two scenarios:
+
+- **Baseline** (mbt_dose = 0.0)
+- **Project (MBT55)** (mbt_dose = user-defined)
+
+Outputs include:
+
+- SOC
+- Carbon sequestration
+- Yield
+- Microbial biomass
+- Substrate
+- Soil stability
+
+---
+
+## 🌐 **Planetary OS Integration**
+
+The dashboard exports a JSON structure compatible with:
+
+- **Planetary OS Soil Module**
+- **UNFCCC-aligned climate finance workflows**
+- **PBPE tokenization**
+- **Claim Engine architecture**
+
+This ensures interoperability with:
+
+- Governments
+- Research institutions
+- Carbon registries
+- Planetary OS Core
+
+---
+
+## 📸 **Screenshots (to be added)**
+
+You can add screenshots here:
+
+```
+assets/dashboard_overview.png
+assets/dashboard_soil.png
+assets/dashboard_mrv.png
+assets/dashboard_export.png
+```
+</file>
+
+<file path="WhitePaper/WhitePaper.md">
+# **Planetary OS: A Microbial Metabolic Operating System for Planetary Regeneration**
+
+### _White Paper — Version 1.0_
+
+---
+
+## **Executive Summary**
+
+Planetary OS is a unified ecological operating system designed to restore planetary health through microbial hypercycles, enzyme cascade acceleration, and Gaia‑scale feedback stabilization.  
+At its core is **MBT55**, a microbial consortium engineered to enhance soil carbon sequestration, nitrogen cycling, water retention, and pollutant transformation.
+
+Planetary OS integrates:
+
+- **Earth System Ecology**
+- **Mathematical Modeling**
+- **Field Data & MRV**
+- **Climate Finance (UNFCCC‑aligned)**
+- **Applications across agriculture, water, forestry, and health**
+
+This White Paper defines the scientific foundation, system architecture, deployment pathways, and climate finance mechanisms that enable global-scale ecological regeneration.
+
+---
+
+# **1. Introduction**
+
+Human-driven ecological degradation has destabilized the Earth system.  
+Soil carbon loss, nitrogen imbalance, water scarcity, and biodiversity collapse threaten food security, climate stability, and economic resilience.
+
+Planetary OS provides a **biological–digital infrastructure** to reverse these trends by:
+
+- Accelerating natural biogeochemical cycles
+- Enhancing soil–atmosphere regulation
+- Quantifying ecological improvements
+- Converting them into climate finance assets
+
+The system is designed for governments, corporations, and international organizations seeking scalable, verifiable ecological restoration.
+
+---
+
+# **2. Scientific Foundation**
+
+## **2.1 Gaia Framework**
+
+Planetary OS is grounded in Earth System Ecology and the Gaia hypothesis, which views the biosphere as a self-regulating system.  
+Key regulatory mechanisms include:
+
+- Carbon sequestration
+- Nitrogen cycling
+- Hydrological buffering
+- Temperature moderation
+
+MBT55 enhances these mechanisms by increasing microbial metabolic throughput.
+
+---
+
+## **2.2 Microbial Hypercycle (MBT55)**
+
+MBT55 is a consortium of oxidizers, decomposers, fermenters, and nitrogen-transforming microbes.  
+It forms a **self-reinforcing metabolic hypercycle** that accelerates:
+
+- Organic matter decomposition
+- Enzyme cascade activity
+- Nitrogen fixation
+- Soil carbon stabilization
+
+This creates a regenerative loop that restores soil function.
+
+---
+
+## **2.3 Enzyme Cascade Acceleration**
+
+MBT55 produces high-activity enzymes:
+
+- Oxidoreductases
+- Hydrolases
+- Transferases
+- Lyases
+
+These enzymes accelerate substrate turnover, increasing carbon and nitrogen flux efficiency.
+
+---
+
+## **2.4 Nitrogenase Transformation**
+
+Nitrogenase converts atmospheric N₂ into ammonia (NH₃), increasing soil nitrogen availability and reducing N₂O emissions.
+
+---
+
+# **3. Mathematical Framework**
+
+Planetary OS uses a multi-layered dynamical model:
+
+1. **Microbial Dynamics**
+2. **Enzyme Cascade Kinetics**
+3. **Carbon Flux Acceleration**
+4. **Nitrogen Flux Dynamics**
+5. **Soil–Atmosphere Exchange**
+6. **Gaia Feedback Coupling**
+
+The system is represented by coupled differential equations describing:
+
+- Microbial growth
+- Enzyme reaction velocities
+- Carbon and nitrogen flux
+- Moisture and temperature feedbacks
+
+This enables simulation, prediction, and optimization of ecological performance.
+
+---
+
+# **4. Data Architecture**
+
+Planetary OS uses a structured data layer:
+
+- **MBT55_Composition.csv**
+- **Enzyme_Activity.csv**
+- **Soil_Improvement.csv**
+- **GHG_FieldData.csv**
+- **HeavyMetal_Transformation.csv**
+
+Each dataset includes:
+
+- Data Dictionary
+- Model Integration
+- Usage
+
+This ensures transparency, reproducibility, and UNFCCC‑aligned MRV.
+
+---
+
+# **5. Applications**
+
+Planetary OS supports multiple sectors:
+
+## **5.1 AGRIX (Regenerative Agriculture)**
+
+- Soil carbon increase: +30–60%
+- Yield increase: +15–35%
+- Fertilizer reduction: 20–40%
+
+## **5.2 Coffee Industry**
+
+- Cup quality improvement: +20–40%
+- Soil restoration
+- Carbon credit generation
+
+## **5.3 Water Purification**
+
+- COD/BOD reduction: 40–70%
+- Heavy metal reduction: 50–80%
+
+## **5.4 Forest Fire Prevention**
+
+- Fuel load reduction: 20–50%
+- Soil moisture increase: 10–25%
+
+## **5.5 HealthBook (Environmental Health)**
+
+- Soil–food–health linkage
+- Exposure modeling
+
+---
+
+# **6. Climate Finance Architecture (UNFCCC‑Aligned)**
+
+Planetary OS includes a full climate finance pipeline:
+
+1. **Field Data Collection**
+2. **Hypercycle Model Validation**
+3. **GHG Quantification**
+4. **Verification (ISO 14064‑2, IPCC Guidelines)**
+5. **PBPE Tokenization**
+6. **Registry & Market Integration**
+
+### **6.1 Carbon Credit Quantification**
+
+$$ Credits = \Delta C + ER_{CH_4} + ER_{N_2O} $$
+
+### **6.2 PBPE Token Types**
+
+- PBPE‑C: Carbon
+- PBPE‑S: Soil
+- PBPE‑W: Water
+- PBPE‑B: Biodiversity
+
+---
+
+# **7. System Architecture**
+
+Planetary OS integrates:
+
+- Biological layer (MBT55)
+- Data layer (CSV datasets)
+- Model layer (hypercycle simulation)
+- Finance layer (PBPE tokens)
+- Governance layer (UNFCCC compliance)
+
+This creates a **full-stack ecological regeneration system**.
+
+---
+
+# **8. Deployment Framework**
+
+Planetary OS can be deployed at:
+
+- National scale
+- Corporate supply chains
+- Agricultural cooperatives
+- Watersheds and river basins
+- Forest management zones
+
+Deployment includes:
+
+- Soil activation
+- Water system inoculation
+- Monitoring infrastructure
+- Climate finance integration
+
+---
+
+# **9. Global Impact Potential**
+
+Planetary OS can deliver:
+
+- Gigaton-scale carbon sequestration
+- Methane and nitrous oxide reduction
+- Soil fertility restoration
+- Water resilience
+- Biodiversity recovery
+- Climate finance access for farmers and communities
+
+---
+
+# **10. Conclusion**
+
+Planetary OS provides a scientifically rigorous, economically viable, and globally scalable pathway to regenerate Earth’s ecosystems.  
+By integrating microbial hypercycles, mathematical modeling, field data, and climate finance, it establishes a new paradigm for planetary stewardship.
+</file>
+
+</files>

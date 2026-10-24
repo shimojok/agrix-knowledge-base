@@ -2272,5 +2272,5 @@ https://github.com/shimojok/M3-BioSynergy で、追加したファイルがす�
 
 次に進む場合は、HealthBook推論エンジンの実装を始めますか？ 🚀
 
-[[1. Verified]]
+[[DSH17. Verified]]
 [[■2. HealthBook推論エンジンを実装]]

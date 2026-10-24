@@ -1,4 +1,4 @@
-[[HB6. HealthBook Platform 実装工程計画書]]
+[[HB006. HealthBook Platform 実装工程計画書]]
 このノートを何分割しますか？
 
 ---

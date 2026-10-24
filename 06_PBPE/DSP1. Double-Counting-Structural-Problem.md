@@ -1,6 +1,6 @@
 [[DP41. 7 桁コード生成モジュール（PBPE Identifier Engine）]]
 [[DP42. PBPE Marketplace は、農業・気候ファイナンス・ESG の「世界標準 OS」になり得る。]]
-[[DP43. PBPE Marketplace はブロックチェーンによって二重計上（Double Counting）を“本質的に防止できる構造”]]
+[[PB14_045. PBPE Marketplace はブロックチェーンによって二重計上（Double Counting）を“本質的に防止できる構造”]]
 [[DP44. PBPE Marketplace のブロックチェーンはGitHub（コード）にも、Dashboard（UI）にも “自然に統合できる”]]
 
 炭素クレジット、排出権取引などにおける二重計上の構造的な問題と、添付ドキュメントで説明するPBPE-Marketplace/Blockchain による二重計上防止における優位点、さらに、これによる社会・農業生産・経済的・社会的インパクトを纏めてください。

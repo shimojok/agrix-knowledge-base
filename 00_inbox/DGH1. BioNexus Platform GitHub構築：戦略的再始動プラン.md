@@ -10,7 +10,7 @@ AGRIX/MBT55統合説明資料日本語版
 同英語版
 [[AGRIX_Theory_MBT55_en]]
 HealthBook推論エンジンのコード by DeepSeek
-[[HB5. HealthBook Platform 統合アーキテクチャ（詳細説明付き）]]
+[[HB005. HealthBook Platform 統合アーキテクチャ（詳細説明付き）]]
 MBT漢方代謝ライブラリーのJSONコード
 [[mbt_kampo_library_final_array.json]]
 200項目の問診のJSONコード

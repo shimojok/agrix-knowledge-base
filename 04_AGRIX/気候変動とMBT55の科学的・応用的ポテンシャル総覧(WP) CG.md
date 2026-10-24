@@ -2,7 +2,7 @@
 tag: AgriWare
 ---
 #news #MBTProbiotics #AGRIX #HealthBook #2025-10-16 
-[[MBT55の機能性を評価するバイオマーカー Gemini 1021]]
+[[mh002. MBT55の機能性を評価するバイオマーカー Gemini 1021]]
 [[00_inbox/03_MBT55/MBT55 × reCLA 腸内代謝モデル：構造概要]]
 
 [Comprehensive Overview of Climate Change and the Scientific & Applied Potential of MBT55 · GitHub](https://gist.github.com/shimojok/b046b4105956ad2289d7f31efd8088d2)

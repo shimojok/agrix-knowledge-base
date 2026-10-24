@@ -312,4 +312,4 @@ Diagrams will be added in PNG format.
 
 Kaz、次はどれに進みますか。
 
-[[COA-22]]
+[[COA-22. PHASE 2：本番レベルの内容構築を開始します]]

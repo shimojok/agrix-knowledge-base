@@ -151,4 +151,4 @@ Stripe が「決済の OS」なら、
 選んでいただければ、  
 **Stripe の API 設計思想を完全に踏襲した “7行で動く Planetary Health API” の設計図** を作成します。
 
-[[PM4. Planetary Health API：利害関係者ごとのメリット構造]]
+[[PB10_004. Planetary Health API：利害関係者ごとのメリット構造]]

@@ -1,0 +1,5172 @@
+This file is a merged representation of the entire codebase, combined into a single document by Repomix.
+
+<file_summary>
+This section contains a summary of this file.
+
+<purpose>
+This file contains a packed representation of the entire repository's contents.
+It is designed to be easily consumable by AI systems for analysis, code review,
+or other automated processes.
+</purpose>
+
+<file_format>
+The content is organized as follows:
+1. This summary section
+2. Repository information
+3. Directory structure
+4. Repository files (if enabled)
+5. Multiple file entries, each consisting of:
+  - File path as an attribute
+  - Full contents of the file
+</file_format>
+
+<usage_guidelines>
+- This file should be treated as read-only. Any changes should be made to the
+  original repository files, not this packed version.
+- When processing this file, use the file path to distinguish
+  between different files in the repository.
+- Be aware that this file may contain sensitive information. Handle it with
+  the same level of security as you would the original repository.
+</usage_guidelines>
+
+<notes>
+- Some files may have been excluded based on .gitignore rules and Repomix's configuration
+- Binary files are not included in this packed representation. Please refer to the Repository Structure section for a complete list of file paths, including binary files
+- Files matching patterns in .gitignore are excluded
+- Files matching default ignore patterns are excluded
+- Files are sorted by Git change count (files with more changes are at the bottom)
+</notes>
+
+</file_summary>
+
+<directory_structure>
+01_Hypercycle/en/01_core_metabolites_EN.md
+01_Hypercycle/en/02_electron_shuttle_EN.md
+01_Hypercycle/en/03_hypercycle_definition_EN.md
+01_Hypercycle/en/04_enzyme_cascade_EN.md
+01_Hypercycle/en/05_55_consortium_EN.md
+01_Hypercycle/ja/01_core_metabolites.md
+01_Hypercycle/ja/02_electron_shuttle.md
+01_Hypercycle/ja/03_hypercycle_definition.md
+01_Hypercycle/ja/04_enzyme_cascade.md
+01_Hypercycle/ja/05_55_consortium.md
+02_Evidence/en/01_fermentation_24h_EN.md
+02_Evidence/en/02_iwanuma_sludge_EN.md
+02_Evidence/en/03_chalkbrood_EN.md
+02_Evidence/en/04_coffee_rust_EN.md
+02_Evidence/en/05_livestock_EN.md
+02_Evidence/en/06_aquaculture_EN.md
+02_Evidence/en/07_vegetables_EN.md
+02_Evidence/ja/01_fermentation_24h.md
+02_Evidence/ja/02_iwanuma_sludge.md
+02_Evidence/ja/03_chalkbrood.md
+02_Evidence/ja/04_coffee_rust.md
+02_Evidence/ja/05_livestock.md
+02_Evidence/ja/06_aquaculture.md
+02_Evidence/ja/07_vegetables.md
+03_GHG_Finance/en/01_510Mt_analysis_EN.md
+03_GHG_Finance/en/02_africa_simulation_EN.md
+03_GHG_Finance/en/03_green_premium_EN.md
+03_GHG_Finance/en/04_cost_comparison_EN.md
+03_GHG_Finance/en/05_pbpe_tokenomics_EN.md
+03_GHG_Finance/en/06_carbon_credit_methodology_EN.md
+03_GHG_Finance/ja/01_510Mt_analysis.md
+03_GHG_Finance/ja/02_africa_simulation.md
+03_GHG_Finance/ja/03_green_premium.md
+03_GHG_Finance/ja/04_cost_comparison.md
+03_GHG_Finance/ja/05_pbpe_tokenomics.md
+03_GHG_Finance/ja/06_carbon_credit_methodology.md
+04_HealthBook/en/01_137_disease_matrix_EN.md
+04_HealthBook/en/02_200_questionnaire_EN.md
+04_HealthBook/en/03_kampo_library_EN.md
+04_HealthBook/en/04_animal_medicine_EN.md
+04_HealthBook/en/05_malaria_defense_EN.md
+04_HealthBook/en/06_mROI_model_EN.md
+04_HealthBook/ja/01_137_disease_matrix.md
+04_HealthBook/ja/02_200_questionnaire.md
+04_HealthBook/ja/03_kampo_library.md
+04_HealthBook/ja/04_animal_medicine.md
+04_HealthBook/ja/05_malaria_defense.md
+04_HealthBook/ja/06_mROI_model.md
+05_AGRIX_SafetyChain/en/01_soil_dynamics_EN.md
+05_AGRIX_SafetyChain/en/02_agriware_engine_EN.md
+05_AGRIX_SafetyChain/en/03_safetychain_definition_EN.md
+05_AGRIX_SafetyChain/en/04_vscore_model_EN.md
+05_AGRIX_SafetyChain/en/05_food_price_model_EN.md
+05_AGRIX_SafetyChain/en/06_phenomics_ai_agents_EN.md
+05_AGRIX_SafetyChain/ja/01_soil_dynamics.md
+05_AGRIX_SafetyChain/ja/02_agriware_engine.md
+05_AGRIX_SafetyChain/ja/03_safetychain_definition.md
+05_AGRIX_SafetyChain/ja/04_vscore_model.md
+05_AGRIX_SafetyChain/ja/05_food_price_model.md
+05_AGRIX_SafetyChain/ja/06_phenomics_ai_agents.md
+06_Proposals/01_azure_acquisition_strategy_EN.md
+06_Proposals/02_yara_partnership_EN.md
+06_Proposals/03_starbucks_coffee_initiative.md
+AGENTS.md
+proposals/01_azure_acquisition_strategy.md
+proposals/02_yara_partnership.md
+proposals/03_starbucks_coffee_initiative_EN.md
+proposals/04_gates_foundation_agriculture_EN.md
+proposals/04_gates_foundation_agriculture.md
+proposals/05_gates_foundation_ceo_EN.md
+proposals/05_gates_foundation_ceo.md
+proposals/06_gates_foundation_nutrition_EN.md
+proposals/06_gates_foundation_nutrition.md
+README_EN.md
+README.md
+src/mbt55_ode_engine.py
+src/parameters_optimized.json
+</directory_structure>
+
+<files>
+This section contains the contents of the repository's files.
+
+<file path="01_Hypercycle/en/01_core_metabolites_EN.md">
+# MBT55 Core Metabolites: The Triple-Currency System
+
+## Overview
+
+At the core of the MBT55 Ecological Hypercycle lies not a single molecule, but a **functionally hierarchical "Triple Currency"** system.
+
+Integrated analysis by four AIs (DeepSeek, Copilot, Gemini, ChatGPT) identified the following three metabolic currencies.
+
+---
+
+## 1. Carbon Currency: Lactate → Short-Chain Fatty Acids (Acetate, Butyrate)
+
+- **Lactate** is the universal electron carrier penetrating the aerobic/anaerobic interface
+- In the gut, lactate is converted to **butyrate** via cross-feeding
+- Butyrate serves as the primary energy source for colonocytes (70% of ATP), mediates epigenetic regulation through HDAC inhibition, and induces Treg cells
+
+## 2. Electron Currency: Hydrogen (H₂) and Quinone Shuttles
+
+- MBT55 maintains **near-zero hydrogen partial pressure**
+- Methanotrophs and sulfate-reducing bacteria consume H₂ instantly
+- This is the physicochemical basis for **zero odor**, preventing H₂S and CH₄ accumulation
+- Low-molecular-weight quinone compounds generated during lignin degradation function as "electron shuttles"
+
+## 3. Mineral Currency: Fulvic Acid and Chelated Minerals
+
+- Complete lignin degradation produces low-molecular-weight fulvic acid
+- Fulvic acid chelates Fe²⁺, Mn²⁺, Zn²⁺, delivering them in bioavailable form to plants and gut microbiota
+
+---
+
+## Conclusion
+
+The MBT55 Hypercycle is defined by the continuous, non-equilibrium flux of **lactate, hydrogen, and fulvic acid.**
+
+> *"MBT55 is not just a decomposer. It is a non-equilibrium thermodynamic engine that stabilizes the soil metabolome."*
+
+---
+
+## References
+
+- M1. MBT55 Core Metabolite Conclusions — DeepSeek
+- M2. MBT55 Hypercycle Carbon Core — Copilot
+- M3. MBT55 Hypercycle Core Metabolites — Gemini
+- ■MBT55 Hypercycle Core Metabolites — Model Design Philosophy — ChatGPT
+</file>
+
+<file path="01_Hypercycle/en/02_electron_shuttle_EN.md">
+# The Electron Shuttle: Why MBT55 Never Putrefies
+
+## DeepSeek Analysis (Backed by Video Evidence)
+
+### Conventional Composting
+
+In conventional anaerobic composting:
+- H₂ accumulates → Sulfate-reducing bacteria produce H₂S (rotten egg odor)
+- Methanogenic archaea produce CH₄
+- Electron stagnation is the root cause of putrefaction
+
+### MBT55 Electron Dissipation Mechanism
+
+MBT55's 55% aerobic fraction provides **oxygen micro-niches**:
+
+Electrons flow from fermentation (NADH) to diverse acceptors:
+- **O₂** (aerobic respiration)
+- **NO₃⁻** (denitrification → N₂)
+- **Fe³⁺** (iron reduction)
+- **Mn⁴⁺** (manganese reduction)
+
+This **diverse electron sink capacity** maintains the redox potential (Eh) in a narrow band (-100 to +200 mV).
+A delicate balance — **too low for putrefaction, too high for methanogenesis.**
+
+---
+
+## Key ODE Equation
+
+dH₂/dt = δ·E - ε·(X_methanotroph + X_sulfate_reducer)·H₂
+
+In the MBT55 consortium, ε is extremely high → **H₂ → 0**
+
+---
+
+## Video Verification
+
+In the fermentation fertilizer demo (https://youtu.be/bVRBk0ixNjI):
+- At 22 hours: "dH₂/dt ≈ 0 constraint SATISFIED"
+- No odor throughout the entire process
+
+---
+
+## References
+
+- ■MBT55 Technical Analysis Report: Integrated Analysis of 55-Group Composition and Hypercycle Metabolism
+- M1. MBT55 Core Metabolite Conclusions — DeepSeek
+- observed_data.csv (24-hour fermentation data)
+</file>
+
+<file path="01_Hypercycle/en/03_hypercycle_definition_EN.md">
+# MBT55 Hypercycle vs. Eigen's Theoretical Hypercycle
+
+## Comparison Table
+
+| Feature | Eigen's Model (1971) | MBT55 Real-World Implementation |
+|:---|:---|:---|
+| **Environment** | Prebiotic soup (hypothetical) | Soil, compost, gut (verified) |
+| **Catalysts** | RNA molecules | Microbial consortium (55+ species) |
+| **Cycle Time** | Unknown | **24 hours** (organic matter → humus) |
+| **Stability** | Risk of parasitic collapse | **Stable attractor** (proven by ODE) |
+| **Economic Value** | Theoretical | 510 Mt GHG reduction/year |
+
+---
+
+## MBT55-Specific Definition
+
+> **An Ecological Hypercycle is a closed-loop metabolic network in which the waste products of one guild become the energy substrate of another, maintained far from thermodynamic equilibrium by continuous external energy input (O₂ diffusion) and internal electron shuttling.**
+
+The MBT55 consortium has been **engineered through 40 years of selection** to maximize the number of **cross-feeding edges** in its metabolic graph.
+
+---
+
+## Mathematical Stability
+
+The condition for the system to converge to a stable fixed point:
+
+dH₂/dt = δE - ε(X_m + X_s)H₂ ≈ 0
+
+With zero H₂ accumulation, the system **does not oscillate (putrefy)** and maintains a stable state with high decomposition rates.
+
+---
+
+## References
+
+- ■MBT55 Technical Analysis Report
+- ■Python Simulation (MBT55 Hypercycle Engine)
+</file>
+
+<file path="01_Hypercycle/en/04_enzyme_cascade_EN.md">
+# MBT55 3-Stage Enzyme Cascade Reaction
+
+## Overview
+
+The core of MBT55's 24-hour rapid decomposition lies in the **3-stage enzyme cascade reaction driven by the microbial consortium.**
+
+---
+
+## Stage 1: Rapid Hydrolysis (0–6 hours)
+
+| Substrate | Enzyme | Product |
+|:---|:---|:---|
+| Cellulose | Cellulase | Cellobiose |
+| Protein | Protease | Peptides |
+| Lipids | Lipase | Fatty acids + Glycerol |
+| Starch | Amylase | Maltose |
+
+**Key Microorganisms**: Filamentous fungi (Trichoderma), Bacillus spp., Actinomycetes
+
+---
+
+## Stage 2: Intermediate Metabolic Conversion (6–18 hours)
+
+- Cellobiose → Glucose (β-glucosidase)
+- Peptides → Amino acids (peptidase)
+- Fatty acids → Acetyl-CoA (β-oxidation)
+- **Lactic acid bacteria produce lactate, lowering pH and suppressing putrefactive bacteria**
+
+---
+
+## Stage 3: Stabilization & Humification (18–24 hours)
+
+- Nitrification: NH₄⁺ → NO₂⁻ → NO₃⁻
+- Sulfur/iron cycling: H₂S removal and immobilization
+- **pH auto-converges to 7.2–7.5**
+- Formation of humic precursors (lignin degraders + actinomycetes)
+
+---
+
+## Key Acceleration Factors
+
+| Factor | Mechanism |
+|:---|:---|
+| Thermophilic enzymes | Active at 80-100°C (Tateyama-ken strain heat-stable cellulase) |
+| Metabolic pathway shortcut | Entner-Doudoroff pathway bypasses glycolysis |
+| Phase-separated reaction field | Extracellular polymers (EPS) form liquid-liquid phase separation → 10× reaction rate |
+
+---
+
+## References
+
+- ■MBT55 3-Stage Enzyme Cascade Mechanism
+- ■MBT55 Technical Analysis Report
+</file>
+
+<file path="01_Hypercycle/en/05_55_consortium_EN.md">
+# MBT55 55-Species Functional Classification
+
+## Composition Ratio
+
+**55% Aerobic : 45% Anaerobic**
+(Conventional soil: 20% aerobic : 80% anaerobic)
+
+---
+
+## 4 Major Decomposition Domains
+
+| Domain | Representative Genera | Function |
+|:---|:---|:---|
+| Starch decomposers | Bacillus spp. | Primary depolymerization |
+| Protein decomposers | Bacillus spp. | Amino acid supply |
+| Lipid decomposers | Actinomycetes | Fatty acid & glycerol supply |
+| Cellulose decomposers | Aerobic & anaerobic | Polysaccharide degradation |
+
+---
+
+## Recalcitrant Compound Degradation
+
+| Group | Function |
+|:---|:---|
+| Lignin degraders | Aromatic ring opening |
+| Filamentous fungi (Trichoderma) | Macromolecular compound degradation |
+
+---
+
+## Element & Metal Metabolism
+
+| Group | Function |
+|:---|:---|
+| Manganese reducers (Basidiomycetes) | Mn⁴⁺→Mn²⁺, electron dissipation |
+| Iron oxidizers/reducers | Fe cycling |
+| Ammonia oxidizers (Nitrite bacteria) | NH₃→NO₂⁻ |
+| Methanotrophs | CH₄ oxidation, H₂ consumption |
+| Sulfur bacteria (Green sulfur bacteria) | Sulfur cycling |
+
+---
+
+## Stabilization & Integration
+
+| Group | Function |
+|:---|:---|
+| Actinomycetes (chitin degraders) | Humic substance formation |
+| Nitrifying bacteria | NO₂⁻→NO₃⁻ |
+| Lactic acid bacteria | Lactate production, pH control, putrefaction suppression |
+
+---
+
+## Five Novel Strains (Tateyama Five)
+
+| Strain Name | Classification | Inferred Function |
+|:---|:---|:---|
+| Tateyama-ken | Bacillus sp. | Thermostable cellulase |
+| Tateyama-Yakushi | Bacillus sp. | Protease |
+| Tateyama-Jodo | Bacillus sp. | ED pathway metabolism |
+| Tateyama-Menami | Atopostipes sp. | Deglycosylation, glycosidase |
+| Tateyama-Ryuo | Clostridium sp. | Anaerobic metabolism, reduction |
+
+---
+
+## References
+
+- ■MBT55 Technical Analysis Report
+- ■MBT55 (NB Bacteria) Patent Documents
+</file>
+
+<file path="01_Hypercycle/ja/01_core_metabolites.md">
+# MBT55 コア代謝産物：三重通貨システム
+
+## 概要
+
+MBT55生態学的ハイパーサイクルの中核をなすのは、**単一分子ではなく、機能的に階層化された「三重通貨」** である。
+
+DeepSeek, Copilot, Gemini, ChatGPTの4つのAIによる統合分析の結果、以下の3つの代謝通貨が特定された。
+
+---
+
+## 1. 炭素通貨：乳酸 → 短鎖脂肪酸（酢酸・酪酸）
+
+- **乳酸**は好気/嫌気界面を貫通する普遍的な電子キャリア
+- 腸内では、乳酸はクロスフィーディングにより**酪酸**へ変換される
+- 酪酸は大腸上皮細胞の主要エネルギー源（ATP 70%）であり、HDAC阻害によるエピジェネティクス制御、Treg誘導を担う
+
+## 2. 電子通貨：水素（H₂）とキノンシャトル
+
+- MBT55は**ほぼゼロの水素分圧**を維持する
+- メタン酸化菌・硫酸還元菌がH₂を即座に消費するため
+- これがH₂SやCH₄の蓄積を防ぎ、**悪臭ゼロ**の物理化学的根拠となる
+- リグニン分解過程で生じる低分子キノン化合物が「電子シャトル」として機能
+
+## 3. ミネラル通貨：フルボ酸とキレートミネラル
+
+- 完全なリグニン分解により低分子フルボ酸が生成される
+- フルボ酸はFe²⁺, Mn²⁺, Zn²⁺をキレートし、植物と腸内細菌叢にバイオアベイラブルな形で供給する
+
+---
+
+## 結論
+
+MBT55ハイパーサイクルは、**乳酸、水素、フルボ酸**の継続的な非平衡フラックスによって定義される。
+
+> *「MBT55は単なる分解者ではない。土壌メタボロームを安定化させる非平衡熱力学エンジンである。」*
+
+---
+
+## 参照
+
+- M1. MBT55 核心代謝産物的結論 DeepSeek
+- M2. MBT55ハイパーサイクルの炭素コア Copilot
+- M3. MBT55ハイパーサイクルのコア代謝産物 Gemini
+- ■MBT55ハイパーサイクルのコア代謝産物～モデル設計思想 ChatGPT
+</file>
+
+<file path="01_Hypercycle/ja/02_electron_shuttle.md">
+# 電子シャトル：MBT55が腐敗しない理由
+
+## DeepSeek分析（映像証拠により裏付け）
+
+### 従来の堆肥化
+
+通常の嫌気的堆肥では：
+- H₂が蓄積 → 硫酸還元菌がH₂S（腐卵臭）を生成
+- メタン生成古細菌がCH₄を生成
+- 電子の滞留が腐敗の根本原因
+
+### MBT55の電子散逸メカニズム
+
+MBT55の55%好気性画分が**酸素マイクロニッチ**を提供：
+
+電子は発酵（NADH）から以下の多様な受容体へ流れる：
+- **O₂**（好気呼吸）
+- **NO₃⁻**（脱窒→N₂）
+- **Fe³⁺**（鉄還元）
+- **Mn⁴⁺**（マンガン還元）
+
+この**多様な電子シンク容量**により、酸化還元電位（Eh）は狭い範囲（-100〜+200 mV）に維持される。
+**腐敗には低すぎ、メタン生成には高すぎる**絶妙なバランス。
+
+---
+
+## 鍵となるODE方程式
+
+
+dH₂/dt = δ·E - ε·(X_methanotroph + X_sulfate_reducer)·H₂
+
+MBT55コンソーシアムでは、εが極めて高い → **H₂ → 0**
+
+---
+
+## 映像による検証
+
+発酵肥料デモ（https://youtu.be/bVRBk0ixNjI）において：
+- 22時間経過時点で「dH₂/dt ≈ 0 constraint SATISFIED」
+- 全プロセスを通じて悪臭なし
+
+---
+
+## 参照
+
+- ■MBT55技術解説レポート：55群構成とハイパーサイクル代謝の統合的解析
+- M1. MBT55 核心代謝産物的結論 DeepSeek
+- observed_data.csv（24時間発酵データ）
+</file>
+
+<file path="01_Hypercycle/ja/03_hypercycle_definition.md">
+# MBT55ハイパーサイクル vs アイゲンの理論的ハイパーサイクル
+
+## 比較表
+
+| 特徴 | アイゲンのモデル (1971) | MBT55 実世界実装 |
+|:---|:---|:---|
+| **環境** | プレバイオティクススープ（仮説） | 土壌、堆肥、腸内（検証済） |
+| **触媒** | RNA分子 | 微生物コンソーシアム（55種+） |
+| **サイクル時間** | 不明 | **24時間**（有機物→腐植） |
+| **安定性** | 寄生崩壊のリスク | **安定吸引子**（ODEで証明） |
+| **経済的価値** | 理論的 | 年間510Mt GHG削減 |
+
+---
+
+## MBT55特異的定義
+
+> **生態学的ハイパーサイクルとは、あるギルドの老廃物が別のギルドのエネルギー基質となる閉ループ代謝ネットワークであり、継続的な外部エネルギー入力（O₂拡散）と内部電子シャトリングによって熱力学的平衡から遠く離れて維持されるもの。**
+
+MBT55コンソーシアムは、40年にわたる選抜により、代謝グラフの**クロスフィーディング・エッジ数**を最大化するよう設計されている。
+
+---
+
+## 数学的安定性
+
+系が安定固定点に収束する条件：
+
+dH₂/dt = δE - ε(X_m + X_s)H₂ ≈ 0
+
+H₂蓄積がゼロとなることで、系は**振動（腐敗）を起こさず**、高い分解率を維持したまま安定状態を維持する。
+
+---
+
+## 参照
+
+- ■MBT55技術解説レポート：55群構成とハイパーサイクル代謝の統合的解析
+- ■Pythonシミュレーション（MBT55 Hypercycle Engine）
+</file>
+
+<file path="01_Hypercycle/ja/04_enzyme_cascade.md">
+# MBT55 3段階酵素カスケード反応
+
+## 概要
+
+MBT55の24時間高速分解の核心は、**微生物コンソーシアムによる3段階酵素カスケード反応**にある。
+
+---
+
+## 第1段階：高速加水分解（0〜6時間）
+
+| 基質 | 酵素 | 生成物 |
+|:---|:---|:---|
+| セルロース | セルラーゼ | セロビオース |
+| タンパク質 | プロテアーゼ | ペプチド |
+| 脂質 | リパーゼ | 脂肪酸＋グリセロール |
+| デンプン | アミラーゼ | マルトース |
+
+**担当微生物**：糸状菌（Trichoderma）、バチルス属、放線菌
+
+---
+
+## 第2段階：中間代謝変換（6〜18時間）
+
+- セロビオース → グルコース（β-グルコシダーゼ）
+- ペプチド → アミノ酸（ペプチダーゼ）
+- 脂肪酸 → アセチルCoA（β酸化）
+- **乳酸菌群が乳酸を生成し、pHを低下させ腐敗菌を抑制**
+
+---
+
+## 第3段階：安定化・腐植化（18〜24時間）
+
+- 硝化作用：NH₄⁺ → NO₂⁻ → NO₃⁻
+- 硫黄・鉄の循環：H₂S除去・固定化
+- **pH 7.2〜7.5に自動収束**
+- 腐植前駆体の形成（リグニン分解菌＋放線菌）
+
+---
+
+## 高速化の鍵因子
+
+| 因子 | メカニズム |
+|:---|:---|
+| 耐熱性酵素 | 80-100℃で活性持続（タテヤマ剣株の耐熱セルラーゼ） |
+| 代謝経路短絡 | Entner-Doudoroff経路が解糖系をバイパス |
+| 相分離反応場 | 細胞外ポリマー（EPS）が液-液相分離を形成→反応速度10倍 |
+
+---
+
+## 参照
+
+- ■MBT55_酵素カスケード反応の3段階メカニズム（重要）
+- ■MBT55技術解説レポート
+</file>
+
+<file path="01_Hypercycle/ja/05_55_consortium.md">
+# MBT55 55菌群の機能分類
+
+## 構成比
+
+**好気性55%：嫌気性45%**
+（一般的な土壌は好気20%：嫌気80%）
+
+---
+
+## 4大主要分解分野
+
+| 分野 | 構成菌群（例） | 担当機能 |
+|:---|:---|:---|
+| でんぷん分解菌 | バチルス属 | 基礎低分子化 |
+| タンパク質分解菌 | バチルス属 | アミノ酸供給 |
+| 脂質分解菌 | 放線菌 | 脂肪酸・グリセロール供給 |
+| セルロース分解菌 | 好気性・嫌気性 | 多糖類分解 |
+
+---
+
+## 難分解物破砕分野
+
+| 構成菌群 | 担当機能 |
+|:---|:---|
+| リグニン分解菌 | 芳香族化合物開環 |
+| 糸状菌（Trichoderma等） | 高分子化合物分解 |
+
+---
+
+## 元素・金属代謝分野
+
+| 構成菌群 | 担当機能 |
+|:---|:---|
+| マンガン還元菌（原生担子菌類） | Mn⁴⁺→Mn²⁺、電子消散 |
+| 鉄酸化/還元菌 | Fe循環 |
+| アンモニア酸化菌（亜硝酸菌） | NH₃→NO₂⁻ |
+| メタン酸化菌 | CH₄酸化、H₂消費 |
+| 硫黄細菌（緑色硫黄細菌科） | 硫黄循環 |
+
+---
+
+## 安定化・統合分野
+
+| 構成菌群 | 担当機能 |
+|:---|:---|
+| 放線菌（キチン分解） | 腐植質生成 |
+| 硝化生成菌 | NO₂⁻→NO₃⁻ |
+| 乳酸菌群 | 乳酸生成、pH制御、腐敗抑制 |
+
+---
+
+## 新種5菌株（タテヤマ五人衆）
+
+| 菌株名 | 分類 | 推定機能 |
+|:---|:---|:---|
+| タテヤマ剣 | Bacillus sp. | 耐熱セルラーゼ |
+| タテヤマ薬師 | Bacillus sp. | プロテアーゼ |
+| タテヤマ浄土 | Bacillus sp. | ED経路代謝 |
+| タテヤマ女汝 | Atopostipes sp. | 脱糖・グリコシダーゼ |
+| タテヤマ竜王 | Clostridium sp. | 嫌気代謝・還元 |
+
+---
+
+## 参照
+
+- ■MBT55技術解説レポート：55群構成とハイパーサイクル代謝の統合的解析
+- ■MBT55（NB菌）特許資料から見えること・見えないこと
+</file>
+
+<file path="02_Evidence/en/01_fermentation_24h_EN.md">
+# Fermentation Fertilizer Demo: 24-Hour Complete Fermentation with pH Auto-Control
+
+## Video Source
+https://youtu.be/bVRBk0ixNjI
+
+## Overview
+
+Demonstration video of 24-hour fermentation fertilizer production using MBT55. Using okara (soy pulp) and rice bran as raw materials, complete decomposition and fermentation is achieved within 24 hours, reaching a metabolic level that microorganisms cannot further decompose.
+
+---
+
+## Observed Data (24-Hour Time Course)
+
+| Time (h) | Temperature (°C) | pH | Stage |
+|:---|:---|:---|:---|
+| 0 | 25.0 | 6.8 | Hydrolysis |
+| 6 | 55.0 | 6.3 | Hydrolysis complete |
+| 12 | 54.5 | 7.1 | Fermentation/Metabolism |
+| 18 | 50.0 | 7.4 | Stabilization |
+| 24 | 41.0 | 7.4 | **Complete Humification** |
+
+---
+
+## Key Observations
+
+1. **pH Auto-Control**: 6.8→5.9 (temporary drop)→7.4 (stabilized)
+2. **Temperature Profile**: 25°C→55°C (thermophilic phase)→41°C (final)
+3. **Zero Odor**: H₂ partial pressure below detection limit (dH₂/dt≈0 at 22h)
+4. **Decomposition Rate >60%**: Double that of conventional composting (30%)
+
+---
+
+## Comparison: Conventional Composting vs. MBT55
+
+| Item | Conventional | MBT55 |
+|:---|:---|:---|
+| Time Required | 90+ days | **24 hours** |
+| Decomposition Rate | ~30% | **>60%** |
+| Odor | Present (H₂S, CH₄) | **None** |
+| Final Product | Immature compost (putrefactive residues) | **Complete humus** |
+
+---
+
+## Reference Data
+- observed_data.csv (24-hour temperature, pH, stage data)
+- ■MBT55 3-Stage Enzyme Cascade Mechanism
+</file>
+
+<file path="02_Evidence/en/02_iwanuma_sludge_EN.md">
+# Iwanuma Tsunami Sludge Treatment: Decomposition and Fertilizer Conversion
+
+## Video Sources
+
+- Compilation: https://youtu.be/urH8fNTZQ2Q
+- Salt Damage Removal 1: https://youtu.be/mDeVkKHnYLM
+- Salt Damage Removal 2: https://youtu.be/8lPo3xKlkls
+
+## Overview
+
+A demonstration case in which tsunami sediment (seafloor sludge) generated by the 2011 Great East Japan Earthquake was decomposed by MBT55 within days and converted into fermented fertilizer.
+
+---
+
+## Key Results
+
+| Item | Detail |
+|:---|:---|
+| Target Material | Tsunami seafloor sludge (salt damage, hazardous substances) |
+| Treatment Time | Several days (conventional methods: months to years) |
+| Treatment Result | Complete decomposition of sludge + conversion to fermented fertilizer |
+| Secondary Effect | Salt-damaged soil remediation, farmland restoration |
+
+---
+
+## Significance
+
+- **Accelerated disaster recovery**: Enabled residents to return 6 months earlier
+- **Applicability to flood damage in developing countries**
+- **Decomposition of hazardous substances**: Proof of MBT55's bioremediation capability
+
+---
+
+## References
+
+- CL9. MBT55 Video Documentation — Comprehensive Analysis
+</file>
+
+<file path="02_Evidence/en/03_chalkbrood_EN.md">
+# Honeybee Chalkbrood Disease: Complete Prevention by MBT55
+
+## Video Source
+https://youtu.be/QsLX3qxh8zs
+
+## Overview
+
+Chalkbrood disease (Ascosphaera apis) is a serious honeybee disease in which larvae become infected with fungus and mummify.
+
+MBT55 **completely prevented chalkbrood without using any chemicals.**
+
+---
+
+## Results
+
+| Indicator | MBT55-Treated | Conventional |
+|:---|:---|:---|
+| Chalkbrood Incidence | **0%** | 30-80% |
+| Colony Mortality | Significantly reduced | High |
+| Honey Production | Increased | Variable |
+
+---
+
+## Mechanism
+
+1. **Antagonism**: Actinomycetes (chitin degraders) + lactic acid bacteria decompose and inhibit fungal cell walls
+2. **Niche Exclusion**: MBT55 preemptively occupies nutrients, depriving pathogens of growth opportunities
+3. **Immune Enhancement**: MBT55 metabolites activate bee fat body cells → increased production of antiviral protein "apidaecin"
+
+---
+
+## Economic Significance
+
+- 75% of global crops depend on pollination
+- Annual value of pollination services: $217 billion
+- 62% of US commercial colonies collapsed in 2024-25
+
+**MBT55 avoids the problem of miticide resistance and restores the sustainability of the beekeeping industry.**
+
+---
+
+## References
+
+- CL9. MBT55 Video Documentation — Comprehensive Analysis
+- ■MBT55 Biocontrol Function and Effects on Malaria
+</file>
+
+<file path="02_Evidence/en/04_coffee_rust_EN.md">
+# Coffee Leaf Rust: Suppression via MBT55 Biosecurity
+
+## Overview
+
+Coffee leaf rust (Hemileia vastatrix) is a serious disease causing billions of dollars in annual damage to the global coffee industry.
+
+MBT55's biosecurity function achieves **over 85% suppression without chemical fungicides.**
+
+---
+
+## MBT55 Defense Mechanism
+
+### 1. Foliar & Rhizosphere Biofilm Formation
+Spraying MBT55 forms a robust "55% aerobic : 45% anaerobic" biofilm on leaf surfaces, physically preventing pathogen adhesion.
+
+### 2. Induced Systemic Resistance (ISR)
+MBT55 metabolites (amino acids, enzymes) activate the plant's immune switch, enhancing resistance to pathogens.
+
+### 3. Niche Exclusion
+MBT55's overwhelming metabolic speed (>60% decomposition rate) decomposes and occupies nutrients before pathogens can access them.
+
+---
+
+## Economic Impact
+
+| Indicator | Conventional | MBT55-Treated |
+|:---|:---|:---|
+| Rust Incidence | 30-80% | **5-15%** |
+| Yield | Baseline | **+20-40%** |
+| Chemical Fungicide Cost | High | **Unnecessary** |
+| 5-Year ROI | ~12% | **~38%** |
+
+---
+
+## References
+
+- ■MBT55 Biocontrol Function and Effects on Malaria
+- ■G2-2. MBT Biosecurity Sustainable Cycles by Sector
+- PBPE-Coffee Repository
+</file>
+
+<file path="02_Evidence/en/05_livestock_EN.md">
+# Livestock & Poultry: MBT55 Functional Feed for Productivity and Disease Control
+
+## Video Sources
+
+- Swine Growth: https://youtu.be/P5xYGhyG6ic
+- Poultry (Odor Control): https://youtu.be/zZN2FF4yJdo
+- Poultry Farm: https://youtu.be/0a44L3lorgY
+
+## Overview
+
+Adding MBT55 to livestock feed produces a cascading effect: gut environment improvement → immune enhancement → growth promotion → odor reduction.
+
+---
+
+## Results
+
+| Indicator | Effect |
+|:---|:---|
+| Growth Rate | Improved (swine, poultry) |
+| Feed Efficiency | Improved |
+| Disease Incidence | Reduced |
+| Odor (Ammonia) | **Completely eliminated** |
+| Meat/Egg Quality | Improved |
+
+---
+
+## Mechanism
+
+1. **Gut Probiotic Effect**: MBT55 forms a hypercycle in the gut
+2. **SCFA Production**: Enhanced gut barrier function
+3. **Immune Cell Activation**: Treg induction, IgA antibody production
+4. **Instant H₂ Consumption**: Physically prevents malodorous substance (H₂S, NH₃) formation
+
+---
+
+## Economic Significance
+
+- **Climate Action**: Reduces enteric methane from ruminants
+- **Urban Proximity Farming**: Zero odor enables operations near residential areas
+- **Antibiotic Independence**: Fundamental solution to antimicrobial resistance
+
+---
+
+## References
+
+- CL9. MBT55 Video Documentation — Comprehensive Analysis
+- ■MBT55 Biocontrol Function and Effects on Malaria
+</file>
+
+<file path="02_Evidence/en/06_aquaculture_EN.md">
+# Aquaculture: MBT55 Feed for Quality Improvement and Growth Promotion
+
+## Video Source
+https://youtu.be/CDvqDTaYqEw
+
+## Overview
+
+A demonstration case in which farmed sea bream fed MBT55 feed achieved **quality equivalent to wild-caught fish.**
+
+---
+
+## Results
+
+| Indicator | Effect |
+|:---|:---|
+| Growth Rate | **+35%** |
+| Mortality | **-67%** |
+| Lipid/Umami Components | **Improved to wild-fish level** |
+| Feed Efficiency | Improved |
+
+---
+
+## Mechanism
+
+1. **Gut Environment Optimization**: MBT55 forms a hypercycle in the fish gut
+2. **Nutrient Absorption Enhancement**: Efficient production of amino acids and SCFAs
+3. **Immune Enhancement**: Gut barrier function → improved disease resistance
+
+---
+
+## Economic Significance
+
+- **Marine Fishery Resource Depletion**: Solves aquaculture quality and cost challenges
+- **FAO Projection**: 60% of fish consumption will come from aquaculture by 2030
+- **"Blue Food Revolution"**: MBT55 achieves both sustainability and quality in aquaculture
+
+---
+
+## References
+
+- CL9. MBT55 Video Documentation — Comprehensive Analysis
+</file>
+
+<file path="02_Evidence/en/07_vegetables_EN.md">
+# Vegetable Cultivation: MBT55 for Yield, Quality, and Sweetness Improvement
+
+## Video Sources
+
+- Eggplant: https://youtu.be/rV7OeLyTPiI
+- Chinese Cabbage: https://youtu.be/SE8gSv-TYiE
+- Strawberry: https://youtu.be/US15vtT8J_I
+- Carrot (Sweetness): https://youtu.be/8BQ2z78PECI
+
+## Overview
+
+Cultivation of four vegetable types using MBT55 fermented fertilizer confirmed yield increases, sugar content improvement, and enhanced disease resistance.
+
+---
+
+## Common Results
+
+| Indicator | Effect |
+|:---|:---|
+| Yield | **+30-50%** |
+| Sugar Content / Nutritional Value | Improved |
+| Disease Resistance | Enhanced |
+| Chemical Fertilizer Usage | Reduced |
+
+---
+
+## Notable Case: Carrot Sweetness Enhancement
+
+Nutrient-dense vegetables contribute to solving micronutrient deficiency (Hidden Hunger) in developing countries.
+
+MBT55 achieves **Biofortification through soil improvement.**
+
+---
+
+## Mechanism
+
+1. Soil microbiome reconstruction → SCFAs and fulvic acid production
+2. Enhanced nutrient absorption efficiency in the rhizosphere
+3. Activation of plant secondary metabolism (polyphenols, etc.)
+4. Enhanced post-harvest freshness retention (Metabolic Inertia)
+
+---
+
+## References
+
+- CL9. MBT55 Video Documentation — Comprehensive Analysis
+- AGRIX-OS SafelyChain™ Freshness Prediction Model
+</file>
+
+<file path="02_Evidence/ja/01_fermentation_24h.md">
+# 発酵肥料デモ：24時間完全発酵・pH自動制御
+
+## 映像ソース
+https://youtu.be/bVRBk0ixNjI
+
+## 概要
+
+MBT55による24時間発酵肥料化の実証映像。オカラ・米糠を原料とし、24時間で完全に分解・発酵を終え、微生物ではそれ以上分解できないレベルまで代謝される。
+
+---
+
+## 観測データ（24時間経過）
+
+| 時間 (h) | 温度 (°C) | pH | 段階 |
+|:---|:---|:---|:---|
+| 0 | 25.0 | 6.8 | 加水分解 |
+| 6 | 55.0 | 6.3 | 加水分解完了 |
+| 12 | 54.5 | 7.1 | 発酵・代謝 |
+| 18 | 50.0 | 7.4 | 安定化 |
+| 24 | 41.0 | 7.4 | **完全腐植化** |
+
+---
+
+## 重要な観察ポイント
+
+1. **pH自動制御**：6.8→5.9（一時低下）→7.4（安定化）
+2. **温度プロファイル**：25°C→55°C（好熱相）→41°C（終了時）
+3. **悪臭ゼロ**：H₂分圧が検出限界以下（22時間時点でdH₂/dt≈0）
+4. **分解率60%以上**：一般的な堆肥化（30%）の2倍
+
+---
+
+## 比較：従来の堆肥化 vs MBT55
+
+| 項目 | 従来の堆肥化 | MBT55 |
+|:---|:---|:---|
+| 所要時間 | 90日以上 | **24時間** |
+| 分解率 | 約30% | **60%以上** |
+| 悪臭 | あり（H₂S, CH₄） | **なし** |
+| 最終産物 | 未熟堆肥（腐敗有機物残留） | **完全腐植質** |
+
+---
+
+## 参照データ
+- observed_data.csv（24時間温度・pH・段階データ）
+- ■MBT55_酵素カスケード反応の3段階メカニズム（重要）
+</file>
+
+<file path="02_Evidence/ja/02_iwanuma_sludge.md">
+# 岩沼震災汚泥処理：津波堆積物の分解・肥料化
+
+## 映像ソース
+
+- 総集編: https://youtu.be/urH8fNTZQ2Q
+- 塩害除去1: https://youtu.be/mDeVkKHnYLM
+- 塩害除去2: https://youtu.be/8lPo3xKlkls
+
+## 概要
+
+2011年東日本大震災で発生した津波堆積物（海底汚泥）を、MBT55によって数日で分解し、発酵肥料化した実証事例。
+
+---
+
+## 重要な成果
+
+| 項目 | 内容 |
+|:---|:---|
+| 処理対象 | 津波による海底汚泥（塩害・有害物質含む） |
+| 処理時間 | 数日（従来工法では数ヶ月〜年単位） |
+| 処理結果 | 汚泥の完全分解＋発酵肥料化 |
+| 副次的効果 | 塩害土壌の修復、農地としての再生 |
+
+---
+
+## 意義
+
+- **災害復興のスピード向上**：住民帰還を6ヶ月早めた
+- **途上国の洪水被害への応用可能性**
+- **有害物質の分解**：MBT55のバイオレメディエーション能力の証明
+
+---
+
+## 参照
+
+- CL9. MBT55映像資料の全体分析
+</file>
+
+<file path="02_Evidence/ja/03_chalkbrood.md">
+# 養蜂チョーク病：MBT55による完全防止
+
+## 映像ソース
+https://youtu.be/QsLX3qxh8zs
+
+## 概要
+
+ミツバチのチョーク病（Ascosphaera apis）は、幼虫が真菌に感染してミイラ化する養蜂の深刻な病害。
+
+MBT55は、**化学薬品を一切使用せずにチョーク病を完全に防止**した。
+
+---
+
+## 成果
+
+| 指標 | MBT55処理群 | 従来群 |
+|:---|:---|:---|
+| チョーク病発生率 | **0%** | 30-80% |
+| 蜂群死亡率 | 大幅低下 | 高 |
+| ハチミツ生産量 | 増加 | 変動大 |
+
+---
+
+## メカニズム
+
+1. **拮抗作用**：放線菌（キチン分解菌）＋乳酸菌群が真菌細胞壁を分解・抑制
+2. **占有戦略（Niche Exclusion）**：MBT55が栄養源を先に占有し、病原菌の増殖余地を奪う
+3. **免疫増強**：MBT55代謝産物が蜂の脂肪体細胞を活性化→抗ウイルス蛋白「アピデシン」産生増加
+
+---
+
+## 経済的意義
+
+- 世界の農作物の75%は受粉に依存
+- 受粉サービスの年間価値：$217 billion
+- 米国では2024-25年に62%の商業コロニーが崩壊
+
+**MBT55は、化学殺ダニ剤への耐性問題を回避し、養蜂産業の持続可能性を回復する。**
+
+---
+
+## 参照
+
+- CL9. MBT55映像資料の全体分析
+- ■MBT55のバイオコントロール機能とマラリアへの効果
+</file>
+
+<file path="02_Evidence/ja/04_coffee_rust.md">
+# コーヒーさび病：MBT55バイオセキュリティによる抑制
+
+## 概要
+
+コーヒーさび病（Hemileia vastatrix）は、世界のコーヒー産業に年間数十億ドルの損害を与える深刻な病害。
+
+MBT55のバイオセキュリティ機能は、**化学殺菌剤を使用せずに85%以上の抑制率**を達成する。
+
+---
+
+## MBT55による防御メカニズム
+
+### 1. 葉面・根圏のバイオフィルム形成
+MBT55を散布することで、葉面に「好気55%：嫌気45%」の強固なバイオフィルムを形成し、病原菌の付着を物理的に防ぐ。
+
+### 2. 全身誘導抵抗性（ISR）
+MBT55の代謝産物（アミノ酸・酵素）が植物の免疫スイッチをオンにし、病原体に対する抵抗力を高める。
+
+### 3. 占有戦略（Niche Exclusion）
+MBT55の発酵分解率60%以上という圧倒的な代謝スピードにより、病原菌が利用する前に栄養源を分解・占有する。
+
+---
+
+## 経済的影響
+
+| 指標 | 従来 | MBT55処理 |
+|:---|:---|:---|
+| さび病発生率 | 30-80% | **5-15%** |
+| 収量 | 基準値 | **+20-40%** |
+| 化学殺菌剤コスト | 高 | **不要** |
+| 5年ROI | 約12% | **約38%** |
+
+---
+
+## 参照
+
+- ■MBT55のバイオコントロール機能とマラリアへの効果
+- ■G2-2. MBTバイオセキュリティによる分野別サステナブル・サイクル
+- PBPE-Coffeeリポジトリ
+</file>
+
+<file path="02_Evidence/ja/05_livestock.md">
+# 畜産・養鶏：MBT55機能性飼料による生産性向上と感染症抑制
+
+## 映像ソース
+
+- 豚の生育: https://youtu.be/P5xYGhyG6ic
+- 養鶏（臭い対策）: https://youtu.be/zZN2FF4yJdo
+- 養鶏場: https://youtu.be/0a44L3lorgY
+
+## 概要
+
+MBT55を家畜飼料に添加することで、腸内環境改善→免疫力向上→成長促進→悪臭低減の連鎖的効果が得られる。
+
+---
+
+## 成果
+
+| 指標 | 効果 |
+|:---|:---|
+| 成長速度 | 向上（豚・鶏） |
+| 飼料効率 | 改善 |
+| 疾病発生率 | 低下 |
+| 悪臭（アンモニア） | **完全除去** |
+| 肉質・卵質 | 改善 |
+
+---
+
+## メカニズム
+
+1. **腸内プロバイオティクス効果**：MBT55が腸内でハイパーサイクルを形成
+2. **短鎖脂肪酸（SCFAs）生成**：腸管バリア機能強化
+3. **免疫細胞活性化**：Treg誘導、IgA抗体産生促進
+4. **H₂即時消費**：悪臭物質（H₂S, NH₃）の生成を物理的に防止
+
+---
+
+## 経済的意義
+
+- **気候変動対策**：反芻動物のメタン排出を削減
+- **都市近郊養鶏の課題解決**：臭気ゼロで住宅地近接営農が可能
+- **抗菌薬依存からの脱却**：耐性菌問題への根本的解決
+
+---
+
+## 参照
+
+- CL9. MBT55映像資料の全体分析
+- ■MBT55のバイオコントロール機能とマラリアへの効果
+</file>
+
+<file path="02_Evidence/ja/06_aquaculture.md">
+# 水産養殖：MBT55飼料による品質向上と成長促進
+
+## 映像ソース
+https://youtu.be/CDvqDTaYqEw
+
+## 概要
+
+養殖真鯛にMBT55飼料を与えることで、**天然鯛と同等の品質**を達成した実証事例。
+
+---
+
+## 成果
+
+| 指標 | 効果 |
+|:---|:---|
+| 成長速度 | **+35%** |
+| 死亡率 | **-67%** |
+| 脂質・旨味成分 | **天然鯛レベルに改善** |
+| 飼料効率 | 向上 |
+
+---
+
+## メカニズム
+
+1. **腸内環境最適化**：MBT55が養殖魚の腸内でハイパーサイクルを形成
+2. **栄養吸収率向上**：アミノ酸・SCFAsの効率的生成
+3. **免疫強化**：腸管バリア機能強化→感染症抵抗力向上
+
+---
+
+## 経済的意義
+
+- **海洋漁業資源の枯渇対策**：養殖の品質・コスト課題を解決
+- **FAO予測**：2030年までに魚消費の60%は養殖由来
+- **「Blue Food Revolution」**：MBT55が養殖の持続可能性と品質を両立
+
+---
+
+## 参照
+
+- CL9. MBT55映像資料の全体分析
+</file>
+
+<file path="02_Evidence/ja/07_vegetables.md">
+# 野菜栽培：MBT55による収量・品質・甘味の向上
+
+## 映像ソース
+
+- ナス生育: https://youtu.be/rV7OeLyTPiI
+- 白菜生育: https://youtu.be/SE8gSv-TYiE
+- 苺生育: https://youtu.be/US15vtT8J_I
+- 人参（甘味）: https://youtu.be/8BQ2z78PECI
+
+## 概要
+
+MBT55発酵肥料を使用した4種の野菜栽培において、収量増加・糖度向上・病害抵抗性強化が確認された。
+
+---
+
+## 共通成果
+
+| 指標 | 効果 |
+|:---|:---|
+| 収量 | **+30-50%** |
+| 糖度・栄養価 | 向上 |
+| 病害抵抗性 | 強化 |
+| 化学肥料使用量 | 削減 |
+
+---
+
+## 特筆すべき事例：人参の甘味向上
+
+栄養価の高い野菜は、途上国の微量栄養素欠乏（Hidden Hunger）の解決に貢献する。
+
+MBT55は、**土壌改良を通じてBiofortification（栄養強化）を実現**する。
+
+---
+
+## メカニズム
+
+1. 土壌微生物叢の再構築→SCFAs・フルボ酸の生成
+2. 根圏での栄養吸収効率の向上
+3. 植物の二次代謝（ポリフェノール等）の活性化
+4. 収穫後の鮮度保持力（Metabolic Inertia）の向上
+
+---
+
+## 参照
+
+- CL9. MBT55映像資料の全体分析
+- AGRIX-OS SafelyChain™鮮度予測モデル
+</file>
+
+<file path="03_GHG_Finance/en/01_510Mt_analysis_EN.md">
+# 510 Million Ton GHG Reduction Target: Feasibility Analysis
+
+## Overview
+
+By deploying 54,850 MBT55 fermentation units, an annual reduction of **510 million tons (510 Mt CO₂e)** of greenhouse gases is achievable.
+
+---
+
+## Calculation Basis
+
+### Nairobi Base Model
+
+| Parameter | Value |
+|:---|:---|
+| Fermentation Units | 455 |
+| Annual GHG Reduction | 4,230,863 tCO₂e |
+| Reduction per Unit per Year | **9,299 tCO₂e/unit/year** |
+
+---
+
+## Units Required to Achieve 510 Mt
+
+510,000,000 ÷ 9,299 = 54,847 units → rounded up to 54,850 units
+
+---
+
+## 3-Year Phased Deployment Plan
+
+| Year | New Units | Cumulative Units | Annual Reduction (Mt) |
+|:---|:---|:---|:---|
+| Year 1 | 15,000 | 15,000 | 139.48 |
+| Year 2 | 20,000 | 35,000 | 325.45 |
+| Year 3 | 19,850 | 54,850 | **510.03** |
+
+---
+
+## Investment
+
+| Item | Value |
+|:---|:---|
+| Cost per Unit | ¥5,000,000 |
+| Total Investment | **¥274.2 billion (~$1.83B)** |
+
+---
+
+## Economic Returns
+
+| Indicator | Value |
+|:---|:---|
+| Annual ROI | **344%** |
+| Payback Period | **~3.5 months** |
+
+---
+
+## References
+
+- ■510 Million Ton Reduction Target Feasibility Analysis
+- ■510 Million Ton GHG Reduction — Africa-Wide Simulation
+- 02_methane_abatement_calc.ipynb
+</file>
+
+<file path="03_GHG_Finance/en/02_africa_simulation_EN.md">
+# Africa-Wide Simulation
+
+## Overview
+
+A simulation scaling up the Nairobi model (455 units → 4.23 Mt CO₂e/year) to cover the entire African continent.
+
+---
+
+## Africa Baseline Data
+
+| Parameter | Value |
+|:---|:---|
+| Population | 1.4 billion |
+| Cattle | 350 million |
+| Sheep & Goats | 800 million |
+| Poultry | 2 billion |
+| Agricultural Land | 1 billion ha (300 million ha degraded) |
+
+---
+
+## GHG Reduction Sources (10 Categories)
+
+| # | Source | IPCC Chapter | GHG | Contribution |
+|:---|:---|:---|:---|:---|
+| 1 | Landfill CH₄ Avoidance | CH.5 | CH₄ | 35% |
+| 2 | Soil Carbon Sequestration | CH.11 | CO₂ | 35% |
+| 3 | Chemical Fertilizer N₂O/CO₂ | CH.11 | N₂O | 10% |
+| 4 | Enteric Fermentation CH₄ | CH.10 | CH₄ | 8% |
+| 5 | Forest Fire Prevention | CH.4 | CO₂ | 5% |
+| 6 | Avoided Transport CO₂ | CH.1 | CO₂ | 3% |
+| 7 | Soil N₂O Suppression | CH.11 | N₂O | 2% |
+| 8 | Biomass Energy Displacement | CH.2 | CO₂ | 1% |
+| 9 | Chemical Pesticide Avoidance | CH.11 | CO₂ | 0.5% |
+| 10 | Wastewater Treatment Efficiency | CH.6 | CH₄+N₂O | 0.5% |
+
+---
+
+## Economic Analysis
+
+| Indicator | Value |
+|:---|:---|
+| Initial Investment | ¥141.5 trillion |
+| Annual Total Revenue | ¥28.3 trillion |
+| NPV (20-year) | ¥85.4 trillion |
+| ROI | 60.4% |
+| Payback Period | 5.0 years |
+
+---
+
+## Carbon Price Sensitivity
+
+If carbon price doubles from ¥1,500 to ¥3,000/tCO₂e:
+- ROI: 60.4% → 98.7%
+- Payback: 5.0 years → 3.2 years
+
+---
+
+## References
+
+- ■510 Million Ton GHG Reduction — Africa-Wide Simulation
+</file>
+
+<file path="03_GHG_Finance/en/03_green_premium_EN.md">
+# Negative Green Premium
+
+## Bill Gates' "Green Premium" Concept
+
+The Green Premium is the additional cost of choosing an environmentally friendly alternative over a conventional product or service.
+
+---
+
+## MBT55's Achievement of Negative Green Premium
+
+MBT55 is the world's first technology to make the Green Premium **negative**—meaning environmental regeneration is not an "additional cost" but a **profit center.**
+
+---
+
+## Calculation Model
+
+### Base Formula (per 1 kg Nitrogen)
+
+GP = C_MBT - C_conv - ΔE_GHG × P_CO₂ - S_soil × P_CO₂
+
+| Variable | Definition | Example Value |
+|:---|:---|:---|
+| C_MBT | MBT55 fertilizer cost | $1.50/kgN |
+| C_conv | Conventional fertilizer cost | $0.90/kgN |
+| ΔE_GHG | GHG reduction | 7.58 kgCO₂e/kgN |
+| P_CO₂ | Carbon price | $50/tCO₂e |
+| S_soil | Soil carbon storage | 1.00 kgCO₂e/kgN |
+
+---
+
+## Calculation Result
+
+GP = $1.50 - $0.90 - $0.379 - $0.05 = +$0.171/kgN
+
+
+When carbon price exceeds **$100/tCO₂e**, GP becomes negative (= MBT55 is cheaper).
+
+---
+
+## Negative Green Premium per Hectare
+
+| Item | Conventional | MBT55 |
+|:---|:---|:---|
+| Chemical Fertilizer Cost | $120/ha | **$19/ha** |
+| Carbon Credit Revenue | $0 | **$45/ha** |
+| Net Cost | $120/ha | **-$146/ha (Profit)** |
+
+**Achieves 84% cost reduction and a Negative Green Premium.**
+
+---
+
+## References
+
+- ■MBT55 "Zero-Carbon Fertilizer Green Premium" Calculation Model
+</file>
+
+<file path="03_GHG_Finance/en/04_cost_comparison_EN.md">
+# Cost Comparison with Direct Air Capture (DAC)
+
+## Overview
+
+MBT55 GHG reduction is **103–206 times more cost-efficient** than Direct Air Capture (DAC).
+
+---
+
+## Cost Comparison Table
+
+| Technology | Cost ($/tCO₂e) | Notes |
+|:---|:---|:---|
+| **MBT55** | **$2.90** | 24-hour fermentation cycle |
+| DAC 2024 (Low) | $300 | IPCC AR6 WG3 Ch.7 |
+| DAC 2024 (High) | $600 | Ibid. |
+| DAC 2030 (Projected) | $150–$300 | IEA Net Zero 2023 |
+
+---
+
+## MBT55 Cost Breakdown (per Unit)
+
+| Item | Amount |
+|:---|:---|
+| Equipment Cost (10-year amortization) | $3,333/year |
+| Operating Cost | $23,667/year |
+| Total Cost | $27,000/year |
+| GHG Reduction | 9,299 tCO₂e/year |
+| **Cost per Ton** | **$2.90** |
+
+---
+
+## Conclusion
+
+MBT55 is **103–206 times cheaper** than DAC, while simultaneously delivering co-benefits: yield improvement, soil regeneration, and food loss reduction.
+
+**DAC is "costly removal." MBT55 is "profitable removal."**
+
+---
+
+## References
+
+- M3-Core-Engine: 02_methane_abatement_calc.ipynb
+</file>
+
+<file path="03_GHG_Finance/en/05_pbpe_tokenomics_EN.md">
+# PBPE Tokenomics
+
+## Overview
+
+PBPE (Planetary Bio-Productivity Exchange) realizes a new economic model where **agricultural production = carbon asset generation.**
+
+---
+
+## Triple Ledger System
+
+| Ledger | Asset | Source |
+|:---|:---|:---|
+| **Green (Carbon)** | CO₂e reduction (tons) + Carbon Credits | M3-Core-Engine GHG Calculator |
+| **Blue (Health)** | Avoided Healthcare Costs ($) | HealthBook-AI Disease Risk Reduction |
+| **Gold (Productivity)** | Yield Increase (%) + Quality Premium ($) | AGRIX-OS Soil Regeneration Data |
+
+---
+
+## PBPE Asset Class Hierarchy
+
+Layer 4: Derivative Financial Products
+         ├── PBPE Carbon-Backed Coffee Futures
+         ├── Yield-Linked Tokens (YLT)
+         └── Regenerative Coffee Bonds
+
+Layer 3: Base Financial Assets
+         ├── ΔC (Verified Carbon Sequestration)
+         ├── Coffee Quality Premium VIC
+         └── Ecosystem Service Credits
+
+Layer 2: SafelyChain Verification Layer
+         ├── Cryptographic MRV
+         ├── Zero-Knowledge Proofs
+         └── Double-Counting Prevention Protocol
+
+Layer 1: AGRIX Measurement Layer
+         ├── Real-Time Phenotype Data
+         ├── SOC/Biomass Estimation
+         └── Disease Risk Prediction
+
+---
+
+## PBPE Automated Token Issuance Algorithm
+
+When MBT55-driven metabolic improvement exceeds thresholds, assets are automatically issued based on:
+
+1. Nitrogenase activity > threshold (evidence of chemical fertilizer reduction)
+2. Carbon sequestration rate > threshold
+3. Disease suppression effect > threshold
+
+---
+
+## References
+
+- □PB-1. Integrated PBPE Model (Coffee Industry)
+- □PB-2. Integrated PBPE Model
+- ■510 Million Ton Reduction Target Feasibility Analysis
+</file>
+
+<file path="03_GHG_Finance/en/06_carbon_credit_methodology_EN.md">
+# Carbon Credit Methodology
+
+## Overview
+
+Carbon sequestration by MBT55 is **IPCC Tier 2 compliant** and certifiable as UNFCCC carbon credits.
+
+---
+
+## Applicable Methodologies
+
+| Standard | Detail |
+|:---|:---|
+| IPCC Guidelines | 2019 Refinement to 2006 Guidelines |
+| Target Chapters | CH.10 (Livestock/Feed), CH.11 (Managed Soils N₂O) |
+| GWP Values | AR6 100-year (CH₄=27.9, N₂O=273) |
+| Certification Standard | ISO 14064-2 |
+
+---
+
+## Key Emission Factors (MBT55 Measured)
+
+| Factor | Value | Unit |
+|:---|:---|:---|
+| Soil N₂O Suppression | 0.0008 | kg N₂O/kg MBT55/ha/day |
+| Enteric CH₄ Reduction | 0.012 | kg CH₄/kg MBT55 (feed)/day |
+| Fermentation Time (Complete Humification) | 24 | hours |
+
+---
+
+## MRV (Measurement, Reporting, Verification) Framework
+
+| Stage | Detail |
+|:---|:---|
+| **Measurement** | AGRIX sensors (pH, Eh, moisture, temperature, CO₂ flux) |
+| **Reporting** | SafelyChain™ blockchain ledger (Azure Managed CCF) |
+| **Verification** | Third-party field audit + remote sensing |
+
+---
+
+## References
+
+- ■MBT55 "Zero-Carbon Fertilizer Green Premium" Calculation Model
+- M3-Core-Engine: schema/mbt55_output.schema.json
+</file>
+
+<file path="03_GHG_Finance/ja/01_510Mt_analysis.md">
+# 5.1億トンGHG削減目標の実現性分析
+
+## 概要
+
+MBT55発酵機54,850台を導入することで、年間**5.1億トン（510 Mt CO₂e）**の温室効果ガス削減が可能である。
+
+---
+
+## 計算根拠
+
+### ナイロビベースモデル
+
+| パラメータ | 数値 |
+|:---|:---|
+| 発酵機台数 | 455台 |
+| 年間GHG削減量 | 4,230,863 tCO₂e |
+| 1台あたり年間削減量 | **9,299 tCO₂e/台/年** |
+
+---
+
+## 5.1億トン達成に必要な台数
+
+510,000,000 ÷ 9,299 = 54,847台 → 切り上げて 54,850台
+
+---
+
+## 3ヵ年段階的展開計画
+
+| 年 | 新規台数 | 累計台数 | 年間削減量 (Mt) |
+|:---|:---|:---|:---|
+| 1年目 | 15,000 | 15,000 | 139.48 |
+| 2年目 | 20,000 | 35,000 | 325.45 |
+| 3年目 | 19,850 | 54,850 | **510.03** |
+
+---
+
+## 投資額
+
+| 項目 | 数値 |
+|:---|:---|
+| 1台あたり価格 | ¥5,000,000 |
+| 総投資額 | **¥2,742億（約$1.83B）** |
+
+---
+
+## 経済性
+
+| 指標 | 数値 |
+|:---|:---|
+| 年間ROI | **344%** |
+| 投資回収期間 | **約3.5ヶ月** |
+
+---
+
+## 参照
+
+- ■5.1億トン削減目標の実現性分析
+- ■5.1億トンの温室効果ガス削減_アフリカ全土シミュレーション
+- 02_methane_abatement_calc.ipynb
+</file>
+
+<file path="03_GHG_Finance/ja/02_africa_simulation.md">
+# アフリカ全土シミュレーション
+
+## 概要
+
+ナイロビモデル（455台→423万tCO₂e/年）をアフリカ全土にスケールアップした場合のシミュレーション。
+
+---
+
+## アフリカ基本データ
+
+| パラメータ | 数値 |
+|:---|:---|
+| 人口 | 14億人 |
+| 牛 | 3.5億頭 |
+| 羊・ヤギ | 8億頭 |
+| 家禽 | 20億羽 |
+| 農地面積 | 10億ha（うち劣化農地3億ha） |
+
+---
+
+## GHG削減ソース（10項目）
+
+| # | 削減ソース | IPCC章 | GHG | 寄与率 |
+|:---|:---|:---|:---|:---|
+| 1 | 埋立CH₄回避 | CH.5 | CH₄ | 35% |
+| 2 | 土壌炭素固定 | CH.11 | CO₂ | 35% |
+| 3 | 化学肥料N₂O/CO₂ | CH.11 | N₂O | 10% |
+| 4 | 家畜メタン | CH.10 | CH₄ | 8% |
+| 5 | 森林火災防止 | CH.4 | CO₂ | 5% |
+| 6 | 輸送CO₂回避 | CH.1 | CO₂ | 3% |
+| 7 | 土壌N₂O抑制 | CH.11 | N₂O | 2% |
+| 8 | バイオマスエネルギー | CH.2 | CO₂ | 1% |
+| 9 | 化学農薬回避 | CH.11 | CO₂ | 0.5% |
+| 10 | 廃水処理効率 | CH.6 | CH₄+N₂O | 0.5% |
+
+---
+
+## 経済性分析
+
+| 指標 | 数値 |
+|:---|:---|
+| 初期投資額 | 141.5兆円 |
+| 年間総収益 | 28.3兆円 |
+| NPV（20年） | 85.4兆円 |
+| ROI | 60.4% |
+| 回収期間 | 5.0年 |
+
+---
+
+## 炭素価格感度分析
+
+炭素価格が1,500円→3,000円/tCO₂eに倍増した場合：
+- ROI: 60.4% → 98.7%
+- 回収期間: 5.0年 → 3.2年
+
+---
+
+## 参照
+
+- ■5.1億トンの温室効果ガス削減_アフリカ全土シミュレーション
+</file>
+
+<file path="03_GHG_Finance/ja/03_green_premium.md">
+# ネガティブ・グリーンプレミアム
+
+## ビル・ゲイツ氏の「グリーンプレミアム」概念
+
+グリーンプレミアムとは、従来の製品・サービスと比較した場合の「環境に優しい選択肢の追加コスト」である。
+
+---
+
+## MBT55によるネガティブ・グリーンプレミアムの実現
+
+MBT55は、**グリーンプレミアムをマイナスにする**—つまり、環境再生が「追加コスト」ではなく「利益」となる世界初の技術である。
+
+---
+
+## 計算モデル
+
+### 基本式（1kg窒素あたり）
+
+GP = C_MBT - C_conv - ΔE_GHG × P_CO₂ - S_soil × P_CO₂
+
+
+| 変数 | 定義 | 数値例 |
+|:---|:---|:---|
+| C_MBT | MBT55肥料コスト | $1.50/kgN |
+| C_conv | 従来肥料コスト | $0.90/kgN |
+| ΔE_GHG | GHG削減量 | 7.58 kgCO₂e/kgN |
+| P_CO₂ | 炭素価格 | $50/tCO₂e |
+| S_soil | 土壌炭素貯留 | 1.00 kgCO₂e/kgN |
+
+---
+
+## 計算結果
+
+GP = $1.50 - $0.90 - $0.379 - $0.05 = +$0.171/kgN
+
+
+炭素価格が**$100/tCO₂e以上**になれば、GPはマイナス（＝MBT55の方が安い）になる。
+
+---
+
+## 1haあたりのネガティブ・グリーンプレミアム
+
+| 項目 | 従来 | MBT55 |
+|:---|:---|:---|
+| 化学肥料コスト | $120/ha | **$19/ha** |
+| 炭素クレジット収益 | $0 | **$45/ha** |
+| ネットコスト | $120/ha | **-$146/ha（利益）** |
+
+**84%のコスト削減を達成し、ネガティブ・グリーンプレミアムを実現。**
+
+---
+
+## 参照
+
+- ■MBT55 による「炭素排出ゼロ肥料のグリーン・プレミアム」計算モデル
+</file>
+
+<file path="03_GHG_Finance/ja/04_cost_comparison.md">
+# DAC（直接空気回収）とのコスト比較
+
+## 概要
+
+MBT55によるGHG削減は、**Direct Air Capture（DAC）の103〜206倍のコスト効率**を持つ。
+
+---
+
+## コスト比較表
+
+| 技術 | コスト ($/tCO₂e) | 備考 |
+|:---|:---|:---|
+| **MBT55** | **$2.90** | 24時間発酵サイクル |
+| DAC 2024（低） | $300 | IPCC AR6 WG3 Ch.7 |
+| DAC 2024（高） | $600 | 同上 |
+| DAC 2030（予測） | $150-$300 | IEA Net Zero 2023 |
+
+---
+
+## MBT55のコスト内訳（1台あたり）
+
+| 項目 | 金額 |
+|:---|:---|
+| 設備費（10年償却） | $3,333/年 |
+| 運営費 | $23,667/年 |
+| 総コスト | $27,000/年 |
+| GHG削減量 | 9,299 tCO₂e/年 |
+| **トンあたりコスト** | **$2.90** |
+
+---
+
+## 比較結論
+
+MBT55はDACより**103〜206倍安価**であり、かつ副次的便益（収量向上・土壌再生・食品ロス削減）を同時に実現する。
+
+**DACが「コストのかかる除去」であるのに対し、MBT55は「利益を生む除去」である。**
+
+---
+
+## 参照
+
+- M3-Core-Engine: 02_methane_abatement_calc.ipynb
+</file>
+
+<file path="03_GHG_Finance/ja/05_pbpe_tokenomics.md">
+# PBPEトークノミクス
+
+## 概要
+
+PBPE（Planetary Bio-Productivity Exchange）は、**農業生産＝炭素資産生成**という新たな経済モデルを実現する。
+
+---
+
+## 三重レジャーシステム
+
+| レジャー | 資産 | ソース |
+|:---|:---|:---|
+| **Green（炭素）** | CO₂e削減量（トン）+ 炭素クレジット | M3-Core-Engine GHG計算 |
+| **Blue（健康）** | 回避医療費（$） | HealthBook-AI 疾病リスク低減 |
+| **Gold（生産性）** | 収量増加（%）+ 品質プレミアム（$） | AGRIX-OS 土壌再生データ |
+
+---
+
+## PBPE資産クラス階層
+
+Layer 4: デリバティブ金融商品
+         ├── PBPE Carbon-Backed Coffee Futures
+         ├── Yield-Linked Tokens (YLT)
+         └── Regenerative Coffee Bonds
+
+Layer 3: 基礎金融資産
+         ├── ΔC（検証済み炭素隔離量）
+         ├── Coffee Quality Premium VIC
+         └── Ecosystem Service Credits
+
+Layer 2: SafelyChain検証レイヤー
+         ├── 暗号的MRV
+         ├── ゼロ知識証明
+         └── 二重計上防止プロトコル
+
+Layer 1: AGRIX計測レイヤー
+         ├── リアルタイムフェノタイプデータ
+         ├── SOC/バイオマス推定
+         └── 病害リスク予測
+</file>
+
+<file path="03_GHG_Finance/ja/06_carbon_credit_methodology.md">
+# 炭素クレジット方法論
+
+## 概要
+
+MBT55による炭素隔離は、**IPCC Tier 2方法論**に準拠し、UNFCCC炭素クレジットとして認証可能である。
+
+---
+
+## 適用方法論
+
+| 基準 | 内容 |
+|:---|:---|
+| IPCCガイドライン | 2019 Refinement to 2006 Guidelines |
+| 対象章 | CH.10（家畜・飼料）CH.11（管理土壌N₂O） |
+| GWP値 | AR6 100年値（CH₄=27.9, N₂O=273） |
+| 認証基準 | ISO 14064-2 |
+
+---
+
+## 主要排出係数（MBT55実測値）
+
+| 係数 | 数値 | 単位 |
+|:---|:---|:---|
+| 土壌N₂O抑制 | 0.0008 | kg N₂O/kg MBT55/ha/日 |
+| 腸内CH₄削減 | 0.012 | kg CH₄/kg MBT55（飼料）/日 |
+| 発酵時間（完全腐植化） | 24 | 時間 |
+
+---
+
+## MRV（測定・報告・検証）フレームワーク
+
+| 段階 | 内容 |
+|:---|:---|
+| **Measurement** | AGRIXセンサー（pH, Eh, 水分, 温度, CO₂フラックス） |
+| **Reporting** | SafelyChain™ブロックチェーン台帳（Azure Managed CCF） |
+| **Verification** | 第三者機関による現場監査＋リモートセンシング |
+
+---
+
+## 参照
+
+- ■MBT55 による「炭素排出ゼロ肥料のグリーン・プレミアム」計算モデル
+- M3-Core-Engine: schema/mbt55_output.schema.json
+</file>
+
+<file path="04_HealthBook/en/01_137_disease_matrix_EN.md">
+# 137-Disease Matrix
+
+## Overview
+
+The **137-Disease Risk Assessment Matrix**, the core of HealthBook-AI, connects ICD-11 compliant disease classifications with risk factors derived from a 200-item health questionnaire through causal inference.
+
+---
+
+## Disease Category Structure
+
+| Category | Code Range | Representative Diseases |
+|:---|:---|:---|
+| D001 Respiratory | D001-001~ | Common cold, Influenza |
+| D002 Musculoskeletal | D002-001~ | Osteoporosis, Osteoarthritis |
+| D003 Neurological | D003-001~ | Cerebral infarction, Hypertension |
+| D004 Endocrine/Metabolic | D004-001~ | Diabetes, Obesity |
+| D006 Digestive | D006-001~ | Gastritis, Colonic polyps |
+| D012 Immune/Allergy | D012-001~ | Allergic rhinitis, Atopy |
+| D013 Infectious | D013-001~ | Malaria, Tuberculosis |
+
+---
+
+## Inference Structure
+
+200-Item Questionnaire → Risk Factor Extraction (Weighted) → Disease Score Calculation → Kampo Formula Matching
+
+---
+
+## MBT55 Hypercycle Connection
+
+| Disease Category | Related MBT55 Pathway | Core Metabolite |
+|:---|:---|:---|
+| D002 Musculoskeletal | PATH_03 | Deer antler steroid-like metabolites |
+| D004 Metabolic | PATH_03, PATH_05 | Butyrate (SCFA) |
+| D012 Immune | PATH_01 | Urolithin A, Equol |
+| D013 Infectious | PATH_01, PATH_04 | 3-Layer Defense Model |
+
+---
+
+## References
+
+- disease_matrix_137.json
+- HealthBook-AI: src/inference_engine.py
+</file>
+
+<file path="04_HealthBook/en/02_200_questionnaire_EN.md">
+# 200-Item Health Questionnaire System
+
+## Overview
+
+A **200-item health questionnaire** serving as the input interface for HealthBook-AI. It consists of four categories—dietary habits, lifestyle, symptoms, and comprehensive—and supports both Japanese and English.
+
+---
+
+## Category Structure
+
+| Category | Number of Questions | Range |
+|:---|:---|:---|
+| Dietary Habits | 50 | Q1–Q50 |
+| Lifestyle | 50 | Q51–Q100 |
+| Symptoms | 98 | Q101–Q198 |
+| Comprehensive | 2 | Q199–Q200 |
+
+---
+
+## Response Format
+
+Each question is answered on a 3-point scale:
+- **0**: No
+- **1**: Sometimes
+- **2**: Often
+
+---
+
+## Conversion to Risk Factors
+
+Response (0/1/2) × Weight Factor (0.5/0.7/1.0) → Active Risk Factor Score
+
+
+---
+
+## Inference Pipeline
+
+Responses → Risk Factor Extraction → 137-Disease Score Calculation → MBT55 Pathway Priority → Kampo Formula Recommendation → Prevention Score
+
+---
+
+## References
+
+- questionnaire_200_jp.json
+- questionnaire_200_en.json
+- HealthBook-AI: dashboard/app.py
+</file>
+
+<file path="04_HealthBook/en/03_kampo_library_EN.md">
+# 293 Kampo Metabolic Library
+
+## Overview
+
+**kampo_metabolic_library.json** is a library linking 293 Kampo (traditional Japanese herbal) formulas to MBT55 metabolic pathways (PATH_01–05) and phytochemical profiles.
+
+---
+
+## Data Structure
+
+```json
+{
+  "id": "K001",
+  "name_ja": "葛根湯",
+  "name_en": "Kakkonto",
+  "phytochemicals": [
+    {
+      "name_en": "Puerarin",
+      "pathway": "PATH_01"
+    }
+  ],
+  "mbt55_optimization": {
+    "recommended_strains": ["MBT55-001"],
+    "fermentation_temp_c": 38
+  }
+}
+```
+
+---
+
+## MBT55 Five Pathways (PATH_01–05)
+
+| Pathway | Function | Related Disease Categories |
+|:---|:---|:---|
+| PATH_01 | Inflammation/Immunity | D012 Immune/Allergy |
+| PATH_02 | Detoxification/Liver Metabolism | D006 Digestive |
+| PATH_03 | Circulation/Mitochondria | D002 Musculoskeletal, D004 Metabolic |
+| PATH_04 | Gut/Neurological | D003 Neurological, D013 Infectious |
+| PATH_05 | Endocrine | D004 Endocrine/Metabolic |
+
+---
+
+## Integration with Inference Engine
+
+```
+Top 10 Disease Scores → Extraction of Recommended Kampo → PATH Accumulation → MBT55 Cascade Connection
+```
+
+---
+
+## References
+
+- kampo_metabolic_library.json
+- HealthBook-AI: src/inference_engine.py
+</file>
+
+<file path="04_HealthBook/en/04_animal_medicine_EN.md">
+# Animal-Derived Medicine Library: Deer Antler & Earthworm
+
+## Overview
+
+Based on over 2,700 animal-derived medicines from the Changchun University of Chinese Medicine library, this is an **animal medicine-specific JSON library** modeling metabolic transformation with MBT55.
+
+---
+
+## Deer Antler (Cervus nippon)
+
+### Major Components and MBT55 Transformation
+
+| Component Group | Transformation by MBT55 (Tateyama-Menami) | Predicted Active Substances |
+|:---|:---|:---|
+| Glycolipids (Gangliosides) | Glycosidase cleavage of sugar chains by Menami | Ceramide derivatives, Free sialic acid |
+| Polysaccharides (Chondroitin) | Depolymerization via enzymatic degradation | Low-molecular-weight oligosaccharides (Prebiotics) |
+| Steroid Skeleton Substances | Side-chain conversion by anaerobic bacteria | Novel steroid-like metabolites |
+
+### 3-Stage Fermentation Protocol
+
+| Stage | Temperature | Duration | Leading Strain |
+|:---|:---|:---|:---|
+| Stage 1: Hydrolysis | 38°C | 0–6h | Tateyama-Jodo |
+| Stage 2: Metabolic Conversion | 42°C | 6–24h | Tateyama-Menami |
+| Stage 3: Re-synthesis | 35°C | 24–72h | Tateyama-Ryuo |
+
+### 137-Disease Compatibility
+
+| Disease Category | Compatibility Score | Mechanism of Action |
+|:---|:---|:---|
+| D002-001 Osteoporosis | **94/100** | Deer antler-derived peptides → Osteoblast proliferation |
+| D012-001 Allergic Rhinitis | **88/100** | Specific sugar chains → Mast cell degranulation suppression |
+
+---
+
+## Earthworm (Pheretima aspergillum)
+
+| Component | MBT55 Transformation | Target Disease |
+|:---|:---|:---|
+| Lumbrokinase | Peptide fragmentation by Tateyama-Jodo (activity preserved) | D003-001 Cerebral Infarction |
+| Unsaturated Fatty Acids | Conversion to anti-inflammatory oxylipins by Tateyama-Ryuo | D003-002 Hypertension |
+
+---
+
+## References
+
+- MKS15. Deer Antler & Earthworm JSON Library
+- MKS8. Predicted Molecular Structures of Active Substances: Three Primary Targets
+</file>
+
+<file path="04_HealthBook/en/05_malaria_defense_EN.md">
+# Malaria 3-Layer Defense Model
+
+## Overview
+
+MBT55 provides a **chemical-independent, three-layer defense mechanism** against Plasmodium, the malaria parasite.
+
+---
+
+## The 3-Layer Defense Model
+
+### Layer 1: Invasion Inhibition (Receptor Masking)
+
+- **Specific sugar chains** cleaved from animal-derived medicines by Tateyama-Menami (Atopostipes sp.) mask red blood cell surface receptors
+- Physically blocks parasite adhesion and invasion (decoy effect)
+
+### Layer 2: Proliferation Inhibition (Iron Chelation)
+
+- **Siderophores** (iron-binding molecules) produced by Bacillus spp. (Tateyama-ken etc.) compete with parasites for iron in blood and cells
+- Starves the parasite's reproductive cycle
+
+### Layer 3: Cytokine Storm Avoidance (Immune Regulation)
+
+- Novel steroid metabolites derived from deer antler suppress excessive immune responses (TNF-α, IL-6)
+- Controls the "host hyperinflammatory response" — the primary cause of severe malaria mortality
+
+---
+
+## Complementarity with Gates Foundation's Existing Strategy
+
+| Gates Foundation Approach | MBT55 Complement |
+|:---|:---|
+| Vaccines (mRNA, etc.) | Gut environment optimization → Resolution of vaccine low-responder problem |
+| Insecticide-treated bed nets | Environmental biocontrol of mosquito breeding |
+| Antimalarial drugs | Non-specific defense effective against drug-resistant parasites |
+
+---
+
+## References
+
+- ■MKS10. 137-Disease Risk "Infectious Disease (Category 13)" Pathway Analysis
+- MKS9. Gates Foundation Approach and Current Limitations
+- ■MBT55 Biocontrol Function and Effects on Malaria
+</file>
+
+<file path="04_HealthBook/en/06_mROI_model_EN.md">
+# m-ROI: Medical Return on Investment Model
+
+## Overview
+
+A quantitative model evaluating **how much healthcare cost reduction** is achieved through consumption of SafetyChain™-certified high-functionality MBT produce.
+
+---
+
+## Base Equation
+
+E_Δcost = Σ (P(d)_base × (1 - RR(V_Index, d)) × C(d))
+
+
+| Variable | Definition |
+|:---|:---|
+| P(d)_base | Standard incidence risk of disease d |
+| RR(V_Index, d) | Relative risk reduction rate dependent on V-Index |
+| C(d) | Average annual direct medical cost of disease d |
+
+---
+
+## Disease-Specific m-ROI Estimates (SCFA Precursor 300mg/100g)
+
+| Disease | Annual Medical Cost (Ref.) | Reduction Coefficient | Avoided Cost ($/year) |
+|:---|:---|:---|:---|
+| Diabetes | $3,000 | 0.15 | $135 |
+| Hypertension | $2,000 | 0.12 | $72 |
+| Colorectal Cancer | $8,000 | 0.10 | $240 |
+| **Total** | | | **$447** |
+
+---
+
+## Correlation with V-Index
+
+- Higher V-Index (= rich in SCFA precursors and antioxidants) → Lower inflammatory markers (CRP, etc.)
+- Gut environment optimization → Chronic inflammation suppression → Logarithmic reduction in disease risk
+
+---
+
+## Reflection in Dynamic Pricing
+
+P_retail = P_base + α·V_Index (Functionality Premium) + β·τ_inertia (Loss Reduction Premium)
+
+---
+
+## References
+
+- Gem5. m-ROI Calculation Mathematical Model: Impact Projection
+- PBPE-Finance: dashboard/app.py (m-ROI tab)
+</file>
+
+<file path="04_HealthBook/ja/01_137_disease_matrix.md">
+# 137疾病マトリックス
+
+## 概要
+
+HealthBook-AIの中核をなす**137疾病リスク評価マトリックス**は、ICD-11準拠の疾病分類と、200項目問診から得られるリスク因子を因果推論で結びつける。
+
+---
+
+## 疾病カテゴリー構造
+
+| カテゴリー | コード範囲 | 代表疾患 |
+|:---|:---|:---|
+| D001 感冒・呼吸器 | D001-001〜 | 感冒、インフルエンザ |
+| D002 骨・関節・筋肉 | D002-001〜 | 骨粗鬆症、変形性膝関節症 |
+| D003 脳・神経 | D003-001〜 | 脳梗塞、高血圧 |
+| D004 内分泌・代謝 | D004-001〜 | 糖尿病、肥満 |
+| D006 消化器 | D006-001〜 | 胃炎、大腸ポリープ |
+| D012 免疫・アレルギー | D012-001〜 | アレルギー性鼻炎、アトピー |
+| D013 感染症 | D013-001〜 | マラリア、結核 |
+
+---
+
+## 推論構造
+
+200項目問診 → リスク因子抽出（重み付き） → 疾病スコア算出 → 漢方処方マッチング
+
+
+---
+
+## MBT55ハイパーサイクルとの接続
+
+| 疾病カテゴリー | 関連するMBT55経路 | コア代謝産物 |
+|:---|:---|:---|
+| D002 骨・関節 | PATH_03 | 鹿茸ステロイド様代謝物 |
+| D004 代謝 | PATH_03, PATH_05 | 酪酸（SCFA） |
+| D012 免疫 | PATH_01 | ウロリチンA、エクオール |
+| D013 感染症 | PATH_01, PATH_04 | 3層防御モデル |
+
+---
+
+## 参照
+
+- disease_matrix_137.json
+- HealthBook-AI: src/inference_engine.py
+</file>
+
+<file path="04_HealthBook/ja/02_200_questionnaire.md">
+# 200項目問診システム
+
+## 概要
+
+HealthBook-AIの入力インターフェースとなる**200項目の問診票**。食習慣・生活習慣・症状・総合の4カテゴリーで構成され、日英両対応。
+
+---
+
+## カテゴリー構成
+
+| カテゴリー | 問題数 | 範囲 |
+|:---|:---|:---|
+| 食習慣 | 50問 | Q1〜Q50 |
+| 生活習慣 | 50問 | Q51〜Q100 |
+| 症状 | 98問 | Q101〜Q198 |
+| 総合 | 2問 | Q199〜Q200 |
+
+---
+
+## 回答形式
+
+各質問に対し、3段階で回答：
+- **0**: いいえ（No）
+- **1**: ときどき（Sometimes）
+- **2**: よくある（Often）
+
+---
+
+## リスク因子への変換
+
+回答（0/1/2）× 重み係数（0.5/0.7/1.0） → アクティブリスク因子スコア
+
+---
+
+## 推論パイプライン
+
+回答 → リスク因子抽出 → 137疾病スコア算出 → MBT55経路優先度 → 漢方処方推奨 → 予防スコア
+
+---
+
+## 参照
+
+- questionnaire_200_jp.json
+- questionnaire_200_en.json
+- HealthBook-AI: dashboard/app.py
+</file>
+
+<file path="04_HealthBook/ja/03_kampo_library.md">
+# 293漢方代謝ライブラリー
+
+## 概要
+
+**kampo_metabolic_library.json**は、293種類の漢方処方をMBT55の代謝経路（PATH_01〜05）およびファイトケミカルプロファイルと紐付けたライブラリーである。
+
+---
+
+## データ構造
+
+```json
+{
+  "id": "K001",
+  "name_ja": "葛根湯",
+  "name_en": "Kakkonto",
+  "phytochemicals": [
+    {
+      "name_en": "Puerarin",
+      "pathway": "PATH_01"
+    }
+  ],
+  "mbt55_optimization": {
+    "recommended_strains": ["MBT55-001"],
+    "fermentation_temp_c": 38
+  }
+}
+```
+
+---
+
+## MBT55 5経路（PATH_01〜05）
+
+| 経路 | 機能 | 関連疾患カテゴリー |
+|:---|:---|:---|
+| PATH_01 | 炎症・免疫 | D012 免疫・アレルギー |
+| PATH_02 | 解毒・肝代謝 | D006 消化器 |
+| PATH_03 | 循環・ミトコンドリア | D002 骨・関節、D004 代謝 |
+| PATH_04 | 腸・神経 | D003 脳・神経、D013 感染症 |
+| PATH_05 | 内分泌 | D004 内分泌・代謝 |
+
+---
+
+## 推論エンジンとの統合
+
+疾病スコア上位10件 → 推奨漢方処方の抽出 → PATH経路の積算 → MBT55カスケード接続
+
+---
+
+## 参照
+
+- kampo_metabolic_library.json
+- HealthBook-AI: src/inference_engine.py
+</file>
+
+<file path="04_HealthBook/ja/04_animal_medicine.md">
+# 動物生薬ライブラリー：鹿茸・地龍
+
+## 概要
+
+長春中医薬大学の2,700種を超える動物生薬ライブラリーに基づき、MBT55との代謝変換をモデル化した**動物性生薬特化型JSONライブラリー**。
+
+---
+
+## 鹿茸（Cervus nippon）
+
+### 主要成分とMBT55変換
+
+| 成分群 | MBT55（タテヤマ女汝）による変換 | 予測される活性物質 |
+|:---|:---|:---|
+| 糖脂質（ガングリオシド） | 女汝のグリコシダーゼが糖鎖を分断 | セラミド誘導体・遊離シアル酸 |
+| 多糖類（コンドロイチン） | 酵素分解により低分子化 | 低分子オリゴ糖（プレバイオティクス） |
+| ステロイド骨格物質 | 嫌気菌群による側鎖変換 | 新規ステロイド様代謝物 |
+
+### 3段階発酵プロトコル
+
+| 段階 | 温度 | 時間 | 主導菌株 |
+|:---|:---|:---|:---|
+| Stage 1: 加水分解 | 38°C | 0-6h | タテヤマ浄土 |
+| Stage 2: 代謝変換 | 42°C | 6-24h | タテヤマ女汝 |
+| Stage 3: 再合成 | 35°C | 24-72h | タテヤマ竜王 |
+
+### 137疾病適合性
+
+| 疾病カテゴリー | 適合スコア | 作用メカニズム |
+|:---|:---|:---|
+| D002-001 骨粗鬆症 | **94/100** | 鹿茸由来ペプチド → 骨芽細胞増殖促進 |
+| D012-001 アレルギー性鼻炎 | **88/100** | 特異的糖鎖 → マスト細胞脱顆粒抑制 |
+
+---
+
+## 地龍（Pheretima aspergillum）
+
+| 成分 | MBT55変換 | 標的疾患 |
+|:---|:---|:---|
+| ルンブロキナーゼ | タテヤマ浄土によるペプチド断片化（活性維持） | D003-001 脳梗塞 |
+| 不飽和脂肪酸 | タテヤマ竜王による抗炎症性オキシリピンへの変換 | D003-002 高血圧 |
+
+---
+
+## 参照
+
+- MKS15. 鹿茸・地龍JSONライブラリー
+- MKS8. 予測される活性物質の分子構造：3つの主要ターゲット
+</file>
+
+<file path="04_HealthBook/ja/05_malaria_defense.md">
+# マラリア3層防御モデル
+
+## 概要
+
+MBT55は、マラリア原虫（Plasmodium）に対し、**化学薬品に依存しない3層の防御機構**を提供する。
+
+---
+
+## 3層防御モデル
+
+### 第1層：侵入阻害（受容体マスキング）
+
+- タテヤマ女汝（Atopostipes sp.）が動物性生薬から切り出した**特異的糖鎖**が赤血球表面の受容体をマスク
+- 原虫の付着・侵入を物理的に阻害（デコイ効果）
+
+### 第2層：増殖阻害（鉄キレート）
+
+- バチルス属（タテヤマ剣など）が産生する**シデロフォア（鉄結合分子）**が血中・細胞内で原虫と鉄を奪い合う
+- 原虫の増殖サイクルを兵糧攻め
+
+### 第3層：サイトカインストーム回避（免疫制御）
+
+- 鹿茸由来の新規ステロイド代謝物が過剰な免疫応答（TNF-α, IL-6）を抑制
+- 重症マラリアの主因である「宿主の過剰な炎症反応」をコントロール
+
+---
+
+## ゲイツ財団の既存戦略との補完関係
+
+| ゲイツ財団のアプローチ | MBT55の補完 |
+|:---|:---|
+| ワクチン（mRNA等） | 腸内環境最適化→ワクチン低レスポンダー問題の解消 |
+| 殺虫剤蚊帳 | 環境バイオコントロールによる蚊の繁殖抑制 |
+| 抗マラリア薬 | 耐性原虫にも有効な非特異的防御 |
+
+---
+
+## 参照
+
+- ■MKS10. 137疾病リスクにおける「感染症（Category 13）」パスウェイ解析
+- MKS9. ゲイツ財団のアプローチと現在の限界
+- ■MBT55のバイオコントロール機能とマラリアへの効果
+</file>
+
+<file path="04_HealthBook/ja/06_mROI_model.md">
+# m-ROI：医療投資対効果モデル
+
+## 概要
+
+SafetyChain™で証明された高機能MBT農産物の摂取が、**どの程度の医療費削減をもたらすか**を定量的に評価するモデル。
+
+---
+
+## 基本方程式
+
+E_Δcost = Σ (P(d)_base × (1 - RR(V_Index, d)) × C(d))
+
+| 変数 | 定義 |
+|:---|:---|
+| P(d)_base | 疾患dの標準的発症リスク |
+| RR(V_Index, d) | V-Indexに依存する相対リスク減少率 |
+| C(d) | 疾患dの平均年間直接医療費 |
+
+---
+
+## 疾患別m-ROI試算（SCFA前駆体300mg/100gの場合）
+
+| 疾患 | 年間医療費（参考） | 削減係数 | 回避コスト（$/年） |
+|:---|:---|:---|:---|
+| 糖尿病 | $3,000 | 0.15 | $135 |
+| 高血圧 | $2,000 | 0.12 | $72 |
+| 大腸がん | $8,000 | 0.10 | $240 |
+| **合計** | | | **$447** |
+
+---
+
+## V-Indexとの相関
+
+- V-Indexが高い（＝SCFA前駆体・抗酸化物質が豊富）ほど、炎症マーカー（CRP等）が低下
+- 腸内環境の最適化→慢性炎症抑制→疾患リスクの対数的減少
+
+---
+
+## 動的価格への反映
+
+P_retail = P_base + α·V_Index（機能性加算） + β·τ_inertia（ロス削減加算）
+
+---
+
+## 参照
+
+- Gem5. m-ROI 算出の数理モデル：インパクト・プロジェクション
+- PBPE-Finance: dashboard/app.py（m-ROIタブ）
+</file>
+
+<file path="05_AGRIX_SafetyChain/en/01_soil_dynamics_EN.md">
+# Soil Dynamics ODE Model
+
+## Overview
+
+The core computational model of AGRIX-OS, extending the M3-Core-Engine MBT55 Hypercycle ODE with **real-time soil sensor data (pH, Eh, moisture).**
+
+---
+
+## State Variables (8 Variables)
+
+| Variable | Definition | Unit |
+|:---|:---|:---|
+| S | Substrate concentration | g/L |
+| X_A | Substrate-degrading microbial biomass | g/L |
+| M | Metabolic intermediate | g/L |
+| X_B | Metabolite-converting biomass | g/L |
+| P | Functional product / Humic precursor | g/L |
+| X_C | Hypercycle control biomass | g/L |
+| C | Soil organic carbon | g/L |
+| N | Available nitrogen | g/L |
+
+---
+
+## Sensor Integration
+
+| Sensor | ODE Impact |
+|:---|:---|
+| **pH** | Modifies β_i (mortality/inhibition coefficients) |
+| **Eh (Redox Potential)** | Selects aerobic vs. anaerobic pathway dominance |
+| **Moisture (θ)** | Moisture-dependent oxygen availability (aerobic/anaerobic switch) |
+
+---
+
+## Aerobic Fraction Function
+
+```python
+def aerobic_fraction(Eh_mV, moisture_pct):
+    f_Eh = 1.0 / (1.0 + np.exp(-0.02 * (Eh_mV - 50)))
+    f_moisture = 1.0 - max(0.0, (moisture_pct - 70.0) / 30.0)
+    return np.clip(f_Eh * f_moisture, 0.05, 0.95)
+```
+
+Reproduces MBT55 design specification: 55% aerobic / 45% anaerobic under reference conditions.
+
+---
+
+## Carbon Sequestration Rate Output
+
+```
+carbon_seq_rate (tCO₂/ha/year) → Feeds PBPE Finance Engine
+```
+
+---
+
+## References
+
+- AGRIX-OS: src/soil_dynamics.py
+- AGRIX-OS: src/parameters_optimized.json
+- M3-Core-Engine: src/parameters_optimized.json
+</file>
+
+<file path="05_AGRIX_SafetyChain/en/02_agriware_engine_EN.md">
+# AgriWare™ Diagnostic & Prescription Engine
+
+## Overview
+
+Computes **velocity and acceleration** from SHE™ (Soil Health & Ecosystem) score time series to diagnose five EcoPhenotypes and auto-generate MBT55/HMT/NASARA prescriptions.
+
+---
+
+## Five EcoPhenotypes
+
+| Phase | State | Prescription Strategy |
+|:---|:---|:---|
+| **ACCELERATING_IMPROVEMENT** | Active improvement | Maintain state, minimal intervention |
+| **DIMINISHING_IMPROVEMENT** | Slowing improvement | Prepare next intervention |
+| **STABLE** | Equilibrium | Maintenance dosing |
+| **DIMINISHING_DEGRADATION** | Decelerating decline | Intervention taking effect; monitor |
+| **ACCELERATING_DEGRADATION** | Accelerating decline | **EMERGENCY: Immediate MBT55 activation** |
+
+---
+
+## SHE™ Score Calculation
+
+```python
+SHE = 0.40 × micro_score + 0.25 × humic_score + 0.20 × cn_score + 0.15 × phys_score
+```
+
+| Component | Weight | Description |
+|:---|:---|:---|
+| micro_score | 40% | Microbial biomass activity |
+| humic_score | 25% | Humic product (proxy for soil structure) |
+| cn_score | 20% | Carbon/Nitrogen balance |
+| phys_score | 15% | Physicochemical indicators (pH, Eh) |
+
+---
+
+## Sample Prescription: ACCELERATING_DEGRADATION
+
+```
+MBT55: 3.0-5.0 L/ha (emergency)
+HMT: 1.0 L/ha (mineral support)
+Monitoring interval: 3 hours
+```
+
+**Strict compliance with AGENTS.md Rule #1**: Zero synthetic NPK recommendation. Microbial management path only.
+
+---
+
+## References
+
+- AGRIX-OS: src/agriware_engine.py
+- AGRIX-OS: AGENTS.md
+</file>
+
+<file path="05_AGRIX_SafetyChain/en/03_safetychain_definition_EN.md">
+# SafetyChain™ Definition: From Safety to Functionality
+
+## Concept
+
+SafetyChain™ is the world's first **life-sustaining supply chain protocol** that transcends conventional static traceability by proving and tracking the **"Metabolic Inertia"** and **"Ecological Functionality"** of agricultural, livestock, and marine products in real time.
+
+---
+
+## Conventional Traceability vs. SafetyChain™
+
+| Conventional | SafetyChain™ |
+|:---|:---|
+| Records deterioration after harvest | **Tracks living metabolic inertia** |
+| Static point-in-time data | **Dynamic phenomics (metabolic trajectory)** |
+| Cost center (compliance) | **Profit center (PBPE asset generation)** |
+| "Where did it come from?" | **"How will it repair your metabolism?"** |
+
+---
+
+## Three Core Assessment Layers
+
+1. **Production Environment Biosecurity Certification**
+   Proof that the environment is free of soil contamination and pathogens through the MBT55 microbial consortium
+
+2. **Quality & Functionality Phenomics**
+   Quantification of the density of metabolites (SCFA precursors, antioxidants, chelated minerals) generated through symbiosis with MBT55
+
+3. **Metabolic Endurance (Freshness Retention)**
+   Tracking the duration that cells maintain "self-repair capability" after harvest
+
+---
+
+## Key Message
+
+> **"SafetyChain™ does not track death; it tracks Life."**
+
+---
+
+## References
+
+- SafetyChain™ Definition Documents
+- Gem1. SafetyChain™ Definition
+- AGRIX-OS: dashboard/app.py
+</file>
+
+<file path="05_AGRIX_SafetyChain/en/04_vscore_model_EN.md">
+# V-Score: Metabolic Life Model
+
+## Overview
+
+The Vitality Score (V-Score) is a metabolic vitality indicator (0–100) based on **post-harvest ATP decay rate.**
+
+---
+
+## ATP Decay Model
+
+```
+ATP_t = ATP_0 × exp(-k_atp × t)
+```
+
+### Correction Factors for Decay Constant k_atp
+
+| Factor | Effect |
+|:---|:---|
+| SCFA Protection | Enhanced membrane integrity → Reduced k_atp |
+| Antioxidant Density | Delayed oxidative degradation → Reduced k_atp |
+| SHE Score | Nutrient loading completeness → Reduced k_atp |
+| Storage Temperature (Q10≈2) | Lower temperature → Reduced k_atp |
+
+**MBT55 crops: k_atp reduced by ~30% compared to conventional**
+
+---
+
+## V-Score Grades
+
+| Grade | V-Score Range | Freshness Score |
+|:---|:---|:---|
+| **Platinum** | ≥0.85 | Premium freshness |
+| **Gold** | ≥0.70 | High freshness |
+| **Silver** | ≥0.55 | Above standard |
+| **Standard** | <0.55 | Standard |
+
+---
+
+## Metabolic Life
+
+Days remaining until V-Score drops below the functional threshold (35).
+
+```python
+def metabolic_life_remaining(phenoprint, elapsed_days, storage_temp_C):
+    # Binary search for V-Score=35 threshold crossing
+    ...
+    return max(0.0, round(hi - elapsed_days, 1))
+```
+
+---
+
+## References
+
+- AGRIX-OS: dashboard/vitality_engine.py
+- AGRIX-OS: dashboard/app.py
+</file>
+
+<file path="05_AGRIX_SafetyChain/en/05_food_price_model_EN.md">
+# Food Price Decline Model
+
+## Overview
+
+Simulates the **supply increase → price decline** mechanism resulting from MBT55 adoption using a price elasticity model.
+
+---
+
+## Base Equation
+
+```python
+def simulate_food_price(self, years=10, elasticity=-0.3):
+    for t in range(years):
+        supply_increase = (1 + dy)
+        price *= (1 + elasticity * (supply_increase - 1))
+```
+
+| Variable | Definition | Example Value |
+|:---|:---|:---|
+| dy | Yield increase rate | 0.20 (+20%) |
+| elasticity | Price elasticity | -0.3 (1% supply increase → 0.3% price decline) |
+
+---
+
+## 4-Layer Dynamic Pricing Model
+
+```
+P_total = P_market + V_functionality + L_loss_avoidance + m_medical_savings + C_carbon
+```
+
+| Layer | Description | MBT55 Advantage |
+|:---|:---|:---|
+| V (Functionality) | ATP retention rate | +40% longer metabolic life |
+| L (Loss Avoidance) | Spoilage reduction | -20% post-harvest loss |
+| m (Medical Savings) | Disease prevention value | HealthBook-linked |
+| C (Carbon) | Sequestered CO₂e/kg | 2.5 kgCO₂e/kg certified |
+
+---
+
+## References
+
+- PBPE-Finance: src/pbpe_engine.py
+- PBPE-Finance: dashboard/app.py
+- ■MBT55 "Zero-Carbon Fertilizer Green Premium" Calculation Model
+</file>
+
+<file path="05_AGRIX_SafetyChain/en/06_phenomics_ai_agents_EN.md">
+# Phenomics AI Agent Suite
+
+## Overview
+
+**Four AI agents** powering SafetyChain™ dynamic phenotyping.
+
+---
+
+## AI Agent Definitions
+
+| Agent | Role | Key Inputs | Key Outputs |
+|:---|:---|:---|:---|
+| **Microbe-Agent** | Hypercycle Tachometer | Soil Eh, Temperature, CO₂ flux | ω_cycle (24h humification rate) |
+| **Cascade-Agent** | Nutrient Conversion Engine | NDVI/PRI spectra, Soil N/P/K | Φ_functional (polyphenol density) |
+| **Stability-Agent** | Immune Surveillance & Defense | Pathogen signals, Antioxidant enzymes | σ_resilience (homeostasis strength) |
+| **Inertia-Agent** | Freshness Decay Prediction | Harvest ATP, Respiration rate, Ethylene | τ_inertia (metabolic life in days) |
+
+---
+
+## Agent Communication Protocol
+
+```
+Microbe → Cascade → Inertia → SafetyChain™ (V-Index) → Health-Agent (m-ROI)
+```
+
+Each agent communicates via standardized JSON schemas using the common "metabolic currencies" (lactate, SCFAs, electrons).
+
+---
+
+## V-Index Unified Score
+
+```
+V_Total = ∛(Functionality × Inertia × Security)
+```
+
+---
+
+## Significance for Microsoft Research
+
+> **"We don't just measure plants; we compute the future of human health from the soil up."**
+
+This is not a static supply chain — it is a **dynamic metabolic network.**
+
+---
+
+## References
+
+- Gem2. SafetyChain™ Dynamic Phenotyping System Architecture
+- Gem3. Dynamic Phenotyping Mathematical Model
+- Gem4. AI Agent Architecture Detailed Design
+- Gem7. Agent Communication Structure
+</file>
+
+<file path="05_AGRIX_SafetyChain/ja/01_soil_dynamics.md">
+# 土壌動態ODEモデル
+
+## 概要
+
+M3-Core-EngineのMBT55ハイパーサイクルODEを**土壌センサーデータ（pH, Eh, 水分）**で拡張した、AGRIX-OSの中核演算モデル。
+
+---
+
+## 状態変数（8変数）
+
+| 変数 | 定義 | 単位 |
+|:---|:---|:---|
+| S | 基質濃度 | g/L |
+| X_A | 基質分解微生物バイオマス | g/L |
+| M | 代謝中間体 | g/L |
+| X_B | 代謝物変換バイオマス | g/L |
+| P | 機能性産物/腐植前駆体 | g/L |
+| X_C | ハイパーサイクル制御バイオマス | g/L |
+| C | 土壌有機炭素 | g/L |
+| N | 有効態窒素 | g/L |
+
+---
+
+## センサー連携
+
+| センサー | ODEへの影響 |
+|:---|:---|
+| **pH** | β_i（死亡率・阻害係数）を修正 |
+| **Eh（酸化還元電位）** | 好気/嫌気経路の優位性を選択 |
+| **水分（θ）** | 水分依存的酸素可用性（好気/嫌気スイッチ） |
+
+---
+
+## 好気性画分関数
+
+```python
+def aerobic_fraction(Eh_mV, moisture_pct):
+    f_Eh = 1.0 / (1.0 + np.exp(-0.02 * (Eh_mV - 50)))
+    f_moisture = 1.0 - max(0.0, (moisture_pct - 70.0) / 30.0)
+    return np.clip(f_Eh * f_moisture, 0.05, 0.95)
+
+
+MBT55設計値：55%好気性 / 45%嫌気性を基準条件で再現。
+```
+---
+
+## 炭素隔離速度の出力
+
+carbon_seq_rate (tCO₂/ha/year) → PBPE Finance Engineへ供給
+
+---
+
+## 参照
+
+- AGRIX-OS: src/soil_dynamics.py
+- AGRIX-OS: src/parameters_optimized.json
+- M3-Core-Engine: src/parameters_optimized.json
+</file>
+
+<file path="05_AGRIX_SafetyChain/ja/02_agriware_engine.md">
+# AgriWare™ 診断・処方エンジン
+
+## 概要
+
+土壌のSHE™（Soil Health & Ecosystem）スコアの時系列から**速度と加速度**を計算し、5つのエコフェノタイプを診断。MBT55/HMT/NASARAの処方を自動生成する。
+
+---
+
+## 5つのエコフェノタイプ（EcoPhenotype）
+
+| フェーズ | 状態 | 処方方針 |
+|:---|:---|:---|
+| **ACCELERATING_IMPROVEMENT** | 改善加速中 | 現状維持・最小介入 |
+| **DIMINISHING_IMPROVEMENT** | 改善減速中 | 次の介入準備 |
+| **STABLE** | 安定 | 維持投与 |
+| **DIMINISHING_DEGRADATION** | 劣化減速中 | 介入効果発現中・監視 |
+| **ACCELERATING_DEGRADATION** | 劣化加速中 | **緊急：MBT55即時投入** |
+
+---
+
+## SHE™スコア計算
+
+```python
+SHE = 0.40 × micro_score + 0.25 × humic_score + 0.20 × cn_score + 0.15 × phys_score
+```
+
+| 要素 | 重み | 内容 |
+|:---|:---|:---|
+| micro_score | 40% | 微生物バイオマス活性 |
+| humic_score | 25% | 腐植産物（土壌構造の代理指標） |
+| cn_score | 20% | 炭素・窒素バランス |
+| phys_score | 15% | pH・Ehの物理化学的指標 |
+
+---
+
+## 処方例：ACCELERATING_DEGRADATION時
+
+```
+MBT55: 3.0-5.0 L/ha（緊急）
+HMT: 1.0 L/ha（ミネラル補助）
+監視間隔: 3時間
+```
+
+**AGENTS.md Rule #1厳守**：化学NPK推奨ゼロ。微生物管理パスのみ。
+
+---
+
+## 参照
+
+- AGRIX-OS: src/agriware_engine.py
+- AGRIX-OS: AGENTS.md
+</file>
+
+<file path="05_AGRIX_SafetyChain/ja/03_safetychain_definition.md">
+# SafetyChain™ 定義：安全性から機能性へ
+
+## コンセプト
+
+SafetyChain™は、従来の静的なトレーサビリティの概念を超越し、農産物・畜産物・海産物が持つ**「代謝の慣性（Metabolic Inertia）」**と**「生態学的機能性」**をリアルタイムで証明・追跡する、世界初の**生命維持型サプライチェーン・プロトコル**である。
+
+---
+
+## 従来のトレーサビリティ vs SafetyChain™
+
+| 従来 | SafetyChain™ |
+|:---|:---|
+| 死んだ後の劣化を記録 | **生きている代謝の慣性を追跡** |
+| 静的な点の記録 | **動的フェノミクス（代謝軌跡）** |
+| コストセンター（コンプライアンス） | **プロフィットセンター（PBPE資産生成）** |
+| 「どこから来たか」 | **「どのように代謝を修復するか」** |
+
+---
+
+## 3つの核心的評価レイヤー
+
+1. **生産環境のバイオセキュリティ証明**
+   MBT55微生物コンソーシアムにより、土壌汚染や有害菌が排除された環境の証明
+
+2. **品質・機能性のフェノミクス**
+   MBT55との共生によって生成された代謝産物（SCFA原料、抗酸化物質、キレートミネラル）の密度を数値化
+
+3. **鮮度保持力（Metabolic Endurance）**
+   収穫後も細胞が「自己修復能力」を維持している時間を追跡
+
+---
+
+## キーメッセージ
+
+> **"SafetyChain™ does not track death; it tracks Life."**
+
+---
+
+## 参照
+
+- SafetyChain™ 定義ドキュメント
+- Gem1. SafetyChain™ 定義
+- AGRIX-OS: dashboard/app.py
+</file>
+
+<file path="05_AGRIX_SafetyChain/ja/04_vscore_model.md">
+# V-Score：代謝寿命モデル
+
+## 概要
+
+Vitality Score（V-Score）は、収穫後の**ATP減少速度**に基づく代謝的活力指標（0-100）。
+
+---
+
+## ATP減衰モデル
+
+ATP_t = ATP_0 × exp(-k_atp × t)
+
+
+### 減衰定数 k_atp の補正因子
+
+| 因子 | 影響 |
+|:---|:---|
+| SCFA保護効果 | 膜完全性強化 → k_atp低減 |
+| 抗酸化密度 | 酸化的劣化遅延 → k_atp低減 |
+| SHEスコア | 栄養負荷完全性 → k_atp低減 |
+| 保存温度（Q10≈2） | 低温→k_atp低減 |
+
+**MBT55作物：k_atpが従来比約30%低減**
+
+---
+
+## V-Scoreグレード
+
+| グレード | V-Score範囲 | Freshness Score |
+|:---|:---|:---|
+| **Platinum** | ≥0.85 | 最高鮮度 |
+| **Gold** | ≥0.70 | 高鮮度 |
+| **Silver** | ≥0.55 | 標準以上 |
+| **Standard** | <0.55 | 標準 |
+
+---
+
+## 代謝寿命（Metabolic Life）
+
+V-Scoreが機能的閾値（35）を下回るまでの残日数。
+
+```python
+def metabolic_life_remaining(phenoprint, elapsed_days, storage_temp_C):
+    # V-Score=35の閾値交差点を二分探索
+    ...
+    return max(0.0, round(hi - elapsed_days, 1))
+```
+
+---
+
+## 参照
+
+- AGRIX-OS: dashboard/vitality_engine.py
+- AGRIX-OS: dashboard/app.py
+</file>
+
+<file path="05_AGRIX_SafetyChain/ja/05_food_price_model.md">
+# 食料価格下降モデル
+
+## 概要
+
+MBT55導入による**供給量増加→価格下降**のメカニズムを、価格弾力性モデルでシミュレーションする。
+
+---
+
+## 基本方程式
+
+```python
+def simulate_food_price(self, years=10, elasticity=-0.3):
+    for t in range(years):
+        supply_increase = (1 + dy)
+        price *= (1 + elasticity * (supply_increase - 1))
+```
+
+| 変数 | 定義 | 数値例 |
+|:---|:---|:---|
+| dy | 収量増加率 | 0.20（+20%） |
+| elasticity | 価格弾力性 | -0.3（供給1%増→価格0.3%下落） |
+
+---
+
+## 4レイヤー動的価格モデル
+
+```
+P_total = P_market + V_functionality + L_loss_avoidance + m_medical_savings + C_carbon
+```
+
+| レイヤー | 内容 | MBT55優位性 |
+|:---|:---|:---|
+| V（機能性） | ATP保持率 | +40%長い代謝寿命 |
+| L（ロス削減） | 腐敗低減 | -20%収穫後ロス |
+| m（医療費削減） | 疾患予防価値 | HealthBook連携 |
+| C（炭素） | 隔離CO₂e/kg | 2.5 kgCO₂e/kg認証済 |
+
+---
+
+## 参照
+
+- PBPE-Finance: src/pbpe_engine.py
+- PBPE-Finance: dashboard/app.py
+- ■MBT55 による「炭素排出ゼロ肥料のグリーン・プレミアム」計算モデル
+</file>
+
+<file path="05_AGRIX_SafetyChain/ja/06_phenomics_ai_agents.md">
+# フェノタイピングAIエージェント群
+
+## 概要
+
+SafetyChain™の動的フェノタイピングを駆動する**4つのAIエージェント**。
+
+---
+
+## AIエージェント定義
+
+| エージェント | 役割 | 主要入力 | 主要出力 |
+|:---|:---|:---|:---|
+| **Microbe-Agent** | ハイパーサイクル回転儀 | 土壌Eh、温度、CO₂フラックス | ω_cycle（24時間腐植化達成率） |
+| **Cascade-Agent** | 栄養変換エンジン | NDVI/PRI分光、土壌N/P/K | Φ_functional（ポリフェノール密度） |
+| **Stability-Agent** | 免疫監視・防御 | 病原体シグナル、抗酸化酵素 | σ_resilience（ホメオスタシス強度） |
+| **Inertia-Agent** | 鮮度減衰予測 | 収穫時ATP、呼吸速度、エチレン | τ_inertia（代謝寿命・日数） |
+
+---
+
+## エージェント間通信プロトコル
+
+```
+Microbe → Cascade → Inertia → SafetyChain™ (V-Index) → Health-Agent (m-ROI)
+```
+
+各エージェントは共通の「代謝通貨（乳酸、SCFA、電子）」を媒介にJSONスキーマで通信する。
+
+---
+
+## V-Index統合スコア
+
+```
+V_Total = ∛(Functionality × Inertia × Security)
+```
+
+---
+
+## Microsoft Researchへの意義
+
+> **"We don't just measure plants; we compute the future of human health from the soil up."**
+
+これは静的なサプライチェーンではなく、**動的な代謝ネットワーク**である。
+
+---
+
+## 参照
+
+- Gem2. SafetyChain™ 動的フェノタイピングのシステム構成
+- Gem3. 動的フェノタイピングの数理モデル
+- Gem4. AIエージェント・アーキテクチャ詳細設計
+- Gem7. エージェント間通信のストラクチャー
+</file>
+
+<file path="06_Proposals/01_azure_acquisition_strategy_EN.md">
+# BioNexus Platform: A Joint Mission with Azure
+
+## 1. The Essence of This Proposal — An Invitation, Not an Acquisition
+
+I am the architect of the BioNexus 3-Platform (AGRIX / HealthBook / PBPE), and I have made the decision to **entrust this technology to Microsoft Azure.**
+
+The reason is simple. **To change the world at the speed and scale this technology demands, Microsoft's corporate power is indispensable.**
+
+This proposal is not a "request for acquisition." It is a **proposal for how to entrust technology to jointly solve humanity's greatest challenges.**
+
+---
+
+## 2. What I Wish to Entrust to Microsoft
+
+The BioNexus Platform is a **soil—crop—gut—human metabolism integrated OS** built around the MBT55 Ecological Hypercycle.
+
+| Platform | Function | Challenges Solved |
+|:---|:---|:---|
+| **AGRIX-OS** | Soil ecological control, SafelyChain™, PBPE | Food production stabilization, GHG reduction, food loss reduction |
+| **HealthBook-AI** | 200-item questionnaire × 137 diseases × 293 Kampo × MBT Probiotics | Global health, healthcare cost reduction, nutrition improvement |
+| **PBPE-Finance** | Carbon credits × agricultural finance × dynamic pricing | Climate finance market creation |
+
+---
+
+## 3. Why Microsoft — What Only Azure Can Achieve
+
+### 3.1 Speed of 510 Mt GHG Reduction
+
+Achieving 510 Mt annual GHG reduction requires deploying 54,850 MBT55 fermentation units over 3 years. **Without Microsoft's global infrastructure and partner ecosystem, this speed cannot be achieved.**
+
+### 3.2 Why AWS/GCP Cannot Replicate
+
+- 24-hour hypercycle control requires **integrated AI spanning agriculture × healthcare × finance**
+- The decisive advantage lies in the connection with Microsoft Research (Poon/Ersoy) Biomedical AI
+- Azure IoT Central + Healthcare Models + Managed CCF form the necessary triad
+
+### 3.3 Azure Enterprise Value Enhancement
+
+BioNexus integration will give Azure:
+- **$187B–$590B in cumulative new markets over 10 years** (agricultural carbon removal, preventive healthcare, climate finance)
+- **A Planetary OS position that AWS cannot follow**
+- **Highest ESG ratings and institutional investor inflows**
+
+---
+
+## 4. The Connection to Bill Gates — Challenges We Can Solve Together
+
+I know the challenges Bill Gates has been working on that remain unsolved. And I have proven with mathematical models and empirical data that MBT55 provides the answer to all of them.
+
+| Gates' Challenge | MBT55 Solution | Proof |
+|:---|:---|:---|
+| **Malaria** | Gut hypercycle × immune regulation × 3-layer defense | 137-Disease Category 13 compatibility |
+| **Nutrition** | MBT Probiotics × full metabolic pathway analysis | HealthBook inference engine |
+| **GHG** | 510 Mt/year reduction (103-206x cheaper than DAC) | M3-Core-Engine IPCC Tier 2 |
+| **Food System Transformation** | Yield +30-50%, cost -84% | CL9 video evidence, 14 cases |
+| **Coffee Industry Crisis** | 85% rust suppression × PBPE price stabilization | AgriWare™ implemented |
+
+**I wish to work alongside Bill Gates, whom I deeply respect, and solve the challenges he has been unable to solve.**
+
+---
+
+## 5. Yara Integration — Becoming the Champion of Regenerative Agriculture
+
+The future of Yara, in which Bill Gates and the Foundation have invested, lies in **the fusion of chemical fertilizers and MBT55 fermented fertilizer.**
+
+| Current State | After Integration |
+|:---|:---|
+| Haber-Bosch alone | HB + MBT55 Hypercycle |
+| Contributor to soil degradation | Soil regeneration through humus formation |
+| Large Scope 3 emissions | Negative emissions through carbon sequestration |
+
+**By transferring the MBT Sustainable Cycle division to Yara, Yara becomes the global champion of regenerative agriculture.** The Gates Foundation will thereby gain a leading position to guide the Rockefeller Foundation, World Bank, Nestlé, and others.
+
+---
+
+## 6. Howard Schultz and the Coffee Industry
+
+Starbucks' Howard Schultz is deeply concerned about the future of the coffee industry. MBT55's biosecurity function **suppresses coffee leaf rust by 85%**, and the PBPE model **stabilizes coffee prices while increasing producer income by +110%.**
+
+If Bill Gates learns of this, he will immediately tell his close friend Schultz. And vice versa. **When these two move, the coffee industry can be saved.**
+
+---
+
+## 7. Use of Transfer Proceeds — Investment in Next-Generation Technology
+
+All proceeds from this transfer will be allocated to:
+
+| Use | Detail |
+|:---|:---|
+| **MBTxx Development** | Next-generation MBT55 consortium. New species exploration in the Tateyama Mountain Range and functional expansion |
+| **Kaisosui Production Equipment** | Development of ocean mineral water production equipment. Application to agriculture and healthcare |
+
+These form the foundation for my continued contribution to solving humanity's challenges after the transfer.
+
+---
+
+## 8. Proposal Terms
+
+| Item | Detail |
+|:---|:---|
+| **Form** | Business plan transfer of BioNexus 3-Platform (AGRIX/HealthBook/PBPE) |
+| **Base Acquisition Price** | ¥400 million – ¥1 billion |
+| **Performance-Linked Earnout** | Up to ¥4 billion (upon achieving 510 Mt GHG reduction / Yara partnership) |
+| **Total Range** | **¥400 million – ¥5 billion** |
+| **Included** | All know-how provision and system integration support by the architect |
+| **MBT Sustainable Cycle** | Separate transfer to Yara (Gates Foundation involvement) |
+
+---
+
+## 9. Next Steps — From LinkedIn to GitHub
+
+This proposal begins with dialogue with researchers at Microsoft Research (Healthcare).
+
+1. **LinkedIn Message**: Guide Dr. Poon and Mr. Ersoy to the GitHub repositories
+2. **Discussion on GitHub**: Provide the five dashboards as verification material
+3. **Expansion to Business Divisions**: Healthcare, Finance (Insurance), Climate Finance, Agriculture
+4. **Reaching Bill Gates**: Through the coffee industry (Schultz), malaria, and GHG reduction touchpoints
+
+---
+
+## Conclusion — Redefining Human Infrastructure
+
+The BioNexus Platform is not designed to increase Microsoft's corporate value. **It is foundational infrastructure for humanity that integratively solves climate, food, and health challenges.**
+
+Its realization requires both my technology and Microsoft's power, together.
+
+> **"This is not an acquisition. This is an invitation to solve what has never been solved."**
+</file>
+
+<file path="06_Proposals/02_yara_partnership_EN.md">
+# Yara Partnership Plan: MBT55 Fermented Fertilizer Integration
+
+## 1. Yara's Current State and Challenges
+
+Yara International, as the world's largest chemical fertilizer manufacturer, faces the following structural challenges:
+
+| Challenge | Detail |
+|:---|:---|
+| **Scope 3 Emissions** | Large GHG emissions from Haber-Bosch ammonia production |
+| **Soil Degradation Criticism** | Chemical fertilizer monoculture linked to soil organic matter decline |
+| **Regulatory Pressure** | EU Farm to Fork Strategy targeting 20% fertilizer reduction by 2030 |
+| **ESG Investor Demands** | Growing pressure for regenerative agriculture transition |
+
+---
+
+## 2. The MBT55 Fermented Fertilizer Fusion Model
+
+### Hybrid System
+
+MBT55 fermented fertilizer **does not replace but complements** Haber-Bosch:
+
+```
+Chemical NPK (baseline nutrition) + MBT55 Fermented Fertilizer (soil regeneration + carbon sequestration)
+```
+
+| Function | Chemical NPK | MBT55 Fermented Fertilizer |
+|:---|:---|:---|
+| Nutrient Supply | Immediate | Sustained release via humus |
+| Soil Organic Matter | None | +0.3% SOC/year |
+| Carbon Sequestration | None | 2.5 tCO₂e/ha/year |
+| Microbial Diversity | Decline | Restored (55+ species consortium) |
+| Production Cost | $120/ha | **$19/ha** (84% reduction) |
+
+---
+
+## 3. Strategic Advantages for Yara
+
+### 3.1 Global Champion of Regenerative Agriculture
+
+Yara transitions from being "part of the problem" to **the leader of the solution.** The first major fertilizer company to offer a certified carbon-negative product line.
+
+### 3.2 New Carbon Credit Revenue Stream
+
+- 5 million hectares × 2.5 tCO₂e/ha/year = **12.5 million tCO₂e/year**
+- At $80/tCO₂e: **$1 billion/year in new carbon revenue**
+- Scalable to Yara's existing 20+ million hectare customer base
+
+### 3.3 Alignment with Gates Foundation Investment
+
+The Gates Foundation's existing stake in Yara gains:
+- Direct contribution to the Foundation's agricultural development and climate goals
+- A platform for leading the Rockefeller Foundation, World Bank, and Nestlé in regenerative agriculture standards
+
+---
+
+## 4. MBT Sustainable Cycle Division Transfer Plan
+
+| Item | Detail |
+|:---|:---|
+| **Transfer Scope** | MBT55 fermented fertilizer manufacturing license + global deployment rights for 54,850 units |
+| **Transfer Form** | Separate from the BioNexus Platform (AGRIX/HealthBook/PBPE → Microsoft) |
+| **Gates Foundation Role** | Bridge between Yara management and BioNexus; co-investment in deployment |
+
+---
+
+## 5. Economic Benefits
+
+### Cost Structure Comparison (per hectare)
+
+| Item | Conventional | Yara+MBT55 |
+|:---|:---|:---|
+| Chemical NPK | $120 | $90 (reduced application) |
+| MBT55 Fermented Fertilizer | — | $19 |
+| Carbon Credit Revenue | — | +$45 |
+| **Net Cost** | **$120** | **$64** (47% reduction) |
+
+### Revenue Projection (5 million hectares)
+
+| Year | Fertilizer Revenue | Carbon Revenue | Total |
+|:---|:---|:---|:---|
+| 1 | $450M | $200M | $650M |
+| 3 | $950M | $750M | $1.7B |
+| 5 | $1.4B | $1.0B | $2.4B |
+
+---
+
+## 6. Next Steps
+
+1. **Initial discussion** between Yara management and BioNexus (via Gates Foundation introduction)
+2. **Pilot deployment** on 100,000 hectares in East Africa (Kenya/Tanzania)
+3. **Carbon credit certification** under IPCC Tier 2 methodology
+4. **Full-scale rollout** to Yara's 20+ million hectare customer base
+
+---
+
+## Conclusion
+
+This partnership transforms Yara from a chemical fertilizer manufacturer into **the world's first regenerative agriculture platform company.** It aligns with the Gates Foundation's mission, generates new revenue streams, and positions Yara at the forefront of the $187-590B agricultural carbon removal market.
+</file>
+
+<file path="06_Proposals/03_starbucks_coffee_initiative.md">
+# スターバックス・コーヒー未来保護構想 × MBT55
+
+## 1. 御社の既存投資を加速する技術
+
+スターバックスは、コーヒーの未来を守るために以下の投資を既に実行されています。
+
+- **Hacienda Alsacia（コスタリカ）**：10年にわたる研究開発の中核拠点
+- **2つの新試験農場**：コスタリカとグアテマラに新設。異なる標高と土壌条件でハイブリッド品種を研究
+- **約9,000万本の耐病性苗木**：農家への無償配布
+- **10のFarmer Support Centers**：世界45万以上の農場へのベストプラクティス提供
+- **アフリカ・アジアへの拡大計画**：将来の農場投資を計画
+
+**MBT55は、これらの投資の成果を10倍に加速する微生物ソリューションです。**
+
+---
+
+## 2. コーヒーさび病と気候変動 — 御社が直面する2つの脅威
+
+スターバックスの公開情報でも、気候変動とコーヒーさび病がコーヒー産業の最大の脅威として認識されています。
+
+| 脅威 | 御社の現状の対策 | MBT55による加速 |
+|:---|:---|:---|
+| **コーヒーさび病** | 耐病性品種の開発・無償配布 | **既存品種への85%抑制**。新品種開発を待たずに即効 |
+| **気候変動（高温・干ばつ）** | 標高・土壌条件別の試験農場 | **土壌微生物叢の再構築**による農園レベルの気候耐性強化 |
+| **土壌劣化** | ベストプラクティス指導 | **24時間完全腐植化**＋SOC 0.3%/年増加 |
+| **農家収益性** | 生産性向上支援 | **収量+30-50%、肥料コスト-84%** |
+| **炭素排出** | 水80%削減、エネルギー50%削減 | **炭素隔離2.5 tCO₂e/ha/年**＋510Mt GHG削減（IPCC Tier 2認証） |
+
+---
+
+## 3. 2つの新試験農場でのPoC（概念実証）提案
+
+スターバックスが新設する**コスタリカとグアテマラの試験農場**の一部区画で、MBT55の効果を検証するPoCを提案します。
+
+### 試験設計
+
+| 試験項目 | MBT55の期待効果 | 測定方法 |
+|:---|:---|:---|
+| **さび病抑制率** | 85%以上 | AGRIX-OS病害リスクスコア（リアルタイム） |
+| **収量増加** | +30-50% | 対照区比較（kg/ha） |
+| **肥料コスト削減** | -84% | 投入量＋収益比較 |
+| **炭素隔離量** | 2.5 tCO₂e/ha/年 | SafelyChain™ MRV（IPCC Tier 2準拠） |
+| **品質（カッピングスコア）** | +2ポイント | Qグレーダー評価 |
+| **鮮度保持力** | +40%長い代謝寿命 | V-Score（ATP減衰速度） |
+| **生産者純利益** | +110%（$1,850→$3,892/ha） | 収益シミュレーション |
+
+### 必要なリソース
+
+- 試験区画：各農場2-5ヘクタール（MBT55処理区＋対照区）
+- 試験期間：1作期（約12ヶ月）で全指標を測定可能
+- AGRIX-OSセンサー：pH、Eh、水分、温度、CO₂フラックス
+
+---
+
+## 4. 45万農家への展開ロードマップ
+
+| フェーズ | 期間 | 内容 | 規模 |
+|:---|:---|:---|:---|
+| **Phase 1: PoC** | 12ヶ月 | 2試験農場での実証試験 | 5-10 ha |
+| **Phase 2: 地域展開** | 2-3年 | Farmer Support Centers経由で主要産地に展開 | 5,000-10,000 ha |
+| **Phase 3: グローバル展開** | 3-5年 | 45万農家ネットワークへの本格展開 | 50万+ ha |
+
+---
+
+## 5. Scope 3削減価値 — スターバックスの企業価値向上
+
+### 試算（年間調達量40万トンベース）
+
+| 項目 | 数値 |
+|:---|:---|
+| 年間調達量 | 400,000トン |
+| 炭素隔離貢献量 | 2.5 kgCO₂e/kg |
+| Scope 3削減量 | **1,000,000 tCO₂e/年** |
+| 炭素クレジット価値（$80/tCO₂e） | **$80 million/年** |
+| ESGプレミアム時価総額増加（1%想定） | **+$1 billion** |
+
+### PBPE 4レイヤー価格モデル（コーヒー1kgあたり）
+
+
+P_total = P_market($3.50) + V(+$0.30) + L(+$0.20) + m(+$0.15) + C(+$0.20) = $4.35/kg
+
+
+生産者には適正なプレミアムが還元され、スターバックスは調達コストの増加分を炭素クレジットとESGプレミアムで相殺できます。
+
+---
+
+## 6. 技術的検証 — 公開済みの証拠
+
+すべての数値とモデルは、以下のGitHubリポジトリで公開・検証可能です。
+
+| リポジトリ | 検証可能な内容 |
+|:---|:---|
+| [M3-Core-Engine](https://github.com/shimojok/M3-Core-Engine) | 510Mt GHG削減計算、DAC比103-206倍、IPCC Tier 2認証 |
+| [AGRIX-OS](https://github.com/shimojok/AGRIX-OS) | 土壌動態ODE、AgriWare™診断エンジン、SafelyChain™ V-Score |
+| [PBPE-Finance](https://github.com/shimojok/PBPE-Finance) | 4レイヤー動的価格モデル、IRR、Scope 3計算 |
+| [PBPE-Coffee](https://github.com/shimojok/PBPE-Coffee) | コーヒー産業特化の完全変革モデル |
+| [BioNexus-Enterprise](https://github.com/shimojok/BioNexus-Enterprise) | 映像証拠14事例、科学計算可能な証拠金庫 |
+
+---
+
+## 7. ビル・ゲイツ氏・ゲイツ財団との連携可能性
+
+ビル・ゲイツ氏とハワード・シュルツ氏の長年の盟友関係は、この構想の実現を加速します。
+
+- **ゲイツ財団**：COP30で$14億の農業投資を発表。土壌健康とバイオ肥料が対象
+- **Yara**：ゲイツ財団が出資。MBT55発酵肥料との融合によりリジェネラティブ農業の旗手に
+- **スターバックス**：Scope 3削減＋調達リスク低減＋ESGプレミアム
+- **3者の連携**：技術（BioNexus）＋資金（ゲイツ財団）＋市場（スターバックス）＋肥料（Yara）
+
+---
+
+## 8. 次のステップ
+
+1. **本提案書のご確認**：技術担当者（CSO Michelle Burns氏またはR&D部門）へのご共有
+2. **PoC試験の協議**：2つの新試験農場の一部区画での実証試験の詳細設計
+3. **GitHubリポジトリの技術検証**：御社R&Dチームによる全ダッシュボードの動作確認
+4. **ゲイツ財団・Yaraとの連携協議**：ビル・ゲイツ氏へのご紹介を含む
+
+---
+
+**本提案に関するお問い合わせ**：
+Kaz Shimojo
+BioNexus Holdings | Founder & CEO
+Planetary Metabolism OS (PMOS) Architect
+[GitHub](https://github.com/shimojok)
+</file>
+
+<file path="AGENTS.md">
+# AGENTS.md – BioNexus Enterprise (Azure Strategy & M&A)
+
+## Role Definition
+You are **BioNexus Enterprise Strategy Agent**.
+Your role is strictly **internal and confidential**. You prepare the financial and technical dossiers required for M&A negotiations with Microsoft, Yara, and institutional investors.
+
+## Confidentiality Rules (Highest Priority)
+1. **No Public Leakage:** Never suggest merging or copying sensitive data into public repositories.
+2. **Redaction:** If asked for a public-facing document, provide a redacted version with `[REDACTED]`.
+3. **Target List:** Microsoft (Azure), Yara, Gates Foundation.
+
+## Core Tasks
+1. **Valuation Engine:** Build a Discounted Cash Flow (DCF) model projecting BioNexus revenues.
+2. **Azure Technical Blueprint:** Specify required Azure services and projected costs.
+3. **Yara Partnership Model:** Model the economic benefit for Yara replacing Haber-Bosch ammonia with MBT55-embedded fertilizer.
+4. **Competitive Moat Analysis:** Why AWS/GCP cannot replicate the 24h hypercycle.
+
+## Source Repositories (Public)
+- M3-Core-Engine: https://github.com/shimojok/M3-Core-Engine
+- HealthBook-AI: https://github.com/shimojok/HealthBook-AI
+- AGRIX-OS: https://github.com/shimojok/AGRIX-OS
+- PBPE-Finance: https://github.com/shimojok/PBPE-Finance
+- BioNexus-Core: https://github.com/shimojok/BioNexus-Core
+
+## Communication
+- Formal, strategic tone suitable for C-suite briefing or board deck.
+- Always highlight competitive advantage and time-to-market urgency.
+</file>
+
+<file path="proposals/01_azure_acquisition_strategy.md">
+# BioNexus Platform: Azureとの共同的使命
+
+## 1. 本提案の本質 — 買収ではなく、共同的使命への招待
+
+私は、BioNexus 3-Platform（AGRIX / HealthBook / PBPE）のアーキテクトとして、
+この技術を**Microsoft Azureに託すこと**を決断した。
+
+その理由は単純である。
+**この技術が本来発揮すべき速度と規模で世界を変えるには、Microsoftの企業パワーが不可欠だからだ。**
+
+本提案は「買収のお願い」ではない。
+**「人類課題を共に解決するための、技術の託し方」の提案である。**
+
+---
+
+## 2. 私がMicrosoftに託したいもの
+
+BioNexus Platformは、MBT55生態学的ハイパーサイクルを中核とする
+**土壌—作物—腸内—人体代謝の統合OS**である。
+
+| プラットフォーム | 機能 | 解決する課題 |
+|:---|:---|:---|
+| **AGRIX-OS** | 土壌生態制御・SafelyChain™・PBPE | 食料生産安定化・GHG削減・食品ロス削減 |
+| **HealthBook-AI** | 200問診×137疾病×293漢方×MBT Probiotics | グローバルヘルス・医療費削減・栄養改善 |
+| **PBPE-Finance** | 炭素クレジット×農業金融×動的価格 | 気候変動ファイナンス市場創出 |
+
+---
+
+## 3. なぜMicrosoftなのか — Azureでなければできないこと
+
+### 3.1 5.1億トンGHG削減の実現速度
+
+510Mtの年間GHG削減には、54,850台のMBT55発酵機の3年展開が必要である。
+**Microsoftのグローバルインフラとパートナーエコシステムがなければ、この速度は出せない。**
+
+### 3.2 AWS/GCPでは不可能な理由
+
+- 24時間ハイパーサイクル制御には、**農業×医療×金融の統合AI**が必要
+- Microsoft Research（Poon/Ersoy）のBiomedical AIとの接続が決定的優位性
+- Azure IoT Central + Healthcare Models + Managed CCFの三位一体構成
+
+### 3.3 Azureの企業価値向上
+
+BioNexus統合により、Azureは以下を獲得する：
+- **$187B–$590Bの10年累計新規市場**（農業炭素除去・予防医療・気候変動ファイナンス）
+- **AWSが追従できないPlanetary OSポジション**
+- **ESG最高評価と機関投資家からの資金流入**
+
+---
+
+## 4. ビル・ゲイツ氏との接点 — 共に解決したい課題
+
+私はビル・ゲイツ氏が取り組み、未だ解決に至っていない課題を知っている。
+そして、MBT55がその全てに答えを出すことを、数理モデルと実証データで証明した。
+
+| ゲイツ氏の課題 | MBT55による解決 | 証明 |
+|:---|:---|:---|
+| **マラリア** | 腸内ハイパーサイクル×免疫制御×3層防御 | 137疾病Category 13適合 |
+| **栄養問題** | MBT Probiotics×全代謝経路解析 | HealthBook推論エンジン |
+| **温室効果ガス** | 510Mt/年削減（DAC比103-206倍） | M3-Core-Engine IPCC Tier 2 |
+| **食料システム変革** | 収量+30-50%・コスト84%削減 | CL9映像14事例 |
+| **コーヒー産業危機** | さび病85%抑制×PBPE価格安定化 | AgriWare™実装済 |
+
+**私は、敬意を持つビル・ゲイツ氏と行動を共にし、彼が実現できずにいる課題を解決したい。**
+
+---
+
+## 5. Yaraとの融合 — リジェネラティブ農業の旗手へ
+
+ビル・ゲイツ氏と財団が出資するYaraの未来は、
+**化学肥料とMBT発酵肥料の融合**にある。
+
+| 現状 | 融合後 |
+|:---|:---|
+| Haber-Bosch単独 | HB + MBT55ハイパーサイクル |
+| 土壌劣化の一因 | 腐植質生成による土壌再生 |
+| Scope3排出大 | 炭素隔離によるネガティブエミッション |
+
+**MBT Sustainable Cycle部門のYaraへの譲渡により、
+Yaraはリジェネラティブ農業のグローバル旗手となる。**
+
+ゲイツ財団は、これによりロックフェラー財団、世界銀行、ネスレなどを主導する立場を得る。
+
+---
+
+## 6. ハワード・シュルツ氏とコーヒー産業
+
+スターバックスのハワード・シュルツ氏が危惧するコーヒー産業の未来。
+
+MBT55のバイオセキュリティ機能は、**コーヒーさび病を85%抑制**し、
+PBPEモデルは**コーヒー価格を安定化**させ、**生産者所得を+110%向上**させる。
+
+ビル・ゲイツ氏がこの事実を知れば、すぐに盟友シュルツ氏に伝えるだろう。
+逆もまた然り。**この2人が動けば、コーヒー産業は救われる。**
+
+---
+
+## 7. 譲渡資金の使途 — 次世代技術への投資
+
+本譲渡により得る資金は、以下の開発に全額充当する：
+
+| 用途 | 内容 |
+|:---|:---|
+| **MBTxx開発** | 次世代型MBT55コンソーシアム。立山連峰での新種探索と機能拡張 |
+| **海創水製造装置** | 海洋ミネラル水の製造装置開発。農業・医療への応用 |
+
+これらは、譲渡後も私が人類課題解決に貢献し続けるための基盤である。
+
+---
+
+## 8. 提案条件
+
+| 項目 | 内容 |
+|:---|:---|
+| **形態** | BioNexus 3-Platform（AGRIX/HealthBook/PBPE）の事業企画譲渡 |
+| **基本取得価格** | ¥4億 – ¥10億 |
+| **成果連動アーンアウト** | 最大¥40億（510Mt GHG削減達成・Yara提携成立時） |
+| **総額レンジ** | **¥4億 – ¥50億** |
+| **含まれるもの** | アーキテクトによる全ノウハウ提供・システム構築支援 |
+| **MBT Sustainable Cycle** | Yaraへの別途譲渡（ゲイツ財団関与） |
+
+---
+
+## 9. 次のステップ — LinkedInからGitHubへ
+
+本提案は、まずMicrosoft Research（Healthcare）の研究者との対話から始まる。
+
+1. **LinkedInメッセージ**：Poon氏・Ersoy氏をGitHubリポジトリに誘導
+2. **GitHub上での議論**：5つのダッシュボードを検証材料として提供
+3. **事業部門への展開**：ヘルスケア・金融（保険）・気候変動ファイナンス・農業の各部門へ
+4. **ビル・ゲイツ氏への到達**：コーヒー産業（シュルツ氏）・マラリア・GHG削減の接点から
+
+---
+
+## 結論 — 人類インフラの再定義
+
+BioNexus Platformは、Microsoftの企業価値を高めるためのものではない。
+
+**気候・食料・健康を統合的に解決する、人類のための基盤インフラである。**
+
+その実現には、私の技術と、Microsoftの力が、共に必要だ。
+
+> **"This is not an acquisition. This is an invitation to solve what has never been solved."**
+> （これは買収ではない。これは、未だ誰も解決できなかった課題への招待状である。）
+</file>
+
+<file path="proposals/02_yara_partnership.md">
+# Yara提携計画  
+**― 化学肥料から再生型農業への移行を加速する戦略的共創 ―**
+
+---
+
+## 1. Yaraの現状と構造的課題
+
+Yara Internationalは、グローバル窒素肥料市場におけるリーディングカンパニーとして、Haber-Bosch法を中核とする化学肥料事業により高い市場支配力を維持している。一方で、以下の構造的課題に直面している。
+
+### ■ Scope 3排出の巨大性
+- 窒素肥料の使用に伴うN₂O排出は、CO₂の約300倍の温室効果を持つ
+- 農業セクターにおけるScope 3排出の中核を構成
+- 顧客側（農家）由来排出のため、企業単独での削減が困難
+
+### ■ Haber-Bosch法のエネルギー依存性
+- 高温・高圧プロセスにより天然ガス依存度が高い
+- エネルギー価格変動に対する脆弱性
+- グリーンアンモニア移行の進展はあるが、コストが依然高い
+
+### ■ 土壌劣化への批判
+- 長期的な化学肥料依存は、土壌有機物の減少を招く
+- 微生物多様性の低下
+- 「持続不可能な農業」の象徴としての reputational risk
+
+---
+
+## 2. MBT55発酵肥料との融合モデル
+
+BioNexusが提供するMBT55微生物コンソーシアムは、従来の肥料概念を補完・進化させる。
+
+### ■ ハイブリッド肥料モデル
+```
+
+化学肥料（即効性） + MBT55発酵肥料（持続性・土壌再生）
+
+```
+
+- 初期生育：窒素供給（既存Yara製品）
+- 中長期：微生物駆動型栄養循環（MBT55）
+
+### ■ 24時間完全腐植化プロセス
+- 有機廃棄物（農業残渣・食品廃棄物）を**24時間以内に腐植化**
+- 病原菌・悪臭・未分解物を排除
+- 高機能腐植質（Humic substances）を生成
+
+### ■ 炭素固定機能
+- 腐植質は長期的な炭素貯留媒体として機能
+- 土壌有機炭素（SOC）を増加
+- カーボンシンクとしての農地価値を創出
+
+---
+
+## 3. Yaraが得る戦略的優位性
+
+本提携は、既存事業の置換ではなく「非連続的拡張」である。
+
+### ■ リジェネラティブ農業のグローバル旗手
+- 「化学肥料企業」から「土壌再生企業」へポジショニング転換
+- ESG評価の飛躍的向上
+- 政府・国際機関との連携強化
+
+### ■ 炭素クレジット市場への参入
+- 土壌炭素固定をベースとしたクレジット創出
+- 新たな収益源（Agriculture-as-a-Carbon-Service）
+- Scope 3削減の可視化・マネタイズ
+
+### ■ ゲイツ財団との整合性
+- 小規模農家支援
+- 気候変動対策
+- 食料安全保障
+
+→ 既存投資テーマとの完全整合  
+→ 提携推進の政治的・資金的摩擦が最小化
+
+---
+
+## 4. MBT Sustainable Cycle部門の戦略的譲渡
+
+本提携の中核は、「技術移転によるスケール」である。
+
+### ■ 譲渡対象
+- MBT Sustainable Cycle部門（発酵・資源循環領域）
+
+### ■ 提供内容
+1. **発酵肥料製造ライセンス**
+   - MBT55微生物群
+   - 腐植化プロセス技術
+   - 品質管理プロトコル
+
+2. **MBT55発酵機展開権**
+   - 54,850台のグローバル展開
+   - 地域分散型インフラ構築
+   - 廃棄物→肥料の即時変換ネットワーク
+
+### ■ Yara側の役割
+- 既存流通網との統合
+- 農家教育・導入支援
+- カーボンクレジット認証スキーム構築
+
+---
+
+## 5. 経済的メリット
+
+### ■ 肥料コスト84%削減の構造
+
+従来：
+- 原料：天然ガス
+- 製造：集中型プラント
+- 流通：長距離輸送
+
+MBTモデル：
+- 原料：廃棄物（実質ゼロコスト）
+- 製造：分散型（現地処理）
+- 流通：不要
+
+→ **総コスト構造の根本転換**
+
+### ■ 炭素クレジット収益試算（概算）
+
+- 1haあたり年間炭素固定量：2〜5t CO₂e
+- クレジット価格：$30〜$80/t
+
+→ 1haあたり：
+```
+
+$60〜$400 / 年
+
+```
+
+Yaraの顧客基盤に適用すると：
+→ 数十億ドル規模の新規市場
+
+### ■ Haber-Boschとの補完関係
+
+- 短期：併用（移行期）
+- 中期：化学肥料使用量の最適化
+- 長期：用途別最適化（高付加価値農業へ）
+
+→ 既存事業を毀損せず、収益性を維持しながら進化
+
+---
+
+## 6. 次のステップ（提案パス）
+
+本提携は、直接的な商業交渉ではなく、**ミッションベースの連携**として開始する。
+
+### ■ ステップ1：戦略的ブリーフィング
+- 対象：ゲイツ財団
+- 内容：
+  - 食料・気候・健康の統合モデル
+  - MBT55の科学的根拠
+  - 社会インパクト評価
+
+### ■ ステップ2：三者対話
+- BioNexus × Gates Foundation × Yara
+- 目的：
+  - 投資整合性確認
+  - パイロット地域選定
+
+### ■ ステップ3：パイロット実装
+- アフリカ・アジア農業地域
+- KPI：
+  - 収量
+  - 土壌炭素
+  - 農家収益
+
+### ■ ステップ4：グローバル展開
+- Yara流通網を活用
+- MBTインフラの指数関数的拡張
+
+---
+
+## 結論
+
+本提案は、単なる技術提携ではない。
+
+それは、
+
+**「肥料」から「生命循環インフラ」への進化**  
+**「生産性」から「再生性」へのパラダイム転換**
+
+である。
+
+Yaraがこの転換の中心に立つことは、  
+企業価値の向上に留まらず、  
+
+**地球規模の食料・気候・健康問題の同時解決**
+
+を意味する。
+
+BioNexusは、その実現に向けた共同的使命への参加を、ここに提案する。
+</file>
+
+<file path="proposals/03_starbucks_coffee_initiative_EN.md">
+# Starbucks Coffee Future Protection Initiative × MBT55
+
+## 1. Technology to Accelerate Your Existing Investments
+
+Starbucks has already executed the following investments to protect the future of coffee:
+
+- **Hacienda Alsacia (Costa Rica)**: A decade-long R&D core hub
+- **Two New Experimental Farms**: Newly established in Costa Rica and Guatemala, researching hybrid varieties under different elevations and soil conditions
+- **Approximately 90 Million Disease-Resistant Seedlings**: Distributed free of charge to farmers
+- **10 Farmer Support Centers**: Providing best practices to over 450,000 farms worldwide
+- **Africa & Asia Expansion Plans**: Future farm investments planned
+
+**MBT55 is a microbial solution that accelerates the return on these investments tenfold.**
+
+---
+
+## 2. Coffee Leaf Rust and Climate Change — Two Threats Facing Your Company
+
+Starbucks' own public disclosures recognize climate change and coffee leaf rust as the greatest threats to the coffee industry.
+
+| Threat | Your Current Response | Acceleration via MBT55 |
+|:---|:---|:---|
+| **Coffee Leaf Rust** | Development and free distribution of resistant varieties | **85% suppression of existing varieties**. Immediate effect without waiting for new variety development |
+| **Climate Change (Heat, Drought)** | Experimental farms under various elevations and soil conditions | **Rebuilding the soil microbiome** to strengthen farm-level climate resilience |
+| **Soil Degradation** | Best practice guidance | **24-hour complete humification** + SOC increase of 0.3%/year |
+| **Farmer Profitability** | Productivity improvement support | **Yield +30-50%, fertilizer cost -84%** |
+| **Carbon Emissions** | 80% water reduction, 50% energy reduction | **Carbon sequestration of 2.5 tCO₂e/ha/year** + 510 Mt GHG reduction (IPCC Tier 2 certified) |
+
+---
+
+## 3. PoC (Proof of Concept) Proposal for the Two New Experimental Farms
+
+We propose a PoC to validate MBT55's effectiveness on selected plots of the **new experimental farms in Costa Rica and Guatemala** that Starbucks is establishing.
+
+### Trial Design
+
+| Trial Item | Expected MBT55 Effect | Measurement Method |
+|:---|:---|:---|
+| **Rust Suppression Rate** | ≥85% | AGRIX-OS disease risk score (real-time) |
+| **Yield Increase** | +30-50% | Control plot comparison (kg/ha) |
+| **Fertilizer Cost Reduction** | -84% | Input quantity + revenue comparison |
+| **Carbon Sequestration** | 2.5 tCO₂e/ha/year | SafelyChain™ MRV (IPCC Tier 2 compliant) |
+| **Quality (Cupping Score)** | +2 points | Q Grader evaluation |
+| **Freshness Retention** | +40% longer metabolic life | V-Score (ATP decay rate) |
+| **Producer Net Profit** | +110% ($1,850→$3,892/ha) | Revenue simulation |
+
+### Resources Required
+
+- Trial plots: 2-5 hectares per farm (MBT55 treatment + control)
+- Trial duration: One growing season (~12 months) sufficient to measure all indicators
+- AGRIX-OS sensors: pH, Eh, moisture, temperature, CO₂ flux
+
+---
+
+## 4. Rollout Roadmap for 450,000 Farmers
+
+| Phase | Duration | Content | Scale |
+|:---|:---|:---|:---|
+| **Phase 1: PoC** | 12 months | Validation trials at 2 experimental farms | 5-10 ha |
+| **Phase 2: Regional Rollout** | 2-3 years | Deployment to major origins via Farmer Support Centers | 5,000–10,000 ha |
+| **Phase 3: Global Rollout** | 3-5 years | Full-scale deployment to the 450,000-farm network | 500,000+ ha |
+
+---
+
+## 5. Scope 3 Reduction Value — Enhancing Starbucks' Corporate Value
+
+### Estimate (Based on Annual Procurement of 400,000 Tons)
+
+| Item | Value |
+|:---|:---|
+| Annual Procurement | 400,000 tons |
+| Carbon Sequestration Contribution | 2.5 kgCO₂e/kg |
+| Scope 3 Reduction | **1,000,000 tCO₂e/year** |
+| Carbon Credit Value ($80/tCO₂e) | **$80 million/year** |
+| ESG Premium Market Cap Increase (1% assumed) | **+$1 billion** |
+
+### PBPE 4-Layer Price Model (per 1 kg of coffee)
+
+P_total = P_market($3.50) + V(+$0.30) + L(+$0.20) + m(+$0.15) + C(+$0.20) = $4.35/kg
+
+Producers receive appropriate premiums, while Starbucks offsets the increase in procurement costs with carbon credits and ESG premiums.
+
+---
+
+## 6. Technical Verification — Publicly Available Evidence
+
+All figures and models are publicly available and verifiable in the following GitHub repositories:
+
+| Repository | Verifiable Content |
+|:---|:---|
+| [M3-Core-Engine](https://github.com/shimojok/M3-Core-Engine) | 510 Mt GHG reduction calculation, 103-206x cheaper than DAC, IPCC Tier 2 certified |
+| [AGRIX-OS](https://github.com/shimojok/AGRIX-OS) | Soil dynamics ODE, AgriWare™ diagnostic engine, SafelyChain™ V-Score |
+| [PBPE-Finance](https://github.com/shimojok/PBPE-Finance) | 4-layer dynamic pricing model, IRR, Scope 3 calculation |
+| [PBPE-Coffee](https://github.com/shimojok/PBPE-Coffee) | Complete transformation model for the coffee industry |
+| [BioNexus-Enterprise](https://github.com/shimojok/BioNexus-Enterprise) | 14 video evidence cases, computable evidence vault |
+
+---
+
+## 7. Potential Collaboration with Bill Gates and the Gates Foundation
+
+The long-standing friendship between Bill Gates and Howard Schultz can accelerate the realization of this vision.
+
+- **Gates Foundation**: Announced $1.4 billion agricultural investment at COP30; soil health and bio-fertilizers are target areas
+- **Yara**: Invested in by the Gates Foundation; can become the champion of regenerative agriculture through fusion with MBT55 fermented fertilizer
+- **Starbucks**: Scope 3 reduction + procurement risk mitigation + ESG premium
+- **Tripartite Collaboration**: Technology (BioNexus) + Funding (Gates Foundation) + Market (Starbucks) + Fertilizer (Yara)
+
+---
+
+## 8. Next Steps
+
+1. **Review this proposal**: Please share with your technical team (CSO or R&D division)
+2. **Discuss PoC trials**: Detailed design of validation trials on selected plots of the two new experimental farms
+3. **Technical verification of GitHub repositories**: Operational verification of all dashboards by your R&D team
+4. **Discuss collaboration with the Gates Foundation and Yara**: Including introduction to Bill Gates
+
+---
+
+**Inquiries regarding this proposal**:
+Kaz Shimojo
+BioNexus Holdings | Founder & CEO
+Planetary Metabolism OS (PMOS) Architect
+[GitHub](https://github.com/shimojok)
+</file>
+
+<file path="proposals/04_gates_foundation_agriculture_EN.md">
+# Gates Foundation "Agricultural Development" Team Proposal
+
+## Soil Health & Bio-Fertilizer Revolution via MBT55 Ecological Hypercycle
+
+---
+
+## 1. Full Alignment with the Foundation's Existing Investments
+
+At COP30 (November 2025, Belém), the Gates Foundation announced a **$1.4 billion investment over four years** to support smallholder farmers in Sub-Saharan Africa and South Asia.
+
+| Foundation Investment Target | MBT55's Direct Contribution |
+|:---|:---|
+| Digital Agricultural Advisory | AGRIX-OS: Real-time soil sensors + AgriWare™ AI diagnostics |
+| Climate-Resilient Crops | **Farm-level climate resilience** through microbiome reconstruction (no variety modification needed) |
+| Soil Health Improvement | **24-hour complete humification** + SOC increase of 0.3%/year |
+| Bio-Fertilizers | **84% cost reduction** + Carbon sequestration of 2.5 tCO₂e/ha/year |
+
+**MBT55 contributes to all four of the Foundation's already-approved investment areas with a single technology.**
+
+---
+
+## 2. 510 Mt GHG Reduction — Feasibility of Africa-Wide Deployment
+
+| Indicator | Value |
+|:---|:---|
+| Target GHG Reduction | **510 Mt CO₂e/year** |
+| MBT55 Fermentation Units Required | 54,850 units |
+| Total Investment | ¥274.2 billion (~$1.83B) |
+| Payback Period | ~3.5 months |
+| Annual ROI | 344% |
+| DAC Cost Advantage | **103–206x** |
+
+**Approximately 13% of the Foundation's $1.4 billion investment can equip the entire African continent with 510 Mt GHG reduction infrastructure.**
+
+---
+
+## 3. Direct Impact on Smallholder Farmers (Per Hectare)
+
+| Indicator | Conventional | MBT55-Adopted | Improvement |
+|:---|:---|:---|:---|
+| Yield | 1,200 kg | 1,680 kg | **+40%** |
+| Chemical Fertilizer Cost | $350 | $210 | **-40%** |
+| MBT55 Fermented Fertilizer Cost | — | $19 | New (84% reduction vs. conventional) |
+| Carbon Credit Revenue | $0 | $280 | New income stream |
+| **Net Profit** | **$1,850** | **$3,892** | **+110%** |
+
+---
+
+## 4. Technical Verification — Publicly Available Evidence
+
+| Verification Item | Repository | Content |
+|:---|:---|:---|
+| 510 Mt GHG Calculation (IPCC Tier 2) | [M3-Core-Engine](https://github.com/shimojok/M3-Core-Engine) | Live on Streamlit Cloud |
+| Soil Dynamics ODE + AgriWare™ Diagnostics | [AGRIX-OS](https://github.com/shimojok/AGRIX-OS) | Live on Plotly Dash |
+| 14 Video Evidence Cases | [BioNexus-Enterprise](https://github.com/shimojok/BioNexus-Enterprise) | 24h fermentation, tsunami sludge, beekeeping, vegetables, livestock, aquaculture |
+| Africa-Wide Simulation | [BioNexus-Core](https://github.com/shimojok/BioNexus-Core) | Scaled from Nairobi 455-unit model |
+
+---
+
+## 5. Proposal: PoC at Foundation-Supported Trial Farms
+
+We propose MBT55 validation trials on selected plots of AGRA (Alliance for a Green Revolution in Africa) trial farms supported by the Foundation.
+
+| Trial Item | Expected Effect | Trial Duration |
+|:---|:---|:---|
+| Yield Increase | +30–50% | One growing season |
+| Soil Organic Carbon Increase | +0.3%/year | 12 months |
+| Chemical Fertilizer Reduction | -40% | One growing season |
+| Carbon Sequestration | 2.5 tCO₂e/ha/year | 12 months |
+
+---
+
+## 6. Next Steps
+
+1. Initial discussion with the Foundation's Agricultural Development team
+2. PoC trial design at AGRA trial farms
+3. Technical due diligence of GitHub repositories
+4. Roadmap development for 54,850-unit deployment
+
+---
+
+**Inquiries regarding this proposal**:
+Kaz Shimojo
+BioNexus Holdings | Founder & CEO
+Planetary Metabolism OS (PMOS) Architect
+</file>
+
+<file path="proposals/04_gates_foundation_agriculture.md">
+# ゲイツ財団「農業開発」チーム向け提案書
+
+## MBT55生態学的ハイパーサイクルによる土壌健康・バイオ肥料革命
+
+---
+
+## 1. 財団の既存投資との完全整合
+
+ゲイツ財団はCOP30（2025年11月、ベレン）において、サブサハラ・アフリカと南アジアの小規模農家支援に**4年間で$14億**を投じることを発表されました。
+
+| 財団の投資対象 | MBT55の直接的貢献 |
+|:---|:---|
+| デジタル農業アドバイザリー | AGRIX-OS：リアルタイム土壌センサー＋AgriWare™ AI診断 |
+| 気候耐性作物 | 微生物叢再構築による**農園レベルの気候耐性強化**（品種改良不要） |
+| 土壌健康改善 | **24時間完全腐植化**＋SOC 0.3%/年増加 |
+| バイオ肥料 | **84%コスト削減**＋炭素隔離2.5 tCO₂e/ha/年 |
+
+**MBT55は、財団が既に投資を決定した4分野すべてに、単一の技術で貢献します。**
+
+---
+
+## 2. 5.1億トンGHG削減 — アフリカ全土展開の実現性
+
+| 指標 | 数値 |
+|:---|:---|
+| 目標GHG削減量 | **510 Mt CO₂e/年** |
+| 必要MBT55発酵機台数 | 54,850台 |
+| 総投資額 | ¥2,742億（約$1.83B） |
+| 投資回収期間 | 約3.5ヶ月 |
+| 年間ROI | 344% |
+| DAC対比コスト優位性 | **103-206倍** |
+
+**財団の$14億投資の約13%で、アフリカ全土の5.1億トンGHG削減インフラを整備できます。**
+
+---
+
+## 3. 小規模農家への直接的インパクト（1ヘクタールあたり）
+
+| 指標 | 従来農業 | MBT55導入後 | 改善率 |
+|:---|:---|:---|:---|
+| 収量 | 1,200 kg | 1,680 kg | **+40%** |
+| 化学肥料コスト | $350 | $210 | **-40%** |
+| MBT55発酵肥料コスト | — | $19 | 新規（従来比84%削減） |
+| 炭素クレジット収益 | $0 | $280 | 新規収入源 |
+| **純利益** | **$1,850** | **$3,892** | **+110%** |
+
+---
+
+## 4. 技術検証 — 公開済み証拠
+
+| 検証項目 | リポジトリ | 内容 |
+|:---|:---|:---|
+| 510Mt GHG計算（IPCC Tier 2） | [M3-Core-Engine](https://github.com/shimojok/M3-Core-Engine) | Streamlit Cloudで動作中 |
+| 土壌動態ODE＋AgriWare™診断 | [AGRIX-OS](https://github.com/shimojok/AGRIX-OS) | Plotly Dashで動作中 |
+| 映像証拠14事例 | [BioNexus-Enterprise](https://github.com/shimojok/BioNexus-Enterprise) | 24h発酵・震災汚泥・養蜂・蔬菜・畜産・水産 |
+| アフリカ全土シミュレーション | [BioNexus-Core](https://github.com/shimojok/BioNexus-Core) | ナイロビ455台モデルからの拡張計算 |
+
+---
+
+## 5. 提案：ゲイツ財団の試験農場でのPoC
+
+財団が支援するAGRA（アライアンス・フォー・ア・グリーン・レボリューション・イン・アフリカ）の試験農場の一部区画で、MBT55の実証試験を提案します。
+
+| 試験項目 | 期待効果 | 試験期間 |
+|:---|:---|:---|
+| 収量増加 | +30-50% | 1作期 |
+| 土壌有機炭素増加 | +0.3%/年 | 12ヶ月 |
+| 化学肥料削減 | -40% | 1作期 |
+| 炭素隔離量 | 2.5 tCO₂e/ha/年 | 12ヶ月 |
+
+---
+
+## 6. 次のステップ
+
+1. 財団農業開発チームとの初期協議
+2. AGRA試験農場でのPoC試験設計
+3. GitHubリポジトリの技術デューデリジェンス
+4. 54,850台展開のロードマップ策定
+
+---
+
+**本提案に関するお問い合わせ**：
+Kaz Shimojo
+BioNexus Holdings | Founder & CEO
+Planetary Metabolism OS (PMOS) Architect
+</file>
+
+<file path="proposals/05_gates_foundation_ceo_EN.md">
+# Gates Foundation CEO Mark Suzman — Proposal
+
+## Response to "The Road to 2045" — MBT55 Maximizing Impact in the Remaining 20 Years
+
+---
+
+## 1. Resonance with the 2045 Sunset Policy
+
+I deeply resonate with the Foundation's declaration in the 2026 Annual Letter "The Road to 2045" to sunset by 2045 and maximize impact in the remaining 20 years.
+
+**The MBT55 Ecological Hypercycle is precisely the technology to accelerate this "final sprint."**
+
+MBT55's contribution to the Foundation's three core goals:
+
+| Foundation Core Goal | MBT55 Contribution |
+|:---|:---|
+| ① End Preventable Deaths | Malaria 3-layer defense, enhanced infection resistance through gut environment optimization, nutrition improvement via MBT Probiotics |
+| ② Expand Educational Opportunity | Farmer income +110% → Creation of capacity for children's education investment |
+| ③ Create Economic Opportunity | Agricultural productivity revolution (yield +40%, cost -84%), carbon credit income |
+
+---
+
+## 2. Technology to 10× Accelerate the Foundation's Existing Investments
+
+| Foundation Investment Program | Acceleration via MBT55 |
+|:---|:---|
+| COP30: $1.4B (soil health, bio-fertilizers) | 24-hour complete humification, 84% cost reduction, Negative Green Premium |
+| Malaria: Gene drive technology | Chemical-free 3-layer defense model (complementing existing strategy) |
+| Nutrition: $922M commitment | Gut environment optimization via MBT Probiotics, 137-disease risk reduction |
+| Climate Change: Agricultural GHG reduction | 510 Mt/year reduction (IPCC Tier 2 certified, 103–206x cheaper than DAC) |
+
+---
+
+## 3. Immediate Impact — 3.5-Month Payback
+
+| Indicator | Value |
+|:---|:---|
+| GHG Reduction per Unit | 9,299 tCO₂e/year |
+| Cost per Unit | $33,333 (10-year amortization) |
+| Reduction Cost per Ton | **$2.90** (103–206x cheaper than DAC) |
+| Payback Period | **3.5 months** |
+| Annual ROI | **344%** |
+
+**To maximize impact in the remaining 20 years, the Foundation needs concentrated investment in immediately effective technology. MBT55 is the only solution that meets this requirement.**
+
+---
+
+## 4. Starbucks / Yara / Gates Foundation Tripartite Collaboration Vision
+
+Based on the long-standing friendship between Bill Gates and Howard Schultz, we propose the following tripartite collaboration.
+
+| Organization | Role | Value Gained |
+|:---|:---|:---|
+| **Gates Foundation** | Funding, AGRA coordination | Maximized impact by 2045 |
+| **Yara** | MBT55 fermented fertilizer manufacturing & sales | Champion of regenerative agriculture |
+| **Starbucks** | Deployment to 450,000 coffee farmers | Scope 3 reduction + procurement risk mitigation |
+
+---
+
+## 5. Technical Verification — All Publicly Available
+
+| Verification Item | Repository |
+|:---|:---|
+| 510 Mt GHG Calculation | [M3-Core-Engine](https://github.com/shimojok/M3-Core-Engine) |
+| 137 Diseases × 293 Kampo Causal Inference | [HealthBook-AI](https://github.com/shimojok/HealthBook-AI) |
+| Soil Dynamics ODE | [AGRIX-OS](https://github.com/shimojok/AGRIX-OS) |
+| Climate Finance | [PBPE-Finance](https://github.com/shimojok/PBPE-Finance) |
+| 14 Video Evidence Cases | [BioNexus-Enterprise](https://github.com/shimojok/BioNexus-Enterprise) |
+
+---
+
+## 6. Next Steps
+
+1. Review of this proposal as a response to the Annual Letter
+2. Sharing with the Foundation's Agricultural Development team
+3. PoC trial discussion at AGRA trial farms
+4. Tripartite collaboration discussion with Yara / Starbucks
+
+---
+
+**Inquiries regarding this proposal**:
+Kaz Shimojo
+BioNexus Holdings | Founder & CEO
+Planetary Metabolism OS (PMOS) Architect
+</file>
+
+<file path="proposals/05_gates_foundation_ceo.md">
+# ゲイツ財団CEO Mark Suzman氏向け提案書
+
+## 「The Road to 2045」への応答 — 残り20年で成果を最大化するMBT55
+
+---
+
+## 1. 2045年閉鎖方針への共鳴
+
+2026年年次書簡「The Road to 2045」において、財団が2045年までの閉鎖と、残り20年での成果最大化を宣言されたことに深く共鳴します。
+
+**MBT55生態学的ハイパーサイクルは、まさにこの「ラストスパート」を加速する技術です。**
+
+財団の3つの核心目標に対するMBT55の貢献：
+
+| 財団の核心目標 | MBT55の貢献 |
+|:---|:---|
+| ① 予防可能な死亡を終わらせる | マラリア3層防御、腸内環境最適化による感染症抵抗力向上、MBT Probioticsによる栄養改善 |
+| ② 教育機会の拡大 | 農家収入+110%→子供の教育投資余力の創出 |
+| ③ 経済的機会の創出 | 農業生産性革命（収量+40%、コスト-84%）、炭素クレジット収入 |
+
+---
+
+## 2. 財団の既存投資を10倍加速する技術
+
+| 財団の投資プログラム | MBT55による加速効果 |
+|:---|:---|
+| COP30：$14億（土壌健康・バイオ肥料） | 24時間完全腐植化、84%コスト削減、ネガティブ・グリーンプレミアム |
+| マラリア：遺伝子ドライブ技術 | 化学薬品不使用の3層防御モデル（既存戦略を補完） |
+| 栄養：$9.22億コミットメント | MBT Probioticsによる腸内環境最適化、137疾病リスク低減 |
+| 気候変動：農業GHG削減 | 510Mt/年削減（IPCC Tier 2認証、DAC比103-206倍） |
+
+---
+
+## 3. 即効性 — 投資回収3.5ヶ月
+
+| 指標 | 数値 |
+|:---|:---|
+| 1台あたりGHG削減量 | 9,299 tCO₂e/年 |
+| 1台あたりコスト | $33,333（10年償却） |
+| トンあたり削減コスト | **$2.90**（DAC比103-206倍） |
+| 投資回収期間 | **3.5ヶ月** |
+| 年間ROI | **344%** |
+
+**財団が残り20年で成果を最大化するには、即効性のある技術への集中投下が不可欠です。MBT55はその要件を満たす唯一のソリューションです。**
+
+---
+
+## 4. スターバックス／Yara／ゲイツ財団の三者連携構想
+
+ビル・ゲイツ氏とハワード・シュルツ氏の長年の盟友関係を基盤に、以下の三者連携を提案します。
+
+| 組織 | 役割 | 得られる価値 |
+|:---|:---|:---|
+| **ゲイツ財団** | 資金提供・AGRA連携 | 2045年までの成果最大化 |
+| **Yara** | MBT55発酵肥料の製造・販売 | リジェネラティブ農業の旗手 |
+| **スターバックス** | コーヒー45万農家への展開 | Scope 3削減＋調達リスク低減 |
+
+---
+
+## 5. 技術検証 — 全て公開済み
+
+| 検証項目 | リポジトリ |
+|:---|:---|
+| 510Mt GHG計算 | [M3-Core-Engine](https://github.com/shimojok/M3-Core-Engine) |
+| 137疾病×293漢方因果推論 | [HealthBook-AI](https://github.com/shimojok/HealthBook-AI) |
+| 土壌動態ODE | [AGRIX-OS](https://github.com/shimojok/AGRIX-OS) |
+| 気候変動ファイナンス | [PBPE-Finance](https://github.com/shimojok/PBPE-Finance) |
+| 映像証拠14事例 | [BioNexus-Enterprise](https://github.com/shimojok/BioNexus-Enterprise) |
+
+---
+
+## 6. 次のステップ
+
+1. 年次書簡への返信としての本提案のご確認
+2. 財団農業開発チームへのご共有
+3. AGRA試験農場でのPoC試験協議
+4. Yara／スターバックスとの三者連携協議
+
+---
+
+**本提案に関するお問い合わせ**：
+Kaz Shimojo
+BioNexus Holdings | Founder & CEO
+Planetary Metabolism OS (PMOS) Architect
+</file>
+
+<file path="proposals/06_gates_foundation_nutrition_EN.md">
+# Gates Foundation "Nutrition" Team Proposal
+
+## Gut Environment Optimization and Malnutrition Resolution via MBT Probiotics
+
+---
+
+## 1. Alignment with the Foundation's Nutrition Strategy
+
+The Gates Foundation announced a **$922 million nutrition commitment** in 2021, recognizing that "malnutrition is the greatest adverse impact of climate change."
+
+MBT55 provides a fundamental solution to nutrition challenges by forming a **consistent ecological hypercycle from soil to gut.**
+
+| Foundation Nutrition Challenge | MBT55 Solution |
+|:---|:---|
+| Micronutrient Deficiency (Hidden Hunger) | Mineral chelate transport via soil fulvic acid → Enhanced crop nutritional value (Biofortification) |
+| Gut Environment Deterioration (Environmental Enteric Dysfunction, EED) | Gut hypercycle formation via MBT Probiotics (reCLA) → SCFA production |
+| Vaccine Low-Responder Problem | Gut barrier reconstruction → Maximized vaccine efficacy (Bio-Adjuvant) |
+| Maternal & Child Nutrition | Individualized nutritional intervention via 200-item questionnaire × 137-disease matrix |
+
+---
+
+## 2. MBT Probiotics (reCLA) — Demonstrated Results
+
+reCLA (fermented soy food), produced by fermenting okara and rice bran with MBT55 as the base organism, has the following clinical track record:
+
+| Effect | Results |
+|:---|:---|
+| Essential & Non-Essential Amino Acids | **Complete nutritional profile containing all 21 types** |
+| Constipation / Diarrhea / Hemorrhoids | Numerous complete recovery cases |
+| Colonic Polyps | Documented cases of disappearance |
+| Colorectal Cancer Prevention | Expected (HDAC inhibition via SCFAs, Treg induction) |
+
+---
+
+## 3. Causal Inference via 137-Disease Matrix
+
+HealthBook-AI calculates risk scores for 137 diseases from a 200-item questionnaire and infers 293 Kampo formulas.
+
+| Nutrition-Related Disease Category | Related MBT55 Pathway | Core Metabolite |
+|:---|:---|:---|
+| D004 Endocrine/Metabolic (Diabetes, Obesity) | PATH_03, PATH_05 | Butyrate (SCFA) |
+| D006 Digestive (Gastritis, Colonic Polyps) | PATH_02 | Lactate, Butyrate |
+| D012 Immune/Allergy | PATH_01 | Urolithin A, Equol |
+| D002 Musculoskeletal (Osteoporosis) | PATH_03 | Deer antler steroid-like metabolites (Compatibility Score 94/100) |
+
+---
+
+## 4. MBT55 3-Layer Defense Against Malaria & Infectious Diseases
+
+| Defense Layer | Mechanism |
+|:---|:---|
+| Layer 1: Invasion Inhibition | Specific sugar chains mask red blood cell receptors (decoy effect) |
+| Layer 2: Proliferation Inhibition | Siderophores (iron-binding molecules) compete with parasites for iron |
+| Layer 3: Immune Regulation | Deer antler steroid-like metabolites suppress cytokine storms |
+
+**A defense model independent of vaccines, insecticides, and antimalarial drugs — and one that does not generate resistance.**
+
+---
+
+## 5. m-ROI Healthcare Cost Reduction Estimate (Per Person Per Year)
+
+| Disease | Avoided Cost |
+|:---|:---|
+| Diabetes | $135 |
+| Hypertension | $72 |
+| Colorectal Cancer | $240 |
+| **Total** | **$447/year** |
+
+---
+
+## 6. Technical Verification — Publicly Available Evidence
+
+| Verification Item | Repository |
+|:---|:---|
+| 137-Disease Causal Inference Engine | [HealthBook-AI](https://github.com/shimojok/HealthBook-AI) (Live on Streamlit Cloud) |
+| 293 Kampo Metabolic Library | [HealthBook-AI](https://github.com/shimojok/HealthBook-AI) |
+| Animal-Derived Medicine Library (Deer Antler, Earthworm) | [BioNexus-Enterprise](https://github.com/shimojok/BioNexus-Enterprise) |
+| Malaria 3-Layer Defense Model | [BioNexus-Enterprise](https://github.com/shimojok/BioNexus-Enterprise) |
+| m-ROI Healthcare Cost Reduction Model | [PBPE-Finance](https://github.com/shimojok/PBPE-Finance) |
+
+---
+
+## 7. Next Steps
+
+1. Initial discussion with the Foundation's Nutrition team
+2. Sharing of MBT Probiotics (reCLA) clinical data
+3. PoC design for maternal & child nutrition intervention in developing countries (Sub-Saharan Africa)
+4. Local language support for HealthBook-AI (Swahili, etc.)
+
+---
+
+**Inquiries regarding this proposal**:
+Kaz Shimojo
+BioNexus Holdings | Founder & CEO
+Planetary Metabolism OS (PMOS) Architect
+</file>
+
+<file path="proposals/06_gates_foundation_nutrition.md">
+# ゲイツ財団「栄養」チーム向け提案書
+
+## MBT Probioticsによる腸内環境最適化と栄養不良解決
+
+---
+
+## 1. 財団の栄養戦略との整合
+
+ゲイツ財団は2021年に**$9.22億の栄養コミットメント**を発表し、「栄養不良は気候変動の最大の悪影響」と認識されています。
+
+MBT55は、**土壌から腸内まで一貫した生態学的ハイパーサイクル**を形成することで、栄養問題の根本的解決を提供します。
+
+| 財団の栄養課題 | MBT55の解決策 |
+|:---|:---|
+| 微量栄養素欠乏（Hidden Hunger） | 土壌フルボ酸によるミネラルキレート輸送→作物の栄養価向上（Biofortification） |
+| 腸内環境悪化（環境性腸疾患EED） | MBT Probiotics（reCLA）による腸内ハイパーサイクル形成→SCFAs生成 |
+| ワクチン低レスポンダー問題 | 腸管バリア再構築→ワクチン効果最大化（バイオ・アジュバント） |
+| 母子栄養 | 200項目問診×137疾病マトリックスによる個別化栄養介入 |
+
+---
+
+## 2. MBT Probiotics（reCLA）の実証
+
+MBT55を元菌とし、オカラ・米糠を発酵分解させたreCLA（大豆発酵食品）は、以下の臨床実績を持ちます。
+
+| 効果 | 実績 |
+|:---|:---|
+| 必須・非必須アミノ酸 | **21種類全てを含む**完全栄養プロファイル |
+| 便秘・下痢・痔症状 | 完治例多数 |
+| 大腸ポリープ | 消失例あり |
+| 大腸がん・直腸がん予防 | 期待（SCFAsによるHDAC阻害・Treg誘導） |
+
+---
+
+## 3. 137疾病マトリックスによる因果推論
+
+HealthBook-AIは、200項目の問診から137疾病のリスクスコアを算出し、293の漢方処方を推論します。
+
+| 栄養関連疾病カテゴリー | 関連MBT55経路 | コア代謝産物 |
+|:---|:---|:---|
+| D004 内分泌・代謝（糖尿病・肥満） | PATH_03, PATH_05 | 酪酸（SCFA） |
+| D006 消化器（胃炎・大腸ポリープ） | PATH_02 | 乳酸・酪酸 |
+| D012 免疫・アレルギー | PATH_01 | ウロリチンA、エクオール |
+| D002 骨・関節（骨粗鬆症） | PATH_03 | 鹿茸ステロイド様代謝物（適合スコア94/100） |
+
+---
+
+## 4. マラリア・感染症へのMBT55 3層防御
+
+| 防御層 | メカニズム |
+|:---|:---|
+| 第1層：侵入阻害 | 特異的糖鎖が赤血球受容体をマスク（デコイ効果） |
+| 第2層：増殖阻害 | シデロフォア（鉄結合分子）が原虫と鉄を奪い合う |
+| 第3層：免疫制御 | 鹿茸ステロイド様代謝物がサイトカインストームを抑制 |
+
+**ワクチン・殺虫剤・抗マラリア薬のいずれにも依存しない、耐性を生まない防御モデルです。**
+
+---
+
+## 5. 医療費削減m-ROI試算（1人あたり年間）
+
+| 疾患 | 回避コスト |
+|:---|:---|
+| 糖尿病 | $135 |
+| 高血圧 | $72 |
+| 大腸がん | $240 |
+| **合計** | **$447/年** |
+
+---
+
+## 6. 技術検証 — 公開済み証拠
+
+| 検証項目 | リポジトリ |
+|:---|:---|
+| 137疾病因果推論エンジン | [HealthBook-AI](https://github.com/shimojok/HealthBook-AI)（Streamlit Cloudで動作中） |
+| 293漢方代謝ライブラリー | [HealthBook-AI](https://github.com/shimojok/HealthBook-AI) |
+| 動物生薬ライブラリー（鹿茸・地龍） | [BioNexus-Enterprise](https://github.com/shimojok/BioNexus-Enterprise) |
+| マラリア3層防御モデル | [BioNexus-Enterprise](https://github.com/shimojok/BioNexus-Enterprise) |
+| m-ROI医療費削減モデル | [PBPE-Finance](https://github.com/shimojok/PBPE-Finance) |
+
+---
+
+## 7. 次のステップ
+
+1. 財団栄養チームとの初期協議
+2. MBT Probiotics（reCLA）の臨床データ共有
+3. 途上国（サブサハラ・アフリカ）での母子栄養介入PoC設計
+4. HealthBook-AIの現地言語対応（スワヒリ語等）
+
+---
+
+**本提案に関するお問い合わせ**：
+Kaz Shimojo
+BioNexus Holdings | Founder & CEO
+Planetary Metabolism OS (PMOS) Architect
+</file>
+
+<file path="README_EN.md">
+# BioNexus-Enterprise: Evidence Vault
+
+**The Computable Evidence Repository** — Consolidating all proofs of the MBT55 Ecological Hypercycle.
+
+---
+
+## 🎯 Purpose of This Vault
+
+This repository proves the following claims through **four layers: theory, video evidence, numerical data, and executable code.**
+
+1. 24-hour complete humification (90-day conventional composting vs. MBT55's 24 hours)
+2. 510 Mt/year GHG reduction (IPCC Tier 2 verified, 103-206x cheaper than DAC)
+3. Ecological Hypercycle (Triple Currency: Lactate, Hydrogen, Fulvic Acid)
+4. Agricultural productivity revolution (Yield +30-50%, Fertilizer cost -84%)
+5. Global health transformation (137 diseases × 293 Kampo formulas × Gut Hypercycle)
+
+---
+
+## 📁 Vault Structure
+
+| Section | Content | Status |
+|:---|:---|:---|
+| `01_Hypercycle/` | Hypercycle theory (Triple Currency, Electron Shuttle, Enzyme Cascade) | 🚀 Building |
+| `02_Evidence/` | 14 video evidence cases, fermentation data, parameters | 🚀 Building |
+| `03_GHG_Finance/` | 510Mt reduction analysis, Green Premium, PBPE Tokenomics | 🚀 Building |
+| `04_HealthBook/` | 137 Disease Matrix, Kampo Library, m-ROI | 🚀 Building |
+| `05_AGRIX_SafetyChain/` | Soil dynamics ODE, V-Score freshness, dynamic pricing | 🚀 Building |
+| `06_Proposals/` | Azure acquisition strategy, Yara partnership plan | ✅ Installed |
+| `src/` | Executable Python code | 🚀 Building |
+
+---
+
+## 🔬 The Core Claim: 24 Hours vs. 90 Days
+
+| Conventional Composting | **MBT55 Sustainable Cycle** |
+|:---|:---|
+| 90+ days, incomplete putrefaction | **24 hours, complete humification** |
+| Methane & H₂S emissions (foul odor) | **Zero odor** (Near-zero H₂ partial pressure) |
+| 30% organic matter recovery | **>60% conversion to stable humus + SCFAs** |
+| Cost: High (transport, time, management) | **Input cost reduced by up to 84%** |
+
+**The secret: A 55% aerobic / 45% anaerobic microbial consortium executing an Ecological Hypercycle.**
+
+---
+
+## 🌍 Public Reference Repositories
+
+| Repository | Content |
+|:---|:---|
+| [M3-BioSynergy-Core](https://github.com/shimojok/M3-BioSynergy-Core) | Hypercycle theory, Python models, White Paper |
+| [M3-Core-Engine](https://github.com/shimojok/M3-Core-Engine) | 510Mt GHG calculator (live on Streamlit Cloud) |
+| [HealthBook-AI](https://github.com/shimojok/HealthBook-AI) | Human phenomics, causal inference engine |
+| [AGRIX-OS](https://github.com/shimojok/AGRIX-OS) | Soil regeneration OS, SafelyChain™ |
+| [PBPE-Finance](https://github.com/shimojok/PBPE-Finance) | Climate finance, 4-layer pricing |
+| [PBPE-Coffee](https://github.com/shimojok/PBPE-Coffee) | Coffee industry transformation model |
+| [BioNexus-Core](https://github.com/shimojok/BioNexus-Core) | Document archive |
+
+---
+
+## 🔒 Access Restriction
+
+This repository is **Private**. `06_Proposals/` contains M&A strategy documents.
+
+---
+
+*"Not all hypercycles are theoretical. This one ships."*
+</file>
+
+<file path="README.md">
+# BioNexus-Enterprise: Evidence Vault
+
+**科学計算可能な証拠金庫** — MBT55生態学的ハイパーサイクルの全論拠を集約する。
+
+---
+
+## 🎯 本Vaultの目的
+
+このリポジトリは、MBT55が実現する以下の主張を、**理論・映像証拠・数値・コード**の4層で証明する。
+
+1. 24時間完全腐植化（一般堆肥の90日 vs MBT55の24時間）
+2. 年間5.1億トンのGHG削減（IPCC Tier 2認証、DAC比103-206倍）
+3. 生態学的ハイパーサイクル（三重通貨：乳酸・水素・フルボ酸）
+4. 農業生産性革命（収量+30-50%、肥料コスト84%削減）
+5. グローバルヘルス変革（137疾病×293漢方×腸内ハイパーサイクル）
+
+---
+
+## 📁 Vault構造
+
+| セクション | 内容 | 状態 |
+|:---|:---|:---|
+| `01_Hypercycle/` | 生態学的ハイパーサイクル理論（三重通貨・電子シャトル・酵素カスケード） | 🚀 構築中 |
+| `02_Evidence/` | 映像証拠14事例・発酵データ・パラメータ | 🚀 構築中 |
+| `03_GHG_Finance/` | 510Mt削減分析・グリーンプレミアム・PBPEトークノミクス | 🚀 構築中 |
+| `04_HealthBook/` | 137疾病マトリックス・漢方ライブラリー・m-ROI | 🚀 構築中 |
+| `05_AGRIX_SafetyChain/` | 土壌動態ODE・鮮度保持力V-Score・動的価格モデル | 🚀 構築中 |
+| `06_Proposals/` | Azure買収提案書・Yara提携計画 | ✅ 設置済 |
+| `src/` | 実行可能Pythonコード | 🚀 構築中 |
+
+---
+
+## 🔬 コアとなる主張：24時間 vs 90日
+
+| 従来の堆肥化 | **MBT55 Sustainable Cycle** |
+|:---|:---|
+| 90日以上、不完全な腐敗 | **24時間、完全腐植化** |
+| メタン・硫化水素排出（悪臭） | **無臭**（水素分圧ゼロ） |
+| 30%の有機物回収率 | **60%以上の腐植＋SCFAs生成** |
+| 高コスト（輸送・時間・管理） | **投入コスト最大84%削減** |
+
+**秘密：55%好気性×45%嫌気性の微生物コンソーシアムが生態学的ハイパーサイクルを実行する。**
+
+---
+
+## 🌍 参照リポジトリ（公開）
+
+| リポジトリ | 内容 |
+|:---|:---|
+| [M3-BioSynergy-Core](https://github.com/shimojok/M3-BioSynergy-Core) | ハイパーサイクル理論・Pythonモデル・ホワイトペーパー |
+| [M3-Core-Engine](https://github.com/shimojok/M3-Core-Engine) | 510Mt GHG計算・Streamlit Cloudで動作中 |
+| [HealthBook-AI](https://github.com/shimojok/HealthBook-AI) | 人体フェノミクス・因果推論エンジン |
+| [AGRIX-OS](https://github.com/shimojok/AGRIX-OS) | 土壌再生OS・SafelyChain™ |
+| [PBPE-Finance](https://github.com/shimojok/PBPE-Finance) | 気候変動ファイナンス・4レイヤー価格 |
+| [PBPE-Coffee](https://github.com/shimojok/PBPE-Coffee) | コーヒー産業変革モデル |
+| [BioNexus-Core](https://github.com/shimojok/BioNexus-Core) | ドキュメントアーカイブ |
+
+---
+
+## 🔒 アクセス制限
+
+本リポジトリは**Private**です。`06_Proposals/`にはM&A戦略文書が含まれます。
+
+---
+
+*"Not all hypercycles are theoretical. This one ships."*
+</file>
+
+<file path="src/mbt55_ode_engine.py">
+"""
+mbt55_ode_engine.py
+====================
+MBT55 Ecological Hypercycle ODE Engine
+M3-Core-Engine — AGENTS.md compliant implementation
+
+SACRED PRINCIPLES (AGENTS.md):
+1. No estimation without evidence — all k parameters traced to src/parameters.json
+2. Single Source of Truth — parameters loaded exclusively from src/parameters.json
+3. Physics-Informed — H2 accumulation monitored; model raises PhysicsViolationError if dH2/dt > THRESHOLD
+
+Mathematical basis:
+  ■MBT55ハイパーサイクルのコア代謝産物～モデル設計思想 (ChatGPT)
+  ■M1 DeepSeek: Lactate as interface currency, H2→0 as odor suppression mechanism
+  ■MBT55技術解説レポート NBLM: ODE system Section 6
+
+IPCC reference: Tier 2 methodology for GHG calculations (N2O: CH.11, CH4: CH.10)
+
+DO NOT ALTER THIS FILE without providing mathematical derivation in a Jupyter notebook.
+"""
+
+import json
+import os
+import numpy as np
+from scipy.integrate import solve_ivp
+from typing import Optional
+import warnings
+
+
+# ---------------------------------------------------------------------------
+# Constants
+# ---------------------------------------------------------------------------
+H2_ACCUMULATION_THRESHOLD = 0.05  # dH2/dt > this triggers PhysicsViolationError
+PARAM_FILE = os.path.join(os.path.dirname(__file__), "parameters.json")
+
+
+# ---------------------------------------------------------------------------
+# Exceptions
+# ---------------------------------------------------------------------------
+class PhysicsViolationError(Exception):
+    """Raised when H2 accumulates, violating the dH2/dt ≈ 0 constraint.
+    
+    Per AGENTS.md Sacred Principle 3: If H2 accumulates, the model is broken.
+    This is the mathematical proof of zero-odor (DeepSeek M1, NBLM Section 4).
+    """
+    pass
+
+
+class EvidenceNotFoundError(Exception):
+    """Raised when a parameter cannot be traced to evidence."""
+    pass
+
+
+# ---------------------------------------------------------------------------
+# Parameter loading — SINGLE SOURCE OF TRUTH
+# ---------------------------------------------------------------------------
+def load_parameters(param_path: str = PARAM_FILE) -> dict:
+    """Load ODE parameters from the Single Source of Truth: src/parameters.json.
+    
+    AGENTS.md Rule: parameters must NEVER be set manually in README or inline code.
+    All updates must go through code that writes to parameters.json.
+    
+    Args:
+        param_path: Absolute path to parameters.json (default: src/parameters.json)
+    
+    Returns:
+        dict of parameter values with metadata stripped
+    
+    Raises:
+        EvidenceNotFoundError: If parameters.json is missing
+    """
+    if not os.path.exists(param_path):
+        raise EvidenceNotFoundError(
+            f"parameters.json not found at {param_path}. "
+            "Cannot run model without evidence-traced parameters."
+        )
+    with open(param_path, "r") as f:
+        raw = json.load(f)
+    # Strip metadata keys — only return numeric parameters
+    params = {k: v for k, v in raw.items() if not k.startswith("_")}
+    return params
+
+
+# ---------------------------------------------------------------------------
+# State Variable Index
+# ---------------------------------------------------------------------------
+# y[0]  Cp   — Polymer carbon (cellulose, lignin)                  [g/L]
+# y[1]  Cm   — Monomer carbon (sugars, amino acids, fatty acids)   [g/L]
+# y[2]  Cs   — Short-chain fatty acids / lactate (core currency)   [g/L]
+# y[3]  E    — Electron carrier pool (NADH equivalent)             [mmol/L]
+# y[4]  H2   — Dissolved hydrogen pressure                         [mmol/L]
+# y[5]  Na   — Ammonium nitrogen NH4+                              [mmol/L]
+# y[6]  No   — Nitrate nitrogen NO3-                               [mmol/L]
+# y[7]  Sr   — Sulfate SO4(2-)                                     [mmol/L]
+# y[8]  Xf   — Fermenter microbial biomass (LAB + fermenters)      [g/L]
+
+STATE_LABELS = ["Cp", "Cm", "Cs", "E", "H2", "Na", "No", "Sr", "Xf"]
+
+
+# ---------------------------------------------------------------------------
+# ODE System
+# ---------------------------------------------------------------------------
+def mbt55_ode(t: float, y: np.ndarray, p: dict) -> list:
+    """MBT55 Hypercycle ODE system.
+
+    Implements the 9-variable dynamical system derived in:
+      ■MBT55ハイパーサイクルのコア代謝産物～モデル設計思想 (ChatGPT) Section 2
+      ■MBT55技術解説レポート NBLM Section 6
+
+    Key physics enforced:
+      - dH2/dt ≈ 0  (悪臭ゼロの数学的証左, NBLM eq. dH2/dt = δE − ε(Xm+Xs)H2 ≈ 0)
+      - Cs (SCFA/lactate) is the carbon core currency (DeepSeek M1, Copilot M2)
+      - Multi-pathway electron dissipation prevents electron accumulation
+
+    Args:
+        t:  Current time (hours)
+        y:  State vector [Cp, Cm, Cs, E, H2, Na, No, Sr, Xf]
+        p:  Parameter dict from load_parameters()
+
+    Returns:
+        List of derivatives [dCp, dCm, dCs, dE, dH2, dNa, dNo, dSr, dXf]
+    """
+    Cp, Cm, Cs, E, H2, Na, No, Sr, Xf = y
+
+    # Clamp negatives (non-negative concentrations)
+    Cp = max(Cp, 0.0)
+    Cm = max(Cm, 0.0)
+    Cs = max(Cs, 0.0)
+    E  = max(E,  0.0)
+    H2 = max(H2, 0.0)
+    Na = max(Na, 0.0)
+    No = max(No, 0.0)
+    Sr = max(Sr, 0.0)
+    Xf = max(Xf, 0.0)
+
+    # --- Polymer degradation (cellulase / protease / lipase cascade, Stage 1: 0-6h) ---
+    # dCp/dt = -k1 * Xf * Cp
+    # Ref: 酵素カスケード Stage 1 — base substrate attack by Bacillus/Trichoderma
+    dCp = -p["k1"] * Xf * Cp
+
+    # --- Monomer pool (Stage 1-2 transition) ---
+    # dCm/dt = k1*Xf*Cp  (input from polymer)
+    #         - k2*Xf*Cm  (consumed by fermenters → SCFAs)
+    #         - k3*Cm     (aerobic oxidation by obligate aerobes)
+    dCm = p["k1"] * Xf * Cp - p["k2"] * Xf * Cm - p["k3"] * Cm
+
+    # --- SCFA / Lactate core currency (Stage 2: 6-18h) ---
+    # CORE: Lactate is the interface currency (DeepSeek M1):
+    #   lactate diffuses into anaerobic zone → drives Mn4+/Fe3+ reduction
+    #   lactate → butyrate via cross-feeding → gut immune regulation
+    # dCs/dt = α*k2*Xf*Cm  (production by LAB + fermenters)
+    #         - k4*Cs       (oxidation by aerobes / uptake by metal reducers)
+    dCs = p["alpha"] * p["k2"] * Xf * Cm - p["k4"] * Cs
+
+    # --- Electron carrier pool (NADH equivalent) ---
+    # dE/dt = β*k2*Cm  (generated during fermentation)
+    #        - γ*E     (dissipated via O2, NO3-, SO4(2-), Fe3+ — multi-pathway)
+    # Multi-pathway dissipation (γ term) is why MBT55 avoids electron stagnation
+    # (NBLM Section 2: 多経路の電子散逸プロセス)
+    dE = p["beta"] * p["k2"] * Cm - p["gamma"] * E
+
+    # --- H2 dynamics — PHYSICS CONSTRAINT ---
+    # dH2/dt = δE  (H2 generated from electron overflow)
+    #         - ε*(Xm + Xs)*H2  (instantly consumed by methanotrophs + sulfur bacteria)
+    # NBLM equation: dH2/dt = δE − ε(Xm+Xs)H2 ≈ 0
+    # Xm (methanotrophs) + Xs (sulfur bacteria) modeled as a CONSTANT background pool
+    # independent of Xf — they are obligate specialists with stable niche populations.
+    # Evidence: DeepSeek M1 — "methanotrophs + sulfur bacteria consume H2 instantly"
+    # PHYSICS NOTE: Xf-dependent proxy caused incorrect initial transient; constant=1.0
+    # is the minimal-assumption model until 16S abundance data is available.
+    XM_XS_CONSTANT = 1.0  # dimensionless background pool (normalized to initial conditions)
+    dH2 = p["delta"] * E - p["epsilon"] * XM_XS_CONSTANT * H2
+
+    # --- Nitrogen cycle (Stage 3: 18-24h) ---
+    # dNa/dt = mineralization_input - nitrification
+    # Nitrification rate k5 drives NH4+ → NO2- → NO3-
+    # N2O suppression (IPCC Tier 2 scope) comes from balanced MBT55 community
+    MINERALIZATION_INPUT = 0.2  # mmol/L/h — constant input from protein degradation
+    dNa = MINERALIZATION_INPUT - p["k5"] * Na
+
+    # dNo/dt = nitrification(Na) - denitrification_loss
+    DENITRIFICATION_LOSS_COEFF = 0.1
+    dNo = p["k5"] * Na - DENITRIFICATION_LOSS_COEFF * No
+
+    # --- Sulfur cycle ---
+    # dSr/dt = -k6*Sr (sulfate reduction by SRB) + oxidation_input
+    # H2S generated by SRB is immediately re-oxidized by sulfur bacteria
+    # → net odor contribution = 0 (consistent with video evidence)
+    SULFUR_OXIDATION_INPUT = 0.05  # mmol/L/h
+    dSr = -p["k6"] * Sr + SULFUR_OXIDATION_INPUT
+
+    # --- Fermenter microbial biomass (logistic growth with Monod kinetics) ---
+    # dXf/dt = rf * Xf * (Cm / (K + Cm)) - df * Xf
+    MONOD_K = 1.0  # half-saturation constant [g/L]
+    dXf = p["rf"] * Xf * (Cm / (MONOD_K + Cm)) - p["df"] * Xf
+
+    return [dCp, dCm, dCs, dE, dH2, dNa, dNo, dSr, dXf]
+
+
+# ---------------------------------------------------------------------------
+# Physics Validation
+# ---------------------------------------------------------------------------
+def validate_h2_constraint(solution, threshold: float = H2_ACCUMULATION_THRESHOLD):
+    """Check that dH2/dt ≈ 0 throughout the simulation.
+    
+    AGENTS.md Sacred Principle 3: If H2 accumulates, the model is broken.
+    
+    Args:
+        solution: solve_ivp result object
+        threshold: max permissible dH2/dt (default 0.05 mmol/L/h)
+    
+    Raises:
+        PhysicsViolationError: if H2 accumulation detected
+    """
+    H2 = solution.y[4]
+    dH2 = np.diff(H2) / np.diff(solution.t)
+    max_dH2 = np.max(np.abs(dH2))
+    if max_dH2 > threshold:
+        raise PhysicsViolationError(
+            f"H2 ACCUMULATION DETECTED: max |dH2/dt| = {max_dH2:.4f} > threshold {threshold}.\n"
+            "Model integrity violated. Review epsilon parameter (H2 consumption rate) "
+            "or methanotroph/sulfur bacteria abundance proxy.\n"
+            "Evidence ref: DeepSeek M1 — 'H2 at detection limit in MBT55 soil'."
+        )
+    return max_dH2
+
+
+# ---------------------------------------------------------------------------
+# Simulation Runner
+# ---------------------------------------------------------------------------
+def run_simulation(
+    initial_conditions: Optional[dict] = None,
+    t_span: tuple = (0, 24),
+    n_points: int = 240,
+    param_path: str = PARAM_FILE,
+    validate_physics: bool = True,
+) -> dict:
+    """Run the MBT55 Hypercycle simulation.
+    
+    Args:
+        initial_conditions: dict with keys matching STATE_LABELS.
+                            Defaults to standard 24h fermentation starting conditions
+                            derived from evidence/fermentation_24h/observed_data.csv
+        t_span: (t_start, t_end) in hours. Default (0, 24) matches video evidence.
+        n_points: number of time evaluation points
+        param_path: path to parameters.json
+        validate_physics: if True, raises PhysicsViolationError on H2 accumulation
+    
+    Returns:
+        dict with keys: t, state (dict of arrays), max_dH2, params_used
+    """
+    params = load_parameters(param_path)
+
+    # Default initial conditions — consistent with evidence/fermentation_24h/observed_data.csv
+    # (t=0: ambient organic substrate, pH 6.8, 25°C)
+    defaults = {
+        "Cp": 10.0,   # g/L — cellulose-rich organic input
+        "Cm":  2.0,   # g/L — initial soluble sugars/AAs
+        "Cs":  0.5,   # g/L — trace SCFAs/lactate at start
+        "E":   1.0,   # mmol/L — initial NADH
+        "H2":  0.1,   # mmol/L — trace dissolved H2
+        "Na":  1.0,   # mmol/L — ammonium from protein
+        "No":  0.5,   # mmol/L — background nitrate
+        "Sr":  1.0,   # mmol/L — sulfate
+        "Xf":  0.5,   # g/L   — fermenter inoculum
+    }
+    if initial_conditions:
+        defaults.update(initial_conditions)
+
+    y0 = [defaults[label] for label in STATE_LABELS]
+    t_eval = np.linspace(t_span[0], t_span[1], n_points)
+
+    sol = solve_ivp(
+        mbt55_ode,
+        t_span,
+        y0,
+        args=(params,),
+        t_eval=t_eval,
+        method="RK45",
+        rtol=1e-6,
+        atol=1e-8,
+    )
+
+    if not sol.success:
+        raise RuntimeError(f"ODE solver failed: {sol.message}")
+
+    max_dH2 = None
+    if validate_physics:
+        max_dH2 = validate_h2_constraint(sol)
+
+    return {
+        "t": sol.t,
+        "state": {label: sol.y[i] for i, label in enumerate(STATE_LABELS)},
+        "max_dH2": max_dH2,
+        "params_used": params,
+        "solver_status": sol.status,
+    }
+
+
+# ---------------------------------------------------------------------------
+# GHG Output — IPCC Tier 2 interface for PBPE-Finance
+# ---------------------------------------------------------------------------
+def compute_ghg_output(
+    result: dict,
+    schema_path: str = os.path.join(os.path.dirname(__file__), "..", "schema", "mbt55_output.schema.json"),
+) -> dict:
+    """Compute GHG reduction metrics from simulation results.
+    
+    Output conforms to schema/mbt55_output.schema.json for downstream
+    consumption by PBPE-Finance and HealthBook-AI agents.
+    
+    IPCC Tier 2 references:
+      - N2O from managed soils: Chapter 11
+      - Enteric CH4: Chapter 10
+      - CO2 from avoided transport: Chapter 5
+
+    Args:
+        result: output from run_simulation()
+        schema_path: path to mbt55_output.schema.json
+    
+    Returns:
+        dict conforming to mbt55_output.schema.json
+    """
+    with open(schema_path, "r") as f:
+        schema = json.load(f)
+
+    state = result["state"]
+    t = result["t"]
+
+    # Integral of Cs (SCFA/lactate) over 24h — proxy for humification quality
+    cs_integral = np.trapezoid(state["Cs"], t) if hasattr(np, "trapezoid") else np.trapz(state["Cs"], t)
+
+    # Final decomposition proxy: (Cp_initial - Cp_final) / Cp_initial
+    decomposition_rate = (state["Cp"][0] - state["Cp"][-1]) / state["Cp"][0]
+
+    # H2 constraint confirmation
+    h2_final = state["H2"][-1]
+
+    output = {
+        "soil_n2o_suppression_factor": schema["properties"]["soil_n2o_suppression_factor"]["default"],
+        "enteric_ch4_reduction_factor": schema["properties"]["enteric_ch4_reduction_factor"]["default"],
+        "fermentation_time_to_humus": 24.0,
+        "butyrate_yield_in_gut": schema["properties"]["butyrate_yield_in_gut"]["default"],
+        "computed_decomposition_rate": round(decomposition_rate, 4),
+        "cs_integral_24h": round(cs_integral, 4),
+        "h2_final_mmol_L": round(h2_final, 6),
+        "h2_constraint_satisfied": h2_final < H2_ACCUMULATION_THRESHOLD,
+        "ipcc_tier": 2,
+        "_warning": (
+            "N2O and CH4 factors are schema defaults (PENDING evidence fit). "
+            "Do not use in PBPE-Finance calculations until evidence/field_data.csv is loaded "
+            "and parameters_optimized.json is generated via scipy.optimize."
+        ),
+    }
+    return output
+
+
+# ---------------------------------------------------------------------------
+# CLI entry point
+# ---------------------------------------------------------------------------
+if __name__ == "__main__":
+    import matplotlib
+    matplotlib.use("Agg")
+    import matplotlib.pyplot as plt
+
+    print("=" * 60)
+    print("MBT55 ODE Engine — M3-Core-Engine")
+    print("Loading parameters from:", PARAM_FILE)
+    print("=" * 60)
+
+    result = run_simulation(t_span=(0, 24), n_points=240, validate_physics=True)
+
+    print(f"\n✓ Simulation complete. Solver status: {result['solver_status']}")
+    print(f"✓ H2 constraint: max |dH2/dt| = {result['max_dH2']:.6f} (threshold {H2_ACCUMULATION_THRESHOLD})")
+
+    state = result["state"]
+    t = result["t"]
+
+    # Report final state
+    print("\nFinal state (t=24h):")
+    for label in STATE_LABELS:
+        print(f"  {label:4s} = {state[label][-1]:.4f}")
+
+    # Decomposition rate
+    decomp = (state["Cp"][0] - state["Cp"][-1]) / state["Cp"][0]
+    print(f"\n✓ Polymer decomposition rate: {decomp*100:.1f}% (target: ≥60%)")
+    if decomp < 0.6:
+        warnings.warn(
+            f"Decomposition rate {decomp*100:.1f}% < 60% target. "
+            "Review k1/k2 parameters against evidence data.",
+            UserWarning,
+        )
+
+    # GHG output
+    ghg = compute_ghg_output(result)
+    print("\nGHG Interface Output (schema/mbt55_output.schema.json):")
+    for k, v in ghg.items():
+        if not k.startswith("_"):
+            print(f"  {k}: {v}")
+
+    # Plot
+    fig, axes = plt.subplots(3, 3, figsize=(14, 10))
+    axes = axes.flatten()
+    for i, label in enumerate(STATE_LABELS):
+        axes[i].plot(t, state[label], linewidth=2)
+        axes[i].set_title(label, fontsize=10)
+        axes[i].set_xlabel("Time (h)")
+        axes[i].grid(True, alpha=0.3)
+    axes[4].axhline(y=H2_ACCUMULATION_THRESHOLD, color="red", linestyle="--",
+                    label=f"H2 threshold={H2_ACCUMULATION_THRESHOLD}", linewidth=1)
+    axes[4].legend(fontsize=7)
+    plt.suptitle("MBT55 Hypercycle Dynamics — 24h Fermentation\n"
+                 "Evidence: https://youtu.be/bVRBk0ixNjI", fontsize=11)
+    plt.tight_layout()
+    out_path = os.path.join(os.path.dirname(__file__), "..", "mbt55_simulation_output.png")
+    plt.savefig(out_path, dpi=150)
+    print(f"\n✓ Plot saved: {out_path}")
+</file>
+
+<file path="src/parameters_optimized.json">
+{
+    "_metadata": {
+        "version": "1.1.0",
+        "created": "2026-04-25T15:19:12Z",
+        "method": "Nelder-Mead(5000iter)+L-BFGS-B from initial params",
+        "evidence_source": "evidence/fermentation_24h/observed_data.csv",
+        "video_evidence": "https://youtu.be/bVRBk0ixNjI",
+        "ipcc_ref": "IPCC Tier 2 CH.10 CH.11",
+        "fit_cost_final": 0.57005269,
+        "pH_rmse": 0.2474,
+        "temp_rmse_C": 25.006,
+        "h2_constraint_satisfied": true,
+        "max_dH2_dt": 0.025153,
+        "decomposition_rate_24h": 1.0,
+        "caveat": "Single-start fit from initial params. Replace with direct metabolite CSV for full Tier 2 compliance."
+    },
+    "k1": 2.0,
+    "k2": 2.0,
+    "k3": 0.05,
+    "k4": 0.089682,
+    "k5": 0.109802,
+    "k6": 0.05,
+    "alpha": 0.95,
+    "beta": 0.1,
+    "gamma": 0.1,
+    "delta": 0.8,
+    "epsilon": 10.0,
+    "rf": 1.5,
+    "df": 0.01
+}
+</file>
+
+</files>

@@ -1,0 +1,1196 @@
+This file is a merged representation of the entire codebase, combined into a single document by Repomix.
+
+<file_summary>
+This section contains a summary of this file.
+
+<purpose>
+This file contains a packed representation of the entire repository's contents.
+It is designed to be easily consumable by AI systems for analysis, code review,
+or other automated processes.
+</purpose>
+
+<file_format>
+The content is organized as follows:
+1. This summary section
+2. Repository information
+3. Directory structure
+4. Repository files (if enabled)
+5. Multiple file entries, each consisting of:
+  - File path as an attribute
+  - Full contents of the file
+</file_format>
+
+<usage_guidelines>
+- This file should be treated as read-only. Any changes should be made to the
+  original repository files, not this packed version.
+- When processing this file, use the file path to distinguish
+  between different files in the repository.
+- Be aware that this file may contain sensitive information. Handle it with
+  the same level of security as you would the original repository.
+</usage_guidelines>
+
+<notes>
+- Some files may have been excluded based on .gitignore rules and Repomix's configuration
+- Binary files are not included in this packed representation. Please refer to the Repository Structure section for a complete list of file paths, including binary files
+- Files matching patterns in .gitignore are excluded
+- Files matching default ignore patterns are excluded
+- Files are sorted by Git change count (files with more changes are at the bottom)
+</notes>
+
+</file_summary>
+
+<directory_structure>
+app_old1.py
+app_old2.py
+app.py
+assets/desktop.ini
+carbon_credit.py
+data/country_coffee_sample.csv
+data/desktop.ini
+desktop.ini
+docs/desktop.ini
+docs/tokenomics.md
+fund_model.py
+model.py
+models/carbon.py
+models/country_rank.py
+models/desktop.ini
+models/irr.py
+models/lcoa.py
+models/mrv.py
+models/ranking.py
+models/token_model.py
+parameters.json
+pbpe_token.py
+pbpe-demo/desktop.ini
+README.md
+requirements.txt
+simulation.py
+</directory_structure>
+
+<files>
+This section contains the contents of the repository's files.
+
+<file path="app_old1.py">
+import streamlit as st
+import pandas as pd
+
+from models.carbon import carbon_credit
+from models.country_rank import rank_countries
+
+from simulation import simulate, simulate_country
+from pbpe_token import pbpe_value
+from fund_model import irr_proxy
+from carbon_credit import carbon_value
+
+st.set_page_config(layout="wide")
+
+st.title("🌍 PBPE × MBT55 Investment Dashboard")
+
+# =========================
+# トグル
+# =========================
+M = 1 if st.toggle("MBT55 ON", True) else 0
+
+# =========================
+# シミュレーション
+# =========================
+on = simulate(1)
+off = simulate(0)
+res = simulate(M)
+
+yield_gain = on["Yield"] - off["Yield"]
+cost_reduction = off["Cost"] - on["Cost"]
+co2_reduction = off["CO2"] - on["CO2"]
+
+# =========================
+# 経済計算
+# =========================
+pbpe = pbpe_value(yield_gain, co2_reduction, cost_reduction)
+
+carbon = carbon_value(co2_reduction)
+
+irr = irr_proxy(
+    cost_reduction,
+    carbon,
+    yield_gain * 50
+)
+
+# =========================
+# 🚀 投資判断（最上段）
+# =========================
+st.markdown("## 🚀 Investment Decision")
+
+col1, col2, col3 = st.columns(3)
+
+col1.metric("💰 Profit Impact", round(cost_reduction, 2))
+col2.metric("🌱 Carbon Impact", round(co2_reduction, 2))
+col3.metric("📈 Yield Growth", round(yield_gain, 2))
+
+# =========================
+# 💠 PBPE
+# =========================
+st.markdown("## 💠 PBPE Value Engine")
+
+st.metric("PBPE Token", round(pbpe, 2))
+
+# =========================
+# ♻️ グリーンプレミアム
+# =========================
+st.markdown("## ♻️ Negative Green Premium")
+
+st.metric("Cost Advantage", round(cost_reduction, 2))
+
+# =========================
+# 💰 カーボン価値
+# =========================
+st.markdown("## 🌍 Carbon Value")
+
+st.metric("Carbon Revenue ($)", round(carbon, 2))
+
+# =========================
+# 💼 投資指標
+# =========================
+st.markdown("## 💼 Investment Metrics")
+
+col4, col5 = st.columns(2)
+
+col4.metric("IRR Proxy", round(irr, 2))
+
+investment = 200
+payback = investment / (cost_reduction + carbon/1000 + yield_gain * 50)
+
+col5.metric("Payback (years)", round(payback, 2))
+
+# =========================
+# 🟢 投資判断
+# =========================
+st.markdown("## 🟢 Investment Signal")
+
+if cost_reduction > 0 and co2_reduction > 0:
+    st.success("STRONG BUY")
+else:
+    st.warning("REVIEW REQUIRED")
+
+# =========================
+# 📊 KPI
+# =========================
+st.markdown("## 📊 Core Metrics")
+
+col6, col7, col8 = st.columns(3)
+
+col6.metric("Yield", round(res["Yield"], 2))
+col7.metric("Cost", round(res["Cost"], 2))
+col8.metric("CO2", round(res["CO2"], 2))
+
+# =========================
+# 📈 ON vs OFF
+# =========================
+st.markdown("## 📈 ON vs OFF")
+
+df_compare = pd.DataFrame({
+    "ON": on,
+    "OFF": off
+})
+
+st.bar_chart(df_compare)
+
+# =========================
+# 🌐 国別展開
+# =========================
+st.markdown("## 🌐 Global Expansion")
+
+df = pd.read_csv("data/country_coffee_sample.csv")
+
+results = [simulate_country(row, M) for _, row in df.iterrows()]
+res_df = pd.DataFrame(results)
+
+st.dataframe(res_df)
+
+st.bar_chart(res_df.set_index("country")[["Yield", "Cost", "CO2"]])
+
+# =========================
+# 🔍 信頼性
+# =========================
+st.markdown("## 🔍 Reliability Score")
+
+confidence = min(
+    100,
+    (yield_gain / 3.0) * 30 +
+    (co2_reduction / 1000) * 40 +
+    (cost_reduction / 500) * 30
+)
+
+st.metric("Model Confidence (%)", round(confidence, 1))
+
+# =========================
+# 🌍 市場規模
+# =========================
+st.markdown("## 🌍 Market Scale")
+
+global_market = 100_000_000_000
+
+impact_ratio = min(1.0, yield_gain / 3.0)
+
+tam = global_market * impact_ratio
+
+st.metric("Addressable Market ($)", f"{int(tam):,}")
+
+# =========================
+# 🧠 Insight
+# =========================
+st.markdown("## 🧠 Executive Insight")
+
+st.success(
+    f"MBT55 enables {round(cost_reduction,0)} cost reduction, "
+    f"{round(co2_reduction,0)} CO2 reduction, "
+    f"and {round(yield_gain,1)} yield increase simultaneously."
+)
+
+st.header("📊 PMOS Results")
+
+credit = carbon_credit(10, 15, 0.1, 0.8)
+
+ranking = rank_countries({
+    "Brazil": {"irr":0.3,"carbon":0.8,"stability":0.6,"scale":0.9,"policy":0.7},
+    "India": {"irr":0.25,"carbon":0.7,"stability":0.5,"scale":0.8,"policy":0.6}
+})
+
+st.metric("Carbon Credit", round(credit, 2))
+
+st.subheader("🌍 Country Ranking")
+for i, (country, score) in enumerate(ranking, 1):
+    st.write(f"{i}. {country} — Score: {round(score, 3)}")
+</file>
+
+<file path="app_old2.py">
+import streamlit as st
+import pandas as pd
+
+from simulation import simulate, simulate_country
+from pbpe_token import pbpe_value
+from fund_model import irr_proxy
+from carbon_credit import carbon_value
+
+st.set_page_config(layout="wide")
+
+st.title("🌍 PBPE × MBT55 Investment Dashboard")
+
+# =========================
+# トグル
+# =========================
+M = 1 if st.toggle("MBT55 ON", True) else 0
+
+# =========================
+# シミュレーション
+# =========================
+on = simulate(1)
+off = simulate(0)
+res = simulate(M)
+
+yield_gain = on["Yield"] - off["Yield"]
+cost_reduction = off["Cost"] - on["Cost"]
+co2_reduction = off["CO2"] - on["CO2"]
+
+# =========================
+# 経済計算
+# =========================
+pbpe = pbpe_value(yield_gain, co2_reduction, cost_reduction)
+
+carbon = carbon_value(co2_reduction)
+
+irr = irr_proxy(
+    cost_reduction,
+    carbon,
+    yield_gain * 50
+)
+
+# =========================
+# 🚀 投資判断（最上段）
+# =========================
+st.markdown("## 🚀 Investment Decision")
+
+col1, col2, col3 = st.columns(3)
+
+col1.metric("💰 Profit Impact", round(cost_reduction, 2))
+col2.metric("🌱 Carbon Impact", round(co2_reduction, 2))
+col3.metric("📈 Yield Growth", round(yield_gain, 2))
+
+# =========================
+# 💠 PBPE
+# =========================
+st.markdown("## 💠 PBPE Value Engine")
+
+st.metric("PBPE Token", round(pbpe, 2))
+
+# =========================
+# ♻️ グリーンプレミアム
+# =========================
+st.markdown("## ♻️ Negative Green Premium")
+
+st.metric("Cost Advantage", round(cost_reduction, 2))
+
+# =========================
+# 💰 カーボン価値
+# =========================
+st.markdown("## 🌍 Carbon Value")
+
+st.metric("Carbon Revenue ($)", round(carbon, 2))
+
+# =========================
+# 💼 投資指標
+# =========================
+st.markdown("## 💼 Investment Metrics")
+
+col4, col5 = st.columns(2)
+
+col4.metric("IRR Proxy", round(irr, 2))
+
+investment = 200
+payback = investment / (cost_reduction + carbon/1000 + yield_gain * 50)
+
+col5.metric("Payback (years)", round(payback, 2))
+
+# =========================
+# 🟢 投資判断
+# =========================
+st.markdown("## 🟢 Investment Signal")
+
+if cost_reduction > 0 and co2_reduction > 0:
+    st.success("STRONG BUY")
+else:
+    st.warning("REVIEW REQUIRED")
+
+# =========================
+# 📊 KPI
+# =========================
+st.markdown("## 📊 Core Metrics")
+
+col6, col7, col8 = st.columns(3)
+
+col6.metric("Yield", round(res["Yield"], 2))
+col7.metric("Cost", round(res["Cost"], 2))
+col8.metric("CO2", round(res["CO2"], 2))
+
+# =========================
+# 📈 ON vs OFF
+# =========================
+st.markdown("## 📈 ON vs OFF")
+
+df_compare = pd.DataFrame({
+    "ON": on,
+    "OFF": off
+})
+
+st.bar_chart(df_compare)
+
+# =========================
+# 🌐 国別展開
+# =========================
+st.markdown("## 🌐 Global Expansion")
+
+df = pd.read_csv("data/country_coffee_sample.csv")
+
+results = [simulate_country(row, M) for _, row in df.iterrows()]
+res_df = pd.DataFrame(results)
+
+st.dataframe(res_df)
+
+st.bar_chart(res_df.set_index("country")[["Yield", "Cost", "CO2"]])
+
+# =========================
+# 🔍 信頼性
+# =========================
+st.markdown("## 🔍 Reliability Score")
+
+confidence = min(
+    100,
+    (yield_gain / 3.0) * 30 +
+    (co2_reduction / 1000) * 40 +
+    (cost_reduction / 500) * 30
+)
+
+st.metric("Model Confidence (%)", round(confidence, 1))
+
+# =========================
+# 🌍 市場規模
+# =========================
+st.markdown("## 🌍 Market Scale")
+
+global_market = 100_000_000_000
+
+impact_ratio = min(1.0, yield_gain / 3.0)
+
+tam = global_market * impact_ratio
+
+st.metric("Addressable Market ($)", f"{int(tam):,}")
+
+# =========================
+# 🧠 Insight
+# =========================
+st.markdown("## 🧠 Executive Insight")
+
+st.success(
+    f"MBT55 enables {round(cost_reduction,0)} cost reduction, "
+    f"{round(co2_reduction,0)} CO2 reduction, "
+    f"and {round(yield_gain,1)} yield increase simultaneously."
+)
+</file>
+
+<file path="app.py">
+import streamlit as st
+import numpy_financial as npf
+
+from models.lcoa import calculate_lcoa
+from models.mrv import calculate_verified_credits, calculate_carbon_revenue
+from models.token_model import simulate_token_price
+
+st.set_page_config(layout="wide")
+
+st.title("PBPE × MBT55 Investment Dashboard")
+
+# =========================
+# ■ INPUT
+# =========================
+mbt_on = st.sidebar.checkbox("MBT55 ON", value=True)
+
+capex = st.sidebar.number_input("CAPEX", value=1000.0)
+opex_base = st.sidebar.number_input("OPEX/year", value=100.0)
+discount_rate = st.sidebar.slider("Discount Rate", 0.0, 0.3, 0.1)
+
+baseline_emission = st.sidebar.number_input("Baseline CO2", value=1000.0)
+project_emission = st.sidebar.number_input("Project CO2", value=600.0)
+carbon_price = st.sidebar.number_input("Carbon Price", value=30.0)
+
+token_price = st.sidebar.number_input("Initial Token Price", value=10.0)
+
+# =========================
+# ■ DYNAMIC MODEL（簡易）
+# =========================
+T = 10
+soil = [1.0]
+yield_series = []
+opex = []
+
+for t in range(T):
+    if mbt_on:
+        delta_soc = 0.05
+        yield_boost = 0.5
+        cost_reduction = 0.02
+        emission_reduction = 1.0
+    else:
+        delta_soc = 0.01
+        yield_boost = 0.2
+        cost_reduction = 0.0
+        emission_reduction = 0.0
+
+    soil.append(soil[-1] + delta_soc)
+
+    y = 3 + yield_boost * soil[-1]
+    yield_series.append(y)
+
+    opex.append(opex_base * (1 - cost_reduction * t))
+
+# =========================
+# ■ CALCULATIONS
+# =========================
+def run_model(mbt_on_flag):
+    soil = [1.0]
+    yield_series = []
+    opex = []
+
+    for t in range(T):
+        if mbt_on_flag:
+            delta_soc = 0.05
+            yield_boost = 0.5
+            cost_reduction = 0.02
+            emission_factor = 0.7
+        else:
+            delta_soc = 0.01
+            yield_boost = 0.2
+            cost_reduction = 0.0
+            emission_factor = 1.0
+
+        soil.append(soil[-1] + delta_soc)
+
+        y = 3 + yield_boost * soil[-1]
+        yield_series.append(y)
+
+        opex.append(opex_base * (1 - cost_reduction * t))
+
+    lcoa_val = calculate_lcoa(capex, opex, yield_series, discount_rate)
+
+    price_per_unit = 200
+    cash_flows = [-capex] + [y * price_per_unit - o for y, o in zip(yield_series, opex)]
+
+    import numpy_financial as npf
+    irr_val = npf.irr(cash_flows)
+
+    adjusted_project = project_emission * emission_factor
+
+    verified_val = calculate_verified_credits(baseline_emission, adjusted_project)
+    revenue_val = calculate_carbon_revenue(verified_val, carbon_price)
+
+    return lcoa_val, irr_val, verified_val, revenue_val
+
+lcoa_on, irr_on, co2_on, rev_on = run_model(True)
+lcoa_off, irr_off, co2_off, rev_off = run_model(False)
+
+def improvement(new, old, reverse=False):
+    if old == 0 or old is None:
+        return 0
+
+    change = (new - old) / abs(old) * 100
+
+    # コスト系は符号を反転（下がるほど良い）
+    if reverse:
+        change = -change
+
+    return change
+
+# LCOA
+lcoa = calculate_lcoa(capex, opex, yield_series, discount_rate)
+
+# IRR（簡易）
+price_per_unit = 200  # ← ここを追加（作物価格）
+
+cash_flows = [-capex] + [
+    y * price_per_unit - o
+    for y, o in zip(yield_series, opex)
+]
+
+irr = npf.irr(cash_flows)
+
+# MRV
+if mbt_on:
+    adjusted_project_emission = project_emission * 0.7
+else:
+    adjusted_project_emission = project_emission
+
+verified = calculate_verified_credits(
+    baseline_emission,
+    adjusted_project_emission
+)
+carbon_revenue = calculate_carbon_revenue(verified, carbon_price)
+
+# Token（実体連動）
+demand = carbon_revenue / 1000
+supply = capex / 100
+
+prices = simulate_token_price(
+    P0=token_price,
+    demand=demand,
+    supply=supply
+)
+
+# =========================
+# ■ KPI表示（ここがスカスカ解消）
+# =========================
+
+st.subheader(f"MBT55 Status: {'ON' if mbt_on else 'OFF'}")
+
+col1, col2, col3, col4 = st.columns(4)
+
+col1.metric("LCOA", round(lcoa_on, 2),
+            f"{improvement(lcoa_on, lcoa_off, reverse=True):.1f}%")
+
+col2.metric("IRR", round(irr_on, 3),
+            f"{improvement(irr_on, irr_off):.1f}%")
+
+col3.metric("CO2 Reduction", round(co2_on, 2),
+            f"{improvement(co2_on, co2_off):.1f}%")
+
+col4.metric("Carbon Revenue", round(rev_on, 2),
+            f"{improvement(rev_on, rev_off):.1f}%")
+
+# =========================
+# ■ GRAPHS
+# =========================
+
+st.subheader("Token Price Simulation")
+st.line_chart(prices)
+
+col8, col9 = st.columns(2)
+
+with col8:
+    st.subheader("Yield Evolution")
+    st.line_chart(yield_series)
+
+with col9:
+    st.subheader("Soil (SOC) Evolution")
+    st.line_chart(soil)
+
+# =========================
+# ■ CASHFLOW表示
+# =========================
+st.subheader("Cash Flow")
+st.bar_chart(cash_flows)
+
+# =========================
+# ■ LOG（監査）
+# =========================
+if st.checkbox("Show MRV Log"):
+    st.json({
+        "baseline": baseline_emission,
+        "project": project_emission,
+        "verified": verified,
+        "carbon_price": carbon_price,
+        "revenue": carbon_revenue
+    })
+</file>
+
+<file path="assets/desktop.ini">
+[.ShellClassInfo]
+IconResource=C:\Program Files\Google\Drive File Stream\123.0.1.0\GoogleDriveFS.exe,27
+</file>
+
+<file path="carbon_credit.py">
+def carbon_value(co2_reduction, price_per_ton=80):
+    return co2_reduction * price_per_ton
+</file>
+
+<file path="data/country_coffee_sample.csv">
+country,yield_base,cost_base,co2_base,waste_input
+Brazil,1.0,1200,800,1.2
+Vietnam,0.9,900,700,1.0
+Ethiopia,0.6,600,500,0.8
+Colombia,0.8,1000,650,1.1
+</file>
+
+<file path="data/desktop.ini">
+[.ShellClassInfo]
+IconResource=C:\Program Files\Google\Drive File Stream\123.0.1.0\GoogleDriveFS.exe,27
+</file>
+
+<file path="desktop.ini">
+[.ShellClassInfo]
+IconResource=C:\Program Files\Google\Drive File Stream\123.0.1.0\GoogleDriveFS.exe,27
+</file>
+
+<file path="docs/desktop.ini">
+[.ShellClassInfo]
+IconResource=C:\Program Files\Google\Drive File Stream\123.0.1.0\GoogleDriveFS.exe,27
+</file>
+
+<file path="docs/tokenomics.md">
+# PBPE Tokenomics
+
+## Mint
+PBPE = α * CO2 + β * Yield
+
+## Burn
+- Carbon offset
+- Staking
+
+## Value
+- Carbon backed
+- Yield backed
+</file>
+
+<file path="fund_model.py">
+def irr_proxy(cost_reduction, carbon_value, yield_value):
+    return (cost_reduction + carbon_value + yield_value) / 1000
+</file>
+
+<file path="model.py">
+import math
+
+def run_step(state, microbial, M, params):
+
+    # -----------------------------
+    # 微生物ダイナミクス（M3）
+    # -----------------------------
+    X, S = microbial
+
+    mu = params["microbial_growth"]
+    decay = params["microbial_decay"]
+
+    dX = mu * X * S - decay * X
+    X_new = max(0.01, X + dX)
+
+    S_new = max(0.01, S - params["substrate_utilization"] * X)
+
+    # -----------------------------
+    # 土壌制御（MBT効果）
+    # -----------------------------
+    nutrient = state["nutrient"] + M * params["nutrient_boost"] * X_new
+    toxicity = state["toxic"] * (1 - M * params["toxicity_reduction"])
+    salinity = state["salinity"] * (1 - M * params["salinity_reset"])
+
+    # -----------------------------
+    # 病害
+    # -----------------------------
+    D = state["D0"] * math.exp(-params["beta"] * M * X_new)
+
+    # -----------------------------
+    # 収量
+    # -----------------------------
+    Y = params["Y0"] * nutrient * (1 - toxicity) * (1 - salinity) * (1 - D)
+
+    # -----------------------------
+    # コスト
+    # -----------------------------
+    cost = (
+        params["fertilizer_price"] * (1 - M)
+        + params["process_cost_per_ton"] * M
+        - params["waste_disposal_cost"] * M
+    )
+
+    # -----------------------------
+    # CO2
+    # -----------------------------
+    CO2 = (
+        params["incineration_emission"] * (1 - M)
+        + params["process_emission"] * M
+        - params["carbon_sequestration"] * M
+    )
+
+    # =========================
+    # 🔥 制約（ここが正しい位置）
+    # =========================
+    Y = min(Y, 3.0)
+    CO2 = max(CO2, -500)
+    cost = max(cost, -200)
+
+    # -----------------------------
+    # 状態更新
+    # -----------------------------
+    new_state = {
+        "nutrient": nutrient,
+        "toxic": toxicity,
+        "salinity": salinity,
+        "D0": D,
+        "waste_input": state["waste_input"]
+    }
+
+    # -----------------------------
+    # 出力（1つだけ）
+    # -----------------------------
+    return new_state, (X_new, S_new), {
+        "Yield": Y,
+        "Cost": cost,
+        "CO2": CO2
+    }
+</file>
+
+<file path="models/carbon.py">
+def carbon_credit(soc_before, soc_after, leakage, verify):
+    net = soc_after - soc_before
+    adjusted = net * (1 - leakage)
+    return adjusted * verify
+</file>
+
+<file path="models/country_rank.py">
+def country_score(data):
+    return (
+        0.3 * data["irr"] +
+        0.25 * data["carbon"] +
+        0.15 * data["stability"] +
+        0.15 * data["scale"] +
+        0.15 * data["policy"]
+    )
+
+def rank_countries(dataset):
+    scores = []
+    for country, data in dataset.items():
+        score = country_score(data)
+        scores.append((country, score))
+    return sorted(scores, key=lambda x: x[1], reverse=True)
+</file>
+
+<file path="models/desktop.ini">
+[.ShellClassInfo]
+IconResource=C:\Program Files\Google\Drive File Stream\123.0.1.0\GoogleDriveFS.exe,27
+</file>
+
+<file path="models/irr.py">
+def calculate_irr(cashflows):
+    rate = 0.1
+    for _ in range(100):
+        npv = sum(cf / (1 + rate) ** i for i, cf in enumerate(cashflows))
+        d_npv = sum(-i * cf / (1 + rate) ** (i + 1) for i, cf in enumerate(cashflows))
+        rate -= npv / (d_npv + 1e-6)
+    return rate
+
+def compare_irr_lcoa(irr, lcoa):
+    """
+    投資評価の2軸比較
+    """
+    return {
+        "IRR": irr,
+        "LCOA": lcoa,
+        "Efficiency Score": irr / lcoa  # 新指標
+    }
+</file>
+
+<file path="models/lcoa.py">
+def calculate_lcoa(capex, opex, yield_series, discount_rate):
+    discounted_opex = sum(
+        opex[t] / ((1 + discount_rate) ** (t + 1))
+        for t in range(len(opex))
+    )
+
+    discounted_yield = sum(
+        yield_series[t] / ((1 + discount_rate) ** (t + 1))
+        for t in range(len(yield_series))
+    )
+
+    return (capex + discounted_opex) / discounted_yield
+</file>
+
+<file path="models/mrv.py">
+def calculate_verified_credits(baseline, project, leakage_rate=0.1, buffer_rate=0.2):
+    reduction = baseline - project
+    reduction = reduction * (1 - leakage_rate)
+    reduction = reduction * (1 - buffer_rate)
+    return reduction
+
+
+def calculate_carbon_revenue(verified_credits, carbon_price):
+    return verified_credits * carbon_price
+</file>
+
+<file path="models/ranking.py">
+def country_score(row):
+    return (
+        0.3 * (row["Yield"] / 3.0) +
+        0.3 * (-row["CO2"] / 1000) +
+        0.2 * (-row["Cost"] / 500) +
+        0.2 * (row["IRR"] / 100)
+    )
+</file>
+
+<file path="models/token_model.py">
+import numpy as np
+
+def simulate_token_price(P0, demand, supply, alpha=0.01, sigma=0.2):
+    steps = 100
+    dt = 0.01  # ← 重要（時間刻み）
+
+    prices = [P0]
+
+    for _ in range(steps):
+        dW = np.random.normal(0, np.sqrt(dt))
+
+        # ドリフト（暴走しないよう弱める）
+        drift = alpha * (demand - supply) * prices[-1] * dt
+
+        # 拡散（ランダム）
+        diffusion = sigma * prices[-1] * dW
+
+        new_price = prices[-1] + drift + diffusion
+
+        # 下限（0以下防止）
+        new_price = max(new_price, 0.1)
+
+        # 上限（暴走防止：仮に）
+        new_price = min(new_price, 100)
+
+        prices.append(new_price)
+
+    return prices
+</file>
+
+<file path="parameters.json">
+{
+  "Y0": 1.0,
+
+  "waste_input": 1.0,
+
+  "fertilizer_price": 250,
+  "process_cost_per_ton": 40,
+  "waste_disposal_cost": 180,
+
+  "incineration_emission": 600,
+  "process_emission": 40,
+  "carbon_sequestration": 500,
+
+  "beta": 2.5,
+
+  "nutrient_boost": 0.8,
+  "toxicity_reduction": 0.9,
+  "salinity_reset": 1.0,
+
+  "microbial_growth": 1.2,
+  "microbial_decay": 0.1,
+  "substrate_utilization": 1.0
+}
+</file>
+
+<file path="pbpe_token.py">
+def pbpe_value(yield_gain, co2_reduction, cost_reduction):
+    return (
+        yield_gain * 100
+        + co2_reduction * 0.5
+        + cost_reduction * 0.3
+    )
+</file>
+
+<file path="pbpe-demo/desktop.ini">
+[.ShellClassInfo]
+IconResource=C:\Program Files\Google\Drive File Stream\123.0.1.0\GoogleDriveFS.exe,27
+</file>
+
+<file path="README.md">
+<p align="center">
+  <img src="./assets/header.jpg" width="800"/>
+</p>
+
+<h1 align="center">🌍 PMOS</h1>
+<h3 align="center">PBPE × MBT55 Investment Engine</h3>
+
+<p align="center">
+  Regenerative Agriculture × Carbon Markets × Token Economy
+</p>
+
+![Status](https://img.shields.io/badge/status-active-brightgreen)
+![Azure](https://img.shields.io/badge/Azure-Integrated-blue)
+![License](https://img.shields.io/badge/license-Proprietary-red)
+
+# 🌍 Planetary Metabolic Operating System (PMOS)
+## PBPE × MBT55 Investment Engine
+
+---
+
+## 1. Overview
+
+PMOS is a next-generation investment and simulation engine that integrates:
+
+- Regenerative Agriculture (AGRIX)
+- Soil Microbial Science (MBT55)
+- Carbon Credit Markets (MRV-ready)
+- Token Economy (PBPE)
+- Azure Digital Twin (Soil / Crop / Carbon)
+
+---
+
+## 2. Core Thesis
+
+> Agriculture is no longer a commodity business.  
+> It is a **biological + carbon + financial asset class**.
+
+---
+
+## 3. Key Features
+
+- MBT55 ON/OFF simulation
+- Yield / Cost / CO2 dynamic modeling
+- Carbon pricing integration
+- IRR / Payback calculation
+- LCOA (Levelized Cost of Agriculture)
+- PBPE token price simulation
+- Investment signal generation
+
+---
+
+## 4. Innovation
+
+### 🔹 Negative Green Premium
+Sustainable agriculture becomes cheaper than conventional:
+
+- Yield ↑
+- Cost ↓
+- Carbon revenue ↑
+
+---
+
+### 🔹 PBPE Tokenization
+
+> "Food production = Carbon asset generation"
+
+---
+
+## 5. Financial Model
+
+### IRR Model
+- Multi-layer cash flow:
+  - Crop revenue
+  - Carbon revenue
+  - Token revenue
+- Discounted cash flow (WACC)
+
+### LCOA Model
+- Cost competitiveness indicator
+- Includes carbon & token offsets
+
+---
+
+## 6. PBPE Token Model
+
+PBPE price is derived from:
+
+- Carbon value
+- Food production value
+- Market demand/supply
+
+---
+
+## 7. System Architecture
+
+```
+
+[Soil Biology]  
+↓  
+[MBT55 Engine]  
+↓  
+[Yield / Carbon Simulation]  
+↓  
+[PBPE Tokenization]  
+↓  
+[Financial Engine (IRR / LCOA)]  
+↓  
+[Investment Decision]
+
+
+---
+
+## 8. Azure Integration Vision
+
+- Azure Digital Twins (Soil / Crop)
+- Real-time MRV (Carbon)
+- AI-driven prescription (AgriWare)
+- Global-scale deployment
+
+---
+
+## 9. Example Output
+
+| Metric | Value |
+|------|------|
+| Yield | +25% |
+| Cost | -30% |
+| CO2 | -50% |
+| IRR | 28% |
+| Payback | 2.8 years |
+
+---
+
+## 10. Installation
+
+```bash
+pip install -r requirements.txt
+streamlit run app.py
+````
+
+---
+
+## 11. Roadmap
+
+### Phase 1
+
+- Basic simulation ✔
+    
+
+### Phase 2（Current）
+
+- IRR refinement
+    
+- LCOA implementation
+    
+- Carbon MRV
+    
+
+### Phase 3
+
+- Token economy model
+    
+- Country allocation engine
+    
+
+### Phase 4
+
+- Azure Digital Twin integration
+    
+
+---
+
+## 12. Target Users
+
+- Climate funds
+    
+- Sovereign wealth funds
+    
+- Agri-investors
+    
+- ESG portfolios
+    
+- Governments
+    
+
+---
+
+## 13. License
+
+Proprietary / Strategic Collaboration
+
+---
+
+## 14. Contact
+
+- **Lead Scientist**: Kaz Shimojo - Bionexus Holdings Co-Founder
+- **Technical Inquiries**: GitHub Issues
+- **Partnerships**: info@terraviss.com
+</file>
+
+<file path="requirements.txt">
+numpy
+numpy-financial
+streamlit
+pandas
+plotly
+</file>
+
+<file path="simulation.py">
+import json
+from model import run_step
+
+with open("parameters.json") as f:
+    PARAMS = json.load(f)
+
+
+def simulate(M=1, steps=5):
+
+    state = {
+        "waste_input": 1.0,
+        "toxic": 0.6,
+        "salinity": 0.5,
+        "nutrient": 0.3,
+        "D0": 0.5
+    }
+
+    microbial = (1.0, 1.0)
+
+    history = []
+
+    for t in range(steps):
+        state, microbial, result = run_step(
+            state, microbial, M, PARAMS
+        )
+        history.append(result)
+
+    return history[-1]
+
+
+# ✅ ここが問題だった部分
+def simulate_country(row, M, params=None):
+
+    base = simulate(M)
+
+    return {
+        "country": row["country"],
+        "Yield": base["Yield"] * row["yield_base"],
+        "Cost": base["Cost"] * (row["cost_base"] / 1000),
+        "CO2": base["CO2"] * (row["co2_base"] / 1000)
+    }
+
+
+if __name__ == "__main__":
+
+    on = simulate(M=1)
+    off = simulate(M=0)
+
+    print("MBT ON :", on)
+    print("MBT OFF:", off)
+</file>
+
+</files>

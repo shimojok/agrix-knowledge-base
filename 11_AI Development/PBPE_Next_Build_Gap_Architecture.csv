@@ -1,0 +1,24 @@
+﻿ID,状態,構築物,現在状態,必要な構造
+A0,正式固定,PBPE中心アーキテクチャ,確定,MBT55/MSC → 生態学的ハイパーサイクル → Agricultural Transformation → 実体経済価値 → Verification → PBPE → Finance → 再投資
+A1,未着手・最優先,Mechanism-to-Value Engine,未完成,Observed Phenomenon → Mechanism → System Outcome → Economic Value → Finance
+A2,未着手・最優先,AGRIX/PBPE Proof Dashboard,未完成,Physical → Biological → Agricultural → Economic → Climate → Finance
+A3,未着手・最優先,System Simulation Engine,未完成,Ha / MSC capacity / productivity / loss / carbon / price / CAPEX / OPEX → NPV/IRR
+A4,未着手・最優先,Agricultural Development Investment Model,未完成,MSC設備投資 → 現地資材製造 → 農地改善 → 生産性/所得 → CF → 投資回収
+A5,未着手,Value Leakage / Loss Avoidance Engine,未完成,病害・感染症・廃棄・食品ロス・投入ロス → Avoided Cost
+A6,未着手,Circular Resource Engine,未完成,Crop → Residue → MSC → Fertilizer/Feed/Humus → Soil/Livestock → Crop
+A7,未着手,Climate Material-Flow Model,未完成,Carbon/N/GHG material flows → emissions/removals/avoided emissions
+A8,未着手,Evidence & Confidence Layer,未完成,Observed / Field Case / Experimental / Verified / Modeled
+A9,未着手,Replication & Scaling Model,未完成,Case → Replication → Generalization → Regional Scale → Global Scale
+A10,未着手,Capital Stack Simulator,未完成,Grant/DFI/Loan/Equity/Green Finance/Insurance/Carbon Revenue → blended finance
+A11,未着手,Insurance/Risk Engine,未完成,Yield / disease / climate / price risk → loss distribution / premium
+A12,未着手,Multi-sector Value Ledger,未完成,Agriculture / Food / Health / Environment / Finance / Public Finance
+A13,未着手,Investor Decision Layer,未完成,Investment Case / Scenario / Risk / Sensitivity / NPV / IRR
+A14,未着手,Microsoft/Azure Value Architecture,未完成,AGRIX data + AI + IoT + digital twin + analytics + cloud → Azure business value
+A15,未着手,Microsoft Strategic Fit Dashboard,未完成,Food Security / Climate / AI / Cloud / Data / Industry / Global Scale
+A16,未着手,Executive Narrative / Demonstration Mode,未完成,Problem → Biological Intervention → Measured Outcome → Economic Value → Finance → Scale
+A17,未着手,Global Scenario Library,未完成,Africa / Coffee / Cereal / Livestock / Waste → scenario templates
+A18,未着手,Legacy Concept Migration,要整理,旧Token/Coin/Market Cap等 → 新Impact Asset/Verified Value/Financial Instrument
+A19,既存だが再統合必要,PBPE Marketplace,既存概念あり,Registry → verified value → financial instruments
+A20,既存だが再統合必要,MRV / SafelyChain / Impact Ledger,既存概念あり,Traceability / Evidence / Claim / Registry
+A21,既存だが再統合必要,PBPE Finance Engine,既存コードあり,NPV / IRR / carbon / crop price / risk
+A22,既存だが再統合必要,Dashboard,既存コードあり,Finance/Impact visualization → Proof & Investment Cockpit

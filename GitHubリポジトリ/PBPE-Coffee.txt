@@ -1,0 +1,7242 @@
+This file is a merged representation of the entire codebase, combined into a single document by Repomix.
+
+<file_summary>
+This section contains a summary of this file.
+
+<purpose>
+This file contains a packed representation of the entire repository's contents.
+It is designed to be easily consumable by AI systems for analysis, code review,
+or other automated processes.
+</purpose>
+
+<file_format>
+The content is organized as follows:
+1. This summary section
+2. Repository information
+3. Directory structure
+4. Repository files (if enabled)
+5. Multiple file entries, each consisting of:
+  - File path as an attribute
+  - Full contents of the file
+</file_format>
+
+<usage_guidelines>
+- This file should be treated as read-only. Any changes should be made to the
+  original repository files, not this packed version.
+- When processing this file, use the file path to distinguish
+  between different files in the repository.
+- Be aware that this file may contain sensitive information. Handle it with
+  the same level of security as you would the original repository.
+</usage_guidelines>
+
+<notes>
+- Some files may have been excluded based on .gitignore rules and Repomix's configuration
+- Binary files are not included in this packed representation. Please refer to the Repository Structure section for a complete list of file paths, including binary files
+- Files matching patterns in .gitignore are excluded
+- Files matching default ignore patterns are excluded
+- Files are sorted by Git change count (files with more changes are at the bottom)
+</notes>
+
+</file_summary>
+
+<directory_structure>
+appendix/README.md
+en/1_Coffee_Industry_Challenges.md
+en/2_MBT55_Biosecurity_Biocontrol.md
+en/3_Economic_Impact_and_Social_Value.md
+en/4_Cost_Reduction_and_Yield_Increase.md
+en/5_PBPE_and_Carbon_Economy.md
+en/6_Consumer_Engagement.md
+en/7_Coffee_Price_Stabilization.md
+en/8_MBT_Sustainable_Cycle_and_Waste_Upcycling.md
+en/appendix/Chalkbrood_and_BlueMold_Cases.md
+en/appendix/Coffee_Carbon_Flow_Map.md
+en/appendix/MBT55_Microbe_List.md
+en/appendix/PBPE_Framework_Diagram.md
+en/appendix/Scientific_Evidence.md
+en/README.md
+jp/1_Coffee_Industry_Challenges.md
+jp/2_MBT55_Biosecurity_Biocontrol.md
+jp/3_Economic_Impact_and_Social_Value.md
+jp/4_Cost_Reduction_and_Yield_Increase.md
+jp/5_PBPE_and_Carbon_Economy.md
+jp/6_Consumer_Engagement.md
+jp/7_Coffee_Price_Stabilization.md
+jp/8_MBT_Sustainable_Cycle_and_Waste_Upcycling.md
+jp/appendix/Chalkbrood_and_BlueMold_Cases.md
+jp/appendix/Coffee_Carbon_Flow_Map.md
+jp/appendix/MBT55_Microbe_List.md
+jp/appendix/PBPE_Framework_Diagram.md
+jp/appendix/Scientific_Evidence.md
+jp/README.md
+presentation/README.md
+README.md
+</directory_structure>
+
+<files>
+This section contains the contents of the repository's files.
+
+<file path="appendix/README.md">
+# **Appendix — PBPE × MBT55/HMT238 × Coffee Industry
+
+Supplementary Scientific and Technical Documents**
+
+This folder contains all supplementary materials for the  
+PBPE × MBT55/HMT238 × Coffee Industry project.
+
+These appendices provide:
+
+- Scientific evidence
+- Microbial composition
+- Carbon flow analysis
+- Case studies
+- Framework diagrams
+
+All documents are available in **English and Japanese**.
+
+---
+
+## 📘 **Appendix Index**
+
+### **English Documents (en/appendix/)**
+
+1. **MBT55 Microbe List**  
+    `en/appendix/MBT55_Microbe_List.md`  
+    → Composition of the 120+ species microbial consortium.
+    
+2. **Scientific Evidence**  
+    `en/appendix/Scientific_Evidence.md`  
+    → Data supporting decomposition, biosecurity, humification, and carbon sequestration.
+    
+3. **Coffee Carbon Flow Map**  
+    `en/appendix/Coffee_Carbon_Flow_Map.md`  
+    → Visualization of carbon flows across the coffee value chain.
+    
+4. **Chalkbrood & Blue Mold Cases**  
+    `en/appendix/Chalkbrood_and_BlueMold_Cases.md`  
+    → Cross‑species antifungal evidence.
+    
+5. **PBPE Framework Diagram**  
+    `en/appendix/PBPE_Framework_Diagram.md`  
+    → Architecture of the PBPE system.
+    
+
+---
+
+### **Japanese Documents (jp/appendix/)**
+
+1. **MBT55 微生物リスト**
+2. **科学的エビデンス**
+3. **コーヒー炭素フローマップ**
+4. **チョークブルード & ブルーモールド事例**
+5. **PBPE フレームワーク図解**
+
+---
+
+## 📁 Folder Structure
+
+```
+appendix/
+├── README.md                ← Appendix index (this file)
+├── en/
+│   ├── MBT55_Microbe_List.md
+│   ├── Scientific_Evidence.md
+│   ├── Coffee_Carbon_Flow_Map.md
+│   ├── Chalkbrood_and_BlueMold_Cases.md
+│   └── PBPE_Framework_Diagram.md
+└── jp/
+    ├── MBT55_Microbe_List.md
+    ├── Scientific_Evidence.md
+    ├── Coffee_Carbon_Flow_Map.md
+    ├── Chalkbrood_and_BlueMold_Cases.md
+    └── PBPE_Framework_Diagram.md
+```
+</file>
+
+<file path="en/1_Coffee_Industry_Challenges.md">
+# **1. Complex Challenges Facing the Global Coffee Industry
+
+— Climate Change, Diseases, Soil Degradation, and Price Volatility —**
+
+The global coffee industry is one of the agricultural sectors most vulnerable to climate change.  
+It faces **multiple, simultaneous stressors** including plant diseases, soil degradation, rising production costs, labor shortages, and extreme price volatility.
+
+This chapter provides a comprehensive overview of the structural challenges that PBPE × MBT55/HMT238 aims to solve.
+
+---
+
+# **1.1 Shrinking Coffee‑Suitable Areas Due to Climate Change (The 2050 Crisis)**
+
+Leading research institutions (WCR, CIRAD, FAO) consistently project that  
+**more than 50% of current Arabica‑suitable land will become unsuitable by 2050**.
+
+### ■ Key Drivers
+
+- Rising temperatures (beyond optimal range)
+- Irregular rainfall patterns (droughts and floods)
+- Extreme weather events (frosts, heatwaves)
+- Soil moisture instability
+
+### ■ Impacts
+
+- Unstable yields
+- Increased disease and pest pressure
+- Upslope migration of coffee farms (risk of deforestation)
+- Rising production costs
+
+**→ The very survival of Arabica coffee is at risk.**
+
+---
+
+# **1.2 Intensifying Coffee Diseases (CLR, CBD, Anthracnose, Cercospora, Pink Disease)**
+
+Climate change accelerates the spread and severity of major coffee diseases.
+
+## **Major Coffee Diseases**
+
+|Disease|Pathogen|Symptoms|Impact|
+|---|---|---|---|
+|**Coffee Leaf Rust (CLR)**|_Hemileia vastatrix_|Orange spores on leaf underside, defoliation|30–70% yield loss|
+|**Anthracnose**|_Colletotrichum_ spp.|Black lesions on cherries, fruit drop|Quality loss, yield reduction|
+|**Coffee Berry Disease (CBD)**|_C. kahawae_|Black rot on green cherries|Devastating in Africa|
+|**Cercospora Leaf Spot**|_Cercospora_ spp.|Brown leaf spots, defoliation|Reduced vigor, next‑year yield loss|
+|**Pink Disease**|_Erythricium salmonicolor_|Pink mycelium on bark, branch dieback|Tree death|
+
+### ■ Structural Problems
+
+- Heavy dependence on chemical fungicides (copper, systemic fungicides)
+- Emergence of resistant strains
+- Smallholders cannot afford adequate disease control
+- Climate change expands disease distribution
+
+**→ Coffee diseases are a “climate × microbiome × nutrition × plant vigor” problem,  
+and chemical‑only approaches are no longer sufficient.**
+
+---
+
+# **1.3 Bark and Stem Disorders (Cankers, Borers, Physiological Damage)**
+
+Coffee bark is essential for protecting the tree from pathogens, dehydration, and acid rain.  
+However, recent years have seen:
+
+- Bark peeling
+- Cankers
+- Borer damage
+- Acid rain–induced bark deterioration
+
+### ■ Causes
+
+- Nutrient deficiencies (Ca, B, Si)
+- Soil degradation
+- Drought stress
+- Secondary infections
+
+**→ Bark disorders indicate a collapse of the plant’s immune system.**
+
+---
+
+# **1.4 Soil Degradation and Nutrient Imbalance**
+
+Soil degradation is one of the most severe and widespread challenges in coffee‑producing regions.
+
+### ■ Key Issues
+
+- Loss of organic matter
+- Declining microbial diversity
+- Reduced water‑holding capacity
+- Heavy dependence on chemical fertilizers
+- Soil acidification
+- Continuous cropping fatigue
+
+### ■ Consequences
+
+- Low seedling survival
+- Weak plant vigor
+- Higher susceptibility to diseases
+- Unstable yields
+
+**→ Soil degradation is the fundamental bottleneck of the coffee industry.**
+
+---
+
+# **1.5 Rising Production Costs (Fertilizers, Agrochemicals, Labor)**
+
+Production costs have surged globally.
+
+### ■ Cost Drivers
+
+- Fertilizer price spikes (N, P, K)
+- Rising agrochemical costs
+- Labor shortages
+- Increased logistics costs
+- Currency fluctuations (USD‑based trade)
+
+### ■ Impact on Smallholders
+
+- Shrinking profit margins
+- Reduced capacity to invest in disease control
+- Increased vulnerability to climate shocks
+- Higher rates of farm abandonment
+
+**→ Economic fragility at the farm level destabilizes the entire supply chain.**
+
+---
+
+# **1.6 Coffee Price Volatility and Market Instability**
+
+Coffee prices have experienced extreme fluctuations in recent years.
+
+### ■ Three‑Layer Structure of Price Volatility
+
+|Layer|Description|
+|---|---|
+|**Supply‑side shocks**|Droughts, frosts, disease outbreaks|
+|**Demand‑side pressure**|Rapid growth in Asian markets|
+|**External factors**|Currency shifts, logistics disruptions, geopolitical risks|
+
+**→ Price volatility affects farmers, roasters, retailers, and consumers alike.**
+
+---
+
+# **1.7 Coffee Grounds Waste Problem (Environmental Burden & Cost)**
+
+Millions of tons of spent coffee grounds (SCG) are generated annually.
+
+### ■ Current Problems
+
+- High moisture → heavy → expensive to transport
+- High disposal and incineration costs
+- CO₂ emissions from burning
+- Regulatory barriers to reuse
+- Waste costs burden cafés and roasters
+
+**→ Coffee grounds are an untapped resource requiring a circular solution.**
+
+---
+
+# **1.8 Summary: The Coffee Industry Faces a “Polycrisis”**
+
+The challenges facing coffee are **complex, interconnected, and structural**:
+
+- Climate change
+- Plant diseases
+- Soil degradation
+- Rising production costs
+- Price volatility
+- Waste management issues
+
+These factors reinforce each other, creating a **systemic crisis** that cannot be solved with traditional inputs alone.
+</file>
+
+<file path="en/2_MBT55_Biosecurity_Biocontrol.md">
+# **2. Biosecurity and Biocontrol Functions of MBT55/HMT238
+
+— An Ecosystem‑Level Defense System That Prevents Disease Establishment —**
+
+MBT55/HMT238 is a **high‑diversity microbial consortium** composed of more than 120 species.  
+It provides a level of **ecosystem biosecurity** that cannot be achieved with chemical pesticides, fertilizers, or single‑strain microbial products.
+
+Its core principle is:
+
+> **Instead of “killing pathogens,” MBT55/HMT238 creates an environment where pathogens cannot establish in the first place.**
+
+This represents a shift from chemical agriculture to **ecological biosecurity**.
+
+---
+
+# **2.1 Composition and Characteristics of MBT55/HMT238**
+
+## **Microbial Composition (120+ species)**
+
+- Yeasts
+- Lactic acid bacteria
+- Actinomycetes
+- Filamentous fungi
+- Cellulose‑degrading bacteria (aerobic & anaerobic)
+- Protein‑degrading bacteria
+- Starch‑degrading bacteria
+- Lipid‑degrading bacteria
+- Nitrogen‑fixing bacteria (aerobic & anaerobic)
+- Iron‑oxidizing & iron‑reducing bacteria
+- Sulfur bacteria & sulfate‑reducing bacteria
+- Methane‑oxidizing bacteria
+- Lignin‑degrading fungi
+- Manganese‑oxidizing & manganese‑reducing bacteria
+
+## **Key Features**
+
+- **Aerobic 55% : Anaerobic 45%**
+- **Organic matter decomposition within 24 hours** (up to 90× faster than conventional composting)
+- **Humic substance formation: 70–85%**
+- **Strong inhibition of pathogenic fungi, bacteria, and viruses**
+- **Functional across multiple environments** (leaf surface, bark, rhizosphere, gut)
+
+---
+
+# **2.2 The Five‑Layer Biosecurity Model of MBT55/HMT238**
+
+MBT55/HMT238 provides biosecurity through a **five‑layer defense system**.
+
+---
+
+## **Layer 1: Priority Effect (Early Occupation of Ecological Niches)**
+
+MBT55/HMT238 rapidly colonizes leaf surfaces, bark, roots, and the rhizosphere,  
+preventing pathogens from attaching, germinating, or invading.
+
+### ✔ Mechanisms
+
+- Biofilm formation
+- Occupation of attachment sites
+- Pre‑emptive nutrient consumption
+
+### ✔ Target Diseases
+
+- Coffee Leaf Rust (CLR)
+- Anthracnose
+- CBD
+- Cercospora
+- Pink Disease
+- Shiitake Blue Mold
+- Honeybee Chalkbrood
+
+---
+
+## **Layer 2: Antagonistic Metabolites**
+
+MBT55/HMT238 produces **antifungal and antibacterial metabolites** that suppress pathogen growth.
+
+### ✔ Key Metabolites
+
+- Organic acids (lactic acid, acetic acid)
+- Antimicrobial peptides
+- Chitinase
+- β‑1,3‑glucanase
+- Volatile organic compounds (VOCs)
+
+### ✔ Effects
+
+- Inhibition of spore germination
+- Inhibition of hyphal elongation
+- Degradation of fungal cell walls
+
+---
+
+## **Layer 3: Micro‑environment Control**
+
+Pathogens depend on specific micro‑environmental conditions (pH, humidity, nutrients, redox).  
+MBT55/HMT238 modifies these conditions to eliminate pathogen niches.
+
+### ✔ Mechanisms
+
+- Stabilization of leaf surface pH
+- Improved redox balance on bark surfaces
+- Formation of soil aggregates
+- Increased water‑holding capacity
+- Fermentation‑dominant organic matter breakdown
+
+### ✔ Effects
+
+- Prevents CLR spore germination (requires leaf wetness)
+- Inhibits Pink Disease hyphal invasion
+- Reduces Cercospora toxin impact
+
+---
+
+## **Layer 4: Induced Systemic Resistance (ISR / ISE)**
+
+MBT55/HMT238 activates plant immune pathways.
+
+### ✔ Mechanisms
+
+- Induction of PR proteins (PR‑1, PR‑2, PR‑3)
+- Activation of phenolic metabolism
+- Lignification of cell walls
+- Callose deposition
+
+### ✔ Effects
+
+- Increased resistance to CLR, Anthracnose, CBD
+- Stronger bark structure
+- Higher resistance in young fruits
+
+---
+
+## **Layer 5: Ecosystem Feedback Loop**
+
+MBT55/HMT238 creates a **positive ecological feedback cycle**:
+
+> Microbes → Environmental improvement → Microbial dominance → Pathogen suppression
+
+### ✔ Outcomes
+
+- Soil fertility increases year by year
+- Plant vigor improves
+- Disease risk decreases
+- Production costs decline
+
+---
+
+# **2.3 Disease‑Specific Mechanisms of MBT55/HMT238**
+
+---
+
+## **① Coffee Leaf Rust (CLR)**
+
+### ✔ Mechanisms
+
+- Priority effect on leaf surface
+- Antifungal enzymes inhibit spore germination
+- Stabilized leaf surface pH
+- ISR activation
+
+### ✔ Expected Outcomes
+
+- **50–70% reduction** in infection
+- Reduced defoliation
+- More stable yields
+
+---
+
+## **② Anthracnose (Colletotrichum spp.)**
+
+### ✔ Mechanisms
+
+- Biofilm formation on fruit surface
+- Chitinase‑mediated cell wall degradation
+- Enhanced phenolic metabolism in young fruits
+
+---
+
+## **③ Coffee Berry Disease (CBD)**
+
+### ✔ Mechanisms
+
+- Strong defense during early fruit development
+- Enhanced Ca and Si uptake
+- Inhibition of appressorium formation
+
+---
+
+## **④ Cercospora Leaf Spot**
+
+### ✔ Mechanisms
+
+- Improved leaf nutrition via nitrogen fixation
+- Enhanced antioxidant enzyme activity
+- Stabilized leaf microclimate
+
+---
+
+## **⑤ Pink Disease**
+
+### ✔ Mechanisms
+
+- Microbial barrier on bark
+- Antagonistic antibiotics
+- Strengthening of bark through Ca/Si uptake
+
+---
+
+# **2.4 Bark Regeneration & Acid Rain Damage Recovery**
+
+MBT55/HMT238 has demonstrated the ability to regenerate bark damaged by acid rain (pine tree case).  
+Similar effects are expected in coffee trees.
+
+### ✔ Mechanisms
+
+- Reconstruction of bark microbiome
+- Promotion of lignin synthesis
+- Improved mineral uptake (Ca, Si, B)
+- Restoration of redox balance
+
+---
+
+# **2.5 Evidence from Honeybee Chalkbrood & Shiitake Blue Mold**
+
+### ■ Chalkbrood (Ascosphaera apis)
+
+- MBT55‑fed colonies showed **0% infection**
+- Competitive exclusion in gut microbiome
+- Antifungal metabolites inhibited spore germination
+
+### ■ Shiitake Blue Mold (Trichoderma spp.)
+
+- MBT55 enzyme solution (1,000–5,000× dilution) caused **complete disappearance**
+- Chitinase degraded fungal cell walls
+- VOCs inhibited hyphal growth
+
+**→ Strong evidence for application to coffee fungal diseases.**
+
+---
+
+# **2.6 Scientific Data Supporting MBT55/HMT238**
+
+### ■ Organic Matter Degradation (CFU/g)
+
+- Protein‑degrading bacteria: 10⁵–10⁷
+- Starch‑degrading bacteria: 10⁵–10⁶
+- Lipid‑degrading bacteria: 10⁴–10⁶
+- Cellulose‑degrading bacteria: 10⁴–10⁶
+
+### ■ Humification
+
+- 70–85% humic substance formation
+- Carbon retention: 20–50 years
+
+### ■ Microbial Diversity
+
+- 120+ species
+- Aerobic 55% : Anaerobic 45%
+
+---
+
+# **2.7 Summary: MBT55/HMT238 Is an Ecosystem‑Level Biosecurity Technology**
+
+MBT55/HMT238 is not a simple microbial input.  
+It is a **multi‑layer, multi‑environment, multi‑disease, multi‑function biosecurity system** that:
+
+- Suppresses diseases
+- Improves soil
+- Enhances plant vigor
+- Reduces production costs
+- Increases yield stability
+
+It is one of the most promising ecosystem‑based solutions for the global coffee industry.
+</file>
+
+<file path="en/3_Economic_Impact_and_Social_Value.md">
+# **3. Economic Benefits and Social Impact of MBT55/HMT238
+
+— Multi‑Layer Value Creation for Farmers, Companies, Communities, and the Planet —**
+
+MBT55/HMT238 is not merely an agricultural input.  
+It is a **multi‑value engine** that simultaneously improves productivity, reduces costs, enhances climate resilience, increases farmer income, and strengthens community well‑being.
+
+This chapter organizes the **economic value (Economic Value)** and **social value (Social Value)** generated by MBT55/HMT238.
+
+---
+
+# **3.1 Yield Increase (Productivity Gains)**
+
+Across multiple crops and regions, MBT55/HMT238 has demonstrated  
+**+30–50% yield increases**.
+
+## **Key Effects in Coffee Farms**
+
+- Enhanced root zone activity (N‑fixation, P‑solubilization, AMF promotion)
+- Suppression of major diseases (CLR, Anthracnose, CBD, Cercospora)
+- Higher seedling survival
+- Improved plant vigor and longevity
+- Increased polyphenols and flavor quality
+
+## **Mechanisms Behind Yield Increase**
+
+- Higher photosynthetic efficiency
+- Increased root biomass
+- Reduced disease‑induced defoliation
+- Improved soil water retention
+- Enhanced nutrient uptake
+
+### ✔ **Expected Yield Increase: +30–50% (stabilized within 2–3 years)**
+
+---
+
+# **3.2 Production Cost Reduction**
+
+MBT55/HMT238 significantly reduces fertilizer, pesticide, labor, irrigation, and waste‑management costs.
+
+## **Major Cost Reductions**
+
+|Cost Item|Conventional|With MBT55/HMT238|
+|---|---|---|
+|Chemical fertilizers|High cost|**40–60% reduction**|
+|Fungicides & pesticides|Frequent spraying|**50–80% reduction**|
+|Irrigation|High during drought|**30–50% reduction**|
+|Disease‑management labor|High|**Significant reduction**|
+|Coffee grounds disposal|Costly|**Converted into revenue**|
+
+---
+
+# **3.3 Quality Improvement (Quality Premium)**
+
+MBT55/HMT238 improves coffee quality through enhanced plant health and stable fermentation.
+
+## **Expected Quality Improvements**
+
+- Cupping score: **+1–3 points**
+- Polyphenol content: **+10–30%**
+- Improved sugar–acid balance
+- More stable fermentation
+
+### ✔ **Result: +20–40% premium price potential**
+
+---
+
+# **3.4 Climate Value (Carbon Sequestration & Emission Reduction)**
+
+MBT55/HMT238 dramatically increases carbon sequestration in soil, biomass, and organic matter.
+
+## **Key Climate Contributions**
+
+### **① Soil Organic Carbon (SOC)**
+
+- Humification rate: **70–85%**
+- Carbon retention: **20–50 years**
+- SOC increase: **1.5–2.5 tCO₂/ha/year**
+
+### **② Tree Biomass**
+
+- Improved vigor → higher photosynthesis
+- Longer tree lifespan → long‑term carbon storage
+
+### **③ Coffee Grounds Upcycling**
+
+- Avoided CO₂ emissions from incineration
+- Converted into fertilizer, feed, or biochar
+
+### **④ Biochar Integration**
+
+- Long‑term carbon storage (100–500 years)
+
+---
+
+# **3.5 Farmer Income Increase**
+
+With MBT55/HMT238, smallholder income can increase by **+100–200%**.
+
+## **Model Case (5 ha farm)**
+
+|Item|Conventional|With MBT55|
+|---|---|---|
+|Yield|1,200 kg/ha|**1,560 kg/ha (+30%)**|
+|Selling price|$3.50/kg|**$4.20/kg (+20%)**|
+|Gross revenue|$21,000|**$32,760**|
+|Input cost|-$8,500|**-$5,950 (-30%)**|
+|Carbon credits|$0|**+$2,500**|
+|**Net income**|**$12,500**|**$29,310 (+134%)**|
+
+---
+
+# **3.6 Industry‑Wide Economic Impact**
+
+If MBT55/HMT238 is adopted globally:
+
+## **Expected Global Impacts**
+
+- Global yield: **+20–30%**
+- Disease losses: **50% reduction**
+- Production cost: **30–40% reduction**
+- Price volatility: **significant reduction**
+- Supply stability: **major improvement**
+
+---
+
+# **3.7 Social Impact (Social Value)**
+
+MBT55/HMT238 generates broad social benefits for farmers, communities, and consumers.
+
+---
+
+## **① Income Stability for Farmers**
+
+- Stable yields
+- Reduced disease risk
+- PBPE‑based income protection
+- Lower insurance costs
+
+---
+
+## **② Wealth Creation for Farmers**
+
+Through PBPE, farmers gain access to new financial assets:
+
+- **Carbon Equity**
+- **Yield‑Linked Tokens**
+- **Quality Premium Bonds**
+- **PBPE staking rewards**
+
+---
+
+## **③ Local Economic Regeneration**
+
+- Coffee grounds upcycling
+- Local fermentation centers
+- Job creation
+- Reduced waste‑management costs
+- Circular economy formation
+
+---
+
+## **④ Consumer Value**
+
+- “Your cup regenerates the planet”
+- Climate‑positive coffee
+- Higher polyphenols → health value
+- Transparent ESG consumption
+
+---
+
+# **3.8 Integration with Climate Finance**
+
+PBPE transforms coffee into a **carbon‑backed financial asset**.
+
+### ✔ Coffee = Ecosystem Data × Carbon Sequestration × Quality × Yield
+
+### ✔ Coffee Trading = Carbon Credit Trading
+
+### ✔ Farmers = Carbon Asset Holders
+
+This is the core innovation that attracts  
+**Starbucks, the Gates Foundation, and Microsoft**.
+
+---
+
+# **3.9 Summary: MBT55/HMT238 Creates Triple Value — Economic × Social × Climate**
+
+MBT55/HMT238 simultaneously improves:
+
+- Productivity
+- Profitability
+- Social well‑being
+- Climate resilience
+- Consumer engagement
+
+It is a **comprehensive value‑creation engine** for the global coffee industry.
+</file>
+
+<file path="en/4_Cost_Reduction_and_Yield_Increase.md">
+# **4. Cost Reduction and Yield Increase
+
+— How MBT55/HMT238 Enables “High Yield × Low Cost” Regenerative Coffee Farming —**
+
+MBT55/HMT238 enables a breakthrough model in agriculture:  
+**increasing yields while simultaneously reducing production costs**.  
+This is possible because MBT55/HMT238 improves the entire ecosystem—soil, plant vigor, disease resistance, nutrient cycling, and water retention—rather than acting as a single‑function input.
+
+---
+
+# **4.1 Overview of Production Cost Reduction**
+
+With MBT55/HMT238, coffee farms can reduce major production costs by **30–50%**.
+
+## **Key Cost Reduction Areas**
+
+|Cost Item|Conventional|With MBT55/HMT238|
+|---|---|---|
+|Chemical fertilizers|High cost|**40–60% reduction**|
+|Fungicides & pesticides|Frequent spraying|**50–80% reduction**|
+|Irrigation|High during drought|**30–50% reduction**|
+|Disease‑management labor|High|**Significant reduction**|
+|Coffee grounds disposal|Costly|**Converted into revenue**|
+
+---
+
+# **4.2 Scientific Mechanisms Behind Cost Reduction**
+
+---
+
+## **① Reduction of Chemical Fertilizers (40–60%)**
+
+MBT55/HMT238 enhances nutrient availability through:
+
+### ✔ Nitrogen Fixation (Aerobic & Anaerobic)
+
+- Converts atmospheric N₂ into plant‑available NH₃
+- Supplies **20–40 kg N/ha/year**
+
+### ✔ Phosphorus Solubilization
+
+- Organic acids (e.g., gluconic acid) solubilize fixed P
+- Reduces P fertilizer use by **30–50%**
+
+### ✔ Mineral Chelation
+
+- Humic substances improve uptake of K, Ca, Mg, Fe, Zn
+
+---
+
+## **② Reduction of Fungicides & Pesticides (50–80%)**
+
+MBT55/HMT238’s **five‑layer biosecurity system** suppresses major diseases:
+
+- CLR (Coffee Leaf Rust)
+- Anthracnose
+- CBD
+- Cercospora
+- Pink Disease
+
+### ✔ Documented Effects
+
+- CLR incidence: **50–70% reduction**
+- Anthracnose lesions: **40–60% reduction**
+- CBD infection: **50–80% reduction**
+- Cercospora defoliation: **60–80% reduction**
+- Pink Disease mortality: **70–90% reduction**
+
+**→ Fewer chemical sprays, lower labor costs, and safer ecosystems.**
+
+---
+
+## **③ Reduction of Irrigation Costs (30–50%)**
+
+MBT55/HMT238 dramatically improves soil water retention.
+
+### ✔ Mechanisms
+
+- Formation of soil aggregates
+- Increased humic substances (retain 5–10× their weight in water)
+- Improved root depth and density
+
+### ✔ Outcomes
+
+- Fewer irrigation cycles
+- Lower pumping/fuel costs
+- Reduced drought stress
+
+---
+
+## **④ Waste Management Cost Reduction (Coffee Grounds → Resources)**
+
+Traditionally:
+
+- Coffee grounds are heavy and wet
+- Disposal and incineration are costly
+- Burning releases CO₂
+
+With MBT55/HMT238:
+
+- **24‑hour fermentation** converts grounds into fertilizer, feed, or biochar
+- Waste becomes a **revenue‑generating resource**
+
+---
+
+# **4.3 Yield Increase (+30–50%)**
+
+MBT55/HMT238 consistently increases yields by **+30–50%**.
+
+## **Key Drivers of Yield Increase**
+
+### **① Root Zone Activation**
+
+- Nitrogen fixation
+- Phosphorus solubilization
+- AMF (mycorrhiza) enhancement
+- Root biomass +20–40%
+
+### **② Disease Suppression**
+
+- Reduced defoliation
+- Higher photosynthesis
+- Lower fruit drop
+
+### **③ Improved Plant Vigor**
+
+- Bark regeneration
+- Recovery from acid rain damage
+- Stronger vascular system
+
+### **④ Enhanced Soil Water Retention**
+
+- Stable fruit development
+- Reduced drought stress
+
+### **⑤ Improved Fruit Quality**
+
+- Higher polyphenols
+- Better sugar–acid balance
+- More uniform ripening
+
+---
+
+# **4.4 Yield Model (5 ha Farm Example)**
+
+|Item|Conventional|With MBT55|
+|---|---|---|
+|Yield|1,200 kg/ha|**1,560 kg/ha (+30%)**|
+|Disease loss|-25%|**-10%**|
+|Seedling survival|70%|**90%**|
+|Plant vigor|Unstable|**Stable**|
+|Quality|Standard|**Premium (+20%)**|
+
+---
+
+# **4.5 Why “High Yield × Low Cost” Is Possible**
+
+Traditional agriculture has a trade‑off:
+
+- Higher yield → higher fertilizer/pesticide cost
+- Lower cost → lower yield
+
+MBT55/HMT238 breaks this trade‑off.
+
+> **By strengthening the ecosystem itself,  
+> higher yields naturally lead to lower costs.**
+
+This is the foundation of **regenerative, profitable agriculture**.
+
+---
+
+# **4.6 Summary of MBT55/HMT238 Effects**
+
+## ✔ Cost Reduction
+
+- Fertilizers: **40–60% less**
+- Pesticides: **50–80% less**
+- Irrigation: **30–50% less**
+- Waste disposal: **cost → revenue**
+
+## ✔ Yield Increase
+
+- **+30–50%**
+- Lower disease losses
+- Higher seedling survival
+- Stronger plant vigor
+
+## ✔ Quality Improvement
+
+- Cupping score **+1–3 points**
+- Premium price **+20–40%**
+
+## ✔ Climate Value
+
+- Soil carbon sequestration
+- Avoided emissions
+- Biochar long‑term storage
+
+---
+
+# **4.7 Conclusion: MBT55/HMT238 Enables Profitable Regenerative Agriculture**
+
+MBT55/HMT238 simultaneously delivers:
+
+- Higher yields
+- Lower costs
+- Better quality
+- Stronger climate value
+
+It is a **comprehensive ecosystem technology** that transforms coffee farming into a  
+**high‑profit, climate‑positive, regenerative system**.
+</file>
+
+<file path="en/5_PBPE_and_Carbon_Economy.md">
+# **5. PBPE and the Carbon Economy
+
+— Transforming Coffee Trading into Carbon Credit Trading (“Climate Currency”) —**
+
+PBPE (Planetary Bio‑Phenome Engine) is the world’s first system that  
+**converts agricultural production processes into measurable, verifiable climate value**.
+
+Through MBT55/HMT238, ecosystems regenerate.  
+Through AGRIX, these changes are measured.  
+Through SafelyChain and MABC, they are certified and financialized.
+
+As a result:
+
+> **Buying coffee = Buying carbon credits**  
+> **Coffee becomes Climate Currency**
+
+This chapter explains the structure of this new carbon‑integrated economic model.
+
+---
+
+# **5.1 What Is “Climate Value” Created by PBPE?**
+
+PBPE quantifies and monetizes all ecosystem improvements generated during coffee production.
+
+## **Components of Climate Value**
+
+### **① Carbon Sequestration**
+
+- Increased tree biomass
+- Increased soil organic carbon (SOC)
+- Long‑term humic substance formation (20–50 years)
+- Biochar‑based long‑term storage (100–500 years)
+
+### **② Emission Reduction**
+
+- Reduced chemical fertilizers (N₂O reduction)
+- Reduced pesticides (manufacturing & application emissions)
+- Avoided emissions from coffee grounds incineration
+- Reduced logistics waste
+
+### **③ Ecosystem Services**
+
+- Improved soil water retention
+- Reduced disease risk
+- Enhanced plant vigor
+- Increased biodiversity
+
+### **④ Yield & Quality Improvements**
+
+- Yield: **+30–50%**
+- Quality: **+1–3 cupping points**
+- Premium price: **+20–40%**
+
+All of these are **quantifiable climate assets** under PBPE.
+
+---
+
+# **5.2 PBPE Four‑Layer Architecture (Foundation of the Carbon Economy)**
+
+PBPE consists of four integrated layers:
+
+```
+Layer 4: Impact Finance (SafelyChain × MABC)
+Layer 3: Phenomic Intelligence (AGRIX)
+Layer 2: Hypercycle Dynamics (Ecosystem Hypercycle)
+Layer 1: Bio‑Security (MBT55/HMT238)
+```
+
+---
+
+## **Layer 1: MBT55/HMT238 (Bio‑Security Layer)**
+
+- Disease suppression (CLR, CBD, Anthracnose, Cercospora)
+- Soil regeneration (humification, aggregation)
+- Bark recovery & acid rain damage repair
+- 24‑hour organic matter decomposition
+
+→ **Creates the physical basis for increased carbon sequestration**
+
+---
+
+## **Layer 2: Hypercycle Dynamics (Ecosystem Hypercycle)**
+
+- Nutrient cascades
+- Microbial network stabilization
+- Water & redox balance
+- Accelerated carbon cycling
+
+→ **Sustains long‑term ecosystem improvement**
+
+---
+
+## **Layer 3: AGRIX (Phenomic Intelligence Layer)**
+
+- Real‑time phenotypic measurement
+- SOC estimation
+- Disease risk prediction
+- Yield prediction
+- Generation of PBPE credit data
+
+→ **Converts ecosystem changes into measurable data**
+
+---
+
+## **Layer 4: SafelyChain × MABC (Impact Finance Layer)**
+
+- Tokenization of ΔC (carbon sequestration)
+- Proof of ecosystem services
+- Integration of coffee and carbon value
+- Scope 3 reduction for corporations
+
+→ **Transforms ecosystem data into financial assets**
+
+---
+
+# **5.3 How Coffee Becomes a “Carbon Asset”**
+
+PBPE transforms coffee beans into a multi‑value asset.
+
+## **Four Layers of Value**
+
+### **① Physical Value**
+
+- Bean quality
+- Flavor, aroma, polyphenols
+
+### **② Ecological Value**
+
+- ΔC (carbon sequestration)
+- Soil improvement
+- Disease risk reduction
+
+### **③ Climate Value**
+
+- Carbon fixation
+- Emission reduction
+- Avoided emissions
+- Biochar storage
+
+### **④ Financial Value**
+
+- Carbon Equity
+- Yield‑Linked Tokens
+- Quality Premium Bonds
+
+---
+
+# **5.4 Why “Coffee Trading = Carbon Credit Trading” Works**
+
+PBPE converts agricultural processes into  
+**verifiable, traceable, finance‑grade carbon value**.
+
+### ✔ For Corporations
+
+- Automatic Scope 3 reduction
+- ESG‑aligned procurement
+- Stable supply chains
+- Direct support for farmers
+
+### ✔ For Consumers
+
+- “A cup that regenerates the planet”
+- Transparent climate impact
+
+### ✔ For Farmers
+
+- Ownership of carbon assets
+- Yield‑linked income
+- Quality‑linked income
+- Income stability
+
+---
+
+# **5.5 PBPE Creates a New Carbon Economy (Carbon Economy 2.0)**
+
+PBPE solves the structural problems of traditional carbon markets.
+
+|Traditional Carbon Market|PBPE (Carbon Economy 2.0)|
+|---|---|
+|Unclear additionality|AGRIX measures ΔC in real time|
+|Double counting risk|SafelyChain eliminates it|
+|Forest‑centric|Includes soil, microbes, agriculture|
+|Farmers receive little benefit|Farmers own carbon equity|
+|Hard for companies to use|Coffee purchase = automatic offset|
+
+---
+
+# **5.6 PBPE × Coffee: The Climate Currency Model**
+
+PBPE turns coffee into **Climate Currency**.
+
+## **Components of Climate Currency**
+
+- ΔC (carbon sequestration)
+- Ecosystem services
+- Quality
+- Yield
+- Traceability
+- Tokenized financial value
+
+## **Value for Corporations**
+
+- Scope 3 reduction
+- ESG procurement
+- Brand enhancement
+- Consumer engagement
+
+## **Value for Farmers**
+
+- Carbon Equity
+- Yield Tokens
+- Quality Bonds
+- Income protection
+
+---
+
+# **5.7 PBPE × Starbucks × Microsoft × Gates Foundation**
+
+PBPE aligns the interests of all three major stakeholders.
+
+### ✔ Starbucks
+
+- Regenerative coffee standard
+- Scope 3 reduction
+- Farmer support
+
+### ✔ Microsoft
+
+- Azure × AGRIX data infrastructure
+- Climate data standardization
+- ESG solutions
+
+### ✔ Gates Foundation
+
+- Agricultural resilience
+- Maternal & child health (MBT55 × Nutrition)
+- Support for developing regions
+
+PBPE is the **only integrated model** that sits at the intersection of these priorities.
+
+---
+
+# **5.8 Summary: PBPE Integrates Climate, Agriculture, and Finance**
+
+PBPE simultaneously delivers:
+
+- Coffee industry regeneration
+- Farmer wealth creation
+- Corporate ESG value
+- Climate mitigation
+- Carbon market transparency
+- Consumer participation
+
+And ultimately:
+
+> **Coffee becomes a Climate Currency that regenerates the planet.**
+</file>
+
+<file path="en/6_Consumer_Engagement.md">
+# **6. Consumer Engagement and Impact
+
+— Designing a Coffee Experience Where “Every Cup Regenerates the Planet” —**
+
+PBPE × MBT55/HMT238 × Coffee does not only transform farms, supply chains, and corporate ESG strategies.  
+It fundamentally reshapes **consumer experience, behavior, and values**.
+
+This chapter explains how PBPE coffee turns consumers into **active participants in planetary regeneration**.
+
+---
+
+# **6.1 Consumers Become Participants in Regeneration**
+
+PBPE coffee is not just a beverage.  
+It is a form of **Climate Currency**—a product with measurable climate value.
+
+When consumers purchase PBPE coffee, they contribute to:
+
+- Carbon sequestration
+- Farmer income improvement
+- Disease reduction
+- Soil regeneration
+- Coffee‑grounds circularity
+
+In other words:
+
+> **Consumers become co‑investors in planetary regeneration.**
+
+---
+
+# **6.2 Transformation of Consumer Experience**
+
+PBPE coffee changes the meaning of drinking coffee.
+
+---
+
+## **① From “Drinking” to “Participating”**
+
+Traditional coffee:
+
+- A simple consumption act
+
+PBPE coffee:
+
+- Drinking = **participating in carbon sequestration**
+- Buying = **supporting farmer wealth creation**
+- Choosing = **expressing climate action**
+
+---
+
+## **② From “Tasting” to “Sharing a Story”**
+
+Each PBPE coffee lot carries transparent data:
+
+- ΔC (carbon sequestration)
+- Soil improvement metrics
+- Disease‑risk reduction
+- Farmer income impact
+- Coffee‑grounds circularity
+- Producer stories
+
+Consumers can understand:
+
+> **“How much this cup helped regenerate the planet.”**
+
+---
+
+## **③ From “Buying” to “Supporting”**
+
+PBPE coffee directly contributes to:
+
+- Farmer income stability
+- Education and healthcare access
+- Disease‑risk reduction
+- Climate resilience
+- Long‑term asset ownership (Carbon Equity)
+
+Consumers can develop **Favorite Farmers**—a new form of ethical consumption.
+
+---
+
+# **6.3 New Value Delivered to Consumers**
+
+---
+
+## **① Climate Value**
+
+Consumers can see exactly how much CO₂ their cup helped sequester.
+
+Example:
+
+- 1 cup of PBPE coffee → **0.5–1.2 kg CO₂ sequestered**
+- 300 cups/year → **150–360 kg CO₂ sequestered**
+
+Equivalent to planting several trees.
+
+---
+
+## **② Social Value**
+
+PBPE coffee is not “charity coffee.”  
+It is **investment coffee**.
+
+Consumers contribute to:
+
+- Minimum income protection
+- Agricultural insurance
+- Healthcare access
+- Education funds
+- Carbon equity for farmers
+
+---
+
+## **③ Health Value**
+
+MBT55/HMT238 improves:
+
+- Polyphenol content
+- Antioxidant capacity
+- Fermentation stability
+
+PBPE coffee becomes a **health‑enhancing beverage**.
+
+---
+
+# **6.4 Transparency and Engagement Tools**
+
+PBPE coffee enables unprecedented transparency.
+
+---
+
+## **① Display of ΔC (Carbon Sequestration)**
+
+Example:
+
+> “This lot sequestered **4.2 kg CO₂ per kg** of green coffee.”
+
+---
+
+## **② Farmer Stories**
+
+Consumers can see:
+
+- Which farm produced the coffee
+- How the family’s life improved
+- How disease risks decreased
+- How soil health changed
+
+---
+
+## **③ Coffee‑Grounds Circularity**
+
+Consumers can track:
+
+- Coffee grounds collected from cafés
+- MBT55 fermentation
+- Return of nutrients to farms
+- Soil regeneration impact
+
+This creates a **city ↔ farm circular economy**.
+
+---
+
+# **6.5 PBPE × Starbucks: The Future Consumer Experience**
+
+If Starbucks adopts PBPE, the consumer experience transforms dramatically.
+
+---
+
+## **① Carbon Sequestration Printed on Cups**
+
+Example:
+
+> “This cup sequestered **0.8 kg CO₂**.”
+
+---
+
+## **② App‑Based Climate Dashboard**
+
+Consumers can track:
+
+- Annual CO₂ contribution
+- Farmers supported
+- Coffee‑grounds recycled
+- Scope 3 reduction impact
+
+---
+
+## **③ “Regenerative Coffee” Brand Identity**
+
+Starbucks becomes the world’s first:
+
+- Regenerative coffee company
+- Climate‑positive beverage brand
+- Consumer‑driven climate‑action platform
+
+---
+
+# **6.6 Why Consumers Choose PBPE Coffee**
+
+PBPE coffee offers more reasons to choose it than any other coffee model.
+
+- Good for the planet
+- Good for farmers
+- Good for personal health
+- Better taste
+- Transparent impact
+- Ethical and ESG‑aligned
+- Participatory climate action
+
+PBPE coffee becomes:
+
+> **“The most justifiable coffee choice in the world.”**
+
+---
+
+# **6.7 Summary: PBPE Makes Consumers the Protagonists of Regeneration**
+
+PBPE × MBT55/HMT238 × Coffee transforms consumer behavior:
+
+- Drinking → **Participating**
+- Buying → **Supporting**
+- Tasting → **Sharing a story**
+- Consumption → **Regeneration**
+
+Ultimately:
+
+> **Every cup becomes an act of planetary regeneration.**
+</file>
+
+<file path="en/7_Coffee_Price_Stabilization.md">
+# **7. Coffee Price Stabilization
+
+— How PBPE × MBT55/HMT238 Reduces Volatility Through Supply Stability, Cost Reduction, and Climate Value —**
+
+Coffee is one of the most price‑volatile agricultural commodities in the world.  
+Its price is influenced by **climate shocks, plant diseases, logistics disruptions, rising input costs, and speculative capital**.
+
+PBPE × MBT55/HMT238 fundamentally transforms this structure by stabilizing yields, reducing production costs, and creating new financial buffers for farmers.
+
+This chapter explains how PBPE becomes a **“price‑stabilization engine”** for the global coffee industry.
+
+---
+
+# **7.1 Five Root Causes of Coffee Price Volatility**
+
+Coffee price volatility is driven by five interconnected structural factors.
+
+---
+
+## **① Climate Change (Unstable Yields)**
+
+- Droughts
+- Excessive rainfall
+- Frosts
+- Heatwaves
+- Irregular seasons
+
+These cause **sudden yield drops**, leading to price spikes.
+
+---
+
+## **② Plant Diseases (CLR, CBD, Anthracnose, Cercospora)**
+
+Diseases can destroy **30–70%** of production.
+
+Climate change expands disease distribution, increasing:
+
+- CLR outbreaks
+- CBD severity
+- Anthracnose fruit drop
+- Cercospora defoliation
+
+---
+
+## **③ Rising Production Costs**
+
+- Fertilizer price spikes
+- Agrochemical inflation
+- Labor shortages
+- Currency fluctuations (USD‑based trade)
+
+High costs reduce farmer profitability → reduced supply → price instability.
+
+---
+
+## **④ Logistics & Geopolitical Risks**
+
+- Red Sea route disruptions
+- Panama Canal drought
+- Rising fuel costs
+- Regional conflicts
+
+These increase transportation costs and reduce supply reliability.
+
+---
+
+## **⑤ Speculative Capital in Futures Markets**
+
+Coffee is heavily traded on futures markets.  
+Speculative flows amplify price swings.
+
+---
+
+# **7.2 Four Engines of Price Stabilization Enabled by PBPE**
+
+PBPE stabilizes coffee prices through **four systemic mechanisms**.
+
+---
+
+# **Engine 1: Yield Stabilization**
+
+MBT55/HMT238 improves ecosystem health, resulting in stable yields.
+
+### ✔ Effects
+
+- Disease incidence **reduced by 50–80%**
+- Drought tolerance **+60–100%**
+- Stronger plant vigor
+- Higher seedling survival
+- Improved soil water retention
+
+### ✔ Outcome
+
+**Supply shocks decrease → price volatility decreases.**
+
+---
+
+# **Engine 2: Production Cost Stabilization**
+
+MBT55/HMT238 reduces dependence on volatile external inputs.
+
+### ✔ Cost Reductions
+
+- Fertilizers: **40–60% less**
+- Pesticides: **50–80% less**
+- Irrigation: **30–50% less**
+- Waste disposal: **cost → revenue**
+
+### ✔ Outcome
+
+**Stable production costs → stable supply → stable prices.**
+
+---
+
+# **Engine 3: Carbon Value as a Second Income Stream**
+
+PBPE enables farmers to earn income from:
+
+- Soil carbon sequestration
+- Emission reduction
+- Coffee‑grounds upcycling
+- Biochar carbon storage
+
+### ✔ Outcome
+
+Even if yields drop, **carbon income stabilizes farmer livelihoods**, reducing supply volatility.
+
+---
+
+# **Engine 4: PBPE Financial Instruments (Income Protection)**
+
+PBPE introduces new financial tools:
+
+- **Carbon Equity**
+- **Yield‑Linked Tokens**
+- **Quality Premium Bonds**
+- **Minimum Income Protection**
+- **PBPE Staking Rewards**
+
+### ✔ Outcome
+
+Farmers are protected from price crashes → fewer farm abandonments → stable global supply.
+
+---
+
+# **7.3 The PBPE Price Stabilization Model**
+
+PBPE stabilizes prices through three interconnected layers.
+
+---
+
+## **① Supply Stability**
+
+- Disease suppression
+- Drought resilience
+- Soil regeneration
+- Stronger plant vigor
+
+→ **Stable yields**
+
+---
+
+## **② Farmer Economic Stability**
+
+- Lower production costs
+- Carbon income
+- PBPE financial tools
+- Minimum income protection
+
+→ **Stable production capacity**
+
+---
+
+## **③ Corporate Procurement Stability**
+
+- ESG‑aligned sourcing
+- Scope 3 reduction
+- PBPE credits
+- Long‑term contracts
+
+→ **Stable demand**
+
+---
+
+# **7.4 Benefits for Starbucks and Global Roasters**
+
+PBPE provides major advantages for roasters and multinational coffee companies.
+
+---
+
+## **① Stable Procurement Costs**
+
+- Reduced supply shocks
+- Predictable pricing
+- Long‑term contract feasibility
+
+---
+
+## **② Scope 3 Emission Reduction**
+
+PBPE provides:
+
+- ΔC (carbon sequestration)
+- Emission reduction
+- Waste circularity
+
+→ **Direct Scope 3 reduction for corporations**
+
+---
+
+## **③ Brand Value Enhancement**
+
+PBPE enables:
+
+- “Regenerative Coffee”
+- “Climate‑Positive Coffee”
+- “Carbon‑Backed Coffee”
+
+These resonate strongly with consumers.
+
+---
+
+# **7.5 Future of Coffee Price Stability with PBPE**
+
+If PBPE is widely adopted:
+
+---
+
+## **① Price Volatility Decreases**
+
+- Fewer climate‑induced supply shocks
+- Lower disease losses
+- More stable production
+
+---
+
+## **② Farmer Livelihoods Stabilize**
+
+- Carbon income
+- Lower costs
+- PBPE financial tools
+
+---
+
+## **③ Corporate Supply Chains Stabilize**
+
+- Long‑term contracts
+- ESG procurement
+- Scope 3 reduction
+
+---
+
+## **④ Consumer Prices Stabilize**
+
+- PBPE coffee becomes a **“stable‑supply brand”**
+- Fewer price spikes
+
+---
+
+# **7.6 Summary: PBPE Is a Price‑Stabilization Engine for the Coffee Industry**
+
+PBPE × MBT55/HMT238 addresses the root causes of price volatility across three layers:
+
+- **Ecological stability**
+- **Economic stability**
+- **Financial stability**
+
+By stabilizing yields, reducing costs, and creating new income streams,  
+PBPE enables long‑term price stability for the entire coffee value chain.
+</file>
+
+<file path="en/8_MBT_Sustainable_Cycle_and_Waste_Upcycling.md">
+# **8. MBT Sustainable Cycle and Coffee Waste Upcycling
+
+— Achieving a Zero‑Waste, Regenerative Coffee Industry with MBT55/HMT238 —**
+
+The global coffee industry generates massive amounts of organic waste at every stage of production:
+
+- Coffee cherry pulp
+- Parchment
+- Mucilage
+- Pruned branches and leaves
+- Processing residues
+- Spent coffee grounds (SCG) from cafés and households
+
+Traditionally, these materials have been treated as **waste**, incurring disposal costs and generating CO₂ or methane emissions.
+
+MBT55/HMT238 transforms these materials into **high‑value resources**, enabling a fully regenerative, circular coffee economy.
+
+This chapter explains how the **MBT Sustainable Cycle** works and how it reshapes the environmental and economic structure of the coffee industry.
+
+---
+
+# **8.1 What Is the MBT Sustainable Cycle?**
+
+The MBT Sustainable Cycle is a **microbial‑driven regenerative ecosystem engine** based on:
+
+- High‑speed decomposition
+- Fermentation
+- Humic substance formation
+- Microbial network stabilization
+- Biosecurity and pathogen suppression
+
+Its core principle:
+
+> **Organic matter → Fermentation → Humic substances → Soil regeneration → Higher yields → More organic matter**  
+> A natural cycle accelerated by MBT55/HMT238.
+
+---
+
+# **8.2 High‑Speed Decomposition & Fermentation (24–48 Hours)**
+
+MBT55/HMT238 reduces the traditional composting time (3–6 months) to **24–48 hours**.
+
+## **Three‑Stage High‑Speed Fermentation Process**
+
+### **① Hydrolysis (0–6 hours)**
+
+- Proteins → Amino acids
+- Starch → Sugars
+- Lipids → Fatty acids
+- Cellulose → Glucose
+
+### **② Fermentation & Metabolism (6–18 hours)**
+
+- Organic acid production
+- Antimicrobial metabolite generation
+- Formation of humic precursors
+
+### **③ Stabilization & Humification (18–24 hours)**
+
+- Formation of humic and fulvic acids
+- pH stabilization
+- Pathogen elimination (80–100°C fermentation heat)
+
+---
+
+# **8.3 Upcycling Spent Coffee Grounds (SCG)**
+
+Millions of tons of SCG are produced globally each year.
+
+Traditional problems:
+
+- High moisture → heavy → expensive to transport
+- Incineration → CO₂ emissions
+- Regulatory barriers to reuse
+- Waste costs for cafés and roasters
+
+MBT55/HMT238 converts SCG into **four high‑value resources**.
+
+---
+
+## **① Premium Organic Fertilizer**
+
+MBT55/HMT238 transforms SCG into fertilizer within 24 hours.
+
+### **Nutrient Profile**
+
+- Total nitrogen: 2.5–3.5%
+- Available phosphorus: 1.8–2.5%
+- Potassium: 1.5–2.0%
+- Humic substances: 15–25%
+- pH: 6.5–7.0
+
+### **Effects**
+
+- Improved soil fertility
+- Increased water retention
+- Enhanced microbial diversity
+- Higher seedling survival
+
+---
+
+## **② Functional Animal Feed**
+
+SCG contains:
+
+- Polyphenols
+- Dietary fiber
+- Amino acids
+- Trace minerals
+
+MBT55/HMT238 fermentation increases digestibility to **85–92%**.
+
+### **Applications**
+
+- Poultry
+- Swine
+- Aquaculture (fishmeal alternative)
+
+---
+
+## **③ Biochar**
+
+SCG can be pyrolyzed into biochar.
+
+### **Benefits**
+
+- Long‑term carbon storage (100–500 years)
+- Soil amendment
+- Microbial carrier for MBT55/HMT238
+
+---
+
+## **④ Water Purification Material**
+
+Humic substances produced by MBT55/HMT238:
+
+- Chelate heavy metals
+- Adsorb ammonia and nitrates
+- Decompose organic pollutants
+
+### **Applications**
+
+- Aquaculture ponds
+- Lakes and rivers
+- Agricultural drainage
+- Wastewater treatment
+
+---
+
+# **8.4 Upcycling Coffee Pulp, Parchment, and Processing Residues**
+
+MBT55/HMT238 enables full utilization of all coffee by‑products.
+
+---
+
+## **① Coffee Cherry Pulp**
+
+- Fermented fertilizer
+- Livestock feed
+- Biochar
+- Biogas substrate
+
+---
+
+## **② Parchment**
+
+- Cellulose resource
+- Soil amendment
+- Microbial carrier
+
+---
+
+## **③ Mucilage**
+
+- High sugar content → ideal fermentation substrate
+- Organic acid production
+- Microbial nutrient source
+
+---
+
+# **8.5 Urban–Rural Circularity (City ↔ Farm Loop)**
+
+PBPE × MBT55/HMT238 creates a **closed‑loop circular economy** connecting cities and farms.
+
+---
+
+## **① SCG Collection from Cafés**
+
+- Collected 1–2 times per week
+- Transported to MBT fermentation centers
+
+---
+
+## **② 24‑Hour Fermentation**
+
+SCG becomes:
+
+- Fertilizer
+- Feed
+- Biochar
+- Water purification material
+
+---
+
+## **③ Return to Coffee Farms**
+
+- Soil regeneration
+- Disease suppression
+- Yield increase
+
+---
+
+## **④ Coffee Returns to Cities**
+
+- Sold as PBPE regenerative coffee
+- ΔC (carbon sequestration) displayed
+
+---
+
+## **⑤ Consumers Participate in the Loop**
+
+- SCG return programs
+- Climate dashboards
+- “Your cup regenerates the planet” experience
+
+---
+
+# **8.6 Environmental Impact Reduction**
+
+MBT Sustainable Cycle dramatically reduces environmental burdens.
+
+---
+
+## **① CO₂ Emission Reduction**
+
+- Avoided incineration
+- Reduced chemical fertilizer use
+- Biochar carbon storage
+- Increased soil carbon
+
+---
+
+## **② Methane Reduction**
+
+- Prevents anaerobic decomposition of organic waste
+- Methanotrophs oxidize CH₄
+
+---
+
+## **③ Water Pollution Prevention**
+
+- Fermentation of processing residues
+- Purification of aquaculture and drainage water
+
+---
+
+## **④ Zero Waste**
+
+All coffee by‑products become resources:
+
+- SCG
+- Pulp
+- Parchment
+- Pruned branches
+- Leaves
+
+---
+
+# **8.7 Economic Value of MBT Upcycling**
+
+MBT55/HMT238 converts waste into revenue.
+
+## **Value per 1 Ton of SCG**
+
+|Item|Traditional (Incineration)|MBT Upcycling|
+|---|---|---|
+|Disposal cost|-¥30,000|¥0|
+|Fertilizer value|¥0|**¥40,000**|
+|Feed value|¥0|**¥50,000–80,000**|
+|Biochar value|¥0|**¥15,000–25,000**|
+|Carbon credit value|¥0|**¥3,000–10,000**|
+
+### ✔ **Total Value: ¥60,000–120,000 per ton**
+
+---
+
+# **8.8 Summary: MBT Sustainable Cycle Enables a Zero‑Waste Coffee Industry**
+
+MBT55/HMT238 transforms all coffee by‑products into valuable resources, enabling:
+
+- Zero waste
+- Lower CO₂ emissions
+- Higher soil carbon
+- Stronger ecosystems
+- Higher yields
+- Lower costs
+- Circular economy formation
+
+Ultimately:
+
+> **The coffee industry becomes regenerative, climate‑positive, and economically sustainable.**
+</file>
+
+<file path="en/appendix/Chalkbrood_and_BlueMold_Cases.md">
+# **Chalkbrood & Blue Mold Case Studies
+
+— Empirical Evidence of MBT55/HMT238 Biosecurity and Antifungal Performance —**
+
+This appendix summarizes empirical cases demonstrating the strong antifungal and biosecurity effects of MBT55/HMT238 against:
+
+- **Chalkbrood disease** (_Ascosphaera apis_) in honeybees
+- **Blue mold contamination** (_Trichoderma_ spp.) in shiitake mushroom cultivation
+
+These cases provide cross‑species evidence supporting MBT55/HMT238’s  
+**competitive exclusion, enzymatic degradation, VOC‑based inhibition, and micro‑environment stabilization** mechanisms.
+
+---
+
+# **1. Chalkbrood Disease (Ascosphaera apis) — Empirical Case Study**
+
+Chalkbrood is a fungal disease affecting honeybee larvae, caused by _Ascosphaera apis_.  
+Symptoms include:
+
+- Larvae turning white and mummified
+- Reduced colony productivity
+- Increased risk of colony collapse
+
+MBT55/HMT238 demonstrated **complete suppression** of chalkbrood under field conditions.
+
+---
+
+# **1.1 Study Overview**
+
+|Item|Details|
+|---|---|
+|Target|3 honeybee colonies|
+|Treatment|MBT55 fermentation liquid mixed with sugar syrup (feeding)|
+|Treatment duration|14 days|
+|Observation period|30 days|
+|Control|Untreated colony|
+
+---
+
+# **1.2 Key Results**
+
+### **✔ MBT55-treated colonies: 0% chalkbrood infection**
+
+### **✔ Control colonies: 18–27% infection**
+
+This indicates that MBT55/HMT238 provides **complete suppression** of _A. apis_ infection.
+
+---
+
+# **1.3 Mechanisms Behind Chalkbrood Suppression**
+
+## **① Competitive Exclusion in the Gut Microbiome**
+
+- Beneficial microbes occupy the gut environment
+- Pathogen spores cannot germinate or colonize
+- Enhanced immune response in larvae
+
+## **② Antifungal Metabolite Production**
+
+- Organic acids (lactic, acetic)
+- Antimicrobial peptides
+- Chitinase
+- β‑1,3‑glucanase
+
+These inhibit spore germination and degrade fungal cell walls.
+
+## **③ Micro‑environment Stabilization**
+
+- Balanced hive microbiome
+- Reduced pathogen niches
+- Improved larval survival conditions
+
+---
+
+# **1.4 Additional Observations**
+
+- Lower larval mortality
+- Increased queen egg‑laying rate
+- Higher colony activity
+- Honey production increased by **12–18%**
+
+---
+
+# **1.5 Conclusion (Chalkbrood)**
+
+> **MBT55/HMT238 provides complete suppression of chalkbrood disease.**  
+> This demonstrates strong cross‑kingdom antifungal capabilities relevant to coffee fungal diseases.
+
+---
+
+# **2. Shiitake Blue Mold (Trichoderma spp.) — Empirical Case Study**
+
+Blue mold (_Trichoderma_ spp.) is one of the most destructive diseases in shiitake mushroom cultivation.
+
+Symptoms include:
+
+- Green mold covering the substrate
+- Mycelial death
+- Severe yield loss
+
+MBT55/HMT238 showed **complete elimination** of blue mold even at high dilution levels.
+
+---
+
+# **2.1 Study Overview**
+
+|Item|Details|
+|---|---|
+|Target|Shiitake substrate infected with _Trichoderma_|
+|Treatment|MBT55 enzyme solution (spray application)|
+|Dilution|1,000×, 3,000×, 5,000×|
+|Observation period|7 days|
+
+---
+
+# **2.2 Key Results**
+
+### **✔ Complete disappearance of blue mold at 1,000–5,000× dilution**
+
+### **✔ White shiitake mycelium regenerated**
+
+### **✔ 0% recurrence after 30 days**
+
+This demonstrates extremely strong antifungal activity.
+
+---
+
+# **2.3 Mechanisms Behind Blue Mold Suppression**
+
+## **① Chitinase Activity**
+
+- Degrades fungal cell wall chitin
+- Causes structural collapse of _Trichoderma_ hyphae
+
+## **② β‑1,3‑Glucanase Activity**
+
+- Breaks down glucan components of fungal cell walls
+- Weakens pathogen integrity
+
+## **③ VOC‑Based Inhibition**
+
+- Yeasts and actinomycetes produce antifungal VOCs
+- Inhibit hyphal elongation and spore germination
+
+## **④ Microbial Barrier Formation**
+
+- MBT55 microbes colonize substrate surface
+- Prevent reinvasion by _Trichoderma_
+
+---
+
+# **2.4 Additional Observations**
+
+- Substrate pH stabilized (6.0–6.5)
+- Mycelial growth rate recovered
+- Yield increased by **25–40%** compared to untreated controls
+
+---
+
+# **2.5 Conclusion (Blue Mold)**
+
+> **MBT55/HMT238 completely eliminates blue mold and prevents recurrence.**  
+> This provides strong evidence for its application to coffee fungal diseases such as CLR, CBD, and anthracnose.
+
+---
+
+# **3. Implications for Coffee Disease Management**
+
+The chalkbrood and blue mold cases demonstrate that MBT55/HMT238 possesses:
+
+- Chitinase & glucanase activity
+- Antimicrobial peptides
+- Organic acid production
+- VOC‑based inhibition
+- Competitive exclusion
+- Micro‑environment stabilization
+- Microbial barrier formation
+
+These mechanisms directly apply to major coffee diseases:
+
+|Coffee Disease|Pathogen|Relevant MBT55 Mechanisms|
+|---|---|---|
+|CLR|_Hemileia vastatrix_|Priority effect, VOCs, ISR|
+|Anthracnose|_Colletotrichum_ spp.|Chitinase, antifungal metabolites|
+|CBD|_C. kahawae_|Appressorium inhibition, Ca/Si uptake|
+|Cercospora|_Cercospora_ spp.|pH stabilization, antioxidant enzymes|
+|Pink Disease|_E. salmonicolor_|Bark barrier, antimicrobial compounds|
+
+---
+
+# **4. Summary: MBT55/HMT238 Is a Universal Antifungal Biosecurity Technology**
+
+Across species and environments, MBT55/HMT238 demonstrates:
+
+- **Complete suppression** of chalkbrood
+- **Complete elimination** of blue mold
+- **Zero recurrence**
+- **Multi‑layer antifungal mechanisms**
+- **Strong applicability to coffee fungal diseases**
+
+Ultimately:
+
+> **MBT55/HMT238 creates an environment where fungal diseases cannot establish.**
+</file>
+
+<file path="en/appendix/Coffee_Carbon_Flow_Map.md">
+# **Coffee Industry Carbon Flow Map
+
+— How PBPE × MBT55/HMT238 Creates a Carbon‑Positive Coffee Economy —**
+
+This appendix visualizes the **carbon flows** across the entire coffee value chain and explains how PBPE × MBT55/HMT238 generates measurable, verifiable **carbon value (ΔC)** at each stage.
+
+PBPE is the world’s first model that integrates:
+
+- **Carbon sequestration**
+- **Emission reduction**
+- **Avoided emissions**
+- **Circular economy**
+- **Biosecurity & soil regeneration**
+
+into a unified carbon‑positive coffee system.
+
+---
+
+# **1. Overview of Carbon Flows in the Coffee Value Chain**
+
+The coffee life cycle consists of six major stages:
+
+```
+1. Cultivation (Farm)
+2. Processing (Pulping, Drying)
+3. Transport (Farm → Port → Roaster)
+4. Roasting (Roaster)
+5. Consumption (Cafés & Households)
+6. Waste (Spent Coffee Grounds, Pulp, Parchment)
+```
+
+PBPE × MBT55/HMT238 adds **carbon value** to every stage.
+
+---
+
+# **2. Carbon Flow in the Cultivation Stage (Farm Level)**
+
+Coffee farms are the **primary carbon sinks** in the value chain.
+
+---
+
+## **2.1 Above‑Ground Biomass (Trees, Leaves, Branches)**
+
+### ✔ Carbon Sequestration Mechanisms
+
+- Photosynthesis
+- Increased leaf area
+- Reduced defoliation
+- Stronger bark and vascular system
+
+### ✔ MBT55/HMT238 Effects
+
+- Disease suppression → fewer leaves lost
+- Bark regeneration → higher photosynthetic efficiency
+- Improved nutrient uptake → stronger growth
+
+---
+
+## **2.2 Below‑Ground Biomass (Roots & Rhizosphere)**
+
+### ✔ Carbon Sequestration Mechanisms
+
+- Root biomass accumulation
+- Root exudates feeding soil microbes
+- Increased root lifespan
+
+### ✔ MBT55/HMT238 Effects
+
+- Root biomass **+20–40%**
+- Enhanced AMF (mycorrhiza) activity
+- Improved nutrient cycling
+
+---
+
+## **2.3 Soil Organic Carbon (SOC)**
+
+SOC is the **largest and most stable carbon pool** in coffee farms.
+
+### ✔ MBT55/HMT238 SOC Impact
+
+- Humification rate: **70–85%**
+- Carbon retention: **20–50 years**
+- SOC increase: **1.5–2.5 tCO₂/ha/year**
+
+### ✔ Mechanisms
+
+- High‑speed decomposition
+- Humic substance formation
+- Soil aggregation
+- Microbial network stabilization
+
+---
+
+## **2.4 Disease Suppression → Carbon Retention**
+
+Diseases such as CLR, CBD, Anthracnose, and Cercospora cause:
+
+- Defoliation
+- Reduced photosynthesis
+- Lower biomass accumulation
+
+MBT55/HMT238 reduces disease incidence by **50–80%**, directly increasing carbon retention.
+
+---
+
+# **3. Carbon Flow in the Processing Stage**
+
+Coffee processing generates large amounts of organic waste:
+
+- Coffee cherry pulp
+- Mucilage
+- Parchment
+
+Traditionally, these cause **methane emissions** during anaerobic decomposition.
+
+### ✔ MBT55/HMT238 Impact
+
+- 24‑hour fermentation → **no methane emissions**
+- Conversion into fertilizer, feed, or biochar
+- Organic acids improve soil carbon stabilization
+
+---
+
+# **4. Carbon Flow in the Transport Stage**
+
+Transport emissions (Scope 3) are unavoidable.
+
+PBPE offsets these emissions through:
+
+- ΔC (farm‑level sequestration)
+- Avoided emissions from waste
+- Biochar long‑term storage
+
+### ✔ Result
+
+**Transport emissions can be fully neutralized.**
+
+---
+
+# **5. Carbon Flow in the Roasting Stage**
+
+Roasting consumes significant energy.
+
+PBPE enables:
+
+- Net‑Zero Roasting
+- Carbon‑positive roasting through ΔC credits
+- Integration with corporate Scope 3 reduction strategies
+
+---
+
+# **6. Carbon Flow in the Consumption Stage**
+
+Cafés and households generate **spent coffee grounds (SCG)**.
+
+Traditional disposal:
+
+- Incineration → CO₂ emissions
+- Landfill → methane emissions
+
+### ✔ MBT55/HMT238 Upcycling
+
+- SCG → fertilizer (24 hours)
+- SCG → feed
+- SCG → biochar
+- SCG → water purification material
+
+This creates a **city ↔ farm circular carbon loop**.
+
+---
+
+# **7. Carbon Flow in the Waste Stage (Zero‑Waste System)**
+
+MBT55/HMT238 enables complete upcycling of all coffee by‑products:
+
+|Waste Material|Traditional Outcome|MBT Outcome|
+|---|---|---|
+|Spent coffee grounds|Incineration|Fertilizer, feed, biochar|
+|Coffee pulp|Methane emissions|Fermented fertilizer|
+|Parchment|Waste|Soil amendment|
+|Mucilage|Water pollution|Fermentation substrate|
+|Pruned branches|Burning|Biochar|
+
+### ✔ Result
+
+**Zero waste + carbon‑positive outcomes.**
+
+---
+
+# **8. PBPE Creates a Carbon‑Positive Coffee System**
+
+PBPE integrates three types of carbon value:
+
+---
+
+## **8.1 Carbon Sequestration (ΔC)**
+
+- Tree biomass
+- Root biomass
+- Soil organic carbon
+- Biochar storage
+
+---
+
+## **8.2 Emission Reduction**
+
+- Reduced fertilizer use
+- Reduced pesticide use
+- Avoided SCG incineration
+- Avoided methane from pulp
+
+---
+
+## **8.3 Avoided Emissions**
+
+- Circular economy
+- Water purification
+- Reduced waste transport
+
+---
+
+# **9. Coffee Industry Carbon Flow Map (Diagram)**
+
+```
+[FARM]
+  Photosynthesis → Biomass ↑
+  Root biomass ↑
+  SOC ↑ (Humification 70–85%)
+  Disease suppression → Carbon retention ↑
+
+[PROCESSING]
+  Pulp → MBT fermentation → Fertilizer
+  Methane emissions avoided
+
+[TRANSPORT]
+  ΔC offsets transport emissions
+
+[ROASTING]
+  Net‑Zero Roasting via PBPE credits
+
+[CONSUMPTION]
+  SCG → MBT fermentation → Fertilizer / Feed / Biochar
+
+[CIRCULARITY]
+  City → Farm → City carbon loop
+```
+
+---
+
+# **10. Summary: PBPE Is the Engine of a Carbon‑Positive Coffee Economy**
+
+PBPE × MBT55/HMT238 transforms the coffee industry by:
+
+- Increasing carbon sequestration
+- Reducing emissions
+- Avoiding waste‑related emissions
+- Creating circular carbon loops
+- Generating financial carbon value (ΔC)
+- Enabling Scope 3 reduction for corporations
+
+Ultimately:
+
+> **Coffee becomes a climate‑positive commodity and a form of Climate Currency.**
+
+---
+
+# **11. Visual Carbon Flow & Climate Currency Architecture**
+
+This section reconstructs the key carbon‑related diagrams from the PBPE × MBT55 presentations  
+to provide a complete, text‑based representation of how coffee becomes a **carbon‑positive asset**  
+through MBT55/HMT238 and PBPE.
+
+---
+
+# **11.1 Coffee Carbon Balance (Before vs After MBT55)**
+
+MBT55 fundamentally shifts the carbon balance of coffee production by:
+
+- **Reducing emissions** (fertilizer, machinery, processing, transport)
+- **Increasing sequestration** (biomass, SOC, biochar, fermented waste)
+
+```
+[Traditional Coffee Carbon Balance]
+
+Emissions:
+• Fertilizer (N₂O)
+• Machinery fuel
+• Processing energy
+• Transport
+
+Limited Sequestration:
+• Tree biomass
+• Soil organic carbon (SOC)
+
+Net Result:
+→ Coffee is a net emitter of CO₂.
+```
+
+```
+[MBT55-Enhanced Carbon Balance]
+
+Reduced Emissions:
+• Chemical fertilizer use ↓
+• N₂O emissions ↓
+• Machinery fuel ↓
+• Processing waste ↓
+
+Increased Sequestration:
+• Tree biomass longevity ↑
+• SOC accumulation ↑
+• Biochar from waste ↑
+• Fermented waste carbon retention ↑
+
+Net Result:
+→ Coffee becomes a net carbon sink.
+```
+
+---
+
+# **11.2 The MBT55 Zero-Line Shift**
+
+MBT55 shifts the “zero line” of carbon accounting by simultaneously:
+
+- **Eliminating red emissions**
+- **Expanding green sequestration**
+
+```
+[Zero-Line Shift Diagram]
+
+Emissions (Red):
+- Fertilizer: -3
+- Machinery: -2
+- Processing: -4
+- Transport: -2
+
+Sequestration (Green):
++ Tree biomass: +6
++ SOC: +8
++ Biochar & fermented waste: +5
+
+MBT55 Effect:
+→ Red shrinks dramatically
+→ Green expands dramatically
+→ Net-positive carbon balance
+```
+
+---
+
+# **11.3 Coffee Carbon Flow Map (Full Value Chain)**
+
+This map shows how carbon flows through the entire coffee lifecycle  
+and how PBPE transforms each stage into a **carbon asset generator**.
+
+```
+[FARM]
+   MBT55 → Soil regeneration, disease suppression
+   AGRIX → ΔC measurement, phenomics
+   SOC accumulation → Carbon Equity
+
+[PROCESSING]
+   Coffee pulp → Fermentation → Biochar
+   Waste → Long-term carbon storage
+
+[TRANSPORT]
+   PBPE Credits offset logistics emissions
+
+[ROASTING]
+   Carbon-backed coffee enables Net-Zero roasting
+
+[CONSUMPTION]
+   Spent coffee grounds → MBT fermentation → Returned to farms
+
+[CIRCULAR ECONOMY]
+   Waste → Carbon asset → Soil regeneration → Higher yield
+```
+
+---
+
+# **11.4 Hybrid Asset Model: 1 kg Coffee = Climate Currency**
+
+PBPE fuses **physical coffee** with **verified carbon data** to create a hybrid asset.
+
+```
+[Hybrid Asset Structure]
+
+Physical Component:
+• 1 kg roasted coffee
+• Verified origin
+• Quality score
+
+Digital Carbon Component:
+• ΔC (carbon sequestration)
+• SOC increase
+• Biomass accumulation
+• Biochar retention
+• Emission avoidance
+
+Combined:
+→ Carbon-Backed Coffee Bean
+→ A new class of climate-positive commodity
+```
+
+Corporate buyers receive:
+
+- Premium coffee
+- Verified Scope 3 reductions
+- Digital carbon certificates
+
+---
+
+# **11.5 Digital MRV Pipeline (AGRIX × Azure)**
+
+```
+1. Physical Reality
+   MBT55 increases ΔC in soil & biomass.
+
+2. Digital MRV
+   AGRIX sensors capture:
+   • SOC
+   • biomass
+   • leaf/bark phenomics
+   • disease risk
+   • microclimate data
+
+3. Verification
+   SafelyChain ensures:
+   • traceability
+   • no double counting
+   • cryptographic auditability
+
+4. Asset Creation
+   Coffee + ΔC → Carbon-Backed Coffee
+
+5. Market Execution
+   Corporate buyers purchase hybrid assets.
+```
+
+---
+
+# **11.6 Carbon Value Compounding Across the Supply Chain**
+
+```
+Stage 1: Soil & Nursery
+   Biological Effect: Root activation
+   Carbon Effect: SOC increase
+   Financial Value: Carbon Equity baseline
+
+Stage 2: Growth Phase
+   Biological Effect: Tree longevity, disease resistance
+   Carbon Effect: Biomass accumulation
+   Financial Value: Long-term carbon bonds
+
+Stage 3: Harvest
+   Biological Effect: Quality ↑, polyphenols ↑
+   Carbon Effect: Waste reduction
+   Financial Value: Quality Premium Bonds
+
+Stage 4: Processing & Waste
+   Biological Effect: Fermentation optimization
+   Carbon Effect: Biochar creation
+   Financial Value: Circular economy credits
+```
+
+---
+
+# **11.7 Summary: Coffee Becomes a Carbon-Positive Financial Asset**
+
+```
+Coffee = Physical Value
+       × Ecological Value
+       × Climate Value
+       × Financial Value
+```
+
+PBPE transforms coffee into:
+
+- A regenerative agricultural product
+- A verified carbon sink
+- A hybrid financial asset
+- A climate currency
+</file>
+
+<file path="en/appendix/MBT55_Microbe_List.md">
+# **MBT55/HMT238 Microbial Consortium List
+
+— A High‑Diversity, High‑Functionality Ecosystem Engine (120+ Species)**
+
+MBT55/HMT238 is a **high‑diversity microbial consortium** composed of more than 120 species,  
+balanced at **55% aerobic : 45% anaerobic**, and designed to function as a  
+**multi‑environment, multi‑function ecological engine**.
+
+Its characteristics include:
+
+- **Multi‑functional capabilities** (decomposition, fermentation, pathogen suppression, immune activation)
+- **Adaptation across environments** (leaf surface, bark, rhizosphere, gut)
+- **24‑hour organic matter decomposition**
+- **Humic substance formation (70–85%)**
+- **Ecosystem‑level biosecurity (five‑layer model)**
+
+This appendix organizes the major microbial groups that constitute MBT55/HMT238.
+
+---
+
+# **1. Yeasts**
+
+Yeasts drive fermentation and inhibit pathogen attachment through competitive occupation.
+
+|Species|Primary Functions|
+|---|---|
+|_Saccharomyces cerevisiae_|Alcohol fermentation, antimicrobial metabolites|
+|_Candida utilis_|Protein synthesis, amino acid production|
+|_Pichia kudriavzevii_|Acid tolerance, antifungal VOCs|
+|_Hanseniaspora uvarum_|Fruit fermentation, aroma compounds|
+|_Kluyveromyces marxianus_|High‑temperature fermentation, lactose breakdown|
+
+---
+
+# **2. Lactic Acid Bacteria (LAB)**
+
+LAB stabilize pH, suppress pathogens, and enhance plant immunity.
+
+|Species|Primary Functions|
+|---|---|
+|_Lactobacillus plantarum_|Lactic acid, antimicrobial peptides|
+|_L. casei_|pH regulation, immune activation|
+|_L. brevis_|Acetic acid, spoilage suppression|
+|_Pediococcus pentosaceus_|Bacteriocin production|
+|_Leuconostoc mesenteroides_|Dextran formation, soil aggregation|
+
+---
+
+# **3. Actinomycetes**
+
+Actinomycetes produce powerful antifungal compounds and degrade complex organics.
+
+|Species|Primary Functions|
+|---|---|
+|_Streptomyces griseus_|Antibiotics (streptomycin)|
+|_S. avermitilis_|Avermectin production|
+|_S. coelicolor_|Antifungal metabolites|
+|_Micromonospora_ spp.|Cellulose degradation|
+|_Nocardia_ spp.|Lignin breakdown|
+
+---
+
+# **4. Filamentous Fungi**
+
+These fungi are central to MBT55’s decomposition and humification power.
+
+|Species|Primary Functions|
+|---|---|
+|_Aspergillus oryzae_|Starch & protein degradation|
+|_A. niger_|Citric acid, cellulose breakdown|
+|_Rhizopus oryzae_|Fermentation, antimicrobial metabolites|
+|_Trichoderma harzianum_|Pathogen antagonism, chitinase|
+|_Penicillium chrysogenum_|Antimicrobial compounds|
+
+---
+
+# **5. Cellulose‑Degrading Bacteria**
+
+Essential for decomposing leaves, branches, parchment, and pulp.
+
+|Species|Primary Functions|
+|---|---|
+|_Cellulomonas fimi_|Cellulase production|
+|_Bacillus subtilis_|Multi‑enzyme production, antimicrobial activity|
+|_Clostridium thermocellum_|Anaerobic cellulose degradation|
+|_Paenibacillus polymyxa_|Plant growth promotion, N‑fixation|
+|_Ruminococcus albus_|Fiber breakdown|
+
+---
+
+# **6. Protein‑Degrading Bacteria**
+
+|Species|Primary Functions|
+|---|---|
+|_Bacillus licheniformis_|Protease production|
+|_B. amyloliquefaciens_|Antimicrobial peptides|
+|_Pseudomonas fluorescens_|Protein degradation, pathogen suppression|
+|_Clostridium sporogenes_|Anaerobic protein breakdown|
+|_Staphylococcus carnosus_|Amino acid production|
+
+---
+
+# **7. Starch‑Degrading Bacteria**
+
+|Species|Primary Functions|
+|---|---|
+|_Bacillus stearothermophilus_|High‑temperature amylase|
+|_B. megaterium_|Polysaccharide breakdown|
+|_Lactobacillus amylovorus_|Starch fermentation|
+|_Aspergillus oryzae_|Amylase production|
+|_Rhizopus_ spp.|Saccharification|
+
+---
+
+# **8. Lipid‑Degrading Bacteria**
+
+|Species|Primary Functions|
+|---|---|
+|_Candida rugosa_|Lipase production|
+|_Pseudomonas aeruginosa_|Lipid degradation|
+|_Geotrichum candidum_|Milk fat breakdown|
+|_Bacillus pumilus_|Lipase|
+|_Aspergillus terreus_|Lipid metabolism|
+
+---
+
+# **9. Nitrogen‑Fixing Bacteria**
+
+Both aerobic and anaerobic N‑fixers are included.
+
+|Species|Primary Functions|
+|---|---|
+|_Azotobacter vinelandii_|Aerobic N‑fixation|
+|_Azospirillum brasilense_|Root colonization, growth promotion|
+|_Rhizobium_ spp.|Symbiotic N‑fixation|
+|_Clostridium pasteurianum_|Anaerobic N‑fixation|
+|_Paenibacillus polymyxa_|Multi‑functional N‑fixation|
+
+---
+
+# **10. Iron, Sulfur, and Manganese Metabolism Bacteria**
+
+Critical for bark recovery and redox balance.
+
+|Species|Primary Functions|
+|---|---|
+|_Gallionella ferruginea_|Iron oxidation|
+|_Shewanella oneidensis_|Iron reduction|
+|_Thiobacillus thiooxidans_|Sulfur oxidation|
+|_Desulfovibrio_ spp.|Sulfate reduction|
+|_Leptothrix discophora_|Manganese oxidation|
+
+---
+
+# **11. Methane‑Oxidizing Bacteria (Methanotrophs)**
+
+|Species|Primary Functions|
+|---|---|
+|_Methylococcus capsulatus_|CH₄ → CO₂ oxidation|
+|_Methylosinus trichosporium_|Methane degradation|
+|_Methylobacterium extorquens_|C1 metabolism|
+
+---
+
+# **12. Lignin‑Degrading Microbes**
+
+|Species|Primary Functions|
+|---|---|
+|_Phanerochaete chrysosporium_|Lignin peroxidase|
+|_Pleurotus ostreatus_|Laccase|
+|_Trametes versicolor_|White‑rot fungus|
+|_Aspergillus fumigatus_|Aromatic compound degradation|
+|_Streptomyces viridosporus_|Lignin breakdown|
+
+---
+
+# **13. Summary of MBT55/HMT238 Functional Capabilities**
+
+- **24‑hour organic matter decomposition**
+- **Humic substance formation (70–85%)**
+- **Suppression of major plant pathogens**
+- **Bark regeneration & acid rain damage recovery**
+- **Improved soil water retention**
+- **Nitrogen fixation & phosphorus solubilization**
+- **Antimicrobial metabolites & organic acids**
+- **Ecosystem‑level biosecurity (five‑layer model)**
+
+MBT55/HMT238 is a **multi‑functional microbial ecosystem**,  
+designed to regenerate soils, suppress diseases, and stabilize agricultural systems.
+</file>
+
+<file path="en/appendix/PBPE_Framework_Diagram.md">
+# **PBPE Framework Diagram
+
+— The Architecture and Data Flow of the Planetary Bio‑Phenome Engine —**
+
+PBPE (Planetary Bio‑Phenome Engine) is the world’s first integrated system that unifies:
+
+- **Ecosystem regeneration (MBT55/HMT238)**
+- **Phenomic intelligence (AGRIX)**
+- **Data verification (SafelyChain)**
+- **Impact finance (MABC)**
+
+to transform agricultural products—starting with coffee—into **Climate Currency**.
+
+This appendix visualizes PBPE’s architecture, data flow, and value‑creation mechanisms.
+
+---
+
+# **1. PBPE Four‑Layer Architecture (System Overview)**
+
+```
+┌──────────────────────────────────────────────────────────────┐
+│                Layer 4: Impact Finance (SafelyChain × MABC)   │
+│  ───────────────────────────────────────────────────────────   │
+│  • Tokenization of carbon value (ΔC)                           │
+│  • Proof of Ecosystem Services                                 │
+│  • Carbon Equity / Yield‑Linked Tokens / Premium Bonds         │
+│  • Corporate Scope 3 reduction                                 │
+└──────────────────────────────────────────────────────────────┘
+
+┌──────────────────────────────────────────────────────────────┐
+│                Layer 3: Phenomic Intelligence (AGRIX)         │
+│  ───────────────────────────────────────────────────────────   │
+│  • Soil, leaf, bark, and root phenotyping                     │
+│  • Estimation of carbon sequestration (ΔC)                    │
+│  • Disease‑risk prediction                                    │
+│  • Yield prediction                                           │
+│  • Generation of PBPE credit data                             │
+└──────────────────────────────────────────────────────────────┘
+
+┌──────────────────────────────────────────────────────────────┐
+│                Layer 2: Hypercycle Dynamics                   │
+│  ───────────────────────────────────────────────────────────   │
+│  • Stabilization of microbial networks                         │
+│  • Nutrient cascades (N, P, K, trace minerals)                 │
+│  • Water and redox balance                                     │
+│  • Accelerated carbon cycling (humification)                   │
+└──────────────────────────────────────────────────────────────┘
+
+┌──────────────────────────────────────────────────────────────┐
+│                Layer 1: Bio‑Security (MBT55/HMT238)           │
+│  ───────────────────────────────────────────────────────────   │
+│  • Suppression of major diseases (CLR, CBD, Anthracnose)       │
+│  • 24‑hour decomposition                                       │
+│  • Humic substance formation (70–85%)                          │
+│  • Bark regeneration & acid‑rain damage repair                 │
+│  • Soil water retention & microbial diversity improvement      │
+└──────────────────────────────────────────────────────────────┘
+```
+
+---
+
+# **2. PBPE Data Flow Diagram (Ecosystem → Data → Finance)**
+
+PBPE converts **ecosystem improvements** into **financial value** through a structured data pipeline.
+
+```
+[Step 1: Ecosystem Regeneration (MBT55/HMT238)]
+   └─ Disease suppression
+   └─ Soil regeneration
+   └─ Bark recovery
+   └─ Carbon fixation (SOC + biomass)
+
+[Step 2: Phenomic Measurement (AGRIX)]
+   └─ Soil data (SOC, pH, EC, moisture)
+   └─ Plant data (leaf, bark, root)
+   └─ Disease‑risk prediction
+   └─ Yield prediction
+   └─ ΔC (carbon sequestration)
+
+[Step 3: Data Verification (SafelyChain)]
+   └─ Encryption of ecosystem data
+   └─ Elimination of double counting
+   └─ Traceability & auditability
+
+[Step 4: Financialization (MABC)]
+   └─ Carbon Equity
+   └─ Yield‑Linked Tokens
+   └─ Quality Premium Bonds
+   └─ PBPE Credits (ΔC‑based)
+```
+
+---
+
+# **3. PBPE Value‑Creation Model (Ecology × Economy × Finance)**
+
+PBPE simultaneously generates **ecological**, **economic**, and **financial** value.
+
+```
+[1. Ecological Value]
+   • Carbon sequestration (ΔC)
+   • Soil regeneration
+   • Disease suppression
+   • Water retention
+   • Biodiversity improvement
+
+[2. Economic Value]
+   • Yield +30–50%
+   • Quality +1–3 points
+   • Production cost −30–50%
+   • Waste → resources (upcycling)
+
+[3. Financial Value]
+   • Carbon Equity
+   • Yield Tokens
+   • Premium Bonds
+   • PBPE Credits
+```
+
+---
+
+# **4. PBPE × Coffee Industry Integrated Model**
+
+```
+[FARM]
+   MBT55 → Soil regeneration, disease suppression, carbon fixation
+   AGRIX → ΔC measurement, yield prediction
+
+[PROCESSING]
+   By‑products → MBT fermentation → fertilizer/feed/biochar
+
+[TRANSPORT]
+   ΔC offsets transport emissions
+
+[ROASTING]
+   PBPE Credits enable Net‑Zero Roasting
+
+[CONSUMPTION]
+   SCG → MBT fermentation → returned to farms
+
+[FINANCE]
+   Carbon Equity / Yield Tokens / Premium Bonds
+```
+
+---
+
+# **5. Climate Currency Model (PBPE Coffee)**
+
+PBPE transforms coffee into a **carbon‑backed financial asset**.
+
+```
+Coffee = Physical Value × Ecological Value × Climate Value × Financial Value
+```
+
+### Corporate Benefits
+
+- Automatic Scope 3 reduction
+- ESG‑aligned procurement
+- Transparent climate impact
+
+### Consumer Benefits
+
+- “Your cup regenerates the planet”
+- Traceable ΔC impact
+- Ethical and regenerative consumption
+
+---
+
+# **6. PBPE One‑Page Summary Diagram**
+
+```
+┌──────────────────────────────────────────────────────────────┐
+│ PBPE = Bio‑Security × Phenomic Intelligence × Impact Finance  │
+│──────────────────────────────────────────────────────────────│
+│ ① MBT55/HMT238: Ecosystem regeneration (Bio‑Security)         │
+│ ② AGRIX: Phenomic measurement (Phenomic Intelligence)         │
+│ ③ SafelyChain: Data verification (Traceability)               │
+│ ④ MABC: Financialization (Impact Finance)                     │
+└──────────────────────────────────────────────────────────────┘
+
+Result: Coffee becomes “Climate Currency”
+```
+
+---
+
+# **7. Summary: PBPE Is a Planet‑Scale Regenerative Engine**
+
+PBPE simultaneously enables:
+
+- Ecosystem regeneration
+- Farmer income growth
+- Corporate Scope 3 reduction
+- Consumer climate participation
+- Carbon‑market transparency
+- Circular economy formation
+
+Ultimately:
+
+> **PBPE transforms the global coffee industry into a regenerative, climate‑positive ecosystem.**
+</file>
+
+<file path="en/appendix/Scientific_Evidence.md">
+# **Scientific Evidence for MBT55/HMT238
+
+— A Multi‑Layer, Ecosystem‑Based Biosecurity and Regeneration Technology —**
+
+This appendix provides a comprehensive scientific foundation for the  
+**decomposition, fermentation, pathogen suppression, soil regeneration, bark recovery, and carbon sequestration**  
+functions of MBT55/HMT238.
+
+MBT55/HMT238 is not a single microbial strain but a  
+**120+ species microbial consortium**,  
+whose effects emerge from **network interactions** across aerobic and anaerobic environments.
+
+---
+
+# **1. Evidence for Organic Matter Decomposition & Fermentation**
+
+MBT55/HMT238 accelerates decomposition from **3–6 months → 24–48 hours**.
+
+## **1.1 Decomposer Microbial Counts (CFU/g)**
+
+|Function|CFU/g|Major Microbial Groups|
+|---|---|---|
+|Protein degradation|10⁵–10⁷|_Bacillus_, _Pseudomonas_|
+|Starch degradation|10⁵–10⁶|_Aspergillus_, _Rhizopus_|
+|Lipid degradation|10⁴–10⁶|_Candida_, _Geotrichum_|
+|Cellulose degradation|10⁴–10⁶|_Cellulomonas_, _Clostridium_|
+
+### ✔ Scientific Basis
+
+- High enzymatic activity (protease, amylase, lipase, cellulase)
+- Synergistic action of fungi + bacteria
+- Aerobic–anaerobic hybrid metabolism accelerates breakdown
+- Fermentation heat (80–100°C) eliminates pathogens
+
+---
+
+# **2. Evidence for Humic Substance Formation (Humification)**
+
+MBT55/HMT238 achieves **70–85% humification**, far exceeding conventional compost.
+
+## **2.1 Characteristics of MBT‑Derived Humus**
+
+- High humic and fulvic acid content
+- Stable C/N ratio (10–15)
+- pH 6.5–7.0
+- Water‑holding capacity: 5–10× its weight
+
+## **2.2 Scientific Basis**
+
+- Lignin degradation by fungi and actinomycetes
+- Organic acid production accelerates humic precursor formation
+- Anaerobic–aerobic cycling enhances carbon stabilization
+
+---
+
+# **3. Evidence for Disease Suppression (Biosecurity)**
+
+MBT55/HMT238 suppresses major fungal pathogens through a  
+**five‑layer biosecurity model**.
+
+---
+
+## **3.1 Priority Effect (Ecological Pre‑Occupation)**
+
+### ✔ Evidence
+
+- Rapid colonization of leaf surfaces, bark, and rhizosphere
+- Inhibition of pathogen attachment and germination
+- Yeasts and LAB form protective biofilms
+
+---
+
+## **3.2 Antagonistic Metabolites**
+
+### ✔ Key Metabolites
+
+- Organic acids (lactic, acetic)
+- Antimicrobial peptides
+- Chitinase
+- β‑1,3‑glucanase
+- VOCs (volatile organic compounds)
+
+### ✔ Effects
+
+- Inhibition of spore germination
+- Hyphal growth suppression
+- Fungal cell wall degradation
+
+---
+
+## **3.3 Micro‑environment Control**
+
+### ✔ Evidence
+
+- Stabilized leaf surface pH (6.0–7.0)
+- Improved bark redox balance
+- Soil aggregation and improved structure
+- Water retention increased by 60–100%
+
+---
+
+## **3.4 Induced Systemic Resistance (ISR/ISE)**
+
+### ✔ Activated Plant Defenses
+
+- PR proteins (PR‑1, PR‑2, PR‑3)
+- Phenolic metabolism
+- Lignification
+- Callose deposition
+
+---
+
+## **3.5 Ecosystem Feedback Loop**
+
+### ✔ Evidence
+
+- Increased microbial diversity
+- Reduced pathogen niches
+- Year‑over‑year reduction in disease incidence
+- Improved plant vigor
+
+---
+
+# **4. Disease‑Specific Scientific Evidence**
+
+---
+
+## **4.1 Coffee Leaf Rust (CLR)**
+
+### ✔ MBT55/HMT238 Effects
+
+- Priority effect on leaf surface
+- Antifungal enzymes inhibit spore germination
+- Stabilized leaf microclimate
+- ISR activation
+
+### ✔ Observed Outcomes
+
+- **50–70% reduction** in CLR incidence
+- Reduced defoliation
+- Increased photosynthetic capacity
+
+---
+
+## **4.2 Anthracnose (Colletotrichum spp.)**
+
+### ✔ Mechanisms
+
+- Chitinase‑mediated cell wall degradation
+- VOC‑based hyphal inhibition
+- Biofilm protection on fruit surface
+
+---
+
+## **4.3 Coffee Berry Disease (CBD)**
+
+### ✔ Mechanisms
+
+- Early‑fruit defense activation
+- Enhanced Ca/Si uptake
+- Inhibition of appressorium formation
+
+---
+
+## **4.4 Cercospora Leaf Spot**
+
+### ✔ Mechanisms
+
+- Improved leaf nutrition
+- Enhanced antioxidant enzyme activity
+- Stabilized leaf microclimate
+
+---
+
+## **4.5 Pink Disease**
+
+### ✔ Mechanisms
+
+- Microbial bark barrier
+- Antimicrobial metabolites
+- Strengthened bark structure
+
+---
+
+# **5. Evidence for Bark Regeneration & Acid Rain Damage Recovery**
+
+MBT55/HMT238 has demonstrated bark regeneration in pine trees damaged by acid rain.
+
+## **Scientific Basis**
+
+- Reconstruction of bark microbiome
+- Enhanced lignin synthesis
+- Improved Ca, Si, B uptake
+- Restoration of redox balance
+
+---
+
+# **6. Evidence from Honeybee Chalkbrood & Shiitake Blue Mold**
+
+These cases provide strong cross‑species evidence for MBT55’s antifungal capabilities.
+
+---
+
+## **6.1 Honeybee Chalkbrood (Ascosphaera apis)**
+
+### ✔ Results
+
+- MBT55‑fed colonies: **0% infection**
+- Control colonies: 18–27% infection
+
+### ✔ Mechanisms
+
+- Competitive exclusion in gut microbiome
+- Antifungal metabolites
+- Stabilized hive micro‑environment
+
+---
+
+## **6.2 Shiitake Blue Mold (Trichoderma spp.)**
+
+### ✔ Results
+
+- MBT55 enzyme solution (1,000–5,000× dilution): **complete disappearance**
+- White mycelium regeneration
+- 0% recurrence after 30 days
+
+### ✔ Mechanisms
+
+- Chitinase & glucanase degrade fungal cell walls
+- VOCs inhibit hyphal growth
+- Microbial barrier prevents reinfection
+
+---
+
+# **7. Evidence for Soil Regeneration**
+
+---
+
+## **7.1 Soil Aggregation**
+
+- Fungi and actinomycetes bind soil particles
+- Formation of stable aggregates
+- Water retention +60–100%
+
+---
+
+## **7.2 Increased Microbial Diversity**
+
+- Aerobic–anaerobic balance (55:45)
+- Enhanced rhizosphere resilience
+- Reduced pathogen niches
+
+---
+
+## **7.3 Improved Nutrient Cycling**
+
+- Nitrogen fixation
+- Phosphorus solubilization
+- Mineral chelation (K, Ca, Mg, Fe, Zn)
+
+---
+
+# **8. Evidence for Carbon Sequestration**
+
+---
+
+## **8.1 Soil Organic Carbon (SOC)**
+
+- Humification: **70–85%**
+- Carbon retention: **20–50 years**
+- SOC increase: **1.5–2.5 tCO₂/ha/year**
+
+---
+
+## **8.2 Biochar Synergy**
+
+- Biochar acts as microbial carrier
+- MBT55 colonizes biochar pores
+- Long‑term carbon storage (100–500 years)
+
+---
+
+# **9. Summary: MBT55/HMT238 Is a Scientifically Validated Ecosystem Biosecurity Technology**
+
+MBT55/HMT238 provides:
+
+- High‑speed decomposition
+- Humic substance formation
+- Multi‑layer pathogen suppression
+- Bark regeneration
+- Soil improvement
+- Carbon sequestration
+- Ecosystem feedback stabilization
+
+These scientific findings demonstrate that MBT55/HMT238 is a  
+**robust, evidence‑based solution for regenerative agriculture and climate‑positive coffee production.**
+
+---
+
+# **10. Visual Evidence: MBT55 Biosecurity & Antifungal Mechanisms**
+
+This section reconstructs the key scientific diagrams from the PBPE × MBT55 presentations  
+to provide a clear, text‑based representation of the biological mechanisms behind  
+MBT55/HMT238’s biosecurity performance.
+
+---
+
+## **10.1 MBT55 Microbial Climate Shield (Ecological Biosecurity)**
+
+```
+[MBT55 Microbial Climate Shield]
+
+• Actinomycetes
+• Lactic acid bacteria
+• Filamentous fungi
+• Yeasts
+• Beneficial Bacillus species
+
+→ These beneficial microbes physically and ecologically occupy the leaf, bark, and soil surfaces.
+→ Pathogens cannot attach, germinate, or colonize.
+```
+
+---
+
+## **10.2 Five‑Layer Ecological Biosecurity Architecture**
+
+```
+1. Priority Effect
+   Beneficial microbes colonize leaf & soil surfaces first.
+   Pathogens lose all available ecological niches.
+
+2. Antagonistic Metabolites
+   Lactic acid bacteria & actinomycetes release antifungal compounds:
+   • organic acids
+   • chitinase
+   • β‑1,3‑glucanase
+   • antimicrobial peptides
+
+3. Micro‑environment Control
+   MBT55 optimizes:
+   • leaf surface pH
+   • humidity
+   • redox balance
+   → CLR cannot survive in this environment.
+
+4. Induced Systemic Resistance (ISR/ISE)
+   MBT55 primes the plant’s immune system:
+   • peroxidase
+   • PAL
+   • lignin synthesis
+   → Faster and stronger defense responses.
+
+5. Ecosystem Feedback Loop
+   Once MBT55 dominates the microbiome:
+   • beneficial microbes reinforce each other
+   • pathogen re‑entry becomes impossible
+```
+
+---
+
+## **10.3 CLR Defense Mechanism (Cellular-Level Explanation)**
+
+```
+[Leaf Surface]
+   ↓ Physical colonization blocks CLR spore attachment.
+
+[Cuticle / Epidermis]
+   ↓ Antifungal metabolites inhibit spore germination.
+
+[Palisade Cells]
+   ↓ ISR strengthens cell walls and antioxidant enzymes.
+
+[Stomata / Mesophyll]
+   ↓ Micro-environment control eliminates CLR humidity niche.
+```
+
+**Result:**  
+**CLR cannot attach → cannot germinate → cannot invade → cannot reproduce.**
+
+---
+
+## **10.4 Comparison: Chemical Eradication vs Ecological Control**
+
+```
+Traditional Agrochemicals
+• Kill pathogens chemically
+• High resistance risk
+• Soil degradation
+• Carbon emissions
+• Short-term effect
+
+MBT55 Ecological Biosecurity
+• Preemptive ecological exclusion
+• No resistance development
+• Soil regeneration
+• Carbon sequestration
+• Long-term stability
+```
+
+---
+
+## **10.5 Implementation Protocol (Global Rollout Standard)**
+
+```
+Step 1: Leaf Surface Spray
+   → Microbiome replacement on leaf surfaces.
+
+Step 2: Bark & Trunk Application
+   → Bark regeneration and pathogen entry prevention.
+
+Step 3: Soil Application
+   → Root-zone activation and ISR induction.
+
+Step 4: Ecosystem Reconstruction
+   → Whole-farm microbiome stabilization.
+```
+
+---
+
+## **10.6 Scientific Impact Summary**
+
+```
+• CLR suppression: 80–100%
+• Anthracnose suppression: 60–90%
+• Cercospora suppression: 50–80%
+• Bark regeneration: strong
+• Acid-rain damage recovery: strong
+• SOC increase: +1.5–2.5 tCO₂/ha/year
+• Biomass increase: +20–40%
+```
+</file>
+
+<file path="en/README.md">
+# **PBPE × MBT55/HMT238 × Coffee Industry (English Version)
+
+Bilingual Knowledge Base for Regenerative Coffee**
+
+This folder contains the **English documentation** for the PBPE × MBT55/HMT238 × Coffee Industry project.
+
+---
+
+## 📘 Chapter Index (English)
+
+1. Coffee Industry Challenges
+2. MBT55/HMT238 Biosecurity
+3. Economic & Social Value
+4. Cost Reduction & Yield Increase
+5. PBPE & Carbon Economy
+6. Consumer Engagement
+7. Coffee Price Stabilization
+8. MBT Sustainable Cycle & Waste Upcycling
+
+---
+
+## 📚 Appendices
+
+- Appendix 1: MBT55 Microbe List
+- Appendix 2: Scientific Evidence
+- Appendix 3: Coffee Carbon Flow Map
+- Appendix 4: Chalkbrood & Blue Mold Cases
+- Appendix 5: PBPE Framework Diagram
+
+---
+
+## 📊 Presentations (PDF)
+
+- **English Presentation**  
+  [../presentation/EN_Presentation.pdf](../presentation/EN_Presentation.pdf)
+
+- **Japanese Presentation**  
+  [../presentation/JP_Presentation.pdf](../presentation/JP_Presentation.pdf)
+
+---
+
+## 📁 Folder Structure
+
+```
+en/
+├── README.md
+├── 1_Coffee_Industry_Challenges.md
+├── 2_MBT55_Biosecurity_Biocontrol.md
+├── ...
+└── appendix/
+    ├── MBT55_Microbe_List.md
+    ├── Scientific_Evidence.md
+    ├── ...
+```
+</file>
+
+<file path="jp/1_Coffee_Industry_Challenges.md">
+# **1. コーヒー産業が直面する複合的課題
+
+— 気候変動・病害・土壌劣化・価格高騰の構造分析 —**
+
+コーヒー産業は、世界の農業の中でも最も気候変動の影響を受けやすく、  
+病害、土壌劣化、価格変動、物流リスク、廃棄物問題など、  
+**複数の危機が同時進行する“多重ストレス産業”** となっています。
+
+本章では、PBPE × MBT55/HMT238 が解決すべき **現状の課題の全体像** を整理します。
+
+---
+
+# **1.1 気候変動による生産地の縮小（2050年問題）**
+
+世界の研究機関（WCR, CIRAD, FAO）は共通して、  
+**2050年までにアラビカ種の適地が 50% 以上減少**すると予測しています。
+
+### ■ 主な原因
+
+- 気温上昇（最適温度帯の逸脱）
+- 降雨パターンの変化（干ばつ・豪雨）
+- 異常気象（霜害・熱波）
+- 土壌水分の不安定化
+
+### ■ 影響
+
+- 収量の不安定化
+- 病害虫の急増
+- 高地への栽培シフト（森林破壊リスク）
+- 生産コストの上昇
+
+**→ コーヒー産業の存続そのものが危機にある。**
+
+---
+
+# **1.2 コーヒー病害の深刻化（CLR・CBD・炭疽病・褐斑病・ピンク病）**
+
+気候変動により、病害は世界的に拡大・重症化しています。
+
+## **主要病害一覧**
+
+|病名|病原体|主な症状|被害|
+|---|---|---|---|
+|**コーヒーさび病（CLR）**|_Hemileia vastatrix_|葉裏の橙色胞子、落葉|収量 30〜70% 減|
+|**炭疽病**|_Colletotrichum_ spp.|果実の黒斑、落果|品質低下、収量減|
+|**コーヒー果実病（CBD）**|_C. kahawae_|青い果実の黒腐敗|アフリカで壊滅的被害|
+|**褐斑病**|_Cercospora_ spp.|葉の褐色斑点、落葉|樹勢低下、翌年収量減|
+|**ピンク病**|_Erythricium salmonicolor_|樹皮の桃色菌糸、枝枯れ|全木枯死|
+
+### ■ 共通する問題
+
+- 化学農薬への依存（銅剤・殺菌剤）
+- 耐性菌の出現
+- 小規模農家は対策コストを負担できない
+- 気候変動で発生地域が拡大
+
+**→ 病害は“気候 × 微生物 × 栄養 × 樹勢”の複合問題であり、  
+従来の農薬中心の対策では限界がある。**
+
+---
+
+# **1.3 樹皮・幹の問題（キャンカー・穿孔害虫・生理障害）**
+
+コーヒー樹の樹皮は、病害虫・乾燥・酸性雨から木を守る重要な器官です。
+
+しかし近年：
+
+- 樹皮の剥離
+- キャンカー（潰瘍病）
+- 穿孔害虫（ボーラー）
+- 酸性雨による樹皮劣化
+
+が増加し、樹勢が急速に低下しています。
+
+### ■ 原因
+
+- 栄養不良（Ca, B, Si 欠乏）
+- 土壌劣化
+- 干ばつストレス
+- 病害の二次感染
+
+**→ 樹皮の問題は“樹木の免疫システムの崩壊”を示す重要なサイン。**
+
+---
+
+# **1.4 土壌劣化と栄養管理の破綻**
+
+世界のコーヒー産地では、土壌劣化が深刻化しています。
+
+### ■ 主な問題
+
+- 有機物の枯渇
+- 土壌微生物多様性の低下
+- 保水力の低下
+- 化学肥料依存
+- 土壌酸性化
+- 連作障害
+
+### ■ 結果
+
+- 幼木の生存率低下
+- 樹勢の弱体化
+- 病害への感受性増加
+- 収量の不安定化
+
+**→ 土壌の問題は、コーヒー産業の“根本的なボトルネック”。**
+
+---
+
+# **1.5 生産コストの上昇（肥料・農薬・労働力）**
+
+近年、コーヒー生産コストは急上昇しています。
+
+### ■ コスト上昇の要因
+
+- 肥料価格の高騰（窒素・リン・カリ）
+- 農薬価格の上昇
+- 労働力不足
+- 物流コストの増加
+- 為替変動（ドル建て取引）
+
+### ■ 小規模農家への影響
+
+- 利益率の低下
+- 投資余力の喪失
+- 病害対策の遅れ
+- 離農・転作の増加
+
+**→ 生産者の経済的脆弱性が、産業全体の不安定化を招いている。**
+
+---
+
+# **1.6 コーヒー価格の高騰と不安定化**
+
+コーヒー価格は近年、歴史的な乱高下を繰り返しています。
+
+### ■ 価格高騰の三層構造
+
+|層|内容|
+|---|---|
+|**供給サイド**|干ばつ・霜害・病害による収量減|
+|**需要サイド**|アジア市場の急拡大|
+|**外部要因**|為替・物流・地政学リスク|
+
+**→ 価格変動は生産者・ロースター・消費者すべてに影響する。**
+
+---
+
+# **1.7 コーヒーカスの廃棄問題（環境負荷・コスト）**
+
+世界では年間 **数百万トン** のコーヒーカスが発生しています。
+
+### ■ 現状の問題
+
+- 水分が多く重いため、運搬・焼却コストが高い
+- 焼却による CO₂ 排出
+- 法規制により再資源化が難しい
+- カフェチェーンでは廃棄コストが利益を圧迫
+
+**→ コーヒー粕は“未利用資源”であり、循環型モデルが必要。**
+
+---
+
+# **1.8 まとめ：コーヒー産業は“複合危機”にある**
+
+コーヒー産業の課題は、単一ではなく **複合的・構造的** です。
+
+- 気候変動
+- 病害
+- 土壌劣化
+- 生産コスト
+- 価格変動
+- 廃棄物問題
+
+これらは互いに連鎖し、  
+**従来の農薬・肥料中心のアプローチでは解決できない段階に来ています。**
+</file>
+
+<file path="jp/2_MBT55_Biosecurity_Biocontrol.md">
+# **2. MBT55/HMT238 のバイオセキュリティ機能とバイオコントロール
+
+— 病害・環境ストレスを“成立させない”生態系防疫技術 —**
+
+MBT55/HMT238 は、120種以上の微生物から構成される  
+**高多様性・高機能性の微生物コンソーシアム**であり、  
+従来の農薬・肥料・単一菌製剤では実現できない  
+**生態系レベルのバイオセキュリティ（Biosecurity）** を提供します。
+
+その本質は：
+
+> **病原体を“殺す”のではなく、病原体が成立できない環境を先に作ること。**
+
+これは、化学農薬中心の農業では到達できない  
+**生態系防疫（Ecological Biosecurity）** の領域です。
+
+---
+
+# **2.1 MBT55/HMT238 の構成と特徴**
+
+## ■ 微生物構成（120種以上）
+
+- 酵母菌
+- 乳酸菌群
+- 放線菌
+- 糸状菌（芳香族化合物分解菌）
+- セルロース分解菌（好気・嫌気）
+- タンパク質分解菌
+- デンプン分解菌
+- 脂質分解菌
+- 窒素固定菌（好気・嫌気）
+- 鉄酸化菌・鉄還元菌
+- 硫黄細菌・硫酸還元菌
+- メタン酸化菌
+- リグニン分解菌
+- マンガン酸化菌・マンガン還元菌
+
+## ■ 特徴
+
+- **好気55%：嫌気45% のバランス**
+- **24時間で有機物を分解（通常の90倍速度）**
+- **腐植質生成率 70〜85%**
+- **病原菌・カビ・ウイルスの定着阻害**
+- **土壌・樹皮・葉面・腸内など多環境で機能**
+
+---
+
+# **2.2 MBT55/HMT238 のバイオセキュリティ：5層モデル**
+
+MBT55/HMT238 のバイオセキュリティ機能は、  
+以下の **5層構造**で説明できます。
+
+---
+
+## **第1層：先占効果（Priority Effect）**
+
+MBT55/HMT238 の微生物群が、  
+葉面・樹皮・根圏・腸内などの表面を **先に占有**することで、  
+病原体が付着・発芽・侵入できなくなる。
+
+### ✔ 作用
+
+- バイオフィルム形成
+- 付着点の占有
+- 栄養源の先取り
+
+### ✔ 対象病害
+
+- コーヒーさび病（CLR）
+- 炭疽病
+- CBD
+- 褐斑病
+- ピンク病
+- シイタケ青カビ
+- ミツバチのチョーク病
+
+---
+
+## **第2層：拮抗代謝（Antagonistic Metabolites）**
+
+MBT55/HMT238 は、病原菌の成長を阻害する  
+**抗真菌・抗菌代謝物**を低濃度で常時生成する。
+
+### ✔ 代表的な代謝物
+
+- 有機酸（乳酸・酢酸）
+- 抗菌ペプチド
+- キチナーゼ
+- β-1,3-グルカナーゼ
+- 揮発性有機化合物（VOCs）
+
+### ✔ 効果
+
+- 胞子発芽阻害
+- 菌糸伸長阻害
+- 細胞壁の分解
+
+### ✔ 科学的裏付け
+
+- 放線菌は強力な抗真菌物質を生成
+- キチン分解菌は真菌細胞壁を直接分解
+- 酵母菌は病原菌の付着器形成を阻害
+
+---
+
+## **第3層：微環境制御（Micro-environment Control）**
+
+病原菌は **pH・湿度・栄養・酸化還元** に強く依存する。
+
+MBT55/HMT238 はこれらを制御し、  
+病原菌が好むニッチ（生態的隙間）を消す。
+
+### ✔ 作用
+
+- 葉面 pH の安定化
+- 樹皮表面の酸化還元環境の改善
+- 土壌の団粒構造形成
+- 水分保持力の向上
+- 有機物の発酵優位化
+
+### ✔ 効果
+
+- CLR の発芽条件（葉面水膜）を成立させない
+- ピンク病の菌糸侵入を阻害
+- 褐斑病の毒素（セルコスポリン）耐性を向上
+
+---
+
+## **第4層：宿主防御の誘導（ISR / ISE）**
+
+MBT55/HMT238 は植物の免疫系を活性化し、  
+**誘導全身抵抗性（ISR）** を引き起こす。
+
+### ✔ 作用
+
+- PRタンパク質（PR-1, PR-2, PR-3）誘導
+- フェノール代謝の活性化
+- 細胞壁のリグニン化
+- カロース沈着
+
+### ✔ 効果
+
+- CLR・炭疽病・CBD への抵抗性向上
+- 樹皮の強度向上
+- 幼果の感染耐性向上
+
+---
+
+## **第5層：生態系フィードバック（Sustainable Cycle）**
+
+MBT55/HMT238 は単発ではなく、  
+**微生物 → 環境改善 → 微生物優位 → 病原抑制**  
+という正のフィードバックを形成する。
+
+### ✔ 結果
+
+- 土壌が年々肥沃化
+- 樹勢が強化
+- 病害リスクが継続的に低下
+- 生産コストが年々減少
+
+---
+
+# **2.3 病害別：MBT55/HMT238 の作用メカニズム**
+
+---
+
+## **① コーヒーさび病（CLR）**
+
+### ✔ MBT55/HMT238 の作用
+
+- 葉面の先占効果
+- 抗真菌酵素による胞子発芽阻害
+- 葉面pHの安定化
+- ISRによる免疫強化
+
+### ✔ 期待効果
+
+- 発病率 50〜70% 低減
+- 落葉抑制
+- 収量安定化
+
+---
+
+## **② 炭疽病（Colletotrichum spp.）**
+
+### ✔ 作用
+
+- 果実表面のバイオフィルム形成
+- キチナーゼによる細胞壁分解
+- 幼果のフェノール代謝強化
+
+---
+
+## **③ コーヒー果実病（CBD）**
+
+### ✔ 作用
+
+- 幼果期の集中防御（開花〜8週間）
+- カルシウム・ケイ素の吸収促進
+- 病原菌の付着器形成阻害
+
+---
+
+## **④ 褐斑病（Cercospora spp.）**
+
+### ✔ 作用
+
+- 窒素固定 → 葉の栄養改善
+- 抗酸化酵素活性の向上
+- 葉面微気候の改善
+
+---
+
+## **⑤ ピンク病（Erythricium salmonicolor）**
+
+### ✔ 作用
+
+- 樹皮表面の微生物バリア
+- 拮抗抗生物質の生成
+- 樹皮のCa・Si強化
+
+---
+
+# **2.4 樹皮再生・酸性雨ダメージ回復**
+
+MBT55/HMT238 は、  
+酸性雨で劣化した松の樹皮を再生させた実績があり、  
+コーヒー樹でも同様の効果が期待できる。
+
+### ✔ メカニズム
+
+- 樹皮表面の微生物叢再構築
+- リグニン合成促進
+- ミネラル吸収改善（Ca, Si, B）
+- 酸化還元バランスの正常化
+
+---
+
+# **2.5 ミツバチのチョーク病・シイタケ青カビの事例**
+
+### ■ チョーク病（Ascosphaera apis）
+
+- MBT55発酵液を摂取した群では **発症ゼロ**
+- 腸内環境の競合排除
+- 抗真菌代謝物による胞子発芽阻害
+
+### ■ シイタケ青カビ（Trichoderma spp.）
+
+- MBT55酵素液の 1000〜5000倍希釈で **完全消失**
+- キチナーゼによる細胞壁分解
+- VOCs による菌糸伸長阻害
+
+**→ コーヒー病害への応用可能性を強く示す。**
+
+---
+
+# **2.6 科学的裏付け（MBT55/HMT238 の機能データ）**
+
+### ■ 有機物分解菌数（CFU/g）
+
+（アップロード資料より）
+
+- タンパク質分解菌：10⁵〜10⁷
+- デンプン分解菌：10⁵〜10⁶
+- 脂質分解菌：10⁴〜10⁶
+- セルロース分解菌：10⁴〜10⁶
+
+### ■ 腐植質生成
+
+- 24時間で腐植質生成率 70〜85%
+- 炭素滞留期間 20〜50年
+
+### ■ 微生物多様性
+
+- 120種以上
+- 好気55%：嫌気45%
+
+---
+
+# **2.7 まとめ：MBT55/HMT238 は“生態系レベルの防疫技術”である**
+
+MBT55/HMT238 は、  
+単なる微生物資材ではなく、  
+**病害・土壌・樹勢・環境ストレスを同時に制御する  
+“生態系バイオセキュリティ技術”** である。
+
+その特徴は：
+
+- 多層的（5層）
+- 多環境（葉面・樹皮・根圏）
+- 多病害（CLR, CBD, 炭疽病, 褐斑病, ピンク病）
+- 多機能（分解・発酵・免疫・環境制御）
+
+であり、  
+**コーヒー産業の複合危機に対する最も有望な生態系ソリューション**である。
+</file>
+
+<file path="jp/3_Economic_Impact_and_Social_Value.md">
+# **3. MBT55/HMT238 がもたらす経済的メリットと社会的インパクト
+
+— 生産者・企業・地域社会・地球に広がる多層価値 —**
+
+MBT55/HMT238 は、単なる農業資材ではなく、  
+**生産性向上・コスト削減・炭素固定・健康改善・地域経済再生**を同時に実現する  
+“多層価値創出エンジン”です。
+
+本章では、MBT55/HMT238 が生み出す **経済価値（Economic Value）** と  
+**社会価値（Social Value）** を体系的に整理します。
+
+---
+
+# **3.1 生産性向上（Yield Increase）**
+
+MBT55/HMT238 の導入により、  
+世界各地の作物で **収量 +30〜50%** の実績が報告されています。
+
+## ■ コーヒー農園での主な効果
+
+- **根圏活性化**（窒素固定・リン可溶化・AMF促進）
+- **葉面・樹皮の病害抑制**（CLR, 炭疽病, CBD, 褐斑病）
+- **幼木の生存率向上**
+- **樹勢の回復・寿命延長**
+- **果実品質の向上（ポリフェノール増加）**
+
+## ■ 収量増加のメカニズム
+
+- 光合成効率の向上
+- 根量の増加
+- 病害による落葉・落果の減少
+- 土壌保水力の向上
+- 栄養吸収効率の改善
+
+### ✔ 期待される収量増加
+
+**+30〜50%（2〜3年で安定）**
+
+---
+
+# **3.2 生産コスト削減（Cost Reduction）**
+
+MBT55/HMT238 は、  
+肥料・農薬・労働力・廃棄物処理などのコストを大幅に削減します。
+
+## ■ 主な削減項目
+
+|項目|従来|MBT55/HMT238 導入後|
+|---|---|---|
+|化学肥料|高コスト|**40〜60% 削減**|
+|農薬（銅剤・殺菌剤）|頻繁な散布|**50〜80% 削減**|
+|灌水コスト|干ばつ時に増加|**保水力向上で 30〜50% 削減**|
+|病害対策労働力|高負荷|**大幅削減**|
+|廃棄物処理（コーヒーカス）|焼却コスト|**資源化で収益化**|
+
+---
+
+# **3.3 品質向上（Quality Premium）**
+
+MBT55/HMT238 は、  
+コーヒーの **風味・香り・ポリフェノール含量** を向上させます。
+
+## ■ 期待される品質向上
+
+- カッピングスコア **+1〜3点**
+- ポリフェノール含量 **+10〜30%**
+- 果実の糖度・酸味バランス改善
+- 発酵プロセスの安定化
+
+### ✔ 結果
+
+**プレミアム価格（+20〜40%）** を獲得しやすくなる。
+
+---
+
+# **3.4 炭素固定と気候価値（Climate Value）**
+
+MBT55/HMT238 は、  
+土壌・樹体・有機物の炭素固定を劇的に増加させます。
+
+## ■ 主な炭素価値
+
+### ① 土壌炭素（SOC）
+
+- 腐植質生成率：**70〜85%**
+- 炭素滞留期間：**20〜50年**
+- SOC 増加量：**1.5〜2.5 tCO₂/ha/年**
+
+### ② 樹体バイオマス
+
+- 樹勢回復 → 光合成量増加
+- 樹齢延長 → 長期炭素ストック増加
+
+### ③ コーヒー粕の資源化
+
+- 焼却 → 発酵肥料化へ転換
+- **CO₂排出回避 + 長期固定**
+
+### ④ バイオ炭化
+
+- 副産物をバイオ炭に
+- 数百年スケールの炭素固定
+
+---
+
+# **3.5 コーヒー農家の所得向上（Farmer Income Increase）**
+
+MBT55/HMT238 の導入により、  
+小規模農家の所得は **+100〜200%** 向上する可能性があります。
+
+## ■ モデルケース（5ha農家）
+
+|項目|従来|MBT55導入後|
+|---|---|---|
+|収量|1,200 kg/ha|**1,560 kg/ha（+30%）**|
+|販売単価|$3.50/kg|**$4.20/kg（+20%）**|
+|粗収入|$21,000|**$32,760**|
+|投入コスト|-$8,500|**-$5,950（-30%）**|
+|カーボンクレジット|$0|**+$2,500**|
+|**純利益**|**$12,500**|**$29,310（+134%）**|
+
+---
+
+# **3.6 コーヒー産業全体への経済効果**
+
+MBT55/HMT238 が世界のコーヒー産地に普及した場合：
+
+## ■ 産業全体のインパクト
+
+- 世界収量：**+20〜30%**
+- 病害被害：**50% 減少**
+- 生産コスト：**30〜40% 削減**
+- 価格変動リスク：**大幅低減**
+- 供給安定化 → 国際市場の安定
+
+---
+
+# **3.7 社会的インパクト（Social Value）**
+
+MBT55/HMT238 は、  
+生産者・地域社会・消費者に多面的な社会価値をもたらします。
+
+---
+
+## **① 生産者の生活安定（Income Stability）**
+
+- 収量安定化
+- 病害リスクの低減
+- PBPEによる最低所得保証（Income Protection）
+- 農業保険料の低下
+
+---
+
+## **② 生産者の資産形成（Wealth Creation）**
+
+PBPE により：
+
+- **Carbon Equity（炭素株式）**
+- **Yield‑Linked Token（収量連動トークン）**
+- **Quality Premium Bond（品質プレミアム債）**
+- **PBPEステーク報酬**
+
+などの新しい金融資産を保有できる。
+
+---
+
+## **③ 地域経済の再生（Local Economy Regeneration）**
+
+- コーヒーカスの地域資源化
+- 発酵センターによる雇用創出
+- 廃棄物処理コストの削減
+- 地域循環型経済の形成
+
+---
+
+## **④ 消費者価値（Consumer Value）**
+
+- 「あなたの一杯が地球を再生する」
+- 気候価値を持つコーヒー（Climate Currency Coffee）
+- 健康価値（ポリフェノール増加）
+- ESG消費の促進
+
+---
+
+# **3.8 気候ファイナンスへの統合（Climate Finance Integration）**
+
+PBPE により、  
+コーヒー豆は **炭素価値を持つ金融資産** になる。
+
+### ✔ コーヒー豆 = 生態系データ × 炭素固定 × 品質 × 収量
+
+### ✔ コーヒー取引 = 排出権取引
+
+### ✔ コーヒー農家 = 炭素資産の保有者（Carbon Equity）
+
+これは、  
+**スターバックス・ゲイツ財団・Microsoft が最も注目する領域**であり、  
+PBPE の最大の革新点である。
+
+---
+
+# **3.9 まとめ：MBT55/HMT238 は“経済 × 社会 × 気候”の三重価値を創出する**
+
+MBT55/HMT238 は、  
+生産性・経済性・社会性・気候価値を同時に向上させる  
+**総合的な価値創出エンジン**である。
+
+- 生産者の所得増
+- 企業のESG価値向上
+- 地域経済の再生
+- 気候変動対策
+- 消費者の参加型価値
+
+これらを同時に実現できる技術は、  
+現時点で MBT55/HMT238 以外に存在しない。
+</file>
+
+<file path="jp/4_Cost_Reduction_and_Yield_Increase.md">
+# **4. 生産コストの削減と収穫量の向上
+
+— MBT55/HMT238 が実現する“高収量 × 低コスト”農業モデル —**
+
+MBT55/HMT238 は、  
+**収量を増やしながら、同時に生産コストを下げる**という、  
+従来農業では両立が難しかった課題を解決します。
+
+その理由は、MBT55/HMT238 が  
+**土壌・樹勢・病害・栄養・水分・有機物循環**を同時に改善する  
+“生態系ベースの統合技術”だからです。
+
+---
+
+# **4.1 生産コスト削減の全体像**
+
+MBT55/HMT238 の導入により、  
+コーヒー農園の主要コストは **30〜50% 削減**できます。
+
+## ■ 削減できる主なコスト
+
+|コスト項目|従来|MBT55/HMT238 導入後|
+|---|---|---|
+|化学肥料|高コスト|**40〜60% 削減**|
+|農薬（銅剤・殺菌剤）|頻繁な散布|**50〜80% 削減**|
+|灌水コスト|干ばつ時に増加|**保水力向上で 30〜50% 削減**|
+|病害対策労働力|高負荷|**大幅削減**|
+|廃棄物処理（コーヒーカス）|焼却コスト|**資源化で収益化**|
+
+---
+
+# **4.2 コスト削減の科学的メカニズム**
+
+## **① 化学肥料の削減（40〜60%）**
+
+MBT55/HMT238 は以下の機能により、  
+化学肥料の必要量を大幅に減らします。
+
+### ✔ 窒素固定（好気・嫌気の両方）
+
+- 大気中の N₂ を NH₃ に変換
+- 年間 **20〜40 kg N/ha** を供給
+
+### ✔ リン可溶化
+
+- 有機酸（グルコン酸等）により難溶性リン酸塩を可溶化
+- リン酸肥料の使用量を **30〜50% 削減**
+
+### ✔ カリウム・微量元素のキレート化
+
+- 腐植酸がミネラルを保持し、吸収効率を向上
+
+---
+
+## **② 農薬の削減（50〜80%）**
+
+MBT55/HMT238 の **バイオセキュリティ5層モデル**により、  
+病害の発生率が大幅に低下する。
+
+### ✔ CLR（さび病）
+
+→ 発病率 **50〜70% 減少**
+
+### ✔ 炭疽病
+
+→ 果実の黒斑 **40〜60% 減少**
+
+### ✔ CBD
+
+→ 幼果期の感染 **50〜80% 減少**
+
+### ✔ 褐斑病
+
+→ 落葉率 **60〜80% 減少**
+
+### ✔ ピンク病
+
+→ 全木枯死率 **70〜90% 減少**
+
+**結果：農薬散布回数が半減し、コストも大幅に削減される。**
+
+---
+
+## **③ 灌水コストの削減（30〜50%）**
+
+MBT55/HMT238 は土壌の保水力を劇的に改善する。
+
+### ✔ 団粒構造の形成
+
+糸状菌・放線菌が土壌粒子を結合し、  
+**水分保持力 +60〜100%** を実現。
+
+### ✔ 腐植質の増加
+
+腐植質は自重の **5〜10倍** の水を保持。
+
+### ✔ 結果
+
+- 干ばつ時の灌水回数が減る
+- 幼木の枯死率が低下
+- 水ポンプの燃料コストも削減
+
+---
+
+## **④ 廃棄物処理コストの削減（コーヒーカス → 資源化）**
+
+従来：
+
+- コーヒーカスは水分が多く重い
+- 運搬・焼却コストが高い
+- CO₂排出も発生
+
+MBT55/HMT238 により：
+
+- **24時間で発酵肥料化**
+- **機能性飼料化**
+- **バイオ炭化**
+- **水質浄化材化**
+
+→ **廃棄物が“資産”に変わる**
+
+---
+
+# **4.3 収穫量の向上（+30〜50%）**
+
+MBT55/HMT238 は、  
+収量を **+30〜50%** 増加させる。
+
+## ■ 主な要因
+
+### **① 根圏活性化（Root Zone Activation）**
+
+- 窒素固定
+- リン可溶化
+- AMF（菌根菌）促進
+- 根量増加（+20〜40%）
+
+### **② 病害抑制**
+
+- CLR・炭疽病・CBD・褐斑病の発生率低下  
+    → 落葉・落果が減少  
+    → 光合成量が増加
+
+### **③ 樹勢の回復**
+
+- 樹皮再生
+- 酸性雨ダメージの回復
+- 幹の導管機能の改善
+
+### **④ 土壌保水力の向上**
+
+- 干ばつストレスの軽減
+- 果実肥大の安定化
+
+### **⑤ 果実品質の向上**
+
+- ポリフェノール含量増加
+- 糖度・酸味バランス改善  
+    → プレミアム価格を獲得しやすい
+
+---
+
+# **4.4 収量向上モデル（5ha農家の例）**
+
+|項目|従来|MBT55導入後|
+|---|---|---|
+|収量|1,200 kg/ha|**1,560 kg/ha（+30%）**|
+|病害損失|-25%|**-10%（改善）**|
+|幼木生存率|70%|**90%**|
+|樹勢|不安定|**安定**|
+|品質|通常|**プレミアム（+20%）**|
+
+---
+
+# **4.5 “高収量 × 低コスト”が同時に成立する理由**
+
+従来農業では：
+
+- 収量を増やす → 肥料・農薬コストが増える
+- コストを下げる → 収量が落ちる
+
+という **トレードオフ構造**があった。
+
+しかし MBT55/HMT238 は：
+
+> **生態系そのものを強化するため、  
+> 収量が増えるほどコストが下がる。**
+
+という **逆転モデル**を実現する。
+
+---
+
+# **4.6 MBT55/HMT238 の導入効果（まとめ）**
+
+## ✔ コスト削減
+
+- 化学肥料：**40〜60% 減**
+- 農薬：**50〜80% 減**
+- 灌水：**30〜50% 減**
+- 廃棄物処理：**コスト → 収益化**
+
+## ✔ 収量向上
+
+- **+30〜50%**
+- 病害損失の大幅減
+- 幼木生存率の向上
+- 樹勢の回復
+
+## ✔ 品質向上
+
+- カッピングスコア **+1〜3点**
+- プレミアム価格 **+20〜40%**
+
+## ✔ 気候価値
+
+- 土壌炭素固定
+- CO₂排出回避
+- バイオ炭による長期固定
+
+---
+
+# **4.7 結論：MBT55/HMT238 は“収益性の高い再生型農業”を実現する**
+
+MBT55/HMT238 は、  
+**収量増加 × コスト削減 × 品質向上 × 気候価値**  
+を同時に達成する唯一の技術である。
+
+これは、  
+生産者・企業・消費者・地球のすべてに利益をもたらす  
+**再生型コーヒー産業（Regenerative Coffee Industry）** の基盤となる。
+</file>
+
+<file path="jp/5_PBPE_and_Carbon_Economy.md">
+# **5. PBPE と炭素エコノミー
+
+— コーヒー取引を排出権取引に変える “Climate Currency” モデル —**
+
+PBPE（Planetary Bio‑Phenome Engine）は、  
+**農産物の生産プロセスそのものを「炭素価値」に変換する世界初のエンジン**である。
+
+MBT55/HMT238 によって生態系が再生され、  
+AGRIX によってその変化がデータ化され、  
+SafelyChain によって金融資産として証明される。
+
+その結果：
+
+> **コーヒー豆の購入 = 炭素クレジットの購入**  
+> **Coffee = Climate Currency（気候通貨）**
+
+という新しい経済モデルが成立する。
+
+本章では、この仕組みを体系的に解説する。
+
+---
+
+# **5.1 PBPE が生み出す「気候価値（Climate Value）」とは何か**
+
+PBPE は、農園で起きる以下の生態系改善を  
+**すべて“価値”として計測・証明・金融化**する。
+
+## ■ PBPE が価値化する項目
+
+### **① 炭素吸収（Carbon Sequestration）**
+
+- 樹体バイオマスの増加
+- 土壌炭素（SOC）の増加
+- 腐植質の長期固定（20〜50年）
+- バイオ炭による超長期固定（100〜500年）
+
+### **② 排出削減（Emission Reduction）**
+
+- 化学肥料削減（N₂O排出減）
+- 農薬削減（製造・散布のCO₂減）
+- コーヒーカス焼却回避
+- 物流ロス削減
+
+### **③ 生態系サービス（Ecosystem Services）**
+
+- 土壌保水力の向上
+- 病害リスクの低減
+- 樹勢の回復
+- 生物多様性の改善
+
+### **④ 品質・収量の向上（Quality & Yield）**
+
+- 収量 +30〜50%
+- 品質 +1〜3点（カッピング）
+- プレミアム価格 +20〜40%
+
+これらはすべて **気候価値（Climate Value）** として金融化できる。
+
+---
+
+# **5.2 PBPE の4層アーキテクチャ（Carbon Economy の基盤）**
+
+PBPE は以下の4層で構成される。
+
+```
+Layer 4：Impact Finance（SafelyChain × MABC）
+Layer 3：Phenomic Intelligence（AGRIX）
+Layer 2：Hypercycle Dynamics（生態系ハイパーサイクル）
+Layer 1：Bio‑Security（MBT55/HMT238）
+```
+
+---
+
+## **Layer 1：MBT55/HMT238（Bio‑Security Layer）**
+
+- 病害抑制（CLR, CBD, 炭疽病, 褐斑病）
+- 土壌再生（腐植質生成、団粒構造）
+- 樹勢回復（樹皮再生、酸性雨ダメージ回復）
+- 有機物の高速分解（24時間）
+
+→ **炭素吸収量が増える“物理的根拠”を作る**
+
+---
+
+## **Layer 2：Hypercycle Dynamics（生態系ハイパーサイクル）**
+
+- 栄養カスケード
+- 微生物ネットワーク
+- 水分・酸化還元バランス
+- 炭素循環の高速化
+
+→ **生態系の改善を持続させる**
+
+---
+
+## **Layer 3：AGRIX（Phenomic Intelligence Layer）**
+
+- 土壌・樹体・葉面のフェノタイプをリアルタイム測定
+- 炭素吸収量（ΔC）を推定
+- 病害リスクを予測
+- 収量を予測
+- PBPEクレジットの裏付けデータを生成
+
+→ **生態系の変化を“データ化”する**
+
+---
+
+## **Layer 4：SafelyChain × MABC（Impact Finance Layer）**
+
+- ΔC（炭素吸収量）をトークン化
+- 生態系サービスを証明
+- コーヒー豆と炭素価値を統合
+- 企業の Scope3 削減に利用可能
+
+→ **生態系データを“金融資産”に変換する**
+
+---
+
+# **5.3 コーヒー豆が「炭素資産」になる仕組み**
+
+PBPE によって、コーヒー豆は以下の4つの価値を持つ。
+
+## **① 物理的価値（Physical Value）**
+
+- 生豆としての価値
+- 品質（カッピングスコア）
+- 風味・香り・ポリフェノール
+
+## **② 生態系価値（Ecological Value）**
+
+- ΔC（炭素吸収量）
+- 土壌改善度
+- 病害リスク低減度
+- 水分保持力
+
+## **③ 気候価値（Climate Value）**
+
+- 炭素固定
+- 排出削減
+- 焼却回避
+- バイオ炭固定
+
+## **④ 金融価値（Financial Value）**
+
+- Carbon Equity（炭素株式）
+- Yield‑Linked Token（収量連動トークン）
+- Quality Premium Bond（品質プレミアム債）
+
+---
+
+# **5.4 「コーヒー取引 = 排出権取引」が成立する理由**
+
+PBPE は、農産物の生産プロセスを  
+**排出権（Carbon Credit）と同等の“証明可能な価値”** に変換する。
+
+### ✔ 企業は PBPE コーヒーを購入することで：
+
+- Scope3 排出を削減
+- ESGスコアを向上
+- サプライチェーンの安定化
+- 生産者支援を実現
+
+### ✔ 消費者は：
+
+- 「地球を再生する一杯」を選べる
+- 気候価値を持つコーヒーを購入できる
+
+### ✔ 生産者は：
+
+- 炭素価値を保有（Carbon Equity）
+- 収量価値を保有（Yield Token）
+- 品質価値を保有（Premium Bond）
+
+---
+
+# **5.5 PBPE が創る新しい炭素エコノミー（Carbon Economy 2.0）**
+
+PBPE は、従来の炭素市場の課題を解決する。
+
+|従来の炭素市場|PBPE（Carbon Economy 2.0）|
+|---|---|
+|追加性が不透明|AGRIXでΔCをリアルタイム測定|
+|二重計上の懸念|SafelyChainで完全排除|
+|森林偏重|農業・土壌・微生物を価値化|
+|生産者に利益が届かない|生産者が炭素株式を保有|
+|企業の利用が難しい|コーヒー購入で自動オフセット|
+
+---
+
+# **5.6 PBPE × コーヒー：Climate Currency モデル**
+
+PBPE によって、コーヒー豆は **“気候通貨（Climate Currency）”** になる。
+
+## ■ Climate Currency の構成要素
+
+- ΔC（炭素吸収量）
+- 生態系サービス
+- 品質
+- 収量
+- トレーサビリティ
+- 金融価値（トークン化）
+
+## ■ 企業にとっての価値
+
+- Scope3 削減
+- ESG調達
+- ブランド価値向上
+- 消費者参加型の気候アクション
+
+## ■ 生産者にとっての価値
+
+- 炭素株式（Carbon Equity）
+- 収量トークン（YLT）
+- 品質債券（QPB）
+- 最低所得保証（Income Protection）
+
+---
+
+# **5.7 PBPE × スターバックス × Microsoft × ゲイツ財団**
+
+PBPE は、以下の3者の利害を完全に一致させる。
+
+### ✔ スターバックス
+
+- 再生型コーヒーの世界標準化
+- Scope3 削減
+- 生産者支援
+
+### ✔ Microsoft
+
+- Azure × AGRIX のデータ基盤
+- 気候データの標準化
+- ESGソリューションの拡大
+
+### ✔ ゲイツ財団
+
+- 農業レジリエンス
+- 母子健康（MBT55 × Nutrition）
+- 途上国支援
+
+PBPE は、3者の交点に位置する **唯一の統合モデル** である。
+
+---
+
+# **5.8 まとめ：PBPE は“気候 × 農業 × 金融”を統合する新しい経済基盤である**
+
+PBPE は、以下を同時に実現する。
+
+- コーヒー産業の再生
+- 生産者の資産形成
+- 企業のESG価値向上
+- 気候変動対策
+- 炭素市場の透明化
+- 消費者参加型の気候アクション
+
+そして何より：
+
+> **コーヒー豆は、地球を再生する“気候通貨（Climate Currency）”になる。**
+</file>
+
+<file path="jp/6_Consumer_Engagement.md">
+# **6. 個人顧客との関わりと影響
+
+— “一杯のコーヒーが地球を再生する” 消費者体験のデザイン —**
+
+PBPE × MBT55/HMT238 × Coffee は、  
+生産者・企業・地球だけでなく、  
+**個人消費者の体験そのものを変える力**を持っている。
+
+本章では、PBPE コーヒーが  
+**消費者の行動・価値観・体験・参加意識**にどのような影響を与えるかを整理する。
+
+---
+
+# **6.1 消費者は「地球再生の参加者」になる**
+
+PBPE コーヒーは、  
+単なる飲料ではなく **“気候通貨（Climate Currency）”** である。
+
+消費者が PBPE コーヒーを購入すると：
+
+- 炭素吸収に貢献
+- 生産者の所得向上に貢献
+- 病害対策に貢献
+- 土壌再生に貢献
+- コーヒーカスの循環に貢献
+
+つまり、消費者は **地球再生の共同出資者** になる。
+
+---
+
+# **6.2 消費者体験の変化（Experience Transformation）**
+
+PBPE コーヒーは、  
+消費者の体験を以下のように変える。
+
+---
+
+## **① 「飲む」から「参加する」へ**
+
+従来：
+
+- コーヒーを飲む → ただの消費行動
+
+PBPE：
+
+- コーヒーを飲む → **炭素固定に参加する行動**
+- コーヒーを買う → **生産者の資産形成に貢献**
+- コーヒーを選ぶ → **気候アクションの意思表示**
+
+---
+
+## **② 「味わう」から「物語を共有する」へ**
+
+PBPE コーヒーには、  
+以下のデータが紐づく：
+
+- ΔC（炭素吸収量）
+- 土壌改善度
+- 病害リスク低減度
+- 生産者の収入改善
+- コーヒーカスの循環状況
+- 生産者のストーリー
+
+消費者は、  
+**「この一杯がどれだけ地球を再生したか」** を知ることができる。
+
+---
+
+## **③ 「買う」から「応援する」へ**
+
+PBPE コーヒーは、  
+生産者の：
+
+- 収量
+- 品質
+- 炭素価値
+- 生活安定
+- 子どもの教育
+- 医療アクセス
+
+に直接つながる。
+
+消費者は、  
+**“推し農家（Favorite Farmer）”** を持つ時代になる。
+
+---
+
+# **6.3 PBPE コーヒーが提供する新しい価値**
+
+---
+
+## **① 気候価値（Climate Value）**
+
+消費者は、  
+**「自分の一杯が何kgのCO₂を固定したか」** を知ることができる。
+
+例：
+
+- 1杯のPBPEコーヒー → **0.5〜1.2 kg CO₂固定**
+- 年間300杯 → **150〜360 kg CO₂固定**
+
+これは、  
+**植樹に匹敵する気候アクション**である。
+
+---
+
+## **② 社会価値（Social Value）**
+
+消費者は、  
+**生産者の生活改善に直接貢献**できる。
+
+- 最低所得保証
+- 農業保険
+- 医療保険
+- 教育基金
+- 炭素株式（Carbon Equity）
+
+PBPE コーヒーは、  
+**“飲む寄付”ではなく、“飲む投資”** になる。
+
+---
+
+## **③ 健康価値（Health Value）**
+
+MBT55/HMT238 による：
+
+- ポリフェノール増加
+- 抗酸化能向上
+- 発酵プロセスの安定化
+
+により、  
+PBPE コーヒーは **健康価値の高いコーヒー** になる。
+
+---
+
+# **6.4 消費者向けの可視化（Transparency & Engagement）**
+
+PBPE コーヒーは、  
+消費者に以下の情報を提供できる。
+
+---
+
+## **① ΔC（炭素吸収量）表示**
+
+例：
+
+> このロットは 1kg あたり **4.2 kg CO₂** を固定しています。
+
+---
+
+## **② 生産者のストーリー**
+
+- どの農園か
+- どの家族か
+- どのように生活が改善したか
+- どの病害が減ったか
+
+---
+
+## **③ コーヒーカスの循環状況**
+
+- カフェで出たコーヒーカスが
+- MBT55で発酵され
+- 再び農園に戻り
+- 土壌を再生する
+
+**“都市と農村の循環”** を見える化できる。
+
+---
+
+# **6.5 PBPE × スターバックス：消費者体験の未来**
+
+スターバックスが PBPE を採用した場合、  
+消費者体験は次のように変わる。
+
+---
+
+## **① カップに「炭素吸収量」が表示される**
+
+例：
+
+> この一杯は **0.8 kg CO₂** を固定しました。
+
+---
+
+## **② アプリで「あなたの年間炭素貢献」が見える**
+
+- 年間 CO₂固定量
+- 支援した農家
+- 循環したコーヒーカス量
+- Scope3削減への貢献
+
+---
+
+## **③ “Regenerative Coffee” ブランドの確立**
+
+- 再生型農業
+- 再生型サプライチェーン
+- 再生型消費行動
+
+スターバックスは、  
+**世界初の“再生型コーヒー企業”** になれる。
+
+---
+
+# **6.6 消費者が PBPE コーヒーを選ぶ理由**
+
+- 地球に良い
+- 生産者に良い
+- 自分の健康に良い
+- 味が良い
+- 透明性が高い
+- 社会貢献ができる
+- ESG消費の一部になる
+
+PBPE コーヒーは、  
+**“最も選ばれる理由が多いコーヒー”** になる。
+
+---
+
+# **6.7 まとめ：PBPE は消費者を“地球再生の主役”にする**
+
+PBPE × MBT55/HMT238 × Coffee は、  
+消費者の行動を以下のように変える。
+
+- 飲む → **参加する**
+- 買う → **応援する**
+- 味わう → **物語を共有する**
+- 消費 → **再生**
+
+そして何より：
+
+> **一杯のコーヒーが、地球を再生する。  
+> その体験を消費者に届けるのが PBPE である。**
+</file>
+
+<file path="jp/7_Coffee_Price_Stabilization.md">
+# **7. コーヒー価格の安定化
+
+— PBPE × MBT55/HMT238 が実現する“供給安定 × リスク低減 × 気候価値”モデル —**
+
+コーヒー価格は、世界の農産物の中でも最も乱高下しやすい。  
+その理由は、**気候変動・病害・物流・為替・投機**など、  
+複数の要因が同時に価格に影響するためである。
+
+PBPE × MBT55/HMT238 は、  
+この複雑な価格変動の構造を根本から変え、  
+**コーヒー価格の安定化（Price Stabilization）** を実現する。
+
+---
+
+# **7.1 コーヒー価格が乱高下する“5つの原因”**
+
+コーヒー価格のボラティリティは、以下の5つの要因が重なって発生する。
+
+---
+
+## **① 気候変動による収量の不安定化**
+
+- 干ばつ
+- 豪雨
+- 霜害
+- 熱波
+- 異常気象
+
+これらは **収量の急減** を引き起こし、  
+価格を急騰させる。
+
+---
+
+## **② 病害（CLR・CBD・炭疽病）の拡大**
+
+病害は、収量の **30〜70%** を奪うことがある。
+
+特に：
+
+- CLR（さび病）
+- CBD（コーヒー果実病）
+- 炭疽病
+- 褐斑病
+
+は、気候変動で発生地域が拡大し、  
+価格変動の主要因になっている。
+
+---
+
+## **③ 生産コストの上昇（肥料・農薬・労働力）**
+
+- 肥料価格の高騰
+- 農薬価格の上昇
+- 労働力不足
+- 為替変動（ドル建て取引）
+
+これらは **生産者の利益を圧迫し、供給量を減らす**。
+
+---
+
+## **④ 物流・地政学リスク**
+
+- 紅海航路の回避
+- パナマ運河の水位低下
+- 燃料価格の上昇
+- 国際紛争
+
+これらは **輸送コストの増加 → 価格上昇** を招く。
+
+---
+
+## **⑤ 投機資金の流入**
+
+コーヒーは国際先物市場で取引されるため、  
+投機資金が価格を大きく動かす。
+
+---
+
+# **7.2 PBPE × MBT55/HMT238 が価格を安定化させる“4つのエンジン”**
+
+PBPE は、価格変動の原因を **生態系・経済・金融** の3層で同時に解決する。
+
+---
+
+# **エンジン①：収量の安定化（Yield Stabilization）**
+
+MBT55/HMT238 により：
+
+- 病害発生率 **50〜80% 減少**
+- 干ばつ耐性 **+60〜100%**
+- 樹勢回復
+- 幼木生存率向上
+- 土壌保水力向上
+
+これにより、収量が **年ごとに安定** する。
+
+### ✔ 結果
+
+**供給ショックが減り、価格が安定する。**
+
+---
+
+# **エンジン②：生産コストの安定化（Cost Stabilization）**
+
+MBT55/HMT238 は：
+
+- 化学肥料 **40〜60% 削減**
+- 農薬 **50〜80% 削減**
+- 灌水コスト **30〜50% 削減**
+- 廃棄物処理コスト → **収益化**
+
+これにより、  
+**生産コストが外部要因に左右されにくくなる。**
+
+### ✔ 結果
+
+**生産者の利益が安定 → 供給量が安定 → 価格が安定。**
+
+---
+
+# **エンジン③：炭素価値による“第2の収入源”**
+
+PBPE により、コーヒー農家は：
+
+- 土壌炭素固定
+- 排出削減
+- コーヒーカス資源化
+- バイオ炭固定
+
+などの **気候価値（Climate Value）** を収入として得られる。
+
+### ✔ 結果
+
+**収量が減っても、炭素収入で生活が安定する。**
+
+これは、価格変動の影響を大幅に軽減する。
+
+---
+
+# **エンジン④：PBPE金融モデルによる“価格の下支え”**
+
+PBPE は、生産者に以下の金融価値を提供する：
+
+- Carbon Equity（炭素株式）
+- Yield‑Linked Token（収量連動トークン）
+- Quality Premium Bond（品質プレミアム債）
+- Income Protection（最低所得保証）
+- PBPEステーク報酬
+
+これにより、生産者は：
+
+- 価格が下がっても生活が安定
+- 投機的価格変動の影響を受けにくい
+- 長期的な投資が可能
+
+---
+
+# **7.3 PBPE が実現する“価格安定化モデル”**
+
+以下の3つの力が同時に働くことで、  
+コーヒー価格は安定する。
+
+---
+
+## **① 供給の安定化（Supply Stability）**
+
+- 病害減少
+- 干ばつ耐性
+- 土壌再生
+- 樹勢回復
+
+→ **収量が安定する**
+
+---
+
+## **② 生産者の経済安定（Farmer Stability）**
+
+- コスト削減
+- 炭素収入
+- PBPE金融モデル
+- 最低所得保証
+
+→ **供給量が減らない**
+
+---
+
+## **③ 企業の調達安定（Procurement Stability）**
+
+- Scope3削減
+- ESG調達
+- PBPEクレジット
+- トレーサビリティ
+
+→ **長期契約が増える**
+
+---
+
+# **7.4 スターバックス・ロースター企業へのメリット**
+
+PBPE × MBT55/HMT238 は、  
+世界のロースター企業にとって極めて大きな価値を持つ。
+
+---
+
+## **① 調達価格の安定**
+
+- 供給ショックが減る
+- 長期契約が可能
+- ESG調達が容易になる
+
+---
+
+## **② Scope3削減の達成**
+
+PBPE コーヒーは：
+
+- ΔC（炭素吸収量）
+- 排出削減
+- 循環型廃棄物処理
+
+をデータとして提供できる。
+
+---
+
+## **③ ブランド価値の向上**
+
+- “Regenerative Coffee”
+- “Climate Positive Coffee”
+- “Carbon‑Backed Coffee”
+
+これらは、消費者に強く響く。
+
+---
+
+# **7.5 PBPE × コーヒー：価格安定化の未来図**
+
+PBPE が普及すると、  
+コーヒー産業は以下のように変わる。
+
+---
+
+## **① 価格の乱高下が減る**
+
+- 供給ショックが減る
+- 生産者の離農が減る
+- 病害による壊滅が減る
+
+---
+
+## **② 生産者の生活が安定する**
+
+- 炭素収入
+- PBPE金融モデル
+- 最低所得保証
+
+---
+
+## **③ 企業の調達が安定する**
+
+- 長期契約
+- ESG調達
+- Scope3削減
+
+---
+
+## **④ 消費者の価格も安定する**
+
+- PBPEコーヒーは“安定供給ブランド”になる
+- 価格の急騰が減る
+
+---
+
+# **7.6 まとめ：PBPE はコーヒー価格の“安定化エンジン”である**
+
+PBPE × MBT55/HMT238 は、  
+コーヒー価格の乱高下を引き起こす要因を  
+**生態系・経済・金融の3層で同時に解決する唯一のモデル**である。
+
+- 収量の安定
+- コストの安定
+- 生産者の生活の安定
+- 企業の調達の安定
+- 気候価値による第2の収入源
+
+これらが組み合わさることで、  
+**コーヒー価格は長期的に安定する。**
+</file>
+
+<file path="jp/8_MBT_Sustainable_Cycle_and_Waste_Upcycling.md">
+# **8. MBT Sustainable Cycle とコーヒー粕の資源化
+
+— 廃棄物ゼロの循環型コーヒー産業を実現する MBT55/HMT238 —**
+
+コーヒー産業は、  
+生産から消費までの各段階で大量の有機廃棄物を生み出す。
+
+- コーヒー果皮（パルプ）
+- パーチメント
+- 精製副産物
+- 剪定枝
+- 落葉
+- カフェで発生するコーヒー粕（Spent Coffee Grounds）
+
+従来はこれらが **廃棄物（コスト）** として扱われてきた。
+
+しかし、MBT55/HMT238 を用いることで、  
+これらは **高付加価値の“資源”** に変わる。
+
+本章では、MBT Sustainable Cycle が  
+どのようにコーヒー産業を循環型モデルへ転換するかを解説する。
+
+---
+
+# **8.1 MBT Sustainable Cycle とは何か**
+
+MBT Sustainable Cycle は、  
+MBT55/HMT238 の **高速分解 × 発酵 × 腐植質生成 × 微生物制御** を基盤とした  
+**循環型生態系エンジン**である。
+
+その本質は：
+
+> **有機物 → 発酵 → 腐植質 → 土壌再生 → 収量増加 → 再び有機物へ**  
+> という“生態系の循環”を人工的に高速化すること。
+
+---
+
+# **8.2 MBT55/HMT238 の高速分解・発酵能力（24時間）**
+
+MBT55/HMT238 は、  
+通常3〜6ヶ月かかる堆肥化プロセスを **24〜48時間** に短縮する。
+
+## ■ 3段階の高速発酵プロセス
+
+### **① 加水分解（0〜6時間）**
+
+- タンパク質 → アミノ酸
+- デンプン → 糖
+- 脂質 → 脂肪酸
+- セルロース → グルコース
+
+### **② 発酵・代謝（6〜18時間）**
+
+- 有機酸生成
+- 抗菌物質生成
+- 腐植前駆物質の形成
+
+### **③ 熟成・安定化（18〜24時間）**
+
+- 腐植質（フミン酸・フルボ酸）生成
+- pH安定化
+- 病原菌の完全死滅（80〜100℃）
+
+---
+
+# **8.3 コーヒー粕の資源化（Upcycling）**
+
+世界では年間 **数百万トン** のコーヒー粕が発生する。
+
+従来：
+
+- 水分が多く重い
+- 運搬・焼却コストが高い
+- CO₂排出が発生
+- 法規制により再資源化が困難
+
+MBT55/HMT238 により、  
+コーヒー粕は **4つの高付加価値資源**に変わる。
+
+---
+
+## **① 高品質有機肥料（Premium Organic Fertilizer）**
+
+MBT55/HMT238 による発酵で、  
+コーヒー粕は **24時間で肥料化**される。
+
+### ✔ 特徴
+
+- 全窒素：2.5〜3.5%
+- 有効リン酸：1.8〜2.5%
+- カリウム：1.5〜2.0%
+- 腐植酸：15〜25%
+- pH：6.5〜7.0（中性）
+
+### ✔ 効果
+
+- 土壌肥沃度の向上
+- 保水力の向上
+- 微生物多様性の改善
+- 幼木の生存率向上
+
+---
+
+## **② 機能性飼料（Functional Feed）**
+
+コーヒー粕には：
+
+- ポリフェノール
+- 食物繊維
+- アミノ酸
+- 微量ミネラル
+
+が豊富に含まれる。
+
+MBT55/HMT238 により：
+
+- 消化率が **85〜92%** に向上
+- 乳酸菌・放線菌が腸内環境を改善
+- 抗酸化能が高い飼料になる
+
+### ✔ 用途
+
+- 養鶏
+- 養豚
+- 養殖（魚粉代替）
+
+---
+
+## **③ バイオ炭（Biochar）**
+
+コーヒー粕をバイオ炭化すると：
+
+- 土壌改良材
+- 長期炭素固定材（100〜500年）
+- 微生物キャリア
+
+として利用できる。
+
+MBT55/HMT238 と組み合わせると：
+
+> **“炭素ストック × 微生物活性”のハイブリッド資材**  
+> が完成する。
+
+---
+
+## **④ 水質浄化材（Water Purification Material）**
+
+MBT55/HMT238 の腐植酸は：
+
+- 重金属のキレート化
+- アンモニア・硝酸の吸着
+- 有機汚濁物の分解
+
+に優れている。
+
+### ✔ 用途
+
+- 養殖池
+- 湖沼
+- 下水処理
+- 農業排水
+
+---
+
+# **8.4 コーヒー果皮・パーチメントの資源化**
+
+コーヒー精製で発生する副産物も、  
+MBT55/HMT238 により高付加価値化できる。
+
+---
+
+## **① コーヒーチェリーの果皮（パルプ）**
+
+- 発酵肥料
+- 家畜飼料
+- バイオ炭
+- バイオガス原料
+
+---
+
+## **② パーチメント**
+
+- セルロース資源
+- 土壌改良材
+- 微生物キャリア
+
+---
+
+## **③ 精製副産物（ミューシレージ）**
+
+- 糖質 → 発酵 → 有機酸
+- 微生物の栄養源として最適
+
+---
+
+# **8.5 都市 × 農村の循環（Urban–Rural Circularity）**
+
+PBPE × MBT55/HMT238 は、  
+都市と農村をつなぐ **循環型サプライチェーン** を作る。
+
+---
+
+## **① カフェで発生するコーヒー粕 → MBT発酵センターへ**
+
+- 週2回回収
+- 24時間で発酵
+- 肥料・飼料・バイオ炭に変換
+
+---
+
+## **② 発酵生成物 → コーヒー農園へ**
+
+- 土壌再生
+- 病害抑制
+- 収量向上
+
+---
+
+## **③ コーヒー豆 → 都市へ戻る**
+
+- PBPEコーヒーとして販売
+- ΔC（炭素吸収量）を表示
+
+---
+
+## **④ 消費者 → 再び循環に参加**
+
+- コーヒー粕を返却
+- アプリで炭素貢献を確認
+
+---
+
+# **8.6 環境負荷の削減（Environmental Impact Reduction）**
+
+MBT Sustainable Cycle により、  
+コーヒー産業の環境負荷は大幅に減少する。
+
+---
+
+## **① CO₂排出削減**
+
+- 焼却回避
+- 化学肥料削減
+- バイオ炭固定
+- 土壌炭素増加
+
+---
+
+## **② メタン排出削減**
+
+- 有機物の嫌気性腐敗を防止
+- メタン酸化菌が CH₄ を分解
+
+---
+
+## **③ 水質汚濁の防止**
+
+- 精製副産物の発酵処理
+- 養殖池・湖沼の浄化
+
+---
+
+## **④ 廃棄物ゼロ（Zero Waste）**
+
+- コーヒー粕
+- 果皮
+- パーチメント
+- 剪定枝
+- 落葉
+
+すべてが **資源化** される。
+
+---
+
+# **8.7 MBT Sustainable Cycle の経済価値**
+
+MBT55/HMT238 による資源化は、  
+廃棄物処理コストを **収益源** に変える。
+
+---
+
+## **① コーヒー粕1トンあたりの経済価値**
+
+|項目|従来（焼却）|MBT資源化|
+|---|---|---|
+|処理コスト|-¥30,000|¥0|
+|肥料価値|¥0|**¥40,000**|
+|飼料価値|¥0|**¥50,000〜80,000**|
+|バイオ炭価値|¥0|**¥15,000〜25,000**|
+|カーボンクレジット|¥0|**¥3,000〜10,000**|
+
+### ✔ 合計価値
+
+**¥60,000〜120,000 / トン**
+
+---
+
+# **8.8 まとめ：MBT Sustainable Cycle は“廃棄物ゼロのコーヒー産業”を実現する**
+
+MBT55/HMT238 は、  
+コーヒー産業のあらゆる副産物を **資源化** し、  
+循環型経済を実現する。
+
+- 廃棄物 → 資源
+- コスト → 収益
+- 都市 → 農村 → 都市の循環
+- CO₂排出 → 炭素固定
+- 病害 → 生態系安定
+
+そして何より：
+
+> **コーヒー産業全体が“再生型（Regenerative）”に変わる。**
+</file>
+
+<file path="jp/appendix/Chalkbrood_and_BlueMold_Cases.md">
+# **チョーク病・青カビの実証ケース集
+
+— MBT55/HMT238 のバイオセキュリティ効果を示す実例 —**
+
+本付録では、MBT55/HMT238 が  
+**ミツバチのチョーク病（Ascosphaera apis）** および  
+**シイタケ青カビ（Trichoderma spp.）** に対して示した  
+実証的な効果をまとめる。
+
+これらの事例は、MBT55/HMT238 の  
+**抗真菌作用・競合排除・酵素活性・微生物バリア形成**  
+といったバイオセキュリティ機能を裏付ける重要な証拠である。
+
+---
+
+# **1. ミツバチのチョーク病（Chalkbrood）実証ケース**
+
+チョーク病は、ミツバチ幼虫が  
+_Ascosphaera apis_ に感染することで発症する真菌性疾病である。
+
+- 幼虫が白く石灰化
+- 群の生産性が低下
+- 蜂群崩壊（Colony Collapse）の一因にもなる
+
+MBT55/HMT238 は、このチョーク病に対して  
+**極めて高い抑制効果** を示した。
+
+---
+
+# **1.1 実証概要**
+
+|項目|内容|
+|---|---|
+|対象|3群の養蜂群|
+|投与方法|MBT55発酵液を給餌（糖液に混合）|
+|投与期間|14日間|
+|観察期間|30日間|
+|比較群|無処理群（対照）|
+
+---
+
+# **1.2 結果（最重要ポイント）**
+
+### **✔ MBT55投与群：チョーク病の発症ゼロ（0%）**
+
+### **✔ 対照群：発症率 18〜27%**
+
+これは、MBT55/HMT238 の  
+**腸内微生物叢の競合排除（Competitive Exclusion）**  
+および  
+**抗真菌代謝物の生成**  
+によるものと考えられる。
+
+---
+
+# **1.3 作用メカニズム（科学的根拠）**
+
+## **① 腸内環境の競合排除（Gut Microbiome Shield）**
+
+- 乳酸菌・酵母菌が腸内を先占
+- _Ascosphaera apis_ の定着を阻害
+- 幼虫の免疫応答を強化
+
+## **② 抗真菌代謝物の生成**
+
+- 有機酸（乳酸・酢酸）
+- 抗菌ペプチド
+- キチナーゼ
+- β-1,3-グルカナーゼ
+
+これらが真菌の胞子発芽を阻害する。
+
+## **③ 微生物バリアの形成**
+
+- 巣房内の微生物叢が安定
+- 病原菌の侵入を防ぐ
+
+---
+
+# **1.4 追加観察**
+
+- 幼虫の死亡率が低下
+- 女王蜂の産卵数が増加
+- 群の活動性が向上
+- 蜜量が増加（+12〜18%）
+
+---
+
+# **1.5 結論（チョーク病）**
+
+> **MBT55/HMT238 は、チョーク病に対して“完全抑制”レベルの効果を示す。**  
+> これは、コーヒー病害（CLR・CBD・炭疽病）への応用可能性を強く示す。
+
+---
+
+# **2. シイタケ青カビ（Trichoderma spp.）実証ケース**
+
+青カビ（Trichoderma）は、  
+シイタケ栽培における最も深刻な病害のひとつである。
+
+- 菌床が緑色に変色
+- 菌糸が死滅
+- 収量が大幅に低下
+
+MBT55/HMT238 は、この青カビに対して  
+**極めて強い抑制効果** を示した。
+
+---
+
+# **2.1 実証概要**
+
+|項目|内容|
+|---|---|
+|対象|青カビが発生したシイタケ菌床|
+|投与方法|MBT55酵素液の希釈散布|
+|希釈倍率|1,000倍、3,000倍、5,000倍|
+|観察期間|7日間|
+
+---
+
+# **2.2 結果（最重要ポイント）**
+
+### **✔ 1,000〜5,000倍希釈で青カビが完全消失**
+
+### **✔ 菌床の白色菌糸が再生**
+
+### **✔ 再発率は 0%（30日観察）**
+
+これは、MBT55/HMT238 の  
+**酵素活性（キチナーゼ・グルカナーゼ）**  
+および  
+**抗真菌VOCs**  
+によるものと考えられる。
+
+---
+
+# **2.3 作用メカニズム（科学的根拠）**
+
+## **① キチナーゼによる細胞壁分解**
+
+- 真菌細胞壁の主要成分「キチン」を分解
+- Trichoderma の菌糸が崩壊
+
+## **② β-1,3-グルカナーゼによる細胞壁破壊**
+
+- グルカンを分解し、菌糸の構造を破壊
+
+## **③ VOCs（揮発性有機化合物）による菌糸伸長阻害**
+
+- 酵母菌・放線菌が生成
+- 青カビの成長を抑制
+
+## **④ 微生物バリアの形成**
+
+- MBT55菌群が菌床表面を先占
+- 青カビの再侵入を防ぐ
+
+---
+
+# **2.4 追加観察**
+
+- 菌床のpHが安定（pH 6.0〜6.5）
+- 菌糸の成長速度が回復
+- 収量が対照群比で +25〜40%
+
+---
+
+# **2.5 結論（青カビ）**
+
+> **MBT55/HMT238 は、青カビに対して“完全消失”レベルの効果を示す。**  
+> これは、コーヒー病害（CLR・炭疽病・CBD）への応用可能性を裏付ける。
+
+---
+
+# **3. コーヒー病害への応用可能性（総合考察）**
+
+チョーク病・青カビの実証結果は、  
+MBT55/HMT238 が以下の機能を持つことを示す。
+
+- 抗真菌酵素（キチナーゼ・グルカナーゼ）
+- 抗菌ペプチド
+- 有機酸
+- VOCs
+- 微生物バリア
+- 競合排除
+- pH安定化
+- 微環境制御
+
+これらは、コーヒー病害の主要病原体に対して  
+**同じ作用メカニズムで効果を発揮する。**
+
+---
+
+# **4. コーヒー病害との対応表**
+
+|病害|主な病原体|MBT55の作用メカニズム|
+|---|---|---|
+|CLR（さび病）|_Hemileia vastatrix_|先占効果、VOCs、ISR|
+|炭疽病|_Colletotrichum_ spp.|キチナーゼ、抗菌代謝物|
+|CBD|_C. kahawae_|付着器阻害、Ca/Si吸収促進|
+|褐斑病|_Cercospora_ spp.|pH安定化、抗酸化酵素|
+|ピンク病|_E. salmonicolor_|樹皮バリア、抗菌物質|
+
+---
+
+# **5. まとめ：MBT55/HMT238 は“真菌病害に対する普遍的な防疫技術”である**
+
+- チョーク病 → **発症ゼロ**
+- 青カビ → **完全消失**
+- 再発率ゼロ
+- 酵素・代謝物・微生物バリアの多層防御
+- コーヒー病害への応用可能性が極めて高い
+
+そして何より：
+
+> **MBT55/HMT238 は、真菌病害を“成立させない環境”を作る技術である。**
+</file>
+
+<file path="jp/appendix/Coffee_Carbon_Flow_Map.md">
+# **コーヒー産業の炭素フローマップ
+
+— PBPE × MBT55/HMT238 による “Carbon‑Positive Coffee” の構造 —**
+
+本付録では、コーヒー産業における  
+**炭素の流れ（Carbon Flow）を体系的に可視化**し、  
+PBPE × MBT55/HMT238 がどの段階で  
+どれだけの炭素価値（Carbon Value）を生み出すかを整理する。
+
+---
+
+# **1. コーヒー産業の炭素フロー全体像**
+
+コーヒーのライフサイクルにおける炭素フローは、  
+以下の6段階に分けられる。
+
+```
+① 栽培（農園）
+② 精製（パルピング・乾燥）
+③ 輸送（農園 → 港 → ロースター）
+④ 焙煎（ロースター）
+⑤ 消費（カフェ・家庭）
+⑥ 廃棄物（コーヒー粕・果皮・パーチメント）
+```
+
+PBPE × MBT55/HMT238 は、  
+この **全段階に炭素価値を付与**する世界初のモデルである。
+
+---
+
+# **2. 栽培段階（Farm Stage）の炭素フロー**
+
+コーヒー農園は、炭素吸収の中心である。
+
+## **2.1 樹体バイオマス（Above‑ground Carbon）**
+
+- 光合成による炭素固定
+- 樹勢回復により吸収量が増加
+- 幹・枝・葉に炭素が蓄積
+
+### ✔ MBT55/HMT238 の効果
+
+- 病害抑制 → 落葉減少
+- 樹皮再生 → 光合成量増加
+- 幼木生存率向上 → 長期炭素ストック増加
+
+---
+
+## **2.2 根圏バイオマス（Below‑ground Carbon）**
+
+- 根量増加（+20〜40%）
+- 根圏微生物の活性化
+- 根の寿命延長
+
+### ✔ MBT55/HMT238 の効果
+
+- 窒素固定
+- リン可溶化
+- AMF（菌根菌）促進
+
+---
+
+## **2.3 土壌炭素（Soil Organic Carbon, SOC）**
+
+コーヒー産業の炭素価値の中心。
+
+### ✔ MBT55/HMT238 による SOC 増加
+
+- 腐植質生成率：**70〜85%**
+- 炭素滞留期間：**20〜50年**
+- SOC増加量：**1.5〜2.5 tCO₂/ha/年**
+
+---
+
+## **2.4 病害抑制による炭素価値**
+
+病害（CLR、CBD、炭疽病）が減ると：
+
+- 落葉が減る
+- 光合成量が増える
+- 樹体炭素が増える
+
+### ✔ MBT55/HMT238 の効果
+
+- CLR発病率 **50〜70% 減少**
+- 褐斑病による落葉 **60〜80% 減少**
+
+---
+
+# **3. 精製段階（Processing Stage）の炭素フロー**
+
+精製では大量の副産物が発生する。
+
+- コーヒー果皮（パルプ）
+- パーチメント
+- ミューシレージ
+
+従来は廃棄 → メタン発生 → 温室効果ガス増加。
+
+### ✔ MBT55/HMT238 による改善
+
+- 24時間で発酵 → 肥料化
+- メタン発生ゼロ
+- 有機酸生成 → 土壌改良材に変換
+
+---
+
+# **4. 輸送段階（Transport Stage）の炭素フロー**
+
+PBPE は輸送そのものの排出を減らすわけではないが、  
+**Scope3削減の証明**に利用できる。
+
+- ΔC（農園での炭素吸収）
+- 廃棄物資源化による排出回避
+- バイオ炭固定
+
+これらが輸送排出を相殺する。
+
+---
+
+# **5. 焙煎段階（Roasting Stage）の炭素フロー**
+
+焙煎はエネルギー消費が大きい。
+
+PBPE コーヒーは：
+
+- ΔC（炭素吸収量）
+- 廃棄物資源化
+- バイオ炭固定
+
+により、焙煎排出を **実質ゼロ化（Net‑Zero Roasting）** できる。
+
+---
+
+# **6. 消費段階（Consumption Stage）の炭素フロー**
+
+カフェ・家庭で発生するのは：
+
+- コーヒー粕（Spent Coffee Grounds）
+- 紙カップ
+- ミルク・砂糖の排出
+
+### ✔ PBPE × MBT55/HMT238 の効果
+
+- コーヒー粕 → 24時間で肥料化
+- カフェ → 農園への循環が可能
+- 消費者 → “気候通貨”として参加
+
+---
+
+# **7. 廃棄物段階（Waste Stage）の炭素フロー**
+
+コーヒー粕は世界で年間 **数百万トン** 発生する。
+
+従来：
+
+- 焼却 → CO₂排出
+- 埋立 → メタン発生
+
+MBT55/HMT238 により：
+
+- 肥料化
+- 飼料化
+- バイオ炭化
+- 水質浄化材化
+
+→ **廃棄物ゼロ（Zero Waste）** が実現する。
+
+---
+
+# **8. PBPE による “Carbon‑Positive Coffee” の成立**
+
+PBPE × MBT55/HMT238 により、  
+コーヒー産業は **Carbon‑Positive（炭素吸収型）** になる。
+
+---
+
+## **8.1 炭素吸収（Carbon Sequestration）**
+
+- 樹体バイオマス
+- 根圏バイオマス
+- 土壌炭素（SOC）
+- バイオ炭固定
+
+---
+
+## **8.2 排出削減（Emission Reduction）**
+
+- 化学肥料削減（N₂O排出減）
+- 農薬削減
+- コーヒー粕焼却回避
+- 精製副産物の発酵処理
+
+---
+
+## **8.3 排出回避（Avoided Emissions）**
+
+- メタン発生の抑制
+- 廃棄物の循環利用
+
+---
+
+## **8.4 Scope3削減（企業価値）**
+
+- ΔC（炭素吸収量）を企業が取得
+- ESG調達
+- トレーサビリティ
+
+---
+
+# **9. コーヒー産業の炭素フローマップ（図解）**
+
+```
+【農園】
+  光合成 → 樹体炭素 ↑
+  根圏バイオマス ↑
+  土壌炭素（SOC） ↑
+  病害抑制 → 落葉減少 → 炭素保持 ↑
+
+【精製】
+  果皮・パーチメント → MBT発酵 → 肥料化
+  メタン発生ゼロ
+
+【輸送】
+  ΔC が排出を相殺
+
+【焙煎】
+  ΔC により Net‑Zero Roasting
+
+【消費】
+  コーヒー粕 → MBT発酵 → 肥料・飼料・バイオ炭
+
+【循環】
+  都市 → 農園 → 都市 の循環が成立
+```
+
+---
+
+# **10. まとめ：PBPE はコーヒー産業の炭素フローを“価値化”するエンジンである**
+
+PBPE × MBT55/HMT238 は：
+
+- 炭素吸収
+- 排出削減
+- 排出回避
+- 循環型経済
+- Scope3削減
+- 生態系再生
+
+これらを **一つの統合モデル** として成立させる。
+
+そして何より：
+
+> **コーヒー豆は、炭素価値を持つ“気候通貨（Climate Currency）”になる。**
+</file>
+
+<file path="jp/appendix/MBT55_Microbe_List.md">
+# **MBT55/HMT238 微生物リスト
+
+— 120種以上の高多様性・高機能性コンソーシアム —**
+
+MBT55/HMT238 は、  
+**好気55%：嫌気45%** のバランスで構成された  
+120種以上の微生物コンソーシアムである。
+
+その特徴は：
+
+- **多機能性（分解・発酵・抗菌・免疫誘導）**
+- **多環境適応（葉面・樹皮・根圏・腸内）**
+- **高速分解（24時間）**
+- **腐植質生成（70〜85%）**
+- **病原菌の定着阻害（バイオセキュリティ5層）**
+
+本付録では、MBT55/HMT238 を構成する主要微生物群を分類別に整理する。
+
+---
+
+# **1. 酵母菌（Yeasts）**
+
+酵母菌は、MBT55 の発酵プロセスの中心であり、  
+病原菌の付着器形成を阻害する重要な役割を持つ。
+
+|種類|主な機能|
+|---|---|
+|_Saccharomyces cerevisiae_|アルコール発酵、抗菌物質生成|
+|_Candida utilis_|タンパク質合成、アミノ酸供給|
+|_Pichia kudriavzevii_|酸耐性、抗真菌VOCs生成|
+|_Hanseniaspora uvarum_|果実発酵、香気成分生成|
+|_Kluyveromyces marxianus_|高温発酵、乳糖分解|
+
+---
+
+# **2. 乳酸菌（Lactic Acid Bacteria）**
+
+乳酸菌は、病原菌を抑制する有機酸を生成し、  
+葉面・樹皮・根圏の pH を安定化させる。
+
+|種類|主な機能|
+|---|---|
+|_Lactobacillus plantarum_|乳酸生成、抗菌ペプチド|
+|_L. casei_|pH制御、免疫誘導|
+|_L. brevis_|酢酸生成、腐敗抑制|
+|_Pediococcus pentosaceus_|バクテリオシン生成|
+|_Leuconostoc mesenteroides_|デキストラン生成、土壌団粒化|
+
+---
+
+# **3. 放線菌（Actinomycetes）**
+
+放線菌は、強力な抗真菌物質を生成し、  
+炭疽病・褐斑病・ピンク病などの病原菌を抑制する。
+
+|種類|主な機能|
+|---|---|
+|_Streptomyces griseus_|抗生物質（ストレプトマイシン）|
+|_S. avermitilis_|アベルメクチン生成|
+|_S. coelicolor_|抗真菌代謝物|
+|_Micromonospora spp._|セルロース分解|
+|_Nocardia spp._|リグニン分解|
+
+---
+
+# **4. 糸状菌（Filamentous Fungi）**
+
+MBT55 の分解力を支える中心的存在。
+
+|種類|主な機能|
+|---|---|
+|_Aspergillus oryzae_|デンプン・タンパク質分解|
+|_A. niger_|クエン酸生成、セルロース分解|
+|_Rhizopus oryzae_|発酵、抗菌物質|
+|_Trichoderma harzianum_|病原菌拮抗、キチナーゼ|
+|_Penicillium chrysogenum_|抗菌物質生成|
+
+---
+
+# **5. セルロース分解菌（Cellulolytic Bacteria）**
+
+剪定枝・落葉・果皮などの分解を担う。
+
+|種類|主な機能|
+|---|---|
+|_Cellulomonas fimi_|セルラーゼ生成|
+|_Bacillus subtilis_|多機能酵素、抗菌物質|
+|_Clostridium thermocellum_|嫌気性セルロース分解|
+|_Paenibacillus polymyxa_|植物成長促進、窒素固定|
+|_Ruminococcus albus_|繊維質分解|
+
+---
+
+# **6. タンパク質分解菌（Proteolytic Bacteria）**
+
+|種類|主な機能|
+|---|---|
+|_Bacillus licheniformis_|プロテアーゼ生成|
+|_B. amyloliquefaciens_|抗菌ペプチド|
+|_Pseudomonas fluorescens_|タンパク質分解、病原抑制|
+|_Clostridium sporogenes_|嫌気性分解|
+|_Staphylococcus carnosus_|アミノ酸生成|
+
+---
+
+# **7. デンプン分解菌（Amylolytic Bacteria）**
+
+|種類|主な機能|
+|---|---|
+|_Bacillus stearothermophilus_|高温アミラーゼ|
+|_B. megaterium_|多糖分解|
+|_Lactobacillus amylovorus_|デンプン発酵|
+|_Aspergillus oryzae_|アミラーゼ生成|
+|_Rhizopus spp._|糖化作用|
+
+---
+
+# **8. 脂質分解菌（Lipolytic Bacteria）**
+
+|種類|主な機能|
+|---|---|
+|_Candida rugosa_|リパーゼ生成|
+|_Pseudomonas aeruginosa_|脂質分解|
+|_Geotrichum candidum_|乳脂肪分解|
+|_Bacillus pumilus_|リパーゼ|
+|_Aspergillus terreus_|脂質代謝|
+
+---
+
+# **9. 窒素固定菌（Nitrogen Fixers）**
+
+好気・嫌気の両方が含まれる。
+
+|種類|主な機能|
+|---|---|
+|_Azotobacter vinelandii_|好気性N固定|
+|_Azospirillum brasilense_|根圏定着、成長促進|
+|_Rhizobium spp._|共生N固定|
+|_Clostridium pasteurianum_|嫌気性N固定|
+|_Paenibacillus polymyxa_|多機能N固定|
+
+---
+
+# **10. 鉄・硫黄・マンガン代謝菌（Redox Bacteria）**
+
+樹皮再生・酸性雨ダメージ回復に重要。
+
+|種類|主な機能|
+|---|---|
+|_Gallionella ferruginea_|鉄酸化|
+|_Shewanella oneidensis_|鉄還元|
+|_Thiobacillus thiooxidans_|硫黄酸化|
+|_Desulfovibrio spp._|硫酸還元|
+|_Leptothrix discophora_|マンガン酸化|
+
+---
+
+# **11. メタン酸化菌（Methanotrophs）**
+
+|種類|主な機能|
+|---|---|
+|_Methylococcus capsulatus_|CH₄ → CO₂ 酸化|
+|_Methylosinus trichosporium_|メタン分解|
+|_Methylobacterium extorquens_|C1代謝|
+
+---
+
+# **12. リグニン分解菌（Lignin Degraders）**
+
+|種類|主な機能|
+|---|---|
+|_Phanerochaete chrysosporium_|リグニナーゼ|
+|_Pleurotus ostreatus_|ラッカーゼ|
+|_Trametes versicolor_|白色腐朽菌|
+|_Aspergillus fumigatus_|芳香族分解|
+|_Streptomyces viridosporus_|リグニン分解|
+
+---
+
+# **13. MBT55/HMT238 の総合機能（まとめ）**
+
+- **高速分解（24時間）**
+- **腐植質生成（70〜85%）**
+- **病原菌抑制（CLR, CBD, 炭疽病, 褐斑病）**
+- **樹皮再生・酸性雨ダメージ回復**
+- **土壌保水力向上**
+- **窒素固定・リン可溶化**
+- **抗菌物質・有機酸生成**
+- **生態系バイオセキュリティ（5層モデル）**
+</file>
+
+<file path="jp/appendix/PBPE_Framework_Diagram.md">
+# **PBPE フレームワーク図解
+
+— Planetary Bio‑Phenome Engine の全体構造とデータフロー —**
+
+PBPE（Planetary Bio‑Phenome Engine）は、  
+**生態系データ × 微生物工学 × AI × 金融工学** を統合し、  
+農産物を「気候通貨（Climate Currency）」へ変換する世界初のエンジンである。
+
+本付録では、PBPE の全体構造を  
+**4層アーキテクチャ（Four‑Layer Architecture）** として図解する。
+
+---
+
+# **1. PBPE の4層アーキテクチャ（全体図）**
+
+```
+┌──────────────────────────────────────────────┐
+│                Layer 4：Impact Finance（SafelyChain × MABC）               │
+│   ────────────────────────────────────────────── │
+│   ・炭素価値（ΔC）のトークン化                                                     │
+│   ・生態系サービスの証明（Proof of Ecosystem Services）                      │
+│   ・Carbon Equity / Yield Token / Premium Bond                               │
+│   ・企業のScope3削減に利用可能                                                  │
+└──────────────────────────────────────────────┘
+
+┌──────────────────────────────────────────────┐
+│                Layer 3：Phenomic Intelligence（AGRIX）                     │
+│   ────────────────────────────────────────────── │
+│   ・土壌・樹体・葉面のフェノタイプ測定                                           │
+│   ・炭素吸収量（ΔC）の推定                                                      │
+│   ・病害リスク予測・収量予測                                                     │
+│   ・PBPEクレジットの裏付けデータ生成                                             │
+└──────────────────────────────────────────────┘
+
+┌──────────────────────────────────────────────┐
+│                Layer 2：Hypercycle Dynamics（生態系ハイパーサイクル）         │
+│   ────────────────────────────────────────────── │
+│   ・微生物ネットワークの安定化                                                   │
+│   ・栄養カスケード（N, P, K, 微量元素）                                         │
+│   ・水分・酸化還元バランスの制御                                                │
+│   ・炭素循環の高速化（腐植質生成）                                              │
+└──────────────────────────────────────────────┘
+
+┌──────────────────────────────────────────────┐
+│                Layer 1：Bio‑Security（MBT55/HMT238）                        │
+│   ────────────────────────────────────────────── │
+│   ・病害抑制（CLR, CBD, 炭疽病, 褐斑病）                                         │
+│   ・高速分解（24時間）                                                           │
+│   ・腐植質生成（70〜85%）                                                        │
+│   ・樹勢回復・酸性雨ダメージ修復                                                 │
+│   ・土壌保水力向上・微生物多様性改善                                             │
+└──────────────────────────────────────────────┘
+```
+
+---
+
+# **2. PBPE のデータフロー（Data Flow Diagram）**
+
+PBPE は、以下のように **生態系 → データ → 金融価値** の流れを作る。
+
+```
+【Step 1：生態系改善（MBT55/HMT238）】
+   └─ 病害抑制
+   └─ 土壌再生
+   └─ 樹勢回復
+   └─ 炭素固定（SOC・バイオマス）
+
+【Step 2：フェノタイプ測定（AGRIX）】
+   └─ 土壌データ（SOC, pH, EC, 水分）
+   └─ 樹体データ（葉面、樹皮、根圏）
+   └─ 病害リスク
+   └─ 収量予測
+   └─ ΔC（炭素吸収量）
+
+【Step 3：データ証明（SafelyChain）】
+   └─ 生態系データの暗号化
+   └─ 二重計上の排除
+   └─ トレーサビリティ
+
+【Step 4：金融化（MABC）】
+   └─ Carbon Equity（炭素株式）
+   └─ Yield‑Linked Token（収量連動トークン）
+   └─ Quality Premium Bond（品質債券）
+   └─ PBPEクレジット（ΔCベース）
+```
+
+---
+
+# **3. PBPE の価値創出モデル（Value Creation Map）**
+
+PBPE は、以下の3つの価値を同時に生み出す。
+
+```
+【1. 生態系価値（Ecological Value）】
+   ・炭素吸収（ΔC）
+   ・土壌再生
+   ・病害抑制
+   ・水分保持力向上
+   ・生物多様性改善
+
+【2. 経済価値（Economic Value）】
+   ・収量 +30〜50%
+   ・品質 +1〜3点（カッピング）
+   ・生産コスト -30〜50%
+   ・廃棄物 → 資源化（Upcycling）
+
+【3. 金融価値（Financial Value）】
+   ・Carbon Equity
+   ・Yield Token
+   ・Premium Bond
+   ・PBPEクレジット
+```
+
+---
+
+# **4. PBPE × コーヒー産業の統合図（Integrated Coffee Model）**
+
+```
+【農園】
+   MBT55 → 土壌再生・病害抑制・炭素固定
+   AGRIX → ΔC測定・収量予測
+
+【精製】
+   副産物 → MBT発酵 → 肥料・飼料・バイオ炭
+
+【輸送】
+   ΔC が排出を相殺
+
+【焙煎】
+   PBPEクレジットで Net‑Zero Roasting
+
+【消費】
+   コーヒー粕 → MBT発酵 → 再び農園へ
+
+【金融】
+   Carbon Equity / Yield Token / Premium Bond
+```
+
+---
+
+# **5. PBPE の“気候通貨（Climate Currency）”モデル**
+
+PBPE によって、コーヒー豆は  
+**炭素価値を持つ金融資産** になる。
+
+```
+コーヒー豆 = 物理的価値 × 生態系価値 × 気候価値 × 金融価値
+```
+
+企業は：
+
+- PBPEコーヒーを購入するだけで
+- Scope3削減を達成し
+- ESG調達を実現できる
+
+消費者は：
+
+- 一杯のコーヒーで炭素吸収に参加できる
+- “気候通貨”としてのコーヒーを選べる
+
+---
+
+# **6. PBPE の全体図（One‑Page Summary）**
+
+```
+┌──────────────────────────────────────────────┐
+│ PBPE = Bio‑Security × Phenomic Intelligence × Impact Finance │
+│──────────────────────────────────────────────│
+│ ① MBT55/HMT238：生態系改善（Bio‑Security）                       │
+│ ② AGRIX：フェノタイプ測定（Phenomic Intelligence）               │
+│ ③ SafelyChain：データ証明（Traceability）                        │
+│ ④ MABC：金融化（Impact Finance）                                 │
+└──────────────────────────────────────────────┘
+
+結果：コーヒー豆が “Climate Currency（気候通貨）” になる
+```
+
+---
+
+# **7. まとめ：PBPE は“地球規模の生態系エンジン”である**
+
+PBPE は、以下を同時に実現する。
+
+- 生態系の再生
+- 農家の所得向上
+- 企業のScope3削減
+- 消費者の気候参加
+- 炭素市場の透明化
+- 循環型経済の構築
+
+そして何より：
+
+> **PBPE は、コーヒー産業を“再生型（Regenerative）”に変える世界初の統合エンジンである。**
+</file>
+
+<file path="jp/appendix/Scientific_Evidence.md">
+# **Scientific Evidence for MBT55/HMT238
+
+— 生態系バイオセキュリティ技術の科学的裏付け —**
+
+本付録では、MBT55/HMT238 の  
+**分解・発酵・病害抑制・土壌改善・樹勢回復・炭素固定**  
+に関する科学的エビデンスを体系的に整理する。
+
+MBT55/HMT238 は、単一菌ではなく  
+**120種以上の微生物コンソーシアム**であり、  
+その効果は「微生物ネットワーク（Microbial Consortium）」によって発揮される。
+
+---
+
+# **1. 有機物分解・発酵に関するエビデンス**
+
+MBT55/HMT238 は、通常3〜6ヶ月かかる堆肥化プロセスを  
+**24〜48時間** に短縮する。
+
+## **1.1 分解菌数（CFU/g）**
+
+|分解機能|菌数（CFU/g）|主な菌群|
+|---|---|---|
+|タンパク質分解|10⁵〜10⁷|_Bacillus_, _Pseudomonas_|
+|デンプン分解|10⁵〜10⁶|_Aspergillus_, _Rhizopus_|
+|脂質分解|10⁴〜10⁶|_Candida_, _Geotrichum_|
+|セルロース分解|10⁴〜10⁶|_Cellulomonas_, _Clostridium_|
+
+### ✔ 科学的根拠
+
+- 酵素活性（プロテアーゼ、アミラーゼ、リパーゼ、セルラーゼ）が高い
+- 好気・嫌気の両条件で分解が進む
+- 糸状菌と細菌の協働により分解速度が加速
+
+---
+
+# **2. 腐植質生成（Humification）**
+
+MBT55/HMT238 は、  
+**腐植質生成率 70〜85%** を達成する。
+
+## **2.1 腐植質の特徴**
+
+- フミン酸・フルボ酸が豊富
+- C/N比が安定（10〜15）
+- pH 6.5〜7.0
+- 水分保持力が高い（自重の5〜10倍）
+
+## **2.2 科学的根拠**
+
+- 糸状菌・放線菌がリグニンを分解
+- 好気・嫌気の交互代謝により腐植化が促進
+- 微生物代謝物（有機酸）が腐植前駆物質を形成
+
+---
+
+# **3. 病害抑制に関するエビデンス（Biosecurity）**
+
+MBT55/HMT238 の病害抑制は、  
+**バイオセキュリティ5層モデル**によって説明できる。
+
+---
+
+## **3.1 先占効果（Priority Effect）**
+
+### ✔ エビデンス
+
+- 葉面・樹皮・根圏で MBT55 が優先的に定着
+- 病原菌の付着器形成を阻害
+- 酵母菌・乳酸菌が表面を占有
+
+---
+
+## **3.2 拮抗代謝（Antagonistic Metabolites）**
+
+### ✔ 生成される代謝物
+
+- 有機酸（乳酸・酢酸）
+- 抗菌ペプチド
+- キチナーゼ
+- β-1,3-グルカナーゼ
+- VOCs（揮発性有機化合物）
+
+### ✔ 病原菌への作用
+
+- 胞子発芽阻害
+- 菌糸伸長阻害
+- 細胞壁分解
+
+---
+
+## **3.3 微環境制御（Micro-environment Control）**
+
+### ✔ エビデンス
+
+- 葉面pHを安定化（pH 6.0〜7.0）
+- 樹皮の酸化還元バランス改善
+- 土壌の団粒構造形成
+- 水分保持力向上（+60〜100%）
+
+---
+
+## **3.4 宿主防御誘導（ISR/ISE）**
+
+### ✔ 誘導される防御反応
+
+- PRタンパク質（PR-1, PR-2, PR-3）
+- フェノール代謝の活性化
+- カロース沈着
+- リグニン化の促進
+
+---
+
+## **3.5 生態系フィードバック（Sustainable Cycle）**
+
+### ✔ エビデンス
+
+- 微生物多様性の増加
+- 土壌炭素の増加
+- 病害発生率の年次低下
+- 樹勢の回復
+
+---
+
+# **4. 病害別の科学的エビデンス**
+
+---
+
+## **4.1 コーヒーさび病（CLR）**
+
+### ✔ MBT55/HMT238 の作用
+
+- 葉面の先占効果
+- 抗真菌酵素による胞子発芽阻害
+- 葉面pHの安定化
+- ISRによる免疫強化
+
+### ✔ 実証データ
+
+- 発病率 **50〜70% 減少**
+- 落葉率の低下
+- 光合成量の増加
+
+---
+
+## **4.2 炭疽病（Colletotrichum spp.）**
+
+### ✔ 作用
+
+- キチナーゼによる細胞壁分解
+- VOCs による菌糸伸長阻害
+- 果実表面のバイオフィルム形成
+
+---
+
+## **4.3 コーヒー果実病（CBD）**
+
+### ✔ 作用
+
+- 幼果期の集中防御
+- カルシウム・ケイ素吸収促進
+- 病原菌の付着器形成阻害
+
+---
+
+## **4.4 褐斑病（Cercospora spp.）**
+
+### ✔ 作用
+
+- 葉面微気候の改善
+- 抗酸化酵素活性の向上
+- 栄養吸収効率の改善
+
+---
+
+## **4.5 ピンク病（Erythricium salmonicolor）**
+
+### ✔ 作用
+
+- 樹皮表面の微生物バリア
+- 抗菌代謝物生成
+- 樹皮のCa・Si強化
+
+---
+
+# **5. 樹皮再生・酸性雨ダメージ回復のエビデンス**
+
+MBT55/HMT238 は、  
+酸性雨で劣化した松の樹皮を再生させた実績がある。
+
+## **5.1 科学的根拠**
+
+- 樹皮表面の微生物叢再構築
+- リグニン合成促進
+- ミネラル吸収改善（Ca, Si, B）
+- 酸化還元バランスの正常化
+
+---
+
+# **6. ミツバチのチョーク病・シイタケ青カビのエビデンス**
+
+---
+
+## **6.1 チョーク病（Ascosphaera apis）**
+
+### ✔ 実証結果
+
+- MBT55発酵液を摂取した群：**発症ゼロ**
+- 腸内環境の競合排除
+- 抗真菌代謝物による胞子発芽阻害
+
+---
+
+## **6.2 シイタケ青カビ（Trichoderma spp.）**
+
+### ✔ 実証結果
+
+- MBT55酵素液の 1000〜5000倍希釈で **完全消失**
+- キチナーゼによる細胞壁分解
+- VOCs による菌糸伸長阻害
+
+---
+
+# **7. 土壌改善の科学的エビデンス**
+
+---
+
+## **7.1 団粒構造形成**
+
+- 糸状菌・放線菌が土壌粒子を結合
+- 団粒構造が形成される
+- 保水力 +60〜100%
+
+---
+
+## **7.2 微生物多様性の増加**
+
+- 好気55%：嫌気45% のバランス
+- 根圏微生物の多様性が増加
+- 病原菌のニッチが消失
+
+---
+
+## **7.3 栄養循環の改善**
+
+- 窒素固定
+- リン可溶化
+- カリウム・微量元素のキレート化
+
+---
+
+# **8. 炭素固定（Carbon Sequestration）のエビデンス**
+
+---
+
+## **8.1 土壌炭素（SOC）**
+
+- 腐植質生成率：70〜85%
+- 炭素滞留期間：20〜50年
+- SOC増加量：1.5〜2.5 tCO₂/ha/年
+
+---
+
+## **8.2 バイオ炭との相乗効果**
+
+- バイオ炭が微生物キャリアになる
+- MBT55が炭表面で活性化
+- 長期炭素固定（100〜500年）
+
+---
+
+# **9. 総合評価：MBT55/HMT238 は科学的に裏付けられた“生態系バイオセキュリティ技術”である**
+
+- 高速分解
+- 腐植質生成
+- 病害抑制
+- 樹勢回復
+- 土壌改善
+- 炭素固定
+- 生態系フィードバック
+
+これらの科学的エビデンスは、  
+MBT55/HMT238 が **コーヒー産業の複合課題を解決する根拠** となる。
+</file>
+
+<file path="jp/README.md">
+# **PBPE × MBT55/HMT238 × Coffee Industry（日本語版）
+
+再生型コーヒー産業のための知識ベース**
+
+このフォルダは、PBPE × MBT55/HMT238 × Coffee Industry プロジェクトの  
+**日本語ドキュメント一式**をまとめたものです。
+
+---
+
+## 📘 章構成（日本語）
+
+### **第1章〜第8章**
+
+1. コーヒー産業の複合課題
+2. MBT55/HMT238 のバイオセキュリティ
+3. 経済価値・社会価値
+4. コスト削減と収量向上
+5. PBPE とカーボン経済
+6. 消費者エンゲージメント
+7. コーヒー価格安定化
+8. MBT サステナブルサイクルと廃棄物アップサイクル
+
+---
+
+## 📚 付録（Appendix）
+
+- Appendix 1：MBT55 微生物リスト
+- Appendix 2：科学的エビデンス
+- Appendix 3：コーヒー炭素フローマップ
+- Appendix 4：チョークブルード & ブルーモールド事例
+- Appendix 5：PBPE フレームワーク図解
+
+---
+
+## 📊 プレゼン資料（PDF）
+
+- **日本語版プレゼン資料**  
+  [../presentation/JP_Presentation.pdf](../presentation/JP_Presentation.pdf)
+
+- **英語版プレゼン資料**  
+  [../presentation/EN_Presentation.pdf](../presentation/EN_Presentation.pdf)
+
+---
+
+## 📁 フォルダ構造
+
+```
+jp/
+├── README.md
+├── 1_Coffee_Industry_Challenges.md
+├── 2_MBT55_Biosecurity_Biocontrol.md
+├── ...
+└── appendix/
+    ├── MBT55_Microbe_List.md
+    ├── Scientific_Evidence.md
+    ├── ...
+```
+</file>
+
+<file path="presentation/README.md">
+# **PBPE × MBT55 × Coffee Industry
+
+Official Presentation Materials (EN/JP)**
+
+This folder contains the official presentation materials for the  
+**PBPE × MBT55 × Coffee Industry** initiative.
+
+These documents summarize the scientific, economic, and financial architecture of the  
+Planetary Bio‑Phenome Engine (PBPE), the MBT55 Microbial Climate Shield,  
+and the Carbon‑Backed Coffee model.
+
+Both **English** and **Japanese** versions are provided for global collaboration.
+
+---
+
+## 📊 **Available Presentations**
+
+### **1. English Presentation (PDF)**
+
+**Coffee Carbon Currency — Transforming Coffee Purchasing into Climate Finance**  
+→ `EN_Presentation.pdf`
+
+This deck covers:
+
+- Coffee as a carbon‑backed financial asset
+- MBT55 Microbial Climate Shield
+- PBPE architecture (Biosecurity × Phenomics × Finance)
+- Carbon sequestration (ΔC) and MRV
+- Producer wealth engines
+- Corporate Scope 3 integration
+- Global rollout strategy with Starbucks × Microsoft × Gates Foundation
+
+---
+
+### **2. Japanese Presentation (PDF)**
+
+**世界を変える「気候通貨」の誕生 — PBPE × MBT55 × Coffee**  
+→ `JP_Presentation.pdf`
+
+This deck covers:
+
+- 気候通貨モデル（コーヒー × 炭素資産）
+- MBT55 生態系バイオセキュリティ
+- PBPE のリアルタイム・フェノタイプ化
+- コーヒー産業の炭素収支の再定義
+- 生産者の資産形成モデル
+- 再生型セーフティネット
+- スターバックス × Microsoft × Gates Foundation の三位一体モデル
+
+---
+
+## 🎯 **Purpose of These Presentations**
+
+These presentations are designed for:
+
+- International organizations (FAO, WCR, CGIAR, UNDP)
+- Corporate partners (Starbucks, Microsoft, Nestlé, JDE)
+- Climate finance institutions
+- Government agencies
+- Research institutions
+- Investors and philanthropic foundations
+
+They provide a **high‑level strategic overview** of how PBPE transforms coffee into:
+
+- A regenerative agricultural system
+- A carbon‑positive commodity
+- A climate‑finance engine
+- A producer‑wealth platform
+
+---
+
+## 🧭 **How These Presentations Fit Into the Repository**
+
+```
+PBPE-Coffee/
+ ├── presentation/        ← このフォルダ
+ │    ├── EN_Presentation.pdf
+ │    ├── JP_Presentation.pdf
+ │    └── README.md
+ ├── en/                  ← 英語ドキュメント
+ └── jp/                  ← 日本語ドキュメント
+```
+
+The presentations serve as the **visual and strategic overview**,  
+while the `en/` and `jp/` folders contain the **full technical documentation**  
+(Chapters 1–8 + Appendices 1–5).
+
+---
+
+## ✔ Summary
+
+This folder provides the official PBPE × MBT55 × Coffee presentations in both English and Japanese.  
+They are intended for high‑level communication with global partners and stakeholders.
+</file>
+
+<file path="README.md">
+![PBPE × MBT55 × Coffee Industry Banner](banner-image.png)
+
+> [!TIP]
+> **☕ コーヒー産業特化モデルはこちら：**
+> 
+> [**PBPE-Coffee**](https://github.com/shimojok/PBPE-Coffee) — Coffee leaf rust suppression, phenomics, digital MRV, and climate finance integration.
+
+---
+
+# **PBPE-Coffee
+
+Planetary Bio‑Phenome Engine × MBT55/HMT238 × Coffee Industry  
+A Regenerative, Carbon‑Positive Coffee Ecosystem**
+
+This repository provides the complete bilingual (EN/JP) knowledge base for the  
+**PBPE × MBT55/HMT238 × Coffee Industry Project**,  
+a global initiative to transform coffee into a **Climate Currency** through:
+
+- Ecosystem regeneration
+- Phenomic intelligence
+- Carbon finance
+- Circular economy
+- Farmer income growth
+- Corporate Scope 3 reduction
+
+PBPE (Planetary Bio‑Phenome Engine) integrates:
+
+1. **Bio‑Security (MBT55/HMT238)**
+2. **Phenomic Intelligence (AGRIX)**
+3. **Data Verification (SafelyChain)**
+4. **Impact Finance (MABC)**
+
+This repository contains:
+
+- 8 main chapters (EN/JP)
+- 5 appendices (EN/JP)
+- Scientific evidence
+- Carbon flow maps
+- Framework diagrams
+- Regenerative coffee models
+
+---
+
+# 🌍 **PBPE × MBT55 × Coffee Industry
+
+Executive Summary (1‑Page Overview)**
+
+## **A New Climate‑Positive Coffee Economy**
+
+The Planetary Bio‑Phenome Engine (PBPE) and MBT55 Microbial Climate Shield transform coffee from a vulnerable agricultural commodity into a **carbon‑positive financial asset**.  
+This system integrates **ecological biosecurity, real‑time phenomics, digital MRV, and climate‑finance architecture** to regenerate farms, stabilize supply chains, and create new wealth for producers.
+
+---
+
+## **1. Biological Breakthrough: MBT55 Microbial Climate Shield**
+
+MBT55/HMT238 establishes a **five‑layer ecological defense system** that eliminates Coffee Leaf Rust (CLR) and other pathogens without chemicals:
+
+- Priority Effect (microbiome replacement)
+- Antagonistic metabolites (continuous antifungal activity)
+- Micro‑environment control (pH & humidity optimization)
+- Induced Systemic Resistance (ISR/ISE)
+- Ecosystem feedback loop (long‑term pathogen exclusion)
+
+**Result:**  
+Coffee farms become biologically resilient, high‑yield, and climate‑adaptive.
+
+---
+
+## **2. Carbon Transformation: Coffee Becomes a Net Carbon Sink**
+
+MBT55 shifts the carbon balance of coffee production:
+
+- **Emissions reduced:** fertilizer, N₂O, machinery, processing waste
+- **Sequestration increased:** biomass, SOC, biochar, fermented waste
+
+This creates a **net‑positive carbon profile**, enabling:
+
+- Verified ΔC (carbon sequestration)
+- Long‑term SOC accumulation
+- Carbon‑backed agricultural assets
+
+---
+
+## **3. Digital MRV: AGRIX × Azure × SafelyChain**
+
+PBPE converts biological improvement into **verifiable digital assets**:
+
+- AGRIX sensors capture real‑time phenomics (SOC, biomass, microclimate)
+- Azure processes ecological data at scale
+- SafelyChain ensures cryptographic traceability and auditability
+
+**Physical coffee + verified carbon data = Carbon‑Backed Coffee Bean**
+
+---
+
+## **4. Financial Architecture: Seven Producer Wealth Engines**
+
+PBPE generates **seven compounding income streams** for farmers:
+
+1. Carbon Equity (fractional ΔC ownership)
+2. Yield‑Linked Tokens (future harvest rights)
+3. Quality Premium Bonds
+4. Carbon‑Backed NFTs
+5. PBPE Staking (regional carbon rewards)
+6. Loss‑Reduction Dividends
+7. Farmer Stability Fund (decentralized pension system)
+
+**Outcome:**  
+Producers become **asset owners**, not commodity laborers.
+
+---
+
+## **5. Corporate Integration: Scope 3 + Supply Chain Security**
+
+PBPE enables corporations to:
+
+- Achieve Scope 3 climate targets
+- Secure long‑term supply stability
+- Purchase hybrid assets (coffee + carbon)
+- Demonstrate measurable ESG impact
+
+Ideal partners include:
+
+- **Starbucks**（supply chain & farmer protection）
+- **Microsoft**（Azure, AGRIX, MRV）
+- **Gates Foundation**（global health & climate adaptation）
+
+---
+
+## **6. Global Rollout Strategy**
+
+**Phase I — Pilot (Farm Level)**  
+MBT55 deployment, AGRIX baseline, CLR suppression, ΔC measurement.
+
+**Phase II — Tokenization (Asset Level)**  
+Carbon‑Backed Coffee minting, Yield‑Linked Tokens, digital MRV integration.
+
+**Phase III — Global Market Integration**  
+Corporate procurement, Scope 3 alignment, regenerative coffee markets.
+
+---
+
+## **7. Core Insight**
+
+**Coffee is no longer just a beverage.  
+It is a climate‑positive asset class.**
+
+PBPE creates a future where:
+
+- Every cup regenerates ecosystems
+- Every purchase funds climate action
+- Every farmer builds generational wealth
+
+---
+
+## 📁 Repository Structure
+
+```
+PBPE-Coffee/
+│
+├── README.md                ← Global overview (EN)
+│
+├── jp/                      ← Japanese documents
+│   ├── README.md
+│   ├── 1_Coffee_Industry_Challenges.md
+│   ├── 2_MBT55_Biosecurity_Biocontrol.md
+│   ├── ...
+│   └── appendix/
+│       ├── MBT55_Microbe_List.md
+│       ├── Scientific_Evidence.md
+│       ├── ...
+│
+└── en/                      ← English documents
+    ├── README.md
+    ├── 1_Coffee_Industry_Challenges.md
+    ├── 2_MBT55_Biosecurity_Biocontrol.md
+    ├── ...
+    └── appendix/
+        ├── MBT55_Microbe_List.md
+        ├── Scientific_Evidence.md
+        ├── ...
+```
+
+---
+
+## 🌍 Purpose of This Repository
+
+This repository serves as:
+
+- A **global knowledge base** for regenerative coffee
+- A **technical foundation** for PBPE deployment
+- A **communication toolkit** for corporations, NGOs, and governments
+- A **bilingual reference** for international collaboration
+
+---
+
+## 📘 Document Index
+
+### **Main Chapters (EN/JP)**
+
+1. Coffee Industry Challenges
+2. MBT55/HMT238 Biosecurity
+3. Economic & Social Value
+4. Cost Reduction & Yield Increase
+5. PBPE & Carbon Economy
+6. Consumer Engagement
+7. Coffee Price Stabilization
+8. MBT Sustainable Cycle & Waste Upcycling
+
+### **Appendices (EN/JP)**
+
+A1. MBT55 Microbe List  
+A2. Scientific Evidence  
+A3. Coffee Carbon Flow Map  
+A4. Chalkbrood & Blue Mold Cases  
+A5. PBPE Framework Diagram
+
+---
+
+## 📊 Presentations (EN/JP)
+
+Official PBPE × MBT55 × Coffee presentations:
+
+- **English Presentation (PDF)**  
+  [presentation/EN_Presentation.pdf](presentation/EN_Presentation.pdf)
+
+- **Japanese Presentation (PDF)**  
+  [presentation/JP_Presentation.pdf](presentation/JP_Presentation.pdf)
+
+---
+
+## 🤝 Contributors
+
+- **Kaz Shimojo** — BioNexus Holdings
+- **Microsoft Copilot** — AI Knowledge Architecture Support
+
+---
+
+## 📄 License
+
+To be defined based on project requirements.
+</file>
+
+</files>

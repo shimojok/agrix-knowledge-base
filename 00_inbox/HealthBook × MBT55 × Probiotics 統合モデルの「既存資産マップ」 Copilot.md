@@ -90,7 +90,7 @@ Tier 3
 
 なお、以下は、既に準備してあるため不要です。
 
-HealthBookの特徴と推論エンジンなど [[■2. HealthBook推論エンジンを実装]] [[HB5. HealthBook Platform 統合アーキテクチャ（詳細説明付き）]]
+HealthBookの特徴と推論エンジンなど [[■2. HealthBook推論エンジンを実装]] [[HB005. HealthBook Platform 統合アーキテクチャ（詳細説明付き）]]
 
 200項目問診JSONファイル [[questionnaire200jp.new.json]] [[questionnaire200en.new.json]]
 
@@ -160,7 +160,7 @@ MBT漢方代謝ライブラリーJSONファイル [[kampometaboliclibrary.json]]
     - 「CG11. Microsoft_Azure向けにHealthBookを再構成.md」  
         → これらは、すでに「不要」と指定されている
     - [[■2. HealthBook推論エンジンを実装]]
-    - [[HB5. HealthBook Platform 統合アーキテクチャ（詳細説明付き）]]  
+    - [[HB005. HealthBook Platform 統合アーキテクチャ（詳細説明付き）]]  
         と整合する内容であり、**構造・UI・推論フローは十分に定義済み**。
 - **疾病マトリクス・問診ロジック（構造側）:**
     
@@ -213,7 +213,7 @@ MBT漢方代謝ライブラリーJSONファイル [[kampometaboliclibrary.json]]
 - **HealthBook 推論エンジン・アーキテクチャ系**
     
     - [[■2. HealthBook推論エンジンを実装]]
-    - [[HB5. HealthBook Platform 統合アーキテクチャ（詳細説明付き）]]
+    - [[HB005. HealthBook Platform 統合アーキテクチャ（詳細説明付き）]]
 - **問診・疾病マトリクス・漢方ライブラリ JSON**
     
     - [[questionnaire200jp.new.json]] / [[questionnaire200en.new.json]]
